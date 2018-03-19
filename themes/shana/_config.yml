@@ -56,21 +56,21 @@ gaymenu_item:
 
 # 社交链接
 social:
-- url: http://github.com/ShanaMaid
+- url: https://github.com/YuAngBoy
   name: Github
 
 # 友情链接
 # name : url
 link_title: 友情链接
 links:
-  ShanaMaid: http://blog.shanamaid.top/
+  sina: https://weibo.com/5487978197/profile?rightmod=1&wvr=6&mod=personinfo
 
 
 # Sidebar Avatar
 # in theme directory(source/images): /images/avatar.jpg
 # in site  directory(source/uploads): /uploads/avatar.jpg
 # 头像
-avatar: https://avatars0.githubusercontent.com/u/20333903?v=3&s=460
+avatar: https://avatars1.githubusercontent.com/u/32896990?s=460&v=4
 
 
 # 网站统计

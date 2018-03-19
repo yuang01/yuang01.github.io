@@ -1,16 +1,11 @@
-// .cb-slideshow li:nth-child(1) span { background-image: url('https://ws2.sinaimg.cn/large/005ODKsIgw1fakb435nz6j31hc0u079l.jpg');}
-// .cb-slideshow li:nth-child(2) span { background-image: url('https://ws4.sinaimg.cn/large/005ODKsIgw1fam24cqyo4j31cq0yfjxa.jpg');}
-// .cb-slideshow li:nth-child(3) span { background-image: url('https://ws4.sinaimg.cn/large/005ODKsIgw1fatjhgja0gj31hc0xvagk.jpg');}
-// .cb-slideshow li:nth-child(4) span { background-image: url('https://ws4.sinaimg.cn/large/005ODKsIgw1fajzncs9apj31hc11x0yw.jpg');}
-// .cb-slideshow li:nth-child(5) span { background-image: url('https://ws1.sinaimg.cn/large/005ODKsIgw1f5ymp3mngpj31hc0xcdiu.jpg');}
-// .cb-slideshow li:nth-child(6) span { background-image: url('https://ws1.sinaimg.cn/large/005ODKsIgw1fam1v0u0n0j31hc0xcjxc.jpg');}
 
-.cb-slideshow li:nth-child(1) span { background-image: url('http://wx1.sinaimg.cn/large/dc58f491ly1fepnoqji5aj20xc0qqgt5.jpg');}
-.cb-slideshow li:nth-child(2) span { background-image: url('http://wx1.sinaimg.cn/large/dc58f491ly1fepmxueo9tj21jk10ugwc.jpg');}
-.cb-slideshow li:nth-child(3) span { background-image: url('http://wx4.sinaimg.cn/large/dc58f491ly1fepmxv27yfj20sg0hsjww.jpg');}
-.cb-slideshow li:nth-child(4) span { background-image: url('http://wx3.sinaimg.cn/large/dc58f491ly1fepmxvp7b1j20zk0qotcp.jpg');}
-.cb-slideshow li:nth-child(5) span { background-image: url('http://wx1.sinaimg.cn/large/dc58f491ly1fepmxwdysjj21400p0wli.jpg');}
-.cb-slideshow li:nth-child(6) span { background-image: url('http://wx1.sinaimg.cn/large/dc58f491ly1fepmxx2ja5j20zk0qotek.jpg');}
+
+.cb-slideshow li:nth-child(1) span { background-image: url('https://i0.hdslb.com/bfs/album/471bbc3fd20fe41b308c31ea43a89b047c56d8c6.jpg@2000w_1e.webp');}
+.cb-slideshow li:nth-child(2) span { background-image: url('https://i0.hdslb.com/bfs/album/f349bb0741da74abde6a1e15a965e9618bcdf17c.jpg');}
+.cb-slideshow li:nth-child(3) span { background-image: url('https://i0.hdslb.com/bfs/album/6734e7a8f4f968ed9ff9be42a433aa19d1b382bf.jpg@2000w_1e.webp');}
+.cb-slideshow li:nth-child(4) span { background-image: url('https://i0.hdslb.com/bfs/album/a0cf894dc2b53093f7870d5d860b8bf1833a5719.jpg');}
+.cb-slideshow li:nth-child(5) span { background-image: url('https://i0.hdslb.com/bfs/album/19eeea6925a6827df1907675276a683c1829149e.png');}
+.cb-slideshow li:nth-child(6) span { background-image: url('https://i0.hdslb.com/bfs/album/e5b6254a4008833f7f9ea316413a6dd552a2ce28.jpg');}
 
 .hidden-xs{
 
