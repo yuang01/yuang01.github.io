@@ -1,0 +1,28 @@
+<div class="GalMenu GalDropDown">
+      <div class="circle" id="gal">
+        <div class="ring">
+          <% for (let item of theme.gaymenu_item){ %>
+            <a href="<%= url_for(item.url) %>" title="" class="menuItem"><%= item.name %></a>
+          <% } %>
+        </div>
+        <% if (theme.mp3play){ %>
+          <audio id="audio" src="plugin/galmenu/wulusai.mp3"></audio>
+        <% } else{%>
+          <audio id="audio" src="#"></audio>
+        <% } %>
+      </div> 
+</div>
+<div id="overlay" style="opacity: 1; cursor: pointer;"></div>
+  <script type="text/javascript">var items = document.querySelectorAll('.menuItem');
+    for (var i = 0,
+    l = items.length; i < l; i++) {
+      items[i].style.left = (50 - 35 * Math.cos( - 0.5 * Math.PI - 2 * (1 / l) * i * Math.PI)).toFixed(4) + "%";
+      items[i].style.top = (50 + 35 * Math.sin( - 0.5 * Math.PI - 2 * (1 / l) * i * Math.PI)).toFixed(4) + "%"
+    }</script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('body').GalMenu({
+      'menu': 'GalDropDown'
+    })
+  });
+</script>
