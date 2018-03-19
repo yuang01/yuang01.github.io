@@ -8,7 +8,7 @@ xs_bg_image: xsbg.gif
 
 # 必填, 个人头像, 如果是路径, 则指向source/imgs
 # 也可以填http:// OR https:// url地址
-author_image: avatar.jpg
+author_image: https://avatars1.githubusercontent.com/u/32896990?s=460&v=4
 
 # 导航菜单
 menu:
