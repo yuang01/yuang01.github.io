@@ -1,0 +1,38 @@
+<% if (config.disqus_shortname){ %>
+<script>
+  var disqus_shortname = '<%= config.disqus_shortname %>';
+  <% if (page.permalink){ %>
+  var disqus_url = '<%= page.permalink %>';
+  <% } %>
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/<% if (page.comments) { %>embed.js<% } else { %>count.js<% } %>';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+<% } %>
+
+<script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="//apps.bdimg.com/libs/wow/0.1.6/wow.min.js"></script>
+<script>
+new WOW().init();
+</script>   
+
+<% if (theme.fancybox){ %>
+  <%- css('plugin/fancybox/jquery.fancybox') %>
+  <%- js('plugin/fancybox/jquery.fancybox.pack') %>
+<% } %>
+
+<% if (theme.galmenu){ %>
+  <%- css('plugin/galmenu/GalMenu') %>
+  <%- js('plugin/galmenu/GalMenu') %>
+  <%- partial('galmenu') %>
+<% } %>
+  <%- partial('bganimation') %>
+<%- js('js/script') %>
+
+<% if (theme.leancloud_visitors.enable){ %>
+<%- partial('_partial/lean-analytics') %>
+<% } %>
