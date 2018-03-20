@@ -5,6 +5,7 @@ categories: "javascript基础"
 tags: 'javascript'
 ---
 ## 什么是EventUtil？
+
 ### 在JavaScript中，DOM0级、DOM2级与旧版本IE(8-)为对象添加事件的方法不同为了以跨浏览器的方式处理事件，需要编写一段“通用代码”，即跨浏览器的事件处理程序习惯上，这个方法属于一个名为EventUtil的对象编写并使用该对象后，可保证处理事件的代码能在大多数浏览器下一致的运行本文将围绕着EventUtil对象展开，并提供该通用对象代码以作参考分享文章主要内容参考书籍为《JavaScript高级程序设计》（[美]Nicholas C.Zakas）若有纰漏，欢迎您留言指正
 ### 以下EventUtil对象代码亲测可用，并包含详细注释
 ``` bash
