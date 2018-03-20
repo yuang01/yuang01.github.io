@@ -71,11 +71,11 @@ friend_links:
 # 个人链接配置, 要先开启上面的links
 links:
   - name: Github
-    link: https://github.com/ZEROKISEKI/
-  - name: Coding
-    link: https://coding.net/u/SORA1
-  - name: 知乎
-    link: https://www.zhihu.com/people/aonosora/activities
+    link: https://github.com/YuAngBoy
+  - name: 新浪
+    link: https://weibo.com/p/1005055487978197/home?from=page_100505&mod=TAB#place
+  - name: 豆瓣
+    link: https://www.douban.com/people/164032129/
 
 
 # 是否使用公告
