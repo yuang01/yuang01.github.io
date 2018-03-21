@@ -135,12 +135,16 @@ leancloud:
 # 如果不用的话要把下面的use_comment设置为false
 comment:
   gitment:
-      owner: # 必填项, 你的GitHub ID
-      repo: # 必填项  你的存储评论的repo
+      owner: 32896990 # 必填项, 你的GitHub ID
+      repo: git@github.com:YuAngBoy/comment.git # 必填项  你的存储评论的repo
       oauth:
-        client_id:  # 必填项
-        client_secret: # 必填项
+        client_id: c91c6bd31e68da7dc2f0 # 必填项
+        client_secret: 1cc3db655fb0b82c72afad16c590409ceef83a7c # 必填项
         redirect_uri: # 可以填也可以不填
+
+# livere: #新增 来比力评论，没有效果
+#   enable: true #新增，控制评论显示
+#   livere_uid: MTAyMC8zNTA1My8xMTU4OA
 
 # 是否使用评论系统
 use_comment: false
