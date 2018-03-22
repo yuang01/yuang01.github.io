@@ -61,6 +61,10 @@ sidebar:
 
 # 友情链接配置, 要先开启上面的friend_links
 friend_links:
+  - name: 橙子🍊
+    link: https://czorange123.github.io/
+  - name: sdu
+    link: https://meditator.cc/
   - name: KDays Forum
     link: http://kdays.net/days/
   - name: 绅士导航♂
@@ -70,8 +74,6 @@ friend_links:
 
 # 个人链接配置, 要先开启上面的links
 links:
-  - name: Github
-    link: https://github.com/YuAngBoy
   - name: 新浪
     link: https://weibo.com/p/1005055487978197/home?from=page_100505&mod=TAB#place
   - name: 豆瓣

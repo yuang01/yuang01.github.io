@@ -1,6 +1,7 @@
 # Hexo Configuration
 ## Docs: https://hexo.io/docs/configuration.html
 ## Source: https://github.com/hexojs/hexo/
+# gal主题需要的配置
 jsonContent:
   dateFormat: MM-DD
   pages:
