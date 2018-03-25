@@ -23,8 +23,8 @@ jsonContent:
 title: YuAng
 subtitle: 不要太暴躁
 description: 站在巨人的肩膀上思考！
-author: 於昂
-language: zh-CN
+author: 小昂
+language: zh-Hans
 timezone:
 
 # URL
@@ -89,7 +89,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: gal
+theme: yelee
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html

@@ -4,7 +4,8 @@ date: 2018-03-25  17:32
 categories: "demo"
 tags: ['vue', 'javascript']
 ---
- 其实用vue写轮播图比用jquery写轮播图要方便多了，jquery对demo的操作和对变量的获取比较繁琐，vue就比较简单了，只用对一两个共有的变量进行赋值就能达到更好的效果。
+其实用vue写轮播图比用jquery写轮播图要方便多了，jquery对demo的操作和对变量的获取比较繁琐，vue就比较简单了，只用对一两个共有的变量进行赋值就能达到更好的效果。
+<!-- more -->
  首先来看body的内容
 ``` bash
 /*css动画效果，从左到右滑动，从右到左滑动

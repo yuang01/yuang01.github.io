@@ -4,14 +4,14 @@ date: 2018-03-20  17:04
 categories: "组件"
 tags: ['vue', 'javascript']
 ---
-##### 之前在前端remark框架中发现input输入框做的蛮炫的，就决定把它做成组件，这里就来说说input组件的过程。
-
-##### 首先在父组件中使用v-model
+之前在前端remark框架中发现input输入框做的蛮炫的，就决定把它做成组件，这里就来说说input组件的过程。
+<!-- more -->
+首先在父组件中使用v-model
 ``` bash
 ### 我这里给父组件取的名字叫float-input,trim是去掉输入框前后的空格
 <float-input :placeholder="placeholder.title" v-model.trim="inputVal.title"></float-input>
 ```
-##### 然后在自组件中绑定value, 并且将表单的value传给父组件
+然后在自组件中绑定value, 并且将表单的value传给父组件
 ``` bash
 <template>
   <input :type="type" :required="required" class="form-control empty" 

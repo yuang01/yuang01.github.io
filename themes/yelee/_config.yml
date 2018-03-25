@@ -14,7 +14,7 @@ menu:
   关于我: /about/
 
 # Link to your avatar | 填写头像地址
-avatar: /img/avatar.png
+avatar: https://avatars1.githubusercontent.com/u/32896990?s=460&v=4
 
 # Small icon of Your site | 站点小图标地址
 favicon: /favicon.png
@@ -40,13 +40,13 @@ since: 2016
 ## https://github.com/hexojs/hexo-generator-feed
 
 subnav:
-  Email: "mailto:123@123.com"
-  #新浪微博: "sina weibo"
+  # Email: "mailto:123@123.com"
+  新浪微博: "https://weibo.com/5487978197/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1"
   GitHub: "#"
   #V2EX: "#"
-  RSS: "/atom.xml"
+  # RSS: "/atom.xml"
   #知乎: "zhihu"
-  #豆瓣: "douban"
+  豆瓣: "https://www.douban.com/people/164032129/"
   #简书: "jianshu"
   #SegmentFault: ""
   #博客园: "cnblogs"
@@ -63,7 +63,7 @@ subnav:
   #Twitter: "#"
   #LinkedIn: "#"
   #QQ: "#"
-  #微信: "Wechat"
+  微信: "yuang1730241541"
   #PayPal: "#"
   #StackOverflow: "#"
   #CodePen: ""
@@ -230,8 +230,8 @@ tab_title_change:
 ## Insatall below plugin to take effect | 使用搜索需先安装对应插件
 ## https://github.com/PaicHyperionDev/hexo-generator-search
 search: 
-  #on: true
-  onload: false
+  on: false
+  #onload: true
   ## true: get search.xml file when the page has loaded
   ## false: get the file when search box gets focus
 

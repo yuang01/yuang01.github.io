@@ -4,7 +4,9 @@ date: 2017-12-15 14：43:16
 categories: "javascript基础"
 tags: 'javascript'
 ---
-## 对“事件处理程序过多”问题的解决方案就是事件委托。事件委托利用了事件冒泡，只指定一个事件处理程序，就可以管理某一类型的所有事件。例如，click 事件会一直冒泡到 document 层次。也就是说，我们可以为整个页面指定一个 onclick 事件处理程序，而不必给每个可单击的元素分别添加事件处理程序。以下面的 HTML 代码为例。
+ 对“事件处理程序过多”问题的解决方案就是事件委托。事件委托利用了事件冒泡，只指定一个事件处理程序，就可以管理某一类型的所有事件。例如，click 事件会一直冒泡到 document 层次。也就是说，我们可以为整个页面指定一个 onclick 事件处理程序，而不必给每个可单击的元素分别添加事件处理程序。
+ <!-- more -->
+以下面的 HTML 代码为例。
 ``` bash
 <ul id="myLinks">
   <li id="goSomewhere">Go somewhere</li>
@@ -12,7 +14,7 @@ tags: 'javascript'
   <li id="sayHi">Say hi</li>
 </ul> 
 ```
-### 其中包含 3 个被单击后会执行操作的列表项。按照传统的做法，需要像下面这样为它们添加 3 个事件处理程序。
+ 其中包含 3 个被单击后会执行操作的列表项。按照传统的做法，需要像下面这样为它们添加 3 个事件处理程序。
 
 ``` bash
   var item1 = document.getElementById("goSomewhere");
