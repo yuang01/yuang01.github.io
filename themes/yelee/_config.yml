@@ -11,13 +11,13 @@ menu:
   所有文章: /archives/
   #随笔: /tags/随笔
   标签云: /tags/
-  关于我: /about/
+  # 关于我: /about/
 
 # Link to your avatar | 填写头像地址
 avatar: https://avatars1.githubusercontent.com/u/32896990?s=460&v=4
 
 # Small icon of Your site | 站点小图标地址
-favicon: /favicon.png
+favicon: https://avatars1.githubusercontent.com/u/32896990?s=460&v=4
 
 # Internationalization | 主题语言
 ## Change Language in SITE's _config.yml | 在站点配置中切换语言
@@ -31,7 +31,7 @@ favicon: /favicon.png
 root_url: 
 
 # Year of Site Creation | 网站成立年份
-since: 2016
+since: 2018
 
 # Social info. Bar | 社交信息展示
 ## Keep "mailto:" in Email | 设置 Email 时保留 "mailto:"
@@ -104,8 +104,8 @@ duoshuo:
   # http://<要填的部分>.duoshuo.com (domain只填上<>里的内容，不要填整个网址)
 
 youyan:
-  #on: true
-  id: 
+  on: true
+  id: 2159813
   # 是否开启友言评论，http://www.uyan.cc/index.php
   # id 中填写你的友言用户数字ID，注册后进入后台管理即可查看
   # 友言服务在 Web 环境下运行，普通本地环境无法查看，请部署后在线上测试。
@@ -127,9 +127,9 @@ base_font_size: 16  #px, 16 - 24
 color_scheme: 
 
 highlight_style:
-  #on: true
-  inline_code: 1  # Value: 0 - 9 可选
-  code_block: 1  # Value: 0 - 4 
+  on: true
+  inline_code: 9  # Value: 0 - 9 可选
+  code_block: 4  # Value: 0 - 4 
   # Set inline_code to style highlight text
   # Chose a highlight theme for code block
   # 通过 inline_code 切换内置文本高亮样式
@@ -166,7 +166,7 @@ animate: true
 
 # Load jQuery UI to style tooltips
 # 工具提示框样式美化
-jquery_ui: false
+jquery_ui: true
 
 # Max width of right cloumn | 限制右侧内容的宽带 
 limit_article_width: 
@@ -230,8 +230,8 @@ tab_title_change:
 ## Insatall below plugin to take effect | 使用搜索需先安装对应插件
 ## https://github.com/PaicHyperionDev/hexo-generator-search
 search: 
-  on: false
-  #onload: true
+  on: true
+  onload: false
   ## true: get search.xml file when the page has loaded
   ## false: get the file when search box gets focus
 
@@ -254,7 +254,7 @@ share:
 
 # 百度、谷歌站长验证。填写 HTML 标签 content
 # Site Verification for Google and Baidu. HTML label content.
-baidu_site: 
+baidu_site: qSW9mfMEED
 google_site: 
 
 # Fill in Google Analytics tracking ID, #e.g. UA-XXXXX-X
