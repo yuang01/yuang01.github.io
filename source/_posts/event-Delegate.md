@@ -1,6 +1,6 @@
 ---
 title: 事件委托
-date: 2017-12-15 14：43:16
+date: 2017-12-15 14:43:16
 categories: "javascript基础"
 tags: 'javascript'
 ---

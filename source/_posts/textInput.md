@@ -1,6 +1,6 @@
 ---
 title: textInput 事件
-date: 2017-12-14 18：39:16
+date: 2017-12-14 18:39:16
 categories: "javascript基础"
 tags: 'javascript'
 ---
