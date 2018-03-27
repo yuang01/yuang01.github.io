@@ -1,6 +1,6 @@
 ---
 title: table组件
-date: 2017-12-14 18：39:16
+date: 2017-12-14 18:39:16
 categories: "组件"
 tags: ['vue', 'javascript']
 ---
