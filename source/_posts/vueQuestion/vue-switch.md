@@ -51,16 +51,20 @@ watch: {//使用watch 监听$router的变化
 .Router {
    position: absolute;
    width: 100%;
+   height: 100%;
+   overflow: auto;
    transition: all .5s ease
 }
 .slide-left-enter,
 .slide-right-leave-active {
+   top: 0; // 如果想要下一个页面保持上一个页面滚动条位置就不用将top设置为0
    opacity: 0;
   -webkit-transform: translate(100%, 0);
   transform: translate(100%, 0)
 }
 .slide-left-leave-active,
 .slide-right-enter {
+   top: 0; // 如果想要下一个页面保持上一个页面滚动条位置就不用将top设置为0
    opacity: 0;
   -webkit-transform: translate(-100%, 0);
   transform: translate(-100% 0)
