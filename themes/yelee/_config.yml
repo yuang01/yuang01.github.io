@@ -96,16 +96,14 @@ disqus:
   # It is unnecessary to enable disqus here if 
   # you have set "disqus_shortname" in your site's "_config.yml" 
 
-duoshuo: 
-  #on: true
-  domain: 
-  # 是否开启多说评论，http://duoshuo.com/create-site/
-  # 使用上面网址登陆你的多说，然后创建站点，在 domain 中填入你设定的域名前半部分
-  # http://<要填的部分>.duoshuo.com (domain只填上<>里的内容，不要填整个网址)
+changyan:
+  on: on
+  appid: cytFT1Bjx
+  conf: 3d54029125cc00c10be39c2e23b4b2c7
 
 youyan:
-  on: true
-  id: 2159813
+  #on: true
+  #id: 2159813
   # 是否开启友言评论，http://www.uyan.cc/index.php
   # id 中填写你的友言用户数字ID，注册后进入后台管理即可查看
   # 友言服务在 Web 环境下运行，普通本地环境无法查看，请部署后在线上测试。
