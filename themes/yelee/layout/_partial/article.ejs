@@ -55,6 +55,9 @@
   <% if (!index){ %>
     <%- partial('post/nav') %>
   <% } %>
+  <% if (!index && theme.donate && post.donate!=false){ %>
+    <%- partial('donate') %>
+  <% } %>
 </article>
 <%- partial('_partial/toc') %>
 
