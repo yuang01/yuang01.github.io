@@ -97,9 +97,13 @@ disqus:
   # you have set "disqus_shortname" in your site's "_config.yml" 
 
 changyan:
-  on: on
+  #on: on
   appid: cytFT1Bjx
   conf: 3d54029125cc00c10be39c2e23b4b2c7
+
+livere:
+    on: true
+    livere_uid: MTAyMC8zNTA1My8xMTU4OA
 
 youyan:
   #on: true

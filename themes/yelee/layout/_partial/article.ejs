@@ -68,6 +68,8 @@
       appid: theme.changyan.appid,
       conf: theme.changyan.conf
       }) %>
+    <% } else if (theme.livere.on) { %>
+        <%- partial('comments/livere') %>
     <% } else if (theme.youyan.on) { %>
         <%- partial('comments/youyan') %>
     <% } else if (theme.disqus.on) { %>
