@@ -9,7 +9,7 @@ tags: 'vue'
 <!-- more -->
 
 首先是htnl结构
-``` bash
+``` html
 <template>
   <div class="example-wrap clear">
     <div class="example">
@@ -40,7 +40,7 @@ tags: 'vue'
 
 js代码如下
 
-``` bash
+``` javascript
 <script>
 export default {
   props: ['pages', 'curpage'],
@@ -126,9 +126,12 @@ export default {
 ```
 
 以下是父组件的html
-``` bash
+``` html
 <turn-pages :pages="total" @changePage="changePage" :curpage="currentPage"></turn-pages>
 
+```
+父组件的js
+``` javascript
 data() {
   currentPage: 1,
 },
