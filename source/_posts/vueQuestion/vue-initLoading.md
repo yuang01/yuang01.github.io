@@ -7,7 +7,8 @@ tags: ['vue', 'javascript']
 vue项目刷新页面加载动画
 <!-- more -->
 ### 1.首先在index.html中编写加载动画
-``` bash
+html如下
+``` html
 <!DOCTYPE html>
 <html class="no-js css-menubar">
   <head>
@@ -17,7 +18,24 @@ vue项目刷新页面加载动画
     <meta name="description" content="remark">
     <meta name="author" content="">
     <title>xxx</title>
-    <style>
+  </head>
+  <body>
+    <div id="nb-global-spinner" class="spinner">
+      <div class="blob blob-0"></div>
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="blob blob-3"></div>
+      <div class="blob blob-4"></div>
+      <div class="blob blob-5"></div>
+    </div>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>
+```
+css 如下
+``` css
+<style>
     @-webkit-keyframes spin {
       0% {
         transform: rotate(0)
@@ -102,25 +120,9 @@ vue项目刷新页面加载动画
     }
 
     </style>
-  </head>
-  <body>
-    <div id="nb-global-spinner" class="spinner">
-      <div class="blob blob-0"></div>
-      <div class="blob blob-1"></div>
-      <div class="blob blob-2"></div>
-      <div class="blob blob-3"></div>
-      <div class="blob blob-4"></div>
-      <div class="blob blob-5"></div>
-    </div>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
-  </body>
-</html>
-
 ```
-
 ### 2.然后在APP.vue文件里面删除动画dom
-``` bash
+``` html
 <template>
   <div id="container">
     <nav-bar></nav-bar>
