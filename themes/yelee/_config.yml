@@ -34,9 +34,9 @@ root_url:
 since: 2018
 
 #是否开启打赏功能
-donate: true
+# donate: true
 #打赏文案
-donate_message: 欣赏此文？求鼓励，求支持！
+# donate_message: 欣赏此文？求鼓励，求支持！
 
 # Social info. Bar | 社交信息展示
 ## Keep "mailto:" in Email | 设置 Email 时保留 "mailto:"
@@ -253,7 +253,7 @@ mathjax: false
 
 # Socail Share | 是否开启分享
 share: 
-  on: true
+  #on: true
   baidu: true
   addthis: false
   addthis_pubid: "ra-56ff76c972fc0cf9"
