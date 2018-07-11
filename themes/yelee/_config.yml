@@ -28,15 +28,15 @@ favicon: https://avatars0.githubusercontent.com/u/32896990?s=400&u=627c9117d1499
 ## If your site' url is 'http://yoursite.com/blog', set root_url as '/blog/'
 ## 网站若存放在子目录，请按上面格式填写
 ## https://hexo.io/docs/configuration.html#URL
-root_url: 
+root_url:
 
 # Year of Site Creation | 网站成立年份
 since: 2018
 
 #是否开启打赏功能
-donate: true
+# donate: true
 #打赏文案
-donate_message: 欣赏此文？求鼓励，求支持！
+# donate_message: 欣赏此文？求鼓励，求支持！
 
 # Social info. Bar | 社交信息展示
 ## Keep "mailto:" in Email | 设置 Email 时保留 "mailto:"
@@ -94,12 +94,12 @@ show_count: false
 ## 是否在主页文章标题旁显示评论数（多说、Disqus）
 ## Add comment count after article title
 
-disqus: 
+disqus:
   #on: true
-  shortname: 
+  shortname:
   # https://help.disqus.com/customer/en/portal/articles/466208-what-s-a-shortname-
-  # It is unnecessary to enable disqus here if 
-  # you have set "disqus_shortname" in your site's "_config.yml" 
+  # It is unnecessary to enable disqus here if
+  # you have set "disqus_shortname" in your site's "_config.yml"
 
 changyan:
   #on: on
@@ -130,14 +130,14 @@ background_image: 5
 # Base Font Size | 字号调节
 base_font_size: 16  #px, 16 - 24
 
-## General Color Scheme | 主题配色方案 
+## General Color Scheme | 主题配色方案
 ## 可用值 Value: yilia
-color_scheme: 
+color_scheme:
 
 highlight_style:
   on: true
   inline_code: 9  # Value: 0 - 9 可选
-  code_block: 2  # Value: 0 - 4 
+  code_block: 2  # Value: 0 - 4
   # Set inline_code to style highlight text
   # Chose a highlight theme for code block
   # 通过 inline_code 切换内置文本高亮样式
@@ -176,8 +176,8 @@ animate: true
 # 工具提示框样式美化
 jquery_ui: true
 
-# Max width of right cloumn | 限制右侧内容的宽带 
-limit_article_width: 
+# Max width of right cloumn | 限制右侧内容的宽带
+limit_article_width:
   on: false
   max_width: 60 # em
 
@@ -226,7 +226,7 @@ ie_updater:
   ## http://outdatedbrowser.com/
 
 # Tab Title Change | 标签页标题切换
-tab_title_change: 
+tab_title_change:
   on: false
   left_tab_title: '(つェ⊂) 我藏好了哦~ '
   return_tab_title: '(*´∇｀*) 被你发现啦~ '
@@ -237,7 +237,7 @@ tab_title_change:
 # Local Site Search | 本地站内搜索
 ## Insatall below plugin to take effect | 使用搜索需先安装对应插件
 ## https://github.com/PaicHyperionDev/hexo-generator-search
-search: 
+search:
   on: true
   onload: false
   ## true: get search.xml file when the page has loaded
@@ -252,7 +252,7 @@ fancybox: true
 mathjax: false
 
 # Socail Share | 是否开启分享
-share: 
+share:
   #on: true
   baidu: true
   addthis: false
@@ -266,11 +266,11 @@ baidu_site: qSW9mfMEED
 google_site: 2F4bhv4B72jV4kOqp-W8ii8jQXNk48TUflhDnKgwWbY
 
 # Fill in Google Analytics tracking ID, #e.g. UA-XXXXX-X
-google_analytics: 
+google_analytics:
 
 # 百度统计 http://sitecenter.baidu.com/sc-web/
 # 查看代码，填入 //hm.baidu.com/hm.js? 之后的内容
-baidu_tongji: 
+baidu_tongji:
 
 # 不蒜子网站计数设置
 # http://ibruce.info/2015/04/04/busuanzi/
