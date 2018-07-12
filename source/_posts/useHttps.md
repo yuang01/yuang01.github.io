@@ -7,6 +7,7 @@ tags: 'hexo'
 # 前言
 Hexo+Github+<a href="https://www.cloudflare.com/" target="
 _blank">CloudFlare</a>将hexo博客变成Https,简单实现为地址栏增加小绿锁，😄。
+<!-- more -->
 # 首先前提是你已经购买了域名
 #### 其实购买域名挺简单，去阿里云或者腾讯云一搜，然后购买就行了，之前一直是yuangboy.github.io访问hexo博客，将域名绑定到这个地址，就去购买域名的后台解析一下域名就行了。
 #### 解析的话就添加三条解析记录，并且在source文件夹下新建CNAME文件。
