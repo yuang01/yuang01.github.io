@@ -1,6 +1,19 @@
 # Hexo Configuration
 ## Docs: https://hexo.io/docs/configuration.html
 ## Source: https://github.com/hexojs/hexo/
+douban:
+  user: 164032129
+  builtin: true
+  book:
+    title: '我的读书'
+    quote: '书是人类进步的阶梯'
+  movie:
+    title: '我的电影'
+    quote: '我.想有一天和你去旅行。去那没有去过的地方，没有行李，没有背包，不带电脑更不要手机，坐在最高的山顶上，捕捉最后的流星，可以听音乐， 聊电影，吃东西，只要我们在一起，随便是什么——都可以'
+  game:
+    title: '我的游戏'
+    quote: '我于杀戮之中盛放,意于黎明中的花朵 --戏命师·烬'
+  timeout: 10000 
 # gal主题需要的配置
 jsonContent:
   dateFormat: MM-DD

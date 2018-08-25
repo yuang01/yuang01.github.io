@@ -12,6 +12,9 @@ menu:
   #随笔: /tags/随笔
   标签云: /tags/
   # 关于我: /about/
+  我的读书: /books
+  我的电影: /movies
+  我的游戏: /games
 
 # Link to your avatar | 填写头像地址
 avatar: https://avatars0.githubusercontent.com/u/32896990?s=400&u=627c9117d1499afb70cd40ac8a9fafbb46be6a5f&v=4
@@ -216,7 +219,6 @@ open_in_new:
 
 # Customize feed link 自定义订阅地址
 rss: /atom.xml
-
 # Update Reminder for IE6/7/8
 # 针对 IE6/7/8 的升级浏览器提示
 ie_updater:
