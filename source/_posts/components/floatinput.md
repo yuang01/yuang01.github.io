@@ -10,13 +10,27 @@ tags: 'vue'
 # FloatInput预览
 ![预览](/images/myplug-floatinput.gif)
 # 使用
+如果是淘宝源使用
 ``` javascript
-npm install v-plugs-ayu --save
+cnpm install v-plugs-ayu --save
 ```
-然后在man.js中引入
+否则
 ``` javascript
-import ayu from "v-plugs-ayu";
+npm install v-plugs-ayu
+```
+如果是vue-cli3.0的项目,在man.js中引入即可
+``` javascript
+import FloatInput from "v-plugs-ayu";
 import "v-plugs-ayu/dist/personal-component.css";
+```
+如果是vue-cli2.0的项目,在单独的页面直接导入
+``` javascript
+import FloatInput from 'v-plugs-ayu'
+export default {
+    components: {
+        FloatInput
+    },
+}
 ```
 页面中直接使用就行了
 ``` html
