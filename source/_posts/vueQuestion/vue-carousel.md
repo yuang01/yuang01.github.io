@@ -128,10 +128,6 @@ var vm = new Vue({
     </script>
 ```
 是不是比jquery要简单多了呢，笑脸
-演示地址 <a href="http://yuang.site/carousel/" target="_blank" style="text-decoration: underline;">在线demo</a>
-下载 <a href="https://github.com/YuAngBoy/carousel" style="text-decoration: underline;">vue轮播图</a>
+演示地址 <a href="https://yuang01.github.io/carousel/" target="_blank" style="text-decoration: underline;">在线demo</a>
+下载 <a href="https://github.com/yuang01/carousel/blob/gh-pages/index.html" style="text-decoration: underline;">vue轮播图</a>
 喜欢记得点赞哦，(#^.^#)
-<!-- UY BEGIN -->
-<div id="uyan_frame"></div>
-<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2159813"></script>
-<!-- UY END -->

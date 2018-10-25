@@ -7,7 +7,7 @@ tags: '小程序'
 # 前言
 之前有了解过小程序，觉得小程序挺强大的，比H5的页面流畅，并且功能挺强大的，最关键的是还挺简单的，然后自己利用平时业余的时间写了一个小程序玩玩，感觉还不错，进来看看吧...
 
-有兴趣的朋友可以`clone`看一下，我的<a href="https://github.com/YuAngBoy/xcx/tree/dev" target="_blank">项目地址</a>，代码写的还行。
+有兴趣的朋友可以`clone`看一下，我的<a href="https://github.com/yuang01/xcx" target="_blank">项目地址</a>。
 
 <!-- more -->
 # 项目总览

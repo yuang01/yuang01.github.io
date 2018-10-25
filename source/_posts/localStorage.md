@@ -5,7 +5,8 @@ categories: "javascript基础"
 tags: 'javascript'
 ---
 
-## localStorage--如何存储json数据？
+> localStorage--如何存储json数据？
+
 <!-- more -->
 localStorage--如果直接将json存储在localStorage里面，只会保存[Object Object]的字符串
 所以我们首先要将json对象转换成字符串，提取的时候，再将字符串转换成json数据即可。

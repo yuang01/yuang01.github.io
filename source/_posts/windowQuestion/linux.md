@@ -5,17 +5,17 @@ categories: "windows"
 tags: '电脑'
 ---
 
-## 简单搞定windows运行ubuntu
+简单搞定windows运行ubuntu
 <!-- more -->
 
-#### 之前在自己的笔记本上安装虚拟机运行linux，实在是受不了，太卡了，(⊙o⊙)…
-#### 后来发现windows上可以直接运行ubuntu，感觉春天来了，下面就来说说安装ubuntu过程。
-
-### 首先你的系统需要win10最新版（必须条件）
+之前在自己的笔记本上安装虚拟机运行linux，实在是受不了，太卡了，(⊙o⊙)…
+后来发现windows上可以直接运行ubuntu，感觉春天来了，下面就来说说安装ubuntu过程。
+### 方案一
+#### 1.首先你的系统需要win10最新版（必须条件）
 如果不是最新版，请点击：设置-->更新和安全-->windows更新. 来更新你的系统
 或者使用微软官网上面的<a href="https://www.microsoft.com/zh-cn/software-download/windows10">微软易用</a>来进行升级
-### 然后打开你的应用商店，Microsoft Store, 然后搜索应用ubuntu，然后点击获取。
-### 下载完成之后打开你的windows Powershell（不是cmd），然后输入以下命令
+#### 2.然后打开你的应用商店，Microsoft Store, 然后搜索应用ubuntu，然后点击获取。
+#### 3.下载完成之后打开你的windows Powershell（不是cmd），然后输入以下命令
 ``` bash
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
 ```
@@ -24,7 +24,7 @@ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-L
 然后会让你设置用户名和密码，照做就是了
 喏，已经成功安装ubuntu了。
 
-### 如果你在windows Powershell中输入以上命令失败的话，可以换如下方法
+### 方案二：如果你在windows Powershell中输入以上命令失败的话，可以换如下方法
 #### 1.打开windows10开发人员模式，打开步骤为：设置-->更新和安全-->针对开发人员，点击开发人员模式打开即可，具体如图：
 ![Alt text](/images/win10-linux01.png)
 ![Alt text](/images/win10-linux02.png)

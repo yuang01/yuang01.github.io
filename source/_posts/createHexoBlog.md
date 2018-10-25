@@ -4,7 +4,7 @@ date: 2018-06-11 17:07
 categories: "blog"
 tags: '博客'
 ---
-## 搭建hexo博客
+网上很多的技术博客都是采用hexo搭建的，其实并不困难，特别简单
 <!-- more -->
 #### Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。
 详情请参照<a href="https://hexo.io/zh-cn/docs/index.html">Hexo官网</a>

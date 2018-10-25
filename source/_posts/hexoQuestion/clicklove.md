@@ -5,7 +5,8 @@ categories: "hexo"
 tags: 'hexo'
 ---
 
-### 只用2步带你搞定个人博客添加爱心效果
+> 只用2步带你搞定个人博客添加爱心效果
+
 <!-- more -->
 首先在当前主题的source/js下创建clicklove.js
 然后将以下代码复制上去
