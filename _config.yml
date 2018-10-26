@@ -107,13 +107,4 @@ theme: yelee
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type: ftpsync
-  host: yuang.ftp-hk01.bcehost.com
-  user: yuang
-  pass: 3782358yuang
-  remote: /webroot
-  port: 8010
-  # delete: true # 上传本地文件是否删除ftp中的所有文件
-  verbose: true # 是否打印调试信息
-  ignore_errors: false # 是否忽略错误
 
