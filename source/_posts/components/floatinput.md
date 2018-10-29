@@ -31,7 +31,7 @@ or
 ```
 # 参数Props
 参数|说明|类型|可选值|默认值
----|--|---|---|--|---|---
+:---|:---|:---|:---|:---
 placeholder|提示信息|string|-|-
 type|输入框类型|string|text、password、email|text
 required|是否必填|boolean|true、false|false
