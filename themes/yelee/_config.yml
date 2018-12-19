@@ -100,7 +100,7 @@ valine:
   on: true
   appid: RaAwMtm0awJV0HcwwjdBo0Nt-gzGzoHsz # App ID
   appkey: ewO06LrADh1erYkXEOC9jkNf # App Key
-  verify: false # 验证码
+  verify: true # 验证码
   notify: true # 评论回复邮箱提醒
   avatar: mp # 匿名者头像选项
   placeholder: ヾﾉ≧∀≦)o来啊，快活啊!
