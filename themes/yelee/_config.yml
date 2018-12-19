@@ -96,6 +96,14 @@ preload_comment: true
 show_count: false
 ## 是否在主页文章标题旁显示评论数（多说、Disqus）
 ## Add comment count after article title
+valine:
+  on: true
+  appid: RaAwMtm0awJV0HcwwjdBo0Nt-gzGzoHsz # App ID
+  appkey: ewO06LrADh1erYkXEOC9jkNf # App Key
+  verify: false # 验证码
+  notify: true # 评论回复邮箱提醒
+  avatar: mp # 匿名者头像选项
+  placeholder: ヾﾉ≧∀≦)o来啊，快活啊!
 
 disqus:
   #on: true
@@ -111,7 +119,7 @@ changyan:
 
 # 来必力评论
 livere:
-    on: true
+    # on: true
     livere_uid: MTAyMC8zNTA1My8xMTU4OA
 
 youyan:
@@ -120,6 +128,7 @@ youyan:
   # 是否开启友言评论，http://www.uyan.cc/index.php
   # id 中填写你的友言用户数字ID，注册后进入后台管理即可查看
   # 友言服务在 Web 环境下运行，普通本地环境无法查看，请部署后在线上测试。
+
 
 
 # >>> Style Customisation 样式自定义 <<<
@@ -299,6 +308,7 @@ progressBar:
   color: blue
 
 CDN:
+  valine: //unpkg.com/valine@1.2.0-beta1/dist/Valine.min.js
   jquery: //cdn.bootcss.com/jquery/2.2.4/jquery.min.js
   require: //cdn.bootcss.com/require.js/2.2.0/require.min.js
   fontawesome: //cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css

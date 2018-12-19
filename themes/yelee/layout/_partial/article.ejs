@@ -68,6 +68,12 @@
       appid: theme.changyan.appid,
       conf: theme.changyan.conf
       }) %>
+  <% } else if (theme.valine.on){ %>
+    <%- partial('comments/valine', {
+        key: post.slug,
+        title: post.title,
+        url: config.url+url_for(post.path)
+      }) %>
     <% } else if (theme.livere.on) { %>
         <%- partial('comments/livere') %>
     <% } else if (theme.youyan.on) { %>
