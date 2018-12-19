@@ -102,7 +102,7 @@ valine:
   appkey: ewO06LrADh1erYkXEOC9jkNf # App Key
   verify: true # 验证码
   notify: true # 评论回复邮箱提醒
-  avatar: mp # 匿名者头像选项
+  avatar: retro # 匿名者头像选项
   placeholder: ヾﾉ≧∀≦)o来啊，快活啊!
 
 disqus:
