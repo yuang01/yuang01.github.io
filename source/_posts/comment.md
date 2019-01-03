@@ -1,12 +1,68 @@
 ---
-title: hexo的yelee主题配置评论功能
-date: 2018-06-22 12:55
+title: hexo的yelee主题配置valine和来比力评论功能
+date: 2019-01-03 16:26
 categories: "hexo"
 tags: 'hexo'
 ---
 # 前言
-之前多说倒闭了，不能用了，搞了个友言，友言又关了，然后又去弄了个畅言，弄成功了之后，一顿窃喜，但是前提是需要网站备案💔，很是无奈，最后选择了使用<a href="https://livere.com/">来必力</a>评论。
+之前多说倒闭了，不能用了，搞了个友言，友言又关了，然后又去弄了个畅言，弄成功了之后，一顿窃喜，但是前提是需要网站备案💔，很是无奈，最后发现<a href="https://valine.js.org/" target="_blank">valine</a>和<a href="https://livere.com/" target="_blank">来比力</a>比较好用也没有广告。
 <!-- more -->
+## valine评论
+#### 1. 首先注册<a href="https://leancloud.cn/dashboard/applist.html#/apps">LeanCloud</a>账号并拿到APP ID和APP Key；
+##### (1) 注册账号之后，创建一个应用
+##### (2) 创建应用之后，点击应用的右上角设置图标，然后点击应用Key,如下图所示，获取APP ID和APP Key
+![获取id和key](/images/comment01.png)
+#### 2. 在<a href="javascript:;">/yelee/_config.yml</a>中加入
+``` javascript
+valine:
+  on: true
+  appid: ***** # App ID
+  appkey: ***** # App Key
+  avatar: mp # 匿名者头像选项
+  placeholder: 来啊，快活啊
+```
+在最下面的CDN中加入
+```
+valine: //unpkg.com/valine@1.2.0-beta1/dist/Valine.min.js
+```
+#### 3. 在<a href="javascript:;">/yelee/layout/_partial/article.ejs</a>中加入
+``` javascript
+<% } else if (theme.valine.on){ %>
+    <%- partial('comments/valine', {
+        key: post.slug,
+        title: post.title,
+        url: config.url+url_for(post.path)
+      }) %>
+```
+#### 4. 创建<a href="javascript:;">/yelee/layout/_partial/comments/valine.ejs</a>文件，写入
+``` javascript
+<section id="comments" style="margin: 2em; padding: 2em; background: rgba(255, 255, 255, 0.5)">
+    <div id="vcomment" class="comment"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="<%- theme.CDN.valine %>"></script>
+    <script>
+      new Valine({
+        el: '#vcomment',
+        notify: false,
+        verify: false,
+        app_id: "<%= theme.valine.appid %>",
+        app_key: "<%= theme.valine.appkey %>",
+        placeholder: "<%= theme.valine.placeholder %>",
+        avatar: "<%= theme.valine.avatar %>"
+      });
+    </script>
+</section>
+```
+#### 5. 在<a href="javascript:;">/yelee/source/css/_partial/mobile.styl</a>最后加入：
+``` css
+#comments {
+    margin: (10/16)rem 10px !important;
+    padding: 1rem !important;
+}
+```
+#### 最后大功告成
+
+## 来比力评论
 #### 1. 注册来必力账号，注册成功之后，点击右上角的头像，进入管理页面
 ![进入管理页面](/images/lbl-01.png)
 #### 2. 然后点击左侧代码管理，会看到一串代码，代码第一行有个data-id，这个就是你的来必力id号
