@@ -61,6 +61,13 @@ valine: //unpkg.com/valine@1.2.0-beta1/dist/Valine.min.js
 }
 ```
 #### 最后大功告成
+> valine额外扩展
+* 不同风格的valine
+https://panjunwen.com/diy-a-comment-system/
+* 设置valine头像(注册Gravatar账号，并上传自己的头像，经过几天的数据全球化同步，头像会根据你得 E-mail 进行匹配)
+valine官网头像配置：https://valine.js.org/avatar.html
+Gravatar: https://cn.gravatar.com
+
 
 ## 来比力评论
 #### 1. 注册来必力账号，注册成功之后，点击右上角的头像，进入管理页面

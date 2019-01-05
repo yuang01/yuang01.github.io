@@ -7,17 +7,17 @@ tags: ['vue']
 
 有些时候我们希望点击浏览器后退按钮之后还是当前页面，也就是禁止点击后退按钮，那我们该怎么做呢？
 <!-- more -->
-### 首先将路由页面配置文件(一般为route.js)中不想后退的页面增加一个allowBack: false
-``` bash
+##### 首先将路由页面配置文件(一般为route.js)中不想后退的页面增加一个allowBack: false
+``` javascript
 {
   path: '/producrUnit',
   meta: { index: 5, allowBack: false }, // 在此处的meta里面加上allowBack: false
   component: ProducrUnit
 }
 ```
-### 然后在这个route.js文件里面继续写，通过router.beforeEach来判断当前路由页面配置是否包含allowBack: false,如果有，那就将这个false传给vuex里面的allowBack
+##### 然后在这个route.js文件里面继续写，通过router.beforeEach来判断当前路由页面配置是否包含allowBack: false,如果有，那就将这个false传给vuex里面的allowBack
 
-``` bash
+``` javascript
 let allowBack = true
 router.beforeEach(async (to, from, next) => {
   next()
@@ -32,8 +32,8 @@ router.beforeEach(async (to, from, next) => {
   })
 })
 ```
-### 此时应该在vuex里面增加哟个state，叫做allowBack，并且通过上面的代码可以看出，我们需要在action里面增加一个叫做 updateAppSetting的方法来改变state里面的allowBack
-``` bash
+##### 此时应该在vuex里面增加哟个state，叫做allowBack，并且通过上面的代码可以看出，我们需要在action里面增加一个叫做 updateAppSetting的方法来改变state里面的allowBack
+``` javascript
 /* eslint no-shadow: ["error", { "allow": ["state"] }] */
 import * as types from '../mutation-types'
 
@@ -70,9 +70,9 @@ export default {
 }
 
 ```
-### 最后需要在App.vue里面获取vuex中的allowBack，然后如果是false，就禁止其返回
+##### 最后需要在App.vue里面获取vuex中的allowBack，然后如果是false，就禁止其返回
 
-``` bash
+``` javascript
 import { mapGetters } from 'vuex'; // 首先获取到vuex中的allowBack，这里一般使用mapState获取，我个人喜欢用mapGetter
 computed: {
   ...mapGetters([
@@ -88,4 +88,4 @@ window.onpopstate = () => {
 
 ```
 
-### 然后就大功告成了!
+##### 然后就大功告成了!

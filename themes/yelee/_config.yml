@@ -145,7 +145,7 @@ base_font_size: 16  #px, 16 - 24
 color_scheme:
 
 highlight_style:
-  on: true
+  on: false
   inline_code: 2  # Value: 0 - 9 可选
   code_block: 2  # Value: 0 - 4
   # Set inline_code to style highlight text
