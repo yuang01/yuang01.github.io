@@ -95,7 +95,7 @@ meta: { title: '标题' }
 },
 ```
 ## 多路由嵌套
-可以看我定义的<a href="https://github.com/yuang01/remark-ui-vue/blob/master/src/router/index.js">router</a>中的nested路由，使用children便可以定义子路由，支持无限嵌套，也就是说可以有n个子路由，左侧导航栏有n个子栏目。在这里我的左侧导航栏使用的是递归组件的写法。但是需要注意的是每创建一个嵌套子路由需要定义一个`<router-view />`，性情可以参考我的@/views/nested文件夹
+可以看我定义的<a href="https://github.com/yuang01/remark-ui-vue/blob/master/src/router/index.js">router</a>中的nested路由，使用children便可以定义子路由，支持无限嵌套，也就是说可以有n个子路由，左侧导航栏有n个子栏目。在这里我的左侧导航栏使用的是递归组件的写法。但是需要注意的是每创建一个嵌套子路由需要定义一个`<router-view />`，详情可以参考我的@/views/nested文件夹
 > 代码地址(侧边栏)
 https://github.com/yuang01/remark-ui-vue/blob/master/src/views/Layout/Menubar/SidebarItem.vue
 以上这样定义路由就能生成左侧导航栏了
