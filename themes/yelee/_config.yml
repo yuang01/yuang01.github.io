@@ -205,7 +205,7 @@ friends:
 #friends: false
 
 #是否开启“关于我”。
-aboutme: 专注于前端
+aboutme: '邮箱：1730241541@qq.com--- 微信：yuang1730241541--- qq：1730241541---'
 #aboutme: false
 
 # Open link in a new tab | 是否在新窗口打开链接
