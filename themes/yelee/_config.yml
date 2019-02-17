@@ -100,7 +100,7 @@ valine:
   on: true
   appid: RaAwMtm0awJV0HcwwjdBo0Nt-gzGzoHsz # App ID
   appkey: ewO06LrADh1erYkXEOC9jkNf # App Key
-  avatar: retro # 匿名者头像选项
+  avatar: '' # 匿名者头像选项
   placeholder: ヾﾉ≧∀≦)o来啊，快活啊!
 
 disqus:
