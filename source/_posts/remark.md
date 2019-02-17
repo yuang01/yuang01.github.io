@@ -9,6 +9,16 @@ tags: 'vue.js'
 <!-- more -->
 # 效果总览
 ![效果总览](/images/remark.gif)
+# 左侧导航栏
+> 代码地址(侧边栏)
+https://github.com/yuang01/remark-ui-vue/blob/master/src/views/Layout/Menubar/SidebarItem.vue
+以上这样定义路由就能生成左侧导航栏了
+
+# tab页面切换
+支持滚轮滚动来选择tab，支持右键点击选择关闭、关闭其他、关闭所有
+> 代码地址
+https://github.com/yuang01/remark-ui-vue/blob/master/src/views/Layout/Tabbar/Tabbar.vue
+
 # 路由定义
 我是通过路由生成的左侧导航栏，所以首先定义路由至关重要，需要遵循一些规则。我的配置是这样的：<a href="https://github.com/yuang01/remark-ui-vue/blob/master/src/router/index.js">router</a>。
 这样定义是不会出现在侧边栏上的
@@ -90,26 +100,19 @@ meta: { title: '标题' }
   path: 'edit',
   component: () => import('@/views/nested2/menu1/menu1-2/edit'),
   name: 'edit',
-  meta: { title: 'edit', extends: 'Amenu1-2-2' },
+  meta: { title: 'edit', extends: 'menu1-2-2' },
   hidden: true,
 },
 ```
 ## 多路由嵌套
-可以看我定义的<a href="https://github.com/yuang01/remark-ui-vue/blob/master/src/router/index.js">router</a>中的nested路由，使用children便可以定义子路由，支持无限嵌套，也就是说可以有n个子路由，左侧导航栏有n个子栏目。在这里我的左侧导航栏使用的是递归组件的写法。但是需要注意的是每创建一个嵌套子路由需要定义一个`<router-view />`，详情可以参考我的@/views/nested文件夹
-> 代码地址(侧边栏)
-https://github.com/yuang01/remark-ui-vue/blob/master/src/views/Layout/Menubar/SidebarItem.vue
-以上这样定义路由就能生成左侧导航栏了
+可以看我定义的<a href="https://github.com/yuang01/remark-ui-vue/blob/master/src/router/index.js">router</a>中的nested路由，使用children便可以定义子路由，支持无限嵌套，也就是说可以有n个子路由，左侧导航栏有n个子栏目。在这里我的左侧导航栏使用的是递归组件的写法。但是需要注意的是每创建一个嵌套子路由需要定义一个`<router-view />`，详情可以参考我的<a href="https://github.com/yuang01/remark-ui-vue/tree/master/src/views/nested">@/views/nested</a>文件夹
+
 
 ## 左侧导航栏折叠方式
 如果想在只保持一个菜单展开的话可以在导航栏组件上传递一个unique-opened的prop，默认为true（只保持一个菜单展开），false的话，就可以让多个菜单展开。
 > 代码地址
 https://github.com/yuang01/remark-ui-vue/blob/master/src/views/Layout/Menubar/Body.vue
 在这个位置传递unique-opened即可。
-
-# tab页面切换(这个借鉴了别人的一些代码)
-支持滚轮滚动来选择tab，支持右键点击选择关闭、关闭其他、关闭所有
-> 代码地址
-https://github.com/yuang01/remark-ui-vue/blob/master/src/views/Layout/Tabbar/Tabbar.vue
 
 # 结语
 有时候用别人的组件用的很爽，但是自己造轮子也是挺好玩的，既可以提升技术，又可以使用自己的东西，很有成就感。欢迎吐槽哦。
