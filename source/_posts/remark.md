@@ -1,18 +1,17 @@
 ---
-title: vue左侧导航栏和tab切换页面效果实现
+title: vue.js实现左侧导航栏和tab切换页面效果
 date: 2019-01-20 21:11
 categories: "vue.js"
 tags: 'vue.js'
 ---
 # 前言 
-前些天有些无聊，于是自己又开始作死，写了一个左侧导航栏和tab切换页面功能玩玩，样式库使用的是<a href="https://getbootstrapadmin.com/remark/base/index.html">remark UI</a>。
+基于<a href="https://getbootstrapadmin.com/remark/base/index.html">remark UI</a>的样式，使用vue.js编写了左侧导航栏（侧边栏）和tab切换页面功能。
 <!-- more -->
 # 效果总览
 ![效果总览](/images/remark.gif)
 # 左侧导航栏
 > 代码地址(侧边栏)
 https://github.com/yuang01/remark-ui-vue/blob/master/src/views/Layout/Menubar/SidebarItem.vue
-以上这样定义路由就能生成左侧导航栏了
 
 # tab页面切换
 支持滚轮滚动来选择tab，支持右键点击选择关闭、关闭其他、关闭所有
@@ -64,7 +63,7 @@ https://github.com/yuang01/remark-ui-vue/blob/master/src/views/Layout/Tabbar/Tab
 #### hidden
 当设置 true 的时候该路由不会在侧边栏出现
 #### category
-侧边栏的类别，如果侧边栏进行分类的话可以使用category，定义哪个路由中，变显示在哪个路由的上方。如这样定义
+侧边栏的类别，如果侧边栏进行分类的话可以使用category，定义在哪个路由中，便显示在哪个路由的上方。如这样定义
 ``` javascript
 {
   path: '',
@@ -115,5 +114,5 @@ https://github.com/yuang01/remark-ui-vue/blob/master/src/views/Layout/Menubar/Bo
 在这个位置传递unique-opened即可。
 
 # 结语
-有时候用别人的组件用的很爽，但是自己造轮子也是挺好玩的，既可以提升技术，又可以使用自己的东西，很有成就感。欢迎吐槽哦。
+觉得还不错的朋友可以star<a href="https://github.com/yuang01/remark-ui-vue">项目</a>哦
 
