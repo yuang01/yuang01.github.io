@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Bamboo</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yuang01.github.io/"/>
+  <updated>2020-09-02T07:37:52.738Z</updated>
+  <id>http://yuang01.github.io/</id>
+  
+  <author>
+    <name>YuAng</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://yuang01.github.io/2020/09/02/hello-world/"/>
+    <id>http://yuang01.github.io/2020/09/02/hello-world/</id>
+    <published>2020-09-02T07:37:52.738Z</published>
+    <updated>2020-09-02T07:37:52.738Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>vue代码风格</title>
+    <link href="http://yuang01.github.io/2020/09/02/hello-world-copy-10/"/>
+    <id>http://yuang01.github.io/2020/09/02/hello-world-copy-10/</id>
+    <published>2020-09-02T07:37:52.735Z</published>
+    <updated>2020-09-02T07:37:52.735Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on [GitHub]ewwerwrw&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="前端" scheme="http://yuang01.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="运维" scheme="http://yuang01.github.io/categories/%E5%89%8D%E7%AB%AF/%E8%BF%90%E7%BB%B4/"/>
+    
+      <category term="攻城狮" scheme="http://yuang01.github.io/categories/%E5%89%8D%E7%AB%AF/%E8%BF%90%E7%BB%B4/%E6%94%BB%E5%9F%8E%E7%8B%AE/"/>
+    
+    
+      <category term="vue" scheme="http://yuang01.github.io/tags/vue/"/>
+    
+      <category term="html" scheme="http://yuang01.github.io/tags/html/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>这是一个标题为两行的页面哦多少度撒</title>
+    <link href="http://yuang01.github.io/2020/08/15/hello-world-copy-4/"/>
+    <id>http://yuang01.github.io/2020/08/15/hello-world-copy-4/</id>
+    <published>2020-08-15T13:11:00.000Z</published>
+    <updated>2020-09-02T07:37:52.736Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World6</title>
+    <link href="http://yuang01.github.io/2020/07/20/hello-world-copy-6/"/>
+    <id>http://yuang01.github.io/2020/07/20/hello-world-copy-6/</id>
+    <published>2020-07-20T13:11:00.000Z</published>
+    <updated>2020-09-02T07:37:52.736Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World7</title>
+    <link href="http://yuang01.github.io/2020/06/20/hello-world-copy-7/"/>
+    <id>http://yuang01.github.io/2020/06/20/hello-world-copy-7/</id>
+    <published>2020-06-20T13:11:00.000Z</published>
+    <updated>2020-09-02T07:37:52.737Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World9</title>
+    <link href="http://yuang01.github.io/2020/06/20/hello-world-copy-9/"/>
+    <id>http://yuang01.github.io/2020/06/20/hello-world-copy-9/</id>
+    <published>2020-06-20T13:11:00.000Z</published>
+    <updated>2020-09-02T07:37:52.737Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World2</title>
+    <link href="http://yuang01.github.io/2020/01/20/hello-world-copy-2/"/>
+    <id>http://yuang01.github.io/2020/01/20/hello-world-copy-2/</id>
+    <published>2020-01-20T13:11:00.000Z</published>
+    <updated>2020-09-02T07:37:52.735Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>这是一个推荐页面</title>
+    <link href="http://yuang01.github.io/2019/08/20/hello-world-copy-3/"/>
+    <id>http://yuang01.github.io/2019/08/20/hello-world-copy-3/</id>
+    <published>2019-08-20T13:11:00.000Z</published>
+    <updated>2020-09-02T07:37:52.736Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="vue" scheme="http://yuang01.github.io/tags/vue/"/>
+    
+      <category term="test1" scheme="http://yuang01.github.io/tags/test1/"/>
+    
+      <category term="test2" scheme="http://yuang01.github.io/tags/test2/"/>
+    
+      <category term="test3" scheme="http://yuang01.github.io/tags/test3/"/>
+    
+      <category term="test4" scheme="http://yuang01.github.io/tags/test4/"/>
+    
+      <category term="test5" scheme="http://yuang01.github.io/tags/test5/"/>
+    
+      <category term="test6" scheme="http://yuang01.github.io/tags/test6/"/>
+    
+      <category term="test7" scheme="http://yuang01.github.io/tags/test7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World5</title>
+    <link href="http://yuang01.github.io/2019/08/05/hello-world-copy-5/"/>
+    <id>http://yuang01.github.io/2019/08/05/hello-world-copy-5/</id>
+    <published>2019-08-05T13:11:00.000Z</published>
+    <updated>2020-09-02T07:37:52.736Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World8</title>
+    <link href="http://yuang01.github.io/2019/05/20/hello-world-copy-8/"/>
+    <id>http://yuang01.github.io/2019/05/20/hello-world-copy-8/</id>
+    <published>2019-05-20T13:11:00.000Z</published>
+    <updated>2020-09-02T07:37:52.737Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>vue.js实现左侧导航栏和tab切换页面效果</title>
+    <link href="http://yuang01.github.io/2019/01/20/hello-world-copy/"/>
+    <id>http://yuang01.github.io/2019/01/20/hello-world-copy/</id>
+    <published>2019-01-20T13:11:00.000Z</published>
+    <updated>2020-09-02T07:37:52.737Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;基于&lt;a href=&quot;https://getbootstrapadmin.com/remark/base/index.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;remark UI&lt;/a&gt;的样式，使用vue.js编写了左侧导航栏（侧边栏）和tab切换页面功能。基于&lt;a href=&quot;https://getbootstrapadmin.com/remark/base/index.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;remark UI&lt;/a&gt;的样式敖德萨多撒多撒多撒多敖德萨多撒多大大撒多所大声道撒多大大的撒旦撒旦大萨达所所多&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="vue.js" scheme="http://yuang01.github.io/categories/vue-js/"/>
+    
+    
+      <category term="vue.js" scheme="http://yuang01.github.io/tags/vue-js/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>这是一个测试页面哦</title>
+    <link href="http://yuang01.github.io/2018/09/28/hello-world-copy-11/"/>
+    <id>http://yuang01.github.io/2018/09/28/hello-world-copy-11/</id>
+    <published>2018-09-28T05:34:00.000Z</published>
+    <updated>2020-09-02T07:37:52.735Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;p&gt;&lt;a href=&quot;README.md&quot;&gt;English Document&lt;/a&gt; | &lt;a href=&quot;https://blinkfox.github.io/&quot; target=&quot;_blank&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="前端" scheme="http://yuang01.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="Hexo" scheme="http://yuang01.github.io/tags/Hexo/"/>
+    
+      <category term="hexo-theme-Bamboo" scheme="http://yuang01.github.io/tags/hexo-theme-Bamboo/"/>
+    
+  </entry>
+  
+</feed>
