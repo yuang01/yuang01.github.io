@@ -1587,3 +1587,31 @@ a {
 #local-search-input:focus {
   background-image: linear-gradient(#42b983, #42b983), linear-gradient(#e4eaec, #e4eaec) !important;
 }
+.topArticle .more:hover {
+  color: #42b983 !important;
+}
+.posts .post-title .post-title-link:hover {
+  color: #42b983;
+}
+.posts .post-more i:hover {
+  color: #42b983;
+}
+.post-tags .article-tag-list li a:hover {
+  color: #42b983;
+}
+.post-categories .article-category .article-category-link:hover {
+  color: #42b983;
+}
+.post-detail a {
+  color: #42b983 !important;
+}
+.post-copyright {
+  border-left: 3px solid #42b983;
+}
+.post-detail blockquote {
+  border-left: 4px solid #42b983;
+  background-color: rgba(66,185,131,0.1);
+}
+.toc-link.is-active-link::before {
+  background-color: #42b983;
+}
