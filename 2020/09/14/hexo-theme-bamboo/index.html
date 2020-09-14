@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html>
+  
+
+
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+  <title>Hexo主题--Bamboo介绍 | Bamboo</title>
+  
+    
+<link rel="stylesheet" href="/js/aos/aos.css">
+
+  
+  <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico">
+  <link rel="stylesheet" href="https://at.alicdn.com/t/font_1911880_c1nvbyezg17.css">
+  <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  
+<link rel="stylesheet" href="/css/animate.min.css">
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  
+    
+<link rel="stylesheet" href="/js/fancybox/jquery.fancybox.min.css">
+
+  
+  
+    
+<link rel="stylesheet" href="/js/shareJs/share.min.css">
+
+  
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="Bamboo" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+  
+<script src="/js/jquery3.5.1.js"></script>
+
+  
+<script src="/js/vue2.6.11.js"></script>
+
+  <body>
+    <header class="header bg-color" 
+  style="position: fixed; 
+  left: 0; top: 0; z-index: 10;width: 100%;"
+>
+  <div class="header-content">
+    <div class="bars">
+      <div id="appDrawer" class="sidebar-image">
+  <i class="fa fa-bars" aria-hidden="true" @click="showDialogDrawer"></i>
+  <div class="drawer-box_mask" v-cloak style="display: none;" v-show="visible" @click.self="cancelDialogDrawer">
+  </div>
+  <div class="drawer-box" :class="{'active': visible}">
+    <div class="drawer-box-head bg-color">
+      <img class="drawer-box-head_logo" src="/medias/logo.png" alt="logo">
+      <h3 class="drawer-box-head_title">Bamboo</h3>
+      <h5 class="drawer-box-head_desc">千磨万击还坚劲，任尔东西南北风</h5>
+    </div>
+    <div class="drawer-box-content">
+      <ul class="drawer-box-content_menu">
+        
+          <li class="drawer-box-content_item">
+            <a href="/" class="menu-item-link">
+              
+                <i class="fa fa-home" aria-hidden="true"></i>
+              
+              <span>首页</span>
+            </a>
+          </li>
+        
+          <li class="drawer-box-content_item">
+            <a href="/archives" class="menu-item-link">
+              
+                <i class="fa fa-home" aria-hidden="true"></i>
+              
+              <span>归档</span>
+            </a>
+          </li>
+        
+          <li class="drawer-box-content_item">
+            <a href="/tags" class="menu-item-link">
+              
+                <i class="fa fa-tags" aria-hidden="true"></i>
+              
+              <span>标签</span>
+            </a>
+          </li>
+        
+          <li class="drawer-box-content_item">
+            <a href="/categories" class="menu-item-link">
+              
+                <i class="fa fa-bookmark" aria-hidden="true"></i>
+              
+              <span>分类</span>
+            </a>
+          </li>
+        
+          <li class="drawer-box-content_item">
+            <a href="/about" class="menu-item-link">
+              
+                <i class="fa fa-user" aria-hidden="true"></i>
+              
+              <span>关于</span>
+            </a>
+          </li>
+        
+          <li class="drawer-box-content_item">
+            <a href="/friends" class="menu-item-link">
+              
+                <i class="fa fa-link" aria-hidden="true"></i>
+              
+              <span>友情链接</span>
+            </a>
+          </li>
+        
+        <li class="drawer-box-content_item">
+          <a href="">
+            <i class="fa fa-github" aria-hidden="true"></i>
+            <span>Github</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<script>
+  var body = document.body || document.documentElement || window;
+  var vm = new Vue({
+    el: '#appDrawer',
+    data: {
+      visible: false,
+      top: 0,
+    },
+    computed: {
+    },
+    mounted() {
+    },
+    methods: {
+      showDialogDrawer() {
+        this.visible = true;
+        // 防止页面滚动，只能让弹框滚动
+        this.top = $(document).scrollTop()
+        body.style.cssText = 'width: 100%; height: 100%; position: fixed; top: -' + this.top  + 'px; left: 0; overflow: hidden;';
+      },
+      cancelDialogDrawer() {
+        this.visible = false;
+        body.removeAttribute('style');
+        $(document).scrollTop(this.top)
+      }
+    },
+    created() {}
+  })
+</script>
+    </div>
+    <div class="blog-title" id="author-avatar">
+      <div class="avatar">
+        <img src="/medias/logo.png" alt="logo">
+      </div>
+      <a href="/" class="logo">Bamboo</a>
+    </div>
+    <nav class="navbar">
+      <ul class="menu">
+        
+          <li class="menu-item">
+            <a href="/" class="menu-item-link">
+              
+                <i class="fa fa-home" aria-hidden="true"></i>
+              
+              <span>首页</span>
+            </a>
+          </li>
+        
+          <li class="menu-item">
+            <a href="/archives" class="menu-item-link">
+              
+                <i class="fa fa-archive" aria-hidden="true"></i>
+              
+              <span>归档</span>
+            </a>
+          </li>
+        
+          <li class="menu-item">
+            <a href="/tags" class="menu-item-link">
+              
+                <i class="fa fa-tags" aria-hidden="true"></i>
+              
+              <span>标签</span>
+            </a>
+          </li>
+        
+          <li class="menu-item">
+            <a href="/categories" class="menu-item-link">
+              
+                <i class="fa fa-bookmark" aria-hidden="true"></i>
+              
+              <span>分类</span>
+            </a>
+          </li>
+        
+          <li class="menu-item">
+            <a href="/about" class="menu-item-link">
+              
+                <i class="fa fa-user" aria-hidden="true"></i>
+              
+              <span>关于</span>
+            </a>
+          </li>
+        
+          <li class="menu-item">
+            <a href="/friends" class="menu-item-link">
+              
+                <i class="fa fa-link" aria-hidden="true"></i>
+              
+              <span>友情链接</span>
+            </a>
+          </li>
+        
+      </ul>
+      
+        <div id="appSearch">
+  <div class="search"  @click="showDialog()"><i class="fa fa-search" aria-hidden="true"></i></div>
+  <div class="message-box_wrapper" style="display: none;" v-cloak v-show="dialogVisible" @click.self="cancelDialogVisible()">
+    <div class="message-box">
+      <h2>
+        <i class="fa fa-search" aria-hidden="true"></i>
+        <span class="title">搜索</span>
+      </h2>
+      <form class="site-search-form">
+        <input type="text"
+          placeholder="请输入关键字"
+          id="local-search-input" 
+          @click="getSearchFile()"
+          class="st-search-input"
+          v-model="searchInput"
+        />
+      </form>
+      <div class="result-wrapper">
+        <div id="local-search-result" class="local-search-result-cls"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="/js/local_search.js"></script>
+
+<script>
+  var body = document.body || document.documentElement || window;
+  var vm = new Vue({
+    el: '#appSearch',
+    data: {
+      dialogVisible: false,
+      searchInput: '',
+      top: 0,
+    },
+    computed: {
+    },
+    mounted() {
+    },
+    methods: {
+      showDialog() {
+        this.dialogVisible = true;
+        // 防止页面滚动，只能让弹框滚动
+        this.top = $(document).scrollTop()
+        body.style.cssText = 'width: 100%; height: 100%; position: fixed; top: -' + this.top  + 'px; left: 0; overflow: hidden;';
+      },
+      getSearchFile() {
+        if (!this.searchInput) {
+          getSearchFile();
+        }
+      },
+      cancelDialogVisible() {
+        this.dialogVisible = false;
+        body.removeAttribute('style');
+        $(document).scrollTop(this.top)
+      },
+    },
+    created() {}
+  })
+</script>
+<!-- 解决刷新页面闪烁问题，可以在元素上添加display: none, 或者用vue.extend方法，详情：https://blog.csdn.net/qq_31393401/article/details/81017912 -->
+<!-- 下面是搜索基本写法 -->
+<!-- <script type="text/javascript" id="local.search.active">
+  var inputArea = document.querySelector("#local-search-input");
+  inputArea.onclick   = function(){ getSearchFile(); this.onclick = null }
+  inputArea.onkeydown = function(){ if(event.keyCode == 13) return false }
+</script> -->
+
+      
+    </nav>
+  </div>
+  
+  <a href="https://github.com/yuang01" target="_blank" rel="noopener" class="github-corner color-primary" aria-label="View source on GitHub"><svg width="60" height="60" viewBox="0 0 250 250" style="fill:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+</header>
+    <main class="main" style="margin-top: 60px;">
+      
+
+
+<div class="post-detail-header" style="background: url(/medias/13.png) no-repeat; background-size: cover; 
+  background-position: center center;">
+  
+    <span class="title">Hexo主题--Bamboo介绍</span>
+  
+</div>
+<div class="row justify-center">
+  <div class="main-content">
+    <article class="post post-detail">
+      
+      
+      <div class="post-meta">
+        <i class="fa fa-clock-o" aria-hidden="true"></i>
+        <span class="post-time">2020-09-14</span>
+      </div>
+      
+      <div class="post-tags-categories">
+        
+        <div class="tags">
+          <i class="iconfont icontag"></i>
+          
+            <a href="/tags/Hexo/" class="">
+              Hexo
+            </a>
+          
+            <a href="/tags/hexo-theme-Bamboo/" class="">
+              hexo-theme-Bamboo
+            </a>
+          
+        </div>
+        
+        
+        <div class="categories">
+          <i class="iconfont iconbookmark1"></i>
+          
+            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="">
+              前端
+            </a>
+          
+        </div>
+        
+      </div>
+      <div class="post-content">
+        <p>这是一个基于Hexo的响应式博客主题，<a href="https://yuang01.github.io/">演示示例</a>，| QQ交流:<code>1730241541</code></p>
+<a id="more"></a>
+<h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><p>首先你需要有一个<a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener">Hexo</a>，按照官网的方法，很容易的就能创建一个hexo博客。<br>当你有了hexo博客之后，进入<code>themes</code>文件夹下使用 <code>Git clone</code> 命令来下载:</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token function">git</span> clone https://github.com/yuang01/theme.git</code></pre>
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><h3 id="切换主题"><a href="#切换主题" class="headerlink" title="切换主题"></a>切换主题</h3><p>修改 Hexo 根目录下的 <code>_config.yml</code> 的  <code>theme</code> 的值：<code>theme: Bamboo</code></p>
+<h4 id="config-yml-文件的其它修改建议"><a href="#config-yml-文件的其它修改建议" class="headerlink" title="_config.yml 文件的其它修改建议:"></a><code>_config.yml</code> 文件的其它修改建议:</h4><ul>
+<li>请修改 <code>_config.yml</code> 的 <code>url</code> 的值为你的网站主 <code>URL</code>（如：<code>http://xxx.github.io</code>）。<code>author</code>值改为你的名称（如：yuang），<code>description</code>值随便写一段描述（如：千磨万击还坚劲，任尔东西南北风）</li>
+<li>如果你是中文用户，则建议修改 <code>language</code> 的值为 <code>zh-CN</code>。</li>
+</ul>
+<h3 id="代码高亮"><a href="#代码高亮" class="headerlink" title="代码高亮"></a>代码高亮</h3><p>这个主题采用的是<a href="https://github.com/ele828/hexo-prism-plugin" target="_blank" rel="noopener">hexo-prism-plugin</a>这个Hexo插件来做代码高亮，安装命令如下：</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token function">npm</span> i -S hexo-prism-plugin</code></pre>
+<p>然后，修改 Hexo 根目录下 <code>_config.yml</code> 文件中 <code>highlight.enable</code> 的值为 <code>false</code>，并新增 <code>prism</code> 插件相关的配置，主要配置如下：</p>
+<pre class=" language-yaml"><code class="language-yaml"><span class="token key atrule">highlight</span><span class="token punctuation">:</span>
+  <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+
+<span class="token key atrule">prism_plugin</span><span class="token punctuation">:</span>
+  <span class="token key atrule">mode</span><span class="token punctuation">:</span> <span class="token string">'preprocess'</span>    <span class="token comment" spellcheck="true"># realtime/preprocess</span>
+  <span class="token key atrule">theme</span><span class="token punctuation">:</span> <span class="token string">'tomorrow'</span>    <span class="token comment" spellcheck="true"># 这里可以选择不同样式的主题</span>
+  <span class="token key atrule">line_number</span><span class="token punctuation">:</span> <span class="token boolean important">false    </span><span class="token comment" spellcheck="true"># default false</span>
+  custom_css<span class="token punctuation">:</span></code></pre>
+<h3 id="搜索"><a href="#搜索" class="headerlink" title="搜索"></a>搜索</h3><p>本主题中还使用到了 <a href="https://github.com/wzpan/hexo-generator-search" target="_blank" rel="noopener">hexo-generator-search</a> 的 Hexo 插件来做内容搜索，安装命令如下：</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> hexo-generator-search --save</code></pre>
+<p>在 Hexo 根目录下的 <code>_config.yml</code> 文件中，新增以下的配置项：</p>
+<pre class=" language-yaml"><code class="language-yaml"><span class="token key atrule">search</span><span class="token punctuation">:</span>
+  <span class="token key atrule">path</span><span class="token punctuation">:</span> search.xml
+  <span class="token key atrule">field</span><span class="token punctuation">:</span> post</code></pre>
+<p>在主题文件夹下的<code>_config.yml</code>文件中设置<code>search</code>为true或者false控制显示隐藏</p>
+<h3 id="新建分类-categories-页"><a href="#新建分类-categories-页" class="headerlink" title="新建分类 categories 页"></a>新建分类 categories 页</h3><p><code>categories</code> 页是用来展示所有分类的页面，也就是导航上的分类页面，如果在你的博客 <code>source</code> 目录下还没有 <code>categories/index.md</code> 文件，那么你就需要手动或者使用命令新建一个，命令如下：</p>
+<pre class=" language-bash"><code class="language-bash">hexo new page <span class="token string">"categories"</span></code></pre>
+<p>编辑你刚刚新建的页面文件 <code>/source/categories/index.md</code>，至少需要以下内容：</p>
+<pre class=" language-yaml"><code class="language-yaml"><span class="token punctuation">---</span>
+<span class="token key atrule">title</span><span class="token punctuation">:</span> categories
+<span class="token key atrule">date</span><span class="token punctuation">:</span> <span class="token datetime number">2020-09-14 15:30:30</span>
+<span class="token key atrule">type</span><span class="token punctuation">:</span> <span class="token string">"categories"</span>
+<span class="token key atrule">layout</span><span class="token punctuation">:</span> <span class="token string">"categories"</span>
+<span class="token punctuation">---</span></code></pre>
+<h3 id="新建标签-tags-页"><a href="#新建标签-tags-页" class="headerlink" title="新建标签 tags 页"></a>新建标签 tags 页</h3><p><code>tags</code> 页是用来展示所有标签的页面，如果在你的博客 <code>source</code> 目录下还没有 <code>tags/index.md</code> 文件，那么你就需要新建一个，命令如下：</p>
+<pre class=" language-bash"><code class="language-bash">hexo new page <span class="token string">"tags"</span></code></pre>
+<p>编辑你刚刚新建的页面文件 <code>/source/tags/index.md</code>，至少需要以下内容：</p>
+<pre class=" language-yaml"><code class="language-yaml"><span class="token punctuation">---</span>
+<span class="token key atrule">title</span><span class="token punctuation">:</span> tags
+<span class="token key atrule">date</span><span class="token punctuation">:</span> <span class="token datetime number">2020-09-14 15:30:30</span>
+<span class="token key atrule">type</span><span class="token punctuation">:</span> <span class="token string">"tags"</span>
+<span class="token key atrule">layout</span><span class="token punctuation">:</span> <span class="token string">"tags"</span>
+<span class="token punctuation">---</span></code></pre>
+<h3 id="新建关于我-about-页"><a href="#新建关于我-about-页" class="headerlink" title="新建关于我 about 页"></a>新建关于我 about 页</h3><p><code>about</code> 页是用来展示<strong>关于我和我的博客</strong>信息的页面，如果在你的博客 <code>source</code> 目录下还没有 <code>about/index.md</code> 文件，那么你就需要新建一个，命令如下：</p>
+<pre class=" language-bash"><code class="language-bash">hexo new page <span class="token string">"about"</span></code></pre>
+<p>然后可以在本主题下的<code>_config.yml</code>文件下，编辑以下字段进行关于我页面信息的更改</p>
+<pre class=" language-yaml"><code class="language-yaml">baseInfo <span class="token comment" spellcheck="true"># 基本信息，包括年龄，性别，坐标，状态</span>
+skills   <span class="token comment" spellcheck="true"># 技能</span>
+socialAccounts <span class="token comment" spellcheck="true"># 社交账号</span>
+games   <span class="token comment" spellcheck="true"># 游戏</span>
+books   <span class="token comment" spellcheck="true">#书籍</span></code></pre>
+<h3 id="新建友情连接-friends-页"><a href="#新建友情连接-friends-页" class="headerlink" title="新建友情连接 friends 页"></a>新建友情连接 friends 页</h3><p><code>friends</code> 页是用来展示<strong>友情连接</strong>信息的页面，如果在你的博客 <code>source</code> 目录下还没有 <code>friends/index.md</code> 文件，那么你就需要新建一个，命令如下：</p>
+<pre class=" language-bash"><code class="language-bash">hexo new page <span class="token string">"friends"</span></code></pre>
+<p>编辑你刚刚新建的页面文件 <code>/source/friends/index.md</code>，至少需要以下内容：</p>
+<pre class=" language-yaml"><code class="language-yaml"><span class="token punctuation">---</span>
+<span class="token key atrule">title</span><span class="token punctuation">:</span> friends
+<span class="token key atrule">date</span><span class="token punctuation">:</span> <span class="token datetime number">2020-09-14 15:30:30</span>
+<span class="token key atrule">type</span><span class="token punctuation">:</span> <span class="token string">"friends"</span>
+<span class="token key atrule">layout</span><span class="token punctuation">:</span> <span class="token string">"friends"</span>
+<span class="token punctuation">---</span></code></pre>
+<p>同时，在你的博客 <code>source</code> 目录下新建 <code>_data</code> 目录，在 <code>_data</code> 目录中新建 <code>friends.json</code> 文件，文件内容如下所示：</p>
+<pre class=" language-json"><code class="language-json"><span class="token punctuation">[</span><span class="token punctuation">{</span>
+  <span class="token property">"avatar"</span><span class="token operator">:</span> <span class="token string">"https://pic2.zhimg.com/80/v2-d1bd22e7dc847ae62028ae336d55ded9_720w.jpg?source=1940ef5c"</span><span class="token punctuation">,</span>
+  <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"如梦亦如幻"</span><span class="token punctuation">,</span>
+  <span class="token property">"introduction"</span><span class="token operator">:</span> <span class="token string">"烟雨如江南"</span><span class="token punctuation">,</span>
+  <span class="token property">"url"</span><span class="token operator">:</span> <span class="token string">"https://github.com/yuang01"</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+  <span class="token property">"avatar"</span><span class="token operator">:</span> <span class="token string">"https://pic1.zhimg.com/80/v2-1a60e33c33810a4d81a80282b8ca7a33_720w.jpg?source=1940ef5c"</span><span class="token punctuation">,</span>
+  <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"青灯暮雨"</span><span class="token punctuation">,</span>
+  <span class="token property">"introduction"</span><span class="token operator">:</span> <span class="token string">"山水如墨染"</span><span class="token punctuation">,</span>
+  <span class="token property">"url"</span><span class="token operator">:</span> <span class="token string">"https://github.com/yuang01"</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+  <span class="token property">"avatar"</span><span class="token operator">:</span> <span class="token string">"https://pic2.zhimg.com/80/v2-134122ca13d041f5ec1f2680f2677318_720w.jpg?source=1940ef5c"</span><span class="token punctuation">,</span>
+  <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"寄情山水花草间"</span><span class="token punctuation">,</span>
+  <span class="token property">"introduction"</span><span class="token operator">:</span> <span class="token string">"宛如丹青未干"</span><span class="token punctuation">,</span>
+  <span class="token property">"url"</span><span class="token operator">:</span> <span class="token string">"https://github.com/yuang01"</span>
+<span class="token punctuation">}</span><span class="token punctuation">]</span></code></pre>
+<h3 id="中文链接转拼音（可选的）"><a href="#中文链接转拼音（可选的）" class="headerlink" title="中文链接转拼音（可选的）"></a>中文链接转拼音（可选的）</h3><p>如果你的文章名称是中文的，那么 Hexo 默认生成的永久链接也会有中文，这样不利于 <code>SEO</code>，且 <code>gitment</code> 评论对中文链接也不支持。我们可以用 <a href="https://github.com/viko16/hexo-permalink-pinyin" target="_blank" rel="noopener">hexo-permalink-pinyin</a> Hexo 插件使在生成文章时生成中文拼音的永久链接。<br>安装命令如下：</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token function">npm</span> i hexo-permalink-pinyin --save</code></pre>
+<p>在 Hexo 根目录下的 <code>_config.yml</code> 文件中，新增以下的配置项：</p>
+<pre class=" language-yaml"><code class="language-yaml"><span class="token key atrule">permalink_pinyin</span><span class="token punctuation">:</span>
+  <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">separator</span><span class="token punctuation">:</span> <span class="token string">'-'</span> <span class="token comment" spellcheck="true"># default: '-'</span></code></pre>
+<blockquote>
+<p><strong>注</strong>：除了此插件外，<a href="https://github.com/rozbo/hexo-abbrlink" target="_blank" rel="noopener">hexo-abbrlink</a> 插件也可以生成非中文的链接。</p>
+</blockquote>
+<h3 id="添加-RSS-订阅支持（可选的）"><a href="#添加-RSS-订阅支持（可选的）" class="headerlink" title="添加 RSS 订阅支持（可选的）"></a>添加 RSS 订阅支持（可选的）</h3><p>本主题中还使用到了 <a href="https://github.com/hexojs/hexo-generator-feed" target="_blank" rel="noopener">hexo-generator-feed</a> 的 Hexo 插件来做 <code>RSS</code>，安装命令如下：</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> hexo-generator-feed --save</code></pre>
+<p>在 Hexo 根目录下的 <code>_config.yml</code> 文件中，新增以下的配置项：</p>
+<pre class=" language-yaml"><code class="language-yaml"><span class="token key atrule">feed</span><span class="token punctuation">:</span>
+  <span class="token key atrule">type</span><span class="token punctuation">:</span> atom
+  <span class="token key atrule">path</span><span class="token punctuation">:</span> atom.xml
+  <span class="token key atrule">limit</span><span class="token punctuation">:</span> <span class="token number">20</span>
+  <span class="token key atrule">hub</span><span class="token punctuation">:</span>
+  <span class="token key atrule">content</span><span class="token punctuation">:</span>
+  <span class="token key atrule">content_limit</span><span class="token punctuation">:</span> <span class="token number">140</span>
+  <span class="token key atrule">content_limit_delim</span><span class="token punctuation">:</span> <span class="token string">' '</span>
+  <span class="token key atrule">order_by</span><span class="token punctuation">:</span> <span class="token punctuation">-</span>date</code></pre>
+<h3 id="首页轮播图"><a href="#首页轮播图" class="headerlink" title="首页轮播图"></a>首页轮播图</h3><p>首页轮播图在<code>source/_posts/xxx.md</code>也就是文章页面配置，如果你想让某个文章放在首页轮播中，只用设置<code>swiper: true</code>即可，可以通过<code>swiperImg: xxx</code>来配置轮播图片，如下所示</p>
+<pre class=" language-yaml"><code class="language-yaml"><span class="token punctuation">---</span>
+<span class="token key atrule">title</span><span class="token punctuation">:</span> Hello world
+<span class="token key atrule">date</span><span class="token punctuation">:</span> 2019<span class="token punctuation">-</span>01<span class="token punctuation">-</span>20 21<span class="token punctuation">:</span><span class="token number">11</span>
+<span class="token key atrule">swiper</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+<span class="token key atrule">swiperImg</span><span class="token punctuation">:</span> <span class="token string">'https://ssyerv1.oss-cn-hangzhou.aliyuncs.com/picture/c080ff4434354e35af9dab0a3ee1b9f7.jpg!sswm'</span>
+<span class="token punctuation">---</span>
+我是文章内容</code></pre>
+<p><code>swiperImg</code>可以是cdn地址，也可以是本地地址，例如<code>/medias/4.png</code><br>可以通过主题文件夹下的<code>_config.yml</code>文件中的<code>swiper</code>属性对轮播进行调整</p>
+<h3 id="顶部导航"><a href="#顶部导航" class="headerlink" title="顶部导航"></a>顶部导航</h3><p>通过主题文件夹下的<code>_config.yml</code>文件中的<code>logo</code>属性设置网站logo，<code>Github</code>属性设置导航右侧的github，<code>menu</code>属性设置菜单，<code>headMenuFixed</code>属性设置导航是否随滚动条下拉固定</p>
+<h3 id="网站favicon"><a href="#网站favicon" class="headerlink" title="网站favicon"></a>网站favicon</h3><p>设置主题文件夹下的<code>_config.yml</code>文件中的<code>favicon</code>属性即可</p>
+<h3 id="回到顶部"><a href="#回到顶部" class="headerlink" title="回到顶部"></a>回到顶部</h3><p>设置主题文件夹下的<code>_config.yml</code>文件中的<code>goTop</code>属性即可控制隐藏显示</p>
+<h3 id="文章详情页图片放大功能"><a href="#文章详情页图片放大功能" class="headerlink" title="文章详情页图片放大功能"></a>文章详情页图片放大功能</h3><p>设置主题文件夹下的<code>_config.yml</code>文件中的<code>fancybox</code>属性即可</p>
+<h3 id="修改页脚"><a href="#修改页脚" class="headerlink" title="修改页脚"></a>修改页脚</h3><p>页脚底部的网站统计功能，使用的是<a href="http://busuanzi.ibruce.info/" target="_blank" rel="noopener">不蒜子</a>，设置主题文件夹下的<code>_config.yml</code>文件中的<code>busuanzi</code>属性即可控制隐藏显示<br>页脚信息可以在<code>/layout/_partial/footer.ejs</code> 文件中进行手动修改。本主题使用<a href="http://www.fontawesome.com.cn/faicons/" target="_blank" rel="noopener">Font Awesome图标</a></p>
+<blockquote>
+<p><strong>注意</strong>: 本主题中使用的 <code>Font Awesome</code> 版本为 <code>4.7.0</code>。</p>
+</blockquote>
+<h3 id="修改打赏的二维码图片"><a href="#修改打赏的二维码图片" class="headerlink" title="修改打赏的二维码图片"></a>修改打赏的二维码图片</h3><p>设置主题文件夹下的<code>_config.yml</code>文件中的<code>donate</code>属性为true，然后更改<code>Alipay</code>和<code>WeChatpay</code>图片路径即可</p>
+<h3 id="文章详情页分享功能"><a href="#文章详情页分享功能" class="headerlink" title="文章详情页分享功能"></a>文章详情页分享功能</h3><p>设置主题文件夹下的<code>_config.yml</code>文件中的<code>sharejs</code>属性true或者false即可</p>
+<h3 id="点击出现爱心效果"><a href="#点击出现爱心效果" class="headerlink" title="点击出现爱心效果"></a>点击出现爱心效果</h3><p>设置主题文件夹下的<code>_config.yml</code>文件中的<code>clicklove</code>属性true或者false即可</p>
+<h3 id="复制成功提醒"><a href="#复制成功提醒" class="headerlink" title="复制成功提醒"></a>复制成功提醒</h3><p>当复制内容时候，是否显示复制成功提示<br>设置主题文件夹下的<code>_config.yml</code>文件中的<code>copy</code>属性true或者false即可</p>
+<h3 id="文章详情页的标题显示位置"><a href="#文章详情页的标题显示位置" class="headerlink" title="文章详情页的标题显示位置"></a>文章详情页的标题显示位置</h3><p>设置主题文件夹下的<code>_config.yml</code>文件中的<code>postTitleTop</code>属性true或者false即可，true的时候，显示在上方的图片中，false显示在文章内容上面</p>
+<h3 id="滚动动画"><a href="#滚动动画" class="headerlink" title="滚动动画"></a>滚动动画</h3><p>设置主题文件夹下的<code>_config.yml</code>文件中的<code>aos</code>属性对首页中的文章列表动画进行控制，具体参考官网<a href="https://github.com/michalsnik/aos#animations" target="_blank" rel="noopener">aos.js</a></p>
+<h3 id="文章详情页目录"><a href="#文章详情页目录" class="headerlink" title="文章详情页目录"></a>文章详情页目录</h3><p>设置主题文件夹下的<code>_config.yml</code>文件中的<code>toc</code>属性，控制其显示隐藏</p>
+<h3 id="音乐"><a href="#音乐" class="headerlink" title="音乐"></a>音乐</h3><p>设置主题文件夹下的<code>_config.yml</code>文件中的<code>music</code>属性，控制其显示隐藏和其他一些调整, <code>music</code>中的<code>fixed</code>属性建议使用<code>true</code></p>
+<h3 id="版权信息"><a href="#版权信息" class="headerlink" title="版权信息"></a>版权信息</h3><p>可以在<code>source/_posts/xxx.md</code>文件中设置<code>copyright</code>true或者false，单独设置某个文章的版权信息是否显示，也可以在主题文件夹下的<code>_config.yml</code>文件中的<code>copyright</code>属性设置true或者false对所有文章的版权信息进行显示隐藏控制</p>
+<h3 id="文章置顶"><a href="#文章置顶" class="headerlink" title="文章置顶"></a>文章置顶</h3><p>可以在<code>source/_posts/xxx.md</code>文件中设置<code>top: true</code>，将该文章放在首页的文章置顶栏目中，可以在主题文件夹下的<code>_config.yml</code>文件中的<code>tocArticle</code>属性设置true或者false控制首页的文章置顶栏目显示和隐藏。</p>
+<h3 id="评论"><a href="#评论" class="headerlink" title="评论"></a>评论</h3><p>主题中内置了<code>valine</code>, <code>miniValine</code>, <code>livere</code>, <code>gitment</code>, <code>gitalk</code>, <code>changyan</code>评论<br>通过主题文件夹下的<code>_config.yml</code>文件中的相应属性进行设置<br>推荐使用<code>valine</code>和<code>livere</code></p>
+<h3 id="归档、标签、分类、关于我、友情链接页面图片自定义"><a href="#归档、标签、分类、关于我、友情链接页面图片自定义" class="headerlink" title="归档、标签、分类、关于我、友情链接页面图片自定义"></a>归档、标签、分类、关于我、友情链接页面图片自定义</h3><p>通过主题文件夹下的<code>_config.yml</code>文件中的相应属性进行设置，属性如下：</p>
+<pre class=" language-yaml"><code class="language-yaml"><span class="token comment" spellcheck="true"># 归档页面图片 or 'http://xxx'</span>
+<span class="token key atrule">archiveImg</span><span class="token punctuation">:</span> <span class="token string">'/medias/archiveImg.png'</span>
+<span class="token comment" spellcheck="true"># 标签页面图片</span>
+<span class="token key atrule">tagImg</span><span class="token punctuation">:</span> <span class="token string">'/medias/tag.png'</span>
+<span class="token comment" spellcheck="true"># 标签详情页面图片</span>
+<span class="token key atrule">tagDetailImg</span><span class="token punctuation">:</span> <span class="token string">'/medias/tagDetail.png'</span>
+<span class="token comment" spellcheck="true"># 分类页面图片</span>
+<span class="token key atrule">categoriesImg</span><span class="token punctuation">:</span> <span class="token string">'/medias/categories.png'</span>
+<span class="token comment" spellcheck="true">#分类详情页面图片</span>
+<span class="token key atrule">categoryDetailImg</span><span class="token punctuation">:</span> <span class="token string">'/medias/categoryDetail.png'</span>
+<span class="token comment" spellcheck="true"># 关于我页面图片</span>
+<span class="token key atrule">aboutImg</span><span class="token punctuation">:</span> <span class="token string">'/medias/about.png'</span>
+<span class="token comment" spellcheck="true"># 友情链接页面图片</span>
+<span class="token key atrule">friendsImg</span><span class="token punctuation">:</span> <span class="token string">'/medias/friends.png'</span></code></pre>
+<h3 id="更改主题颜色"><a href="#更改主题颜色" class="headerlink" title="更改主题颜色"></a>更改主题颜色</h3><p>默认主题颜色是绿色(#42b983)，可以通更改<code>themes\Bamboo\source\css\_partial\custom.styl</code>这个文件，将文件中的所有(#42b983)颜色值替换成你想要的颜色，然后更改该文件下的<code>blockquote</code>背景颜色，代码如下:</p>
+<pre class=" language-css"><code class="language-css"><span class="token selector">// 文章详情页的blockquote，md中的 > 标签的左边框和背景颜色
+<span class="token class">.post-detail</span> </span><span class="token punctuation">{</span>
+  <span class="token selector">blockquote </span><span class="token punctuation">{</span>
+      <span class="token property">border-left</span><span class="token punctuation">:</span> <span class="token number">4</span>px solid <span class="token hexcode">#42b983</span><span class="token punctuation">;</span>
+      <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token function">rgba</span><span class="token punctuation">(</span><span class="token number">66</span>, <span class="token number">185</span>, <span class="token number">131</span>, <span class="token number">.1</span><span class="token punctuation">)</span><span class="token punctuation">;</span> // 更改这个背景颜色为你想要的的颜色值
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p>blockquote样式指的是下面这个</p>
+<blockquote>
+<p>我是blockquote</p>
+</blockquote>
+<p>例如，我将该文件下的所有颜色设置为<code>skyblue</code>，显示效果如下<br><img src="/medias/theme-color.png" alt="theme-color"></p>
+<p>代码高亮颜色，可以通过之前介绍的代码高亮进行更改</p>
+<h2 id="文章-Front-matter-介绍"><a href="#文章-Front-matter-介绍" class="headerlink" title="文章 Front-matter 介绍"></a>文章 Front-matter 介绍</h2><p><code>Front-matter</code> 选项中的所有内容均为<strong>非必填</strong>的。但我仍然建议至少填写 <code>title</code> 和 <code>date</code> 的值。</p>
+<table>
+<thead>
+<tr>
+<th>配置选项</th>
+<th>默认值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>title</td>
+<td><code>Markdown</code> 的文件标题</td>
+<td>文章标题，强烈建议填写此选项</td>
+</tr>
+<tr>
+<td>date</td>
+<td>文件创建时的日期时间</td>
+<td>发布时间，强烈建议填写此选项，且最好保证全局唯一</td>
+</tr>
+<tr>
+<td>swiper</td>
+<td>false</td>
+<td>表示该文章是否需要加入到首页轮播封面中</td>
+</tr>
+<tr>
+<td>swiperImg</td>
+<td>无</td>
+<td>表示该文章在首页轮播封面需要显示的图片路径，如果没有，则默认使用文章的特色图片</td>
+</tr>
+<tr>
+<td>top</td>
+<td>false</td>
+<td>表示该文章是否需要加入到首页的文章置顶栏目中</td>
+</tr>
+<tr>
+<td>comments</td>
+<td>false</td>
+<td>表示该文章是否需要评论</td>
+</tr>
+<tr>
+<td>img</td>
+<td>无</td>
+<td>文章特征图，该文章显示的图片，没有则默认使用文章的特色图片</td>
+</tr>
+<tr>
+<td>categories</td>
+<td>无</td>
+<td>文章分类，本主题的分类表示宏观上大的分类，只建议一篇文章一个分类</td>
+</tr>
+<tr>
+<td>tags</td>
+<td>无</td>
+<td>文章标签，一篇文章可以多个标签</td>
+</tr>
+</tbody></table>
+<h2 id="感谢"><a href="#感谢" class="headerlink" title="感谢"></a>感谢</h2><p>本博客主题灵感来源于<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank" rel="noopener">闪烁之狐</a>, 大佬的主题做的很好</p>
+
+      </div>
+      
+        <div class="copyright">
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+    <strong>作者:  </strong>YuAng</a>
+    </li>
+    <li class="post-copyright-link">
+    <strong>文章链接:  </strong>
+    <a href="/2020/09/14/hexo-theme-bamboo/" target="_blank" title="Hexo主题--Bamboo介绍">http://yuang01.github.io/2020/09/14/hexo-theme-bamboo/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>版权声明:   </strong>
+      本网站所有文章除特别声明外,均采用 <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">CC BY-NC-ND 4.0</a>
+      许可协议。转载请注明出处!
+    </li>
+  </ul>
+<div>
+      
+    </article>
+    <!-- 上一篇文章和下一篇文章 -->
+    
+      <div class="post-nav">
+
+
+
+  <div class="post-nav-next post-nav-item">
+    <a href="/2020/09/10/hello-world/">
+      下一篇:    Hello World 
+    </a>
+  </div>
+
+</div>
+
+    
+    
+
+    <!-- 打赏 -->
+    
+      <div id="appDonate" class="post-donate">
+  <div id="donate_board" class="donate_bar center" ref="donate">
+    <a id="btn_donate" class="btn_donate" href="javascript:;" title="打赏" @click="showDialogDrawer()"></a>
+  </div>
+  <transition name="fade">
+    <div 
+      class="donate-box-mask"
+      v-cloak 
+      v-if="visible"
+      @click="cancelDialogDrawer()"
+    >
+    </div>
+  </transition>
+  <transition name="bounce">
+    <div class="donate-box" v-cloak v-if="visible">
+      <div class="donate-box_close">
+        <i class="fa fa-times" aria-hidden="true" @click="cancelDialogDrawer"></i>
+      </div>
+      <div class="donate-box_title">
+        <h4>
+          你的赏识是我前进的动力
+        </h4>
+      </div>
+      <div class="donate-box_tab">
+        <div class="Alipay" :class="{'active': tabActive === 'Alipay'}" @click="changeTabActive('Alipay')">
+          支付宝
+        </div>
+        <div class="WeChatpay" :class="{'active': tabActive === 'WeChatpay'}" @click="changeTabActive('WeChatpay')">
+          微信
+        </div>
+      </div>
+      <div class="donate-box_img">
+        <div class="AlipayImg" v-if="tabActive === 'Alipay'">
+          <img src="/medias/zfb.jpg" alt="支付宝打赏" />
+        </div> 
+        <div class="WeChatpayImg" v-if="tabActive === 'WeChatpay'">
+          <img src="/medias/wx.jpg" alt="微信打赏" />
+        </div>
+      </div>
+    </div>
+  </transition>
+</div>
+
+<script>
+  var body = document.body || document.documentElement || window;
+  var vm = new Vue({
+    el: '#appDonate',
+    data: {
+      visible: false,
+      tabActive: 'Alipay',
+      top: 0,
+    },
+    computed: {
+    },
+    mounted() {
+    },
+    methods: {
+      showDialogDrawer() {
+        this.visible = true;
+        // 防止页面滚动，只能让弹框滚动
+        // function getScroll() {
+        //   return {
+        //     left: window.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft || 0,
+        //     top: window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0
+        //   };
+        // }
+        this.top = $(document).scrollTop() // or getScroll().top
+        body.style.cssText = 'width: 100%; height: 100%; position: fixed; top: -' + this.top + 'px; left: 0; overflow: hidden;';
+      },
+      cancelDialogDrawer() {
+        this.visible = false;
+        body.removeAttribute('style');
+        $(document).scrollTop(this.top)
+      },
+      changeTabActive(name) {
+        this.tabActive = name;
+      }
+    },
+    created() {}
+  })
+</script>
+    
+
+    <!-- 分享 -->
+    
+      <!-- https://github.com/overtrue/share.js -->
+
+<div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+
+
+
+<script src="/js/shareJs/social-share.min.js"></script>
+
+</script>
+
+<style>
+  .social-share {
+    margin: 20px 0;
+  }
+</style>
+
+
+    
+
+    <!-- 评论 -->
+      
+        
+          <section id="comments" style="padding: 1em; background: rgba(255, 255, 255, 0.5); margin: 15px auto;" data-aos="fade-up">
+	<div id="vcomment" class="comment"></div>
+	<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/valine@1/dist/Valine.min.js"></script>
+	<script>
+		new Valine({
+			el: '#vcomment',
+			notify: false,
+			verify: false,
+			app_id: "nmal09L0arSjEFBUUCSpWzyK-gzGzoHsz",
+			app_key: "xiiSst0NtHRg1POFFV32iqKI",
+			placeholder: "客官，说点什么吧",
+			avatar: ""
+		});
+	</script>
+</section>
+<style>
+#vcomment textarea {
+	background: url('/medias/comment_bg7.png') 100% 100% no-repeat;
+}
+</style>
+
+        
+      
+  </div>
+
+  
+    <div class="toc-aside">
+      <div class="toc-main">
+        <div class="toc-aside-title">
+          <i class="fa fa-list-ul" aria-hidden="true"></i><span>目录</span>
+        </div>
+        <div class="toc-content">
+          <link href="/js/tocbot/tocbot.css" rel="stylesheet">
+<script src="/js/tocbot/tocbot.min.js"></script>
+<div class="toc"></div>
+
+<script>
+  if ($('.toc').length > 0) {
+    var headerEl = 'h2, h3, h4',  //headers 
+      content = '.post-detail',//文章容器
+      idArr = {};  //标题数组以确定是否增加索引id
+      //add #id
+
+    $(content).children(headerEl).each(function () {
+      //去除空格以及多余标点
+      var headerId = $(this).text().replace(/[\s|\~|`|\!|\@|\#|\$|\%|\^|\&|\*|\(|\)|\_|\+|\=|\||\|\[|\]|\{|\}|\;|\:|\"|\'|\,|\<|\.|\>|\/|\?|\：|\，|\。]/g, '');
+
+      headerId = headerId.toLowerCase();
+      if (idArr[headerId]) {
+        //id已经存在
+        $(this).attr('id', headerId + '-' + idArr[headerId]);
+        idArr[headerId]++;
+      }
+      else {
+        //id未存在
+        idArr[headerId] = 1;
+        $(this).attr('id', headerId);
+      }
+    });
+
+    tocbot.init({
+      // Where to render the table of contents.
+      tocSelector: '.toc',
+      // Where to grab the headings to build the table of contents.
+      contentSelector: content,
+      // Which headings to grab inside of the contentSelector element.
+      headingSelector: headerEl,
+      scrollSmooth: true,
+      scrollSmoothOffset: -80,
+      headingsOffset: 130,
+      positionFixedSelector: '.toc-main',
+      positionFixedClass: 'is-position-fixed',
+      fixedSidebarOffset: 'auto',
+    });
+  }
+
+</script>
+
+<style>
+.is-position-fixed {
+  position:fixed !important;
+  top: 64px;
+}
+
+</style>
+        </div>
+      </div>
+    </div>
+  
+</div>
+
+    </main>
+    <div class="footer bg-color">
+  <div class="footer-main">
+    <div class="link">
+      <a href="https://github.com/yuang01" target="_blank" rel="noopener">
+        <i class="fa fa-github" aria-hidden="true"></i>
+      </a>
+      <a href="mailto:1730241541@qq.com">
+        <i class="fa fa-envelope-o" aria-hidden="true"></i>
+      </a>
+      <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1730241541">
+        <i class="fa fa-qq" aria-hidden="true"></i>
+      </a>
+      <a href="/atom.xml" target="_blank">
+        <i class="fa fa-rss" aria-hidden="true"></i>
+      </a>
+    </div>
+    <div class="footer-copyright">
+      Copyright © 2019 - 2020 <a href="https://github.com/yuang01" target="_blank" rel="noopener">yuang01</a> | Powered by <a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">Hexo</a> | Theme <a href="https://github.com/yuang01/theme" target="_blank" rel="noopener">Bamboo</a> 
+    </div>
+    
+      
+  <!-- 不蒜子统计 -->
+  <span id="busuanzi_container_site_pv">
+        <i class="fa fa-book" aria-hidden="true"></i>本站总阅读量：<span id="busuanzi_value_page_pv"></span> 次
+  </span>
+  <span id="busuanzi_container_site_pv">
+        <i class="fa fa-eye" aria-hidden="true"></i>本站总访问量：<span id="busuanzi_value_site_pv"></span> 次
+  </span>
+  <span class="post-meta-divider">|</span>
+  <span id="busuanzi_container_site_uv" style='display:none'>
+        <i class="fa fa-users" aria-hidden="true"></i>本站访客数：<span id="busuanzi_value_site_uv"></span> 人
+  </span>
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    
+  </div>
+</div>
+
+
+    
+      <div class="goTop bg-color">
+  <i class="fa fa-arrow-up" aria-hidden="true"></i>
+</div>
+
+<script src="/js/goTop.js"></script>
+
+    
+
+    
+      <link href="https://cdn.bootcdn.net/ajax/libs/aplayer/1.10.1/APlayer.min.css" rel="stylesheet">
+<style>
+.aplayer .aplayer-lrc p {
+  
+  display: none;
+  
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px !important;
+}
+
+.aplayer .aplayer-lrc p.aplayer-lrc-current {
+  
+  display: none;
+  
+  font-size: 15px;
+  color: #42b983;
+}
+
+
+.aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+  left: -66px !important;
+}
+
+.aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+  left: 0px !important;
+}
+
+
+</style>
+<meting-js  
+  class=""
+  server="netease"
+  type="playlist"
+  id="442274724"
+  fixed='true'
+  autoplay='false'
+  theme='#42b983'
+  loop='all'
+  order='random'
+  preload='auto'
+  volume='0.7'
+  list-folded='true'
+>
+</meting-js>
+
+<!-- <style>
+  #aplayer {
+    position: fixed;
+    left: 0;
+    bottom: 300px;
+  }
+</style> -->
+<script src="https://cdn.bootcdn.net/ajax/libs/aplayer/1.10.1/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+    
+
+    <!-- 图片放大 -->
+    
+      
+<script src="/js/fancybox/jquery.fancybox.min.js"></script>
+<script src="/js/wrapImage.js"></script>
+
+    
+
+    <!-- 爱心点击 -->
+    
+      
+<script src="/js/clicklove.js"></script>
+
+    
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script type="text/javascript" size="100" alpha='0.4' zIndex="-1" src="/js/ribbon.min.js"></script>
+    
+      
+<script src="/js/aos/aos.js"></script>
+
+      <script>
+        // https://github.com/michalsnik/aos
+        const themeOffset = parseInt('120') || 120;
+        const themeDelay = parseInt('0')|| 0;
+        const themeDuration = parseInt('400') || 400;
+        const themeEasing = 'ease' || 'ease';
+        const themeOnce = JSON.parse('true' || true);
+        const themeMirror = JSON.parse('false' || false);
+        const themeAnchorPlacement = 'top-bottom' || 'top-bottom';
+        AOS.init({
+          // Global settings:
+          disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+          startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+          initClassName: 'aos-init', // class applied after initialization
+          animatedClassName: 'aos-animate', // class applied on animation
+          useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+          disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+          debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+          throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+
+          // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+          offset: themeOffset, // offset (in px) from the original trigger point
+          delay: themeDelay, // values from 0 to 3000, with step 50ms
+          duration: themeDuration, // values from 0 to 3000, with step 50ms
+          easing: themeEasing, // default easing for AOS animations
+          once: themeOnce, // whether animation should happen only once - while scrolling down
+          mirror: themeMirror, // whether elements should animate out while scrolling past them
+          anchorPlacement: themeAnchorPlacement, // defines which position of the element regarding to window should trigger the animation
+
+        });
+      </script>
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/v-plugs-ayu/lib/ayu.css">
+<script src="https://cdn.jsdelivr.net/npm/v-plugs-ayu/lib/ayu.umd.min.js"></script>
+<div id="appCopy">
+</div>
+<script>
+  var vm = new Vue({
+    el: '#appCopy',
+    data: {
+    },
+    computed: {
+    },
+    mounted() {
+      const that = this;
+      //  监听 ctrl + c事件  
+      $(document).unbind('keypress').bind('keypress', function (e) {
+        if (e.ctrlKey && e.keyCode == 67) {
+          doSomething();
+          // 返回false, 防止重复触发copy事件  
+          return false;
+        }
+      })
+
+      // 鼠标右键的复制事件  
+      $(document).unbind('copy').bind('copy', function (e) {
+        doSomething();
+        // console.log('右键复制 监听成功');
+      });
+
+      function doSomething() {
+        that.$notify({
+          title: '成功',
+          content: '复制成功了哦',
+          type: 'success'
+        })
+        // console.log('ctrl + c 监听成功');  
+      }
+    },
+    methods: {
+    },
+    created() { }
+  })
+</script>
+    
+  </body>
+</html>

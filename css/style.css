@@ -458,6 +458,10 @@ a {
   width: 200px;
   margin-left: 25px;
 }
+.toc-aside .toc-content {
+  max-height: 60vh;
+  overflow: auto;
+}
 .toc-aside .toc-aside-title {
   font-size: 1.5rem;
   font-weight: bold;
@@ -768,7 +772,7 @@ a {
 .footer .footer-main .link i {
   cursor: pointer;
 }
-.footer .footer-main .copyright a {
+.footer .footer-main .footer-copyright a {
   text-decoration: underline;
 }
 .post-tags {
@@ -1025,6 +1029,9 @@ a {
 }
 .post-nav .post-nav-next {
   float: right;
+}
+.copyright {
+  margin-top: 50px;
 }
 .post-copyright {
   margin: 2em 0 0;
