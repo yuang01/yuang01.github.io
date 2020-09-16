@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yuang01.github.io/"/>
-  <updated>2020-09-14T10:43:48.170Z</updated>
+  <updated>2020-09-16T03:02:33.153Z</updated>
   <id>http://yuang01.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://yuang01.github.io/2020/09/14/hexo-theme-bamboo/"/>
     <id>http://yuang01.github.io/2020/09/14/hexo-theme-bamboo/</id>
     <published>2020-09-14T06:06:00.000Z</published>
-    <updated>2020-09-14T10:43:48.170Z</updated>
+    <updated>2020-09-16T03:02:33.153Z</updated>
     
     <summary type="html">
     
@@ -35,7 +35,7 @@
     
       <category term="Hexo" scheme="http://yuang01.github.io/tags/Hexo/"/>
     
-      <category term="hexo-theme-Bamboo" scheme="http://yuang01.github.io/tags/hexo-theme-Bamboo/"/>
+      <category term="hexo-theme-bamboo" scheme="http://yuang01.github.io/tags/hexo-theme-bamboo/"/>
     
   </entry>
   
@@ -44,7 +44,7 @@
     <link href="http://yuang01.github.io/2020/09/10/hello-world/"/>
     <id>http://yuang01.github.io/2020/09/10/hello-world/</id>
     <published>2020-09-10T06:06:00.000Z</published>
-    <updated>2020-09-14T10:40:44.870Z</updated>
+    <updated>2020-09-15T10:46:28.919Z</updated>
     
     <summary type="html">
     
@@ -309,18 +309,11 @@
     <link href="http://yuang01.github.io/2018/09/28/hello-world-copy-11/"/>
     <id>http://yuang01.github.io/2018/09/28/hello-world-copy-11/</id>
     <published>2018-09-28T05:34:00.000Z</published>
-    <updated>2020-09-14T09:58:57.775Z</updated>
+    <updated>2020-09-15T01:40:19.240Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;p&gt;&lt;a href=&quot;README.md&quot;&gt;English Document&lt;/a&gt; | &lt;a href=&quot;https://blinkfox.github.io/&quot; target=&quot;_blank&quot;
-        
-      
+      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
     
     </summary>
     
