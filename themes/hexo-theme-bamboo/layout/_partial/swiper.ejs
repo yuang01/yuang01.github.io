@@ -1,0 +1,320 @@
+<link href="https://cdn.bootcdn.net/ajax/libs/Swiper/5.4.1/css/swiper.min.css" rel="stylesheet">
+<%
+    var hashCode = function (str) {
+        if (!str && str.length === 0) {
+            return 0;
+        }
+
+        var hash = 0;
+        for (var i = 0, len = str.length; i < len; i++) {
+            hash = ((hash << 5) - hash) + str.charCodeAt(i);
+            hash |= 0;
+        }
+        return hash;
+    };
+%>
+
+<%
+var imgArr = theme.imgs;
+var swpiers = site.posts.filter(function(post) {return post.swiper});
+var swiperLength = swpiers.length;
+var defaultIndex = Math.floor((Math.random()*imgArr.length)); 
+%>
+<div class="swiper-length" style="display: none;"><%- swiperLength %></div>
+<div id="appSwiper"
+  class="<% if(swiperLength <= 1) { %>swiper-no-swiping<% } %>"
+  @mouseenter="stopAutoPlay()" 
+  @mouseleave="startAutoPlay()"
+>
+  <swiper v-cloak ref="mySwiper" :options="swiperOptions" @slideChangeTransitionEnd="slideChangeTransitionEnd">
+    <% if(swiperLength > 0) { %>
+      <% site.posts.sort('-date').each(function (post) { %>
+        <%
+            var index = Math.floor((Math.random()*imgArr.length)); 
+        %>
+        <% if(post.swiper === true) { %>
+          <%
+            var img = 'https://ssyerv1.oss-cn-hangzhou.aliyuncs.com/picture/ada660a8c596431983dddd411a12f2b3.jpg!sswm';
+            var imgs = theme.imgs;
+            if (!imgs || imgs.length === 0) {
+                return img;
+            }
+            img = imgs[Math.abs(hashCode(post.title) % imgs.length)]
+          %>
+          <swiper-slide>
+            <div class="item" style="background-image: url('<%- theme.root_url %><%=post.swiperImg || img%>'); background-size: 90000px; 
+            background-position: center center;">
+              <div class="flag">
+                <div class="img-mask" style="height: 100%;background-image: url('<%- theme.root_url %><%=post.swiperImg || img%>'); background-size: cover; 
+                  background-position: center center;"></div>
+                <!-- <img class="homeSwiper img-mask" src="<%- theme.root_url %><% if(post.swiperImg) { %><%=post.swiperImg%><% } else { %><%-imgArr[index]%><% }%>" alt="<%=post.title%>" style="width: 100%;background-size: cover; 
+                background-position: center center;"> -->
+                <div class="flag-text">
+                  <div>
+                    <div class="title ani animated" swiper-animate-effect="<%= theme.swiper.textAnimated %>" swiper-animate-duration="<%= theme.swiper.textDuration %>" swiper-animate-delay="<%= theme.swiper.textDelay %>"><%=post.title%></div>
+                    <div class="excerpt ani animated" swiper-animate-effect="<%= theme.swiper.textAnimated %>" swiper-animate-duration="<%= theme.swiper.textDuration %>" swiper-animate-delay="<%= theme.swiper.textDelay %>"><%- post.excerpt || strip_html(post.content).substring(0, 120) %></div>
+                  </div>
+                  <div class="ani animated" swiper-animate-effect="<%= theme.swiper.textAnimated %>" swiper-animate-duration="<%= theme.swiper.textDuration %>" swiper-animate-delay="<%= theme.swiper.textDelay %>"><a href="<%- url_for(post.path) %>" class="read-more border-color bg-color" style="display: inline-block; z-index:1;"><%= __('readMore') %></a></div>
+                </div>
+              </div>
+            </div>
+
+          </swiper-slide>
+        <% } %>
+      <% }) %>
+    <div class="swiper-pagination" slot="pagination" style="<% if(!theme.swiper.showIndicators || swiperLength <= 1) { %>display: none;<% } %>"></div>
+    <div class="swiper-button-prev swiper-button-white" slot="button-prev" style="<% if(!theme.swiper.showPrevNext || swiperLength <= 1) { %>display: none;<% } %>"></div>
+    <div class="swiper-button-next swiper-button-white" slot="button-next" style="<% if(!theme.swiper.showPrevNext || swiperLength <= 1) { %>display: none;<% } %>"></div>
+    <% } else { %>
+      <swiper-slide>
+        <div class="item" style="background-image: url('<%- theme.root_url %><%= theme.swiper.defaultImg || imgArr[defaultIndex] %>'); background-size: 40000px; 
+          background-position: center center;">
+            <div class="flag">
+              <div class="img-mask" style="height: 100%;background-image: url('<%- theme.root_url %><%= theme.swiper.defaultImg || imgArr[defaultIndex] %>'); background-size: cover; 
+                background-position: center center;"></div>
+              <!-- <img class="homeSwiper img-mask" src="<%- theme.root_url %><%-imgArr[defaultIndex]%>" alt="" style="width: 100%;background-size: cover; 
+              background-position: center center;"> -->
+              <div class="flag-text">
+                <div>
+                  <div class="title ani animated" swiper-animate-effect="<%= theme.swiper.textAnimated %>" swiper-animate-duration="<%= theme.swiper.textDuration %>" swiper-animate-delay="<%= theme.swiper.textDelay %>"><%= theme.swiper.defaultTile %></div>
+                  <div class="excerpt ani animated" swiper-animate-effect="<%= theme.swiper.textAnimated %>" swiper-animate-duration="<%= theme.swiper.textDuration %>" swiper-animate-delay="<%= theme.swiper.textDelay %>"><%= theme.swiper.defaultDesc %></div>
+                </div>
+                <div style="display: flex;">
+                  <div class="ani animated" swiper-animate-effect="<%= theme.swiper.textAnimated %>" swiper-animate-duration="<%= theme.swiper.textDuration %>" swiper-animate-delay="<%= theme.swiper.textDelay %>"><a href="<%= theme.swiper.defaultMoreLink %>" class="read-more border-color bg-color" style="display: inline-block; z-index:1;"><%= __('readMore') %></a></div>
+                  <div class="ani animated" style="margin-left: 10px;" swiper-animate-effect="<%= theme.swiper.textAnimated %>" swiper-animate-duration="<%= theme.swiper.textDuration %>" swiper-animate-delay="<%= theme.swiper.textDelay %>"><a href="<%= theme.swiper.defaultBtnLink %>" class="read-more " style="display: inline-block; z-index:1;border: 1px solid white;"><%= theme.swiper.defaultBtnText %></a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </swiper-slide>
+    <% } %>
+  </swiper>
+</div>
+<%- js(['js/swiper.min.js']) %>
+<%- js(['js/vue-awesome-swiper.js']) %>
+<%- js(['js/swiper.animate1.0.3.min.js']) %>
+<script type="text/javascript">
+  Vue.use(window.VueAwesomeSwiper)
+</script>
+<script>
+  let autoplay = '<%= theme.swiper.autoplay %>';
+  let delay = '<%= theme.swiper.delay %>';
+  let loop = JSON.parse('<%= theme.swiper.loop %>');
+  let effect = '<%= theme.swiper.effect %>';
+  let swiperLength = parseInt(document.querySelector(".swiper-length").innerText);
+  var vm = new Vue({
+    el: '#appSwiper',
+    data: {
+      swiperOptions: {
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true // 允许点击小圆点跳转
+        },
+        loop: loop ? true : false,
+        effect, // fade
+        autoplay: (autoplay && swiperLength > 1) ? {
+  　　　　delay,
+  　　　　disableOnInteraction: false // 手动切换之后继续自动轮播
+    　　} : false,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        on:{
+          init: function() {
+            swiperAnimateCache(this); //隐藏动画元素 
+            swiperAnimate(this); //初始化完成开始动画
+          }, 
+          slideChangeTransitionEnd: function(){ 
+            swiperAnimate(this); //每个slide切换结束时也运行当前slide动画
+          } 
+        }
+        // Some Swiper option/callback...
+      }
+    },
+    computed: {
+      swiper() {
+        return this.$refs.mySwiper.$swiper
+      }
+    },
+    mounted() {
+      // console.log('Current Swiper instance object', this.swiper)
+      // this.swiper.slideTo(0, 1000, false)
+    },
+    methods: {
+      stopAutoPlay() {
+        (autoplay && swiperLength > 1) && this.swiper.autoplay.stop();
+      },
+      startAutoPlay() {
+        (autoplay && swiperLength > 1) && this.swiper.autoplay.start();
+      },
+      slideChangeTransitionEnd() {
+        console.log('1');
+      }
+    },
+    created() {}
+  })
+</script>
+
+<style>
+.swiper-container {
+  overflow: hidden;
+}
+.swiper-slide {
+  height: 350px;
+  position: relative;
+}
+.swiper-button-prev,
+.swiper-button-next {
+  padding: 10px 10px;
+  transition: background 0.2s;
+}
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+.swiper-slide .item {
+  width: 100%;
+  height: 100%;
+}
+.flag {
+  position: relative;
+  width: 60%;
+  margin: 0 auto;
+  color: #ffffff;
+  height: 100%;
+  background: #000;
+}
+.flag img {
+  min-height: 100%;
+}
+.flag-text {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  width: 80%;
+  height: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.flag-text .title {
+  font-size: 1.8rem;
+}
+.flag-text .excerpt {
+  width: 70%;
+  line-height: 27px;
+  height: 135px;
+  margin-top: 2%;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  overflow: hidden;
+}
+.swiper-pagination-bullet-active {
+  opacity: 1;
+  background-color: #42b983;
+}
+.img-mask {
+  opacity:0.6; filter: alpha(opacity=60);
+}
+.flag-text .read-more {
+  margin-bottom: 30px;
+  padding: 5px 15px;
+  color: #ffffff;
+  border-radius: 20px;
+}
+@media (min-width: 992px) {
+  .swiper-button-prev {
+    margin-left: 20%;
+    transform: translateX(-180%);
+  }
+  .swiper-button-next {
+    margin-right: 20%;
+    transform: translateX(180%);
+  }
+  .flag-text .title {
+    width: 80%;
+    line-height: 35px;
+    max-height: 70px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+  }
+}
+@media (max-width: 992px) {
+  .flag {
+    width: 100%;
+  }
+  .flag-text .title {
+    font-size: 1.5rem;
+    margin-top: 50px;
+  }
+  .flag-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 100%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
+  .flag-text .excerpt {
+    width: 100%;
+    line-height: 20px;
+    height: 100px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    overflow: hidden;
+  }
+  .flag-text .read-more {
+    margin-bottom: 80px;
+  }
+}
+@media (max-width: 992px) and (min-width: 551px) {
+  .flag-text .excerpt {
+    width: 70%;
+  }
+}
+@media (max-width: 551px) {
+  .swiper-slide {
+    height: 250px;
+  }
+  .flag-text .title {
+    line-height: 30px;
+    max-height: 60px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    margin-top: 20px;
+  }
+  .flag-text .excerpt {
+    font-size: 1rem;
+    line-height: 20px;
+    height: 80px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+  }
+  .flag-text .excerpt { 
+    margin-top: 10px;
+  }
+  .flag-text .read-more {
+    margin-top: 10px;
+    margin-bottom: 50px;
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    transform: scale(0.5);
+  }
+  .swiper-button-prev {
+    left: 0;
+  }
+  .swiper-button-next {
+    right: 0;
+  }
+}
+</style>

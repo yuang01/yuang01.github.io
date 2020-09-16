@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <%- partial('_partial/head') %>
+  <%- js(['js/jquery3.5.1.js']) %>
+  <%- js(['js/vue2.6.11.js']) %>
+  <body>
+    <%- partial('_partial/header') %>
+    <main class="main" style="<% if(theme.headMenuFixed) { %>margin-top: 60px;<% } %>">
+      <%- body %>
+    </main>
+    <%- partial('_partial/footer') %>
+
+    <% if(theme.goTop.on === true ) { %>
+      <%- partial('_partial/goTop') %>
+    <% } %>
+
+    <% if(theme.music.on === true ) { %>
+      <%- partial('_partial/aplayer') %>
+    <% } %>
+
+    <!-- 图片放大 -->
+    <% if(theme.fancybox.on === true ) { %>
+      <%- js(['js/fancybox/jquery.fancybox.min.js', 'js/wrapImage.js']) %>
+    <% } %>
+
+    <!-- 爱心点击 -->
+    <% if(theme.clicklove.on === true ) { %>
+      <%- js(['js/clicklove.js']) %>
+    <% } %>
+
+    <%- partial('_partial/baidu-analytics') %>
+    <%- partial('_partial/baidu-push') %>
+    
+    <script type="text/javascript" size="100" alpha='0.4' zIndex="-1" src="/js/ribbon.min.js"></script>
+    <% if(theme.aos.on === true ) { %>
+      <%- js(['js/aos/aos.js']) %>
+      <script>
+        // https://github.com/michalsnik/aos
+        const themeOffset = parseInt('<%= theme.aos.offset %>') || 120;
+        const themeDelay = parseInt('<%= theme.aos.delay %>')|| 0;
+        const themeDuration = parseInt('<%= theme.aos.duration %>') || 400;
+        const themeEasing = '<%= theme.aos.easing %>' || 'ease';
+        const themeOnce = JSON.parse('<%= theme.aos.once %>' || true);
+        const themeMirror = JSON.parse('<%= theme.aos.mirror %>' || false);
+        const themeAnchorPlacement = '<%= theme.aos.anchorPlacement %>' || 'top-bottom';
+        AOS.init({
+          // Global settings:
+          disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+          startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+          initClassName: 'aos-init', // class applied after initialization
+          animatedClassName: 'aos-animate', // class applied on animation
+          useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+          disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+          debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+          throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+
+          // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+          offset: themeOffset, // offset (in px) from the original trigger point
+          delay: themeDelay, // values from 0 to 3000, with step 50ms
+          duration: themeDuration, // values from 0 to 3000, with step 50ms
+          easing: themeEasing, // default easing for AOS animations
+          once: themeOnce, // whether animation should happen only once - while scrolling down
+          mirror: themeMirror, // whether elements should animate out while scrolling past them
+          anchorPlacement: themeAnchorPlacement, // defines which position of the element regarding to window should trigger the animation
+
+        });
+      </script>
+    <% } %>
+
+    <% if (theme.copy.on){ %>
+      <%- partial('_partial/copy') %>
+    <% } %>
+
+    <!-- 输入框打字特效 -->
+    <% if (theme.inputEffects.on){ %>
+      <%- js(['js/activate-power-mode.js']) %>
+      <script>
+          POWERMODE.colorful = true;  // 打开随机颜色特效
+          POWERMODE.shake = false;    // 关闭输入框抖动
+          document.body.addEventListener('input', POWERMODE);//监听打字事件
+      </script>
+    <% } %>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+.post-detail-header {
+  width: 100%;
+  overflow hidden;
+  height: 50vh;
+  // background: url('https://ssyerv1.oss-cn-hangzhou.aliyuncs.com/picture/c080ff4434354e35af9dab0a3ee1b9f7.jpg!sswm') no-repeat;
+  background-size: cover; 
+  background-position: center center;
+  display: flex;
+  align-items: center;
+  .title {
+    font-size: 2.0rem;
+    line-height: 1.3;
+    color: #ffffff;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+  }
+}
+@media (max-width: 992px) {
+  .post-detail-header {
+    .title {
+      margin-left: calc(50%);
+      transform: translateX(-50%);
+    }
+  }
+}
+@media (max-width: 551px) {
+  .post-detail-header {
+    height: 30vh;
+    .title {
+      line-height: 30vh;
+      font-size: 1.5rem;
+    }
+  }
+}

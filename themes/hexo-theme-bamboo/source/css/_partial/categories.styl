@@ -1,0 +1,52 @@
+// 首页的categories样式
+.post-categories {
+  color: #8a8a8a;
+  i {
+    margin-left: 10px;
+  }
+  .article-category {
+    .article-category-link {
+      color: #8a8a8a;
+      &:hover {
+        color: #42b983;
+      }
+    }
+  }
+}
+// 分类页面categories样式
+#categories {
+  min-height: calc(60vh - 60px);
+  .card {
+    .card-content {
+      margin: 20px 0 40px 0;
+      .category-title {
+        font-size: 1.6em;
+        color: #34495e;
+        text-align: center;
+        padding: 15px 0;
+      }
+      .category-chips {
+        text-align: center;
+        a {
+          margin: 0 5px;
+          .category-content {
+            width: 30%;
+            padding: 5px 10px;
+            display: inline-block;
+            border-radius: 10px;
+            color: #34495e;
+            box-shadow: 0 1px 10px -3px rgba(0,0,0,.5);
+            transition: all 0.3s;
+            margin-top: 20px;
+            &:hover {
+              transform:scale(1.2);  
+            }
+            .category-length {
+              color: #49b1f5;
+            }
+          }
+        }
+      }
+    }
+  }
+}
