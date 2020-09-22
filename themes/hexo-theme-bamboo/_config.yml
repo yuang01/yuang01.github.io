@@ -90,7 +90,11 @@ postTitleTop:
 inputEffects:
   on: true
 
-# 滚动动画，详情参照https://github.com/michalsnik
+# live-2d(左下角动画人物)
+live2d:
+  on: true
+
+# 首页文章列表滚动动画，详情参照https://github.com/michalsnik
 aos:
   on: true
   animate: 'fade-up' # animate, 更多选项请参考 https://github.com/michalsnik/aos#animations
@@ -141,10 +145,10 @@ music:
 # 关于我
 baseInfo:
   on: true
-  age: 24 # 年龄
+  age: 99 # 年龄
   sex: '男' # 性别
-  coordinate: '武汉' # 坐标
-  status: '在职' # 状态
+  coordinate: '火星' # 坐标
+  status: '划水中' # 状态
 
 # 关于我 技能
 skills:  # color or #000 技能
@@ -225,7 +229,7 @@ topArticle:
 
 # valine 评论
 valine:
-  on: true
+  on: false
   appid: nmal09L0arSjEFBUUCSpWzyK-gzGzoHsz
   appkey: xiiSst0NtHRg1POFFV32iqKI
   avatar: '' # 匿名者头像选项 https://valine.js.org/avatar.html
@@ -234,38 +238,38 @@ valine:
 # miniValine
 miniValine:
   on: false
-  appid: nmal09L0arSjEFBUUCSpWzyK-gzGzoHsz
-  appkey: xiiSst0NtHRg1POFFV32iqKI
+  appid: 
+  appkey: 
   avatar: '' # 匿名者头像选项 https://valine.js.org/avatar.html
   placeholder: '客官，说点什么吧'
 
 # 来必力评论
 livere:
   on: false
-  livere_uid: MTAyMC8zNTA1My8xMTU4OA
+  livere_uid:
 
 # gitment 评论
 gitment:
   on: false
-  gitment_owner: 'yuang01'      #你的 GitHub ID
-  gitment_repo: 'yuang01.github.io' #存储评论的 repo
-  clientId: '418a1890782d27e5bc5b' #client ID
-  clientSecret: '0500f22139fb648833d54076c086c3dd3c2d8ca4'       #client secret
+  gitment_owner:       #你的 GitHub ID
+  gitment_repo: #存储评论的 repo
+  clientId: #client ID
+  clientSecret:       #client secret
 
 # 畅言评论
 changyan:
   on: false
-  appId: cytFT1Bjx
-  conf: 3d54029125cc00c10be39c2e23b4b2c7
+  appId:
+  conf:
 
 # gitalk评论
 gitalk:
   on: false         # 用来做启用判断可以不用
-  owner: 'yuang01'        #Github 用户名,
-  repo:  'yuang01.github.io'         #储存评论issue的github仓库名
-  admin:   yuang01        #Github 用户名,
-  clientID:  '418a1890782d27e5bc5b'      #`Github Application clientID`
-  clientSecret:  '0500f22139fb648833d54076c086c3dd3c2d8ca4'  #`Github Application clientSecret`
+  owner:        #Github 用户名,
+  repo:        #储存评论issue的github仓库名
+  admin:        #Github 用户名,
+  clientID:      #`Github Application clientID`
+  clientSecret:  #`Github Application clientSecret`
 
 # 归档页面图片 or 'http://xxx'
 archiveImg: '/medias/archiveImg.png'
@@ -318,3 +322,4 @@ CDN:
   ayuCss: https://cdn.jsdelivr.net/npm/v-plugs-ayu/lib/ayu.css
   ayuJs: https://cdn.jsdelivr.net/npm/v-plugs-ayu/lib/ayu.umd.min.js
   copyRight: https://creativecommons.org/licenses/by-nc-nd/4.0/
+  live2d: https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js
