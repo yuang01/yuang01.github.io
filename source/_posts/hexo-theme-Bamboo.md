@@ -4,7 +4,7 @@ date: 2020-09-14 14:06
 swiper: true
 categories: 前端
 tags: [Hexo, hexo-theme-bamboo]
-top: true
+top: false
 
 ---
 
