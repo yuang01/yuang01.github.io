@@ -229,7 +229,7 @@ topArticle:
 
 # valine 评论
 valine:
-  on: false
+  on: true
   appid: nmal09L0arSjEFBUUCSpWzyK-gzGzoHsz
   appkey: xiiSst0NtHRg1POFFV32iqKI
   avatar: '' # 匿名者头像选项 https://valine.js.org/avatar.html
