@@ -408,8 +408,8 @@
 
 
   <div class="post-nav-next post-nav-item">
-    <a href="/2020/06/20/hello-world-copy-9/">
-      下一篇:    Hello World9 
+    <a href="/2020/06/20/hello-world-copy-7/">
+      下一篇:    Hello World7 
     </a>
   </div>
 
@@ -854,5 +854,30 @@
           document.body.addEventListener('input', POWERMODE);//监听打字事件
       </script>
     
+
+    <!-- markdown代码一键复制功能 -->
+    
+<script src="/js/clipboard/clipboard.min.js"></script>
+
+    <script>
+      !function (e, t, a) {
+        var copy = '复制';
+        /* code */
+        var initCopyCode = function(){
+          var copyHtml = '';
+          copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+          copyHtml += '<i class="fa fa-globe"></i><span>' + copy + '</span>';
+          copyHtml += '</button>';
+          $(".post-detail pre code").before(copyHtml);
+          new ClipboardJS('.btn-copy', {
+              target: function(trigger) {
+                  return trigger.nextElementSibling;
+              }
+          });
+        }
+        initCopyCode();
+      }(window, document);
+    </script>
+  
   </body>
 </html>

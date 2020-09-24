@@ -322,22 +322,6 @@ background-position: center center;">
             <div class="tag-chips">
                 
                 
-                <a href="/tags/vue/" title="vue: 2">
-                    <span class="tag-content"
-                        title="vue" style="background-color: #85C1E9;">vue
-                        <span class="tag-length">2</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/html/" title="html: 1">
-                    <span class="tag-content"
-                        title="html" style="background-color: #FEF9E7;">html
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
                 <a href="/tags/Hexo/" title="Hexo: 2">
                     <span class="tag-content"
                         title="Hexo" style="background-color: #E8F8F5;">Hexo
@@ -349,6 +333,22 @@ background-position: center center;">
                 <a href="/tags/hexo-theme-Bamboo/" title="hexo-theme-Bamboo: 1">
                     <span class="tag-content"
                         title="hexo-theme-Bamboo" style="background-color: #FFF;">hexo-theme-Bamboo
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/vue/" title="vue: 2">
+                    <span class="tag-content"
+                        title="vue" style="background-color: #85C1E9;">vue
+                        <span class="tag-length">2</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/html/" title="html: 1">
+                    <span class="tag-content"
+                        title="html" style="background-color: #FEF9E7;">html
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -666,5 +666,30 @@ background-position: center center;">
           document.body.addEventListener('input', POWERMODE);//监听打字事件
       </script>
     
+
+    <!-- markdown代码一键复制功能 -->
+    
+<script src="/js/clipboard/clipboard.min.js"></script>
+
+    <script>
+      !function (e, t, a) {
+        var copy = '复制';
+        /* code */
+        var initCopyCode = function(){
+          var copyHtml = '';
+          copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+          copyHtml += '<i class="fa fa-globe"></i><span>' + copy + '</span>';
+          copyHtml += '</button>';
+          $(".post-detail pre code").before(copyHtml);
+          new ClipboardJS('.btn-copy', {
+              target: function(trigger) {
+                  return trigger.nextElementSibling;
+              }
+          });
+        }
+        initCopyCode();
+      }(window, document);
+    </script>
+  
   </body>
 </html>

@@ -492,6 +492,8 @@ a {
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 0 5px #ccc;
+/* 代码块复制按钮 */
+/* 代码块复制按钮 */
 }
 .post-detail .post-title {
   text-align: center;
@@ -551,6 +553,41 @@ a {
   color: #e96900;
   background-color: #f8f8f8;
   border-radius: 2px;
+}
+.post-detail pre {
+/* 方便copy代码按钮（btn-copy）的定位 */
+  position: relative;
+}
+.post-detail pre .btn-copy {
+  display: inline-block;
+  cursor: pointer;
+  background-color: #eee;
+  background-image: linear-gradient(#fcfcfc, #eee);
+  border: 1px solid #d5d5d5;
+  border-radius: 3px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-appearance: none;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 20px;
+  color: #333;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+  padding: 2px 6px;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  opacity: 0;
+}
+.post-detail pre .btn-copy span {
+  margin-left: 5px;
+}
+.post-detail pre:hover .btn-copy {
+  opacity: 1;
 }
 .post-detail :root {
   --side-bar-bg-color: #fff;
