@@ -408,6 +408,64 @@ skills   <span class="token comment" spellcheck="true"># 技能</span>
 socialAccounts <span class="token comment" spellcheck="true"># 社交账号</span>
 games   <span class="token comment" spellcheck="true"># 游戏</span>
 books   <span class="token comment" spellcheck="true">#书籍</span></code></pre>
+<p><code>baseInfo</code>主要包含年龄，性别，坐标，状态，格式如下，<strong>注意空格缩进哦</strong></p>
+<pre class=" language-yaml"><code class="language-yaml"><span class="token key atrule">baseInfo</span><span class="token punctuation">:</span>
+  <span class="token key atrule">on</span><span class="token punctuation">:</span> <span class="token boolean important">true </span><span class="token comment" spellcheck="true"># 是否显示</span>
+  <span class="token key atrule">age</span><span class="token punctuation">:</span> <span class="token number">99 </span><span class="token comment" spellcheck="true"># 年龄</span>
+  <span class="token key atrule">sex</span><span class="token punctuation">:</span> <span class="token string">'男'</span> <span class="token comment" spellcheck="true"># 性别</span>
+  <span class="token key atrule">coordinate</span><span class="token punctuation">:</span> <span class="token string">'火星'</span> <span class="token comment" spellcheck="true"># 坐标</span>
+  <span class="token key atrule">status</span><span class="token punctuation">:</span> <span class="token string">'划水中'</span> <span class="token comment" spellcheck="true"># 状态</span></code></pre>
+<p><code>skills</code> 填写我的技能，格式如下，<strong>注意空格缩进哦</strong></p>
+<pre class=" language-yaml"><code class="language-yaml"><span class="token comment" spellcheck="true"># 关于我 技能</span>
+<span class="token key atrule">skills</span><span class="token punctuation">:</span>
+  <span class="token key atrule">on</span><span class="token punctuation">:</span> <span class="token boolean important">true </span><span class="token comment" spellcheck="true"># 是否显示</span>
+  <span class="token key atrule">data</span><span class="token punctuation">:</span> <span class="token comment" spellcheck="true"># 这个data不能忘了，下面的字段注意缩进</span>
+    <span class="token key atrule">HTML5</span><span class="token punctuation">:</span> <span class="token comment" spellcheck="true"># 这里写你的技能名称，如 HTML5或者java</span>
+      <span class="token key atrule">background</span><span class="token punctuation">:</span> <span class="token string">'red'</span> <span class="token comment" spellcheck="true"># 进度条颜色</span>
+      <span class="token key atrule">percent</span><span class="token punctuation">:</span> 90% <span class="token comment" spellcheck="true"># 进度条百分比</span>
+    <span class="token key atrule">JavaScript</span><span class="token punctuation">:</span>
+      <span class="token key atrule">background</span><span class="token punctuation">:</span> 'linear<span class="token punctuation">-</span>gradient(120deg<span class="token punctuation">,</span> <span class="token comment" spellcheck="true">#a1c4fd 0%, #c2e9fb 100%)'</span>
+      <span class="token key atrule">percent</span><span class="token punctuation">:</span> 85%
+    <span class="token key atrule">CSS</span><span class="token punctuation">:</span>
+      <span class="token key atrule">background</span><span class="token punctuation">:</span> '<span class="token comment" spellcheck="true">#000'</span>
+      <span class="token key atrule">percent</span><span class="token punctuation">:</span> 70%</code></pre>
+<p><code>socialAccounts</code>填写我的社交账号，格式如下，<strong>注意空格缩进哦</strong></p>
+<pre class=" language-yaml"><code class="language-yaml"><span class="token key atrule">socialAccounts</span><span class="token punctuation">:</span> 
+  <span class="token key atrule">on</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">data</span><span class="token punctuation">:</span> <span class="token comment" spellcheck="true"># 这个data不能忘了，下面的字段注意缩进</span>
+    <span class="token key atrule">QQ</span><span class="token punctuation">:</span> <span class="token comment" spellcheck="true"># 社交软件名称</span>
+      <span class="token key atrule">icon</span><span class="token punctuation">:</span> fa fa<span class="token punctuation">-</span>qq  <span class="token comment" spellcheck="true"># 图标，可以为空，前面加上fa，假如图标名称叫fa-quora，就是 fa fa-quora, </span>
+      <span class="token key atrule">name</span><span class="token punctuation">:</span> <span class="token number">1730241541 </span><span class="token comment" spellcheck="true"># 账号名称</span>
+      <span class="token key atrule">url</span><span class="token punctuation">:</span> <span class="token string">'http://www.baidu.com'</span> <span class="token comment" spellcheck="true"># 账号链接地址</span>
+    <span class="token key atrule">微信</span><span class="token punctuation">:</span>
+      <span class="token key atrule">icon</span><span class="token punctuation">:</span> fa fa<span class="token punctuation">-</span>weixin
+      <span class="token key atrule">name</span><span class="token punctuation">:</span> <span class="token number">1730241541</span>
+      <span class="token key atrule">url</span><span class="token punctuation">:</span> <span class="token string">'http://www.baidu.com'</span></code></pre>
+<blockquote>
+<p><strong>注意</strong>: icon使用的 <a href="https://fontawesome.dashgame.com/" target="_blank" rel="noopener">Font Awesome</a> 版本为 <code>4.7.0</code>。</p>
+</blockquote>
+<p><code>games</code> 填写我的游戏，格式如下，<strong>注意空格缩进哦</strong></p>
+<pre class=" language-yaml"><code class="language-yaml"><span class="token key atrule">games</span><span class="token punctuation">:</span>
+  <span class="token key atrule">on</span><span class="token punctuation">:</span> <span class="token boolean important">true </span><span class="token comment" spellcheck="true"># 是否显示</span>
+  <span class="token key atrule">data</span><span class="token punctuation">:</span> <span class="token comment" spellcheck="true"># 这个data不能忘了，下面的字段注意缩进</span>
+    <span class="token key atrule">王者荣耀</span><span class="token punctuation">:</span> <span class="token comment" spellcheck="true"># 游戏名称，下面的img是游戏图片</span>
+      <span class="token key atrule">img</span><span class="token punctuation">:</span> <span class="token string">'https://pic2.zhimg.com/80/v2-54730a36304842b86a57a237b8b39945_720w.jpg?source=1940ef5c'</span>
+    <span class="token key atrule">英雄杀</span><span class="token punctuation">:</span>
+      <span class="token key atrule">img</span><span class="token punctuation">:</span> <span class="token string">'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1909008358,1888649581&amp;fm=26&amp;gp=0.jpg'</span>
+    <span class="token key atrule">和平精英</span><span class="token punctuation">:</span>
+      <span class="token key atrule">img</span><span class="token punctuation">:</span> <span class="token string">'https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1595596612190&amp;di=dbf2030780758c4724ecb1f07f2f4f73&amp;imgtype=0&amp;src=http%3A%2F%2Fimgup04.51wxjz.com%2F51wxjz%2F2019-06%2F05%2F09%2F15596983468928_0.png'</span>
+    <span class="token key atrule">英雄联盟</span><span class="token punctuation">:</span>
+      <span class="token key atrule">img</span><span class="token punctuation">:</span> <span class="token string">'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3035766587,2822701570&amp;fm=26&amp;gp=0.jpg'</span></code></pre>
+<p><code>books</code> 填写我的书籍，格式如下，<strong>注意空格缩进哦</strong></p>
+<pre class=" language-yaml"><code class="language-yaml"><span class="token key atrule">books</span><span class="token punctuation">:</span>
+  <span class="token key atrule">on</span><span class="token punctuation">:</span> <span class="token boolean important">true </span><span class="token comment" spellcheck="true"># 是否显示</span>
+  <span class="token key atrule">data</span><span class="token punctuation">:</span> <span class="token comment" spellcheck="true"># 这个data不能忘了，下面的字段注意缩进</span>
+    <span class="token key atrule">明朝那些事儿</span><span class="token punctuation">:</span> <span class="token comment" spellcheck="true"># 书籍名称，下面的img是书籍图片</span>
+      <span class="token key atrule">img</span><span class="token punctuation">:</span> <span class="token string">'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2736238052,2078148140&amp;fm=26&amp;gp=0.jpg'</span>
+    <span class="token key atrule">春秋左传</span><span class="token punctuation">:</span>
+      <span class="token key atrule">img</span><span class="token punctuation">:</span> <span class="token string">'https://pic2.zhimg.com/50/v2-6f33f60312de25ddcb795fc81ee91b38_720w.jpg?source=54b3c3a5'</span>
+    <span class="token key atrule">孙子兵法</span><span class="token punctuation">:</span>
+      <span class="token key atrule">img</span><span class="token punctuation">:</span> <span class="token string">'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=710999414,899378807&amp;fm=26&amp;gp=0.jpg'</span></code></pre>
 <h3 id="新建友情连接-friends-页"><a href="#新建友情连接-friends-页" class="headerlink" title="新建友情连接 friends 页"></a>新建友情连接 friends 页</h3><p><code>friends</code> 页是用来展示<strong>友情连接</strong>信息的页面，如果在你的博客 <code>source</code> 目录下还没有 <code>friends/index.md</code> 文件，那么你就需要新建一个，命令如下：</p>
 <pre class=" language-bash"><code class="language-bash">hexo new page <span class="token string">"friends"</span></code></pre>
 <p>编辑你刚刚新建的页面文件 <code>/source/friends/index.md</code>，至少需要以下内容：</p>
@@ -569,7 +627,6 @@ books   <span class="token comment" spellcheck="true">#书籍</span></code></pre
 <td>文章标签，一篇文章可以多个标签</td>
 </tr>
 </tbody></table>
-<h2 id="感谢"><a href="#感谢" class="headerlink" title="感谢"></a>感谢</h2><p>本博客主题灵感来源于<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank" rel="noopener">闪烁之狐</a>, 大佬的主题做的很好</p>
 
       </div>
       
