@@ -540,8 +540,29 @@ books   <span class="token comment" spellcheck="true">#书籍</span></code></pre
 <h3 id="滚动动画"><a href="#滚动动画" class="headerlink" title="滚动动画"></a>滚动动画</h3><p>设置主题文件夹下的<code>_config.yml</code>文件中的<code>aos</code>属性对首页中的文章列表动画进行控制，具体参考官网<a href="https://github.com/michalsnik/aos#animations" target="_blank" rel="noopener">aos.js</a></p>
 <h3 id="文章详情页目录"><a href="#文章详情页目录" class="headerlink" title="文章详情页目录"></a>文章详情页目录</h3><p>设置主题文件夹下的<code>_config.yml</code>文件中的<code>toc</code>属性，控制其显示隐藏</p>
 <h3 id="音乐"><a href="#音乐" class="headerlink" title="音乐"></a>音乐</h3><p>设置主题文件夹下的<code>_config.yml</code>文件中的<code>music</code>属性，控制其显示隐藏和其他一些调整, <code>music</code>中的<code>fixed</code>属性建议使用<code>true</code></p>
+<pre class=" language-yaml"><code class="language-yaml"><span class="token key atrule">music</span><span class="token punctuation">:</span>
+  <span class="token key atrule">on</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">autoHide</span><span class="token punctuation">:</span> <span class="token boolean important">true    </span><span class="token comment" spellcheck="true"># hide automaticaly</span>
+  <span class="token key atrule">server</span><span class="token punctuation">:</span> netease   <span class="token comment" spellcheck="true"># 平台名称。netease：网易；tencent：腾讯；xiami：虾米；kugou：酷狗；baidu：百度</span>
+  <span class="token key atrule">type</span><span class="token punctuation">:</span> playlist    <span class="token comment" spellcheck="true"># playlist：歌单；song：单曲；专辑：album；关键词：search；歌手：artist</span>
+  <span class="token key atrule">id</span><span class="token punctuation">:</span> <span class="token number">442274724     </span><span class="token comment" spellcheck="true"># 音乐页面链接上的id号</span>
+  <span class="token key atrule">fixed</span><span class="token punctuation">:</span> <span class="token boolean important">true       </span><span class="token comment" spellcheck="true"># 开启吸底模式，建议开启</span>
+  <span class="token key atrule">autoplay</span><span class="token punctuation">:</span> <span class="token boolean important">false   </span><span class="token comment" spellcheck="true"># 是否自动播放</span>
+  <span class="token key atrule">theme</span><span class="token punctuation">:</span> '<span class="token comment" spellcheck="true">#42b983'</span>
+  <span class="token key atrule">loop</span><span class="token punctuation">:</span> <span class="token string">'all'</span>       <span class="token comment" spellcheck="true"># 音频循环播放, 可选值: 'all', 'one', 'none'</span>
+  <span class="token key atrule">order</span><span class="token punctuation">:</span> <span class="token string">'random'</span>   <span class="token comment" spellcheck="true"># 音频循环顺序, 可选值: 'list', 'random'</span>
+  <span class="token key atrule">preload</span><span class="token punctuation">:</span> <span class="token string">'auto'</span>   <span class="token comment" spellcheck="true"># 预加载，可选值: 'none', 'metadata', 'auto'</span>
+  <span class="token key atrule">volume</span><span class="token punctuation">:</span> <span class="token number">0.7       </span><span class="token comment" spellcheck="true"># 默认音量，请注意播放器会记忆用户设置，用户手动设置音量后默认音量即失效</span>
+  <span class="token key atrule">listFolded</span><span class="token punctuation">:</span> <span class="token boolean important">true  </span><span class="token comment" spellcheck="true"># 列表默认折叠</span>
+  <span class="token key atrule">hideLrc</span><span class="token punctuation">:</span> <span class="token boolean important">true     </span><span class="token comment" spellcheck="true"># 隐藏歌词</span></code></pre>
 <h3 id="版权信息"><a href="#版权信息" class="headerlink" title="版权信息"></a>版权信息</h3><p>可以在<code>source/_posts/xxx.md</code>文件中设置<code>copyright</code>true或者false，单独设置某个文章的版权信息是否显示，也可以在主题文件夹下的<code>_config.yml</code>文件中的<code>copyright</code>属性设置true或者false对所有文章的版权信息进行显示隐藏控制</p>
 <h3 id="文章置顶"><a href="#文章置顶" class="headerlink" title="文章置顶"></a>文章置顶</h3><p>可以在<code>source/_posts/xxx.md</code>文件中设置<code>top: true</code>，将该文章放在首页的文章置顶栏目中，可以在主题文件夹下的<code>_config.yml</code>文件中的<code>topArticle</code>属性设置true或者false控制首页的文章置顶栏目显示和隐藏。</p>
+<pre class=" language-yaml"><code class="language-yaml"><span class="token punctuation">---</span>
+<span class="token key atrule">title</span><span class="token punctuation">:</span> Hello World
+<span class="token key atrule">date</span><span class="token punctuation">:</span> 2019<span class="token punctuation">-</span>05<span class="token punctuation">-</span>21 21<span class="token punctuation">:</span><span class="token number">11</span>
+<span class="token key atrule">top</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+<span class="token punctuation">---</span>
+我是文章内容</code></pre>
 <h3 id="评论"><a href="#评论" class="headerlink" title="评论"></a>评论</h3><p>主题中内置了<code>valine</code>, <code>miniValine</code>, <code>livere</code>, <code>gitment</code>, <code>gitalk</code>, <code>changyan</code>评论<br>通过主题文件夹下的<code>_config.yml</code>文件中的相应属性进行设置<br>推荐使用<code>valine</code>和<code>livere</code></p>
 <h3 id="归档、标签、分类、关于我、友情链接页面图片自定义"><a href="#归档、标签、分类、关于我、友情链接页面图片自定义" class="headerlink" title="归档、标签、分类、关于我、友情链接页面图片自定义"></a>归档、标签、分类、关于我、友情链接页面图片自定义</h3><p>通过主题文件夹下的<code>_config.yml</code>文件中的相应属性进行设置，属性如下：</p>
 <pre class=" language-yaml"><code class="language-yaml"><span class="token comment" spellcheck="true"># 归档页面图片 or 'http://xxx'</span>
