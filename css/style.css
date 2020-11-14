@@ -1097,6 +1097,7 @@ a {
   display: flex;
   justify-content: center;
   margin-top: 20px;
+  margin-bottom: 20px;
 }
 .archive .archive-content {
   position: relative;
@@ -1303,7 +1304,7 @@ a {
 #about .basic-info .skill .bar-box {
   position: relative;
   width: 45%;
-  background-color: #f2f2f2;
+  background-color: #dddcdc;
   border-radius: 10px;
   overflow: hidden;
   margin-top: 20px;
@@ -1320,7 +1321,7 @@ a {
   margin-left: 15px;
 }
 #about .basic-info .skill .bar-box .bar-number {
-  color: rgba(0,0,0,0.8);
+  color: #fff;
   font-size: 14px;
   position: absolute;
   right: 2%;
@@ -1343,7 +1344,6 @@ a {
 #about .basic-info .games .game-item {
   text-align: center;
   margin-right: 5%;
-  margin-top: 5%;
 }
 #about .basic-info .games .game-item .logo {
   width: 100px;
@@ -1674,4 +1674,10 @@ a {
 }
 .toc-link.is-active-link::before {
   background-color: #42b983;
+}
+.archive .post-archive .post-item .post-date {
+  background-color: #42b983;
+}
+.archive .post-archive .post-item .post-title:hover {
+  color: #42b983;
 }
