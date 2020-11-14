@@ -78,3 +78,9 @@ $ hexo deploy
 ```
 
 More info: [Deployment](https://hexo.io/docs/one-command-deployment.html)
+
+```css
+.name {
+  display: flex;
+}
+```
