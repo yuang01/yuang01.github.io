@@ -319,7 +319,7 @@
       
 
 
-<div class="post-detail-header" style="background: url(/medias/3.jpg) no-repeat; background-size: cover; 
+<div class="post-detail-header lazyload" data-original="/medias/3.jpg" style="background: no-repeat; background-size: cover; 
   background-position: center center;">
   
     <span class="title">vue.js实现左侧导航栏和tab切换页面效果</span>
@@ -944,6 +944,19 @@
         initCopyCode();
       }(window, document);
     </script>
-  
+
+    
+<script src="/js/lazyload/lazyload@1.9.1.js"></script>
+
+    <script>
+      $(function() {
+        $("div.lazyload, img.lazyload, a.lazyload").lazyload(
+            {
+                effect: "fadeIn",
+                placeholder: "https://cdn.pixabay.com/photo/2020/10/24/03/09/street-5680458__340.jpg"    //图片未加载出来时显示的占位图
+            }
+        );
+    });
+    </script>
   </body>
 </html>

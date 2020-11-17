@@ -318,7 +318,7 @@
     <main class="main" style="margin-top: 60px;">
       
 
-<div style="width: 100%;height: 50vh;overflow: hidden;background-image: url('/medias/tagDetail.jpg');background-size: cover; 
+<div class="lazyload" data-original="/medias/tagDetail.jpg" style="width: 100%;height: 50vh;overflow: hidden;background-size: cover; 
 background-position: center center;">
 </div>
 <div class="tag">
@@ -638,6 +638,31 @@ background-position: center center;">
         initCopyCode();
       }(window, document);
     </script>
-  
+
+    
+<script src="/js/lazyload/lazyload@1.9.1.js"></script>
+
+    <script>
+      $(function() {
+        $("div.lazyload, img.lazyload, a.lazyload").lazyload(
+            {
+                effect: "fadeIn",
+                placeholder: "https://cdn.pixabay.com/photo/2020/10/24/03/09/street-5680458__340.jpg"    //图片未加载出来时显示的占位图
+            }
+        );
+    });
+    </script>
+  </body>
+</html>
+    <script>
+      $(function() {
+        $("div.lazyload, img.lazyload, a.lazyload").lazyload(
+            {
+                effect: "fadeIn",
+                placeholder: "https://cdn.pixabay.com/photo/2020/10/24/03/09/street-5680458__340.jpg"    //图片未加载出来时显示的占位图
+            }
+        );
+    });
+    </script>
   </body>
 </html>
