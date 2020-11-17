@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yuang01.github.io/"/>
-  <updated>2020-11-10T02:25:28.461Z</updated>
+  <updated>2020-11-17T01:18:58.580Z</updated>
   <id>http://yuang01.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://yuang01.github.io/2020/09/14/hexo-theme-bamboo/"/>
     <id>http://yuang01.github.io/2020/09/14/hexo-theme-bamboo/</id>
     <published>2020-09-14T06:06:00.000Z</published>
-    <updated>2020-11-10T02:25:28.461Z</updated>
+    <updated>2020-11-17T01:18:58.580Z</updated>
     
     <summary type="html">
     
@@ -40,11 +40,11 @@
   </entry>
   
   <entry>
-    <title>Hello World</title>
-    <link href="http://yuang01.github.io/2020/09/10/hello-world/"/>
-    <id>http://yuang01.github.io/2020/09/10/hello-world/</id>
+    <title>Hello World12</title>
+    <link href="http://yuang01.github.io/2020/09/10/hello-world-copy-12/"/>
+    <id>http://yuang01.github.io/2020/09/10/hello-world-copy-12/</id>
     <published>2020-09-10T06:06:00.000Z</published>
-    <updated>2020-11-11T04:31:10.345Z</updated>
+    <updated>2020-11-16T15:24:37.256Z</updated>
     
     <summary type="html">
     
@@ -57,21 +57,32 @@
   </entry>
   
   <entry>
-    <title>Hello World6</title>
-    <link href="http://yuang01.github.io/2020/07/20/hello-world-copy-6/"/>
-    <id>http://yuang01.github.io/2020/07/20/hello-world-copy-6/</id>
-    <published>2020-07-20T13:11:00.000Z</published>
-    <updated>2020-09-02T07:37:52.736Z</updated>
+    <title>Hello World13</title>
+    <link href="http://yuang01.github.io/2020/09/10/hello-world-copy-13/"/>
+    <id>http://yuang01.github.io/2020/09/10/hello-world-copy-13/</id>
+    <published>2020-09-10T06:06:00.000Z</published>
+    <updated>2020-11-16T15:24:37.283Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
-        
-      
+      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://yuang01.github.io/2020/09/10/hello-world/"/>
+    <id>http://yuang01.github.io/2020/09/10/hello-world/</id>
+    <published>2020-09-10T06:06:00.000Z</published>
+    <updated>2020-11-16T15:24:37.357Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
     
     </summary>
     
@@ -81,10 +92,10 @@
   
   <entry>
     <title>vue代码风格</title>
-    <link href="http://yuang01.github.io/2020/06/21/hello-world-copy-10/"/>
-    <id>http://yuang01.github.io/2020/06/21/hello-world-copy-10/</id>
-    <published>2020-06-21T13:11:00.000Z</published>
-    <updated>2020-09-22T04:30:34.345Z</updated>
+    <link href="http://yuang01.github.io/2020/08/02/hello-world-copy-10/"/>
+    <id>http://yuang01.github.io/2020/08/02/hello-world-copy-10/</id>
+    <published>2020-08-02T06:06:00.000Z</published>
+    <updated>2020-11-16T15:26:18.187Z</updated>
     
     <summary type="html">
     
@@ -107,11 +118,34 @@
   </entry>
   
   <entry>
+    <title>Hello World6</title>
+    <link href="http://yuang01.github.io/2020/07/20/hello-world-copy-6/"/>
+    <id>http://yuang01.github.io/2020/07/20/hello-world-copy-6/</id>
+    <published>2020-07-20T13:11:00.000Z</published>
+    <updated>2020-11-16T15:24:37.116Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>Hello World7</title>
     <link href="http://yuang01.github.io/2020/06/20/hello-world-copy-7/"/>
     <id>http://yuang01.github.io/2020/06/20/hello-world-copy-7/</id>
     <published>2020-06-20T13:11:00.000Z</published>
-    <updated>2020-09-02T07:37:52.737Z</updated>
+    <updated>2020-11-16T15:24:37.137Z</updated>
     
     <summary type="html">
     
@@ -134,7 +168,7 @@
     <link href="http://yuang01.github.io/2020/06/20/hello-world-copy-9/"/>
     <id>http://yuang01.github.io/2020/06/20/hello-world-copy-9/</id>
     <published>2020-06-20T13:11:00.000Z</published>
-    <updated>2020-09-16T10:19:59.339Z</updated>
+    <updated>2020-11-16T15:24:37.181Z</updated>
     
     <summary type="html">
     
@@ -157,7 +191,7 @@
     <link href="http://yuang01.github.io/2020/01/20/hello-world-copy-2/"/>
     <id>http://yuang01.github.io/2020/01/20/hello-world-copy-2/</id>
     <published>2020-01-20T13:11:00.000Z</published>
-    <updated>2020-09-02T07:37:52.735Z</updated>
+    <updated>2020-11-16T15:24:37.029Z</updated>
     
     <summary type="html">
     
@@ -180,7 +214,7 @@
     <link href="http://yuang01.github.io/2019/08/20/hello-world-copy-3/"/>
     <id>http://yuang01.github.io/2019/08/20/hello-world-copy-3/</id>
     <published>2019-08-20T13:11:00.000Z</published>
-    <updated>2020-09-16T10:04:03.006Z</updated>
+    <updated>2020-11-16T15:24:37.046Z</updated>
     
     <summary type="html">
     
@@ -219,7 +253,7 @@
     <link href="http://yuang01.github.io/2019/08/12/hello-world-copy-4/"/>
     <id>http://yuang01.github.io/2019/08/12/hello-world-copy-4/</id>
     <published>2019-08-12T13:11:00.000Z</published>
-    <updated>2020-09-16T10:04:09.075Z</updated>
+    <updated>2020-11-16T15:24:37.085Z</updated>
     
     <summary type="html">
     
@@ -242,7 +276,7 @@
     <link href="http://yuang01.github.io/2019/08/05/hello-world-copy-5/"/>
     <id>http://yuang01.github.io/2019/08/05/hello-world-copy-5/</id>
     <published>2019-08-05T13:11:00.000Z</published>
-    <updated>2020-09-14T06:34:01.356Z</updated>
+    <updated>2020-11-16T15:24:37.095Z</updated>
     
     <summary type="html">
     
@@ -265,7 +299,7 @@
     <link href="http://yuang01.github.io/2019/05/21/hello-world-copy-8/"/>
     <id>http://yuang01.github.io/2019/05/21/hello-world-copy-8/</id>
     <published>2019-05-21T13:11:00.000Z</published>
-    <updated>2020-09-16T10:12:16.065Z</updated>
+    <updated>2020-11-16T15:24:37.159Z</updated>
     
     <summary type="html">
     
@@ -288,7 +322,7 @@
     <link href="http://yuang01.github.io/2019/01/20/hello-world-copy/"/>
     <id>http://yuang01.github.io/2019/01/20/hello-world-copy/</id>
     <published>2019-01-20T13:11:00.000Z</published>
-    <updated>2020-09-16T10:19:49.364Z</updated>
+    <updated>2020-11-16T15:24:37.308Z</updated>
     
     <summary type="html">
     
@@ -305,11 +339,11 @@
   </entry>
   
   <entry>
-    <title>这是一个测试页面哦</title>
+    <title>这是一个测试页面</title>
     <link href="http://yuang01.github.io/2018/09/28/hello-world-copy-11/"/>
     <id>http://yuang01.github.io/2018/09/28/hello-world-copy-11/</id>
     <published>2018-09-28T05:34:00.000Z</published>
-    <updated>2020-09-22T06:02:42.530Z</updated>
+    <updated>2020-11-16T15:24:37.229Z</updated>
     
     <summary type="html">
     

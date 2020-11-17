@@ -318,7 +318,7 @@
     <main class="main" style="margin-top: 60px;">
       
 
-<div style="width: 100%;height: 50vh;overflow: hidden;background-image: url('/medias/tagDetail.png');background-size: cover; 
+<div style="width: 100%;height: 50vh;overflow: hidden;background-image: url('/medias/tagDetail.jpg');background-size: cover; 
 background-position: center center;">
 </div>
 <div class="tag">
@@ -355,7 +355,7 @@ background-position: center center;">
             </div>
           </div>
           <div class="post-img-mobile">
-            <a href="/2020/09/14/hexo-theme-bamboo/" style="background: url('https://ssyerv1.oss-cn-hangzhou.aliyuncs.com/picture/56d7b34ee52046a3af719a1c9b1e0753.jpg!sswm');background-size: cover; 
+            <a href="/2020/09/14/hexo-theme-bamboo/" style="background: url('/medias/1.jpg');background-size: cover; 
               background-position: center center;">
             </a>
           </div>
@@ -370,7 +370,7 @@ background-position: center center;">
         </div>
       </div>
       <div class="post-img">
-        <a href="/2020/09/14/hexo-theme-bamboo/" style="background: url('https://ssyerv1.oss-cn-hangzhou.aliyuncs.com/picture/56d7b34ee52046a3af719a1c9b1e0753.jpg!sswm');background-size: cover; 
+        <a href="/2020/09/14/hexo-theme-bamboo/" style="background: url('/medias/1.jpg');background-size: cover; 
           background-position: center center;">
         </a>
       </div>
@@ -640,7 +640,11 @@ background-position: center center;">
     </script>
   
   </body>
-</html>: function(trigger) {
+</html>span>';
+          copyHtml += '</button>';
+          $(".post-detail pre code").before(copyHtml);
+          new ClipboardJS('.btn-copy', {
+              target: function(trigger) {
                   return trigger.nextElementSibling;
               }
           });

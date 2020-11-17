@@ -319,7 +319,7 @@
       
 
 
-<div class="post-detail-header" style="background: url(/medias/13.png) no-repeat; background-size: cover; 
+<div class="post-detail-header" style="background: url(/medias/1.jpg) no-repeat; background-size: cover; 
   background-position: center center;">
   
     <span class="title">Hexo主题--Bamboo介绍</span>
@@ -543,7 +543,8 @@ books   <span class="token comment" spellcheck="true">#书籍</span></code></pre
 <h3 id="复制成功提醒"><a href="#复制成功提醒" class="headerlink" title="复制成功提醒"></a>复制成功提醒</h3><p>当复制内容时候，是否显示复制成功提示<br>设置主题文件夹下的<code>_config.yml</code>文件中的<code>copy</code>属性true或者false即可</p>
 <h3 id="文章详情页的标题显示位置"><a href="#文章详情页的标题显示位置" class="headerlink" title="文章详情页的标题显示位置"></a>文章详情页的标题显示位置</h3><p>设置主题文件夹下的<code>_config.yml</code>文件中的<code>postTitleTop</code>属性true或者false即可，true的时候，显示在上方的图片中，false显示在文章内容上面</p>
 <h3 id="输入框打字特效"><a href="#输入框打字特效" class="headerlink" title="输入框打字特效"></a>输入框打字特效</h3><p>搜索弹框中的输入框打字特效，设置主题文件夹下的<code>_config.yml</code>文件中的<code>inputEffects</code>属性为true或者false即可。</p>
-<h3 id="live-2d人物"><a href="#live-2d人物" class="headerlink" title="live-2d人物"></a>live-2d人物</h3><p>设置主题文件夹下的<code>_config.yml</code>文件中的<code>live2d</code>属性为true或者false，注意，live-2d人物只有在屏幕宽度最小为992px的时候才显示</p>
+<h3 id="live-2d人物"><a href="#live-2d人物" class="headerlink" title="live-2d人物"></a>live-2d人物</h3><p>设置主题文件夹下的<code>_config.yml</code>文件中的<code>live2d</code>属性为true或者false，可以通过<code>modelId</code>属性选择模型，注意，live-2d人物只有在屏幕宽度最小为992px的时候才显示</p>
+<pre class=" language-yaml"><code class="language-yaml"><span class="token key atrule">modelId</span><span class="token punctuation">:</span> <span class="token number">2  </span><span class="token comment" spellcheck="true"># 0 or 1 or 2 or 3 or 4 or 5 or 6</span></code></pre>
 <h3 id="滚动动画"><a href="#滚动动画" class="headerlink" title="滚动动画"></a>滚动动画</h3><p>设置主题文件夹下的<code>_config.yml</code>文件中的<code>aos</code>属性对首页中的文章列表动画进行控制，具体参考官网<a href="https://github.com/michalsnik/aos#animations" target="_blank" rel="noopener">aos.js</a></p>
 <h3 id="文章详情页目录"><a href="#文章详情页目录" class="headerlink" title="文章详情页目录"></a>文章详情页目录</h3><p>设置主题文件夹下的<code>_config.yml</code>文件中的<code>toc</code>属性，控制其显示隐藏</p>
 <h3 id="音乐"><a href="#音乐" class="headerlink" title="音乐"></a>音乐</h3><p>设置主题文件夹下的<code>_config.yml</code>文件中的<code>music</code>属性，控制其显示隐藏和其他一些调整, <code>music</code>中的<code>fixed</code>属性建议使用<code>true</code></p>
@@ -655,6 +656,7 @@ books   <span class="token comment" spellcheck="true">#书籍</span></code></pre
 <td>文章标签，一篇文章可以多个标签</td>
 </tr>
 </tbody></table>
+<h2 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h2><p>代码高亮如遇到花括号变成了&#123;&#125;这样的字符串，在根目录下输入npm install <a href="mailto:hexo@4.2.1">hexo@4.2.1</a>即可。</p>
 
       </div>
       
@@ -683,9 +685,9 @@ books   <span class="token comment" spellcheck="true">#书籍</span></code></pre
 
 
   <div class="post-nav-next post-nav-item">
-    <a href="/2020/09/10/hello-world/">
+    <a href="/2020/09/10/hello-world-copy-12/">
       <span>
-        下一篇:    Hello World 
+        下一篇:    Hello World12 
       </span>
     </a>
   </div>
@@ -823,7 +825,8 @@ books   <span class="token comment" spellcheck="true">#书籍</span></code></pre
 </section>
 <style>
 #vcomment textarea {
-	background: url('/medias/comment_bg7.png') 100% 100% no-repeat;
+	background: url('/medias/comment.jpg') 100% 100% no-repeat;
+	background-size: 100px 100px;
 }
 </style>
 
