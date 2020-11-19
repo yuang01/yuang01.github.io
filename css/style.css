@@ -282,8 +282,8 @@ a {
   margin-bottom: 20px;
 }
 .posts h3 {
-  color: #34495e;
-  border-bottom: 1px solid #34495e;
+  color: #273849;
+  border-bottom: 1px solid #273849;
 }
 .posts .post {
   box-shadow: 0 1px 20px -6px rgba(0,0,0,0.5);
@@ -326,7 +326,7 @@ a {
   margin-top: 10px;
 }
 .posts .post-title .post-title-link {
-  color: #34495e;
+  color: #273849;
   text-decoration: none;
   font-weight: 700;
   transition: all 0.3s;
@@ -361,7 +361,7 @@ a {
   line-height: 30px;
 }
 .posts .post-more a {
-  color: #34495e;
+  color: #273849;
 }
 .posts .post-more i {
   font-size: 1.8rem;
@@ -431,6 +431,7 @@ a {
   align-items: center;
 }
 .post-detail-header .title {
+  font-family: '楷体';
   font-size: 2rem;
   line-height: 1.3;
   color: #fff;
@@ -457,7 +458,7 @@ a {
   margin-top: 10px;
 }
 .toc-aside {
-  color: #34495e;
+  color: #273849;
   width: 200px;
   margin-left: 25px;
 }
@@ -476,7 +477,7 @@ a {
 }
 .post-detail {
   padding: 20px 40px;
-  color: #34495e;
+  color: #273849;
   -webkit-font-smoothing: antialiased;
   line-height: 1.6rem;
   letter-spacing: 0;
@@ -491,7 +492,7 @@ a {
 .post-detail .post-title {
   text-align: center;
   font-size: 1.6em;
-  color: #34495e;
+  color: #273849;
   font-weight: 700;
   margin: 10px 0 30px 0;
 }
@@ -524,7 +525,7 @@ a {
   transform: translateY(-50%);
   opacity: 0;
   transition: all 0.3s;
-  color: #34495e;
+  color: #273849;
 }
 .post-detail img {
   max-width: 100%;
@@ -544,7 +545,7 @@ a {
   top: 13px !important;
   font-family: Inconsolata, Monaco, Consolas, 'Courier New', Courier, monospace;
   font-size: 0.91rem;
-  color: #e96900;
+  color: #d63200;
   background-color: #f8f8f8;
   border-radius: 2px;
 }
@@ -650,7 +651,7 @@ a {
 }
 .post-detail h2 a,
 .post-detail h3 a {
-  color: #34495e;
+  color: #273849;
 }
 .post-detail h1 {
   padding-bottom: 0.4rem;
@@ -841,7 +842,7 @@ a {
 }
 #tags .card .card-content .tag-title {
   font-size: 1.6em;
-  color: #34495e;
+  color: #273849;
   text-align: center;
   padding: 15px 0;
 }
@@ -856,7 +857,7 @@ a {
   padding: 5px 10px;
   display: inline-block;
   border-radius: 10px;
-  color: #34495e;
+  color: #273849;
   box-shadow: 0 1px 10px -3px rgba(0,0,0,0.5);
   transition: all 0.3s;
   margin-top: 20px;
@@ -887,7 +888,7 @@ a {
 }
 #categories .card .card-content .category-title {
   font-size: 1.6em;
-  color: #34495e;
+  color: #273849;
   text-align: center;
   padding: 15px 0;
 }
@@ -902,7 +903,7 @@ a {
   padding: 5px 10px;
   display: inline-block;
   border-radius: 10px;
-  color: #34495e;
+  color: #273849;
   box-shadow: 0 1px 10px -3px rgba(0,0,0,0.5);
   transition: all 0.3s;
   margin-top: 20px;
@@ -934,7 +935,7 @@ a {
   box-sizing: border-box;
 }
 .topArticle h3 {
-  color: #34495e;
+  color: #273849;
 }
 .topArticle h3 i {
   margin-right: 5px;
@@ -1117,7 +1118,7 @@ a {
   margin-bottom: 30px;
 }
 .archive .post-archive .year a {
-  color: #34495e;
+  color: #273849;
   font-weight: 700;
   font-size: 2em;
 }
@@ -1177,7 +1178,7 @@ a {
   padding: 10px 20px;
   text-align: center;
   font-size: 1.6em;
-  color: #34495e;
+  color: #273849;
   border-radius: 10px;
 }
 .category {
@@ -1196,12 +1197,12 @@ a {
   padding: 10px 20px;
   text-align: center;
   font-size: 1.6em;
-  color: #34495e;
+  color: #273849;
   border-radius: 10px;
 }
 .friends-title {
   font-size: 1.6em;
-  color: #34495e;
+  color: #273849;
   text-align: center;
   padding: 15px 0;
 }
@@ -1261,11 +1262,11 @@ a {
 #about .title {
   text-align: center;
   font-size: 1.6em;
-  color: #34495e;
+  color: #273849;
   padding: 15px 0;
 }
 #about .subtitle {
-  color: #34495e;
+  color: #273849;
   font-size: 1.4em;
 }
 #about .basic-info {
@@ -1282,10 +1283,10 @@ a {
 #about .basic-info .items .item {
   flex: 0 0 100px;
   text-align: center;
-  color: #34495e;
+  color: #273849;
 }
 #about .basic-info .items .item .border {
-  border: 1px solid #34495e;
+  border: 1px solid #273849;
   width: 100px;
   height: 100px;
   border-radius: 50%;
@@ -1431,7 +1432,7 @@ a {
 }
 .donate-box .donate-box_title h4 {
   text-align: center;
-  color: #34495e;
+  color: #273849;
   font-size: 1.4rem;
 }
 .donate-box .donate-box_tab {
@@ -1538,7 +1539,7 @@ a {
   margin-top: 10px;
 }
 .message-box_wrapper .result-wrapper .search-keyword {
-  color: #e96900;
+  color: #d63200;
 }
 .message-box_wrapper .result-wrapper p {
   font-size: 1rem;
@@ -1603,7 +1604,7 @@ a {
   background-color: rgba(0,0,0,0.1);
 }
 #appDrawer .drawer-box .drawer-box-content .drawer-box-content_menu .drawer-box-content_item a {
-  color: #34495e;
+  color: #273849;
   display: block;
   width: 100%;
   height: 100%;
