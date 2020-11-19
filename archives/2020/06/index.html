@@ -71,8 +71,10 @@
     <div class="bars">
       <div id="appDrawer" class="sidebar-image">
   <i class="fa fa-bars" aria-hidden="true" @click="showDialogDrawer"></i>
-  <div class="drawer-box_mask" v-cloak style="display: none;" v-show="visible" @click.self="cancelDialogDrawer">
-  </div>
+  <transition name="fade">
+    <div class="drawer-box_mask" v-cloak style="display: none;" v-show="visible" @click.self="cancelDialogDrawer">
+    </div>
+  </transition>
   <div class="drawer-box" :class="{'active': visible}">
     <div class="drawer-box-head bg-color">
       <img class="drawer-box-head_logo" src="/medias/logo.png" alt="logo">
@@ -243,26 +245,29 @@
       
         <div id="appSearch">
   <div class="search"  @click="showDialog()"><i class="fa fa-search" aria-hidden="true"></i></div>
-  <div class="message-box_wrapper" style="display: none;" v-cloak v-show="dialogVisible" @click.self="cancelDialogVisible()">
-    <div class="message-box">
-      <h2>
-        <i class="fa fa-search" aria-hidden="true"></i>
-        <span class="title">搜索</span>
-      </h2>
-      <form class="site-search-form">
-        <input type="text"
-          placeholder="请输入关键字"
-          id="local-search-input" 
-          @click="getSearchFile()"
-          class="st-search-input"
-          v-model="searchInput"
-        />
-      </form>
-      <div class="result-wrapper">
-        <div id="local-search-result" class="local-search-result-cls"></div>
+  <transition name="fade">
+    <div class="message-box_wrapper" style="display: none;" v-cloak v-show="dialogVisible" @click.self="cancelDialogVisible()">
+      <div class="message-box animated bounceInDown">
+        <h2>
+          <i class="fa fa-search" aria-hidden="true"></i>
+          <span class="title">搜索</span>
+          <!-- <i class="fa fa-close" style="float:right;" aria-hidden="true" @click.self="cancelDialogVisible()"></i> -->
+        </h2>
+        <form class="site-search-form">
+          <input type="text"
+            placeholder="请输入关键字"
+            id="local-search-input" 
+            @click="getSearchFile()"
+            class="st-search-input"
+            v-model="searchInput"
+          />
+        </form>
+        <div class="result-wrapper">
+          <div id="local-search-result" class="local-search-result-cls"></div>
+        </div>
       </div>
     </div>
-  </div>
+  </transition>
 </div>
 
 <script src="/js/local_search.js"></script>
@@ -333,13 +338,13 @@ background-position: center center;">
         
         <li class="post-item" data-aos="fade-left">
           <span class="post-date">06-20</span>
-          <a class="post-title" href="/2020/06/20/hello-world-copy-7/">Hello World7</a>
+          <a class="post-title" href="/2020/06/20/hello-world-copy-9/">Hello World9</a>
         </li>
       
         
         <li class="post-item" data-aos="fade-left">
           <span class="post-date">06-20</span>
-          <a class="post-title" href="/2020/06/20/hello-world-copy-9/">Hello World9</a>
+          <a class="post-title" href="/2020/06/20/hello-world-copy-7/">Hello World7</a>
         </li>
       
     </ul>

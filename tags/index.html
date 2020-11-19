@@ -71,8 +71,10 @@
     <div class="bars">
       <div id="appDrawer" class="sidebar-image">
   <i class="fa fa-bars" aria-hidden="true" @click="showDialogDrawer"></i>
-  <div class="drawer-box_mask" v-cloak style="display: none;" v-show="visible" @click.self="cancelDialogDrawer">
-  </div>
+  <transition name="fade">
+    <div class="drawer-box_mask" v-cloak style="display: none;" v-show="visible" @click.self="cancelDialogDrawer">
+    </div>
+  </transition>
   <div class="drawer-box" :class="{'active': visible}">
     <div class="drawer-box-head bg-color">
       <img class="drawer-box-head_logo" src="/medias/logo.png" alt="logo">
@@ -243,26 +245,29 @@
       
         <div id="appSearch">
   <div class="search"  @click="showDialog()"><i class="fa fa-search" aria-hidden="true"></i></div>
-  <div class="message-box_wrapper" style="display: none;" v-cloak v-show="dialogVisible" @click.self="cancelDialogVisible()">
-    <div class="message-box">
-      <h2>
-        <i class="fa fa-search" aria-hidden="true"></i>
-        <span class="title">搜索</span>
-      </h2>
-      <form class="site-search-form">
-        <input type="text"
-          placeholder="请输入关键字"
-          id="local-search-input" 
-          @click="getSearchFile()"
-          class="st-search-input"
-          v-model="searchInput"
-        />
-      </form>
-      <div class="result-wrapper">
-        <div id="local-search-result" class="local-search-result-cls"></div>
+  <transition name="fade">
+    <div class="message-box_wrapper" style="display: none;" v-cloak v-show="dialogVisible" @click.self="cancelDialogVisible()">
+      <div class="message-box animated bounceInDown">
+        <h2>
+          <i class="fa fa-search" aria-hidden="true"></i>
+          <span class="title">搜索</span>
+          <!-- <i class="fa fa-close" style="float:right;" aria-hidden="true" @click.self="cancelDialogVisible()"></i> -->
+        </h2>
+        <form class="site-search-form">
+          <input type="text"
+            placeholder="请输入关键字"
+            id="local-search-input" 
+            @click="getSearchFile()"
+            class="st-search-input"
+            v-model="searchInput"
+          />
+        </form>
+        <div class="result-wrapper">
+          <div id="local-search-result" class="local-search-result-cls"></div>
+        </div>
       </div>
     </div>
-  </div>
+  </transition>
 </div>
 
 <script src="/js/local_search.js"></script>
@@ -329,22 +334,6 @@ background-position: center center;">
             <div class="tag-chips">
                 
                 
-                <a href="/tags/Hexo/" title="Hexo: 2">
-                    <span class="tag-content"
-                        title="Hexo" style="background-color: #E8F8F5;">Hexo
-                        <span class="tag-length">2</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/hexo-theme-Bamboo/" title="hexo-theme-Bamboo: 1">
-                    <span class="tag-content"
-                        title="hexo-theme-Bamboo" style="background-color: #FFF;">hexo-theme-Bamboo
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
                 <a href="/tags/vue/" title="vue: 2">
                     <span class="tag-content"
                         title="vue" style="background-color: #85C1E9;">vue
@@ -356,6 +345,22 @@ background-position: center center;">
                 <a href="/tags/html/" title="html: 1">
                     <span class="tag-content"
                         title="html" style="background-color: #FEF9E7;">html
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/Hexo/" title="Hexo: 2">
+                    <span class="tag-content"
+                        title="Hexo" style="background-color: #E8F8F5;">Hexo
+                        <span class="tag-length">2</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/hexo-theme-Bamboo/" title="hexo-theme-Bamboo: 1">
+                    <span class="tag-content"
+                        title="hexo-theme-Bamboo" style="background-color: #FFF;">hexo-theme-Bamboo
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -417,17 +422,17 @@ background-position: center center;">
                 </a>
                 
                 
-                <a href="/tags/hexo-theme-bamboo/" title="hexo-theme-bamboo: 1">
+                <a href="/tags/vue-js/" title="vue.js: 1">
                     <span class="tag-content"
-                        title="hexo-theme-bamboo" style="background-color: #F8F9F9;">hexo-theme-bamboo
+                        title="vue.js" style="background-color: #F5EEF8;">vue.js
                         <span class="tag-length">1</span>
                     </span>
                 </a>
                 
                 
-                <a href="/tags/vue-js/" title="vue.js: 1">
+                <a href="/tags/hexo-theme-bamboo/" title="hexo-theme-bamboo: 1">
                     <span class="tag-content"
-                        title="vue.js" style="background-color: #F5EEF8;">vue.js
+                        title="hexo-theme-bamboo" style="background-color: #F8F9F9;">hexo-theme-bamboo
                         <span class="tag-length">1</span>
                     </span>
                 </a>
