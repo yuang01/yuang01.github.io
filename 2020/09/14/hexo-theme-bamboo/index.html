@@ -546,6 +546,21 @@ books   <span class="token comment" spellcheck="true">#书籍</span></code></pre
 <h3 id="文章详情页分享功能"><a href="#文章详情页分享功能" class="headerlink" title="文章详情页分享功能"></a>文章详情页分享功能</h3><p>设置主题文件夹下的<code>_config.yml</code>文件中的<code>sharejs</code>属性true或者false即可</p>
 <h3 id="点击出现爱心效果"><a href="#点击出现爱心效果" class="headerlink" title="点击出现爱心效果"></a>点击出现爱心效果</h3><p>设置主题文件夹下的<code>_config.yml</code>文件中的<code>clicklove</code>属性true或者false即可</p>
 <h3 id="复制成功提醒"><a href="#复制成功提醒" class="headerlink" title="复制成功提醒"></a>复制成功提醒</h3><p>当复制内容时候，是否显示复制成功提示<br>设置主题文件夹下的<code>_config.yml</code>文件中的<code>copy</code>属性true或者false即可</p>
+<pre class=" language-yaml"><code class="language-yaml"><span class="token comment" spellcheck="true"># 复制成功提示</span>
+<span class="token key atrule">copy</span><span class="token punctuation">:</span>
+  <span class="token key atrule">on</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">title</span><span class="token punctuation">:</span> <span class="token string">'成功'</span>
+  <span class="token key atrule">content</span><span class="token punctuation">:</span> <span class="token string">'复制成功了哦'</span></code></pre>
+<h3 id="雪花飘落和花瓣飘落特效"><a href="#雪花飘落和花瓣飘落特效" class="headerlink" title="雪花飘落和花瓣飘落特效"></a>雪花飘落和花瓣飘落特效</h3><p>设置主题文件夹下的<code>_config.yml</code>文件中的<code>snow</code>或者<code>sakura</code>属性true或者false即可</p>
+<pre class=" language-yaml"><code class="language-yaml"><span class="token comment" spellcheck="true"># 首页雪花飘落效果--冬天</span>
+<span class="token key atrule">snow</span><span class="token punctuation">:</span>
+  <span class="token key atrule">on</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+  <span class="token key atrule">onlyPc</span><span class="token punctuation">:</span> <span class="token boolean important">false </span><span class="token comment" spellcheck="true"># 设为true，只有pc端显示雪花特效</span>
+
+<span class="token comment" spellcheck="true"># 首页花瓣飘落效果--春天</span>
+<span class="token key atrule">sakura</span><span class="token punctuation">:</span>
+  <span class="token key atrule">on</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+  <span class="token key atrule">onlyPc</span><span class="token punctuation">:</span> <span class="token boolean important">false </span><span class="token comment" spellcheck="true"># 设为true，只有pc端显示花瓣特效</span></code></pre>
 <h3 id="文章详情页的标题显示位置"><a href="#文章详情页的标题显示位置" class="headerlink" title="文章详情页的标题显示位置"></a>文章详情页的标题显示位置</h3><p>设置主题文件夹下的<code>_config.yml</code>文件中的<code>postTitleTop</code>属性true或者false即可，true的时候，显示在上方的图片中，false显示在文章内容上面</p>
 <h3 id="输入框打字特效"><a href="#输入框打字特效" class="headerlink" title="输入框打字特效"></a>输入框打字特效</h3><p>搜索弹框中的输入框打字特效，设置主题文件夹下的<code>_config.yml</code>文件中的<code>inputEffects</code>属性为true或者false即可。</p>
 <h3 id="live-2d人物"><a href="#live-2d人物" class="headerlink" title="live-2d人物"></a>live-2d人物</h3><p>设置主题文件夹下的<code>_config.yml</code>文件中的<code>live2d</code>属性为true或者false，可以通过<code>modelId</code>属性选择模型，注意，live-2d人物只有在屏幕宽度最小为992px的时候才显示</p>
@@ -1116,8 +1131,8 @@ books   <span class="token comment" spellcheck="true">#书籍</span></code></pre
 
       function doSomething() {
         that.$notify({
-          title: '成功',
-          content: '复制成功了哦',
+          title: "成功",
+          content: "复制成功了哦",
           type: 'success'
         })
         // console.log('ctrl + c 监听成功');  

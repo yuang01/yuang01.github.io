@@ -758,6 +758,7 @@
 <style>
 .swiper-container {
   overflow: hidden;
+  z-index: 0;
 }
 .swiper-slide {
   height: 350px;
@@ -925,6 +926,32 @@
 	<div class="articles">
 		
 			
+				<div class="article-link">
+					
+					<div class="article" style="background: url('/medias/13.jpg');background-size: cover; 
+						background-position: center center;">
+					</div>
+					<div class="text">
+						<div class="text-main">
+							<div class="title"><a href="/2019/08/12/hello-world-copy-4/">这是一个标题为两行的页面哦多少度撒</a></div>
+							<div class="content">
+								Welcome to Hexo! This is your very first post. Check documen
+							</div>
+						</div>
+						<a href="/2019/08/12/hello-world-copy-4/" class="more">
+							<i class="fa fa-eye" aria-hidden="true"></i>阅读更多
+						</a>
+					</div>
+				</div>
+			
+		
+			
+		
+			
+		
+			
+		
+			
 		
 			
 		
@@ -959,36 +986,6 @@
 			
 				<div class="article-link">
 					
-					<div class="article" style="background: url('/medias/13.jpg');background-size: cover; 
-						background-position: center center;">
-					</div>
-					<div class="text">
-						<div class="text-main">
-							<div class="title"><a href="/2019/08/12/hello-world-copy-4/">这是一个标题为两行的页面哦多少度撒</a></div>
-							<div class="content">
-								Welcome to Hexo! This is your very first post. Check documen
-							</div>
-						</div>
-						<a href="/2019/08/12/hello-world-copy-4/" class="more">
-							<i class="fa fa-eye" aria-hidden="true"></i>阅读更多
-						</a>
-					</div>
-				</div>
-			
-		
-			
-		
-			
-		
-			
-		
-			
-		
-			
-		
-			
-				<div class="article-link">
-					
 					<div class="article" style="background: url('/medias/1.jpg');background-size: cover; 
 						background-position: center center;">
 					</div>
@@ -1004,6 +1001,10 @@
 						</a>
 					</div>
 				</div>
+			
+		
+			
+		
 			
 		
 			
@@ -1481,6 +1482,15 @@
     <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">下一页</a>
   </nav>
 
+
+<!-- 雪花和花瓣特效 -->
+
+  
+    <script src="/js/snow.js"></script>
+  
+
+
+  
     </main>
     <div class="footer bg-color">
   <div class="footer-main">
@@ -1691,8 +1701,8 @@
 
       function doSomething() {
         that.$notify({
-          title: '成功',
-          content: '复制成功了哦',
+          title: "成功",
+          content: "复制成功了哦",
           type: 'success'
         })
         // console.log('ctrl + c 监听成功');  
