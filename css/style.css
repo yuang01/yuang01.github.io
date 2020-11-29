@@ -1682,3 +1682,11 @@ a {
 .archive .post-archive .post-item .post-title:hover {
   color: #42b983;
 }
+#vcomment .vcards .vcard .vh .vhead .vtag.vvisitor {
+  background-color: #42b983 !important;
+}
+.v[data-class=v] .vbtn:active,
+.v[data-class=v] .vbtn:hover {
+  color: #42b983 !important;
+  border-color: #42b983 !important;
+}
