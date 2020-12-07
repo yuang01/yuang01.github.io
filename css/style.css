@@ -535,7 +535,6 @@ a {
 .post-detail blockquote {
   border-left: 5px solid #42b983;
   padding: 1rem 0.8rem 0.2rem 0.8rem;
-  color: #666;
   background-color: rgba(66,185,131,0.1);
   margin: 0;
   word-break: break-all;
@@ -732,7 +731,6 @@ a {
 .post-detail blockquote {
   border-left: 4px solid #42b983;
   padding: 10px 15px;
-  color: #777;
   background-color: rgba(66,185,131,0.1);
 }
 .post-detail table {
@@ -1626,16 +1624,17 @@ a {
   box-shadow: -2px 2px 2px 2px rgba(255,255,255,0.5);
 }
 .bg-color {
-  background: #42b983;
+  background-color: #42b983;
 }
 .color-primary {
   color: #42b983 !important;
 }
-.border-color {
-  border: 1px solid #42b983;
-}
 a {
   color: #42b983;
+  text-decoration: none;
+}
+.border-color {
+  border: 1px solid #42b983;
 }
 .swiper-pagination-bullet-active {
   background-color: #42b983 !important;
@@ -1658,11 +1657,6 @@ a {
 .post-categories .article-category .article-category-link:hover {
   color: #42b983;
 }
-::-webkit-scrollbar-thumb {
-  background-color: #42b983;
-  background-image: -webkit-linear-gradient(45deg, rgba(255,255,255,0.4) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0.4) 75%, transparent 75%, transparent);
-  border-radius: 3em;
-}
 .post-detail a {
   color: #42b983 !important;
 }
@@ -1671,7 +1665,7 @@ a {
 }
 .post-detail blockquote {
   border-left: 4px solid #42b983;
-  background-color: rgba(66,185,131,0.1);
+  background-color: $color-primary-shallow;
 }
 .toc-link.is-active-link::before {
   background-color: #42b983;
@@ -1689,4 +1683,43 @@ a {
 .v[data-class=v] .vbtn:hover {
   color: #42b983 !important;
   border-color: #42b983 !important;
+}
+.note {
+  padding: 12px 24px 12px 30px;
+  border-left-width: 4px;
+  border-left-style: solid;
+  border-radius: 4px;
+  margin: 1rem 0;
+  background-color: #f3f5f7;
+  border-color: #42b983;
+  color: #2c3e50;
+  position: relative;
+}
+.note.warning {
+  border-color: #e7c000;
+  background-color: rgba(255,229,100,0.3);
+}
+.note.danger::before {
+  content: '!';
+  background-color: #f66;
+  position: absolute;
+  top: 14px;
+  left: -12px;
+  color: #fff;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  text-align: center;
+  line-height: 20px;
+  font-weight: bold;
+  font-family: "Dosis", "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+  font-size: 14px;
+}
+.note.danger {
+  border-color: #f66;
+  background-color: #ffe6e6;
+}
+.note.success {
+  border-color: #42b983;
+  background-color: #f3f5f7;
 }

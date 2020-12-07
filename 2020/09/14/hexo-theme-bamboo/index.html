@@ -616,19 +616,9 @@ books   <span class="token comment" spellcheck="true">#书籍</span></code></pre
 <span class="token key atrule">aboutImg</span><span class="token punctuation">:</span> <span class="token string">'/medias/about.jpg'</span>
 <span class="token comment" spellcheck="true"># 友情链接页面图片</span>
 <span class="token key atrule">friendsImg</span><span class="token punctuation">:</span> <span class="token string">'/medias/friend.jpg'</span></code></pre>
-<h3 id="更改主题颜色"><a href="#更改主题颜色" class="headerlink" title="更改主题颜色"></a>更改主题颜色</h3><p>默认主题颜色是绿色(#42b983)，可以通过更改主题文件夹<code>hexo-theme-bamboo</code>下的文件：<code>source/css/_partial/custom.styl</code>,将文件中的所有(#42b983)颜色值替换成你想要的颜色，然后更改该文件下的<code>blockquote</code>背景颜色，代码如下:</p>
-<pre class=" language-css"><code class="language-css"><span class="token selector">// 文章详情页的blockquote，md中的 > 标签的左边框和背景颜色
-<span class="token class">.post-detail</span> </span><span class="token punctuation">{</span>
-  <span class="token selector">blockquote </span><span class="token punctuation">{</span>
-      <span class="token property">border-left</span><span class="token punctuation">:</span> <span class="token number">4</span>px solid <span class="token hexcode">#42b983</span><span class="token punctuation">;</span>
-      <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token function">rgba</span><span class="token punctuation">(</span><span class="token number">66</span>, <span class="token number">185</span>, <span class="token number">131</span>, <span class="token number">.1</span><span class="token punctuation">)</span><span class="token punctuation">;</span> // 更改这个背景颜色为你想要的的颜色值
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre>
-<p>blockquote样式指的是下面这个</p>
-<blockquote>
-<p>我是blockquote</p>
-</blockquote>
-<p>例如，我将该文件下的所有颜色设置为<code>skyblue</code>，显示效果如下<br><img src="https://img13.360buyimg.com/ddimg/jfs/t1/120336/2/13322/273081/5f69b8d1E737e6277/8fdc796d2d3a82b3.png" alt="theme-color"></p>
+<h3 id="更改主题颜色"><a href="#更改主题颜色" class="headerlink" title="更改主题颜色"></a>更改主题颜色</h3><p>默认主题颜色是绿色<code>#42b983</code>，可以通过更改主题文件夹<code>hexo-theme-bamboo</code>下的文件：<code>source/css/_defines/color.styl</code>, 更改颜色变量<code>$color-default</code>为你想要的值即可。</p>
+<pre class=" language-css"><code class="language-css">$color-default = <span class="token hexcode">#42b983</span><span class="token punctuation">;</span> // 更改这个值为你想要的颜色即可</code></pre>
+<p>例如，我将该变量设置为<code>skyblue</code>，显示效果如下<br><img src="https://img13.360buyimg.com/ddimg/jfs/t1/120336/2/13322/273081/5f69b8d1E737e6277/8fdc796d2d3a82b3.png" alt="theme-color"></p>
 <p>代码高亮颜色，可以通过之前介绍的代码高亮进行更改</p>
 <h2 id="文章-Front-matter-介绍"><a href="#文章-Front-matter-介绍" class="headerlink" title="文章 Front-matter 介绍"></a>文章 Front-matter 介绍</h2><p><code>Front-matter</code> 选项中的所有内容均为<strong>非必填</strong>的。但我仍然建议至少填写 <code>title</code> 和 <code>date</code> 的值。</p>
 <table>
@@ -714,9 +704,9 @@ books   <span class="token comment" spellcheck="true">#书籍</span></code></pre
 
 
   <div class="post-nav-next post-nav-item">
-    <a href="/2020/09/10/hello-world-copy-12/">
+    <a href="/2020/09/10/hello-world-copy-13/">
       <span>
-        下一篇:    Hello World12 
+        下一篇:    Hello World13 
       </span>
     </a>
   </div>
