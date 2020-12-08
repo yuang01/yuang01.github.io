@@ -675,7 +675,9 @@ books   <span class="token comment" spellcheck="true">#书籍</span></code></pre
 <td>文章标签，一篇文章可以多个标签</td>
 </tr>
 </tbody></table>
-<h2 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h2><p>代码高亮如遇到花括号变成了<code>&amp;#123;&amp;#125;</code>这样的字符串，两种方式可解决：<br>1.在根目录下输入npm install <a href="mailto:hexo@4.2.1">hexo@4.2.1</a>即可。<br>2.将<code>node_modules\hexo-prism-plugin\src\index.js</code>中的map改为如下</p>
+<h2 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h2><p>代码高亮如遇到花括号变成了<code>&amp;#123;&amp;#125;</code>这样的字符串，两种方式可解决：<br>1.在根目录下输入</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> hexo@4.2.1</code></pre>
+<p>即可。<br>2.将<code>node_modules\hexo-prism-plugin\src\index.js</code>中的map改为如下</p>
 <pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">const</span> map <span class="token operator">=</span> <span class="token punctuation">{</span>
   <span class="token string">'&amp;#39;'</span><span class="token punctuation">:</span> <span class="token string">'\''</span><span class="token punctuation">,</span>
   <span class="token string">'&amp;amp;'</span><span class="token punctuation">:</span> <span class="token string">'&amp;'</span><span class="token punctuation">,</span>
@@ -714,9 +716,9 @@ books   <span class="token comment" spellcheck="true">#书籍</span></code></pre
 
 
   <div class="post-nav-next post-nav-item">
-    <a href="/2020/09/10/hello-world-copy-13/">
+    <a href="/2020/09/10/hello-world-copy-12/">
       <span>
-        下一篇:    Hello World13 
+        下一篇:    Hello World12 
       </span>
     </a>
   </div>
