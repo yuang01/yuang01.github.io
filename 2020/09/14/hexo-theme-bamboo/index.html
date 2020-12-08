@@ -675,7 +675,17 @@ books   <span class="token comment" spellcheck="true">#书籍</span></code></pre
 <td>文章标签，一篇文章可以多个标签</td>
 </tr>
 </tbody></table>
-<h2 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h2><p>代码高亮如遇到花括号变成了<code>&amp;#123;&amp;#125;</code>这样的字符串，在根目录下输入npm install <a href="mailto:hexo@4.2.1">hexo@4.2.1</a>即可。</p>
+<h2 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h2><p>代码高亮如遇到花括号变成了<code>&amp;#123;&amp;#125;</code>这样的字符串，两种方式可解决：<br>1.在根目录下输入npm install <a href="mailto:hexo@4.2.1">hexo@4.2.1</a>即可。<br>2.将<code>node_modules\hexo-prism-plugin\src\index.js</code>中的map改为如下</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">const</span> map <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token string">'&amp;#39;'</span><span class="token punctuation">:</span> <span class="token string">'\''</span><span class="token punctuation">,</span>
+  <span class="token string">'&amp;amp;'</span><span class="token punctuation">:</span> <span class="token string">'&amp;'</span><span class="token punctuation">,</span>
+  <span class="token string">'&amp;gt;'</span><span class="token punctuation">:</span> <span class="token string">'>'</span><span class="token punctuation">,</span>
+  <span class="token string">'&amp;lt;'</span><span class="token punctuation">:</span> <span class="token string">'&lt;'</span><span class="token punctuation">,</span>
+  <span class="token string">'&amp;quot;'</span><span class="token punctuation">:</span> <span class="token string">'"'</span><span class="token punctuation">,</span>
+  <span class="token string">'&amp;#123;'</span><span class="token punctuation">:</span> <span class="token string">'{'</span><span class="token punctuation">,</span>
+  <span class="token string">'&amp;#125;'</span><span class="token punctuation">:</span> <span class="token string">'}'</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre>
+<p>然后重启服务，<code>hexo s</code> &amp;&amp; <code>hexo g</code> &amp;&amp; <code>hexo s</code>即可 </p>
 
       </div>
       
