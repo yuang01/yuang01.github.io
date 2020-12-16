@@ -62,6 +62,59 @@
   
 <script src="/js/vue2.6.11.js"></script>
 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/v-plugs-ayu/lib/ayu.css">
+<script src="https://cdn.jsdelivr.net/npm/v-plugs-ayu/lib/ayu.umd.min.js"></script>
+<div id="appJump">
+
+</div>
+
+<script>
+var vm = new Vue({
+    el: '#appJump',
+    data: {
+    },
+    computed: {
+    },
+    mounted() {
+        let sessionData = sessionStorage.getItem('data');
+        if (sessionData === null) {
+            this.WebLocation();
+        }
+        sessionStorage.setItem('data', 1); //存一个值
+    },
+    methods: {
+        WebLocation() {
+            let language = navigator.language;
+            let deploy = 'https://github.com/yuang01/yuang01.github.io.git';
+            if (language == 'zh-CN') {
+                if (deploy == 'https://github.com/yuang01/yuang01.github.io.git') {
+                    this.$confirm({
+                        title: '提示',
+                        content: '建议大陆用户访问部署在国内的站点，是否跳转？',
+                        onConfirm: () => {
+                            window.location.href = 'https://yuang01.gitee.io';
+                        },
+                    })
+                }
+                console.log('中文');
+            } else {
+                console.log('其他');
+            }
+        }
+    },
+    created() {}
+})
+</script>
+<style>
+    .ayu-button.ayu-button-primary {
+        background-color: #42b983!important;
+        border-color: #42b983!important;
+    }
+    .ayu-message-box_wrapper .ayu-message-box .ayu-message-box_header .ayu-message-box_close:hover {
+        color: #42b983!important;
+    }
+</style>
+  
   <body>
     <header class="header bg-color" 
   style="position: fixed; 
@@ -344,13 +397,13 @@ background-position: center center;">
         
         <li class="post-item" data-aos="fade-left">
           <span class="post-date">09-10</span>
-          <a class="post-title" href="/2020/09/10/hello-world-copy-12/">Hello World12</a>
+          <a class="post-title" href="/2020/09/10/hello-world-copy-13/">Hello World13</a>
         </li>
       
         
         <li class="post-item" data-aos="fade-left">
           <span class="post-date">09-10</span>
-          <a class="post-title" href="/2020/09/10/hello-world-copy-13/">Hello World13</a>
+          <a class="post-title" href="/2020/09/10/hello-world-copy-12/">Hello World12</a>
         </li>
       
         
