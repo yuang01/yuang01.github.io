@@ -1,12 +1,12 @@
 ---
-title: 这是一个测试页面哦
+title: 这是一个测试页面
 date: 2018-09-28 13:34:00
 author: blinkfox
 categories: 前端
 tags: [Hexo, hexo-theme-Bamboo]
 swiper: false
-swiperImg: 'https://ssyerv1.oss-cn-hangzhou.aliyuncs.com/picture/663afbe7197941039f65afd048223aff.jpg!sswm'
-img: '/medias/8.png'
+swiperImg: '/medias/6.jpg'
+img: '/medias/6.jpg'
 ---
 Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [documentation](https://hexo.io/docs/) for more info. If you get any problems when using Hexo, you can find the answer in [troubleshooting](https://hexo.io/docs/troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues).
 <!-- more -->

@@ -282,10 +282,30 @@ swiperImg: 'https://ssyerv1.oss-cn-hangzhou.aliyuncs.com/picture/c080ff4434354e3
 ### 点击出现爱心效果
 设置主题文件夹下的`_config.yml`文件中的`clicklove`属性true或者false即可
 
-
 ### 复制成功提醒
 当复制内容时候，是否显示复制成功提示 
 设置主题文件夹下的`_config.yml`文件中的`copy`属性true或者false即可
+```yaml
+# 复制成功提示
+copy:
+  on: true
+  title: '成功'
+  content: '复制成功了哦'
+```
+
+### 雪花飘落和花瓣飘落特效
+设置主题文件夹下的`_config.yml`文件中的`snow`或者`sakura`属性true或者false即可
+```yaml
+# 首页雪花飘落效果--冬天
+snow:
+  on: false
+  onlyPc: false # 设为true，只有pc端显示雪花特效
+
+# 首页花瓣飘落效果--春天
+sakura:
+  on: false
+  onlyPc: false # 设为true，只有pc端显示花瓣特效
+```
 
 ### 文章详情页的标题显示位置 
 设置主题文件夹下的`_config.yml`文件中的`postTitleTop`属性true或者false即可，true的时候，显示在上方的图片中，false显示在文章内容上面
@@ -294,7 +314,10 @@ swiperImg: 'https://ssyerv1.oss-cn-hangzhou.aliyuncs.com/picture/c080ff4434354e3
 搜索弹框中的输入框打字特效，设置主题文件夹下的`_config.yml`文件中的`inputEffects`属性为true或者false即可。
 
 ### live-2d人物
-设置主题文件夹下的`_config.yml`文件中的`live2d`属性为true或者false，注意，live-2d人物只有在屏幕宽度最小为992px的时候才显示
+设置主题文件夹下的`_config.yml`文件中的`live2d`属性为true或者false，可以通过`modelId`属性选择模型，注意，live-2d人物只有在屏幕宽度最小为992px的时候才显示
+```yaml
+modelId: 2  # 0 or 1 or 2 or 3 or 4 or 5 or 6
+```
 
 ### 滚动动画
 设置主题文件夹下的`_config.yml`文件中的`aos`属性对首页中的文章列表动画进行控制，具体参考官网[aos.js](https://github.com/michalsnik/aos#animations)
@@ -340,24 +363,35 @@ top: true
 主题中内置了`valine`, `miniValine`, `livere`, `gitment`, `gitalk`, `changyan`评论
 通过主题文件夹下的`_config.yml`文件中的相应属性进行设置
 推荐使用`valine`和`livere`
-
+这里重点说一下`valine`评论配置
+```yaml
+valine:
+  on: true # 是否启用
+  appid: # 你的appid --> https://valine.js.org/quickstart.html，请阅读这个获取appid和appkey
+  appkey: # 你的key
+  avatar: '' # 匿名者头像选项 https://valine.js.org/avatar.html 访客的头像,最好启用下面的`requiredFields`中的邮箱必填，填写qq邮箱，头像会变成qq头像
+  placeholder: '客官，说点什么吧' # 评论内容输入框的 placeholder
+  master: 'xxxxxx' # 博主标签识别，博主邮箱md5 可以去md5加密网站，例如 https://md5jiami.51240.com/ ，将自己的邮箱输入， 得到 32位小写 的字符串填入这里
+  friends: ['xxxxxxx', 'xxxxxx'] # 小伙伴的 邮箱md5， 是个数组
+  requiredFields: ['nick', 'mail'] # 设置必填项 ['nick', 'mail'] nick为昵称必填， mail为邮箱必填, 空数组，则不校验
+```
 ### 归档、标签、分类、关于我、友情链接页面图片自定义
 通过主题文件夹下的`_config.yml`文件中的相应属性进行设置，属性如下：
 ``` yaml
 # 归档页面图片 or 'http://xxx'
-archiveImg: '/medias/archiveImg.png'
+archiveImg: '/medias/archive.jpg'
 # 标签页面图片
-tagImg: '/medias/tag.png'
+tagImg: '/medias/tag.jpg'
 # 标签详情页面图片
-tagDetailImg: '/medias/tagDetail.png'
+tagDetailImg: '/medias/tagDetail.jpg'
 # 分类页面图片
-categoriesImg: '/medias/categories.png'
+categoriesImg: '/medias/categories.jpg'
 #分类详情页面图片
-categoryDetailImg: '/medias/categoryDetail.png'
+categoryDetailImg: '/medias/categoryDetail.jpg'
 # 关于我页面图片
-aboutImg: '/medias/about.png'
+aboutImg: '/medias/about.jpg'
 # 友情链接页面图片
-friendsImg: '/medias/friends.png'
+friendsImg: '/medias/friend.jpg'
 ```
 
 ### 更改主题颜色
@@ -393,3 +427,7 @@ blockquote样式指的是下面这个
 | img        | 无                          | 文章特征图，该文章显示的图片，没有则默认使用文章的特色图片
 | categories | 无                          | 文章分类，本主题的分类表示宏观上大的分类，只建议一篇文章一个分类 |
 | tags       | 无                          | 文章标签，一篇文章可以多个标签  
+
+## 常见问题
+代码高亮如遇到花括号变成了`&#123;&#125;`这样的字符串，在根目录下输入npm install hexo@4.2.1即可。
+

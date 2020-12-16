@@ -3,8 +3,8 @@ title: Hello World
 date: 2020-09-10 14:06
 comments: false
 swiper: true
-top: true
-img: '/medias/4.png'
+swiperImg: '/medias/2.jpg'
+img: '/medias/2.jpg'
 ---
 Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [documentation](https://hexo.io/docs/) for more info. If you get any problems when using Hexo, you can find the answer in [troubleshooting](https://hexo.io/docs/troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues).
 <!-- more -->
@@ -78,9 +78,3 @@ $ hexo deploy
 ```
 
 More info: [Deployment](https://hexo.io/docs/one-command-deployment.html)
-
-```css
-.name {
-  display: flex;
-}
-```

@@ -30,7 +30,7 @@ swiper:
   textDuration: '0.2s' # 文字动画持续时间（单位秒）
   textDelay: '0.1s' # 文字动画延迟时间（单位秒）
   # 当没有文章设置swiper: true时候，轮播图会显示以下default默认内容，可自行切换对应内容
-  defaultImg: '/medias/14.png' # 图片，没有则随机选取
+  defaultImg: '/medias/1.jpg' # 图片，没有则随机选取
   defaultTile: 'Hexo-theme-Bamboo' # 标题
   defaultDesc: '大家好，这是一个Hexo主题，希望这款主题能得到你的喜爱' #描 述
   defaultMoreLink: 'https://github.com/yuang01/hexo-theme-bamboo' # 阅读更多链接 
@@ -81,6 +81,8 @@ postNav:
 # 复制成功提示
 copy:
   on: true
+  title: '成功'
+  content: '复制成功了哦'
 
 # 文章详情页的标题是否显示在顶部图片中, false则显示在文章内容顶部
 postTitleTop:
@@ -94,6 +96,16 @@ inputEffects:
 live2d:
   on: true
   modelId: 2  # 0 or 1 or 2 or 3 or 4 or 5 or 6
+
+# 首页雪花飘落效果--冬天
+snow:
+  on: true
+  onlyPc: false # 设为true，只有pc端显示雪花特效
+
+# 首页花瓣飘落效果--春天
+sakura:
+  on: false
+  onlyPc: false # 设为true，只有pc端显示花瓣特效
 
 # 首页文章列表滚动动画，详情参照https://github.com/michalsnik
 aos:
@@ -234,7 +246,10 @@ valine:
   appid: nmal09L0arSjEFBUUCSpWzyK-gzGzoHsz
   appkey: xiiSst0NtHRg1POFFV32iqKI
   avatar: '' # 匿名者头像选项 https://valine.js.org/avatar.html
-  placeholder: '客官，说点什么吧'
+  placeholder: '客官，说点什么吧' # 评论内容输入框的 placeholder
+  master: '74c5ec8dbf377427e36067ce97c29a3f' # 博主标签识别，博主邮箱md5 可以去md5加密网站，例如 https://md5jiami.51240.com/ ，将自己的邮箱输入， 得到 32位小写 的字符串
+  friends: ['df780289f6f0e3ceccec0d07c70067d9'] # 小伙伴的 邮箱md5， 是个数组
+  requiredFields: ['nick', 'mail'] # 设置必填项 ['nick', 'mail'] nick为昵称必填， mail为邮箱必填，建议设置必填，填写qq邮箱，会使用qq头像作为头像
 
 # miniValine
 miniValine:
@@ -273,42 +288,40 @@ gitalk:
   clientSecret:  #`Github Application clientSecret`
 
 # 归档页面图片 or 'http://xxx'
-archiveImg: '/medias/archiveImg.png'
+archiveImg: '/medias/archive.jpg'
 # 标签页面图片
-tagImg: '/medias/tag.png'
+tagImg: '/medias/tag.jpg'
 # 标签详情页面图片
-tagDetailImg: '/medias/tagDetail.png'
+tagDetailImg: '/medias/tagDetail.jpg'
 # 分类页面图片
-categoriesImg: '/medias/categories.png'
+categoriesImg: '/medias/categories.jpg'
 #分类详情页面图片
-categoryDetailImg: '/medias/categoryDetail.png'
+categoryDetailImg: '/medias/categoryDetail.jpg'
 # 关于我页面图片
-aboutImg: '/medias/about.png'
+aboutImg: '/medias/about.jpg'
 # 友情链接页面图片
-friendsImg: '/medias/friends.png'
+friendsImg: '/medias/friend.jpg'
 
 # 文章图片
 imgs:
-- '/medias/1.png'
-- '/medias/2.png'
-- '/medias/3.png'
-- '/medias/4.png'
+- '/medias/1.jpg'
+- '/medias/2.jpg'
+- '/medias/3.jpg'
+- '/medias/4.jpg'
 - '/medias/5.jpg'
 - '/medias/6.jpg'
 - '/medias/7.jpg'
-- '/medias/8.png'
-- '/medias/9.png'
+- '/medias/8.jpg'
+- '/medias/9.jpg'
 - '/medias/10.jpg'
-- '/medias/11.png'
-- '/medias/12.png'
-- '/medias/13.png'
-- '/medias/14.png'
-- '/medias/15.png'
-- '/medias/16.png'
-- '/medias/17.png'
+- '/medias/11.jpg'
+- '/medias/12.jpg'
+- '/medias/13.jpg'
+- '/medias/14.jpg'
+- '/medias/15.jpg'
 
 CDN:
-  valine: https://cdn.jsdelivr.net/npm/valine@1/dist/Valine.min.js
+  valine: https://cdn.jsdelivr.net/gh/HCLonely/Valine@latest/dist/Valine.min.js
   iconfont: https://at.alicdn.com/t/font_1911880_c1nvbyezg17.css
   fontAwesome: https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css
   aplayer: https://cdn.bootcdn.net/ajax/libs/aplayer/1.10.1/APlayer.min.js

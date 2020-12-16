@@ -2,8 +2,8 @@
 title: Hello World2
 date: 2020-01-20 21:11
 swiper: true
-swiperImg: 'https://ssyerv1.oss-cn-hangzhou.aliyuncs.com/picture/052352ec5be345dbac92d9e9cbb450af.jpg!sswm'
-img: '/medias/11.png'
+swiperImg: '/medias/15.jpg'
+img: '/medias/15.jpg'
 ---
 Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [documentation](https://hexo.io/docs/) for more info. If you get any problems when using Hexo, you can find the answer in [troubleshooting](https://hexo.io/docs/troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues).
 
