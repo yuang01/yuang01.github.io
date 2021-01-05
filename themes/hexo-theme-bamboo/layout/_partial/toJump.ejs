@@ -1,0 +1,53 @@
+<link rel="stylesheet" href="<%= theme.CDN.ayuCss %>">
+<script src="<%= theme.CDN.ayuJs %>"></script>
+<div id="appJump">
+
+</div>
+
+<script>
+var vm = new Vue({
+    el: '#appJump',
+    data: {
+    },
+    computed: {
+    },
+    mounted() {
+        let sessionData = sessionStorage.getItem('data');
+        if (sessionData === null) {
+            this.WebLocation();
+        }
+        sessionStorage.setItem('data', 1); //存一个值
+    },
+    methods: {
+        WebLocation() {
+            let language = navigator.language;
+            let deploy = '<%- config.deploy.repo %>';
+            if (language == 'zh-CN') {
+                if (deploy == 'https://github.com/yuang01/yuang01.github.io.git') {
+                    this.$confirm({
+                        title: '提示',
+                        content: '建议大陆用户访问部署在国内的站点，是否跳转？',
+                        onConfirm: () => {
+                            window.location.href = 'https://yuang01.gitee.io';
+                        },
+                    })
+                }
+                console.log('中文');
+            } else {
+                console.log('其他');
+            }
+        }
+    },
+    created() {}
+})
+</script>
+<style>
+    .ayu-button.ayu-button-primary {
+        background-color: #42b983!important;
+        border-color: #42b983!important;
+    }
+    .ayu-message-box_wrapper .ayu-message-box .ayu-message-box_header .ayu-message-box_close:hover {
+        color: #42b983!important;
+    }
+</style>
+  
