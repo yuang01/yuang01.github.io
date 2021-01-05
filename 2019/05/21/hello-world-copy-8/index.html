@@ -21,13 +21,19 @@
   <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
   
     <script>
-        var themeModelId = '2';
+        var themeModelId = '';
         if (themeModelId) {
             localStorage.setItem('modelId', themeModelId);
         }
     </script>
     
     <script src="https://cdn.jsdelivr.net/gh/yuang01/live2d-widget@latest/autoload.js"></script>
+    <script>
+        var live2dOpen = eval('true') || false;
+        if (!live2dOpen) {
+            localStorage.setItem('waifu-display', 1609323474481);
+        }
+    </script>
   
   
 <link rel="stylesheet" href="/css/animate.min.css">
@@ -53,15 +59,13 @@
             }
         }
     </style>
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
 <meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="Bamboo" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<link rel="stylesheet" href="/css/prism-hopscotch.css" type="text/css"></head>
 
-  
-<script src="/js/jquery3.5.1.js"></script>
-
-  
-<script src="/js/vue2.6.11.js"></script>
-
+  <script src="/js/jquery3.5.1.js"></script>
+  <script src="/js/vue2.6.11.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/v-plugs-ayu/lib/ayu.css">
 <script src="https://cdn.jsdelivr.net/npm/v-plugs-ayu/lib/ayu.umd.min.js"></script>
 <div id="appJump">
@@ -116,6 +120,15 @@ var vm = new Vue({
 </style>
   
   <body>
+    <!-- 判断是否为黑夜模式 -->
+    <script>
+      let isDark = JSON.parse(localStorage.getItem('dark')) || JSON.parse('false');
+
+      if (isDark) {
+        $(document.body).addClass('darkModel');
+      }
+    </script>
+
     <header class="header bg-color" 
   style="position: fixed; 
   left: 0; top: 0; z-index: 10;width: 100%;"
@@ -296,14 +309,64 @@ var vm = new Vue({
         
       </ul>
       
+        <div class="dark">
+  <div class="dark-content">
+    <i class="fa fa-moon-o" aria-hidden="true"></i>
+    <!-- <span>关灯</span> -->
+  </div>
+  
+</div>
+
+<script>
+  $(function() {
+    let isDark = JSON.parse(localStorage.getItem('dark'))  || JSON.parse('false');
+    if (isDark) {
+      $(".dark-content").replaceWith(
+          `
+          <div class='dark-content'>
+            <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+          </div>
+          `
+        );
+    }
+    $('.dark').click(function() {
+      if ($(document.body).is('.darkModel')) {
+        $(document.body).removeClass('darkModel');
+        localStorage.setItem('dark', false);
+        $(".dark-content").replaceWith(
+          `
+          <div class='dark-content'>
+            <i class="fa fa-moon-o" aria-hidden="true"></i>
+          </div>
+          `
+        );
+      } else {
+        $(document.body).addClass('darkModel');
+        localStorage.setItem('dark', true);
+        $(".dark-content").replaceWith(
+          `
+          <div class='dark-content'>
+            <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+          </div>
+          `
+        );
+      }
+    })
+  })
+</script>
+        
+      
         <div id="appSearch">
   <div class="search"  @click="showDialog()"><i class="fa fa-search" aria-hidden="true"></i></div>
   <transition name="fade">
     <div class="message-box_wrapper" style="display: none;" v-cloak v-show="dialogVisible" @click.self="cancelDialogVisible()">
       <div class="message-box animated bounceInDown">
+        <div class="close" style="overflow: hidden;">
+          <i class="fa fa-close" aria-hidden="true" style="float:right;" @click.self="cancelDialogVisible()"></i>
+        </div>
         <h2>
           <i class="fa fa-search" aria-hidden="true"></i>
-          <span class="title">搜索</span>
+          <span class="title">本地搜索</span>
           <!-- <i class="fa fa-close" style="float:right;" aria-hidden="true" @click.self="cancelDialogVisible()"></i> -->
         </h2>
         <form class="site-search-form">
@@ -322,9 +385,7 @@ var vm = new Vue({
     </div>
   </transition>
 </div>
-
 <script src="/js/local_search.js"></script>
-
 <script>
   var body = document.body || document.documentElement || window;
   var vm = new Vue({
@@ -343,11 +404,11 @@ var vm = new Vue({
         this.dialogVisible = true;
         // 防止页面滚动，只能让弹框滚动
         this.top = $(document).scrollTop()
-        body.style.cssText = 'width: 100%; height: 100%; position: fixed; top: -' + this.top  + 'px; left: 0; overflow: hidden;';
+        body.style.cssText = 'overflow: hidden;';
       },
       getSearchFile() {
         if (!this.searchInput) {
-          getSearchFile();
+          getSearchFile("/search.xml");
         }
       },
       cancelDialogVisible() {
@@ -368,22 +429,55 @@ var vm = new Vue({
 </script> -->
 
       
+
     </nav>
   </div>
   
   <a href="https://github.com/yuang01/hexo-theme-bamboo" target="_blank" rel="noopener" class="github-corner color-primary" aria-label="View source on GitHub"><svg width="60" height="60" viewBox="0 0 250 250" style="fill:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+  
+    <div id="he-plugin-simple"></div>
+    <script>
+      WIDGET = {
+        CONFIG: {
+          "modules": "012",
+          "background": 5,
+          "tmpColor": "4A4A4A",
+          "tmpSize": 16,
+          "cityColor": "4A4A4A",
+          "citySize": 16,
+          "aqiSize": 16,
+          "weatherIconSize": 24,
+          "alertIconSize": 18,
+          "padding": "10px 10px 10px 10px",
+          "shadow": "1",
+          "language": "auto",
+          "borderRadius": 5,
+          "fixed": "false",
+          "vertical": "middle",
+          "horizontal": "center",
+          "key": "2784dd3fcb1e4f0f9a9b579bf69641f2"
+        }
+      }
+    </script>
+    <script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script> 
+    
 </header>
+    <div class="bg-floor" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -2;"></div>
     <main class="main" style="margin-top: 60px;">
       
 
 
-<div class="post-detail-header lazyload" data-original="/medias/9.jpg" style="background: no-repeat; background-size: cover; 
-  background-position: center center;">
+<div class="post-detail-header lazyload" id="thumbnail_canvas" data-original="/medias/9.jpg" style="background-repeat: no-repeat; background-size: cover; 
+  background-position: center center;position: relative;">
+  <div class="post-detail-header-mask"></div>
+  <canvas id="header_canvas"style="position:absolute;bottom:0"></canvas>
   
     <span class="title">Hello World8</span>
   
 </div>
-<div class="row justify-center">
+
+<script src="/js/bubble/bubble.js"></script>
+<div class="row justify-position">
   <div class="main-content">
     <article class="post post-detail">
       
@@ -430,21 +524,43 @@ var vm = new Vue({
     </article>
     <!-- 上一篇文章和下一篇文章 -->
     
-      <div class="post-nav">
+      
+<div class="post-nav">
 
+
+
+  
   <div class="post-nav-prev post-nav-item">
-    <a href="/2019/08/05/hello-world-copy-5/">
-      上一篇:    Hello World5
+    <div class="post-nav-img lazyload" data-original="/medias/12.jpg" style="background-size: cover; 
+      background-position: center center;">
+    </div>
+    <a href="/2019/08/05/hello-world-copy-5/" class="post-nav-link">
+      <div class="title">
+        <i class="fa fa-angle-left"></i> 上一篇:
+        <div>Hello World5</div>
+      </div>
+      
+      <!-- <div class="content">
+        Welcome to Hexo! This is your very first post. Check documen
+      </div> -->
     </a>
   </div>
 
 
 
+  
   <div class="post-nav-next post-nav-item">
-    <a href="/2019/01/20/hello-world-copy/">
-      <span>
-        下一篇:    vue.js实现左侧导航栏和tab切换页面效果 
-      </span>
+    <div class="post-nav-img lazyload" data-original="/medias/3.jpg" style="background-size: cover; 
+      background-position: center center;">
+    </div>
+    <a href="/2019/01/20/hello-world-copy/" class="post-nav-link">
+      <div class="title">
+        下一篇: <i class="fa fa-angle-right"></i>
+        <div>vue.js实现左侧导航栏和tab切换页面效果</div>
+      </div>
+      <!-- <div class="content">
+        基于remark UI的样式，使用vue.js编写了左侧导航栏（侧边栏）和tab切换页面功能。基于remark UI的样
+      </div> -->
     </a>
   </div>
 
@@ -522,7 +638,8 @@ var vm = new Vue({
         //   };
         // }
         this.top = $(document).scrollTop() // or getScroll().top
-        body.style.cssText = 'width: 100%; height: 100%; position: fixed; top: -' + this.top + 'px; left: 0; overflow: hidden;';
+        // console.log('aa', $('.main-content'));
+        body.style.cssText = 'overflow: hidden;';
       },
       cancelDialogDrawer() {
         this.visible = false;
@@ -544,10 +661,7 @@ var vm = new Vue({
 
 <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
 
-
-
 <script src="/js/shareJs/social-share.min.js"></script>
-
 </script>
 
 <style>
@@ -563,10 +677,10 @@ var vm = new Vue({
       
         <div id="myComment">
           
-            <section id="comments" style="padding: 1em; background: rgba(255, 255, 255, 0.9); margin: 15px auto;"
-	data-aos="fade-up">
+            <section id="comments" style="padding: 1em; margin: 15px auto;"
+	class="animated bounceInUp">
 	<div id="vcomment" class="comment"></div>
-	<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+	<script src="/js/valine/av-min@3.0.4.js"></script>
 	<script src="https://cdn.jsdelivr.net/gh/HCLonely/Valine@latest/dist/Valine.min.js"></script>
 	<script>
 
@@ -1265,8 +1379,11 @@ var vm = new Vue({
 	</script>
 </section>
 <style>
+	#comments {
+		background: rgba(255,255,255,0.9);
+	}
 	#veditor {
-		background-image: url('https://cdn.jsdelivr.net/gh/drew233/cdn/20200409110727.webp');
+		background-image: url('/medias/comment-bg.gif');
 		background-size: contain;
 		background-repeat: no-repeat;
 		background-position: right;
@@ -1361,7 +1478,8 @@ var vm = new Vue({
     <div class="toc-aside">
       <div class="toc-main">
         <div class="toc-aside-title">
-          <i class="fa fa-list-ul" aria-hidden="true"></i><span>目录</span>
+          <i class="fa fa-list-ul" aria-hidden="true"></i><span>本文目录</span>
+          <div class="toc-open-close">本文目录</div>
         </div>
         <div class="toc-content">
           <link href="/js/tocbot/tocbot.css" rel="stylesheet">
@@ -1415,11 +1533,51 @@ var vm = new Vue({
   position:fixed !important;
   top: 64px;
 }
-
+.toc-main ul {
+  counter-reset: show-list;
+}
+.toc-main ul li::before {
+  content: counter(item)".";
+  display: block;
+  position: absolute;
+  left: 12px;
+  top:0;
+}
+.toc > .toc-list {
+  padding-left: 35px;
+}
+.toc>.toc-list li {
+  list-style: decimal;
+}
+.toc-list {
+  padding-left: 25px;
+}
 </style>
         </div>
       </div>
     </div>
+
+    
+
+    <script>
+      let openOrCloseBtn = $('.toc-aside .toc-aside-title .toc-open-close');
+      let open = eval('' || 'true');
+      openOrCloseBtn.click(function() {
+        if (open === true) {
+          $(".toc-aside").css({'width': 0, 'padding': 0});
+          $(".toc-content").css({'width': 0});
+          $(".toc-aside-title span, .toc-aside-title i").css({'display': 'none'});
+          $(".main-content").css({'width': '75%', 'margin': '10px auto'});
+          open = false;
+        } else {
+          $(".toc-aside").css({'width': '300px', 'padding': '0 10px'});
+          $(".toc-content").css({'width': '300px'});
+          $(".toc-aside-title span, .toc-aside-title i").css({'display': 'inline-block'});
+          $(".main-content").css({'width': '65%', 'margin-right': '10px', 'margin-left': 'calc(35% - 350px)'});
+          open = true;
+        }
+      });
+    </script>
   
 </div>
 
@@ -1464,16 +1622,14 @@ var vm = new Vue({
 
 
     
-      <div class="goTop bg-color">
+      <div class="goTop top-btn-color border-color">
   <i class="fa fa-arrow-up" aria-hidden="true"></i>
 </div>
-
 <script src="/js/goTop.js"></script>
-
     
 
     
-      <link href="https://cdn.bootcdn.net/ajax/libs/aplayer/1.10.1/APlayer.min.css" rel="stylesheet">
+      <link rel="stylesheet" href="/js/aplayer/APlayer@1.10.1.min.css">
 <style>
 .aplayer .aplayer-lrc p {
   
@@ -1532,17 +1688,17 @@ var vm = new Vue({
 
     <!-- 图片放大 -->
     
-      
-<script src="/js/fancybox/jquery.fancybox.min.js"></script>
-<script src="/js/wrapImage.js"></script>
-
+      <script src="/js/fancybox/jquery.fancybox.min.js"></script>
+      <script src="/js/wrapImage.js"></script>
     
 
     <!-- 爱心点击 -->
     
       
-<script src="/js/clicklove.js"></script>
-
+        <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 999; pointer-events: none;" ></canvas>
+        <script src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script>
+        <script src="/js/cursor/explosion.min.js"></script>
+      
     
 
     <!-- Baidu Analytics -->
@@ -1566,17 +1722,15 @@ var vm = new Vue({
     
     <script type="text/javascript" size="100" alpha='0.4' zIndex="-1" src="/js/ribbon.min.js"></script>
     
-      
-<script src="/js/aos/aos.js"></script>
-
+      <script src="/js/aos/aos.js"></script>
       <script>
         // https://github.com/michalsnik/aos
         const themeOffset = parseInt('120') || 120;
         const themeDelay = parseInt('0')|| 0;
         const themeDuration = parseInt('400') || 400;
         const themeEasing = 'ease' || 'ease';
-        const themeOnce = JSON.parse('true' || true);
-        const themeMirror = JSON.parse('false' || false);
+        const themeOnce = eval('true') || false;
+        const themeMirror = eval('false') || false;
         const themeAnchorPlacement = 'top-bottom' || 'top-bottom';
         AOS.init({
           // Global settings:
@@ -1649,9 +1803,7 @@ var vm = new Vue({
 
     <!-- 输入框打字特效 -->
     
-      
-<script src="/js/activate-power-mode.js"></script>
-
+      <script src="/js/activate-power-mode.js"></script>
       <script>
           POWERMODE.colorful = true;  // 打开随机颜色特效
           POWERMODE.shake = false;    // 关闭输入框抖动
@@ -1660,19 +1812,18 @@ var vm = new Vue({
     
 
     <!-- markdown代码一键复制功能 -->
-    
-<script src="/js/clipboard/clipboard.min.js"></script>
-
+    <script src="/js/clipboard/clipboard.min.js"></script>
     <script>
       !function (e, t, a) {
         var copy = '复制';
         /* code */
         var initCopyCode = function(){
           var copyHtml = '';
-          copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
-          copyHtml += '<i class="fa fa-globe"></i><span>' + copy + '</span>';
+          copyHtml += '<button class="btn-copy" data-clipboard-snippet="" style="position:absolute;top:0;right:0;z-index:1;">';
+          copyHtml += '<i class="fa fa-copy"></i><span>' + copy + '</span>';
           copyHtml += '</button>';
-          $(".post-detail pre code").before(copyHtml);
+          $(".post-detail pre").wrap("<div class='codeBox' style='position:relative;width:100%;'></div>")
+          $(".post-detail pre").before(copyHtml);
           new ClipboardJS('.btn-copy', {
               target: function(trigger) {
                   return trigger.nextElementSibling;
@@ -1682,10 +1833,7 @@ var vm = new Vue({
         initCopyCode();
       }(window, document);
     </script>
-
-    
-<script src="/js/lazyload/lazyload@1.9.1.js"></script>
-
+    <script src="/js/lazyload/lazyload@1.9.1.js"></script>
     <script>
       $(function() {
         $("div.lazyload, img.lazyload, a.lazyload").lazyload(

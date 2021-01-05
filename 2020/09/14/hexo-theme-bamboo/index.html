@@ -10,7 +10,7 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-  <title>Hexo主题--Bamboo介绍 | Bamboo</title>
+  <title>Hexo主题--Bamboo介绍(1.2.1) | Bamboo</title>
   
     
 <link rel="stylesheet" href="/js/aos/aos.css">
@@ -21,13 +21,19 @@
   <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
   
     <script>
-        var themeModelId = '2';
+        var themeModelId = '';
         if (themeModelId) {
             localStorage.setItem('modelId', themeModelId);
         }
     </script>
     
     <script src="https://cdn.jsdelivr.net/gh/yuang01/live2d-widget@latest/autoload.js"></script>
+    <script>
+        var live2dOpen = eval('true') || false;
+        if (!live2dOpen) {
+            localStorage.setItem('waifu-display', 1609323474481);
+        }
+    </script>
   
   
 <link rel="stylesheet" href="/css/animate.min.css">
@@ -53,15 +59,13 @@
             }
         }
     </style>
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
 <meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="Bamboo" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<link rel="stylesheet" href="/css/prism-hopscotch.css" type="text/css"></head>
 
-  
-<script src="/js/jquery3.5.1.js"></script>
-
-  
-<script src="/js/vue2.6.11.js"></script>
-
+  <script src="/js/jquery3.5.1.js"></script>
+  <script src="/js/vue2.6.11.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/v-plugs-ayu/lib/ayu.css">
 <script src="https://cdn.jsdelivr.net/npm/v-plugs-ayu/lib/ayu.umd.min.js"></script>
 <div id="appJump">
@@ -116,6 +120,15 @@ var vm = new Vue({
 </style>
   
   <body>
+    <!-- 判断是否为黑夜模式 -->
+    <script>
+      let isDark = JSON.parse(localStorage.getItem('dark')) || JSON.parse('false');
+
+      if (isDark) {
+        $(document.body).addClass('darkModel');
+      }
+    </script>
+
     <header class="header bg-color" 
   style="position: fixed; 
   left: 0; top: 0; z-index: 10;width: 100%;"
@@ -296,14 +309,64 @@ var vm = new Vue({
         
       </ul>
       
+        <div class="dark">
+  <div class="dark-content">
+    <i class="fa fa-moon-o" aria-hidden="true"></i>
+    <!-- <span>关灯</span> -->
+  </div>
+  
+</div>
+
+<script>
+  $(function() {
+    let isDark = JSON.parse(localStorage.getItem('dark'))  || JSON.parse('false');
+    if (isDark) {
+      $(".dark-content").replaceWith(
+          `
+          <div class='dark-content'>
+            <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+          </div>
+          `
+        );
+    }
+    $('.dark').click(function() {
+      if ($(document.body).is('.darkModel')) {
+        $(document.body).removeClass('darkModel');
+        localStorage.setItem('dark', false);
+        $(".dark-content").replaceWith(
+          `
+          <div class='dark-content'>
+            <i class="fa fa-moon-o" aria-hidden="true"></i>
+          </div>
+          `
+        );
+      } else {
+        $(document.body).addClass('darkModel');
+        localStorage.setItem('dark', true);
+        $(".dark-content").replaceWith(
+          `
+          <div class='dark-content'>
+            <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+          </div>
+          `
+        );
+      }
+    })
+  })
+</script>
+        
+      
         <div id="appSearch">
   <div class="search"  @click="showDialog()"><i class="fa fa-search" aria-hidden="true"></i></div>
   <transition name="fade">
     <div class="message-box_wrapper" style="display: none;" v-cloak v-show="dialogVisible" @click.self="cancelDialogVisible()">
       <div class="message-box animated bounceInDown">
+        <div class="close" style="overflow: hidden;">
+          <i class="fa fa-close" aria-hidden="true" style="float:right;" @click.self="cancelDialogVisible()"></i>
+        </div>
         <h2>
           <i class="fa fa-search" aria-hidden="true"></i>
-          <span class="title">搜索</span>
+          <span class="title">本地搜索</span>
           <!-- <i class="fa fa-close" style="float:right;" aria-hidden="true" @click.self="cancelDialogVisible()"></i> -->
         </h2>
         <form class="site-search-form">
@@ -322,9 +385,7 @@ var vm = new Vue({
     </div>
   </transition>
 </div>
-
 <script src="/js/local_search.js"></script>
-
 <script>
   var body = document.body || document.documentElement || window;
   var vm = new Vue({
@@ -343,11 +404,11 @@ var vm = new Vue({
         this.dialogVisible = true;
         // 防止页面滚动，只能让弹框滚动
         this.top = $(document).scrollTop()
-        body.style.cssText = 'width: 100%; height: 100%; position: fixed; top: -' + this.top  + 'px; left: 0; overflow: hidden;';
+        body.style.cssText = 'overflow: hidden;';
       },
       getSearchFile() {
         if (!this.searchInput) {
-          getSearchFile();
+          getSearchFile("/search.xml");
         }
       },
       cancelDialogVisible() {
@@ -368,22 +429,55 @@ var vm = new Vue({
 </script> -->
 
       
+
     </nav>
   </div>
   
   <a href="https://github.com/yuang01/hexo-theme-bamboo" target="_blank" rel="noopener" class="github-corner color-primary" aria-label="View source on GitHub"><svg width="60" height="60" viewBox="0 0 250 250" style="fill:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+  
+    <div id="he-plugin-simple"></div>
+    <script>
+      WIDGET = {
+        CONFIG: {
+          "modules": "012",
+          "background": 5,
+          "tmpColor": "4A4A4A",
+          "tmpSize": 16,
+          "cityColor": "4A4A4A",
+          "citySize": 16,
+          "aqiSize": 16,
+          "weatherIconSize": 24,
+          "alertIconSize": 18,
+          "padding": "10px 10px 10px 10px",
+          "shadow": "1",
+          "language": "auto",
+          "borderRadius": 5,
+          "fixed": "false",
+          "vertical": "middle",
+          "horizontal": "center",
+          "key": "2784dd3fcb1e4f0f9a9b579bf69641f2"
+        }
+      }
+    </script>
+    <script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script> 
+    
 </header>
+    <div class="bg-floor" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -2;"></div>
     <main class="main" style="margin-top: 60px;">
       
 
 
-<div class="post-detail-header lazyload" data-original="/medias/1.jpg" style="background: no-repeat; background-size: cover; 
-  background-position: center center;">
+<div class="post-detail-header lazyload" id="thumbnail_canvas" data-original="/medias/1.jpg" style="background-repeat: no-repeat; background-size: cover; 
+  background-position: center center;position: relative;">
+  <div class="post-detail-header-mask"></div>
+  <canvas id="header_canvas"style="position:absolute;bottom:0"></canvas>
   
-    <span class="title">Hexo主题--Bamboo介绍</span>
+    <span class="title">Hexo主题--Bamboo介绍(1.2.1)</span>
   
 </div>
-<div class="row justify-center">
+
+<script src="/js/bubble/bubble.js"></script>
+<div class="row justify-position">
   <div class="main-content">
     <article class="post post-detail">
       
@@ -467,6 +561,13 @@ var vm = new Vue({
 <span class="token punctuation">---</span></code></pre>
 <h3 id="新建关于我-about-页"><a href="#新建关于我-about-页" class="headerlink" title="新建关于我 about 页"></a>新建关于我 about 页</h3><p><code>about</code> 页是用来展示<strong>关于我和我的博客</strong>信息的页面，如果在你的博客 <code>source</code> 目录下还没有 <code>about/index.md</code> 文件，那么你就需要新建一个，命令如下：</p>
 <pre class=" language-bash"><code class="language-bash">hexo new page <span class="token string">"about"</span></code></pre>
+<p>编辑你刚刚新建的页面文件 <code>/source/about/index.md</code>，至少需要以下内容：</p>
+<pre class=" language-yaml"><code class="language-yaml"><span class="token punctuation">---</span>
+<span class="token key atrule">title</span><span class="token punctuation">:</span> about
+<span class="token key atrule">date</span><span class="token punctuation">:</span> <span class="token datetime number">2020-09-14 15:30:30 </span><span class="token comment" spellcheck="true"># 时间随便写</span>
+<span class="token key atrule">type</span><span class="token punctuation">:</span> <span class="token string">"about"</span>
+<span class="token key atrule">layout</span><span class="token punctuation">:</span> <span class="token string">"about"</span>
+<span class="token punctuation">---</span></code></pre>
 <p>然后可以在本主题下的<code>_config.yml</code>文件下，编辑以下字段进行关于我页面信息的更改</p>
 <pre class=" language-yaml"><code class="language-yaml">baseInfo <span class="token comment" spellcheck="true"># 基本信息，包括年龄，性别，坐标，状态</span>
 skills   <span class="token comment" spellcheck="true"># 技能</span>
@@ -597,7 +698,11 @@ books   <span class="token comment" spellcheck="true">#书籍</span></code></pre
 </blockquote>
 <h3 id="修改打赏的二维码图片"><a href="#修改打赏的二维码图片" class="headerlink" title="修改打赏的二维码图片"></a>修改打赏的二维码图片</h3><p>设置主题文件夹下的<code>_config.yml</code>文件中的<code>donate</code>属性为true，然后更改<code>Alipay</code>和<code>WeChatpay</code>图片路径即可</p>
 <h3 id="文章详情页分享功能"><a href="#文章详情页分享功能" class="headerlink" title="文章详情页分享功能"></a>文章详情页分享功能</h3><p>设置主题文件夹下的<code>_config.yml</code>文件中的<code>sharejs</code>属性true或者false即可</p>
-<h3 id="点击出现爱心效果"><a href="#点击出现爱心效果" class="headerlink" title="点击出现爱心效果"></a>点击出现爱心效果</h3><p>设置主题文件夹下的<code>_config.yml</code>文件中的<code>clicklove</code>属性true或者false即可</p>
+<h3 id="鼠标点击出现爱心，爆炸等效果"><a href="#鼠标点击出现爱心，爆炸等效果" class="headerlink" title="鼠标点击出现爱心，爆炸等效果"></a>鼠标点击出现爱心，爆炸等效果</h3><p>设置主题文件夹下的<code>_config.yml</code>文件中的<code>cursor_effect</code>属性true或者false，通过<code>type</code>属性选择效果类别，例如:</p>
+<pre class=" language-yaml"><code class="language-yaml"><span class="token comment" spellcheck="true"># 鼠标点击特效</span>
+<span class="token key atrule">cursor_effect</span><span class="token punctuation">:</span>
+  <span class="token key atrule">on</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">type</span><span class="token punctuation">:</span> explosion  <span class="token comment" spellcheck="true"># fireworks: 礼花 | explosion: 爆炸 | love: 浮出爱心 | text: 浮出文字</span></code></pre>
 <h3 id="复制成功提醒"><a href="#复制成功提醒" class="headerlink" title="复制成功提醒"></a>复制成功提醒</h3><p>当复制内容时候，是否显示复制成功提示<br>设置主题文件夹下的<code>_config.yml</code>文件中的<code>copy</code>属性true或者false即可</p>
 <pre class=" language-yaml"><code class="language-yaml"><span class="token comment" spellcheck="true"># 复制成功提示</span>
 <span class="token key atrule">copy</span><span class="token punctuation">:</span>
@@ -617,9 +722,28 @@ books   <span class="token comment" spellcheck="true">#书籍</span></code></pre
 <h3 id="文章详情页的标题显示位置"><a href="#文章详情页的标题显示位置" class="headerlink" title="文章详情页的标题显示位置"></a>文章详情页的标题显示位置</h3><p>设置主题文件夹下的<code>_config.yml</code>文件中的<code>postTitleTop</code>属性true或者false即可，true的时候，显示在上方的图片中，false显示在文章内容上面</p>
 <h3 id="输入框打字特效"><a href="#输入框打字特效" class="headerlink" title="输入框打字特效"></a>输入框打字特效</h3><p>搜索弹框中的输入框打字特效，设置主题文件夹下的<code>_config.yml</code>文件中的<code>inputEffects</code>属性为true或者false即可。</p>
 <h3 id="live-2d人物"><a href="#live-2d人物" class="headerlink" title="live-2d人物"></a>live-2d人物</h3><p>设置主题文件夹下的<code>_config.yml</code>文件中的<code>live2d</code>属性为true或者false，可以通过<code>modelId</code>属性选择模型，注意，live-2d人物只有在屏幕宽度最小为992px的时候才显示</p>
-<pre class=" language-yaml"><code class="language-yaml"><span class="token key atrule">modelId</span><span class="token punctuation">:</span> <span class="token number">2  </span><span class="token comment" spellcheck="true"># 0 or 1 or 2 or 3 or 4 or 5 or 6</span></code></pre>
+<pre class=" language-yaml"><code class="language-yaml"><span class="token comment" spellcheck="true"># live-2d(左下角动画人物)</span>
+<span class="token key atrule">live2d</span><span class="token punctuation">:</span>
+  <span class="token key atrule">on</span><span class="token punctuation">:</span> <span class="token boolean important">true </span><span class="token comment" spellcheck="true"># 控制显示或者隐藏</span>
+  <span class="token key atrule">modelId</span><span class="token punctuation">:</span>  <span class="token comment" spellcheck="true"># 0 or 1 or 2 or 3 or 4 or 5 or 6 #人物模型</span>
+  <span class="token key atrule">open</span><span class="token punctuation">:</span> <span class="token boolean important">true </span><span class="token comment" spellcheck="true"># 默认展开，false则收缩，通过点左下角的方块点击，控制展开或者收缩</span></code></pre>
 <h3 id="滚动动画"><a href="#滚动动画" class="headerlink" title="滚动动画"></a>滚动动画</h3><p>设置主题文件夹下的<code>_config.yml</code>文件中的<code>aos</code>属性对首页中的文章列表动画进行控制，具体参考官网<a href="https://github.com/michalsnik/aos#animations" target="_blank" rel="noopener">aos.js</a></p>
-<h3 id="文章详情页目录"><a href="#文章详情页目录" class="headerlink" title="文章详情页目录"></a>文章详情页目录</h3><p>设置主题文件夹下的<code>_config.yml</code>文件中的<code>toc</code>属性，控制其显示隐藏</p>
+<h3 id="文章详情页目录"><a href="#文章详情页目录" class="headerlink" title="文章详情页目录"></a>文章详情页目录</h3><p>设置主题文件夹下的<code>_config.yml</code>文件中的<code>toc</code>的<code>on</code>属性，控制所有文章是否显示，还可以在在单个文章md页面里通过<code>toc</code>属性控制该文章的目录是否显示。<br><code>toc</code>下的<code>open</code>参数控制所有的文章默认是否展开或者收缩，还可以在单个文章md页面里通过<code>tocOpen</code>参数控制该文章(具体某个文章)的目录默认是否展开收缩,参数如下:</p>
+<pre class=" language-yaml"><code class="language-yaml"><span class="token comment" spellcheck="true"># 主题文件夹下的`_config.yml`文件中的`toc`属性</span>
+<span class="token comment" spellcheck="true"># 文章目录</span>
+<span class="token key atrule">toc</span><span class="token punctuation">:</span>
+  <span class="token key atrule">on</span><span class="token punctuation">:</span> <span class="token boolean important">true </span><span class="token comment" spellcheck="true"># 所有文章目录是否显示</span>
+  <span class="token key atrule">heading</span><span class="token punctuation">:</span> h2<span class="token punctuation">,</span> h3<span class="token punctuation">,</span> h4
+  <span class="token key atrule">open</span><span class="token punctuation">:</span> <span class="token boolean important">true </span><span class="token comment" spellcheck="true"># 所有文章目录是否展开，false则收缩</span></code></pre>
+<pre class=" language-yaml"><code class="language-yaml"><span class="token comment" spellcheck="true"># 单个文章里控制显示和隐藏，展开和收缩</span>
+<span class="token punctuation">---</span>
+<span class="token key atrule">title</span><span class="token punctuation">:</span> 我是文章标题
+<span class="token key atrule">tags</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">'vue'</span><span class="token punctuation">,</span> <span class="token string">'html'</span><span class="token punctuation">]</span>
+<span class="token key atrule">categories</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">'前端'</span><span class="token punctuation">,</span> <span class="token string">'运维'</span><span class="token punctuation">,</span> <span class="token string">'攻城狮'</span><span class="token punctuation">]</span>
+<span class="token key atrule">toc</span><span class="token punctuation">:</span> <span class="token boolean important">false </span><span class="token comment" spellcheck="true"># 该文章目录不显示</span>
+<span class="token key atrule">tocOpen</span><span class="token punctuation">:</span> <span class="token boolean important">false </span><span class="token comment" spellcheck="true"># 该文章目录收缩</span>
+<span class="token punctuation">---</span>
+我是文章内容</code></pre>
 <h3 id="音乐"><a href="#音乐" class="headerlink" title="音乐"></a>音乐</h3><p>设置主题文件夹下的<code>_config.yml</code>文件中的<code>music</code>属性，控制其显示隐藏和其他一些调整, <code>music</code>中的<code>fixed</code>属性建议使用<code>true</code></p>
 <pre class=" language-yaml"><code class="language-yaml"><span class="token key atrule">music</span><span class="token punctuation">:</span>
   <span class="token key atrule">on</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
@@ -653,7 +777,24 @@ books   <span class="token comment" spellcheck="true">#书籍</span></code></pre
   <span class="token key atrule">placeholder</span><span class="token punctuation">:</span> <span class="token string">'客官，说点什么吧'</span> <span class="token comment" spellcheck="true"># 评论内容输入框的 placeholder</span>
   <span class="token key atrule">master</span><span class="token punctuation">:</span> <span class="token string">'xxxxxx'</span> <span class="token comment" spellcheck="true"># 博主标签识别，博主邮箱md5 可以去md5加密网站，例如 https://md5jiami.51240.com/ ，将自己的邮箱输入， 得到 32位小写 的字符串填入这里</span>
   <span class="token key atrule">friends</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">'xxxxxxx'</span><span class="token punctuation">,</span> <span class="token string">'xxxxxx'</span><span class="token punctuation">]</span> <span class="token comment" spellcheck="true"># 小伙伴的 邮箱md5， 是个数组</span>
-  <span class="token key atrule">requiredFields</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">'nick'</span><span class="token punctuation">,</span> <span class="token string">'mail'</span><span class="token punctuation">]</span> <span class="token comment" spellcheck="true"># 设置必填项 ['nick', 'mail'] nick为昵称必填， mail为邮箱必填, 空数组，则不校验</span></code></pre>
+  <span class="token key atrule">requiredFields</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">'nick'</span><span class="token punctuation">,</span> <span class="token string">'mail'</span><span class="token punctuation">]</span> <span class="token comment" spellcheck="true"># 设置必填项 ['nick', 'mail'] nick为昵称必填， mail为邮箱必填, 空数组，则不校验</span>
+  <span class="token key atrule">backgroundImg</span><span class="token punctuation">:</span> <span class="token string">'/medias/comment-bg.gif'</span> <span class="token comment" spellcheck="true"># 右下角背景图片, or http://xxx.gif</span>
+  <span class="token key atrule">backgroundColor</span><span class="token punctuation">:</span> <span class="token string">'rgba(255,255,255,0.9)'</span> <span class="token comment" spellcheck="true"># 背景颜色, 0.9标是透明度</span></code></pre>
+<h3 id="鼠标手势"><a href="#鼠标手势" class="headerlink" title="鼠标手势"></a>鼠标手势</h3><p>设置主题文件夹下的<code>_config.yml</code>文件中的<code>cursor</code>属性，可自行替换链接，参数如下:</p>
+<pre class=" language-yaml"><code class="language-yaml"><span class="token comment" spellcheck="true"># 鼠标手势</span>
+<span class="token key atrule">cursor</span><span class="token punctuation">:</span>
+  <span class="token key atrule">pointer</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//cdn.jsdelivr.net/gh/inkss/common@master/cursor/pointer.png
+  <span class="token key atrule">default</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//cdn.jsdelivr.net/gh/inkss/common@master/cursor/left_ptr.png
+  <span class="token key atrule">text</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//cdn.jsdelivr.net/gh/inkss/common@master/cursor/text.png</code></pre>
+<h3 id="天气"><a href="#天气" class="headerlink" title="天气"></a>天气</h3><p>设置主题文件夹_config.yml的<code>weather</code>属性true或者false，控制显示和隐藏</p>
+<h3 id="背景图预加载图片"><a href="#背景图预加载图片" class="headerlink" title="背景图预加载图片"></a>背景图预加载图片</h3><p>设置主题文件夹下的<code>_config.yml</code>文件中的<code>loadingImg</code>属性，可自行修改预加载图片链接</p>
+<pre class=" language-yaml"><code class="language-yaml"><span class="token comment" spellcheck="true"># loading图片地址，为空则不使用loading图片</span>
+<span class="token key atrule">loadingImg</span><span class="token punctuation">:</span> <span class="token string">'http://images.bokee.com/artpic_upload/2/0/6/2067714892/3191445171775.gif'</span></code></pre>
+<h3 id="关灯"><a href="#关灯" class="headerlink" title="关灯"></a>关灯</h3><p>设置主题文件夹下的<code>_config.yml</code>文件中的<code>dark</code>属性，控制头部导航的开关灯按钮是否显示，控制是否默认显示关灯, 具体如下</p>
+<pre class=" language-yaml"><code class="language-yaml"><span class="token comment" spellcheck="true"># 黑夜模式, 关灯</span>
+<span class="token key atrule">dark</span><span class="token punctuation">:</span>
+  <span class="token key atrule">on</span><span class="token punctuation">:</span> <span class="token boolean important">true </span><span class="token comment" spellcheck="true"># 是否在头部导航上显示开关灯</span>
+  <span class="token key atrule">default</span><span class="token punctuation">:</span> <span class="token boolean important">false  </span><span class="token comment" spellcheck="true"># true为默认关灯状态（刷新页面和跳转页面都是关灯状态），false为默认开灯状态(网页第一次打开的时候为开灯状态)</span></code></pre>
 <h3 id="归档、标签、分类、关于我、友情链接页面图片自定义"><a href="#归档、标签、分类、关于我、友情链接页面图片自定义" class="headerlink" title="归档、标签、分类、关于我、友情链接页面图片自定义"></a>归档、标签、分类、关于我、友情链接页面图片自定义</h3><p>通过主题文件夹下的<code>_config.yml</code>文件中的相应属性进行设置，属性如下：</p>
 <pre class=" language-yaml"><code class="language-yaml"><span class="token comment" spellcheck="true"># 归档页面图片 or 'http://xxx'</span>
 <span class="token key atrule">archiveImg</span><span class="token punctuation">:</span> <span class="token string">'/medias/archive.jpg'</span>
@@ -669,9 +810,48 @@ books   <span class="token comment" spellcheck="true">#书籍</span></code></pre
 <span class="token key atrule">aboutImg</span><span class="token punctuation">:</span> <span class="token string">'/medias/about.jpg'</span>
 <span class="token comment" spellcheck="true"># 友情链接页面图片</span>
 <span class="token key atrule">friendsImg</span><span class="token punctuation">:</span> <span class="token string">'/medias/friend.jpg'</span></code></pre>
-<h3 id="更改主题颜色"><a href="#更改主题颜色" class="headerlink" title="更改主题颜色"></a>更改主题颜色</h3><p>默认主题颜色是绿色<code>#42b983</code>，可以通过更改主题文件夹<code>hexo-theme-bamboo</code>下的文件：<code>source/css/_defines/color.styl</code>, 更改颜色变量<code>$color-default</code>为你想要的值即可。</p>
-<pre class=" language-css"><code class="language-css">$color-default = <span class="token hexcode">#42b983</span><span class="token punctuation">;</span> // 更改这个值为你想要的颜色即可</code></pre>
-<p>例如，我将该变量设置为<code>skyblue</code>，显示效果如下<br><img src="https://img13.360buyimg.com/ddimg/jfs/t1/120336/2/13322/273081/5f69b8d1E737e6277/8fdc796d2d3a82b3.png" alt="theme-color"></p>
+<h3 id="更改主题颜色"><a href="#更改主题颜色" class="headerlink" title="更改主题颜色"></a>更改主题颜色</h3><p>默认主题颜色是绿色<code>#42b983</code>，可以通过设置主题文件夹下的<code>_config.yml</code>文件中的<code>color_scheme</code>属性，进行配置，参数如下:</p>
+<pre class=" language-yaml"><code class="language-yaml"><span class="token comment" spellcheck="true"># 主题颜色</span>
+<span class="token key atrule">color_scheme</span><span class="token punctuation">:</span>
+  <span class="token comment" spellcheck="true"># ------------</span>
+  <span class="token comment" spellcheck="true"># 通用颜色</span>
+  <span class="token key atrule">common</span><span class="token punctuation">:</span>
+    <span class="token comment" spellcheck="true"># 主题色</span>
+    <span class="token key atrule">theme</span><span class="token punctuation">:</span> '<span class="token comment" spellcheck="true">#42b983'</span>
+    <span class="token comment" spellcheck="true"># 主题色块内部的文字颜色</span>
+    <span class="token key atrule">inner</span><span class="token punctuation">:</span> '<span class="token comment" spellcheck="true">#fff'</span>
+    <span class="token comment" spellcheck="true"># 链接色 a标签</span>
+    <span class="token key atrule">link</span><span class="token punctuation">:</span> '<span class="token comment" spellcheck="true">#42b983'</span>
+    <span class="token comment" spellcheck="true"># border颜色，目前轮播图的 阅读更多按钮 和 回到顶部按钮 有用到该border，可自行配置该颜色</span>
+    <span class="token key atrule">border</span><span class="token punctuation">:</span> '2px solid <span class="token comment" spellcheck="true">#42b983'</span>
+    <span class="token comment" spellcheck="true"># 选中区域文字的背景颜色, 后面的小数代表透明度</span>
+    <span class="token key atrule">selection</span><span class="token punctuation">:</span> 'alpha(<span class="token comment" spellcheck="true">#42b983, 0.8)'</span>
+    <span class="token comment" spellcheck="true"># 顶部页面加载进度条颜色</span>
+    <span class="token key atrule">pace</span><span class="token punctuation">:</span> '<span class="token comment" spellcheck="true">#f6a427'</span>
+    <span class="token comment" spellcheck="true"># 滚动条颜色, 空字符串则滚动条使用 主题色，否则强制使用该颜色</span>
+    <span class="token key atrule">scroll</span><span class="token punctuation">:</span> '<span class="token comment" spellcheck="true">#42b983'</span>
+    <span class="token comment" spellcheck="true"># 整个页面的底部背景颜色，默认透明，可以是白色等颜色, 也可以是图片，例如  url("https://ssyerv1.oss-cn-hangzhou.aliyuncs.com/picture/2fcff852cfa14b1ba79924404dc65d7a.png!sswm");</span>
+    <span class="token key atrule">bgFloor</span><span class="token punctuation">:</span> <span class="token string">'transparent'</span> <span class="token comment" spellcheck="true"># 如果是图片地址，url里面请用双引号</span>
+  <span class="token comment" spellcheck="true"># 文章详情页 颜色属性</span>
+  <span class="token key atrule">post</span><span class="token punctuation">:</span>
+    <span class="token comment" spellcheck="true"># 文章详情页面-->标题在图片上时候的颜色</span>
+    <span class="token key atrule">headerTitle</span><span class="token punctuation">:</span> '<span class="token comment" spellcheck="true">#fff'</span>
+    <span class="token comment" spellcheck="true"># 文章详情页面-->标题在图片上时候字体粗细</span>
+    <span class="token key atrule">headerTitleFontWeight</span><span class="token punctuation">:</span> <span class="token string">'normal'</span> <span class="token comment" spellcheck="true"># 100-900 or bold, normal, bolder, lighter</span>
+    <span class="token comment" spellcheck="true">#文章详情页面--> copy按钮背景色, 空字符串则copy按钮背景为 主题颜色，否则强制使用该颜色</span>
+    <span class="token key atrule">copyBackground</span><span class="token punctuation">:</span> <span class="token string">''</span>
+    <span class="token comment" spellcheck="true">#文章详情页面--> copy按钮文字颜色, 空字符串则copy按钮字体颜色为 主题色块内部的文字颜色，否则强制使用该颜色</span>
+    <span class="token key atrule">copyColor</span><span class="token punctuation">:</span> <span class="token string">''</span>
+    <span class="token comment" spellcheck="true"># 代码高亮部分的背景色, 空字符串则使用-代码高亮插件-的背景颜色，否则强制使用该颜色作为代码高亮背景色</span>
+    <span class="token key atrule">codeBackground</span><span class="token punctuation">:</span> <span class="token string">''</span>
+    <span class="token comment" spellcheck="true"># 文章详情页面--> p标签使用 ``符号 突出的文字颜色</span>
+    <span class="token key atrule">pLight</span><span class="token punctuation">:</span> '<span class="token comment" spellcheck="true">#d63200'</span>
+    <span class="token comment" spellcheck="true"># 文章详情-页面-> p标签颜色</span>
+    <span class="token key atrule">p</span><span class="token punctuation">:</span> '<span class="token comment" spellcheck="true">#273849'</span>
+    <span class="token comment" spellcheck="true"># 文章详情页面--> title颜色， h1, h2, h3..</span>
+    <span class="token key atrule">title</span><span class="token punctuation">:</span> '<span class="token comment" spellcheck="true">#273849'</span>
+    <span class="token comment" spellcheck="true"># 文章详情页面 -->右侧目录文字颜色</span>
+    <span class="token key atrule">toc</span><span class="token punctuation">:</span> '<span class="token comment" spellcheck="true">#273849'</span></code></pre>
 <p>代码高亮颜色，可以通过之前介绍的代码高亮进行更改</p>
 <h2 id="文章-Front-matter-介绍"><a href="#文章-Front-matter-介绍" class="headerlink" title="文章 Front-matter 介绍"></a>文章 Front-matter 介绍</h2><p><code>Front-matter</code> 选项中的所有内容均为<strong>非必填</strong>的。但我仍然建议至少填写 <code>title</code> 和 <code>date</code> 的值。</p>
 <table>
@@ -706,6 +886,16 @@ books   <span class="token comment" spellcheck="true">#书籍</span></code></pre
 <td>top</td>
 <td>false</td>
 <td>表示该文章是否需要加入到首页的文章置顶栏目中</td>
+</tr>
+<tr>
+<td>toc</td>
+<td>true</td>
+<td>表示该文章目录是否显示, true为显示</td>
+</tr>
+<tr>
+<td>tocOpen</td>
+<td>true</td>
+<td>表示该文章目录是否展开， true为展开</td>
 </tr>
 <tr>
 <td>comments</td>
@@ -751,7 +941,7 @@ books   <span class="token comment" spellcheck="true">#书籍</span></code></pre
     </li>
     <li class="post-copyright-link">
     <strong>文章链接:  </strong>
-    <a href="/2020/09/14/hexo-theme-bamboo/" target="_blank" title="Hexo主题--Bamboo介绍">http://yuang01.github.io/2020/09/14/hexo-theme-bamboo/</a>
+    <a href="/2020/09/14/hexo-theme-bamboo/" target="_blank" title="Hexo主题--Bamboo介绍(1.2.1)">http://yuang01.github.io/2020/09/14/hexo-theme-bamboo/</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明:   </strong>
@@ -764,15 +954,44 @@ books   <span class="token comment" spellcheck="true">#书籍</span></code></pre
     </article>
     <!-- 上一篇文章和下一篇文章 -->
     
-      <div class="post-nav">
+      
+<div class="post-nav">
 
 
 
+  
+  <div class="post-nav-prev post-nav-item">
+    <div class="post-nav-img lazyload" data-original="/medias/15.jpg" style="background-size: cover; 
+      background-position: center center;">
+    </div>
+    <a href="/2020/12/29/test/" class="post-nav-link">
+      <div class="title">
+        <i class="fa fa-angle-left"></i> 上一篇:
+        <div>test tag</div>
+      </div>
+      
+      <!-- <div class="content">
+        ```
+
+      </div> -->
+    </a>
+  </div>
+
+
+
+  
   <div class="post-nav-next post-nav-item">
-    <a href="/2020/09/10/hello-world-copy-13/">
-      <span>
-        下一篇:    Hello World13 
-      </span>
+    <div class="post-nav-img lazyload" data-original="/medias/5.jpg" style="background-size: cover; 
+      background-position: center center;">
+    </div>
+    <a href="/2020/09/10/hello-world-copy-12/" class="post-nav-link">
+      <div class="title">
+        下一篇: <i class="fa fa-angle-right"></i>
+        <div>Hello World12</div>
+      </div>
+      <!-- <div class="content">
+        Welcome to Hexo! This is your very first post. Check documen
+      </div> -->
     </a>
   </div>
 
@@ -850,7 +1069,8 @@ books   <span class="token comment" spellcheck="true">#书籍</span></code></pre
         //   };
         // }
         this.top = $(document).scrollTop() // or getScroll().top
-        body.style.cssText = 'width: 100%; height: 100%; position: fixed; top: -' + this.top + 'px; left: 0; overflow: hidden;';
+        // console.log('aa', $('.main-content'));
+        body.style.cssText = 'overflow: hidden;';
       },
       cancelDialogDrawer() {
         this.visible = false;
@@ -872,10 +1092,7 @@ books   <span class="token comment" spellcheck="true">#书籍</span></code></pre
 
 <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
 
-
-
 <script src="/js/shareJs/social-share.min.js"></script>
-
 </script>
 
 <style>
@@ -891,10 +1108,10 @@ books   <span class="token comment" spellcheck="true">#书籍</span></code></pre
       
         <div id="myComment">
           
-            <section id="comments" style="padding: 1em; background: rgba(255, 255, 255, 0.9); margin: 15px auto;"
-	data-aos="fade-up">
+            <section id="comments" style="padding: 1em; margin: 15px auto;"
+	class="animated bounceInUp">
 	<div id="vcomment" class="comment"></div>
-	<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+	<script src="/js/valine/av-min@3.0.4.js"></script>
 	<script src="https://cdn.jsdelivr.net/gh/HCLonely/Valine@latest/dist/Valine.min.js"></script>
 	<script>
 
@@ -1593,8 +1810,11 @@ books   <span class="token comment" spellcheck="true">#书籍</span></code></pre
 	</script>
 </section>
 <style>
+	#comments {
+		background: rgba(255,255,255,0.9);
+	}
 	#veditor {
-		background-image: url('https://cdn.jsdelivr.net/gh/drew233/cdn/20200409110727.webp');
+		background-image: url('/medias/comment-bg.gif');
 		background-size: contain;
 		background-repeat: no-repeat;
 		background-position: right;
@@ -1689,7 +1909,8 @@ books   <span class="token comment" spellcheck="true">#书籍</span></code></pre
     <div class="toc-aside">
       <div class="toc-main">
         <div class="toc-aside-title">
-          <i class="fa fa-list-ul" aria-hidden="true"></i><span>目录</span>
+          <i class="fa fa-list-ul" aria-hidden="true"></i><span>本文目录</span>
+          <div class="toc-open-close">本文目录</div>
         </div>
         <div class="toc-content">
           <link href="/js/tocbot/tocbot.css" rel="stylesheet">
@@ -1743,11 +1964,51 @@ books   <span class="token comment" spellcheck="true">#书籍</span></code></pre
   position:fixed !important;
   top: 64px;
 }
-
+.toc-main ul {
+  counter-reset: show-list;
+}
+.toc-main ul li::before {
+  content: counter(item)".";
+  display: block;
+  position: absolute;
+  left: 12px;
+  top:0;
+}
+.toc > .toc-list {
+  padding-left: 35px;
+}
+.toc>.toc-list li {
+  list-style: decimal;
+}
+.toc-list {
+  padding-left: 25px;
+}
 </style>
         </div>
       </div>
     </div>
+
+    
+
+    <script>
+      let openOrCloseBtn = $('.toc-aside .toc-aside-title .toc-open-close');
+      let open = eval('' || 'true');
+      openOrCloseBtn.click(function() {
+        if (open === true) {
+          $(".toc-aside").css({'width': 0, 'padding': 0});
+          $(".toc-content").css({'width': 0});
+          $(".toc-aside-title span, .toc-aside-title i").css({'display': 'none'});
+          $(".main-content").css({'width': '75%', 'margin': '10px auto'});
+          open = false;
+        } else {
+          $(".toc-aside").css({'width': '300px', 'padding': '0 10px'});
+          $(".toc-content").css({'width': '300px'});
+          $(".toc-aside-title span, .toc-aside-title i").css({'display': 'inline-block'});
+          $(".main-content").css({'width': '65%', 'margin-right': '10px', 'margin-left': 'calc(35% - 350px)'});
+          open = true;
+        }
+      });
+    </script>
   
 </div>
 
@@ -1792,16 +2053,14 @@ books   <span class="token comment" spellcheck="true">#书籍</span></code></pre
 
 
     
-      <div class="goTop bg-color">
+      <div class="goTop top-btn-color border-color">
   <i class="fa fa-arrow-up" aria-hidden="true"></i>
 </div>
-
 <script src="/js/goTop.js"></script>
-
     
 
     
-      <link href="https://cdn.bootcdn.net/ajax/libs/aplayer/1.10.1/APlayer.min.css" rel="stylesheet">
+      <link rel="stylesheet" href="/js/aplayer/APlayer@1.10.1.min.css">
 <style>
 .aplayer .aplayer-lrc p {
   
@@ -1860,17 +2119,17 @@ books   <span class="token comment" spellcheck="true">#书籍</span></code></pre
 
     <!-- 图片放大 -->
     
-      
-<script src="/js/fancybox/jquery.fancybox.min.js"></script>
-<script src="/js/wrapImage.js"></script>
-
+      <script src="/js/fancybox/jquery.fancybox.min.js"></script>
+      <script src="/js/wrapImage.js"></script>
     
 
     <!-- 爱心点击 -->
     
       
-<script src="/js/clicklove.js"></script>
-
+        <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 999; pointer-events: none;" ></canvas>
+        <script src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script>
+        <script src="/js/cursor/explosion.min.js"></script>
+      
     
 
     <!-- Baidu Analytics -->
@@ -1894,17 +2153,15 @@ books   <span class="token comment" spellcheck="true">#书籍</span></code></pre
     
     <script type="text/javascript" size="100" alpha='0.4' zIndex="-1" src="/js/ribbon.min.js"></script>
     
-      
-<script src="/js/aos/aos.js"></script>
-
+      <script src="/js/aos/aos.js"></script>
       <script>
         // https://github.com/michalsnik/aos
         const themeOffset = parseInt('120') || 120;
         const themeDelay = parseInt('0')|| 0;
         const themeDuration = parseInt('400') || 400;
         const themeEasing = 'ease' || 'ease';
-        const themeOnce = JSON.parse('true' || true);
-        const themeMirror = JSON.parse('false' || false);
+        const themeOnce = eval('true') || false;
+        const themeMirror = eval('false') || false;
         const themeAnchorPlacement = 'top-bottom' || 'top-bottom';
         AOS.init({
           // Global settings:
@@ -1977,9 +2234,7 @@ books   <span class="token comment" spellcheck="true">#书籍</span></code></pre
 
     <!-- 输入框打字特效 -->
     
-      
-<script src="/js/activate-power-mode.js"></script>
-
+      <script src="/js/activate-power-mode.js"></script>
       <script>
           POWERMODE.colorful = true;  // 打开随机颜色特效
           POWERMODE.shake = false;    // 关闭输入框抖动
@@ -1988,19 +2243,18 @@ books   <span class="token comment" spellcheck="true">#书籍</span></code></pre
     
 
     <!-- markdown代码一键复制功能 -->
-    
-<script src="/js/clipboard/clipboard.min.js"></script>
-
+    <script src="/js/clipboard/clipboard.min.js"></script>
     <script>
       !function (e, t, a) {
         var copy = '复制';
         /* code */
         var initCopyCode = function(){
           var copyHtml = '';
-          copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
-          copyHtml += '<i class="fa fa-globe"></i><span>' + copy + '</span>';
+          copyHtml += '<button class="btn-copy" data-clipboard-snippet="" style="position:absolute;top:0;right:0;z-index:1;">';
+          copyHtml += '<i class="fa fa-copy"></i><span>' + copy + '</span>';
           copyHtml += '</button>';
-          $(".post-detail pre code").before(copyHtml);
+          $(".post-detail pre").wrap("<div class='codeBox' style='position:relative;width:100%;'></div>")
+          $(".post-detail pre").before(copyHtml);
           new ClipboardJS('.btn-copy', {
               target: function(trigger) {
                   return trigger.nextElementSibling;
@@ -2010,10 +2264,7 @@ books   <span class="token comment" spellcheck="true">#书籍</span></code></pre
         initCopyCode();
       }(window, document);
     </script>
-
-    
-<script src="/js/lazyload/lazyload@1.9.1.js"></script>
-
+    <script src="/js/lazyload/lazyload@1.9.1.js"></script>
     <script>
       $(function() {
         $("div.lazyload, img.lazyload, a.lazyload").lazyload(

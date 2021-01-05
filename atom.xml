@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yuang01.github.io/"/>
-  <updated>2020-12-08T03:17:04.081Z</updated>
+  <updated>2021-01-05T15:36:50.603Z</updated>
   <id>http://yuang01.github.io/</id>
   
   <author>
@@ -17,15 +17,15 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Hexo主题--Bamboo介绍</title>
-    <link href="http://yuang01.github.io/2020/09/14/hexo-theme-bamboo/"/>
-    <id>http://yuang01.github.io/2020/09/14/hexo-theme-bamboo/</id>
-    <published>2020-09-14T06:06:00.000Z</published>
-    <updated>2020-12-08T03:17:04.081Z</updated>
+    <title>Hexo主题--Bamboo介绍（1.3版本）</title>
+    <link href="http://yuang01.github.io/2021/01/05/hexo-theme-bamboo-new/"/>
+    <id>http://yuang01.github.io/2021/01/05/hexo-theme-bamboo-new/</id>
+    <published>2021-01-05T15:28:00.000Z</published>
+    <updated>2021-01-05T15:36:50.603Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;这是一个基于Hexo的响应式博客主题，&lt;a href=&quot;https://yuang01.github.io/&quot;&gt;演示示例&lt;/a&gt;，| QQ交流:&lt;code&gt;1730241541&lt;/code&gt;&lt;/p&gt;
+      &lt;p&gt;该文档是版本1.3的文档，版本号可以从主题下的&lt;code&gt;package.json&lt;/code&gt;查看&lt;br&gt;这是一个基于Hexo的响应式博客主题，&lt;a href=&quot;https://yuang01.github.io/&quot;&gt;演示示例&lt;/a&gt;，| QQ交流:&lt;code&gt;1730241541&lt;/code&gt;&lt;/p&gt;
     
     </summary>
     
@@ -40,62 +40,11 @@
   </entry>
   
   <entry>
-    <title>Hello World13</title>
-    <link href="http://yuang01.github.io/2020/09/10/hello-world-copy-13/"/>
-    <id>http://yuang01.github.io/2020/09/10/hello-world-copy-13/</id>
-    <published>2020-09-10T06:06:00.000Z</published>
-    <updated>2020-11-16T15:24:37.283Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World12</title>
-    <link href="http://yuang01.github.io/2020/09/10/hello-world-copy-12/"/>
-    <id>http://yuang01.github.io/2020/09/10/hello-world-copy-12/</id>
-    <published>2020-09-10T06:06:00.000Z</published>
-    <updated>2020-11-16T15:24:37.256Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://yuang01.github.io/2020/09/10/hello-world/"/>
-    <id>http://yuang01.github.io/2020/09/10/hello-world/</id>
-    <published>2020-09-10T06:06:00.000Z</published>
-    <updated>2020-11-16T15:24:37.357Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
     <title>vue代码风格</title>
-    <link href="http://yuang01.github.io/2020/08/02/hello-world-copy-10/"/>
-    <id>http://yuang01.github.io/2020/08/02/hello-world-copy-10/</id>
-    <published>2020-08-02T06:06:00.000Z</published>
-    <updated>2020-11-16T15:26:18.187Z</updated>
+    <link href="http://yuang01.github.io/2021/01/05/hello-world-copy-10/"/>
+    <id>http://yuang01.github.io/2021/01/05/hello-world-copy-10/</id>
+    <published>2021-01-05T15:19:41.777Z</published>
+    <updated>2021-01-05T15:34:39.656Z</updated>
     
     <summary type="html">
     
@@ -118,11 +67,138 @@
   </entry>
   
   <entry>
-    <title>Hello World6</title>
+    <title>testimg</title>
+    <link href="http://yuang01.github.io/2021/01/05/testimg/"/>
+    <id>http://yuang01.github.io/2021/01/05/testimg/</id>
+    <published>2021-01-05T09:35:59.000Z</published>
+    <updated>2021-01-05T15:19:41.847Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;img src=&quot;/img/1.jpg&quot; alt=&quot;Image
+        
+      
+    
+    </summary>
+    
+    
+      <category term="前端" scheme="http://yuang01.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>test tag</title>
+    <link href="http://yuang01.github.io/2020/12/29/test/"/>
+    <id>http://yuang01.github.io/2020/12/29/test/</id>
+    <published>2020-12-29T03:35:00.000Z</published>
+    <updated>2021-01-05T15:26:56.340Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;```&lt;/p&gt;
+
+        
+      
+    
+    </summary>
+    
+    
+      <category term="前端" scheme="http://yuang01.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="tag" scheme="http://yuang01.github.io/tags/tag/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo主题--Bamboo介绍(1.2.1)</title>
+    <link href="http://yuang01.github.io/2020/09/14/hexo-theme-bamboo/"/>
+    <id>http://yuang01.github.io/2020/09/14/hexo-theme-bamboo/</id>
+    <published>2020-09-14T06:06:00.000Z</published>
+    <updated>2021-01-05T15:27:24.575Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;这是一个基于Hexo的响应式博客主题，&lt;a href=&quot;https://yuang01.github.io/&quot;&gt;演示示例&lt;/a&gt;，| QQ交流:&lt;code&gt;1730241541&lt;/code&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="前端" scheme="http://yuang01.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="Hexo" scheme="http://yuang01.github.io/tags/Hexo/"/>
+    
+      <category term="hexo-theme-bamboo" scheme="http://yuang01.github.io/tags/hexo-theme-bamboo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World12</title>
+    <link href="http://yuang01.github.io/2020/09/10/hello-world-copy-12/"/>
+    <id>http://yuang01.github.io/2020/09/10/hello-world-copy-12/</id>
+    <published>2020-09-10T06:06:00.000Z</published>
+    <updated>2021-01-05T15:19:41.819Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World13</title>
+    <link href="http://yuang01.github.io/2020/09/10/hello-world-copy-13/"/>
+    <id>http://yuang01.github.io/2020/09/10/hello-world-copy-13/</id>
+    <published>2020-09-10T06:06:00.000Z</published>
+    <updated>2021-01-05T15:23:15.371Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://yuang01.github.io/2020/09/10/hello-world/"/>
+    <id>http://yuang01.github.io/2020/09/10/hello-world/</id>
+    <published>2020-09-10T06:06:00.000Z</published>
+    <updated>2021-01-05T15:30:33.303Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World good</title>
     <link href="http://yuang01.github.io/2020/07/20/hello-world-copy-6/"/>
     <id>http://yuang01.github.io/2020/07/20/hello-world-copy-6/</id>
     <published>2020-07-20T13:11:00.000Z</published>
-    <updated>2020-11-16T15:24:37.116Z</updated>
+    <updated>2021-01-05T15:28:03.912Z</updated>
     
     <summary type="html">
     
@@ -145,7 +221,7 @@
     <link href="http://yuang01.github.io/2020/06/20/hello-world-copy-7/"/>
     <id>http://yuang01.github.io/2020/06/20/hello-world-copy-7/</id>
     <published>2020-06-20T13:11:00.000Z</published>
-    <updated>2020-11-16T15:24:37.137Z</updated>
+    <updated>2021-01-05T15:19:41.835Z</updated>
     
     <summary type="html">
     
@@ -168,7 +244,122 @@
     <link href="http://yuang01.github.io/2020/06/20/hello-world-copy-9/"/>
     <id>http://yuang01.github.io/2020/06/20/hello-world-copy-9/</id>
     <published>2020-06-20T13:11:00.000Z</published>
-    <updated>2020-11-16T15:24:37.181Z</updated>
+    <updated>2021-01-05T15:31:20.125Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World2</title>
+    <link href="http://yuang01.github.io/2020/01/20/hello-world-copy-17/"/>
+    <id>http://yuang01.github.io/2020/01/20/hello-world-copy-17/</id>
+    <published>2020-01-20T13:11:00.000Z</published>
+    <updated>2021-01-05T15:29:19.716Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World2</title>
+    <link href="http://yuang01.github.io/2020/01/20/hello-world-copy-16/"/>
+    <id>http://yuang01.github.io/2020/01/20/hello-world-copy-16/</id>
+    <published>2020-01-20T13:11:00.000Z</published>
+    <updated>2021-01-05T15:23:24.523Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World2</title>
+    <link href="http://yuang01.github.io/2020/01/20/hello-world-copy-14/"/>
+    <id>http://yuang01.github.io/2020/01/20/hello-world-copy-14/</id>
+    <published>2020-01-20T13:11:00.000Z</published>
+    <updated>2021-01-05T15:23:18.513Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World2</title>
+    <link href="http://yuang01.github.io/2020/01/20/hello-world-copy-18/"/>
+    <id>http://yuang01.github.io/2020/01/20/hello-world-copy-18/</id>
+    <published>2020-01-20T13:11:00.000Z</published>
+    <updated>2021-01-05T15:26:33.162Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World2</title>
+    <link href="http://yuang01.github.io/2020/01/20/hello-world-copy-15/"/>
+    <id>http://yuang01.github.io/2020/01/20/hello-world-copy-15/</id>
+    <published>2020-01-20T13:11:00.000Z</published>
+    <updated>2021-01-05T15:23:21.602Z</updated>
     
     <summary type="html">
     
@@ -191,7 +382,53 @@
     <link href="http://yuang01.github.io/2020/01/20/hello-world-copy-2/"/>
     <id>http://yuang01.github.io/2020/01/20/hello-world-copy-2/</id>
     <published>2020-01-20T13:11:00.000Z</published>
-    <updated>2020-11-16T15:24:37.029Z</updated>
+    <updated>2021-01-05T15:19:50.099Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World2</title>
+    <link href="http://yuang01.github.io/2020/01/20/hello-world-copy-20/"/>
+    <id>http://yuang01.github.io/2020/01/20/hello-world-copy-20/</id>
+    <published>2020-01-20T13:11:00.000Z</published>
+    <updated>2021-01-05T15:28:59.759Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World2</title>
+    <link href="http://yuang01.github.io/2020/01/20/hello-world-copy-19/"/>
+    <id>http://yuang01.github.io/2020/01/20/hello-world-copy-19/</id>
+    <published>2020-01-20T13:11:00.000Z</published>
+    <updated>2021-01-05T15:23:33.811Z</updated>
     
     <summary type="html">
     
@@ -214,7 +451,7 @@
     <link href="http://yuang01.github.io/2019/08/20/hello-world-copy-3/"/>
     <id>http://yuang01.github.io/2019/08/20/hello-world-copy-3/</id>
     <published>2019-08-20T13:11:00.000Z</published>
-    <updated>2020-11-16T15:24:37.046Z</updated>
+    <updated>2021-01-05T15:24:52.052Z</updated>
     
     <summary type="html">
     
@@ -245,119 +482,6 @@
       <category term="test6" scheme="http://yuang01.github.io/tags/test6/"/>
     
       <category term="test7" scheme="http://yuang01.github.io/tags/test7/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>这是一个标题为两行的页面哦多少度撒</title>
-    <link href="http://yuang01.github.io/2019/08/12/hello-world-copy-4/"/>
-    <id>http://yuang01.github.io/2019/08/12/hello-world-copy-4/</id>
-    <published>2019-08-12T13:11:00.000Z</published>
-    <updated>2020-11-16T15:24:37.085Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
-        
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World5</title>
-    <link href="http://yuang01.github.io/2019/08/05/hello-world-copy-5/"/>
-    <id>http://yuang01.github.io/2019/08/05/hello-world-copy-5/</id>
-    <published>2019-08-05T13:11:00.000Z</published>
-    <updated>2020-11-16T15:24:37.095Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
-        
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World8</title>
-    <link href="http://yuang01.github.io/2019/05/21/hello-world-copy-8/"/>
-    <id>http://yuang01.github.io/2019/05/21/hello-world-copy-8/</id>
-    <published>2019-05-21T13:11:00.000Z</published>
-    <updated>2020-11-16T15:24:37.159Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
-        
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>vue.js实现左侧导航栏和tab切换页面效果</title>
-    <link href="http://yuang01.github.io/2019/01/20/hello-world-copy/"/>
-    <id>http://yuang01.github.io/2019/01/20/hello-world-copy/</id>
-    <published>2019-01-20T13:11:00.000Z</published>
-    <updated>2020-11-16T15:24:37.308Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;基于&lt;a href=&quot;https://getbootstrapadmin.com/remark/base/index.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;remark UI&lt;/a&gt;的样式，使用vue.js编写了左侧导航栏（侧边栏）和tab切换页面功能。基于&lt;a href=&quot;https://getbootstrapadmin.com/remark/base/index.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;remark UI&lt;/a&gt;的样式敖德萨多撒多撒多撒多敖德萨多撒多大大撒多所大声道撒多大大的撒旦撒旦大萨达所所多&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="vue.js" scheme="http://yuang01.github.io/categories/vue-js/"/>
-    
-    
-      <category term="vue.js" scheme="http://yuang01.github.io/tags/vue-js/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>这是一个测试页面</title>
-    <link href="http://yuang01.github.io/2018/09/28/hello-world-copy-11/"/>
-    <id>http://yuang01.github.io/2018/09/28/hello-world-copy-11/</id>
-    <published>2018-09-28T05:34:00.000Z</published>
-    <updated>2020-11-16T15:24:37.229Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="前端" scheme="http://yuang01.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="Hexo" scheme="http://yuang01.github.io/tags/Hexo/"/>
-    
-      <category term="hexo-theme-Bamboo" scheme="http://yuang01.github.io/tags/hexo-theme-Bamboo/"/>
     
   </entry>
   
