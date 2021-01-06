@@ -1345,6 +1345,7 @@ a {
 }
 .archive .post-archive .post-item {
   margin-bottom: 20px;
+  list-style: none;
 }
 .archive .post-archive .post-item .post-date {
   padding: 5px;
