@@ -523,28 +523,28 @@ var vm = new Vue({
 <pre class=" language-js"><code class="language-js">search<span class="token punctuation">:</span>
   path<span class="token punctuation">:</span> search<span class="token punctuation">.</span>xml
   field<span class="token punctuation">:</span> post</code></pre>
-<pre class=" language-json"><code class="language-json">&amp;#<span class="token number">123</span><span class="token punctuation">;</span>
-  <span class="token property">"gitHooks"</span><span class="token operator">:</span> &amp;#<span class="token number">123</span><span class="token punctuation">;</span>
+<pre class=" language-json"><code class="language-json"><span class="token punctuation">{</span>
+  <span class="token property">"gitHooks"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
     <span class="token property">"pre-commit"</span><span class="token operator">:</span> <span class="token string">"lint-staged"</span>
-  &amp;#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
-   <span class="token property">"lint-staged"</span><span class="token operator">:</span> &amp;#<span class="token number">123</span><span class="token punctuation">;</span>
-    <span class="token property">"*.&amp;#123;js,vue&amp;#125;"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+   <span class="token property">"lint-staged"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">"*.{js,vue}"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
       <span class="token string">"vue-cli-service lint"</span><span class="token punctuation">,</span>
       <span class="token string">"git add"</span>
     <span class="token punctuation">]</span>
-  &amp;#<span class="token number">125</span><span class="token punctuation">;</span>
-&amp;#<span class="token number">125</span><span class="token punctuation">;</span></code></pre>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
 <pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">// babel.config.js</span>
-module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
   presets<span class="token punctuation">:</span> <span class="token punctuation">[</span>
-    <span class="token punctuation">[</span><span class="token string">'@vue/app'</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token punctuation">[</span><span class="token string">'@vue/app'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
       polyfills<span class="token punctuation">:</span> <span class="token punctuation">[</span>
         <span class="token string">'es.promise'</span><span class="token punctuation">,</span>
         <span class="token string">'es.symbol'</span>
       <span class="token punctuation">]</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">]</span>
   <span class="token punctuation">]</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span></code></pre>
+<span class="token punctuation">}</span></code></pre>
 <blockquote>
 <p>这是一段文字哦<br>test</p>
 </blockquote>
