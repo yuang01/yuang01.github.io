@@ -231,31 +231,6 @@
     
     
     <entry>
-      <title>NoteBlock</title>
-      <link href="/2021/02/08/noteblock/"/>
-      <url>/2021/02/08/noteblock/</url>
-      
-        <content type="html"><![CDATA[<h2 class="bamboo-h " id="noteblock演示效果">noteblock演示效果</h2><br/><div class="note base"><p><strong>标题（可选）</strong></p><p>asdsd</p></div><div class="note quote"><p><strong>标题（可选）</strong></p><p>asdsd</p></div><div class="note warning"><p><strong>标题（可选）</strong></p><p>asdsd</p></div><div class="note success"><p><strong>标题（可选）</strong></p><p>asdsd</p></div><div class="note danger"><p><strong>标题（可选）</strong></p><p>asdsd</p></div><div class="note info"><p><strong>标题（可选）</strong></p><p>asdsd</p></div><h3 id="上述事例代码"><a href="#上述事例代码" class="headerlink" title="上述事例代码"></a>上述事例代码</h3><pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">&#123;% noteblock base, 标题（可选） %&#125;    asdsd&#123;% endnoteblock %&#125;&#123;% noteblock quote, 标题（可选） %&#125;    asdsd&#123;% endnoteblock %&#125;&#123;% noteblock warning, 标题（可选） %&#125;    asdsd&#123;% endnoteblock %&#125;&#123;% noteblock success, 标题（可选） %&#125;    asdsd&#123;% endnoteblock %&#125;&#123;% noteblock danger, 标题（可选） %&#125;    asdsd&#123;% endnoteblock %&#125;&#123;% noteblock info, 标题（可选） %&#125;    asdsd&#123;% endnoteblock %&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
-      
-      
-      <categories>
-          
-          <category> 前端 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> tag </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Note标签</title>
       <link href="/2021/02/08/note/"/>
       <url>/2021/02/08/note/</url>
@@ -281,11 +256,11 @@
     
     
     <entry>
-      <title>文本高亮</title>
-      <link href="/2021/02/08/pbg/"/>
-      <url>/2021/02/08/pbg/</url>
+      <title>NoteBlock</title>
+      <link href="/2021/02/08/noteblock/"/>
+      <url>/2021/02/08/noteblock/</url>
       
-        <content type="html"><![CDATA[<h2 class="bamboo-h " id="文本高亮演示效果">文本高亮演示效果</h2><br/><p>这是一个简单的文字<span class='pbg yellow'>我是一个文本高亮</span>，唱着我们心肠的曲折<br>这是一个简单的文字<span class='pbg '>我是一个文本高亮</span>，唱着我们心肠的曲折<br>这是一个简单的文字<span class='pbg info'>我是一个文本高亮</span>，唱着我们心肠的曲折<br>这是一个简单的文字<span class='pbg warning'>我是一个文本高亮</span>，唱着我们心肠的曲折<br>这是一个简单的文字<span class='pbg danger'>我是一个文本高亮</span>，唱着我们心肠的曲折<br>这是一个简单的文字<span class='pbg success'>我是一个文本高亮</span>，唱着我们心肠的曲折<br>这是一个简单的文字<span class='pbg red'>我是一个文本高亮</span>，唱着我们心肠的曲折<br>这是一个简单的文字<span class='pbg green'>我是一个文本高亮</span>，唱着我们心肠的曲折<br>这是一个简单的文字<span class='pbg blue'>我是一个文本高亮</span>，唱着我们心肠的曲折<br>这是一个简单的文字<span class='pbg cyan'>我是一个文本高亮</span>，唱着我们心肠的曲折</p><h2 id="上述事例源码"><a href="#上述事例源码" class="headerlink" title="上述事例源码"></a>上述事例源码</h2><pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">这是一个简单的文字&#123;% pbg yellow, 我是一个文本高亮 %&#125;，唱着我们心肠的曲折这是一个简单的文字&#123;% pbg, 我是一个文本高亮 %&#125;，唱着我们心肠的曲折这是一个简单的文字&#123;% pbg info, 我是一个文本高亮 %&#125;，唱着我们心肠的曲折这是一个简单的文字&#123;% pbg warning, 我是一个文本高亮 %&#125;，唱着我们心肠的曲折这是一个简单的文字&#123;% pbg danger, 我是一个文本高亮 %&#125;，唱着我们心肠的曲折这是一个简单的文字&#123;% pbg success, 我是一个文本高亮 %&#125;，唱着我们心肠的曲折这是一个简单的文字&#123;% pbg red, 我是一个文本高亮 %&#125;，唱着我们心肠的曲折这是一个简单的文字&#123;% pbg green, 我是一个文本高亮 %&#125;，唱着我们心肠的曲折 这是一个简单的文字&#123;% pbg blue, 我是一个文本高亮 %&#125;，唱着我们心肠的曲折这是一个简单的文字&#123;% pbg cyan, 我是一个文本高亮 %&#125;，唱着我们心肠的曲折<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+        <content type="html"><![CDATA[<h2 class="bamboo-h " id="noteblock演示效果">noteblock演示效果</h2><br/><div class="note base"><p><strong>标题（可选）</strong></p><p>asdsd</p></div><div class="note quote"><p><strong>标题（可选）</strong></p><p>asdsd</p></div><div class="note warning"><p><strong>标题（可选）</strong></p><p>asdsd</p></div><div class="note success"><p><strong>标题（可选）</strong></p><p>asdsd</p></div><div class="note danger"><p><strong>标题（可选）</strong></p><p>asdsd</p></div><div class="note info"><p><strong>标题（可选）</strong></p><p>asdsd</p></div><h3 id="上述事例代码"><a href="#上述事例代码" class="headerlink" title="上述事例代码"></a>上述事例代码</h3><pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">&#123;% noteblock base, 标题（可选） %&#125;    asdsd&#123;% endnoteblock %&#125;&#123;% noteblock quote, 标题（可选） %&#125;    asdsd&#123;% endnoteblock %&#125;&#123;% noteblock warning, 标题（可选） %&#125;    asdsd&#123;% endnoteblock %&#125;&#123;% noteblock success, 标题（可选） %&#125;    asdsd&#123;% endnoteblock %&#125;&#123;% noteblock danger, 标题（可选） %&#125;    asdsd&#123;% endnoteblock %&#125;&#123;% noteblock info, 标题（可选） %&#125;    asdsd&#123;% endnoteblock %&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
       
       
       <categories>
@@ -311,6 +286,31 @@
       <url>/2021/02/08/p/</url>
       
         <content type="html"><![CDATA[<h2 class="bamboo-h " id="段落文本演示">段落文本演示</h2><br/><p class='p yellow'>我是一个文本高亮大萨达所多撒多撒多撒大多多撒多撒多撒大所多撒大多</p><p class='p '>我是一个文本高亮大萨达所多撒多撒多撒大多多撒多撒多撒大所多撒大多</p><p class='p primary'>我是一个文本高亮大萨达所多撒多撒多撒大多多撒多撒多撒大所多撒大多</p><p class='p info'>我是一个文本高亮大萨达所多撒多撒多撒大多多撒多撒多撒大所多撒大多</p><p class='p warning'>我是一个文本高亮大萨达所多撒多撒多撒大多多撒多撒多撒大所多撒大多</p><p class='p danger'>我是一个文本高亮大萨达所多撒多撒多撒大多多撒多撒多撒大所多撒大多</p><p class='p success'>我是一个文本高亮大萨达所多撒多撒多撒大多多撒多撒多撒大所多撒大多</p><p class='p red'>我是一个文本高亮大萨达所多撒多撒多撒大多多撒多撒多撒大所多撒大多</p><p class='p green'>我是一个文本高亮大萨达所多撒多撒多撒大多多撒多撒多撒大所多撒大多</p><p class='p blue'>我是一个文本高亮大萨达所多撒多撒多撒大多多撒多撒多撒大所多撒大多</p><p class='p center'>我是一个文本高亮大萨达所多撒多撒多撒大多多撒多撒多撒大所多撒大多</p><p class='p center large danger'>我是一个文本高亮大萨达所多撒多撒多撒大多多撒多撒多撒大所多撒大多</p><p class='p center large info'>我是一个文本高亮大萨达所多撒多撒多撒大多多撒多撒多撒大所多撒大多</p><p class='p center small'>我是一个文本高亮大萨达所多撒多撒多撒大多多撒多撒多撒大所多撒大多</p><h2 id="上述事例源码"><a href="#上述事例源码" class="headerlink" title="上述事例源码"></a>上述事例源码</h2><pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">&#123;% p yellow, 我是一个文本高亮大萨达所多撒多撒多撒大多多撒多撒多撒大所多撒大多 %&#125;&#123;% p, 我是一个文本高亮大萨达所多撒多撒多撒大多多撒多撒多撒大所多撒大多 %&#125;&#123;% p primary, 我是一个文本高亮大萨达所多撒多撒多撒大多多撒多撒多撒大所多撒大多 %&#125;&#123;% p info, 我是一个文本高亮大萨达所多撒多撒多撒大多多撒多撒多撒大所多撒大多 %&#125;&#123;% p warning, 我是一个文本高亮大萨达所多撒多撒多撒大多多撒多撒多撒大所多撒大多 %&#125;&#123;% p danger, 我是一个文本高亮大萨达所多撒多撒多撒大多多撒多撒多撒大所多撒大多 %&#125;&#123;% p success, 我是一个文本高亮大萨达所多撒多撒多撒大多多撒多撒多撒大所多撒大多 %&#125;&#123;% p red, 我是一个文本高亮大萨达所多撒多撒多撒大多多撒多撒多撒大所多撒大多 %&#125;&#123;% p green, 我是一个文本高亮大萨达所多撒多撒多撒大多多撒多撒多撒大所多撒大多 %&#125;&#123;% p blue, 我是一个文本高亮大萨达所多撒多撒多撒大多多撒多撒多撒大所多撒大多 %&#125;&#123;% p center, 我是一个文本高亮大萨达所多撒多撒多撒大多多撒多撒多撒大所多撒大多 %&#125;&#123;% p center large danger, 我是一个文本高亮大萨达所多撒多撒多撒大多多撒多撒多撒大所多撒大多 %&#125;&#123;% p center large info, 我是一个文本高亮大萨达所多撒多撒多撒大多多撒多撒多撒大所多撒大多 %&#125;&#123;% p center small, 我是一个文本高亮大萨达所多撒多撒多撒大多多撒多撒多撒大所多撒大多 %&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> tag </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>文本高亮</title>
+      <link href="/2021/02/08/pbg/"/>
+      <url>/2021/02/08/pbg/</url>
+      
+        <content type="html"><![CDATA[<h2 class="bamboo-h " id="文本高亮演示效果">文本高亮演示效果</h2><br/><p>这是一个简单的文字<span class='pbg yellow'>我是一个文本高亮</span>，唱着我们心肠的曲折<br>这是一个简单的文字<span class='pbg '>我是一个文本高亮</span>，唱着我们心肠的曲折<br>这是一个简单的文字<span class='pbg info'>我是一个文本高亮</span>，唱着我们心肠的曲折<br>这是一个简单的文字<span class='pbg warning'>我是一个文本高亮</span>，唱着我们心肠的曲折<br>这是一个简单的文字<span class='pbg danger'>我是一个文本高亮</span>，唱着我们心肠的曲折<br>这是一个简单的文字<span class='pbg success'>我是一个文本高亮</span>，唱着我们心肠的曲折<br>这是一个简单的文字<span class='pbg red'>我是一个文本高亮</span>，唱着我们心肠的曲折<br>这是一个简单的文字<span class='pbg green'>我是一个文本高亮</span>，唱着我们心肠的曲折<br>这是一个简单的文字<span class='pbg blue'>我是一个文本高亮</span>，唱着我们心肠的曲折<br>这是一个简单的文字<span class='pbg cyan'>我是一个文本高亮</span>，唱着我们心肠的曲折</p><h2 id="上述事例源码"><a href="#上述事例源码" class="headerlink" title="上述事例源码"></a>上述事例源码</h2><pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">这是一个简单的文字&#123;% pbg yellow, 我是一个文本高亮 %&#125;，唱着我们心肠的曲折这是一个简单的文字&#123;% pbg, 我是一个文本高亮 %&#125;，唱着我们心肠的曲折这是一个简单的文字&#123;% pbg info, 我是一个文本高亮 %&#125;，唱着我们心肠的曲折这是一个简单的文字&#123;% pbg warning, 我是一个文本高亮 %&#125;，唱着我们心肠的曲折这是一个简单的文字&#123;% pbg danger, 我是一个文本高亮 %&#125;，唱着我们心肠的曲折这是一个简单的文字&#123;% pbg success, 我是一个文本高亮 %&#125;，唱着我们心肠的曲折这是一个简单的文字&#123;% pbg red, 我是一个文本高亮 %&#125;，唱着我们心肠的曲折这是一个简单的文字&#123;% pbg green, 我是一个文本高亮 %&#125;，唱着我们心肠的曲折 这是一个简单的文字&#123;% pbg blue, 我是一个文本高亮 %&#125;，唱着我们心肠的曲折这是一个简单的文字&#123;% pbg cyan, 我是一个文本高亮 %&#125;，唱着我们心肠的曲折<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
       
       
       <categories>
@@ -381,11 +381,11 @@
     
     
     <entry>
-      <title>tab</title>
-      <link href="/2021/02/08/tab/"/>
-      <url>/2021/02/08/tab/</url>
+      <title>文字颜色</title>
+      <link href="/2021/02/08/span/"/>
+      <url>/2021/02/08/span/</url>
       
-        <content type="html"><![CDATA[<h2 class="bamboo-h " id="tab事例">tab事例</h2><br/><div class="tabs" id="tab-id"><ul class="nav-tabs"><li class="tab active"><a class="#tab-id-1">栏目1</a></li><li class="tab"><a class="#tab-id-2">栏目2</a></li></ul><div class="tab-content"><div class="tab-pane active" id="tab-id-1"><p>。。。</p></div><div class="tab-pane" id="tab-id-2"><p>！！！</p></div></div></div><h3 id="上述事例代码"><a href="#上述事例代码" class="headerlink" title="上述事例代码"></a>上述事例代码</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">&#123;</span>% tabs tab-id %<span class="token punctuation">&#125;</span><span class="token operator">&lt;</span><span class="token operator">!</span>-- tab 栏目1 --<span class="token operator">></span>。。。<span class="token operator">&lt;</span><span class="token operator">!</span>-- endtab --<span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">!</span>-- tab 栏目2 --<span class="token operator">></span>！！！<span class="token operator">&lt;</span><span class="token operator">!</span>-- endtab --<span class="token operator">></span><span class="token punctuation">&#123;</span>% endtabs %<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+        <content type="html"><![CDATA[<h2 class="bamboo-h " id="文字颜色演示效果">文字颜色演示效果</h2><br/><p>这是一个简单的文字<span class='p yellow'>我是一个文字高亮</span>，唱着我们心肠的曲折<br>这是一个简单的文字<span class='p '>我是一个文字高亮</span>，唱着我们心肠的曲折<br>这是一个简单的文字<span class='p primary'>我是一个文字高亮</span>，唱着我们心肠的曲折<br>这是一个简单的文字<span class='p info'>我是一个文字高亮</span>，唱着我们心肠的曲折<br>这是一个简单的文字<span class='p warning'>我是一个文字高亮</span>，唱着我们心肠的曲折<br>这是一个简单的文字<span class='p danger'>我是一个文字高亮</span>，唱着我们心肠的曲折<br>这是一个简单的文字<span class='p success'>我是一个文字高亮</span>，唱着我们心肠的曲折<br>这是一个简单的文字<span class='p red'>我是一个文字高亮</span>，唱着我们心肠的曲折<br>这是一个简单的文字<span class='p green'>我是一个文字高亮</span>，唱着我们心肠的曲折<br>这是一个简单的文字<span class='p blue'>我是一个文字高亮</span>，唱着我们心肠的曲折</p><span class='p center green'>我是一个居中文字高亮</span><p>这是一个简单的文字<span class='p large'>我是一个文字高亮</span>，唱着我们心肠的曲折<br>这是一个简单的文字<span class='p small danger'>我是一个文字高亮</span>，唱着我们心肠的曲折</p><h2 id="上述事例源码"><a href="#上述事例源码" class="headerlink" title="上述事例源码"></a>上述事例源码</h2><pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">这是一个简单的文字&#123;% span yellow, 我是一个文字高亮 %&#125;，唱着我们心肠的曲折这是一个简单的文字&#123;% span, 我是一个文字高亮 %&#125;，唱着我们心肠的曲折这是一个简单的文字&#123;% span primary, 我是一个文字高亮 %&#125;，唱着我们心肠的曲折这是一个简单的文字&#123;% span info, 我是一个文字高亮 %&#125;，唱着我们心肠的曲折这是一个简单的文字&#123;% span warning, 我是一个文字高亮 %&#125;，唱着我们心肠的曲折这是一个简单的文字&#123;% span danger, 我是一个文字高亮 %&#125;，唱着我们心肠的曲折这是一个简单的文字&#123;% span success, 我是一个文字高亮 %&#125;，唱着我们心肠的曲折这是一个简单的文字&#123;% span red, 我是一个文字高亮 %&#125;，唱着我们心肠的曲折这是一个简单的文字&#123;% span green, 我是一个文字高亮 %&#125;，唱着我们心肠的曲折这是一个简单的文字&#123;% span blue, 我是一个文字高亮 %&#125;，唱着我们心肠的曲折&#123;% span center green, 我是一个居中文字高亮 %&#125;这是一个简单的文字&#123;% span large, 我是一个文字高亮 %&#125;，唱着我们心肠的曲折这是一个简单的文字&#123;% span small danger, 我是一个文字高亮 %&#125;，唱着我们心肠的曲折<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
       
       
       <categories>
@@ -406,11 +406,11 @@
     
     
     <entry>
-      <title>文字颜色</title>
-      <link href="/2021/02/08/span/"/>
-      <url>/2021/02/08/span/</url>
+      <title>tab</title>
+      <link href="/2021/02/08/tab/"/>
+      <url>/2021/02/08/tab/</url>
       
-        <content type="html"><![CDATA[<h2 class="bamboo-h " id="文字颜色演示效果">文字颜色演示效果</h2><br/><p>这是一个简单的文字<span class='p yellow'>我是一个文字高亮</span>，唱着我们心肠的曲折<br>这是一个简单的文字<span class='p '>我是一个文字高亮</span>，唱着我们心肠的曲折<br>这是一个简单的文字<span class='p primary'>我是一个文字高亮</span>，唱着我们心肠的曲折<br>这是一个简单的文字<span class='p info'>我是一个文字高亮</span>，唱着我们心肠的曲折<br>这是一个简单的文字<span class='p warning'>我是一个文字高亮</span>，唱着我们心肠的曲折<br>这是一个简单的文字<span class='p danger'>我是一个文字高亮</span>，唱着我们心肠的曲折<br>这是一个简单的文字<span class='p success'>我是一个文字高亮</span>，唱着我们心肠的曲折<br>这是一个简单的文字<span class='p red'>我是一个文字高亮</span>，唱着我们心肠的曲折<br>这是一个简单的文字<span class='p green'>我是一个文字高亮</span>，唱着我们心肠的曲折<br>这是一个简单的文字<span class='p blue'>我是一个文字高亮</span>，唱着我们心肠的曲折</p><span class='p center green'>我是一个居中文字高亮</span><p>这是一个简单的文字<span class='p large'>我是一个文字高亮</span>，唱着我们心肠的曲折<br>这是一个简单的文字<span class='p small danger'>我是一个文字高亮</span>，唱着我们心肠的曲折</p><h2 id="上述事例源码"><a href="#上述事例源码" class="headerlink" title="上述事例源码"></a>上述事例源码</h2><pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">这是一个简单的文字&#123;% span yellow, 我是一个文字高亮 %&#125;，唱着我们心肠的曲折这是一个简单的文字&#123;% span, 我是一个文字高亮 %&#125;，唱着我们心肠的曲折这是一个简单的文字&#123;% span primary, 我是一个文字高亮 %&#125;，唱着我们心肠的曲折这是一个简单的文字&#123;% span info, 我是一个文字高亮 %&#125;，唱着我们心肠的曲折这是一个简单的文字&#123;% span warning, 我是一个文字高亮 %&#125;，唱着我们心肠的曲折这是一个简单的文字&#123;% span danger, 我是一个文字高亮 %&#125;，唱着我们心肠的曲折这是一个简单的文字&#123;% span success, 我是一个文字高亮 %&#125;，唱着我们心肠的曲折这是一个简单的文字&#123;% span red, 我是一个文字高亮 %&#125;，唱着我们心肠的曲折这是一个简单的文字&#123;% span green, 我是一个文字高亮 %&#125;，唱着我们心肠的曲折这是一个简单的文字&#123;% span blue, 我是一个文字高亮 %&#125;，唱着我们心肠的曲折&#123;% span center green, 我是一个居中文字高亮 %&#125;这是一个简单的文字&#123;% span large, 我是一个文字高亮 %&#125;，唱着我们心肠的曲折这是一个简单的文字&#123;% span small danger, 我是一个文字高亮 %&#125;，唱着我们心肠的曲折<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+        <content type="html"><![CDATA[<h2 class="bamboo-h " id="tab事例">tab事例</h2><br/><div class="tabs" id="tab-id"><ul class="nav-tabs"><li class="tab active"><a class="#tab-id-1">栏目1</a></li><li class="tab"><a class="#tab-id-2">栏目2</a></li></ul><div class="tab-content"><div class="tab-pane active" id="tab-id-1"><p>。。。</p></div><div class="tab-pane" id="tab-id-2"><p>！！！</p></div></div></div><h3 id="上述事例代码"><a href="#上述事例代码" class="headerlink" title="上述事例代码"></a>上述事例代码</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">&#123;</span>% tabs tab-id %<span class="token punctuation">&#125;</span><span class="token operator">&lt;</span><span class="token operator">!</span>-- tab 栏目1 --<span class="token operator">></span>。。。<span class="token operator">&lt;</span><span class="token operator">!</span>-- endtab --<span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">!</span>-- tab 栏目2 --<span class="token operator">></span>！！！<span class="token operator">&lt;</span><span class="token operator">!</span>-- endtab --<span class="token operator">></span><span class="token punctuation">&#123;</span>% endtabs %<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
       
       
       <categories>
@@ -698,8 +698,8 @@
     
     <entry>
       <title>Hello World2</title>
-      <link href="/2020/01/20/hello-world-copy-16/"/>
-      <url>/2020/01/20/hello-world-copy-16/</url>
+      <link href="/2020/01/20/hello-world-copy-15/"/>
+      <url>/2020/01/20/hello-world-copy-15/</url>
       
         <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo server<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo generate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo deploy<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
       
@@ -711,8 +711,8 @@
     
     <entry>
       <title>Hello World2</title>
-      <link href="/2020/01/20/hello-world-copy-15/"/>
-      <url>/2020/01/20/hello-world-copy-15/</url>
+      <link href="/2020/01/20/hello-world-copy-16/"/>
+      <url>/2020/01/20/hello-world-copy-16/</url>
       
         <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo server<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo generate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo deploy<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
       
@@ -737,8 +737,8 @@
     
     <entry>
       <title>Hello World2</title>
-      <link href="/2020/01/20/hello-world-copy-19/"/>
-      <url>/2020/01/20/hello-world-copy-19/</url>
+      <link href="/2020/01/20/hello-world-copy-18/"/>
+      <url>/2020/01/20/hello-world-copy-18/</url>
       
         <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo server<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo generate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo deploy<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
       
@@ -750,8 +750,8 @@
     
     <entry>
       <title>Hello World2</title>
-      <link href="/2020/01/20/hello-world-copy-18/"/>
-      <url>/2020/01/20/hello-world-copy-18/</url>
+      <link href="/2020/01/20/hello-world-copy-19/"/>
+      <url>/2020/01/20/hello-world-copy-19/</url>
       
         <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo server<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo generate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo deploy<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
       
