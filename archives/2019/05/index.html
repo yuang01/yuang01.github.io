@@ -11,17 +11,20 @@
 
 
   <title>归档: 2019/5 | Bamboo</title>
+
   
     
 <link rel="stylesheet" href="/js/aos/aos.css">
 
   
+
   <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico">
   <link rel="stylesheet" href="https://at.alicdn.com/t/font_1911880_c1nvbyezg17.css">
   <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
   
     <script>
-        var themeModelId = '';
+        var themeModelId = '2';
         if (themeModelId) {
             localStorage.setItem('modelId', themeModelId);
         }
@@ -62,7 +65,7 @@
     <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
     <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
 <meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="Bamboo" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-hopscotch.css" type="text/css"></head>
+</head>
 
   <script src="/js/jquery3.5.1.js"></script>
   <script src="/js/vue2.6.11.js"></script>
@@ -89,7 +92,7 @@ var vm = new Vue({
     methods: {
         WebLocation() {
             let language = navigator.language;
-            let deploy = 'https://github.com/yuang01/yuang01.github.io.git';
+            let deploy = 'https://gitee.com/yuang01/yuang01.git';
             if (language == 'zh-CN') {
                 if (deploy == 'https://github.com/yuang01/yuang01.github.io.git') {
                     this.$confirm({
@@ -119,6 +122,8 @@ var vm = new Vue({
     }
 </style>
   
+  <link href="/js/danmu/barrager.css" rel="stylesheet">
+<script src="/js/danmu/jquery.barrager.js"></script>
   <body>
     <!-- 判断是否为黑夜模式 -->
     <script>
@@ -462,33 +467,35 @@ var vm = new Vue({
     <script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script> 
     
 </header>
-    <div class="bg-floor" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -2;"></div>
     <main class="main" style="margin-top: 60px;">
-      <div class="lazyload archive-header" data-original="/medias/archive.jpg" style="width: 100%;height: 50vh;overflow: hidden;background-size: cover; 
+      <div class="bg-dark-floor" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -2;"></div>
+<div class="lazyload archive-header" data-original="/medias/archive.jpg" style="width: 100%;height: 50vh;overflow: hidden;background-size: cover; 
 background-position: center center;">
 <!-- <span class="title">归档</span> -->
 </div>
-<section class="archive">
-  <div class="archive-content">
-    <ul class="post-archive">
-      
-      
+<div class="archive-main">
+  <section class="archive">
+    <div class="archive-content">
+      <ul class="post-archive">
+        
         
           
-          <div class="year" data-aos="zoom-in-up">
-              <div class="bullet"></div>
-              <a href="/archives/2019">2019</a>
-          </div>
+            
+            <div class="year" data-aos="zoom-in-up">
+                <div class="bullet"></div>
+                <a href="/archives/2019">2019</a>
+            </div>
+          
+          <li class="post-item" data-aos="fade-left">
+            <span class="post-date">05-21</span>
+            <a class="post-title" href="/2019/05/21/hello-world-copy-8/">Hello World8</a>
+          </li>
         
-        <li class="post-item" data-aos="fade-left">
-          <span class="post-date">05-21</span>
-          <a class="post-title" href="/2019/05/21/hello-world-copy-8/">Hello World8</a>
-        </li>
-      
-    </ul>
-  </div>
-</section>
-
+      </ul>
+    </div>
+  </section>
+  
+</div>
     </main>
     <div class="footer bg-color">
   <div class="footer-main">
@@ -597,9 +604,10 @@ background-position: center center;">
     <!-- 图片放大 -->
     
       <script src="/js/fancybox/jquery.fancybox.min.js"></script>
-      <script src="/js/wrapImage.js"></script>
     
 
+    <script src="/js/wrapImage.js"></script>
+    
     <!-- 爱心点击 -->
     
       
@@ -696,7 +704,7 @@ background-position: center center;">
       function doSomething() {
         that.$notify({
           title: "成功",
-          content: "复制成功了哦",
+          content: "代码已复制，请遵守相关授权协议。",
           type: 'success'
         })
         // console.log('ctrl + c 监听成功');  
@@ -730,8 +738,8 @@ background-position: center center;">
           copyHtml += '<button class="btn-copy" data-clipboard-snippet="" style="position:absolute;top:0;right:0;z-index:1;">';
           copyHtml += '<i class="fa fa-copy"></i><span>' + copy + '</span>';
           copyHtml += '</button>';
-          $(".post-detail pre").wrap("<div class='codeBox' style='position:relative;width:100%;'></div>")
-          $(".post-detail pre").before(copyHtml);
+          $(".post-detail pre").not('.gutter pre').wrap("<div class='codeBox' style='position:relative;width:100%;'></div>")
+          $(".post-detail pre").not('.gutter pre').before(copyHtml);
           new ClipboardJS('.btn-copy', {
               target: function(trigger) {
                   return trigger.nextElementSibling;
@@ -741,16 +749,19 @@ background-position: center center;">
         initCopyCode();
       }(window, document);
     </script>
+
     <script src="/js/lazyload/lazyload@1.9.1.js"></script>
     <script>
       $(function() {
         $("div.lazyload, img.lazyload, a.lazyload").lazyload(
             {
                 effect: "fadeIn",
-                placeholder: "https://cdn.pixabay.com/photo/2020/10/24/03/09/street-5680458__340.jpg"    //图片未加载出来时显示的占位图
+                placeholder: "https://img10.360buyimg.com/ddimg/jfs/t1/159345/8/2271/222193/5ff7b36fEe49f5663/a95287c20385127f.gif"    //图片未加载出来时显示的占位图
             }
         );
     });
     </script>
+    
+    <script src="/js/app.js"></script>
   </body>
 </html>

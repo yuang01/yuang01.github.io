@@ -11,17 +11,20 @@
 
 
   <title>这是一个推荐页面 | Bamboo</title>
+
   
     
 <link rel="stylesheet" href="/js/aos/aos.css">
 
   
+
   <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico">
   <link rel="stylesheet" href="https://at.alicdn.com/t/font_1911880_c1nvbyezg17.css">
   <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
   
     <script>
-        var themeModelId = '';
+        var themeModelId = '2';
         if (themeModelId) {
             localStorage.setItem('modelId', themeModelId);
         }
@@ -62,7 +65,7 @@
     <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
     <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
 <meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="Bamboo" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-hopscotch.css" type="text/css"></head>
+</head>
 
   <script src="/js/jquery3.5.1.js"></script>
   <script src="/js/vue2.6.11.js"></script>
@@ -89,7 +92,7 @@ var vm = new Vue({
     methods: {
         WebLocation() {
             let language = navigator.language;
-            let deploy = 'https://github.com/yuang01/yuang01.github.io.git';
+            let deploy = 'https://gitee.com/yuang01/yuang01.git';
             if (language == 'zh-CN') {
                 if (deploy == 'https://github.com/yuang01/yuang01.github.io.git') {
                     this.$confirm({
@@ -119,6 +122,8 @@ var vm = new Vue({
     }
 </style>
   
+  <link href="/js/danmu/barrager.css" rel="stylesheet">
+<script src="/js/danmu/jquery.barrager.js"></script>
   <body>
     <!-- 判断是否为黑夜模式 -->
     <script>
@@ -462,9 +467,135 @@ var vm = new Vue({
     <script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script> 
     
 </header>
-    <div class="bg-floor" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -2;"></div>
     <main class="main" style="margin-top: 60px;">
       
+ <!-- prismjs 代码高亮 -->
+ 
+    
+    <link href="/js/prism/prism-line-numbers.css" rel="stylesheet">
+    
+        <link href="/js/prism/prism.min.css" rel="stylesheet">
+    
+  
+
+<div class="bg-dark-floor" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -1;"></div>
+<div id="appBgSwiper" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -2;" :style="{'background-color': bgColor ? bgColor : 'transparent'}">
+    <transition-group tag="ul" :name="names">
+        <li v-for='(image,index) in img' :key='index' v-show="index === mark" class="bg-swiper-box">
+            <img :src="image" class="bg-swiper-img">
+        </li>
+    </transition-group>
+</div>
+<script>
+    var vm = new Vue({
+        el: '#appBgSwiper',
+        data: {
+            names: '' || 'fade' || 'fade', // translate-fade fade
+            mark: 0,
+            img: [],
+            bgColor: '',
+            time: null
+        },
+        methods: {   //添加方法
+            change(i, m) {
+                if (i > m) {
+                    // this.names = 'fade';
+                } else if (i < m) {
+                    // this.names = 'fade';
+                } else {
+                    return;
+                }
+                this.mark = i;
+            },
+            prev() {
+                // this.names = 'fade';
+                this.mark--;
+                if (this.mark === -1) {
+                    this.mark = 3;
+                    return
+                }
+            },
+            next() {
+                // this.names = 'fade';
+                this.mark++;
+                if (this.mark === this.img.length) {
+                    this.mark = 0;
+                    return
+                }
+            },
+            autoPlay() {
+                // this.names = 'fade';
+                this.mark++;
+                if (this.mark === this.img.length) {
+                    this.mark = 0;
+                    return
+                }
+            },
+            play() {
+                let bgImgDelay = '' || '180000'
+                let delay = parseInt(bgImgDelay) || 180000;
+                this.time = setInterval(this.autoPlay, delay);
+            },
+            enter() {
+                clearInterval(this.time);
+            },
+            leave() {
+                this.play();
+            }
+        },
+        created() {
+            this.play()
+        },
+        beforeDestroy() {
+            clearInterval(this.time);
+        },
+        mounted() {
+            let prop = ''|| 'https://pic1.zhimg.com/80/v2-06a153ed416b73b8406db8f58f79018f_1440w.jpg?source=1940ef5c,https://pic4.zhimg.com/80/v2-18bd4171e36170500130a7ece1e15156_1440w.jpg?source=1940ef5c,https://pic4.zhimg.com/80/v2-6d7d555a0bd00a9e29dafc0174f07aef_1440w.jpg?source=1940ef5c';
+            let isImg = prop.includes('.bmp') || prop.includes('.jpg') || prop.includes('.png') || prop.includes('.tif') || prop.includes('.gif') || prop.includes('.pcx') || prop.includes('.tga') || prop.includes('.exif') || prop.includes('.fpx') || prop.includes('.psd') || prop.includes('.cdr') || prop.includes('.pcd') || prop.includes('.dxf') || prop.includes('.ufo') || prop.includes('.eps') || prop.includes('.ai') || prop.includes('.raw') || prop.includes('.WMF') || prop.includes('.webp') || prop.includes('.jpeg')
+            if (isImg) {
+                let img = prop.split(',');
+                let configRoot = '/'
+                let arrImg = [];
+                img.forEach(el => {
+                    var Expression=/http(s)?:\/\/([\w-]+\.)+[\w-]+(\/[\w- .\/?%&=]*)?/;
+			        var objExp = new RegExp(Expression);
+
+                    if(objExp.test(el)) {
+                        // http or https
+                        arrImg.push(el);
+                    } else {
+                        // 非http or https开头
+                        // 本地文件
+                        let firstStr = el.charAt(0);
+                        if (firstStr == '/') {
+                            el = el.substr(1); // 删除第一个字符 '/',因为 configRoot最后一个字符为 /
+                        }
+                        el = configRoot + el;
+                        arrImg.push(el);
+                    }
+                })
+                this.img = arrImg;
+            } else {
+                this.bgColor = prop;
+            }
+        }
+    })
+</script>
+
+<style>
+    .bg-swiper-box {
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    .bg-swiper-img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+</style>
+
 
 
 <div class="post-detail-header lazyload" id="thumbnail_canvas" data-original="/medias/14.jpg" style="background-repeat: no-repeat; background-size: cover; 
@@ -472,11 +603,30 @@ var vm = new Vue({
   <div class="post-detail-header-mask"></div>
   <canvas id="header_canvas"style="position:absolute;bottom:0"></canvas>
   
-    <span class="title">这是一个推荐页面</span>
+    <div class="title-box">
+      
+        <span class="title" id="post-detail-header-title"></span>
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+          <script>
+            var typed = new Typed("#post-detail-header-title", {
+              strings: ['这是一个推荐页面'],
+              startDelay: 100,
+              typeSpeed: 100,
+              loop: false,
+              backSpeed: 50,
+              showCursor: false
+            });
+          </script>
+        
+    </div>
+  
+  
+  
+    <script src="/js/bubble/bubble.js"></script>
   
 </div>
 
-<script src="/js/bubble/bubble.js"></script>
+
 <div class="row justify-position">
   <div class="main-content">
     <article class="post post-detail">
@@ -530,13 +680,13 @@ var vm = new Vue({
       </div>
       <div class="post-content">
         <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class=" language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span></code></pre>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class=" language-bash"><code class="language-bash">$ hexo server</code></pre>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo server<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class=" language-bash"><code class="language-bash">$ hexo generate</code></pre>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo generate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class=" language-bash"><code class="language-bash">$ hexo deploy</code></pre>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo deploy<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 
       </div>
@@ -571,7 +721,7 @@ var vm = new Vue({
     <div class="post-nav-img lazyload" data-original="/medias/15.jpg" style="background-size: cover; 
       background-position: center center;">
     </div>
-    <a href="/2020/01/20/hello-world-copy-2/" class="post-nav-link">
+    <a href="/2020/01/20/hello-world-copy-20/" class="post-nav-link">
       <div class="title">
         <i class="fa fa-angle-left"></i> 上一篇:
         <div>Hello World2</div>
@@ -709,7 +859,7 @@ var vm = new Vue({
 
 
     
-
+    
     <!-- 评论 -->
       
         <div id="myComment">
@@ -724,7 +874,7 @@ var vm = new Vue({
 		var requiredFields = 'nick,mail';
   		requiredFields  = requiredFields.split(',');
 
-		new Valine({
+		var valine = new Valine({
 			el: '#vcomment',
 			notify: false,
 			verify: false,
@@ -1413,6 +1563,93 @@ var vm = new Vue({
 				"最强蜗牛西能-Hi": "https://i0.hdslb.com/bfs/emote/cacd7cd54a1d210cfacd79f5b1f061708c3dba4e.png",
 			}
 		});
+		
+		function debounce(fn) {
+			var timerID = null
+			return function(){
+				var arg = arguments[0]   //获取事件
+				if(timerID) {
+					clearTimeout (timerID)
+				}
+				timerID = setTimeout( function(){
+					fn(arg)              //事件传入函数
+				},200)
+			}
+		}
+		//查询评论 valine.Q('*').limit(7) -- 查询所有，限制7条, 下面的的代码是查询当前页面
+		let themeDanmu = eval('true');
+		let themeLoop = eval('false');
+		let themeLooperTime = '5000' || 5000;
+		let speed = '20' || 20;
+		let isBarrager = true;
+		if (themeDanmu == true) {
+			do_barrager();
+			$('.navbar').append('<div class="danmuBox"><div class="danmuBtn open"><span class="danmuCircle"></span><span class="danmuText">弹幕</span></div></div>');
+			$('.danmuBtn').on('click', debounce(
+				function () {
+					if ($('.danmuBtn').hasClass('open')) {
+						$('.danmuBtn').removeClass('open')
+						clearInterval(looper);
+						$.fn.barrager.removeAll();
+					} else {
+						$('.danmuBtn').addClass("open");
+						do_barrager();
+					}
+				}
+			))
+		}
+		function do_barrager() {
+			isBarrager && valine.Q(window.location.pathname).find().then(function (comments) {
+				// let num = 0; // 可以记录条数，循环调用的时候只取最新的评论放入弹幕中
+				let run_once = true;
+				let looper_time = themeLooperTime;
+				let total = comments.length;
+				let index = 0;
+				if (total > 0) {
+					barrager();
+				} else {
+					// 当评论数为0的时候，自动关闭弹幕
+					// $('.danmuBtn').removeClass('open');
+				}
+				function barrager() {
+					if(run_once) {
+						//如果是首次执行,则设置一个定时器,并且把首次执行置为false
+						looper = setInterval(barrager,looper_time);                
+						run_once = false;
+					}
+					let content = comments[index]._serverData.comment;
+					let email = comments[index]._serverData.mail;
+					let link = comments[index]._serverData.link;
+					let newcontent = content.substring(0, 50).replace(/<[^>]+>/g,"");
+					//发布一个弹幕
+					const item = {
+						img: `https://q1.qlogo.cn/g?b=qq&nk=${email}&s=640`, //图片 
+						info: newcontent, //文字 
+						href: link, //链接 
+						close:true, //显示关闭按钮 
+						speed: speed, //延迟,单位秒,默认6 
+						color:'#fff', //颜色,默认白色 
+						old_ie_color:'#000000', //ie低版兼容色,不能与网页背景相同,默认黑色
+					}
+					$('body').barrager(item);
+					//索引自增
+					index++;
+					//所有弹幕发布完毕，清除计时器。
+					if(index == total) {
+						clearInterval(looper);
+						if (themeLoop === true) {
+							setTimeout(function(){ 
+								do_barrager();
+							}, 5000);
+						} else {
+							$('.danmuBtn').removeClass('open');
+						}
+						return false;
+					}
+
+				}
+			})
+		}
 	</script>
 </section>
 <style>
@@ -1618,6 +1855,7 @@ var vm = new Vue({
   
 </div>
 
+
     </main>
     <div class="footer bg-color">
   <div class="footer-main">
@@ -1726,9 +1964,10 @@ var vm = new Vue({
     <!-- 图片放大 -->
     
       <script src="/js/fancybox/jquery.fancybox.min.js"></script>
-      <script src="/js/wrapImage.js"></script>
     
 
+    <script src="/js/wrapImage.js"></script>
+    
     <!-- 爱心点击 -->
     
       
@@ -1825,7 +2064,7 @@ var vm = new Vue({
       function doSomething() {
         that.$notify({
           title: "成功",
-          content: "复制成功了哦",
+          content: "代码已复制，请遵守相关授权协议。",
           type: 'success'
         })
         // console.log('ctrl + c 监听成功');  
@@ -1859,8 +2098,8 @@ var vm = new Vue({
           copyHtml += '<button class="btn-copy" data-clipboard-snippet="" style="position:absolute;top:0;right:0;z-index:1;">';
           copyHtml += '<i class="fa fa-copy"></i><span>' + copy + '</span>';
           copyHtml += '</button>';
-          $(".post-detail pre").wrap("<div class='codeBox' style='position:relative;width:100%;'></div>")
-          $(".post-detail pre").before(copyHtml);
+          $(".post-detail pre").not('.gutter pre').wrap("<div class='codeBox' style='position:relative;width:100%;'></div>")
+          $(".post-detail pre").not('.gutter pre').before(copyHtml);
           new ClipboardJS('.btn-copy', {
               target: function(trigger) {
                   return trigger.nextElementSibling;
@@ -1870,16 +2109,19 @@ var vm = new Vue({
         initCopyCode();
       }(window, document);
     </script>
+
     <script src="/js/lazyload/lazyload@1.9.1.js"></script>
     <script>
       $(function() {
         $("div.lazyload, img.lazyload, a.lazyload").lazyload(
             {
                 effect: "fadeIn",
-                placeholder: "https://cdn.pixabay.com/photo/2020/10/24/03/09/street-5680458__340.jpg"    //图片未加载出来时显示的占位图
+                placeholder: "https://img10.360buyimg.com/ddimg/jfs/t1/159345/8/2271/222193/5ff7b36fEe49f5663/a95287c20385127f.gif"    //图片未加载出来时显示的占位图
             }
         );
     });
     </script>
+    
+    <script src="/js/app.js"></script>
   </body>
 </html>

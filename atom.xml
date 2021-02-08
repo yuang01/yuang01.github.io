@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yuang01.github.io/"/>
-  <updated>2021-01-08T02:12:42.198Z</updated>
+  <updated>2021-02-08T04:21:43.550Z</updated>
   <id>http://yuang01.github.io/</id>
   
   <author>
@@ -17,15 +17,15 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Hexo主题--Bamboo介绍（1.3版本）</title>
-    <link href="http://yuang01.github.io/2021/01/05/hexo-theme-bamboo-new/"/>
-    <id>http://yuang01.github.io/2021/01/05/hexo-theme-bamboo-new/</id>
-    <published>2021-01-05T15:28:00.000Z</published>
-    <updated>2021-01-08T02:12:42.198Z</updated>
+    <title>Hexo主题--Bamboo介绍</title>
+    <link href="http://yuang01.github.io/2021/02/08/hexo-theme-bamboo-new/"/>
+    <id>http://yuang01.github.io/2021/02/08/hexo-theme-bamboo-new/</id>
+    <published>2021-02-08T04:35:00.000Z</published>
+    <updated>2021-02-08T04:21:43.550Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;该文档是版本1.3的文档，版本号可以从主题下的&lt;code&gt;package.json&lt;/code&gt;查看&lt;br&gt;这是一个基于Hexo的响应式博客主题，&lt;a href=&quot;https://yuang01.github.io/&quot;&gt;演示示例&lt;/a&gt;，| QQ交流:&lt;code&gt;1730241541&lt;/code&gt;&lt;/p&gt;
+      &lt;p&gt;该文档是版本1.8的文档，版本号可以从主题下的&lt;code&gt;package.json&lt;/code&gt;查看&lt;br&gt;这是一款既可以&lt;span class=&#39;p large red&#39;&gt;花&lt;/span&gt;&lt;span class=&#39;p large green&#39;&gt;里&lt;/span&gt;&lt;span class=&#39;p large blue&#39;&gt;胡&lt;/span&gt;&lt;span class=&#39;p large info&#39;&gt;哨&lt;/span&gt;又可以&lt;span class=&#39;p large&#39;&gt;简洁&lt;/span&gt;的主题，只需要简单配置即可，&lt;a href=&quot;https://yuang01.github.io/&quot;&gt;演示示例&lt;/a&gt;，| QQ交流:&lt;code&gt;1730241541&lt;/code&gt;&lt;/p&gt;
     
     </summary>
     
@@ -40,38 +40,11 @@
   </entry>
   
   <entry>
-    <title>vue代码风格</title>
-    <link href="http://yuang01.github.io/2021/01/05/hello-world-copy-10/"/>
-    <id>http://yuang01.github.io/2021/01/05/hello-world-copy-10/</id>
-    <published>2021-01-05T15:19:41.777Z</published>
-    <updated>2021-01-05T15:34:39.656Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on [GitHub]ewwerwrw&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="前端" scheme="http://yuang01.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-      <category term="运维" scheme="http://yuang01.github.io/categories/%E5%89%8D%E7%AB%AF/%E8%BF%90%E7%BB%B4/"/>
-    
-      <category term="攻城狮" scheme="http://yuang01.github.io/categories/%E5%89%8D%E7%AB%AF/%E8%BF%90%E7%BB%B4/%E6%94%BB%E5%9F%8E%E7%8B%AE/"/>
-    
-    
-      <category term="vue" scheme="http://yuang01.github.io/tags/vue/"/>
-    
-      <category term="html" scheme="http://yuang01.github.io/tags/html/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>testimg</title>
-    <link href="http://yuang01.github.io/2021/01/05/testimg/"/>
-    <id>http://yuang01.github.io/2021/01/05/testimg/</id>
-    <published>2021-01-05T09:35:59.000Z</published>
-    <updated>2021-01-05T15:19:41.847Z</updated>
+    <title>按钮</title>
+    <link href="http://yuang01.github.io/2021/02/08/btn/"/>
+    <id>http://yuang01.github.io/2021/02/08/btn/</id>
+    <published>2021-02-08T03:36:00.000Z</published>
+    <updated>2021-02-08T04:15:44.605Z</updated>
     
     <summary type="html">
     
@@ -79,33 +52,8 @@
       
         
         
-          &lt;p&gt;&lt;img src=&quot;/img/1.jpg&quot; alt=&quot;Image
-        
-      
-    
-    </summary>
-    
-    
-      <category term="前端" scheme="http://yuang01.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>test tag</title>
-    <link href="http://yuang01.github.io/2020/12/29/test/"/>
-    <id>http://yuang01.github.io/2020/12/29/test/</id>
-    <published>2020-12-29T03:35:00.000Z</published>
-    <updated>2021-01-05T15:26:56.340Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;```&lt;/p&gt;
-
+          &lt;h2 class=&quot;bamboo-h &quot; id=&quot;融入段落中按钮&quot;&gt;融入段落中按钮&lt;/h2&gt;&lt;br/&gt;
+&lt;p&gt;不设置任何参数的 &lt;span class=&#39;btn&#39;&gt;&lt;a class=&quot;button&quot; href=&#39;/&#39; title=&#39;按钮&#39;&gt;按钮&lt;/a&gt;&lt;/span&gt;
         
       
     
@@ -120,15 +68,23 @@
   </entry>
   
   <entry>
-    <title>Hexo主题--Bamboo介绍(1.2.1)</title>
-    <link href="http://yuang01.github.io/2020/09/14/hexo-theme-bamboo/"/>
-    <id>http://yuang01.github.io/2020/09/14/hexo-theme-bamboo/</id>
-    <published>2020-09-14T06:06:00.000Z</published>
-    <updated>2021-01-05T15:27:24.575Z</updated>
+    <title>audio音频</title>
+    <link href="http://yuang01.github.io/2021/02/08/audio/"/>
+    <id>http://yuang01.github.io/2021/02/08/audio/</id>
+    <published>2021-02-08T03:35:00.000Z</published>
+    <updated>2021-02-08T04:13:26.041Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;这是一个基于Hexo的响应式博客主题，&lt;a href=&quot;https://yuang01.github.io/&quot;&gt;演示示例&lt;/a&gt;，| QQ交流:&lt;code&gt;1730241541&lt;/code&gt;&lt;/p&gt;
+      
+      
+        
+        
+          &lt;h2 class=&quot;bamboo-h &quot; id=&quot;事例&quot;&gt;事例&lt;/h2&gt;&lt;br/&gt;
+
+&lt;div class=&quot;audio&quot;&gt;&lt;audio controls preload&gt;&lt;source
+        
+      
     
     </summary>
     
@@ -136,69 +92,16 @@
       <category term="前端" scheme="http://yuang01.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="Hexo" scheme="http://yuang01.github.io/tags/Hexo/"/>
-    
-      <category term="hexo-theme-bamboo" scheme="http://yuang01.github.io/tags/hexo-theme-bamboo/"/>
+      <category term="tag" scheme="http://yuang01.github.io/tags/tag/"/>
     
   </entry>
   
   <entry>
-    <title>Hello World12</title>
-    <link href="http://yuang01.github.io/2020/09/10/hello-world-copy-12/"/>
-    <id>http://yuang01.github.io/2020/09/10/hello-world-copy-12/</id>
-    <published>2020-09-10T06:06:00.000Z</published>
-    <updated>2021-01-05T15:19:41.819Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World13</title>
-    <link href="http://yuang01.github.io/2020/09/10/hello-world-copy-13/"/>
-    <id>http://yuang01.github.io/2020/09/10/hello-world-copy-13/</id>
-    <published>2020-09-10T06:06:00.000Z</published>
-    <updated>2021-01-05T15:23:15.371Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://yuang01.github.io/2020/09/10/hello-world/"/>
-    <id>http://yuang01.github.io/2020/09/10/hello-world/</id>
-    <published>2020-09-10T06:06:00.000Z</published>
-    <updated>2021-01-05T15:30:33.303Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World good</title>
-    <link href="http://yuang01.github.io/2020/07/20/hello-world-copy-6/"/>
-    <id>http://yuang01.github.io/2020/07/20/hello-world-copy-6/</id>
-    <published>2020-07-20T13:11:00.000Z</published>
-    <updated>2021-01-05T15:28:03.912Z</updated>
+    <title>checkbox</title>
+    <link href="http://yuang01.github.io/2021/02/08/checkbox/"/>
+    <id>http://yuang01.github.io/2021/02/08/checkbox/</id>
+    <published>2021-02-08T03:35:00.000Z</published>
+    <updated>2021-02-08T04:18:28.706Z</updated>
     
     <summary type="html">
     
@@ -206,22 +109,29 @@
       
         
         
-          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;
+          &lt;div class=&#39;checkbox&#39;&gt;&lt;input type=&quot;checkbox&quot; /&gt;
+            &lt;p&gt;纯文本测试&lt;/p&gt;
+            &lt;/div&gt;
+&lt;div class=&#39;checkbox checked&#39;&gt;&lt;input
         
       
     
     </summary>
     
     
+      <category term="前端" scheme="http://yuang01.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="tag" scheme="http://yuang01.github.io/tags/tag/"/>
     
   </entry>
   
   <entry>
-    <title>Hello World7</title>
-    <link href="http://yuang01.github.io/2020/06/20/hello-world-copy-7/"/>
-    <id>http://yuang01.github.io/2020/06/20/hello-world-copy-7/</id>
-    <published>2020-06-20T13:11:00.000Z</published>
-    <updated>2021-01-05T15:19:41.835Z</updated>
+    <title>folding折叠</title>
+    <link href="http://yuang01.github.io/2021/02/08/folding/"/>
+    <id>http://yuang01.github.io/2021/02/08/folding/</id>
+    <published>2021-02-08T03:35:00.000Z</published>
+    <updated>2021-02-08T04:18:31.750Z</updated>
     
     <summary type="html">
     
@@ -229,22 +139,27 @@
       
         
         
-          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;
+          &lt;p&gt;&lt;span&gt;&lt;img src=&#39;https://cdn.jsdelivr.net/gh/deepkolos/wechat-emoji/emoji/不屑.png&#39; style=&#39;height:24px&#39;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h2 class=&quot;bamboo-h &quot;
         
       
     
     </summary>
     
     
+      <category term="前端" scheme="http://yuang01.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="tag" scheme="http://yuang01.github.io/tags/tag/"/>
     
   </entry>
   
   <entry>
-    <title>Hello World9</title>
-    <link href="http://yuang01.github.io/2020/06/20/hello-world-copy-9/"/>
-    <id>http://yuang01.github.io/2020/06/20/hello-world-copy-9/</id>
-    <published>2020-06-20T13:11:00.000Z</published>
-    <updated>2021-01-05T15:31:20.125Z</updated>
+    <title>gallery图片</title>
+    <link href="http://yuang01.github.io/2021/02/08/gallery/"/>
+    <id>http://yuang01.github.io/2021/02/08/gallery/</id>
+    <published>2021-02-08T03:35:00.000Z</published>
+    <updated>2021-02-08T04:18:35.095Z</updated>
     
     <summary type="html">
     
@@ -252,22 +167,26 @@
       
         
         
-          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;
+          &lt;div class=&quot;note
         
       
     
     </summary>
     
     
+      <category term="前端" scheme="http://yuang01.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="tag" scheme="http://yuang01.github.io/tags/tag/"/>
     
   </entry>
   
   <entry>
-    <title>Hello World2</title>
-    <link href="http://yuang01.github.io/2020/01/20/hello-world-copy-14/"/>
-    <id>http://yuang01.github.io/2020/01/20/hello-world-copy-14/</id>
-    <published>2020-01-20T13:11:00.000Z</published>
-    <updated>2021-01-05T15:23:18.513Z</updated>
+    <title>Github卡片</title>
+    <link href="http://yuang01.github.io/2021/02/08/ghcard/"/>
+    <id>http://yuang01.github.io/2021/02/08/ghcard/</id>
+    <published>2021-02-08T03:35:00.000Z</published>
+    <updated>2021-02-08T04:18:38.257Z</updated>
     
     <summary type="html">
     
@@ -275,22 +194,27 @@
       
         
         
-          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;
+          &lt;h2 class=&quot;bamboo-h &quot; id=&quot;Github用户卡片&quot;&gt;Github用户卡片&lt;/h2&gt;&lt;br/&gt;
+&lt;a class=&quot;ghcard&quot; rel=&quot;external nofollow noopener noreferrer&quot;
         
       
     
     </summary>
     
     
+      <category term="前端" scheme="http://yuang01.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="tag" scheme="http://yuang01.github.io/tags/tag/"/>
     
   </entry>
   
   <entry>
-    <title>Hello World2</title>
-    <link href="http://yuang01.github.io/2020/01/20/hello-world-copy-15/"/>
-    <id>http://yuang01.github.io/2020/01/20/hello-world-copy-15/</id>
-    <published>2020-01-20T13:11:00.000Z</published>
-    <updated>2021-01-05T15:23:21.602Z</updated>
+    <title>lineImage标签</title>
+    <link href="http://yuang01.github.io/2021/02/08/inlineimage/"/>
+    <id>http://yuang01.github.io/2021/02/08/inlineimage/</id>
+    <published>2021-02-08T03:35:00.000Z</published>
+    <updated>2021-02-08T04:18:42.691Z</updated>
     
     <summary type="html">
     
@@ -298,22 +222,27 @@
       
         
         
-          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;
+          &lt;h2 class=&quot;bamboo-h &quot; id=&quot;段落中插入图片&quot;&gt;段落中插入图片&lt;/h2&gt;&lt;br/&gt;
+&lt;p&gt;这是 &lt;img no-lazy class=&quot;inline&quot;
         
       
     
     </summary>
     
     
+      <category term="前端" scheme="http://yuang01.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="tag" scheme="http://yuang01.github.io/tags/tag/"/>
     
   </entry>
   
   <entry>
-    <title>Hello World2</title>
-    <link href="http://yuang01.github.io/2020/01/20/hello-world-copy-16/"/>
-    <id>http://yuang01.github.io/2020/01/20/hello-world-copy-16/</id>
-    <published>2020-01-20T13:11:00.000Z</published>
-    <updated>2021-01-05T15:23:24.523Z</updated>
+    <title>Link标签</title>
+    <link href="http://yuang01.github.io/2021/02/08/link/"/>
+    <id>http://yuang01.github.io/2021/02/08/link/</id>
+    <published>2021-02-08T03:35:00.000Z</published>
+    <updated>2021-02-08T04:18:45.679Z</updated>
     
     <summary type="html">
     
@@ -321,22 +250,28 @@
       
         
         
-          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;
+          &lt;h2 class=&quot;bamboo-h &quot; id=&quot;超链接标签&quot;&gt;超链接标签&lt;/h2&gt;&lt;br/&gt;
+
+&lt;div class=&quot;tagLink&quot;&gt;&lt;a class=&quot;link-card&quot; title=&quot;如何参与项目&quot; href=&quot;http://www.baidu.com&quot;&gt;&lt;div
         
       
     
     </summary>
     
     
+      <category term="前端" scheme="http://yuang01.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="tag" scheme="http://yuang01.github.io/tags/tag/"/>
     
   </entry>
   
   <entry>
-    <title>Hello World2</title>
-    <link href="http://yuang01.github.io/2020/01/20/hello-world-copy-17/"/>
-    <id>http://yuang01.github.io/2020/01/20/hello-world-copy-17/</id>
-    <published>2020-01-20T13:11:00.000Z</published>
-    <updated>2021-01-05T15:29:19.716Z</updated>
+    <title>NoteBlock</title>
+    <link href="http://yuang01.github.io/2021/02/08/noteblock/"/>
+    <id>http://yuang01.github.io/2021/02/08/noteblock/</id>
+    <published>2021-02-08T03:35:00.000Z</published>
+    <updated>2021-02-08T04:18:52.169Z</updated>
     
     <summary type="html">
     
@@ -344,22 +279,28 @@
       
         
         
-          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;
+          &lt;h2 class=&quot;bamboo-h &quot; id=&quot;noteblock演示效果&quot;&gt;noteblock演示效果&lt;/h2&gt;&lt;br/&gt;
+
+&lt;div class=&quot;note
         
       
     
     </summary>
     
     
+      <category term="前端" scheme="http://yuang01.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="tag" scheme="http://yuang01.github.io/tags/tag/"/>
     
   </entry>
   
   <entry>
-    <title>Hello World2</title>
-    <link href="http://yuang01.github.io/2020/01/20/hello-world-copy-18/"/>
-    <id>http://yuang01.github.io/2020/01/20/hello-world-copy-18/</id>
-    <published>2020-01-20T13:11:00.000Z</published>
-    <updated>2021-01-05T15:26:33.162Z</updated>
+    <title>Note标签</title>
+    <link href="http://yuang01.github.io/2021/02/08/note/"/>
+    <id>http://yuang01.github.io/2021/02/08/note/</id>
+    <published>2021-02-08T03:35:00.000Z</published>
+    <updated>2021-02-08T04:18:48.958Z</updated>
     
     <summary type="html">
     
@@ -367,22 +308,30 @@
       
         
         
-          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;
+          &lt;h2 class=&quot;bamboo-h &quot; id=&quot;note演示效果&quot;&gt;note演示效果&lt;/h2&gt;&lt;br/&gt;
+&lt;blockquote&gt;
+&lt;p&gt;markdown默认写法，左边框颜色，随着主题色改变&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&quot;note
         
       
     
     </summary>
     
     
+      <category term="前端" scheme="http://yuang01.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="tag" scheme="http://yuang01.github.io/tags/tag/"/>
     
   </entry>
   
   <entry>
-    <title>Hello World2</title>
-    <link href="http://yuang01.github.io/2020/01/20/hello-world-copy-19/"/>
-    <id>http://yuang01.github.io/2020/01/20/hello-world-copy-19/</id>
-    <published>2020-01-20T13:11:00.000Z</published>
-    <updated>2021-01-05T15:23:33.811Z</updated>
+    <title>段落文本</title>
+    <link href="http://yuang01.github.io/2021/02/08/p/"/>
+    <id>http://yuang01.github.io/2021/02/08/p/</id>
+    <published>2021-02-08T03:35:00.000Z</published>
+    <updated>2021-02-08T04:18:56.141Z</updated>
     
     <summary type="html">
     
@@ -390,22 +339,28 @@
       
         
         
-          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;
+          &lt;h2 class=&quot;bamboo-h &quot; id=&quot;段落文本演示&quot;&gt;段落文本演示&lt;/h2&gt;&lt;br/&gt;
+&lt;p class=&#39;p yellow&#39;&gt;我是一个文本高亮大萨达所多撒多撒多撒大多多撒多撒多撒大所多撒大多&lt;/p&gt;
+&lt;p class=&#39;p
         
       
     
     </summary>
     
     
+      <category term="前端" scheme="http://yuang01.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="tag" scheme="http://yuang01.github.io/tags/tag/"/>
     
   </entry>
   
   <entry>
-    <title>Hello World2</title>
-    <link href="http://yuang01.github.io/2020/01/20/hello-world-copy-20/"/>
-    <id>http://yuang01.github.io/2020/01/20/hello-world-copy-20/</id>
-    <published>2020-01-20T13:11:00.000Z</published>
-    <updated>2021-01-05T15:28:59.759Z</updated>
+    <title>radio</title>
+    <link href="http://yuang01.github.io/2021/02/08/radio/"/>
+    <id>http://yuang01.github.io/2021/02/08/radio/</id>
+    <published>2021-02-08T03:35:00.000Z</published>
+    <updated>2021-02-08T04:19:03.918Z</updated>
     
     <summary type="html">
     
@@ -413,22 +368,29 @@
       
         
         
-          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;
+          &lt;h2 class=&quot;bamboo-h &quot; id=&quot;radio&quot;&gt;radio&lt;/h2&gt;&lt;br/&gt;
+&lt;div class=&#39;checkbox&#39;&gt;&lt;input type=&quot;radio&quot; /&gt;
+            &lt;p&gt;纯文本测试&lt;/p&gt;
+           
         
       
     
     </summary>
     
     
+      <category term="前端" scheme="http://yuang01.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="tag" scheme="http://yuang01.github.io/tags/tag/"/>
     
   </entry>
   
   <entry>
-    <title>Hello World2</title>
-    <link href="http://yuang01.github.io/2020/01/20/hello-world-copy-2/"/>
-    <id>http://yuang01.github.io/2020/01/20/hello-world-copy-2/</id>
-    <published>2020-01-20T13:11:00.000Z</published>
-    <updated>2021-01-05T15:19:50.099Z</updated>
+    <title>文本高亮</title>
+    <link href="http://yuang01.github.io/2021/02/08/pbg/"/>
+    <id>http://yuang01.github.io/2021/02/08/pbg/</id>
+    <published>2021-02-08T03:35:00.000Z</published>
+    <updated>2021-02-08T04:19:00.293Z</updated>
     
     <summary type="html">
     
@@ -436,22 +398,27 @@
       
         
         
-          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;
+          &lt;h2 class=&quot;bamboo-h &quot; id=&quot;文本高亮演示效果&quot;&gt;文本高亮演示效果&lt;/h2&gt;&lt;br/&gt;
+&lt;p&gt;这是一个简单的文字&lt;span class=&#39;pbg yellow&#39;&gt;我是一个文本高亮&lt;/span&gt;，唱着我们心肠的曲折&lt;br&gt;这是一个简单的文字&lt;span
         
       
     
     </summary>
     
     
+      <category term="前端" scheme="http://yuang01.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="tag" scheme="http://yuang01.github.io/tags/tag/"/>
     
   </entry>
   
   <entry>
-    <title>这是一个推荐页面</title>
-    <link href="http://yuang01.github.io/2019/08/20/hello-world-copy-3/"/>
-    <id>http://yuang01.github.io/2019/08/20/hello-world-copy-3/</id>
-    <published>2019-08-20T13:11:00.000Z</published>
-    <updated>2021-01-05T15:24:52.052Z</updated>
+    <title>site-card</title>
+    <link href="http://yuang01.github.io/2021/02/08/site-card/"/>
+    <id>http://yuang01.github.io/2021/02/08/site-card/</id>
+    <published>2021-02-08T03:35:00.000Z</published>
+    <updated>2021-02-08T04:19:08.305Z</updated>
     
     <summary type="html">
     
@@ -459,29 +426,163 @@
       
         
         
-          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;
+          &lt;h2 class=&quot;bamboo-h &quot; id=&quot;site-card演示&quot;&gt;site-card演示&lt;/h2&gt;&lt;br/&gt;
+&lt;div class=&quot;site-card-group&quot;&gt;&lt;a class=&quot;site-card&quot;
         
       
     
     </summary>
     
     
+      <category term="前端" scheme="http://yuang01.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
     
-      <category term="vue" scheme="http://yuang01.github.io/tags/vue/"/>
     
-      <category term="test1" scheme="http://yuang01.github.io/tags/test1/"/>
+      <category term="tag" scheme="http://yuang01.github.io/tags/tag/"/>
     
-      <category term="test2" scheme="http://yuang01.github.io/tags/test2/"/>
+  </entry>
+  
+  <entry>
+    <title>文字颜色</title>
+    <link href="http://yuang01.github.io/2021/02/08/span/"/>
+    <id>http://yuang01.github.io/2021/02/08/span/</id>
+    <published>2021-02-08T03:35:00.000Z</published>
+    <updated>2021-02-08T04:19:11.484Z</updated>
     
-      <category term="test3" scheme="http://yuang01.github.io/tags/test3/"/>
+    <summary type="html">
     
-      <category term="test4" scheme="http://yuang01.github.io/tags/test4/"/>
+      
+      
+        
+        
+          &lt;h2 class=&quot;bamboo-h &quot; id=&quot;文字颜色演示效果&quot;&gt;文字颜色演示效果&lt;/h2&gt;&lt;br/&gt;
+&lt;p&gt;这是一个简单的文字&lt;span class=&#39;p yellow&#39;&gt;我是一个文字高亮&lt;/span&gt;，唱着我们心肠的曲折&lt;br&gt;这是一个简单的文字&lt;span
+        
+      
     
-      <category term="test5" scheme="http://yuang01.github.io/tags/test5/"/>
+    </summary>
     
-      <category term="test6" scheme="http://yuang01.github.io/tags/test6/"/>
     
-      <category term="test7" scheme="http://yuang01.github.io/tags/test7/"/>
+      <category term="前端" scheme="http://yuang01.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="tag" scheme="http://yuang01.github.io/tags/tag/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>tab</title>
+    <link href="http://yuang01.github.io/2021/02/08/tab/"/>
+    <id>http://yuang01.github.io/2021/02/08/tab/</id>
+    <published>2021-02-08T03:35:00.000Z</published>
+    <updated>2021-02-08T04:19:14.518Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 class=&quot;bamboo-h &quot; id=&quot;tab事例&quot;&gt;tab事例&lt;/h2&gt;&lt;br/&gt;
+&lt;div class=&quot;tabs&quot; id=&quot;tab-id&quot;&gt;&lt;ul class=&quot;nav-tabs&quot;&gt;&lt;li class=&quot;tab active&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="前端" scheme="http://yuang01.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="tag" scheme="http://yuang01.github.io/tags/tag/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>timeline时间线</title>
+    <link href="http://yuang01.github.io/2021/02/08/timeline/"/>
+    <id>http://yuang01.github.io/2021/02/08/timeline/</id>
+    <published>2021-02-08T03:35:00.000Z</published>
+    <updated>2021-02-08T04:19:20.986Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 class=&quot;bamboo-h &quot; id=&quot;timeline时间线演示&quot;&gt;timeline时间线演示&lt;/h2&gt;&lt;br/&gt;
+&lt;div class=&quot;timeline&quot;&gt;
+&lt;div class=&quot;timenode&quot;&gt;&lt;div
+        
+      
+    
+    </summary>
+    
+    
+      <category term="前端" scheme="http://yuang01.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="tag" scheme="http://yuang01.github.io/tags/tag/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Text文本样式标签</title>
+    <link href="http://yuang01.github.io/2021/02/08/text/"/>
+    <id>http://yuang01.github.io/2021/02/08/text/</id>
+    <published>2021-02-08T03:35:00.000Z</published>
+    <updated>2021-02-08T04:19:17.832Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 class=&quot;bamboo-h &quot; id=&quot;Text文本样式标签演示&quot;&gt;Text文本样式标签演示&lt;/h2&gt;&lt;br/&gt;
+
+&lt;p&gt;带 &lt;u&gt;下划线&lt;/u&gt; 的文本&lt;/p&gt;
+&lt;p&gt;带 &lt;emp&gt;着重号&lt;/emp&gt; 的文本&lt;/p&gt;
+&lt;p&gt;带 &lt;wavy&gt;波浪线&lt;/wavy&gt;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="前端" scheme="http://yuang01.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="tag" scheme="http://yuang01.github.io/tags/tag/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>video视频</title>
+    <link href="http://yuang01.github.io/2021/02/08/video/"/>
+    <id>http://yuang01.github.io/2021/02/08/video/</id>
+    <published>2021-02-08T03:35:00.000Z</published>
+    <updated>2021-02-08T04:19:28.197Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 class=&quot;bamboo-h &quot; id=&quot;video演示&quot;&gt;video演示&lt;/h2&gt;&lt;br/&gt;
+&lt;p&gt;100%宽度&lt;/p&gt;
+&lt;div class=&quot;video&quot;&gt;&lt;video controls preload&gt;&lt;source
+        
+      
+    
+    </summary>
+    
+    
+      <category term="前端" scheme="http://yuang01.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="tag" scheme="http://yuang01.github.io/tags/tag/"/>
     
   </entry>
   

@@ -11,17 +11,20 @@
 
 
   <title>vue.js实现左侧导航栏和tab切换页面效果 | Bamboo</title>
+
   
     
 <link rel="stylesheet" href="/js/aos/aos.css">
 
   
+
   <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico">
   <link rel="stylesheet" href="https://at.alicdn.com/t/font_1911880_c1nvbyezg17.css">
   <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
   
     <script>
-        var themeModelId = '';
+        var themeModelId = '2';
         if (themeModelId) {
             localStorage.setItem('modelId', themeModelId);
         }
@@ -62,7 +65,7 @@
     <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
     <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
 <meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="Bamboo" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-hopscotch.css" type="text/css"></head>
+</head>
 
   <script src="/js/jquery3.5.1.js"></script>
   <script src="/js/vue2.6.11.js"></script>
@@ -89,7 +92,7 @@ var vm = new Vue({
     methods: {
         WebLocation() {
             let language = navigator.language;
-            let deploy = 'https://github.com/yuang01/yuang01.github.io.git';
+            let deploy = 'https://gitee.com/yuang01/yuang01.git';
             if (language == 'zh-CN') {
                 if (deploy == 'https://github.com/yuang01/yuang01.github.io.git') {
                     this.$confirm({
@@ -119,6 +122,8 @@ var vm = new Vue({
     }
 </style>
   
+  <link href="/js/danmu/barrager.css" rel="stylesheet">
+<script src="/js/danmu/jquery.barrager.js"></script>
   <body>
     <!-- 判断是否为黑夜模式 -->
     <script>
@@ -462,9 +467,135 @@ var vm = new Vue({
     <script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script> 
     
 </header>
-    <div class="bg-floor" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -2;"></div>
     <main class="main" style="margin-top: 60px;">
       
+ <!-- prismjs 代码高亮 -->
+ 
+    
+    <link href="/js/prism/prism-line-numbers.css" rel="stylesheet">
+    
+        <link href="/js/prism/prism.min.css" rel="stylesheet">
+    
+  
+
+<div class="bg-dark-floor" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -1;"></div>
+<div id="appBgSwiper" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -2;" :style="{'background-color': bgColor ? bgColor : 'transparent'}">
+    <transition-group tag="ul" :name="names">
+        <li v-for='(image,index) in img' :key='index' v-show="index === mark" class="bg-swiper-box">
+            <img :src="image" class="bg-swiper-img">
+        </li>
+    </transition-group>
+</div>
+<script>
+    var vm = new Vue({
+        el: '#appBgSwiper',
+        data: {
+            names: '' || 'fade' || 'fade', // translate-fade fade
+            mark: 0,
+            img: [],
+            bgColor: '',
+            time: null
+        },
+        methods: {   //添加方法
+            change(i, m) {
+                if (i > m) {
+                    // this.names = 'fade';
+                } else if (i < m) {
+                    // this.names = 'fade';
+                } else {
+                    return;
+                }
+                this.mark = i;
+            },
+            prev() {
+                // this.names = 'fade';
+                this.mark--;
+                if (this.mark === -1) {
+                    this.mark = 3;
+                    return
+                }
+            },
+            next() {
+                // this.names = 'fade';
+                this.mark++;
+                if (this.mark === this.img.length) {
+                    this.mark = 0;
+                    return
+                }
+            },
+            autoPlay() {
+                // this.names = 'fade';
+                this.mark++;
+                if (this.mark === this.img.length) {
+                    this.mark = 0;
+                    return
+                }
+            },
+            play() {
+                let bgImgDelay = '' || '180000'
+                let delay = parseInt(bgImgDelay) || 180000;
+                this.time = setInterval(this.autoPlay, delay);
+            },
+            enter() {
+                clearInterval(this.time);
+            },
+            leave() {
+                this.play();
+            }
+        },
+        created() {
+            this.play()
+        },
+        beforeDestroy() {
+            clearInterval(this.time);
+        },
+        mounted() {
+            let prop = ''|| 'https://pic1.zhimg.com/80/v2-06a153ed416b73b8406db8f58f79018f_1440w.jpg?source=1940ef5c,https://pic4.zhimg.com/80/v2-18bd4171e36170500130a7ece1e15156_1440w.jpg?source=1940ef5c,https://pic4.zhimg.com/80/v2-6d7d555a0bd00a9e29dafc0174f07aef_1440w.jpg?source=1940ef5c';
+            let isImg = prop.includes('.bmp') || prop.includes('.jpg') || prop.includes('.png') || prop.includes('.tif') || prop.includes('.gif') || prop.includes('.pcx') || prop.includes('.tga') || prop.includes('.exif') || prop.includes('.fpx') || prop.includes('.psd') || prop.includes('.cdr') || prop.includes('.pcd') || prop.includes('.dxf') || prop.includes('.ufo') || prop.includes('.eps') || prop.includes('.ai') || prop.includes('.raw') || prop.includes('.WMF') || prop.includes('.webp') || prop.includes('.jpeg')
+            if (isImg) {
+                let img = prop.split(',');
+                let configRoot = '/'
+                let arrImg = [];
+                img.forEach(el => {
+                    var Expression=/http(s)?:\/\/([\w-]+\.)+[\w-]+(\/[\w- .\/?%&=]*)?/;
+			        var objExp = new RegExp(Expression);
+
+                    if(objExp.test(el)) {
+                        // http or https
+                        arrImg.push(el);
+                    } else {
+                        // 非http or https开头
+                        // 本地文件
+                        let firstStr = el.charAt(0);
+                        if (firstStr == '/') {
+                            el = el.substr(1); // 删除第一个字符 '/',因为 configRoot最后一个字符为 /
+                        }
+                        el = configRoot + el;
+                        arrImg.push(el);
+                    }
+                })
+                this.img = arrImg;
+            } else {
+                this.bgColor = prop;
+            }
+        }
+    })
+</script>
+
+<style>
+    .bg-swiper-box {
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    .bg-swiper-img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+</style>
+
 
 
 <div class="post-detail-header lazyload" id="thumbnail_canvas" data-original="/medias/3.jpg" style="background-repeat: no-repeat; background-size: cover; 
@@ -472,11 +603,30 @@ var vm = new Vue({
   <div class="post-detail-header-mask"></div>
   <canvas id="header_canvas"style="position:absolute;bottom:0"></canvas>
   
-    <span class="title">vue.js实现左侧导航栏和tab切换页面效果</span>
+    <div class="title-box">
+      
+        <span class="title" id="post-detail-header-title"></span>
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+          <script>
+            var typed = new Typed("#post-detail-header-title", {
+              strings: ['vue.js实现左侧导航栏和tab切换页面效果'],
+              startDelay: 100,
+              typeSpeed: 100,
+              loop: false,
+              backSpeed: 50,
+              showCursor: false
+            });
+          </script>
+        
+    </div>
+  
+  
+  
+    <script src="/js/bubble/bubble.js"></script>
   
 </div>
 
-<script src="/js/bubble/bubble.js"></script>
+
 <div class="row justify-position">
   <div class="main-content">
     <article class="post post-detail">
@@ -521,66 +671,66 @@ var vm = new Vue({
 <p>代码地址<br><a target="_blank" rel="noopener" href="https://github.com/yuang01/remark-ui-vue/blob/master/src/views/Layout/Tabbar/Tabbar.vue">https://github.com/yuang01/remark-ui-vue/blob/master/src/views/Layout/Tabbar/Tabbar.vue</a></p>
 </blockquote>
 <h1 id="路由定义"><a href="#路由定义" class="headerlink" title="路由定义"></a>路由定义</h1><p>我是通过路由生成的左侧导航栏，所以首先定义路由至关重要，需要遵循一些规则。我的配置是这样的：<a target="_blank" rel="noopener" href="https://github.com/yuang01/remark-ui-vue/blob/master/src/router/index.js">router</a>。<br>这样定义是不会出现在侧边栏上的</p>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token punctuation">{</span>
-  path<span class="token punctuation">:</span> <span class="token string">'/login'</span><span class="token punctuation">,</span>
-  component<span class="token punctuation">:</span> Login<span class="token punctuation">,</span>
-<span class="token punctuation">}</span><span class="token punctuation">,</span></code></pre>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token punctuation">&#123;</span>
+  path<span class="token operator">:</span> <span class="token string">'/login'</span><span class="token punctuation">,</span>
+  component<span class="token operator">:</span> Login<span class="token punctuation">,</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">,</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 <p>这样定义才会出现在侧边栏上</p>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token punctuation">{</span>
-  path<span class="token punctuation">:</span> <span class="token string">'/basicUi'</span><span class="token punctuation">,</span>
-  component<span class="token punctuation">:</span> Layout<span class="token punctuation">,</span>
-  redirect<span class="token punctuation">:</span> <span class="token string">'/basicUi/index'</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// 重定向地址</span>
-  <span class="token comment" spellcheck="true">// meta: { icon: 'inbox', title: 'Basic UI' },</span>
-  children<span class="token punctuation">:</span> <span class="token punctuation">[</span>
-    <span class="token punctuation">{</span>
-      path<span class="token punctuation">:</span> <span class="token string">'index'</span><span class="token punctuation">,</span>
-      component<span class="token punctuation">:</span> basicUi<span class="token punctuation">,</span>
-      name<span class="token punctuation">:</span> <span class="token string">'basicUi'</span><span class="token punctuation">,</span>
-      meta<span class="token punctuation">:</span> <span class="token punctuation">{</span> icon<span class="token punctuation">:</span> <span class="token string">'inbox'</span><span class="token punctuation">,</span> title<span class="token punctuation">:</span> <span class="token string">'Basic UI'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// 出现在左侧导航栏的图标和标题</span>
-    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token punctuation">&#123;</span>
+  path<span class="token operator">:</span> <span class="token string">'/basicUi'</span><span class="token punctuation">,</span>
+  component<span class="token operator">:</span> Layout<span class="token punctuation">,</span>
+  redirect<span class="token operator">:</span> <span class="token string">'/basicUi/index'</span><span class="token punctuation">,</span> <span class="token comment">// 重定向地址</span>
+  <span class="token comment">// meta: &#123; icon: 'inbox', title: 'Basic UI' &#125;,</span>
+  children<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">&#123;</span>
+      path<span class="token operator">:</span> <span class="token string">'index'</span><span class="token punctuation">,</span>
+      component<span class="token operator">:</span> basicUi<span class="token punctuation">,</span>
+      name<span class="token operator">:</span> <span class="token string">'basicUi'</span><span class="token punctuation">,</span>
+      meta<span class="token operator">:</span> <span class="token punctuation">&#123;</span> icon<span class="token operator">:</span> <span class="token string">'inbox'</span><span class="token punctuation">,</span> title<span class="token operator">:</span> <span class="token string">'Basic UI'</span> <span class="token punctuation">&#125;</span><span class="token punctuation">,</span> <span class="token comment">// 出现在左侧导航栏的图标和标题</span>
+    <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
   <span class="token punctuation">]</span><span class="token punctuation">,</span>
-<span class="token punctuation">}</span><span class="token punctuation">,</span></code></pre>
+<span class="token punctuation">&#125;</span><span class="token punctuation">,</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>像上面这样children的个数只有一个的时候，可以将meta写在父级上，如注释部分<br>当你一个路由下面的 children 声明的路由大于&gt;1 个时，自动会变成嵌套的模式。如果子路由正好等于一个就会默认将子路由作为根路由显示在侧边栏中。<br>这样定义才会有submenu。</p>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token punctuation">{</span>
-  path<span class="token punctuation">:</span> <span class="token string">'/basicUi'</span><span class="token punctuation">,</span>
-  component<span class="token punctuation">:</span> Layout<span class="token punctuation">,</span>
-  redirect<span class="token punctuation">:</span> <span class="token string">'/basicUi/index'</span><span class="token punctuation">,</span>
-  meta<span class="token punctuation">:</span> <span class="token punctuation">{</span> icon<span class="token punctuation">:</span> <span class="token string">'inbox'</span><span class="token punctuation">,</span> title<span class="token punctuation">:</span> <span class="token string">'Basic UI'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
-  children<span class="token punctuation">:</span> <span class="token punctuation">[</span>
-    <span class="token punctuation">{</span> path<span class="token punctuation">:</span> <span class="token string">'index'</span><span class="token punctuation">,</span> component<span class="token punctuation">:</span> basicUi<span class="token punctuation">,</span> name<span class="token punctuation">:</span> <span class="token string">'basicUi'</span><span class="token punctuation">,</span> meta<span class="token punctuation">:</span> <span class="token punctuation">{</span> title<span class="token punctuation">:</span> <span class="token string">'BasicUI-Index'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
-    <span class="token punctuation">{</span> path<span class="token punctuation">:</span> <span class="token string">'two'</span><span class="token punctuation">,</span> component<span class="token punctuation">:</span> basicUi<span class="token punctuation">,</span> name<span class="token punctuation">:</span> <span class="token string">'basicUi'</span><span class="token punctuation">,</span> meta<span class="token punctuation">:</span> <span class="token punctuation">{</span> title<span class="token punctuation">:</span> <span class="token string">'BasicUI-two'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token punctuation">&#123;</span>
+  path<span class="token operator">:</span> <span class="token string">'/basicUi'</span><span class="token punctuation">,</span>
+  component<span class="token operator">:</span> Layout<span class="token punctuation">,</span>
+  redirect<span class="token operator">:</span> <span class="token string">'/basicUi/index'</span><span class="token punctuation">,</span>
+  meta<span class="token operator">:</span> <span class="token punctuation">&#123;</span> icon<span class="token operator">:</span> <span class="token string">'inbox'</span><span class="token punctuation">,</span> title<span class="token operator">:</span> <span class="token string">'Basic UI'</span> <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+  children<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">&#123;</span> path<span class="token operator">:</span> <span class="token string">'index'</span><span class="token punctuation">,</span> component<span class="token operator">:</span> basicUi<span class="token punctuation">,</span> name<span class="token operator">:</span> <span class="token string">'basicUi'</span><span class="token punctuation">,</span> meta<span class="token operator">:</span> <span class="token punctuation">&#123;</span> title<span class="token operator">:</span> <span class="token string">'BasicUI-Index'</span> <span class="token punctuation">&#125;</span><span class="token punctuation">,</span> <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+    <span class="token punctuation">&#123;</span> path<span class="token operator">:</span> <span class="token string">'two'</span><span class="token punctuation">,</span> component<span class="token operator">:</span> basicUi<span class="token punctuation">,</span> name<span class="token operator">:</span> <span class="token string">'basicUi'</span><span class="token punctuation">,</span> meta<span class="token operator">:</span> <span class="token punctuation">&#123;</span> title<span class="token operator">:</span> <span class="token string">'BasicUI-two'</span> <span class="token punctuation">&#125;</span><span class="token punctuation">,</span> <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
   <span class="token punctuation">]</span><span class="token punctuation">,</span>
-<span class="token punctuation">}</span><span class="token punctuation">,</span></code></pre>
+<span class="token punctuation">&#125;</span><span class="token punctuation">,</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2 id="配置项"><a href="#配置项" class="headerlink" title="配置项"></a>配置项</h2><h4 id="hidden"><a href="#hidden" class="headerlink" title="hidden"></a>hidden</h4><p>当设置 true 的时候该路由不会在侧边栏出现</p>
 <h4 id="category"><a href="#category" class="headerlink" title="category"></a>category</h4><p>侧边栏的类别，如果侧边栏进行分类的话可以使用category，定义在哪个路由中，便显示在哪个路由的上方。如这样定义</p>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token punctuation">{</span>
-  path<span class="token punctuation">:</span> <span class="token string">''</span><span class="token punctuation">,</span>
-  component<span class="token punctuation">:</span> Layout<span class="token punctuation">,</span>
-  redirect<span class="token punctuation">:</span> <span class="token string">'/dashboard'</span><span class="token punctuation">,</span>
-  category<span class="token punctuation">:</span> <span class="token string">'业务'</span><span class="token punctuation">,</span>
-  children<span class="token punctuation">:</span> <span class="token punctuation">[</span>
-    <span class="token punctuation">{</span> path<span class="token punctuation">:</span> <span class="token string">'dashboard'</span><span class="token punctuation">,</span> component<span class="token punctuation">:</span> Dashboard<span class="token punctuation">,</span> name<span class="token punctuation">:</span> <span class="token string">'Dashboard'</span><span class="token punctuation">,</span> meta<span class="token punctuation">:</span> <span class="token punctuation">{</span> icon<span class="token punctuation">:</span> <span class="token string">'dashboard'</span><span class="token punctuation">,</span> title<span class="token punctuation">:</span> <span class="token string">'首页'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token punctuation">&#123;</span>
+  path<span class="token operator">:</span> <span class="token string">''</span><span class="token punctuation">,</span>
+  component<span class="token operator">:</span> Layout<span class="token punctuation">,</span>
+  redirect<span class="token operator">:</span> <span class="token string">'/dashboard'</span><span class="token punctuation">,</span>
+  category<span class="token operator">:</span> <span class="token string">'业务'</span><span class="token punctuation">,</span>
+  children<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">&#123;</span> path<span class="token operator">:</span> <span class="token string">'dashboard'</span><span class="token punctuation">,</span> component<span class="token operator">:</span> Dashboard<span class="token punctuation">,</span> name<span class="token operator">:</span> <span class="token string">'Dashboard'</span><span class="token punctuation">,</span> meta<span class="token operator">:</span> <span class="token punctuation">&#123;</span> icon<span class="token operator">:</span> <span class="token string">'dashboard'</span><span class="token punctuation">,</span> title<span class="token operator">:</span> <span class="token string">'首页'</span> <span class="token punctuation">&#125;</span><span class="token punctuation">,</span> <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
   <span class="token punctuation">]</span><span class="token punctuation">,</span>
-<span class="token punctuation">}</span><span class="token punctuation">,</span></code></pre>
+<span class="token punctuation">&#125;</span><span class="token punctuation">,</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>category是这样显示的<br><img src="/images/remark01.png" alt="category"></p>
 <h4 id="meta"><a href="#meta" class="headerlink" title="meta"></a>meta</h4><p>当只显示根目录的时候（children的length为1），可以在children之外和在children里面写</p>
-<pre class=" language-javascript"><code class="language-javascript">meta<span class="token punctuation">:</span> <span class="token punctuation">{</span> title<span class="token punctuation">:</span> <span class="token string">'标题'</span><span class="token punctuation">,</span> icon<span class="token punctuation">:</span> <span class="token string">'icon'</span> <span class="token punctuation">}</span></code></pre>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">meta<span class="token operator">:</span> <span class="token punctuation">&#123;</span> title<span class="token operator">:</span> <span class="token string">'标题'</span><span class="token punctuation">,</span> icon<span class="token operator">:</span> <span class="token string">'icon'</span> <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>如果有多个子路由，那么子路由的meta不需要定义icon，因为子路由不展示icon，如</p>
-<pre class=" language-javascript"><code class="language-javascript">meta<span class="token punctuation">:</span> <span class="token punctuation">{</span> title<span class="token punctuation">:</span> <span class="token string">'标题'</span> <span class="token punctuation">}</span></code></pre>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">meta<span class="token operator">:</span> <span class="token punctuation">&#123;</span> title<span class="token operator">:</span> <span class="token string">'标题'</span> <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <h4 id="extends"><a href="#extends" class="headerlink" title="extends"></a>extends</h4><p>有时候会跳转到详情页，那么我们可以将详情页的meta中的extends设为该路由的path，并且在详情页加上hidden: true属性。例如从menu1-2-2页面跳转到menu1-2-2的详情页</p>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token punctuation">{</span>
-  path<span class="token punctuation">:</span> <span class="token string">'menu1-2-2'</span><span class="token punctuation">,</span>
-  component<span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">'@/views/nested2/menu1/menu1-2/menu1-2-2'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-  name<span class="token punctuation">:</span> <span class="token string">'menu1-2-2'</span><span class="token punctuation">,</span>
-  meta<span class="token punctuation">:</span> <span class="token punctuation">{</span> title<span class="token punctuation">:</span> <span class="token string">'Amenu1-2-2'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
-<span class="token punctuation">}</span><span class="token punctuation">,</span>
-<span class="token punctuation">{</span>
-  path<span class="token punctuation">:</span> <span class="token string">'edit'</span><span class="token punctuation">,</span>
-  component<span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">'@/views/nested2/menu1/menu1-2/edit'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-  name<span class="token punctuation">:</span> <span class="token string">'edit'</span><span class="token punctuation">,</span>
-  meta<span class="token punctuation">:</span> <span class="token punctuation">{</span> title<span class="token punctuation">:</span> <span class="token string">'edit'</span><span class="token punctuation">,</span> <span class="token keyword">extends</span><span class="token punctuation">:</span> <span class="token string">'menu1-2-2'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
-  hidden<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
-<span class="token punctuation">}</span><span class="token punctuation">,</span></code></pre>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token punctuation">&#123;</span>
+  path<span class="token operator">:</span> <span class="token string">'menu1-2-2'</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">component</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">'@/views/nested2/menu1/menu1-2/menu1-2-2'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  name<span class="token operator">:</span> <span class="token string">'menu1-2-2'</span><span class="token punctuation">,</span>
+  meta<span class="token operator">:</span> <span class="token punctuation">&#123;</span> title<span class="token operator">:</span> <span class="token string">'Amenu1-2-2'</span> <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+<span class="token punctuation">&#123;</span>
+  path<span class="token operator">:</span> <span class="token string">'edit'</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">component</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">'@/views/nested2/menu1/menu1-2/edit'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  name<span class="token operator">:</span> <span class="token string">'edit'</span><span class="token punctuation">,</span>
+  meta<span class="token operator">:</span> <span class="token punctuation">&#123;</span> title<span class="token operator">:</span> <span class="token string">'edit'</span><span class="token punctuation">,</span> <span class="token keyword">extends</span><span class="token operator">:</span> <span class="token string">'menu1-2-2'</span> <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+  hidden<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">,</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2 id="多路由嵌套"><a href="#多路由嵌套" class="headerlink" title="多路由嵌套"></a>多路由嵌套</h2><p>可以看我定义的<a target="_blank" rel="noopener" href="https://github.com/yuang01/remark-ui-vue/blob/master/src/router/index.js">router</a>中的nested路由，使用children便可以定义子路由，支持无限嵌套，也就是说可以有n个子路由，左侧导航栏有n个子栏目。在这里我的左侧导航栏使用的是递归组件的写法。但是需要注意的是每创建一个嵌套子路由需要定义一个<code>&lt;router-view /&gt;</code>，详情可以参考我的<a target="_blank" rel="noopener" href="https://github.com/yuang01/remark-ui-vue/tree/master/src/views/nested">@/views/nested</a>文件夹</p>
 <h2 id="左侧导航栏折叠方式"><a href="#左侧导航栏折叠方式" class="headerlink" title="左侧导航栏折叠方式"></a>左侧导航栏折叠方式</h2><p>如果想在只保持一个菜单展开的话可以在导航栏组件上传递一个unique-opened的prop，默认为true（只保持一个菜单展开），false的话，就可以让多个菜单展开。</p>
 <blockquote>
@@ -758,7 +908,7 @@ var vm = new Vue({
 
 
     
-
+    
     <!-- 评论 -->
       
         <div id="myComment">
@@ -773,7 +923,7 @@ var vm = new Vue({
 		var requiredFields = 'nick,mail';
   		requiredFields  = requiredFields.split(',');
 
-		new Valine({
+		var valine = new Valine({
 			el: '#vcomment',
 			notify: false,
 			verify: false,
@@ -1462,6 +1612,93 @@ var vm = new Vue({
 				"最强蜗牛西能-Hi": "https://i0.hdslb.com/bfs/emote/cacd7cd54a1d210cfacd79f5b1f061708c3dba4e.png",
 			}
 		});
+		
+		function debounce(fn) {
+			var timerID = null
+			return function(){
+				var arg = arguments[0]   //获取事件
+				if(timerID) {
+					clearTimeout (timerID)
+				}
+				timerID = setTimeout( function(){
+					fn(arg)              //事件传入函数
+				},200)
+			}
+		}
+		//查询评论 valine.Q('*').limit(7) -- 查询所有，限制7条, 下面的的代码是查询当前页面
+		let themeDanmu = eval('true');
+		let themeLoop = eval('false');
+		let themeLooperTime = '5000' || 5000;
+		let speed = '20' || 20;
+		let isBarrager = true;
+		if (themeDanmu == true) {
+			do_barrager();
+			$('.navbar').append('<div class="danmuBox"><div class="danmuBtn open"><span class="danmuCircle"></span><span class="danmuText">弹幕</span></div></div>');
+			$('.danmuBtn').on('click', debounce(
+				function () {
+					if ($('.danmuBtn').hasClass('open')) {
+						$('.danmuBtn').removeClass('open')
+						clearInterval(looper);
+						$.fn.barrager.removeAll();
+					} else {
+						$('.danmuBtn').addClass("open");
+						do_barrager();
+					}
+				}
+			))
+		}
+		function do_barrager() {
+			isBarrager && valine.Q(window.location.pathname).find().then(function (comments) {
+				// let num = 0; // 可以记录条数，循环调用的时候只取最新的评论放入弹幕中
+				let run_once = true;
+				let looper_time = themeLooperTime;
+				let total = comments.length;
+				let index = 0;
+				if (total > 0) {
+					barrager();
+				} else {
+					// 当评论数为0的时候，自动关闭弹幕
+					// $('.danmuBtn').removeClass('open');
+				}
+				function barrager() {
+					if(run_once) {
+						//如果是首次执行,则设置一个定时器,并且把首次执行置为false
+						looper = setInterval(barrager,looper_time);                
+						run_once = false;
+					}
+					let content = comments[index]._serverData.comment;
+					let email = comments[index]._serverData.mail;
+					let link = comments[index]._serverData.link;
+					let newcontent = content.substring(0, 50).replace(/<[^>]+>/g,"");
+					//发布一个弹幕
+					const item = {
+						img: `https://q1.qlogo.cn/g?b=qq&nk=${email}&s=640`, //图片 
+						info: newcontent, //文字 
+						href: link, //链接 
+						close:true, //显示关闭按钮 
+						speed: speed, //延迟,单位秒,默认6 
+						color:'#fff', //颜色,默认白色 
+						old_ie_color:'#000000', //ie低版兼容色,不能与网页背景相同,默认黑色
+					}
+					$('body').barrager(item);
+					//索引自增
+					index++;
+					//所有弹幕发布完毕，清除计时器。
+					if(index == total) {
+						clearInterval(looper);
+						if (themeLoop === true) {
+							setTimeout(function(){ 
+								do_barrager();
+							}, 5000);
+						} else {
+							$('.danmuBtn').removeClass('open');
+						}
+						return false;
+					}
+
+				}
+			})
+		}
 	</script>
 </section>
 <style>
@@ -1667,6 +1904,7 @@ var vm = new Vue({
   
 </div>
 
+
     </main>
     <div class="footer bg-color">
   <div class="footer-main">
@@ -1775,9 +2013,10 @@ var vm = new Vue({
     <!-- 图片放大 -->
     
       <script src="/js/fancybox/jquery.fancybox.min.js"></script>
-      <script src="/js/wrapImage.js"></script>
     
 
+    <script src="/js/wrapImage.js"></script>
+    
     <!-- 爱心点击 -->
     
       
@@ -1874,7 +2113,7 @@ var vm = new Vue({
       function doSomething() {
         that.$notify({
           title: "成功",
-          content: "复制成功了哦",
+          content: "代码已复制，请遵守相关授权协议。",
           type: 'success'
         })
         // console.log('ctrl + c 监听成功');  
@@ -1908,8 +2147,8 @@ var vm = new Vue({
           copyHtml += '<button class="btn-copy" data-clipboard-snippet="" style="position:absolute;top:0;right:0;z-index:1;">';
           copyHtml += '<i class="fa fa-copy"></i><span>' + copy + '</span>';
           copyHtml += '</button>';
-          $(".post-detail pre").wrap("<div class='codeBox' style='position:relative;width:100%;'></div>")
-          $(".post-detail pre").before(copyHtml);
+          $(".post-detail pre").not('.gutter pre').wrap("<div class='codeBox' style='position:relative;width:100%;'></div>")
+          $(".post-detail pre").not('.gutter pre').before(copyHtml);
           new ClipboardJS('.btn-copy', {
               target: function(trigger) {
                   return trigger.nextElementSibling;
@@ -1919,16 +2158,19 @@ var vm = new Vue({
         initCopyCode();
       }(window, document);
     </script>
+
     <script src="/js/lazyload/lazyload@1.9.1.js"></script>
     <script>
       $(function() {
         $("div.lazyload, img.lazyload, a.lazyload").lazyload(
             {
                 effect: "fadeIn",
-                placeholder: "https://cdn.pixabay.com/photo/2020/10/24/03/09/street-5680458__340.jpg"    //图片未加载出来时显示的占位图
+                placeholder: "https://img10.360buyimg.com/ddimg/jfs/t1/159345/8/2271/222193/5ff7b36fEe49f5663/a95287c20385127f.gif"    //图片未加载出来时显示的占位图
             }
         );
     });
     </script>
+    
+    <script src="/js/app.js"></script>
   </body>
 </html>
