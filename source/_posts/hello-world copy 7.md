@@ -1,8 +1,8 @@
 ---
 title: Hello World7
-swiper: true
+# swiper: true
 date: 2020-06-20 21:11
-swiperImg: '/medias/10.jpg'
+# swiperImg: '/medias/10.jpg'
 img: '/medias/10.jpg'
 top: false
 ---

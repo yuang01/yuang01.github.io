@@ -1,10 +1,10 @@
 ---
 title: 这是一个标题为两行的页面哦多少度撒
 date: 2019-08-12 21:11
-swiper: true
-swiperImg: '/medias/13.jpg'
+# swiper: true
+# swiperImg: '/medias/13.jpg'
 img: '/medias/13.jpg'
-top: true
+# top: true
 ---
 Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [documentation](https://hexo.io/docs/) for more info. If you get any problems when using Hexo, you can find the answer in [troubleshooting](https://hexo.io/docs/troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues).
 

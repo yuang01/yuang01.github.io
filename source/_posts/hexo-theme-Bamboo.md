@@ -1,12 +1,14 @@
 ---
-title: Hexo主题--Bamboo介绍
+title: Hexo主题--Bamboo介绍(1.2.1)
 date: 2020-09-14 14:06
-swiper: true
+# swiper: true
+# swiperImg: 'https://ss0.baidu.com/7Po3dSag_xI4khGko9WTAnF6hhy/zhidao/pic/item/9c16fdfaaf51f3de9ba8ee1194eef01f3a2979a8.jpg'
 swiperImg: '/medias/1.jpg'
 img: '/medias/1.jpg'
 categories: 前端
 tags: [Hexo, hexo-theme-bamboo]
 top: true
+# tocOpen: false
 
 ---
 
@@ -97,6 +99,15 @@ layout: "tags"
 
 ```bash
 hexo new page "about"
+```
+编辑你刚刚新建的页面文件 `/source/about/index.md`，至少需要以下内容：
+```yaml
+---
+title: about
+date: 2020-09-14 15:30:30 # 时间随便写
+type: "about"
+layout: "about"
+---
 ```
 然后可以在本主题下的`_config.yml`文件下，编辑以下字段进行关于我页面信息的更改
 ``` yaml
@@ -290,8 +301,14 @@ swiperImg: 'https://ssyerv1.oss-cn-hangzhou.aliyuncs.com/picture/c080ff4434354e3
 ### 文章详情页分享功能
 设置主题文件夹下的`_config.yml`文件中的`sharejs`属性true或者false即可
 
-### 点击出现爱心效果
-设置主题文件夹下的`_config.yml`文件中的`clicklove`属性true或者false即可
+### 鼠标点击出现爱心，爆炸等效果
+设置主题文件夹下的`_config.yml`文件中的`cursor_effect`属性true或者false，通过`type`属性选择效果类别，例如:
+```yaml
+# 鼠标点击特效
+cursor_effect:
+  on: true
+  type: explosion  # fireworks: 礼花 | explosion: 爆炸 | love: 浮出爱心 | text: 浮出文字
+```
 
 ### 复制成功提醒
 当复制内容时候，是否显示复制成功提示 
@@ -327,14 +344,38 @@ sakura:
 ### live-2d人物
 设置主题文件夹下的`_config.yml`文件中的`live2d`属性为true或者false，可以通过`modelId`属性选择模型，注意，live-2d人物只有在屏幕宽度最小为992px的时候才显示
 ```yaml
-modelId: 2  # 0 or 1 or 2 or 3 or 4 or 5 or 6
+# live-2d(左下角动画人物)
+live2d:
+  on: true # 控制显示或者隐藏
+  modelId:  # 0 or 1 or 2 or 3 or 4 or 5 or 6 #人物模型
+  open: true # 默认展开，false则收缩，通过点左下角的方块点击，控制展开或者收缩
 ```
 
 ### 滚动动画
 设置主题文件夹下的`_config.yml`文件中的`aos`属性对首页中的文章列表动画进行控制，具体参考官网[aos.js](https://github.com/michalsnik/aos#animations)
 
 ### 文章详情页目录 
-设置主题文件夹下的`_config.yml`文件中的`toc`属性，控制其显示隐藏
+设置主题文件夹下的`_config.yml`文件中的`toc`的`on`属性，控制所有文章是否显示，还可以在在单个文章md页面里通过`toc`属性控制该文章的目录是否显示。
+`toc`下的`open`参数控制所有的文章默认是否展开或者收缩，还可以在单个文章md页面里通过`tocOpen`参数控制该文章(具体某个文章)的目录默认是否展开收缩,参数如下:
+```yaml
+# 主题文件夹下的`_config.yml`文件中的`toc`属性
+# 文章目录
+toc:
+  on: true # 所有文章目录是否显示
+  heading: h2, h3, h4
+  open: true # 所有文章目录是否展开，false则收缩
+```
+```yaml
+# 单个文章里控制显示和隐藏，展开和收缩
+---
+title: 我是文章标题
+tags: ['vue', 'html']
+categories: ['前端', '运维', '攻城狮']
+toc: false # 该文章目录不显示
+tocOpen: false # 该文章目录收缩
+---
+我是文章内容
+```
 
 ### 音乐 
 设置主题文件夹下的`_config.yml`文件中的`music`属性，控制其显示隐藏和其他一些调整, `music`中的`fixed`属性建议使用`true`
@@ -385,7 +426,38 @@ valine:
   master: 'xxxxxx' # 博主标签识别，博主邮箱md5 可以去md5加密网站，例如 https://md5jiami.51240.com/ ，将自己的邮箱输入， 得到 32位小写 的字符串填入这里
   friends: ['xxxxxxx', 'xxxxxx'] # 小伙伴的 邮箱md5， 是个数组
   requiredFields: ['nick', 'mail'] # 设置必填项 ['nick', 'mail'] nick为昵称必填， mail为邮箱必填, 空数组，则不校验
+  backgroundImg: '/medias/comment-bg.gif' # 右下角背景图片, or http://xxx.gif
+  backgroundColor: 'rgba(255,255,255,0.9)' # 背景颜色, 0.9标是透明度
 ```
+
+### 鼠标手势
+设置主题文件夹下的`_config.yml`文件中的`cursor`属性，可自行替换链接，参数如下:
+```yaml
+# 鼠标手势
+cursor:
+  pointer: https://cdn.jsdelivr.net/gh/inkss/common@master/cursor/pointer.png
+  default: https://cdn.jsdelivr.net/gh/inkss/common@master/cursor/left_ptr.png
+  text: https://cdn.jsdelivr.net/gh/inkss/common@master/cursor/text.png
+```
+### 天气
+设置主题文件夹_config.yml的`weather`属性true或者false，控制显示和隐藏
+
+### 背景图预加载图片
+设置主题文件夹下的`_config.yml`文件中的`loadingImg`属性，可自行修改预加载图片链接
+```yaml
+# loading图片地址，为空则不使用loading图片
+loadingImg: 'http://images.bokee.com/artpic_upload/2/0/6/2067714892/3191445171775.gif'
+```
+
+### 关灯
+设置主题文件夹下的`_config.yml`文件中的`dark`属性，控制头部导航的开关灯按钮是否显示，控制是否默认显示关灯, 具体如下
+```yaml
+# 黑夜模式, 关灯
+dark:
+  on: true # 是否在头部导航上显示开关灯
+  default: false  # true为默认关灯状态（刷新页面和跳转页面都是关灯状态），false为默认开灯状态(网页第一次打开的时候为开灯状态)
+```
+
 ### 归档、标签、分类、关于我、友情链接页面图片自定义
 通过主题文件夹下的`_config.yml`文件中的相应属性进行设置，属性如下：
 ``` yaml
@@ -406,12 +478,50 @@ friendsImg: '/medias/friend.jpg'
 ```
 
 ### 更改主题颜色
-默认主题颜色是绿色`#42b983`，可以通过更改主题文件夹`hexo-theme-bamboo`下的文件：`source/css/_defines/color.styl`, 更改颜色变量`$color-default`为你想要的值即可。
-```css
-$color-default = #42b983; // 更改这个值为你想要的颜色即可
+默认主题颜色是绿色`#42b983`，可以通过设置主题文件夹下的`_config.yml`文件中的`color_scheme`属性，进行配置，参数如下:
+```yaml
+# 主题颜色
+color_scheme:
+  # ------------
+  # 通用颜色
+  common:
+    # 主题色
+    theme: '#42b983'
+    # 主题色块内部的文字颜色
+    inner: '#fff'
+    # 链接色 a标签
+    link: '#42b983'
+    # border颜色，目前轮播图的 阅读更多按钮 和 回到顶部按钮 有用到该border，可自行配置该颜色
+    border: '2px solid #42b983'
+    # 选中区域文字的背景颜色, 后面的小数代表透明度
+    selection: 'alpha(#42b983, 0.8)'
+    # 顶部页面加载进度条颜色
+    pace: '#f6a427'
+    # 滚动条颜色, 空字符串则滚动条使用 主题色，否则强制使用该颜色
+    scroll: '#42b983'
+    # 整个页面的底部背景颜色，默认透明，可以是白色等颜色, 也可以是图片，例如  url("https://ssyerv1.oss-cn-hangzhou.aliyuncs.com/picture/2fcff852cfa14b1ba79924404dc65d7a.png!sswm");
+    bgFloor: 'transparent' # 如果是图片地址，url里面请用双引号
+  # 文章详情页 颜色属性
+  post:
+    # 文章详情页面-->标题在图片上时候的颜色
+    headerTitle: '#fff'
+    # 文章详情页面-->标题在图片上时候字体粗细
+    headerTitleFontWeight: 'normal' # 100-900 or bold, normal, bolder, lighter
+    #文章详情页面--> copy按钮背景色, 空字符串则copy按钮背景为 主题颜色，否则强制使用该颜色
+    copyBackground: ''
+    #文章详情页面--> copy按钮文字颜色, 空字符串则copy按钮字体颜色为 主题色块内部的文字颜色，否则强制使用该颜色
+    copyColor: ''
+    # 代码高亮部分的背景色, 空字符串则使用-代码高亮插件-的背景颜色，否则强制使用该颜色作为代码高亮背景色
+    codeBackground: ''
+    # 文章详情页面--> p标签使用 ``符号 突出的文字颜色
+    pLight: '#d63200'
+    # 文章详情-页面-> p标签颜色
+    p: '#273849'
+    # 文章详情页面--> title颜色， h1, h2, h3..
+    title: '#273849'
+    # 文章详情页面 -->右侧目录文字颜色
+    toc: '#273849'
 ```
-例如，我将该变量设置为`skyblue`，显示效果如下
-![theme-color](https://img13.360buyimg.com/ddimg/jfs/t1/120336/2/13322/273081/5f69b8d1E737e6277/8fdc796d2d3a82b3.png)
 
 代码高亮颜色，可以通过之前介绍的代码高亮进行更改
 
@@ -425,6 +535,8 @@ $color-default = #42b983; // 更改这个值为你想要的颜色即可
 | swiper     | false                       | 表示该文章是否需要加入到首页轮播封面中
 | swiperImg  | 无                       | 表示该文章在首页轮播封面需要显示的图片路径，如果没有，则默认使用文章的特色图片
 | top        | false                       | 表示该文章是否需要加入到首页的文章置顶栏目中
+| toc        | true                       | 表示该文章目录是否显示, true为显示
+| tocOpen    | true                       | 表示该文章目录是否展开， true为展开
 | comments   | false                       | 表示该文章是否需要评论
 | img        | 无                          | 文章特征图，该文章显示的图片，没有则默认使用文章的特色图片
 | categories | 无                          | 文章分类，本主题的分类表示宏观上大的分类，只建议一篇文章一个分类 |
