@@ -97,6 +97,36 @@
   </entry>
   
   <entry>
+    <title>checkbox</title>
+    <link href="http://yuang01.github.io/2021/02/08/checkbox/"/>
+    <id>http://yuang01.github.io/2021/02/08/checkbox/</id>
+    <published>2021-02-08T03:35:00.000Z</published>
+    <updated>2021-02-08T04:18:28.706Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;div class=&#39;checkbox&#39;&gt;&lt;input type=&quot;checkbox&quot; /&gt;
+            &lt;p&gt;纯文本测试&lt;/p&gt;
+            &lt;/div&gt;
+&lt;div class=&#39;checkbox checked&#39;&gt;&lt;input
+        
+      
+    
+    </summary>
+    
+    
+      <category term="前端" scheme="http://yuang01.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="tag" scheme="http://yuang01.github.io/tags/tag/"/>
+    
+  </entry>
+  
+  <entry>
     <title>folding折叠</title>
     <link href="http://yuang01.github.io/2021/02/08/folding/"/>
     <id>http://yuang01.github.io/2021/02/08/folding/</id>
@@ -138,36 +168,6 @@
         
         
           &lt;div class=&quot;note
-        
-      
-    
-    </summary>
-    
-    
-      <category term="前端" scheme="http://yuang01.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="tag" scheme="http://yuang01.github.io/tags/tag/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>checkbox</title>
-    <link href="http://yuang01.github.io/2021/02/08/checkbox/"/>
-    <id>http://yuang01.github.io/2021/02/08/checkbox/</id>
-    <published>2021-02-08T03:35:00.000Z</published>
-    <updated>2021-02-08T04:18:28.706Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;div class=&#39;checkbox&#39;&gt;&lt;input type=&quot;checkbox&quot; /&gt;
-            &lt;p&gt;纯文本测试&lt;/p&gt;
-            &lt;/div&gt;
-&lt;div class=&#39;checkbox checked&#39;&gt;&lt;input
         
       
     
@@ -267,6 +267,35 @@
   </entry>
   
   <entry>
+    <title>NoteBlock</title>
+    <link href="http://yuang01.github.io/2021/02/08/noteblock/"/>
+    <id>http://yuang01.github.io/2021/02/08/noteblock/</id>
+    <published>2021-02-08T03:35:00.000Z</published>
+    <updated>2021-02-08T04:18:52.169Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 class=&quot;bamboo-h &quot; id=&quot;noteblock演示效果&quot;&gt;noteblock演示效果&lt;/h2&gt;&lt;br/&gt;
+
+&lt;div class=&quot;note
+        
+      
+    
+    </summary>
+    
+    
+      <category term="前端" scheme="http://yuang01.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="tag" scheme="http://yuang01.github.io/tags/tag/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Note标签</title>
     <link href="http://yuang01.github.io/2021/02/08/note/"/>
     <id>http://yuang01.github.io/2021/02/08/note/</id>
@@ -298,11 +327,11 @@
   </entry>
   
   <entry>
-    <title>NoteBlock</title>
-    <link href="http://yuang01.github.io/2021/02/08/noteblock/"/>
-    <id>http://yuang01.github.io/2021/02/08/noteblock/</id>
+    <title>文本高亮</title>
+    <link href="http://yuang01.github.io/2021/02/08/pbg/"/>
+    <id>http://yuang01.github.io/2021/02/08/pbg/</id>
     <published>2021-02-08T03:35:00.000Z</published>
-    <updated>2021-02-08T04:18:52.169Z</updated>
+    <updated>2021-02-08T04:19:00.293Z</updated>
     
     <summary type="html">
     
@@ -310,9 +339,8 @@
       
         
         
-          &lt;h2 class=&quot;bamboo-h &quot; id=&quot;noteblock演示效果&quot;&gt;noteblock演示效果&lt;/h2&gt;&lt;br/&gt;
-
-&lt;div class=&quot;note
+          &lt;h2 class=&quot;bamboo-h &quot; id=&quot;文本高亮演示效果&quot;&gt;文本高亮演示效果&lt;/h2&gt;&lt;br/&gt;
+&lt;p&gt;这是一个简单的文字&lt;span class=&#39;pbg yellow&#39;&gt;我是一个文本高亮&lt;/span&gt;，唱着我们心肠的曲折&lt;br&gt;这是一个简单的文字&lt;span
         
       
     
@@ -342,34 +370,6 @@
           &lt;h2 class=&quot;bamboo-h &quot; id=&quot;段落文本演示&quot;&gt;段落文本演示&lt;/h2&gt;&lt;br/&gt;
 &lt;p class=&#39;p yellow&#39;&gt;我是一个文本高亮大萨达所多撒多撒多撒大多多撒多撒多撒大所多撒大多&lt;/p&gt;
 &lt;p class=&#39;p
-        
-      
-    
-    </summary>
-    
-    
-      <category term="前端" scheme="http://yuang01.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="tag" scheme="http://yuang01.github.io/tags/tag/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>文本高亮</title>
-    <link href="http://yuang01.github.io/2021/02/08/pbg/"/>
-    <id>http://yuang01.github.io/2021/02/08/pbg/</id>
-    <published>2021-02-08T03:35:00.000Z</published>
-    <updated>2021-02-08T04:19:00.293Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 class=&quot;bamboo-h &quot; id=&quot;文本高亮演示效果&quot;&gt;文本高亮演示效果&lt;/h2&gt;&lt;br/&gt;
-&lt;p&gt;这是一个简单的文字&lt;span class=&#39;pbg yellow&#39;&gt;我是一个文本高亮&lt;/span&gt;，唱着我们心肠的曲折&lt;br&gt;这是一个简单的文字&lt;span
         
       
     
@@ -442,34 +442,6 @@
   </entry>
   
   <entry>
-    <title>文字颜色</title>
-    <link href="http://yuang01.github.io/2021/02/08/span/"/>
-    <id>http://yuang01.github.io/2021/02/08/span/</id>
-    <published>2021-02-08T03:35:00.000Z</published>
-    <updated>2021-02-08T04:19:11.484Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 class=&quot;bamboo-h &quot; id=&quot;文字颜色演示效果&quot;&gt;文字颜色演示效果&lt;/h2&gt;&lt;br/&gt;
-&lt;p&gt;这是一个简单的文字&lt;span class=&#39;p yellow&#39;&gt;我是一个文字高亮&lt;/span&gt;，唱着我们心肠的曲折&lt;br&gt;这是一个简单的文字&lt;span
-        
-      
-    
-    </summary>
-    
-    
-      <category term="前端" scheme="http://yuang01.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="tag" scheme="http://yuang01.github.io/tags/tag/"/>
-    
-  </entry>
-  
-  <entry>
     <title>tab</title>
     <link href="http://yuang01.github.io/2021/02/08/tab/"/>
     <id>http://yuang01.github.io/2021/02/08/tab/</id>
@@ -484,6 +456,34 @@
         
           &lt;h2 class=&quot;bamboo-h &quot; id=&quot;tab事例&quot;&gt;tab事例&lt;/h2&gt;&lt;br/&gt;
 &lt;div class=&quot;tabs&quot; id=&quot;tab-id&quot;&gt;&lt;ul class=&quot;nav-tabs&quot;&gt;&lt;li class=&quot;tab active&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="前端" scheme="http://yuang01.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="tag" scheme="http://yuang01.github.io/tags/tag/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>文字颜色</title>
+    <link href="http://yuang01.github.io/2021/02/08/span/"/>
+    <id>http://yuang01.github.io/2021/02/08/span/</id>
+    <published>2021-02-08T03:35:00.000Z</published>
+    <updated>2021-02-08T04:19:11.484Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 class=&quot;bamboo-h &quot; id=&quot;文字颜色演示效果&quot;&gt;文字颜色演示效果&lt;/h2&gt;&lt;br/&gt;
+&lt;p&gt;这是一个简单的文字&lt;span class=&#39;p yellow&#39;&gt;我是一个文字高亮&lt;/span&gt;，唱着我们心肠的曲折&lt;br&gt;这是一个简单的文字&lt;span
         
       
     
