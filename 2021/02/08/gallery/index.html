@@ -667,8 +667,9 @@ var vm = new Vue({
 <div class="gallery ">
               <p><img src="https://pic4.zhimg.com/80/v2-515859a54d7c9b89c070c6132dff4527_1440w.jpg?source=1940ef5c" alt="图片描述"></p>
             </div>
-<h3 id="上述事例代码"><a href="#上述事例代码" class="headerlink" title="上述事例代码"></a>上述事例代码</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token operator">!</span><span class="token punctuation">[</span>图片描述<span class="token punctuation">]</span><span class="token punctuation">(</span>https://pic4.zhimg.com/80/v2-515859a54d7c9b89c070c6132dff4527_1440w.jpg?source<span class="token operator">=</span>1940ef5c<span class="token punctuation">)</span>
-<span class="token punctuation">&#123;</span>% endgallery %<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h3 id="上述事例代码"><a href="#上述事例代码" class="headerlink" title="上述事例代码"></a>上述事例代码</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">&#123;</span>% gallery %<span class="token punctuation">&#125;</span>
+<span class="token operator">!</span><span class="token punctuation">[</span>图片描述<span class="token punctuation">]</span><span class="token punctuation">(</span>https://pic4.zhimg.com/80/v2-515859a54d7c9b89c070c6132dff4527_1440w.jpg?source<span class="token operator">=</span>1940ef5c<span class="token punctuation">)</span>
+<span class="token punctuation">&#123;</span>% endgallery %<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <h2 class="bamboo-h " id="一行多个图片（不换行）">一行多个图片（不换行）</h2><br/>
 
 <div class="gallery ">
@@ -770,24 +771,22 @@ var vm = new Vue({
 
   
   <div class="post-nav-prev post-nav-item">
-    <div class="post-nav-img lazyload" data-original="/medias/3.jpg" style="background-size: cover; 
+    <div class="post-nav-img lazyload" data-original="/medias/1.jpg" style="background-size: cover; 
       background-position: center center;">
     </div>
-    <a href="/2021/02/08/folding/" class="post-nav-link">
+    <a href="/2021/02/08/audio/" class="post-nav-link">
       <div class="title">
         <i class="fa fa-angle-left"></i> 上一篇:
-        <div>folding折叠</div>
+        <div>audio音频</div>
       </div>
       
       <!-- <div class="content">
-        
-基本
+        事例
 
- 查看图片测试 
-              
-              
-              
- 
+Your browser does not support the audio tag.
+
+写法
+&#123;%
       </div> -->
     </a>
   </div>
@@ -796,30 +795,20 @@ var vm = new Vue({
 
   
   <div class="post-nav-next post-nav-item">
-    <div class="post-nav-img lazyload" data-original="/medias/5.jpg" style="background-size: cover; 
+    <div class="post-nav-img lazyload" data-original="/medias/4.jpg" style="background-size: cover; 
       background-position: center center;">
     </div>
-    <a href="/2021/02/08/ghcard/" class="post-nav-link">
+    <a href="/2021/02/08/checkbox/" class="post-nav-link">
       <div class="title">
         下一篇: <i class="fa fa-angle-right"></i>
-        <div>Github卡片</div>
+        <div>checkbox</div>
       </div>
       <!-- <div class="content">
-        Github用户卡片
+        
+            纯文本测试
+            
 
-上述示例代码&#123;% ghcard yuang01 %&#125;
-
-
-
-
-
-
-
-
-
-
-
-
+            支持简单的 markdown 
       </div> -->
     </a>
   </div>
