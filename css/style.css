@@ -593,7 +593,7 @@ pre:hover::-webkit-scrollbar-thumb:hover,
   position: absolute;
   top: 150px;
   left: -25px;
-  width: 20px;
+  width: 25px;
   height: 60px;
   font-size: 12px;
   background-color: #fa0;
