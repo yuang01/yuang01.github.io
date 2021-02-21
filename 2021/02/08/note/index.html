@@ -92,7 +92,7 @@ var vm = new Vue({
     methods: {
         WebLocation() {
             let language = navigator.language;
-            let deploy = 'https://gitee.com/yuang01/yuang01.git';
+            let deploy = 'https://github.com/yuang01/yuang01.github.io.git';
             if (language == 'zh-CN') {
                 if (deploy == 'https://github.com/yuang01/yuang01.github.io.git') {
                     this.$confirm({
@@ -716,25 +716,21 @@ var vm = new Vue({
 
   
   <div class="post-nav-prev post-nav-item">
-    <div class="post-nav-img lazyload" data-original="/medias/14.jpg" style="background-size: cover; 
+    <div class="post-nav-img lazyload" data-original="/medias/11.jpg" style="background-size: cover; 
       background-position: center center;">
     </div>
-    <a href="/2021/02/08/noteblock/" class="post-nav-link">
+    <a href="/2021/02/08/inlineimage/" class="post-nav-link">
       <div class="title">
         <i class="fa fa-angle-left"></i> 上一篇:
-        <div>NoteBlock</div>
+        <div>lineImage标签</div>
       </div>
       
       <!-- <div class="content">
-        noteblock演示效果
-
-标题（可选）asdsd
-
-标题（可选）asdsd
-
-标题（可选）asdsd
-
-标题（可选）
+        段落中插入图片
+这是  一段话。
+这又是  一段话。
+这又是  一段话。
+上述事例代码这是 &#123;% inline
       </div> -->
     </a>
   </div>
@@ -743,18 +739,20 @@ var vm = new Vue({
 
   
   <div class="post-nav-next post-nav-item">
-    <div class="post-nav-img lazyload" data-original="/medias/10.jpg" style="background-size: cover; 
+    <div class="post-nav-img lazyload" data-original="/medias/9.jpg" style="background-size: cover; 
       background-position: center center;">
     </div>
-    <a href="/2021/02/08/p/" class="post-nav-link">
+    <a href="/2021/02/08/link/" class="post-nav-link">
       <div class="title">
         下一篇: <i class="fa fa-angle-right"></i>
-        <div>段落文本</div>
+        <div>Link标签</div>
       </div>
       <!-- <div class="content">
-        段落文本演示
-我是一个文本高亮大萨达所多撒多撒多撒大多多撒多撒多撒大所多撒大多
-我是一个文本高亮大萨达所多撒多撒多撒大多
+        超链接标签
+
+如何参与项目http://www.baidu.com
+
+如何参与项目http://www.baidu.co
       </div> -->
     </a>
   </div>
