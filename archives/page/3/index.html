@@ -92,7 +92,7 @@ var vm = new Vue({
     methods: {
         WebLocation() {
             let language = navigator.language;
-            let deploy = 'https://github.com/yuang01/yuang01.github.io.git';
+            let deploy = 'https://gitee.com/yuang01/yuang01.git';
             if (language == 'zh-CN') {
                 if (deploy == 'https://github.com/yuang01/yuang01.github.io.git') {
                     this.$confirm({
@@ -366,13 +366,13 @@ var vm = new Vue({
   <transition name="fade">
     <div class="message-box_wrapper" style="display: none;" v-cloak v-show="dialogVisible" @click.self="cancelDialogVisible()">
       <div class="message-box animated bounceInDown">
-        <div class="close" style="overflow: hidden;">
+        <!-- <div class="close" style="overflow: hidden;">
           <i class="fa fa-close" aria-hidden="true" style="float:right;" @click.self="cancelDialogVisible()"></i>
-        </div>
+        </div> -->
         <h2>
           <i class="fa fa-search" aria-hidden="true"></i>
           <span class="title">本地搜索</span>
-          <!-- <i class="fa fa-close" style="float:right;" aria-hidden="true" @click.self="cancelDialogVisible()"></i> -->
+          <i class="fa fa-close close" style="float:right;" aria-hidden="true" @click.self="cancelDialogVisible()"></i>
         </h2>
         <form class="site-search-form">
           <input type="text"
@@ -488,6 +488,12 @@ background-position: center center;">
           
           <li class="post-item" data-aos="fade-left">
             <span class="post-date">02-08</span>
+            <a class="post-title" href="/2021/02/08/title/">title</a>
+          </li>
+        
+          
+          <li class="post-item" data-aos="fade-left">
+            <span class="post-date">02-08</span>
             <a class="post-title" href="/2021/02/08/video/">video视频</a>
           </li>
         
@@ -543,12 +549,6 @@ background-position: center center;">
           <li class="post-item" data-aos="fade-left">
             <span class="post-date">06-20</span>
             <a class="post-title" href="/2020/06/20/hello-world-copy-7/">Hello World7</a>
-          </li>
-        
-          
-          <li class="post-item" data-aos="fade-left">
-            <span class="post-date">06-20</span>
-            <a class="post-title" href="/2020/06/20/hello-world-copy-9/">Hello World9</a>
           </li>
         
       </ul>

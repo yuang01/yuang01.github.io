@@ -92,7 +92,7 @@ var vm = new Vue({
     methods: {
         WebLocation() {
             let language = navigator.language;
-            let deploy = 'https://github.com/yuang01/yuang01.github.io.git';
+            let deploy = 'https://gitee.com/yuang01/yuang01.git';
             if (language == 'zh-CN') {
                 if (deploy == 'https://github.com/yuang01/yuang01.github.io.git') {
                     this.$confirm({
@@ -366,13 +366,13 @@ var vm = new Vue({
   <transition name="fade">
     <div class="message-box_wrapper" style="display: none;" v-cloak v-show="dialogVisible" @click.self="cancelDialogVisible()">
       <div class="message-box animated bounceInDown">
-        <div class="close" style="overflow: hidden;">
+        <!-- <div class="close" style="overflow: hidden;">
           <i class="fa fa-close" aria-hidden="true" style="float:right;" @click.self="cancelDialogVisible()"></i>
-        </div>
+        </div> -->
         <h2>
           <i class="fa fa-search" aria-hidden="true"></i>
           <span class="title">本地搜索</span>
-          <!-- <i class="fa fa-close" style="float:right;" aria-hidden="true" @click.self="cancelDialogVisible()"></i> -->
+          <i class="fa fa-close close" style="float:right;" aria-hidden="true" @click.self="cancelDialogVisible()"></i>
         </h2>
         <form class="site-search-form">
           <input type="text"
@@ -489,6 +489,68 @@ background-position: center center;">
             <span class="post-time">2021-02-08</span>
           </div>
           <div class="post-title">
+            <a class="post-title-link" href="/2021/02/08/note/">Note标签</a>
+          </div>
+          <div class="post-meta">
+            <div class="post-tags">
+              
+    <i class="iconfont icontag"></i>
+    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tag/" rel="tag">tag</a></li></ul>
+
+            </div>
+            <div class="post-categories">
+              
+<div class="article-category">
+  <i class="iconfont iconbookmark1"></i>
+  <a class="article-category-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a>
+</div>
+
+            </div>
+          </div>
+          <div class="post-img-mobile">
+            <a href="/2021/02/08/note/" style="background: url('https://ssyerv1.oss-cn-hangzhou.aliyuncs.com/picture/56d7b34ee52046a3af719a1c9b1e0753.jpg!sswm');background-size: cover; 
+              background-position: center center;">
+            </a>
+          </div>
+          <div class="post-content">
+            note演示效果
+
+markdown默认写法，左边框颜色，随着主题色改变
+
+我有一只小毛驴，我从来都不骑。
+适合引用一段话
+这是一个警告
+这是一个错误
+这是一个成功
+这是一个信息
+
+
+
+上述事例源码> markdown默认写法，左边框颜色，
+          </div>
+        </div>
+        <div class="post-more">
+          <a href="/2021/02/08/note/">
+            <i class="iconfont iconmore" style="float: right;" title="阅读更多"></i>
+          </a>
+        </div>
+      </div>
+      <div class="post-img">
+        <a href="/2021/02/08/note/" style="background: url('https://ssyerv1.oss-cn-hangzhou.aliyuncs.com/picture/56d7b34ee52046a3af719a1c9b1e0753.jpg!sswm');background-size: cover; 
+          background-position: center center;">
+        </a>
+      </div>
+    </article>
+    
+    <article class="post" data-aos="fade-up"
+      style="">
+      <div class="post-main">
+        <div class="post-info">
+          <div class="post-time">
+            <i class="fa fa-clock-o" aria-hidden="true"></i>
+            <span class="post-time">2021-02-08</span>
+          </div>
+          <div class="post-title">
             <a class="post-title-link" href="/2021/02/08/noteblock/">NoteBlock</a>
           </div>
           <div class="post-meta">
@@ -532,65 +594,12 @@ background-position: center center;">
         </div>
         <div class="post-more">
           <a href="/2021/02/08/noteblock/">
-            <i class="iconfont iconmore" style="float: right;" title="阅读更多"></i>
-          </a>
-        </div>
-      </div>
-      <div class="post-img">
-        <a href="/2021/02/08/noteblock/" style="background: url('https://ssyerv1.oss-cn-hangzhou.aliyuncs.com/picture/56d7b34ee52046a3af719a1c9b1e0753.jpg!sswm');background-size: cover; 
-          background-position: center center;">
-        </a>
-      </div>
-    </article>
-    
-    <article class="post" data-aos="fade-up"
-      style="">
-      <div class="post-main">
-        <div class="post-info">
-          <div class="post-time">
-            <i class="fa fa-clock-o" aria-hidden="true"></i>
-            <span class="post-time">2021-02-08</span>
-          </div>
-          <div class="post-title">
-            <a class="post-title-link" href="/2021/02/08/p/">段落文本</a>
-          </div>
-          <div class="post-meta">
-            <div class="post-tags">
-              
-    <i class="iconfont icontag"></i>
-    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tag/" rel="tag">tag</a></li></ul>
-
-            </div>
-            <div class="post-categories">
-              
-<div class="article-category">
-  <i class="iconfont iconbookmark1"></i>
-  <a class="article-category-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a>
-</div>
-
-            </div>
-          </div>
-          <div class="post-img-mobile">
-            <a href="/2021/02/08/p/" style="background: url('https://ssyerv1.oss-cn-hangzhou.aliyuncs.com/picture/56d7b34ee52046a3af719a1c9b1e0753.jpg!sswm');background-size: cover; 
-              background-position: center center;">
-            </a>
-          </div>
-          <div class="post-content">
-            段落文本演示
-我是一个文本高亮大萨达所多撒多撒多撒大多多撒多撒多撒大所多撒大多
-我是一个文本高亮大萨达所多撒多撒多撒大多多撒多撒多撒大所多撒大多
-我是一个文本高亮大萨达所多撒多撒多撒大多多撒多撒多撒大所多撒大多
-我是一个文本高亮大萨达所多撒
-          </div>
-        </div>
-        <div class="post-more">
-          <a href="/2021/02/08/p/">
             <i class="iconfont iconmore" style="" title="阅读更多"></i>
           </a>
         </div>
       </div>
       <div class="post-img">
-        <a href="/2021/02/08/p/" style="background: url('https://ssyerv1.oss-cn-hangzhou.aliyuncs.com/picture/56d7b34ee52046a3af719a1c9b1e0753.jpg!sswm');background-size: cover; 
+        <a href="/2021/02/08/noteblock/" style="background: url('https://ssyerv1.oss-cn-hangzhou.aliyuncs.com/picture/56d7b34ee52046a3af719a1c9b1e0753.jpg!sswm');background-size: cover; 
           background-position: center center;">
         </a>
       </div>
@@ -655,7 +664,7 @@ background-position: center center;">
             <span class="post-time">2021-02-08</span>
           </div>
           <div class="post-title">
-            <a class="post-title-link" href="/2021/02/08/site-card/">site-card</a>
+            <a class="post-title-link" href="/2021/02/08/p/">段落文本</a>
           </div>
           <div class="post-meta">
             <div class="post-tags">
@@ -674,28 +683,26 @@ background-position: center center;">
             </div>
           </div>
           <div class="post-img-mobile">
-            <a href="/2021/02/08/site-card/" style="background: url('https://ssyerv1.oss-cn-hangzhou.aliyuncs.com/picture/56d7b34ee52046a3af719a1c9b1e0753.jpg!sswm');background-size: cover; 
+            <a href="/2021/02/08/p/" style="background: url('https://ssyerv1.oss-cn-hangzhou.aliyuncs.com/picture/56d7b34ee52046a3af719a1c9b1e0753.jpg!sswm');background-size: cover; 
               background-position: center center;">
             </a>
           </div>
           <div class="post-content">
-            site-card演示
-WDZ这是一个喜爱二次元的小伙伴博客
-yuang01这是我的博客
-WDZ这是一个喜爱二次元的小伙伴博客
-yuang01这是我的博客
-WDZ这是一个喜爱二次元的小伙伴博客
-上述事例代码&#123;% sitegroup
+            段落文本演示
+我是一个文本高亮大萨达所多撒多撒多撒大多多撒多撒多撒大所多撒大多
+我是一个文本高亮大萨达所多撒多撒多撒大多多撒多撒多撒大所多撒大多
+我是一个文本高亮大萨达所多撒多撒多撒大多多撒多撒多撒大所多撒大多
+我是一个文本高亮大萨达所多撒
           </div>
         </div>
         <div class="post-more">
-          <a href="/2021/02/08/site-card/">
+          <a href="/2021/02/08/p/">
             <i class="iconfont iconmore" style="" title="阅读更多"></i>
           </a>
         </div>
       </div>
       <div class="post-img">
-        <a href="/2021/02/08/site-card/" style="background: url('https://ssyerv1.oss-cn-hangzhou.aliyuncs.com/picture/56d7b34ee52046a3af719a1c9b1e0753.jpg!sswm');background-size: cover; 
+        <a href="/2021/02/08/p/" style="background: url('https://ssyerv1.oss-cn-hangzhou.aliyuncs.com/picture/56d7b34ee52046a3af719a1c9b1e0753.jpg!sswm');background-size: cover; 
           background-position: center center;">
         </a>
       </div>
@@ -770,6 +777,61 @@ WDZ这是一个喜爱二次元的小伙伴博客
             <span class="post-time">2021-02-08</span>
           </div>
           <div class="post-title">
+            <a class="post-title-link" href="/2021/02/08/site-card/">site-card</a>
+          </div>
+          <div class="post-meta">
+            <div class="post-tags">
+              
+    <i class="iconfont icontag"></i>
+    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tag/" rel="tag">tag</a></li></ul>
+
+            </div>
+            <div class="post-categories">
+              
+<div class="article-category">
+  <i class="iconfont iconbookmark1"></i>
+  <a class="article-category-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a>
+</div>
+
+            </div>
+          </div>
+          <div class="post-img-mobile">
+            <a href="/2021/02/08/site-card/" style="background: url('https://ssyerv1.oss-cn-hangzhou.aliyuncs.com/picture/56d7b34ee52046a3af719a1c9b1e0753.jpg!sswm');background-size: cover; 
+              background-position: center center;">
+            </a>
+          </div>
+          <div class="post-content">
+            site-card演示
+WDZ这是一个喜爱二次元的小伙伴博客
+yuang01这是我的博客
+WDZ这是一个喜爱二次元的小伙伴博客
+yuang01这是我的博客
+WDZ这是一个喜爱二次元的小伙伴博客
+上述事例代码&#123;% sitegroup
+          </div>
+        </div>
+        <div class="post-more">
+          <a href="/2021/02/08/site-card/">
+            <i class="iconfont iconmore" style="" title="阅读更多"></i>
+          </a>
+        </div>
+      </div>
+      <div class="post-img">
+        <a href="/2021/02/08/site-card/" style="background: url('https://ssyerv1.oss-cn-hangzhou.aliyuncs.com/picture/56d7b34ee52046a3af719a1c9b1e0753.jpg!sswm');background-size: cover; 
+          background-position: center center;">
+        </a>
+      </div>
+    </article>
+    
+    <article class="post" data-aos="fade-up"
+      style="flex-direction: row-reverse;">
+      <div class="post-main">
+        <div class="post-info">
+          <div class="post-time">
+            <i class="fa fa-clock-o" aria-hidden="true"></i>
+            <span class="post-time">2021-02-08</span>
+          </div>
+          <div class="post-title">
             <a class="post-title-link" href="/2021/02/08/span/">文字颜色</a>
           </div>
           <div class="post-meta">
@@ -800,7 +862,7 @@ WDZ这是一个喜爱二次元的小伙伴博客
         </div>
         <div class="post-more">
           <a href="/2021/02/08/span/">
-            <i class="iconfont iconmore" style="" title="阅读更多"></i>
+            <i class="iconfont iconmore" style="float: right;" title="阅读更多"></i>
           </a>
         </div>
       </div>
@@ -812,7 +874,7 @@ WDZ这是一个喜爱二次元的小伙伴博客
     </article>
     
     <article class="post" data-aos="fade-up"
-      style="flex-direction: row-reverse;">
+      style="">
       <div class="post-main">
         <div class="post-info">
           <div class="post-time">
@@ -860,7 +922,7 @@ WDZ这是一个喜爱二次元的小伙伴博客
         </div>
         <div class="post-more">
           <a href="/2021/02/08/tab/">
-            <i class="iconfont iconmore" style="float: right;" title="阅读更多"></i>
+            <i class="iconfont iconmore" style="" title="阅读更多"></i>
           </a>
         </div>
       </div>
@@ -872,7 +934,7 @@ WDZ这是一个喜爱二次元的小伙伴博客
     </article>
     
     <article class="post" data-aos="fade-up"
-      style="">
+      style="flex-direction: row-reverse;">
       <div class="post-main">
         <div class="post-info">
           <div class="post-time">
@@ -917,76 +979,12 @@ WDZ这是一个喜爱二次元的小伙伴博客
         </div>
         <div class="post-more">
           <a href="/2021/02/08/text/">
-            <i class="iconfont iconmore" style="" title="阅读更多"></i>
-          </a>
-        </div>
-      </div>
-      <div class="post-img">
-        <a href="/2021/02/08/text/" style="background: url('https://ssyerv1.oss-cn-hangzhou.aliyuncs.com/picture/56d7b34ee52046a3af719a1c9b1e0753.jpg!sswm');background-size: cover; 
-          background-position: center center;">
-        </a>
-      </div>
-    </article>
-    
-    <article class="post" data-aos="fade-up"
-      style="flex-direction: row-reverse;">
-      <div class="post-main">
-        <div class="post-info">
-          <div class="post-time">
-            <i class="fa fa-clock-o" aria-hidden="true"></i>
-            <span class="post-time">2021-02-08</span>
-          </div>
-          <div class="post-title">
-            <a class="post-title-link" href="/2021/02/08/title/">title</a>
-          </div>
-          <div class="post-meta">
-            <div class="post-tags">
-              
-    <i class="iconfont icontag"></i>
-    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tag/" rel="tag">tag</a></li></ul>
-
-            </div>
-            <div class="post-categories">
-              
-<div class="article-category">
-  <i class="iconfont iconbookmark1"></i>
-  <a class="article-category-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a>
-</div>
-
-            </div>
-          </div>
-          <div class="post-img-mobile">
-            <a href="/2021/02/08/title/" style="background: url('https://ssyerv1.oss-cn-hangzhou.aliyuncs.com/picture/56d7b34ee52046a3af719a1c9b1e0753.jpg!sswm');background-size: cover; 
-              background-position: center center;">
-            </a>
-          </div>
-          <div class="post-content">
-            title演示
-
-我是标题
-
-你好啊，未来越来越好哦
-我是标题
-
-你好啊，加油哦
-我是标题
-
-我是标题
-上述事例代码&#123;% title h1, 我是标题 %&#125;
-
-你好啊，未来越来越好哦
-
-&#123;% title h2,
-          </div>
-        </div>
-        <div class="post-more">
-          <a href="/2021/02/08/title/">
             <i class="iconfont iconmore" style="float: right;" title="阅读更多"></i>
           </a>
         </div>
       </div>
       <div class="post-img">
-        <a href="/2021/02/08/title/" style="background: url('https://ssyerv1.oss-cn-hangzhou.aliyuncs.com/picture/56d7b34ee52046a3af719a1c9b1e0753.jpg!sswm');background-size: cover; 
+        <a href="/2021/02/08/text/" style="background: url('https://ssyerv1.oss-cn-hangzhou.aliyuncs.com/picture/56d7b34ee52046a3af719a1c9b1e0753.jpg!sswm');background-size: cover; 
           background-position: center center;">
         </a>
       </div>

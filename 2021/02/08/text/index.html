@@ -92,7 +92,7 @@ var vm = new Vue({
     methods: {
         WebLocation() {
             let language = navigator.language;
-            let deploy = 'https://github.com/yuang01/yuang01.github.io.git';
+            let deploy = 'https://gitee.com/yuang01/yuang01.git';
             if (language == 'zh-CN') {
                 if (deploy == 'https://github.com/yuang01/yuang01.github.io.git') {
                     this.$confirm({
@@ -366,13 +366,13 @@ var vm = new Vue({
   <transition name="fade">
     <div class="message-box_wrapper" style="display: none;" v-cloak v-show="dialogVisible" @click.self="cancelDialogVisible()">
       <div class="message-box animated bounceInDown">
-        <div class="close" style="overflow: hidden;">
+        <!-- <div class="close" style="overflow: hidden;">
           <i class="fa fa-close" aria-hidden="true" style="float:right;" @click.self="cancelDialogVisible()"></i>
-        </div>
+        </div> -->
         <h2>
           <i class="fa fa-search" aria-hidden="true"></i>
           <span class="title">本地搜索</span>
-          <!-- <i class="fa fa-close" style="float:right;" aria-hidden="true" @click.self="cancelDialogVisible()"></i> -->
+          <i class="fa fa-close close" style="float:right;" aria-hidden="true" @click.self="cancelDialogVisible()"></i>
         </h2>
         <form class="site-search-form">
           <input type="text"
@@ -733,27 +733,19 @@ var vm = new Vue({
 
   
   <div class="post-nav-next post-nav-item">
-    <div class="post-nav-img lazyload" data-original="/medias/7.jpg" style="background-size: cover; 
+    <div class="post-nav-img lazyload" data-original="/medias/6.jpg" style="background-size: cover; 
       background-position: center center;">
     </div>
-    <a href="/2021/02/08/title/" class="post-nav-link">
+    <a href="/2021/02/08/timeline/" class="post-nav-link">
       <div class="title">
         下一篇: <i class="fa fa-angle-right"></i>
-        <div>title</div>
+        <div>timeline时间线</div>
       </div>
       <!-- <div class="content">
-        title演示
+        timeline时间线演示
 
-我是标题
-
-你好啊，未来越来越好哦
-我是标题
-
-你好啊，加油哦
-我是标题
-
-我是标题
-上述事例代码&#
+2021-01-01 1.0.3 -&gt; 1.0.3
+我是一个测试文字ghghgh。我
       </div> -->
     </a>
   </div>

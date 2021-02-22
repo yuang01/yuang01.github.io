@@ -92,7 +92,7 @@ var vm = new Vue({
     methods: {
         WebLocation() {
             let language = navigator.language;
-            let deploy = 'https://github.com/yuang01/yuang01.github.io.git';
+            let deploy = 'https://gitee.com/yuang01/yuang01.git';
             if (language == 'zh-CN') {
                 if (deploy == 'https://github.com/yuang01/yuang01.github.io.git') {
                     this.$confirm({
@@ -366,13 +366,13 @@ var vm = new Vue({
   <transition name="fade">
     <div class="message-box_wrapper" style="display: none;" v-cloak v-show="dialogVisible" @click.self="cancelDialogVisible()">
       <div class="message-box animated bounceInDown">
-        <div class="close" style="overflow: hidden;">
+        <!-- <div class="close" style="overflow: hidden;">
           <i class="fa fa-close" aria-hidden="true" style="float:right;" @click.self="cancelDialogVisible()"></i>
-        </div>
+        </div> -->
         <h2>
           <i class="fa fa-search" aria-hidden="true"></i>
           <span class="title">本地搜索</span>
-          <!-- <i class="fa fa-close" style="float:right;" aria-hidden="true" @click.self="cancelDialogVisible()"></i> -->
+          <i class="fa fa-close close" style="float:right;" aria-hidden="true" @click.self="cancelDialogVisible()"></i>
         </h2>
         <form class="site-search-form">
           <input type="text"
@@ -734,20 +734,19 @@ var vm = new Vue({
 
   
   <div class="post-nav-prev post-nav-item">
-    <div class="post-nav-img lazyload" data-original="/medias/8.jpg" style="background-size: cover; 
+    <div class="post-nav-img lazyload" data-original="/medias/10.jpg" style="background-size: cover; 
       background-position: center center;">
     </div>
-    <a href="/2021/02/08/site-card/" class="post-nav-link">
+    <a href="/2021/02/08/p/" class="post-nav-link">
       <div class="title">
         <i class="fa fa-angle-left"></i> 上一篇:
-        <div>site-card</div>
+        <div>段落文本</div>
       </div>
       
       <!-- <div class="content">
-        site-card演示
-WDZ这是一个喜爱二次元的小伙伴博客
-yuang01这是我的博客
-WDZ这是一个喜爱二次元的小伙
+        段落文本演示
+我是一个文本高亮大萨达所多撒多撒多撒大多多撒多撒多撒大所多撒大多
+我是一个文本高亮大萨达所多撒多撒多撒大多
       </div> -->
     </a>
   </div>
@@ -756,17 +755,19 @@ WDZ这是一个喜爱二次元的小伙
 
   
   <div class="post-nav-next post-nav-item">
-    <div class="post-nav-img lazyload" data-original="/medias/7.jpg" style="background-size: cover; 
+    <div class="post-nav-img lazyload" data-original="/medias/8.jpg" style="background-size: cover; 
       background-position: center center;">
     </div>
-    <a href="/2021/02/08/span/" class="post-nav-link">
+    <a href="/2021/02/08/site-card/" class="post-nav-link">
       <div class="title">
         下一篇: <i class="fa fa-angle-right"></i>
-        <div>文字颜色</div>
+        <div>site-card</div>
       </div>
       <!-- <div class="content">
-        文字颜色演示效果
-这是一个简单的文字我是一个文字高亮，唱着我们心肠的曲折这是一个简单的文字我是一个文字高亮，唱着我们心肠
+        site-card演示
+WDZ这是一个喜爱二次元的小伙伴博客
+yuang01这是我的博客
+WDZ这是一个喜爱二次元的小伙
       </div> -->
     </a>
   </div>

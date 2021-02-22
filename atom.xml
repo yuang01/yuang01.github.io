@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yuang01.github.io/"/>
-  <updated>2021-02-08T13:21:32.363Z</updated>
+  <updated>2021-02-22T03:03:57.361Z</updated>
   <id>http://yuang01.github.io/</id>
   
   <author>
@@ -17,11 +17,40 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>进度条</title>
+    <link href="http://yuang01.github.io/2021/02/22/progress/"/>
+    <id>http://yuang01.github.io/2021/02/22/progress/</id>
+    <published>2021-02-22T03:35:00.000Z</published>
+    <updated>2021-02-22T03:03:57.361Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;div class=&quot;note info&quot;&gt;&lt;p&gt;该标签适用版本为&lt;code&gt;1.8.1&lt;/code&gt;及以上&lt;/p&gt;&lt;/div&gt;
+&lt;h2 class=&quot;bamboo-h &quot; id=&quot;进度条示例&quot;&gt;进度条示例&lt;/h2&gt;&lt;br/&gt;
+&lt;div
+        
+      
+    
+    </summary>
+    
+    
+      <category term="前端" scheme="http://yuang01.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="tag" scheme="http://yuang01.github.io/tags/tag/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Hexo主题--Bamboo介绍</title>
     <link href="http://yuang01.github.io/2021/02/08/hexo-theme-bamboo-new/"/>
     <id>http://yuang01.github.io/2021/02/08/hexo-theme-bamboo-new/</id>
     <published>2021-02-08T04:35:00.000Z</published>
-    <updated>2021-02-08T13:21:32.363Z</updated>
+    <updated>2021-02-22T03:01:31.813Z</updated>
     
     <summary type="html">
     
@@ -44,7 +73,7 @@
     <link href="http://yuang01.github.io/2021/02/08/btn/"/>
     <id>http://yuang01.github.io/2021/02/08/btn/</id>
     <published>2021-02-08T03:36:00.000Z</published>
-    <updated>2021-02-08T04:15:44.605Z</updated>
+    <updated>2021-02-22T03:02:43.876Z</updated>
     
     <summary type="html">
     
@@ -72,7 +101,7 @@
     <link href="http://yuang01.github.io/2021/02/08/audio/"/>
     <id>http://yuang01.github.io/2021/02/08/audio/</id>
     <published>2021-02-08T03:35:00.000Z</published>
-    <updated>2021-02-08T04:13:26.041Z</updated>
+    <updated>2021-02-22T03:02:38.249Z</updated>
     
     <summary type="html">
     
@@ -97,11 +126,39 @@
   </entry>
   
   <entry>
+    <title>folding折叠</title>
+    <link href="http://yuang01.github.io/2021/02/08/folding/"/>
+    <id>http://yuang01.github.io/2021/02/08/folding/</id>
+    <published>2021-02-08T03:35:00.000Z</published>
+    <updated>2021-02-22T03:02:48.380Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;span&gt;&lt;img src=&#39;https://cdn.jsdelivr.net/gh/deepkolos/wechat-emoji/emoji/不屑.png&#39; style=&#39;height:24px&#39;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h2 class=&quot;bamboo-h &quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="前端" scheme="http://yuang01.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="tag" scheme="http://yuang01.github.io/tags/tag/"/>
+    
+  </entry>
+  
+  <entry>
     <title>checkbox</title>
     <link href="http://yuang01.github.io/2021/02/08/checkbox/"/>
     <id>http://yuang01.github.io/2021/02/08/checkbox/</id>
     <published>2021-02-08T03:35:00.000Z</published>
-    <updated>2021-02-08T04:18:28.706Z</updated>
+    <updated>2021-02-22T03:02:46.207Z</updated>
     
     <summary type="html">
     
@@ -127,39 +184,11 @@
   </entry>
   
   <entry>
-    <title>folding折叠</title>
-    <link href="http://yuang01.github.io/2021/02/08/folding/"/>
-    <id>http://yuang01.github.io/2021/02/08/folding/</id>
-    <published>2021-02-08T03:35:00.000Z</published>
-    <updated>2021-02-08T04:18:31.750Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;&lt;span&gt;&lt;img src=&#39;https://cdn.jsdelivr.net/gh/deepkolos/wechat-emoji/emoji/不屑.png&#39; style=&#39;height:24px&#39;&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;h2 class=&quot;bamboo-h &quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="前端" scheme="http://yuang01.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="tag" scheme="http://yuang01.github.io/tags/tag/"/>
-    
-  </entry>
-  
-  <entry>
     <title>gallery图片</title>
     <link href="http://yuang01.github.io/2021/02/08/gallery/"/>
     <id>http://yuang01.github.io/2021/02/08/gallery/</id>
     <published>2021-02-08T03:35:00.000Z</published>
-    <updated>2021-02-09T01:46:38.475Z</updated>
+    <updated>2021-02-22T03:02:52.884Z</updated>
     
     <summary type="html">
     
@@ -186,7 +215,7 @@
     <link href="http://yuang01.github.io/2021/02/08/ghcard/"/>
     <id>http://yuang01.github.io/2021/02/08/ghcard/</id>
     <published>2021-02-08T03:35:00.000Z</published>
-    <updated>2021-02-08T04:18:38.257Z</updated>
+    <updated>2021-02-22T03:02:55.095Z</updated>
     
     <summary type="html">
     
@@ -210,11 +239,40 @@
   </entry>
   
   <entry>
+    <title>Link标签</title>
+    <link href="http://yuang01.github.io/2021/02/08/link/"/>
+    <id>http://yuang01.github.io/2021/02/08/link/</id>
+    <published>2021-02-08T03:35:00.000Z</published>
+    <updated>2021-02-22T03:03:08.839Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 class=&quot;bamboo-h &quot; id=&quot;超链接标签&quot;&gt;超链接标签&lt;/h2&gt;&lt;br/&gt;
+
+&lt;div class=&quot;tagLink&quot;&gt;&lt;a class=&quot;link-card&quot; title=&quot;如何参与项目&quot; href=&quot;http://www.baidu.com&quot;&gt;&lt;div
+        
+      
+    
+    </summary>
+    
+    
+      <category term="前端" scheme="http://yuang01.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="tag" scheme="http://yuang01.github.io/tags/tag/"/>
+    
+  </entry>
+  
+  <entry>
     <title>lineImage标签</title>
     <link href="http://yuang01.github.io/2021/02/08/inlineimage/"/>
     <id>http://yuang01.github.io/2021/02/08/inlineimage/</id>
     <published>2021-02-08T03:35:00.000Z</published>
-    <updated>2021-02-08T04:18:42.691Z</updated>
+    <updated>2021-02-22T03:03:03.831Z</updated>
     
     <summary type="html">
     
@@ -242,7 +300,7 @@
     <link href="http://yuang01.github.io/2021/02/08/note/"/>
     <id>http://yuang01.github.io/2021/02/08/note/</id>
     <published>2021-02-08T03:35:00.000Z</published>
-    <updated>2021-02-08T04:18:48.958Z</updated>
+    <updated>2021-02-22T03:03:11.416Z</updated>
     
     <summary type="html">
     
@@ -269,40 +327,11 @@
   </entry>
   
   <entry>
-    <title>Link标签</title>
-    <link href="http://yuang01.github.io/2021/02/08/link/"/>
-    <id>http://yuang01.github.io/2021/02/08/link/</id>
-    <published>2021-02-08T03:35:00.000Z</published>
-    <updated>2021-02-08T04:18:45.679Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 class=&quot;bamboo-h &quot; id=&quot;超链接标签&quot;&gt;超链接标签&lt;/h2&gt;&lt;br/&gt;
-
-&lt;div class=&quot;tagLink&quot;&gt;&lt;a class=&quot;link-card&quot; title=&quot;如何参与项目&quot; href=&quot;http://www.baidu.com&quot;&gt;&lt;div
-        
-      
-    
-    </summary>
-    
-    
-      <category term="前端" scheme="http://yuang01.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="tag" scheme="http://yuang01.github.io/tags/tag/"/>
-    
-  </entry>
-  
-  <entry>
     <title>NoteBlock</title>
     <link href="http://yuang01.github.io/2021/02/08/noteblock/"/>
     <id>http://yuang01.github.io/2021/02/08/noteblock/</id>
     <published>2021-02-08T03:35:00.000Z</published>
-    <updated>2021-02-08T04:18:52.169Z</updated>
+    <updated>2021-02-22T03:03:13.719Z</updated>
     
     <summary type="html">
     
@@ -327,11 +356,39 @@
   </entry>
   
   <entry>
+    <title>文本高亮</title>
+    <link href="http://yuang01.github.io/2021/02/08/pbg/"/>
+    <id>http://yuang01.github.io/2021/02/08/pbg/</id>
+    <published>2021-02-08T03:35:00.000Z</published>
+    <updated>2021-02-22T03:04:09.747Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 class=&quot;bamboo-h &quot; id=&quot;文本高亮演示效果&quot;&gt;文本高亮演示效果&lt;/h2&gt;&lt;br/&gt;
+&lt;p&gt;这是一个简单的文字&lt;span class=&#39;pbg yellow&#39;&gt;我是一个文本高亮&lt;/span&gt;，唱着我们心肠的曲折&lt;br&gt;这是一个简单的文字&lt;span
+        
+      
+    
+    </summary>
+    
+    
+      <category term="前端" scheme="http://yuang01.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="tag" scheme="http://yuang01.github.io/tags/tag/"/>
+    
+  </entry>
+  
+  <entry>
     <title>段落文本</title>
     <link href="http://yuang01.github.io/2021/02/08/p/"/>
     <id>http://yuang01.github.io/2021/02/08/p/</id>
     <published>2021-02-08T03:35:00.000Z</published>
-    <updated>2021-02-08T04:18:56.141Z</updated>
+    <updated>2021-02-22T03:03:20.203Z</updated>
     
     <summary type="html">
     
@@ -356,67 +413,11 @@
   </entry>
   
   <entry>
-    <title>文本高亮</title>
-    <link href="http://yuang01.github.io/2021/02/08/pbg/"/>
-    <id>http://yuang01.github.io/2021/02/08/pbg/</id>
-    <published>2021-02-08T03:35:00.000Z</published>
-    <updated>2021-02-08T04:19:00.293Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 class=&quot;bamboo-h &quot; id=&quot;文本高亮演示效果&quot;&gt;文本高亮演示效果&lt;/h2&gt;&lt;br/&gt;
-&lt;p&gt;这是一个简单的文字&lt;span class=&#39;pbg yellow&#39;&gt;我是一个文本高亮&lt;/span&gt;，唱着我们心肠的曲折&lt;br&gt;这是一个简单的文字&lt;span
-        
-      
-    
-    </summary>
-    
-    
-      <category term="前端" scheme="http://yuang01.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="tag" scheme="http://yuang01.github.io/tags/tag/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>site-card</title>
-    <link href="http://yuang01.github.io/2021/02/08/site-card/"/>
-    <id>http://yuang01.github.io/2021/02/08/site-card/</id>
-    <published>2021-02-08T03:35:00.000Z</published>
-    <updated>2021-02-08T04:19:08.305Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 class=&quot;bamboo-h &quot; id=&quot;site-card演示&quot;&gt;site-card演示&lt;/h2&gt;&lt;br/&gt;
-&lt;div class=&quot;site-card-group&quot;&gt;&lt;a class=&quot;site-card&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="前端" scheme="http://yuang01.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="tag" scheme="http://yuang01.github.io/tags/tag/"/>
-    
-  </entry>
-  
-  <entry>
     <title>radio</title>
     <link href="http://yuang01.github.io/2021/02/08/radio/"/>
     <id>http://yuang01.github.io/2021/02/08/radio/</id>
     <published>2021-02-08T03:35:00.000Z</published>
-    <updated>2021-02-08T04:19:03.918Z</updated>
+    <updated>2021-02-22T03:03:28.659Z</updated>
     
     <summary type="html">
     
@@ -442,11 +443,39 @@
   </entry>
   
   <entry>
+    <title>site-card</title>
+    <link href="http://yuang01.github.io/2021/02/08/site-card/"/>
+    <id>http://yuang01.github.io/2021/02/08/site-card/</id>
+    <published>2021-02-08T03:35:00.000Z</published>
+    <updated>2021-02-22T03:04:04.056Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 class=&quot;bamboo-h &quot; id=&quot;site-card演示&quot;&gt;site-card演示&lt;/h2&gt;&lt;br/&gt;
+&lt;div class=&quot;site-card-group&quot;&gt;&lt;a class=&quot;site-card&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="前端" scheme="http://yuang01.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="tag" scheme="http://yuang01.github.io/tags/tag/"/>
+    
+  </entry>
+  
+  <entry>
     <title>文字颜色</title>
     <link href="http://yuang01.github.io/2021/02/08/span/"/>
     <id>http://yuang01.github.io/2021/02/08/span/</id>
     <published>2021-02-08T03:35:00.000Z</published>
-    <updated>2021-02-08T04:19:11.484Z</updated>
+    <updated>2021-02-22T03:04:18.017Z</updated>
     
     <summary type="html">
     
@@ -474,7 +503,7 @@
     <link href="http://yuang01.github.io/2021/02/08/tab/"/>
     <id>http://yuang01.github.io/2021/02/08/tab/</id>
     <published>2021-02-08T03:35:00.000Z</published>
-    <updated>2021-02-08T04:19:14.518Z</updated>
+    <updated>2021-02-22T03:04:20.407Z</updated>
     
     <summary type="html">
     
@@ -502,7 +531,7 @@
     <link href="http://yuang01.github.io/2021/02/08/text/"/>
     <id>http://yuang01.github.io/2021/02/08/text/</id>
     <published>2021-02-08T03:35:00.000Z</published>
-    <updated>2021-02-08T04:19:17.832Z</updated>
+    <updated>2021-02-22T03:04:26.448Z</updated>
     
     <summary type="html">
     
@@ -529,43 +558,11 @@
   </entry>
   
   <entry>
-    <title>title</title>
-    <link href="http://yuang01.github.io/2021/02/08/title/"/>
-    <id>http://yuang01.github.io/2021/02/08/title/</id>
-    <published>2021-02-08T03:35:00.000Z</published>
-    <updated>2021-02-08T04:19:24.868Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 class=&quot;bamboo-h &quot; id=&quot;title演示&quot;&gt;title演示&lt;/h2&gt;&lt;br/&gt;
-
-&lt;h1 class=&quot;bamboo-h &quot; id=&quot;我是标题&quot;&gt;我是标题&lt;/h1&gt;&lt;br/&gt;
-
-&lt;p&gt;你好啊，未来越来越好哦&lt;/p&gt;
-&lt;h2
-        
-      
-    
-    </summary>
-    
-    
-      <category term="前端" scheme="http://yuang01.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="tag" scheme="http://yuang01.github.io/tags/tag/"/>
-    
-  </entry>
-  
-  <entry>
     <title>timeline时间线</title>
     <link href="http://yuang01.github.io/2021/02/08/timeline/"/>
     <id>http://yuang01.github.io/2021/02/08/timeline/</id>
     <published>2021-02-08T03:35:00.000Z</published>
-    <updated>2021-02-08T04:19:20.986Z</updated>
+    <updated>2021-02-22T03:04:28.929Z</updated>
     
     <summary type="html">
     

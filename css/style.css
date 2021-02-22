@@ -1957,10 +1957,11 @@ pre:hover::-webkit-scrollbar-thumb:hover,
 .message-box_wrapper .message-box h2 {
   font-size: 1.5rem;
 }
-.message-box_wrapper .message-box .close {
+.message-box_wrapper .message-box h2 .close {
   cursor: pointer;
+  font-size: 1rem;
 }
-.message-box_wrapper .message-box .close:hover {
+.message-box_wrapper .message-box h2 .close:hover {
   color: #42b983;
 }
 .message-box_wrapper .message-box #local-search-input {
@@ -4191,6 +4192,97 @@ div.tabs .tab-content .tab-pane > .note:last-child {
 .ghcard img {
   margin: 0 50%;
   transform: translateX(-50%);
+}
+.progress {
+  display: flex;
+  height: 1rem;
+  overflow: hidden;
+  font-size: 0.75rem;
+  background-color: #e9ecef;
+  border-radius: 0.25rem;
+  margin: 1rem 0;
+}
+.progress-bar-animated {
+  background-color: #42b983 !important;
+}
+.progress-bar-animated {
+  animation: progress-bar-stripes 1s linear infinite;
+}
+.progress-bar-striped {
+  background-image: linear-gradient(45deg, rgba(255,255,255,0.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.15) 50%, rgba(255,255,255,0.15) 75%, transparent 75%, transparent);
+  background-size: 1rem 1rem;
+}
+.progress {
+  display: flex;
+  height: 1rem;
+  overflow: hidden;
+  font-size: 0.75rem;
+  background-color: #e9ecef;
+  border-radius: 0.25rem;
+}
+.progress-bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  background-color: #0d6efd;
+  transition: width 0.6s ease;
+}
+@media (prefers-reduced-motion: reduce) {
+  .progress-bar {
+    transition: none;
+  }
+}
+.progress-bar-striped {
+  background-image: linear-gradient(45deg, rgba(255,255,255,0.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.15) 50%, rgba(255,255,255,0.15) 75%, transparent 75%, transparent);
+  background-size: 1rem 1rem;
+}
+.progress-bar-animated {
+  animation: progress-bar-stripes 1s linear infinite;
+}
+.progress p {
+  font-size: 10px !important;
+  margin: 0 !important;
+  margin-bottom: 9px;
+  color: #fff;
+}
+.bg-success {
+  background-color: #67c23a !important;
+}
+.bg-warning {
+  background-color: #e6a23c !important;
+}
+.bg-danger {
+  background-color: #f66 !important;
+}
+.bg-info {
+  background-color: #409eff !important;
+}
+.bg-primary {
+  background-color: #42b983 !important;
+}
+@-moz-keyframes progress-bar-stripes {
+  0% {
+    background-position-x: 1rem;
+  }
+}
+@-webkit-keyframes progress-bar-stripes {
+  0% {
+    background-position-x: 1rem;
+  }
+}
+@-o-keyframes progress-bar-stripes {
+  0% {
+    background-position-x: 1rem;
+  }
+}
+@keyframes progress-bar-stripes {
+  0% {
+    background-position-x: 1rem;
+  }
 }
 .deng-box {
   position: fixed;

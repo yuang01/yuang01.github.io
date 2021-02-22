@@ -92,7 +92,7 @@ var vm = new Vue({
     methods: {
         WebLocation() {
             let language = navigator.language;
-            let deploy = 'https://github.com/yuang01/yuang01.github.io.git';
+            let deploy = 'https://gitee.com/yuang01/yuang01.git';
             if (language == 'zh-CN') {
                 if (deploy == 'https://github.com/yuang01/yuang01.github.io.git') {
                     this.$confirm({
@@ -366,13 +366,13 @@ var vm = new Vue({
   <transition name="fade">
     <div class="message-box_wrapper" style="display: none;" v-cloak v-show="dialogVisible" @click.self="cancelDialogVisible()">
       <div class="message-box animated bounceInDown">
-        <div class="close" style="overflow: hidden;">
+        <!-- <div class="close" style="overflow: hidden;">
           <i class="fa fa-close" aria-hidden="true" style="float:right;" @click.self="cancelDialogVisible()"></i>
-        </div>
+        </div> -->
         <h2>
           <i class="fa fa-search" aria-hidden="true"></i>
           <span class="title">本地搜索</span>
-          <!-- <i class="fa fa-close" style="float:right;" aria-hidden="true" @click.self="cancelDialogVisible()"></i> -->
+          <i class="fa fa-close close" style="float:right;" aria-hidden="true" @click.self="cancelDialogVisible()"></i>
         </h2>
         <form class="site-search-form">
           <input type="text"
@@ -713,22 +713,22 @@ var vm = new Vue({
 
   
   <div class="post-nav-prev post-nav-item">
-    <div class="post-nav-img lazyload" data-original="/medias/1.jpg" style="background-size: cover; 
+    <div class="post-nav-img lazyload" data-original="/medias/5.jpg" style="background-size: cover; 
       background-position: center center;">
     </div>
-    <a href="/2021/02/08/note/" class="post-nav-link">
+    <a href="/2021/02/08/ghcard/" class="post-nav-link">
       <div class="title">
         <i class="fa fa-angle-left"></i> 上一篇:
-        <div>Note标签</div>
+        <div>Github卡片</div>
       </div>
       
       <!-- <div class="content">
-        note演示效果
+        Github用户卡片
 
-markdown默认写法，左边框颜色，随着主题色改变
+上述示例代码&#123;% ghcard yuang01 %&#125;
+表格中加入用户卡片
 
-我有一只小毛驴，我从来都不骑。
-适合引用一段
+
       </div> -->
     </a>
   </div>
@@ -737,24 +737,20 @@ markdown默认写法，左边框颜色，随着主题色改变
 
   
   <div class="post-nav-next post-nav-item">
-    <div class="post-nav-img lazyload" data-original="/medias/14.jpg" style="background-size: cover; 
+    <div class="post-nav-img lazyload" data-original="/medias/11.jpg" style="background-size: cover; 
       background-position: center center;">
     </div>
-    <a href="/2021/02/08/noteblock/" class="post-nav-link">
+    <a href="/2021/02/08/inlineimage/" class="post-nav-link">
       <div class="title">
         下一篇: <i class="fa fa-angle-right"></i>
-        <div>NoteBlock</div>
+        <div>lineImage标签</div>
       </div>
       <!-- <div class="content">
-        noteblock演示效果
-
-标题（可选）asdsd
-
-标题（可选）asdsd
-
-标题（可选）asdsd
-
-标题（可选）
+        段落中插入图片
+这是  一段话。
+这又是  一段话。
+这又是  一段话。
+上述事例代码这是 &#123;% inline
       </div> -->
     </a>
   </div>
