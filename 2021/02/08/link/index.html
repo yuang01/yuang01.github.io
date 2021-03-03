@@ -550,8 +550,8 @@ var vm = new Vue({
             clearInterval(this.time);
         },
         mounted() {
-            let prop = ''|| 'https://pic1.zhimg.com/80/v2-06a153ed416b73b8406db8f58f79018f_1440w.jpg?source=1940ef5c,https://pic4.zhimg.com/80/v2-18bd4171e36170500130a7ece1e15156_1440w.jpg?source=1940ef5c,https://pic4.zhimg.com/80/v2-6d7d555a0bd00a9e29dafc0174f07aef_1440w.jpg?source=1940ef5c';
-            let isImg = prop.includes('.bmp') || prop.includes('.jpg') || prop.includes('.png') || prop.includes('.tif') || prop.includes('.gif') || prop.includes('.pcx') || prop.includes('.tga') || prop.includes('.exif') || prop.includes('.fpx') || prop.includes('.psd') || prop.includes('.cdr') || prop.includes('.pcd') || prop.includes('.dxf') || prop.includes('.ufo') || prop.includes('.eps') || prop.includes('.ai') || prop.includes('.raw') || prop.includes('.WMF') || prop.includes('.webp') || prop.includes('.jpeg')
+            let prop = ''|| 'https://api.ixiaowai.cn/gqapi/gqapi.php,https://api.btstu.cn/sjbz/api.php,https://api.mz-moe.cn/img.php';
+            let isImg = prop.includes('.bmp') || prop.includes('.jpg') || prop.includes('.png') || prop.includes('.tif') || prop.includes('.gif') || prop.includes('.pcx') || prop.includes('.tga') || prop.includes('.exif') || prop.includes('.fpx') || prop.includes('.psd') || prop.includes('.cdr') || prop.includes('.pcd') || prop.includes('.dxf') || prop.includes('.ufo') || prop.includes('.eps') || prop.includes('.ai') || prop.includes('.raw') || prop.includes('.WMF') || prop.includes('.webp') || prop.includes('.jpeg') || prop.includes('http://') || prop.includes('https://') 
             if (isImg) {
                 let img = prop.split(',');
                 let configRoot = '/'
@@ -595,6 +595,7 @@ var vm = new Vue({
         height: 100%;
     }
 </style>
+
 
 
 
@@ -662,19 +663,19 @@ var vm = new Vue({
       <div class="post-content">
         <h2 class="bamboo-h " id="超链接标签">超链接标签</h2><br/>
 
-<div class="tagLink"><a class="link-card" title="如何参与项目" target="_blank" rel="noopener" href="http://www.baidu.com"><div class="left"><img src="https://cdn.pixabay.com/photo/2018/12/05/13/41/panda-3857754__340.jpg"/></div><div class="right"><p class="text">如何参与项目</p><p class="url">http://www.baidu.com</p></div></a></div>
+<div class="tagLink"><a class="link-card" title="如何参与项目" target="_blank" rel="noopener" href="http://www.baidu.com"><div class="left"><img "" class="lazyload placeholder" data-original="https://cdn.pixabay.com/photo/2018/12/05/13/41/panda-3857754__340.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"/></div><div class="right"><p class="text">如何参与项目</p><p class="url">http://www.baidu.com</p></div></a></div>
 
-<div class="tagLink"><a class="link-card" title="如何参与项目" target="_blank" rel="noopener" href="http://www.baidu.com"><div class="left"><img src="https://cdn.pixabay.com/photo/2018/12/05/13/41/panda-3857754__340.jpg"/></div><div class="right"><p class="text">如何参与项目</p><p class="url">http://www.baidu.com</p></div></a></div>
+<div class="tagLink"><a class="link-card" title="如何参与项目" target="_blank" rel="noopener" href="http://www.baidu.com"><div class="left"><img "" class="lazyload placeholder" data-original="https://cdn.pixabay.com/photo/2018/12/05/13/41/panda-3857754__340.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"/></div><div class="right"><p class="text">如何参与项目</p><p class="url">http://www.baidu.com</p></div></a></div>
 <h3 id="上述事例代码"><a href="#上述事例代码" class="headerlink" title="上述事例代码"></a>上述事例代码</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">&#123;</span>% <span class="token function">link</span> 如何参与项目, http://www.baidu.com, https://cdn.pixabay.com/photo/2018/12/05/13/41/panda-3857754__340.jpg %<span class="token punctuation">&#125;</span>
 
 <span class="token punctuation">&#123;</span>% <span class="token function">link</span> 如何参与项目, http://www.baidu.com, https://cdn.pixabay.com/photo/2018/12/05/13/41/panda-3857754__340.jpg %<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<div class="link-group"><div class="tagLink"><a class="link-card" title="如何参与项目" target="_blank" rel="noopener" href="http://www.baidu.com"><div class="left"><img src="https://cdn.pixabay.com/photo/2018/12/05/13/41/panda-3857754__340.jpg"/></div><div class="right"><p class="text">如何参与项目</p><p class="url">http://www.baidu.com</p></div></a></div>
+<div class="link-group"><div class="tagLink"><a class="link-card" title="如何参与项目" target="_blank" rel="noopener" href="http://www.baidu.com"><div class="left"><img "" class="lazyload placeholder" data-original="https://cdn.pixabay.com/photo/2018/12/05/13/41/panda-3857754__340.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"/></div><div class="right"><p class="text">如何参与项目</p><p class="url">http://www.baidu.com</p></div></a></div>
 
-<div class="tagLink"><a class="link-card" title="如何参与项目" target="_blank" rel="noopener" href="http://www.baidu.com"><div class="left"><img src="https://cdn.pixabay.com/photo/2018/12/05/13/41/panda-3857754__340.jpg"/></div><div class="right"><p class="text">如何参与项目</p><p class="url">http://www.baidu.com</p></div></a></div>
+<div class="tagLink"><a class="link-card" title="如何参与项目" target="_blank" rel="noopener" href="http://www.baidu.com"><div class="left"><img "" class="lazyload placeholder" data-original="https://cdn.pixabay.com/photo/2018/12/05/13/41/panda-3857754__340.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"/></div><div class="right"><p class="text">如何参与项目</p><p class="url">http://www.baidu.com</p></div></a></div>
 
-<div class="tagLink"><a class="link-card" title="如何参与项目" target="_blank" rel="noopener" href="http://www.baidu.com"><div class="left"><img src="https://cdn.pixabay.com/photo/2018/12/05/13/41/panda-3857754__340.jpg"/></div><div class="right"><p class="text">如何参与项目</p><p class="url">http://www.baidu.com</p></div></a></div>
+<div class="tagLink"><a class="link-card" title="如何参与项目" target="_blank" rel="noopener" href="http://www.baidu.com"><div class="left"><img "" class="lazyload placeholder" data-original="https://cdn.pixabay.com/photo/2018/12/05/13/41/panda-3857754__340.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"/></div><div class="right"><p class="text">如何参与项目</p><p class="url">http://www.baidu.com</p></div></a></div>
 
-<div class="tagLink"><a class="link-card" title="如何参与项目" target="_blank" rel="noopener" href="http://www.baidu.com"><div class="left"><img src="https://cdn.pixabay.com/photo/2018/12/05/13/41/panda-3857754__340.jpg"/></div><div class="right"><p class="text">如何参与项目</p><p class="url">http://www.baidu.com</p></div></a></div></div>
+<div class="tagLink"><a class="link-card" title="如何参与项目" target="_blank" rel="noopener" href="http://www.baidu.com"><div class="left"><img "" class="lazyload placeholder" data-original="https://cdn.pixabay.com/photo/2018/12/05/13/41/panda-3857754__340.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"/></div><div class="right"><p class="text">如何参与项目</p><p class="url">http://www.baidu.com</p></div></a></div></div>
 <h3 id="上述事例代码-1"><a href="#上述事例代码-1" class="headerlink" title="上述事例代码"></a>上述事例代码</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">&#123;</span>% linkgroup %<span class="token punctuation">&#125;</span>
 <span class="token punctuation">&#123;</span>% <span class="token function">link</span> 如何参与项目, http://www.baidu.com, https://cdn.pixabay.com/photo/2018/12/05/13/41/panda-3857754__340.jpg %<span class="token punctuation">&#125;</span>
 
@@ -713,22 +714,21 @@ var vm = new Vue({
 
   
   <div class="post-nav-prev post-nav-item">
-    <div class="post-nav-img lazyload" data-original="/medias/5.jpg" style="background-size: cover; 
+    <div class="post-nav-img lazyload" data-original="/medias/11.jpg" style="background-size: cover; 
       background-position: center center;">
     </div>
-    <a href="/2021/02/08/ghcard/" class="post-nav-link">
+    <a href="/2021/02/08/inlineimage/" class="post-nav-link">
       <div class="title">
         <i class="fa fa-angle-left"></i> 上一篇:
-        <div>Github卡片</div>
+        <div>lineImage标签</div>
       </div>
       
       <!-- <div class="content">
-        Github用户卡片
-
-上述示例代码&#123;% ghcard yuang01 %&#125;
-表格中加入用户卡片
-
-
+        段落中插入图片
+这是  一段话。
+这又是  一段话。
+这又是  一段话。
+上述事例代码这是 &#123;% inline
       </div> -->
     </a>
   </div>
@@ -737,20 +737,21 @@ var vm = new Vue({
 
   
   <div class="post-nav-next post-nav-item">
-    <div class="post-nav-img lazyload" data-original="/medias/11.jpg" style="background-size: cover; 
+    <div class="post-nav-img lazyload" data-original="/medias/1.jpg" style="background-size: cover; 
       background-position: center center;">
     </div>
-    <a href="/2021/02/08/inlineimage/" class="post-nav-link">
+    <a href="/2021/02/08/note/" class="post-nav-link">
       <div class="title">
         下一篇: <i class="fa fa-angle-right"></i>
-        <div>lineImage标签</div>
+        <div>Note标签</div>
       </div>
       <!-- <div class="content">
-        段落中插入图片
-这是  一段话。
-这又是  一段话。
-这又是  一段话。
-上述事例代码这是 &#123;% inline
+        note演示效果
+
+markdown默认写法，左边框颜色，随着主题色改变
+
+我有一只小毛驴，我从来都不骑。
+适合引用一段
       </div> -->
     </a>
   </div>

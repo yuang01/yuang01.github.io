@@ -550,8 +550,8 @@ var vm = new Vue({
             clearInterval(this.time);
         },
         mounted() {
-            let prop = ''|| 'https://pic1.zhimg.com/80/v2-06a153ed416b73b8406db8f58f79018f_1440w.jpg?source=1940ef5c,https://pic4.zhimg.com/80/v2-18bd4171e36170500130a7ece1e15156_1440w.jpg?source=1940ef5c,https://pic4.zhimg.com/80/v2-6d7d555a0bd00a9e29dafc0174f07aef_1440w.jpg?source=1940ef5c';
-            let isImg = prop.includes('.bmp') || prop.includes('.jpg') || prop.includes('.png') || prop.includes('.tif') || prop.includes('.gif') || prop.includes('.pcx') || prop.includes('.tga') || prop.includes('.exif') || prop.includes('.fpx') || prop.includes('.psd') || prop.includes('.cdr') || prop.includes('.pcd') || prop.includes('.dxf') || prop.includes('.ufo') || prop.includes('.eps') || prop.includes('.ai') || prop.includes('.raw') || prop.includes('.WMF') || prop.includes('.webp') || prop.includes('.jpeg')
+            let prop = ''|| 'https://api.ixiaowai.cn/gqapi/gqapi.php,https://api.btstu.cn/sjbz/api.php,https://api.mz-moe.cn/img.php';
+            let isImg = prop.includes('.bmp') || prop.includes('.jpg') || prop.includes('.png') || prop.includes('.tif') || prop.includes('.gif') || prop.includes('.pcx') || prop.includes('.tga') || prop.includes('.exif') || prop.includes('.fpx') || prop.includes('.psd') || prop.includes('.cdr') || prop.includes('.pcd') || prop.includes('.dxf') || prop.includes('.ufo') || prop.includes('.eps') || prop.includes('.ai') || prop.includes('.raw') || prop.includes('.WMF') || prop.includes('.webp') || prop.includes('.jpeg') || prop.includes('http://') || prop.includes('https://') 
             if (isImg) {
                 let img = prop.split(',');
                 let configRoot = '/'
@@ -595,6 +595,7 @@ var vm = new Vue({
         height: 100%;
     }
 </style>
+
 
 
 
@@ -665,7 +666,7 @@ var vm = new Vue({
 
 <details ><summary> 查看图片测试 </summary>
               <div class='content'>
-              <p><img src="https://pic4.zhimg.com/80/v2-5e0b1aaa1994f6d7cb9aac94a6f4e0b3_1440w.jpg" alt=""></p>
+              <p><img "" class="lazyload placeholder" data-original="https://pic4.zhimg.com/80/v2-5e0b1aaa1994f6d7cb9aac94a6f4e0b3_1440w.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" alt=""></p>
               </div>
             </details>
 <h3 id="上述事例代码"><a href="#上述事例代码" class="headerlink" title="上述事例代码"></a>上述事例代码</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">&#123;</span>% folding 查看图片测试 %<span class="token punctuation">&#125;</span>
@@ -751,22 +752,21 @@ hahaha <span class="token operator">&lt;</span>span<span class="token operator">
 
   
   <div class="post-nav-prev post-nav-item">
-    <div class="post-nav-img lazyload" data-original="/medias/1.jpg" style="background-size: cover; 
+    <div class="post-nav-img lazyload" data-original="/medias/4.jpg" style="background-size: cover; 
       background-position: center center;">
     </div>
-    <a href="/2021/02/08/audio/" class="post-nav-link">
+    <a href="/2021/02/08/checkbox/" class="post-nav-link">
       <div class="title">
         <i class="fa fa-angle-left"></i> 上一篇:
-        <div>audio音频</div>
+        <div>checkbox</div>
       </div>
       
       <!-- <div class="content">
-        事例
+        
+            纯文本测试
+            
 
-Your browser does not support the audio tag.
-
-写法
-&#123;%
+            支持简单的 markdown 
       </div> -->
     </a>
   </div>
@@ -775,20 +775,21 @@ Your browser does not support the audio tag.
 
   
   <div class="post-nav-next post-nav-item">
-    <div class="post-nav-img lazyload" data-original="/medias/4.jpg" style="background-size: cover; 
+    <div class="post-nav-img lazyload" data-original="/medias/10.jpg" style="background-size: cover; 
       background-position: center center;">
     </div>
-    <a href="/2021/02/08/checkbox/" class="post-nav-link">
+    <a href="/2021/02/08/gallery/" class="post-nav-link">
       <div class="title">
         下一篇: <i class="fa fa-angle-right"></i>
-        <div>checkbox</div>
+        <div>gallery图片</div>
       </div>
       <!-- <div class="content">
-        
-            纯文本测试
-            
+        提示使用该标签请先将主题下的_config.yml中的fancybox设置为true
 
-            支持简单的 markdown 
+一行一个图片
+
+
+       
       </div> -->
     </a>
   </div>

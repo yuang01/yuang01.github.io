@@ -550,8 +550,8 @@ var vm = new Vue({
             clearInterval(this.time);
         },
         mounted() {
-            let prop = ''|| 'https://pic1.zhimg.com/80/v2-06a153ed416b73b8406db8f58f79018f_1440w.jpg?source=1940ef5c,https://pic4.zhimg.com/80/v2-18bd4171e36170500130a7ece1e15156_1440w.jpg?source=1940ef5c,https://pic4.zhimg.com/80/v2-6d7d555a0bd00a9e29dafc0174f07aef_1440w.jpg?source=1940ef5c';
-            let isImg = prop.includes('.bmp') || prop.includes('.jpg') || prop.includes('.png') || prop.includes('.tif') || prop.includes('.gif') || prop.includes('.pcx') || prop.includes('.tga') || prop.includes('.exif') || prop.includes('.fpx') || prop.includes('.psd') || prop.includes('.cdr') || prop.includes('.pcd') || prop.includes('.dxf') || prop.includes('.ufo') || prop.includes('.eps') || prop.includes('.ai') || prop.includes('.raw') || prop.includes('.WMF') || prop.includes('.webp') || prop.includes('.jpeg')
+            let prop = ''|| 'https://api.ixiaowai.cn/gqapi/gqapi.php,https://api.btstu.cn/sjbz/api.php,https://api.mz-moe.cn/img.php';
+            let isImg = prop.includes('.bmp') || prop.includes('.jpg') || prop.includes('.png') || prop.includes('.tif') || prop.includes('.gif') || prop.includes('.pcx') || prop.includes('.tga') || prop.includes('.exif') || prop.includes('.fpx') || prop.includes('.psd') || prop.includes('.cdr') || prop.includes('.pcd') || prop.includes('.dxf') || prop.includes('.ufo') || prop.includes('.eps') || prop.includes('.ai') || prop.includes('.raw') || prop.includes('.WMF') || prop.includes('.webp') || prop.includes('.jpeg') || prop.includes('http://') || prop.includes('https://') 
             if (isImg) {
                 let img = prop.split(',');
                 let configRoot = '/'
@@ -595,6 +595,7 @@ var vm = new Vue({
         height: 100%;
     }
 </style>
+
 
 
 
@@ -651,12 +652,13 @@ var vm = new Vue({
         
       </div>
       <div class="post-content">
-        <p><img src="/img/1.jpg" alt="Image text"><br>asda</p>
+        <p><img "" class="lazyload placeholder" data-original="/img/1.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" alt="Image text"><br><img "" class="lazyload placeholder" data-original="2.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" alt="Image 22222"><br>asda</p>
+<p>– haha –</p>
 <p>我是一段文字</p>
 <blockquote>
 <p>asa</p>
 </blockquote>
-<p>==我是高亮==</p>
+<p>== 我是高亮 ==</p>
 <ul>
 <li>第一项</li>
 <li>第二项</li>
@@ -684,6 +686,11 @@ var vm = new Vue({
 </ul>
 </li>
 </ol>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">bgImg: <span class="token punctuation">[</span>
+    <span class="token string">'https://pic1.zhimg.com/80/v2-06a153ed416b73b8406db8f58f79018f_1440w.jpg?source=1940ef5c'</span>,
+    <span class="token string">'https://pic4.zhimg.com/80/v2-18bd4171e36170500130a7ece1e15156_1440w.jpg?source=1940ef5c'</span>,
+    <span class="token string">'https://pic4.zhimg.com/80/v2-6d7d555a0bd00a9e29dafc0174f07aef_1440w.jpg?source=1940ef5c'</span>
+<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <ol>
 <li>第一项</li>
 <li>第二项</li>

@@ -550,8 +550,8 @@ var vm = new Vue({
             clearInterval(this.time);
         },
         mounted() {
-            let prop = ''|| 'https://pic1.zhimg.com/80/v2-06a153ed416b73b8406db8f58f79018f_1440w.jpg?source=1940ef5c,https://pic4.zhimg.com/80/v2-18bd4171e36170500130a7ece1e15156_1440w.jpg?source=1940ef5c,https://pic4.zhimg.com/80/v2-6d7d555a0bd00a9e29dafc0174f07aef_1440w.jpg?source=1940ef5c';
-            let isImg = prop.includes('.bmp') || prop.includes('.jpg') || prop.includes('.png') || prop.includes('.tif') || prop.includes('.gif') || prop.includes('.pcx') || prop.includes('.tga') || prop.includes('.exif') || prop.includes('.fpx') || prop.includes('.psd') || prop.includes('.cdr') || prop.includes('.pcd') || prop.includes('.dxf') || prop.includes('.ufo') || prop.includes('.eps') || prop.includes('.ai') || prop.includes('.raw') || prop.includes('.WMF') || prop.includes('.webp') || prop.includes('.jpeg')
+            let prop = ''|| 'https://api.ixiaowai.cn/gqapi/gqapi.php,https://api.btstu.cn/sjbz/api.php,https://api.mz-moe.cn/img.php';
+            let isImg = prop.includes('.bmp') || prop.includes('.jpg') || prop.includes('.png') || prop.includes('.tif') || prop.includes('.gif') || prop.includes('.pcx') || prop.includes('.tga') || prop.includes('.exif') || prop.includes('.fpx') || prop.includes('.psd') || prop.includes('.cdr') || prop.includes('.pcd') || prop.includes('.dxf') || prop.includes('.ufo') || prop.includes('.eps') || prop.includes('.ai') || prop.includes('.raw') || prop.includes('.WMF') || prop.includes('.webp') || prop.includes('.jpeg') || prop.includes('http://') || prop.includes('https://') 
             if (isImg) {
                 let img = prop.split(',');
                 let configRoot = '/'
@@ -595,6 +595,7 @@ var vm = new Vue({
         height: 100%;
     }
 </style>
+
 
 
 
@@ -771,11 +772,12 @@ var vm = new Vue({
       </div>
       <!-- <div class="content">
         asda
+– haha –
 我是一段文字
 
 asa
 
-==我是高亮==
+== 我是高亮 ==
 
 第一项
 第二项
@@ -784,11 +786,6 @@ asa
 
 第一项
 第二项
-第三项
-
-
-第一项
-
       </div> -->
     </a>
   </div>

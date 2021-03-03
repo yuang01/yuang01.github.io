@@ -550,8 +550,8 @@ var vm = new Vue({
             clearInterval(this.time);
         },
         mounted() {
-            let prop = ''|| 'https://pic1.zhimg.com/80/v2-06a153ed416b73b8406db8f58f79018f_1440w.jpg?source=1940ef5c,https://pic4.zhimg.com/80/v2-18bd4171e36170500130a7ece1e15156_1440w.jpg?source=1940ef5c,https://pic4.zhimg.com/80/v2-6d7d555a0bd00a9e29dafc0174f07aef_1440w.jpg?source=1940ef5c';
-            let isImg = prop.includes('.bmp') || prop.includes('.jpg') || prop.includes('.png') || prop.includes('.tif') || prop.includes('.gif') || prop.includes('.pcx') || prop.includes('.tga') || prop.includes('.exif') || prop.includes('.fpx') || prop.includes('.psd') || prop.includes('.cdr') || prop.includes('.pcd') || prop.includes('.dxf') || prop.includes('.ufo') || prop.includes('.eps') || prop.includes('.ai') || prop.includes('.raw') || prop.includes('.WMF') || prop.includes('.webp') || prop.includes('.jpeg')
+            let prop = ''|| 'https://api.ixiaowai.cn/gqapi/gqapi.php,https://api.btstu.cn/sjbz/api.php,https://api.mz-moe.cn/img.php';
+            let isImg = prop.includes('.bmp') || prop.includes('.jpg') || prop.includes('.png') || prop.includes('.tif') || prop.includes('.gif') || prop.includes('.pcx') || prop.includes('.tga') || prop.includes('.exif') || prop.includes('.fpx') || prop.includes('.psd') || prop.includes('.cdr') || prop.includes('.pcd') || prop.includes('.dxf') || prop.includes('.ufo') || prop.includes('.eps') || prop.includes('.ai') || prop.includes('.raw') || prop.includes('.WMF') || prop.includes('.webp') || prop.includes('.jpeg') || prop.includes('http://') || prop.includes('https://') 
             if (isImg) {
                 let img = prop.split(',');
                 let configRoot = '/'
@@ -595,6 +595,7 @@ var vm = new Vue({
         height: 100%;
     }
 </style>
+
 
 
 
@@ -716,21 +717,21 @@ var vm = new Vue({
 
   
   <div class="post-nav-prev post-nav-item">
-    <div class="post-nav-img lazyload" data-original="/medias/11.jpg" style="background-size: cover; 
+    <div class="post-nav-img lazyload" data-original="/medias/9.jpg" style="background-size: cover; 
       background-position: center center;">
     </div>
-    <a href="/2021/02/08/inlineimage/" class="post-nav-link">
+    <a href="/2021/02/08/link/" class="post-nav-link">
       <div class="title">
         <i class="fa fa-angle-left"></i> 上一篇:
-        <div>lineImage标签</div>
+        <div>Link标签</div>
       </div>
       
       <!-- <div class="content">
-        段落中插入图片
-这是  一段话。
-这又是  一段话。
-这又是  一段话。
-上述事例代码这是 &#123;% inline
+        超链接标签
+
+如何参与项目http://www.baidu.com
+
+如何参与项目http://www.baidu.co
       </div> -->
     </a>
   </div>

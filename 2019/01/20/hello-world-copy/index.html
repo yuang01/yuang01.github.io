@@ -550,8 +550,8 @@ var vm = new Vue({
             clearInterval(this.time);
         },
         mounted() {
-            let prop = ''|| 'https://pic1.zhimg.com/80/v2-06a153ed416b73b8406db8f58f79018f_1440w.jpg?source=1940ef5c,https://pic4.zhimg.com/80/v2-18bd4171e36170500130a7ece1e15156_1440w.jpg?source=1940ef5c,https://pic4.zhimg.com/80/v2-6d7d555a0bd00a9e29dafc0174f07aef_1440w.jpg?source=1940ef5c';
-            let isImg = prop.includes('.bmp') || prop.includes('.jpg') || prop.includes('.png') || prop.includes('.tif') || prop.includes('.gif') || prop.includes('.pcx') || prop.includes('.tga') || prop.includes('.exif') || prop.includes('.fpx') || prop.includes('.psd') || prop.includes('.cdr') || prop.includes('.pcd') || prop.includes('.dxf') || prop.includes('.ufo') || prop.includes('.eps') || prop.includes('.ai') || prop.includes('.raw') || prop.includes('.WMF') || prop.includes('.webp') || prop.includes('.jpeg')
+            let prop = ''|| 'https://api.ixiaowai.cn/gqapi/gqapi.php,https://api.btstu.cn/sjbz/api.php,https://api.mz-moe.cn/img.php';
+            let isImg = prop.includes('.bmp') || prop.includes('.jpg') || prop.includes('.png') || prop.includes('.tif') || prop.includes('.gif') || prop.includes('.pcx') || prop.includes('.tga') || prop.includes('.exif') || prop.includes('.fpx') || prop.includes('.psd') || prop.includes('.cdr') || prop.includes('.pcd') || prop.includes('.dxf') || prop.includes('.ufo') || prop.includes('.eps') || prop.includes('.ai') || prop.includes('.raw') || prop.includes('.WMF') || prop.includes('.webp') || prop.includes('.jpeg') || prop.includes('http://') || prop.includes('https://') 
             if (isImg) {
                 let img = prop.split(',');
                 let configRoot = '/'
@@ -595,6 +595,7 @@ var vm = new Vue({
         height: 100%;
     }
 </style>
+
 
 
 
@@ -662,7 +663,7 @@ var vm = new Vue({
       <div class="post-content">
         <p>基于<a target="_blank" rel="noopener" href="https://getbootstrapadmin.com/remark/base/index.html">remark UI</a>的样式，使用vue.js编写了左侧导航栏（侧边栏）和tab切换页面功能。基于<a target="_blank" rel="noopener" href="https://getbootstrapadmin.com/remark/base/index.html">remark UI</a>的样式敖德萨多撒多撒多撒多敖德萨多撒多大大撒多所大声道撒多大大的撒旦撒旦大萨达所所多</p>
 <a id="more"></a>
-<h1 id="效果总览"><a href="#效果总览" class="headerlink" title="效果总览"></a>效果总览</h1><p><img src="/images/remark.gif" alt="效果总览"></p>
+<h1 id="效果总览"><a href="#效果总览" class="headerlink" title="效果总览"></a>效果总览</h1><p><img "" class="lazyload placeholder" data-original="/images/remark.gif" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" alt="效果总览"></p>
 <h1 id="左侧导航栏"><a href="#左侧导航栏" class="headerlink" title="左侧导航栏"></a>左侧导航栏</h1><blockquote>
 <p>代码地址(侧边栏)<br><a target="_blank" rel="noopener" href="https://github.com/yuang01/remark-ui-vue/blob/master/src/views/Layout/Menubar/SidebarItem.vue">https://github.com/yuang01/remark-ui-vue/blob/master/src/views/Layout/Menubar/SidebarItem.vue</a></p>
 </blockquote>
@@ -712,7 +713,7 @@ var vm = new Vue({
     <span class="token punctuation">&#123;</span> path<span class="token operator">:</span> <span class="token string">'dashboard'</span><span class="token punctuation">,</span> component<span class="token operator">:</span> Dashboard<span class="token punctuation">,</span> name<span class="token operator">:</span> <span class="token string">'Dashboard'</span><span class="token punctuation">,</span> meta<span class="token operator">:</span> <span class="token punctuation">&#123;</span> icon<span class="token operator">:</span> <span class="token string">'dashboard'</span><span class="token punctuation">,</span> title<span class="token operator">:</span> <span class="token string">'首页'</span> <span class="token punctuation">&#125;</span><span class="token punctuation">,</span> <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
   <span class="token punctuation">]</span><span class="token punctuation">,</span>
 <span class="token punctuation">&#125;</span><span class="token punctuation">,</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>category是这样显示的<br><img src="/images/remark01.png" alt="category"></p>
+<p>category是这样显示的<br><img "" class="lazyload placeholder" data-original="/images/remark01.png" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" alt="category"></p>
 <h4 id="meta"><a href="#meta" class="headerlink" title="meta"></a>meta</h4><p>当只显示根目录的时候（children的length为1），可以在children之外和在children里面写</p>
 <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">meta<span class="token operator">:</span> <span class="token punctuation">&#123;</span> title<span class="token operator">:</span> <span class="token string">'标题'</span><span class="token punctuation">,</span> icon<span class="token operator">:</span> <span class="token string">'icon'</span> <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>如果有多个子路由，那么子路由的meta不需要定义icon，因为子路由不展示icon，如</p>

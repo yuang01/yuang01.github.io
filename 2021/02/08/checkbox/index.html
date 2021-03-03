@@ -550,8 +550,8 @@ var vm = new Vue({
             clearInterval(this.time);
         },
         mounted() {
-            let prop = ''|| 'https://pic1.zhimg.com/80/v2-06a153ed416b73b8406db8f58f79018f_1440w.jpg?source=1940ef5c,https://pic4.zhimg.com/80/v2-18bd4171e36170500130a7ece1e15156_1440w.jpg?source=1940ef5c,https://pic4.zhimg.com/80/v2-6d7d555a0bd00a9e29dafc0174f07aef_1440w.jpg?source=1940ef5c';
-            let isImg = prop.includes('.bmp') || prop.includes('.jpg') || prop.includes('.png') || prop.includes('.tif') || prop.includes('.gif') || prop.includes('.pcx') || prop.includes('.tga') || prop.includes('.exif') || prop.includes('.fpx') || prop.includes('.psd') || prop.includes('.cdr') || prop.includes('.pcd') || prop.includes('.dxf') || prop.includes('.ufo') || prop.includes('.eps') || prop.includes('.ai') || prop.includes('.raw') || prop.includes('.WMF') || prop.includes('.webp') || prop.includes('.jpeg')
+            let prop = ''|| 'https://api.ixiaowai.cn/gqapi/gqapi.php,https://api.btstu.cn/sjbz/api.php,https://api.mz-moe.cn/img.php';
+            let isImg = prop.includes('.bmp') || prop.includes('.jpg') || prop.includes('.png') || prop.includes('.tif') || prop.includes('.gif') || prop.includes('.pcx') || prop.includes('.tga') || prop.includes('.exif') || prop.includes('.fpx') || prop.includes('.psd') || prop.includes('.cdr') || prop.includes('.pcd') || prop.includes('.dxf') || prop.includes('.ufo') || prop.includes('.eps') || prop.includes('.ai') || prop.includes('.raw') || prop.includes('.WMF') || prop.includes('.webp') || prop.includes('.jpeg') || prop.includes('http://') || prop.includes('https://') 
             if (isImg) {
                 let img = prop.split(',');
                 let configRoot = '/'
@@ -595,6 +595,7 @@ var vm = new Vue({
         height: 100%;
     }
 </style>
+
 
 
 
@@ -719,15 +720,38 @@ var vm = new Vue({
 
   
   <div class="post-nav-prev post-nav-item">
+    <div class="post-nav-img lazyload" data-original="/medias/1.jpg" style="background-size: cover; 
+      background-position: center center;">
+    </div>
+    <a href="/2021/02/08/audio/" class="post-nav-link">
+      <div class="title">
+        <i class="fa fa-angle-left"></i> 上一篇:
+        <div>audio音频</div>
+      </div>
+      
+      <!-- <div class="content">
+        事例
+
+Your browser does not support the audio tag.
+
+写法
+&#123;%
+      </div> -->
+    </a>
+  </div>
+
+
+
+  
+  <div class="post-nav-next post-nav-item">
     <div class="post-nav-img lazyload" data-original="/medias/3.jpg" style="background-size: cover; 
       background-position: center center;">
     </div>
     <a href="/2021/02/08/folding/" class="post-nav-link">
       <div class="title">
-        <i class="fa fa-angle-left"></i> 上一篇:
+        下一篇: <i class="fa fa-angle-right"></i>
         <div>folding折叠</div>
       </div>
-      
       <!-- <div class="content">
         
 基本
@@ -737,29 +761,6 @@ var vm = new Vue({
               
               
  
-      </div> -->
-    </a>
-  </div>
-
-
-
-  
-  <div class="post-nav-next post-nav-item">
-    <div class="post-nav-img lazyload" data-original="/medias/10.jpg" style="background-size: cover; 
-      background-position: center center;">
-    </div>
-    <a href="/2021/02/08/gallery/" class="post-nav-link">
-      <div class="title">
-        下一篇: <i class="fa fa-angle-right"></i>
-        <div>gallery图片</div>
-      </div>
-      <!-- <div class="content">
-        提示使用该标签请先将主题下的_config.yml中的fancybox设置为true
-
-一行一个图片
-
-
-       
       </div> -->
     </a>
   </div>

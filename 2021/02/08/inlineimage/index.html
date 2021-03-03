@@ -550,8 +550,8 @@ var vm = new Vue({
             clearInterval(this.time);
         },
         mounted() {
-            let prop = ''|| 'https://pic1.zhimg.com/80/v2-06a153ed416b73b8406db8f58f79018f_1440w.jpg?source=1940ef5c,https://pic4.zhimg.com/80/v2-18bd4171e36170500130a7ece1e15156_1440w.jpg?source=1940ef5c,https://pic4.zhimg.com/80/v2-6d7d555a0bd00a9e29dafc0174f07aef_1440w.jpg?source=1940ef5c';
-            let isImg = prop.includes('.bmp') || prop.includes('.jpg') || prop.includes('.png') || prop.includes('.tif') || prop.includes('.gif') || prop.includes('.pcx') || prop.includes('.tga') || prop.includes('.exif') || prop.includes('.fpx') || prop.includes('.psd') || prop.includes('.cdr') || prop.includes('.pcd') || prop.includes('.dxf') || prop.includes('.ufo') || prop.includes('.eps') || prop.includes('.ai') || prop.includes('.raw') || prop.includes('.WMF') || prop.includes('.webp') || prop.includes('.jpeg')
+            let prop = ''|| 'https://api.ixiaowai.cn/gqapi/gqapi.php,https://api.btstu.cn/sjbz/api.php,https://api.mz-moe.cn/img.php';
+            let isImg = prop.includes('.bmp') || prop.includes('.jpg') || prop.includes('.png') || prop.includes('.tif') || prop.includes('.gif') || prop.includes('.pcx') || prop.includes('.tga') || prop.includes('.exif') || prop.includes('.fpx') || prop.includes('.psd') || prop.includes('.cdr') || prop.includes('.pcd') || prop.includes('.dxf') || prop.includes('.ufo') || prop.includes('.eps') || prop.includes('.ai') || prop.includes('.raw') || prop.includes('.WMF') || prop.includes('.webp') || prop.includes('.jpeg') || prop.includes('http://') || prop.includes('https://') 
             if (isImg) {
                 let img = prop.split(',');
                 let configRoot = '/'
@@ -595,6 +595,7 @@ var vm = new Vue({
         height: 100%;
     }
 </style>
+
 
 
 
@@ -671,15 +672,15 @@ var vm = new Vue({
 这又是 <span class="token punctuation">&#123;</span>% inlineimage http://img.doutula.com/production/uploads/image/2019/08/15/20190815849485_fKMqYD.gif, <span class="token assign-left variable">height</span><span class="token operator">=</span>100px %<span class="token punctuation">&#125;</span> 一段话。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2 class="bamboo-h " id="自定义图片并添加描述">自定义图片并添加描述</h2><br/>
 
-<div class="img-wrap"><div class="img-bg"><img class="img" src="https://pic2.zhimg.com/80/v2-cc93c338d57783702bea4506aee7007d_1440w.jpg?source=1940ef5c" alt="自定义图片"/></div><span class="image-caption">自定义图片</span></div>
+<div class="img-wrap"><div class="img-bg"><img class="img lazyload placeholder" "" class="lazyload placeholder" data-original="https://pic2.zhimg.com/80/v2-cc93c338d57783702bea4506aee7007d_1440w.jpg?source=1940ef5c" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" alt="自定义图片"/></div><span class="image-caption">自定义图片</span></div>
 <h3 id="上述事例代码-1"><a href="#上述事例代码-1" class="headerlink" title="上述事例代码"></a>上述事例代码</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">&#123;</span>% image https://pic2.zhimg.com/80/v2-cc93c338d57783702bea4506aee7007d_1440w.jpg?source<span class="token operator">=</span>1940ef5c, <span class="token assign-left variable">alt</span><span class="token operator">=</span>自定义图片 %<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <h2 class="bamboo-h " id="指定宽度">指定宽度</h2><br/>
-<div class="img-wrap"><div class="img-bg"><img class="img" src="https://api.ixiaowai.cn/gqapi/gqapi.php" alt="随机生成风景（alt描述可有可无）" style="width:400px;"/></div><span class="image-caption">随机生成风景（alt描述可有可无）</span></div>
-<div class="img-wrap"><div class="img-bg"><img class="img" src="https://api.ixiaowai.cn/api/api.php" alt="随机生成二次元壁纸" style="width:400px;"/></div><span class="image-caption">随机生成二次元壁纸</span></div>
+<div class="img-wrap"><div class="img-bg"><img class="img lazyload placeholder" "" class="lazyload placeholder" data-original="https://api.ixiaowai.cn/gqapi/gqapi.php" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" alt="随机生成风景（alt描述可有可无）" style="width:400px;"/></div><span class="image-caption">随机生成风景（alt描述可有可无）</span></div>
+<div class="img-wrap"><div class="img-bg"><img class="img lazyload placeholder" "" class="lazyload placeholder" data-original="https://api.ixiaowai.cn/api/api.php" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" alt="随机生成二次元壁纸" style="width:400px;"/></div><span class="image-caption">随机生成二次元壁纸</span></div>
 <h3 id="上述事例代码-2"><a href="#上述事例代码-2" class="headerlink" title="上述事例代码"></a>上述事例代码</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">&#123;</span>% image https://api.ixiaowai.cn/gqapi/gqapi.php, <span class="token assign-left variable">width</span><span class="token operator">=</span>400px, <span class="token assign-left variable">alt</span><span class="token operator">=</span>随机生成风景（alt描述可有可无） %<span class="token punctuation">&#125;</span>
 <span class="token punctuation">&#123;</span>% image https://api.ixiaowai.cn/api/api.php, <span class="token assign-left variable">width</span><span class="token operator">=</span>400px, <span class="token assign-left variable">alt</span><span class="token operator">=</span>随机生成二次元壁纸 %<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <h2 class="bamboo-h " id="设置占位背景色">设置占位背景色</h2><br/>
-<div class="img-wrap"><div class="img-bg" style="background:#1D0C04"><img class="img" src="https://api.ixiaowai.cn/mcapi/mcapi.php" alt="随机生成呆萌酱" style="width:400px;"/></div><span class="image-caption">随机生成呆萌酱</span></div>
+<div class="img-wrap"><div class="img-bg" style="background:#1D0C04"><img class="img lazyload placeholder" "" class="lazyload placeholder" data-original="https://api.ixiaowai.cn/mcapi/mcapi.php" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" alt="随机生成呆萌酱" style="width:400px;"/></div><span class="image-caption">随机生成呆萌酱</span></div>
 <h3 id="上述事例代码-3"><a href="#上述事例代码-3" class="headerlink" title="上述事例代码"></a>上述事例代码</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">&#123;</span>% image  https://api.ixiaowai.cn/mcapi/mcapi.php, <span class="token assign-left variable">width</span><span class="token operator">=</span>400px, <span class="token assign-left variable">bg</span><span class="token operator">=</span><span class="token comment">#1D0C04, alt=随机生成呆萌酱 %&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
       </div>
       
@@ -710,21 +711,22 @@ var vm = new Vue({
 
   
   <div class="post-nav-prev post-nav-item">
-    <div class="post-nav-img lazyload" data-original="/medias/9.jpg" style="background-size: cover; 
+    <div class="post-nav-img lazyload" data-original="/medias/5.jpg" style="background-size: cover; 
       background-position: center center;">
     </div>
-    <a href="/2021/02/08/link/" class="post-nav-link">
+    <a href="/2021/02/08/ghcard/" class="post-nav-link">
       <div class="title">
         <i class="fa fa-angle-left"></i> 上一篇:
-        <div>Link标签</div>
+        <div>Github卡片</div>
       </div>
       
       <!-- <div class="content">
-        超链接标签
+        Github用户卡片
 
-如何参与项目http://www.baidu.com
+上述示例代码&#123;% ghcard yuang01 %&#125;
+表格中加入用户卡片
 
-如何参与项目http://www.baidu.co
+
       </div> -->
     </a>
   </div>
@@ -733,21 +735,20 @@ var vm = new Vue({
 
   
   <div class="post-nav-next post-nav-item">
-    <div class="post-nav-img lazyload" data-original="/medias/1.jpg" style="background-size: cover; 
+    <div class="post-nav-img lazyload" data-original="/medias/9.jpg" style="background-size: cover; 
       background-position: center center;">
     </div>
-    <a href="/2021/02/08/note/" class="post-nav-link">
+    <a href="/2021/02/08/link/" class="post-nav-link">
       <div class="title">
         下一篇: <i class="fa fa-angle-right"></i>
-        <div>Note标签</div>
+        <div>Link标签</div>
       </div>
       <!-- <div class="content">
-        note演示效果
+        超链接标签
 
-markdown默认写法，左边框颜色，随着主题色改变
+如何参与项目http://www.baidu.com
 
-我有一只小毛驴，我从来都不骑。
-适合引用一段
+如何参与项目http://www.baidu.co
       </div> -->
     </a>
   </div>

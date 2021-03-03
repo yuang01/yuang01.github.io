@@ -474,7 +474,7 @@ var vm = new Vue({
     
     <link href="/js/prism/prism-line-numbers.css" rel="stylesheet">
     
-        <link href="/js/prism/prism.min.css" rel="stylesheet">
+        <link href="/js/prism/prism-solarizedlight.min.css" rel="stylesheet">
     
   
 
@@ -550,8 +550,8 @@ var vm = new Vue({
             clearInterval(this.time);
         },
         mounted() {
-            let prop = ''|| 'https://pic1.zhimg.com/80/v2-06a153ed416b73b8406db8f58f79018f_1440w.jpg?source=1940ef5c,https://pic4.zhimg.com/80/v2-18bd4171e36170500130a7ece1e15156_1440w.jpg?source=1940ef5c,https://pic4.zhimg.com/80/v2-6d7d555a0bd00a9e29dafc0174f07aef_1440w.jpg?source=1940ef5c';
-            let isImg = prop.includes('.bmp') || prop.includes('.jpg') || prop.includes('.png') || prop.includes('.tif') || prop.includes('.gif') || prop.includes('.pcx') || prop.includes('.tga') || prop.includes('.exif') || prop.includes('.fpx') || prop.includes('.psd') || prop.includes('.cdr') || prop.includes('.pcd') || prop.includes('.dxf') || prop.includes('.ufo') || prop.includes('.eps') || prop.includes('.ai') || prop.includes('.raw') || prop.includes('.WMF') || prop.includes('.webp') || prop.includes('.jpeg')
+            let prop = ''|| 'https://api.ixiaowai.cn/gqapi/gqapi.php,https://api.btstu.cn/sjbz/api.php,https://api.mz-moe.cn/img.php';
+            let isImg = prop.includes('.bmp') || prop.includes('.jpg') || prop.includes('.png') || prop.includes('.tif') || prop.includes('.gif') || prop.includes('.pcx') || prop.includes('.tga') || prop.includes('.exif') || prop.includes('.fpx') || prop.includes('.psd') || prop.includes('.cdr') || prop.includes('.pcd') || prop.includes('.dxf') || prop.includes('.ufo') || prop.includes('.eps') || prop.includes('.ai') || prop.includes('.raw') || prop.includes('.WMF') || prop.includes('.webp') || prop.includes('.jpeg') || prop.includes('http://') || prop.includes('https://') 
             if (isImg) {
                 let img = prop.split(',');
                 let configRoot = '/'
@@ -595,6 +595,7 @@ var vm = new Vue({
         height: 100%;
     }
 </style>
+
 
 
 
@@ -718,9 +719,9 @@ var vm = new Vue({
 <h2 class="bamboo-h " id="带有头像和名称的按钮">带有头像和名称的按钮</h2><br/>
 <h3 class="bamboo-h-b" id="一行两个" style="color:!important">一行两个</h3><div></div>
 <div class="btns circle grid2">
-            <a class="button" target="_blank" rel="noopener" href='https://baidu.com' title='草帽海贼团'><img src='https://img2.woyaogexing.com/2021/01/30/007e3777e7e64c4aae95ae812708a7bf!400x400.jpeg'>草帽海贼团</a>
-<a class="button" target="_blank" rel="noopener" href='https://baidu.com' title='小绵羊'><img src='https://img2.woyaogexing.com/2021/01/30/4c59f9dd4aae421fae21344aec8c7b60!400x400.jpeg'>小绵羊</a>
-<a class="button" target="_blank" rel="noopener" href='https://baidu.com' title='沫兮'><img src='https://img2.woyaogexing.com/2021/01/30/1b2aec116f0b49c682badc5befd43905!400x400.jpeg'>沫兮</a>
+            <a class="button" target="_blank" rel="noopener" href='https://baidu.com' title='团子'><img src='https://img2.woyaogexing.com/2021/02/28/d7601bf4bfe64327bc5885d61a51e90b!400x400.jpeg'>团子</a>
+<a class="button" target="_blank" rel="noopener" href='https://baidu.com' title='青鸟'><img src='https://img2.woyaogexing.com/2021/02/26/4ab7bac8fb8f4f34b25fac4435b5012a!400x400.jpeg'>青鸟</a>
+<a class="button" target="_blank" rel="noopener" href='https://baidu.com' title='哆啦A梦'><img src='https://img2.woyaogexing.com/2021/02/25/fdbd593f554c421daf17910c1bf4735b!400x400.jpeg'>哆啦A梦</a>
 <a class="button" target="_blank" rel="noopener" href='https://baidu.com' title='凯爹'><img src='https://p.qqan.com/up/2021-1/16112058848478910.jpg'>凯爹</a>
 <a class="button" target="_blank" rel="noopener" href='https://baidu.com' title='阿离'><img src='https://p.qqan.com/up/2021-1/16118869719896010.jpg'>阿离</a>
 <a class="button" target="_blank" rel="noopener" href='https://baidu.com' title='韩信'><img src='https://p.qqan.com/up/2021-1/16118869704182020.jpg'>韩信</a>
