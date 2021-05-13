@@ -2787,6 +2787,10 @@ pre:hover::-webkit-scrollbar-thumb:hover,
   box-sizing: border-box;
   background: url("/source/medias/comment_bg.png") 100% 100% no-repeat;
 }
+#gitalk-container {
+  background: rgba(255,255,255,0.8);
+  padding: 1em;
+}
 .search {
   color: #fff;
   padding: 0 15px;
