@@ -125,6 +125,8 @@ var vm = new Vue({
   <link href="/js/danmu/barrager.css" rel="stylesheet">
 <script src="/js/danmu/jquery.barrager.js"></script>
   <body>
+    <!-- 页面预加载动画 -->
+
     <!-- 判断是否为黑夜模式 -->
     <script>
       let isDark = JSON.parse(localStorage.getItem('dark')) || JSON.parse('false');
@@ -134,8 +136,9 @@ var vm = new Vue({
       }
     </script>
 
-    <header class="header bg-color" 
-  style="position: fixed; 
+    
+<header class="header " id="navHeader"
+  style="position: fixed;
   left: 0; top: 0; z-index: 10;width: 100%;"
 >
   <div class="header-content">
@@ -152,61 +155,125 @@ var vm = new Vue({
       <h3 class="drawer-box-head_title">Bamboo</h3>
       <h5 class="drawer-box-head_desc">千磨万击还坚劲，任尔东西南北风</h5>
     </div>
+    
     <div class="drawer-box-content">
       <ul class="drawer-box-content_menu">
         
-          <li class="drawer-box-content_item">
-            <a href="/" class="menu-item-link">
-              
-                <i class="fa fa-home" aria-hidden="true"></i>
-              
-              <span>首页</span>
-            </a>
+          <li class="drawer-box-content_item" style="position: relative;">
+            
+              <a href="/" class="drawer-menu-item-link">
+                
+                  <i class="fa fa-home" aria-hidden="true"></i>
+                
+                <span class="name">首页</span>
+              </a>
+            
           </li>
         
-          <li class="drawer-box-content_item">
-            <a href="/archives" class="menu-item-link">
-              
-                <i class="fa fa-home" aria-hidden="true"></i>
-              
-              <span>归档</span>
-            </a>
+          <li class="drawer-box-content_item" style="position: relative;">
+            
+              <a href="/archives" class="drawer-menu-item-link">
+                
+                  <i class="fa fa-archive" aria-hidden="true"></i>
+                
+                <span class="name">归档</span>
+              </a>
+            
           </li>
         
-          <li class="drawer-box-content_item">
-            <a href="/tags" class="menu-item-link">
-              
-                <i class="fa fa-tags" aria-hidden="true"></i>
-              
-              <span>标签</span>
-            </a>
+          <li class="drawer-box-content_item" style="position: relative;">
+            
+              <a href="/tags" class="drawer-menu-item-link">
+                
+                  <i class="fa fa-tags" aria-hidden="true"></i>
+                
+                <span class="name">标签</span>
+              </a>
+            
           </li>
         
-          <li class="drawer-box-content_item">
-            <a href="/categories" class="menu-item-link">
-              
-                <i class="fa fa-bookmark" aria-hidden="true"></i>
-              
-              <span>分类</span>
-            </a>
+          <li class="drawer-box-content_item" style="position: relative;">
+            
+              <a href="/categories" class="drawer-menu-item-link">
+                
+                  <i class="fa fa-bookmark" aria-hidden="true"></i>
+                
+                <span class="name">分类</span>
+              </a>
+            
           </li>
         
-          <li class="drawer-box-content_item">
-            <a href="/about" class="menu-item-link">
-              
-                <i class="fa fa-user" aria-hidden="true"></i>
-              
-              <span>关于</span>
-            </a>
+          <li class="drawer-box-content_item" style="position: relative;">
+            
+              <a href="/about" class="drawer-menu-item-link">
+                
+                  <i class="fa fa-user" aria-hidden="true"></i>
+                
+                <span class="name">关于</span>
+              </a>
+            
           </li>
         
-          <li class="drawer-box-content_item">
-            <a href="/friends" class="menu-item-link">
-              
-                <i class="fa fa-link" aria-hidden="true"></i>
-              
-              <span>友情链接</span>
-            </a>
+          <li class="drawer-box-content_item" style="position: relative;">
+            
+              <a href="/friends" class="drawer-menu-item-link">
+                
+                <span class="name">友情链接</span>
+              </a>
+            
+          </li>
+        
+          <li class="drawer-box-content_item" style="position: relative;">
+            
+              <a href="javascript:;" class="drawer-menu-item-link has-children" @click="openOrCloseMenu(6)">
+                <span>
+                  
+                    <i class="fa fa-link"></i>
+                  
+                  <span class="name">更多</span>
+                </span>
+                <i class="fa fa-chevron-left arrow " :class="{'icon-rotate': isOpen(6)}" aria-hidden="true"></i>
+              </a>
+              <ul class="drawer-sub-menu" v-if="isOpen(6)">
+                
+                <li>
+                  <a href="/gallery">
+                    
+                    <i class="fa fa-music" style="margin-top: -20px;"></i>
+                    
+                    <span>图库</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/huoban">
+                    
+                    <i class="fa fa-film" style="margin-top: -20px;"></i>
+                    
+                    <span>友情连接</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/me">
+                    
+                    <i class="fa fa-film" style="margin-top: -20px;"></i>
+                    
+                    <span>关于我</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="http://baidu.com">
+                    
+                    <i class="fa fa-film" style="margin-top: -20px;"></i>
+                    
+                    <span>百度</span>
+                  </a>
+                </li>
+                
+              </ul>
+            
           </li>
         
         <li class="drawer-box-content_item">
@@ -227,17 +294,33 @@ var vm = new Vue({
     data: {
       visible: false,
       top: 0,
+      openArr: [],
     },
     computed: {
     },
     mounted() {
     },
     methods: {
+      isOpen(index) {
+        if (this.openArr.includes(index)) {
+          return true;
+        } else {
+          return false;
+        }
+      },
+      openOrCloseMenu(curIndex) {
+        const index = this.openArr.indexOf(curIndex);
+        if (index !== -1) {
+          this.openArr.splice(index, 1);
+        } else {
+          this.openArr.push(curIndex);
+        }
+      },
       showDialogDrawer() {
         this.visible = true;
         // 防止页面滚动，只能让弹框滚动
         this.top = $(document).scrollTop()
-        body.style.cssText = 'width: 100%; height: 100%; position: fixed; top: -' + this.top  + 'px; left: 0; overflow: hidden;';
+        body.style.cssText = 'width: 100%; height: 100%;overflow: hidden;';
       },
       cancelDialogDrawer() {
         this.visible = false;
@@ -248,68 +331,132 @@ var vm = new Vue({
     created() {}
   })
 </script>
+
     </div>
     <div class="blog-title" id="author-avatar">
-      <div class="avatar">
-        <img src="/medias/logo.png" alt="logo">
-      </div>
+      
+        <div class="avatar">
+          <img src="/medias/logo.png" alt="logo">
+        </div>
+      
       <a href="/" class="logo">Bamboo</a>
     </div>
     <nav class="navbar">
       <ul class="menu">
         
-          <li class="menu-item">
-            <a href="/" class="menu-item-link">
-              
-                <i class="fa fa-home" aria-hidden="true"></i>
-              
-              <span>首页</span>
-            </a>
+          <li class="menu-item" style="position: relative;">
+            
+              <a href="/" class="menu-item-link">
+                
+                  <i class="fa fa-home" aria-hidden="true"></i>
+                
+                <span class="name">首页</span>
+              </a>
+            
           </li>
         
-          <li class="menu-item">
-            <a href="/archives" class="menu-item-link">
-              
-                <i class="fa fa-archive" aria-hidden="true"></i>
-              
-              <span>归档</span>
-            </a>
+          <li class="menu-item" style="position: relative;">
+            
+              <a href="/archives" class="menu-item-link">
+                
+                  <i class="fa fa-archive" aria-hidden="true"></i>
+                
+                <span class="name">归档</span>
+              </a>
+            
           </li>
         
-          <li class="menu-item">
-            <a href="/tags" class="menu-item-link">
-              
-                <i class="fa fa-tags" aria-hidden="true"></i>
-              
-              <span>标签</span>
-            </a>
+          <li class="menu-item" style="position: relative;">
+            
+              <a href="/tags" class="menu-item-link">
+                
+                  <i class="fa fa-tags" aria-hidden="true"></i>
+                
+                <span class="name">标签</span>
+              </a>
+            
           </li>
         
-          <li class="menu-item">
-            <a href="/categories" class="menu-item-link">
-              
-                <i class="fa fa-bookmark" aria-hidden="true"></i>
-              
-              <span>分类</span>
-            </a>
+          <li class="menu-item" style="position: relative;">
+            
+              <a href="/categories" class="menu-item-link">
+                
+                  <i class="fa fa-bookmark" aria-hidden="true"></i>
+                
+                <span class="name">分类</span>
+              </a>
+            
           </li>
         
-          <li class="menu-item">
-            <a href="/about" class="menu-item-link">
-              
-                <i class="fa fa-user" aria-hidden="true"></i>
-              
-              <span>关于</span>
-            </a>
+          <li class="menu-item" style="position: relative;">
+            
+              <a href="/about" class="menu-item-link">
+                
+                  <i class="fa fa-user" aria-hidden="true"></i>
+                
+                <span class="name">关于</span>
+              </a>
+            
           </li>
         
-          <li class="menu-item">
-            <a href="/friends" class="menu-item-link">
-              
-                <i class="fa fa-link" aria-hidden="true"></i>
-              
-              <span>友情链接</span>
-            </a>
+          <li class="menu-item" style="position: relative;">
+            
+              <a href="/friends" class="menu-item-link">
+                
+                <span class="name">友情链接</span>
+              </a>
+            
+          </li>
+        
+          <li class="menu-item" style="position: relative;">
+            
+              <a href="javascript:;" class="menu-item-link">
+                
+                  <i class="fa fa-link"></i>
+                
+                <span class="name">更多</span>
+                <i class="fa fa-chevron-down arrow" aria-hidden="true"></i>
+              </a>
+              <ul class="sub-menu">
+                
+                <li>
+                  <a href="/gallery">
+                    
+                    <i class="fa fa-music" style="margin-top: -20px;"></i>
+                    
+                    <span>图库</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/huoban">
+                    
+                    <i class="fa fa-film" style="margin-top: -20px;"></i>
+                    
+                    <span>友情连接</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/me">
+                    
+                    <i class="fa fa-film" style="margin-top: -20px;"></i>
+                    
+                    <span>关于我</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="http://baidu.com">
+                    
+                    <i class="fa fa-film" style="margin-top: -20px;"></i>
+                    
+                    <span>百度</span>
+                  </a>
+                </li>
+                
+              </ul>
+            
           </li>
         
       </ul>
@@ -370,8 +517,10 @@ var vm = new Vue({
           <i class="fa fa-close" aria-hidden="true" style="float:right;" @click.self="cancelDialogVisible()"></i>
         </div> -->
         <h2>
-          <i class="fa fa-search" aria-hidden="true"></i>
-          <span class="title">本地搜索</span>
+          <span>
+            <i class="fa fa-search" aria-hidden="true"></i>
+            <span class="title">本地搜索</span>
+          </span>
           <i class="fa fa-close close" style="float:right;" aria-hidden="true" @click.self="cancelDialogVisible()"></i>
         </h2>
         <form class="site-search-form">
@@ -466,8 +615,13 @@ var vm = new Vue({
     </script>
     <script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script> 
     
+
+    <!-- 当头部导航设置为背景透明的时候  -->
+    
+      <script src="/js/header/index.js"></script>
+    
 </header>
-    <main class="main" style="margin-top: 60px;">
+    <main class="main" style="margin-top: 0;">
       
  <!-- prismjs 代码高亮 -->
  
@@ -550,7 +704,7 @@ var vm = new Vue({
             clearInterval(this.time);
         },
         mounted() {
-            let prop = ''|| 'https://api.ixiaowai.cn/gqapi/gqapi.php,https://api.btstu.cn/sjbz/api.php,https://api.mz-moe.cn/img.php';
+            let prop = ''|| 'https://pic4.zhimg.com/80/v2-5030587bac1b856d09e0a119ff6d7c04_1440w.jpg,https://api.btstu.cn/sjbz/api.php';
             let isImg = prop.includes('.bmp') || prop.includes('.jpg') || prop.includes('.png') || prop.includes('.tif') || prop.includes('.gif') || prop.includes('.pcx') || prop.includes('.tga') || prop.includes('.exif') || prop.includes('.fpx') || prop.includes('.psd') || prop.includes('.cdr') || prop.includes('.pcd') || prop.includes('.dxf') || prop.includes('.ufo') || prop.includes('.eps') || prop.includes('.ai') || prop.includes('.raw') || prop.includes('.WMF') || prop.includes('.webp') || prop.includes('.jpeg') || prop.includes('http://') || prop.includes('https://') 
             if (isImg) {
                 let img = prop.split(',');
@@ -599,10 +753,10 @@ var vm = new Vue({
 
 
 
-<div class="post-detail-header lazyload" id="thumbnail_canvas" data-original="/medias/7.jpg" style="background-repeat: no-repeat; background-size: cover; 
+<div class="post-detail-header lazyload" id="thumbnail_canvas" data-original="https://pic1.zhimg.com/80/v2-12c6659b2ac19bc2e241703d65177870_1440w.jpg?source=1940ef5c" style="background-repeat: no-repeat; background-size: cover; 
   background-position: center center;position: relative;">
   <div class="post-detail-header-mask"></div>
-  <canvas id="header_canvas"style="position:absolute;bottom:0"></canvas>
+  <canvas id="header_canvas"style="position:absolute;bottom:0;pointer-events:none;"></canvas>
   
     <div class="title-box">
       
@@ -666,8 +820,8 @@ var vm = new Vue({
       </div>
       <div class="post-content">
         <p>该文档是版本1.8的文档，版本号可以从主题下的<code>package.json</code>查看<br>这是一款既可以<span class='p large red'>花</span><span class='p large green'>里</span><span class='p large blue'>胡</span><span class='p large info'>哨</span>又可以<span class='p large'>简洁</span>的主题，只需要简单配置即可，<a href="https://yuang01.github.io/">演示示例</a>，| QQ交流:<code>1730241541</code></p>
-<a id="more"></a> 
-<p>观众老爷：<img no-lazy class="inline" src="https://img13.360buyimg.com/ddimg/jfs/t1/154019/11/17571/3053/601cc338Eccae638e/24a1d33e2081d7b3.jpg" style="height:100px;"/> </p>
+<!-- more --> 
+<p>观众老爷：<img no-lazy class="inline" src="http://img.doutula.com/production/uploads/image/2019/12/26/20191226318868_Wancgm.jpg" style="height:100px;"/> </p>
 <h2 class="bamboo-h " id="下载">下载</h2><br/>
 <p>首先你需要有一个<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/">Hexo</a>，按照官网的方法，很容易的就能创建一个hexo博客。</p>
 <div class="tagLink"><a class="link-card" title="Hexo" target="_blank" rel="noopener" href="https://hexo.io/zh-cn/"><div class="left"><img "" class="lazyload placeholder" data-original="https://d33wubrfki0l68.cloudfront.net/6657ba50e702d84afb32fe846bed54fba1a77add/827ae/logo.svg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"/></div><div class="right"><p class="text">Hexo</p><p class="url">https://hexo.io/zh-cn/</p></div></a></div>
@@ -682,6 +836,7 @@ var vm = new Vue({
 <div class="tagLink"><a class="link-card" title="hexo-theme-bamboo" target="_blank" rel="noopener" href="https://gitee.com/yuang01/hexo-theme-bamboo"><div class="left"><img "" class="lazyload placeholder" data-original="https://img10.360buyimg.com/ddimg/jfs/t1/154000/26/17136/4231/601cb685E622bcee5/1a923dacb1d98f64.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"/></div><div class="right"><p class="text">hexo-theme-bamboo</p><p class="url">https://gitee.com/yuang01/hexo-theme-bamboo</p></div></a></div>
 <p>或者点击下载zip包，解压放入<code>themes</code>文件夹下</p>
 <span class='btn center large'><a class="button" target="_blank" rel="noopener" href='https://gitee.com/yuang01/hexo-theme-bamboo/repository/archive/dev.zip' title='开始下载'><i class='fa fa-download'></i>开始下载</a></span>
+
 <h2 class="bamboo-h " id="基本配置">基本配置</h2><br/>
 <h3 id="切换主题"><a href="#切换主题" class="headerlink" title="切换主题"></a>切换主题</h3><p>修改 Hexo 根目录下的 <code>_config.yml</code> 的  <code>theme</code> 的值：<code>theme: hexo-theme-bamboo</code></p>
 <h4 class="bamboo-h-b" id="`_config.yml` 文件的其它修改建议:" style="color:!important">`_config.yml` 文件的其它修改建议:</h4><div></div>
@@ -691,7 +846,7 @@ var vm = new Vue({
 <li>如果你是中文用户，则建议修改 <code>language</code> 的值为 <code>zh-CN</code>。</li>
 </ul>
 <h3 id="代码高亮"><a href="#代码高亮" class="headerlink" title="代码高亮"></a>代码高亮</h3><p>本主题支持三种代码高亮方式，前两种是hexo内置的<code>highlight</code>和<code>prismjs</code>，后一种是使用的插件<code>hexo-prism-plugin</code>。三种方式看个人喜好选择一种作为高亮</p>
-<div class="tabs" id="tab-id"><ul class="nav-tabs"><li class="tab active"><a class="#tab-id-1">highlight</a></li><li class="tab"><a class="#tab-id-2">prismjs</a></li><li class="tab"><a class="#tab-id-3">hexo-prism-plugin</a></li></ul><div class="tab-content"><div class="tab-pane active" id="tab-id-1"><p>首先需要在<span class='pbg success'>根目录下的_config.yml 文件中</span>，将<code>highlight</code>的<code>enable</code>设置为true，这样就开启了highlight的代码高亮，默认这个是开启的。然后你可以在<span class='pbg success'>本主题目录下的_config.yml 文件中</span>通过<code>highlight</code>参数，自定义代码高亮颜色，如下所示</p>
+<div class="tabs" id="tab-id"><ul class="nav-tabs"><li class="tab active"><a class="#tab-id-1">highlight (默认)</a></li><li class="tab"><a class="#tab-id-2">prismjs (推荐)</a></li><li class="tab"><a class="#tab-id-3">hexo-prism-plugin</a></li></ul><div class="tab-content"><div class="tab-pane active" id="tab-id-1"><p>首先需要在<span class='pbg success'>根目录下的_config.yml 文件中</span>，将<code>highlight</code>的<code>enable</code>设置为true，这样就开启了highlight的代码高亮，默认这个是开启的。然后你可以在<span class='pbg success'>本主题目录下的_config.yml 文件中</span>通过<code>highlight</code>参数，自定义代码高亮颜色，如下所示</p>
 <pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token comment"># https://github.com/chriskempson/tomorrow-theme</span>
 <span class="token key atrule">highlight</span><span class="token punctuation">:</span>
   <span class="token key atrule">background</span><span class="token punctuation">:</span> <span class="token string">'#2d2d2d'</span>
@@ -750,7 +905,8 @@ var vm = new Vue({
   <span class="token string">'&amp;#123;'</span><span class="token operator">:</span> <span class="token string">'&#123;'</span><span class="token punctuation">,</span>
   <span class="token string">'&amp;#125;'</span><span class="token operator">:</span> <span class="token string">'&#125;'</span>
 <span class="token punctuation">&#125;</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>然后重启服务，<code>hexo clean</code>  &amp;&amp; <code>hexo s</code>即可 </p></div></div></div>
+<p>然后重启服务，<code>hexo clean</code>  &amp;&amp; <code>hexo s</code>即可<br>卸载命令如下，如果你安装了此插件，后来想使用前两种高亮，请先卸载此插件</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> un hexo-prism-plugin<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></div></div></div>
 
 <h3 id="搜索"><a href="#搜索" class="headerlink" title="搜索"></a>搜索</h3><p>本主题中还使用到了 <a target="_blank" rel="noopener" href="https://github.com/wzpan/hexo-generator-search">hexo-generator-search</a> 的 Hexo 插件来做内容搜索，安装命令如下：</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> hexo-generator-search --save<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
@@ -929,11 +1085,174 @@ books   <span class="token comment">#书籍</span><span aria-hidden="true" class
 <span class="token key atrule">date</span><span class="token punctuation">:</span> 2019<span class="token punctuation">-</span>01<span class="token punctuation">-</span>20 21<span class="token punctuation">:</span><span class="token number">11</span>
 <span class="token key atrule">swiper</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
 <span class="token key atrule">swiperImg</span><span class="token punctuation">:</span> <span class="token string">'https://ssyerv1.oss-cn-hangzhou.aliyuncs.com/picture/c080ff4434354e35af9dab0a3ee1b9f7.jpg!sswm'</span>
+<span class="token key atrule">swiperDesc</span><span class="token punctuation">:</span> <span class="token string">'我是文章在轮播图中的摘要'</span>
 <span class="token punctuation">---</span>
-我是文章内容<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+我是文章内容<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><code>swiperImg</code>可以是cdn地址，也可以是本地地址，例如<code>/medias/4.png</code><br>可以通过主题文件夹下的<code>_config.yml</code>文件中的<code>swiper</code>属性对轮播进行调整</p>
-<h3 id="顶部导航"><a href="#顶部导航" class="headerlink" title="顶部导航"></a>顶部导航</h3><p>通过主题文件夹下的<code>_config.yml</code>文件中的<code>logo</code>属性设置网站logo，<code>Github</code>属性设置导航右侧的github，<code>menu</code>属性设置菜单，<code>headMenuFixed</code>属性设置导航是否随滚动条下拉固定</p>
-<h3 id="网站favicon"><a href="#网站favicon" class="headerlink" title="网站favicon"></a>网站favicon</h3><p>设置主题文件夹下的<code>_config.yml</code>文件中的<code>favicon</code>属性即可</p>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token comment"># 首页轮播图设置</span>
+<span class="token key atrule">swiper</span><span class="token punctuation">:</span>
+  <span class="token comment"># 当在.md文件中，设置swiper:true，会将该文章放到轮播中，</span>
+  <span class="token key atrule">showPrevNext</span><span class="token punctuation">:</span> <span class="token boolean important">true</span> <span class="token comment"># 是否显示左右切换按钮</span>
+  <span class="token key atrule">showIndicators</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>  <span class="token comment"># 是否显示指示器</span>
+  <span class="token key atrule">autoplay</span><span class="token punctuation">:</span> <span class="token boolean important">false</span> <span class="token comment"># 是否自动轮播</span>
+  <span class="token key atrule">loop</span><span class="token punctuation">:</span> <span class="token boolean important">true</span> <span class="token comment"># 让轮播看起来是循环的, 例如false的话，到达最后一个轮播图的时候，右按钮不能点击</span>
+  <span class="token key atrule">delay</span><span class="token punctuation">:</span> <span class="token number">5000</span> <span class="token comment"># 切换延迟时间</span>
+  <span class="token key atrule">effect</span><span class="token punctuation">:</span> <span class="token string">'slide'</span> <span class="token comment"># 'fade': 淡入淡出效果</span>
+  <span class="token key atrule">textAnimated</span><span class="token punctuation">:</span> <span class="token string">'fadeInDown'</span> <span class="token comment"># 文字动画，属性使用 animate.css, https://daneden.github.io/animate.css/</span>
+  <span class="token key atrule">textDuration</span><span class="token punctuation">:</span> <span class="token string">'0.2s'</span> <span class="token comment"># 文字动画持续时间（单位秒）</span>
+  <span class="token key atrule">textDelay</span><span class="token punctuation">:</span> <span class="token string">'0.1s'</span> <span class="token comment"># 文字动画延迟时间（单位秒）</span>
+  <span class="token key atrule">readMoreBtn</span><span class="token punctuation">:</span> <span class="token boolean important">true</span> <span class="token comment"># 阅读更多按钮是否显示</span>
+  <span class="token key atrule">readMoreBtnBackgroundColor</span><span class="token punctuation">:</span> <span class="token string">''</span> <span class="token comment"># 阅读更多按钮背景颜色,空字符串则默认使用主题颜色</span>
+  <span class="token key atrule">bubble</span><span class="token punctuation">:</span> <span class="token boolean important">true</span> <span class="token comment"># 轮播图是否显示气泡,也可以打开底下的花瓣或者雪花特效 sakura（花瓣）: true snow(雪花): true</span>
+  <span class="token comment"># 当没有文章设置swiper: true时候，轮播图会显示以下default默认内容，可自行切换对应内容</span>
+  <span class="token key atrule">defaultImg</span><span class="token punctuation">:</span> <span class="token string">'https://img11.360buyimg.com/ddimg/jfs/t1/160978/33/20686/2476596/6083e62dEa588862b/63f8f2163ab61b2f.png'</span> <span class="token comment"># 图片，没有则随机选取</span>
+  <span class="token key atrule">defaultTile</span><span class="token punctuation">:</span> <span class="token string">'青墨书晚风'</span> <span class="token comment"># 标题</span>
+  <span class="token key atrule">defaultDesc</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">'煮酒洗净尘嚣，论知交'</span><span class="token punctuation">,</span> <span class="token string">'万般付之一笑，共偕老'</span><span class="token punctuation">]</span> <span class="token comment">#描 述</span>
+  <span class="token key atrule">defaultLeftBtnText</span><span class="token punctuation">:</span> <span class="token string">'阅读文档'</span> <span class="token comment"># 左边按钮文字, 空字符串则不显示</span>
+  <span class="token key atrule">defaultLeftBtnLink</span><span class="token punctuation">:</span> <span class="token string">'https://yuang01.gitee.io/2021/02/08/hexo-theme-bamboo-new/'</span> <span class="token comment"># 左边按钮链接 </span>
+  <span class="token key atrule">defaultRightBtnText</span><span class="token punctuation">:</span> <span class="token string">'下载主题'</span> <span class="token comment"># 右边按钮的文字，空字符串则不显示</span>
+  <span class="token key atrule">defaultRightBtnLink</span><span class="token punctuation">:</span> <span class="token string">'https://gitee.com/yuang01/hexo-theme-bamboo/repository/archive/dev.zip'</span> <span class="token comment"># 右边的按钮的链接</span>
+  <span class="token key atrule">defaultDescTyped</span><span class="token punctuation">:</span> <span class="token boolean important">true</span> <span class="token comment"># defaultDesc文字是否开启打字特效</span>
+  <span class="token key atrule">defaultDescTypedLoop</span><span class="token punctuation">:</span> <span class="token boolean important">true</span> <span class="token comment"># defaultDesc文字的打字特效是否循环</span>
+  <span class="token comment"># defaultAddToSwiper表示：当有文章设置了swiper: true的时候，将上面的 默认内容 放在轮播图的第一页</span>
+  <span class="token key atrule">defaultAddToSwiper</span><span class="token punctuation">:</span> <span class="token boolean important">true</span> <span class="token comment"># 开启这个，则loop默认为false</span>
+  <span class="token comment">## 轮播图样式更改</span>
+  <span class="token comment"># 轮播图的文字和按钮居中显示 (针对 imgwidthFull和 full都是false的时候)</span>
+  <span class="token key atrule">textCenter</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+  <span class="token comment"># 图片宽度为100% (轮播图的文字和按钮只能居中显示)</span>
+  <span class="token key atrule">imgwidthFull</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+  <span class="token comment"># 整个轮播图宽高都是100%  (轮播图的文字和按钮只能居中显示)</span>
+  <span class="token key atrule">full</span><span class="token punctuation">:</span> <span class="token boolean important">true</span> <span class="token comment"># full 优先级大于 imgwidthFull</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li><code>defaultAddToSwiper</code>表示，当有文章设置了<code>swiper:true</code>的时候，将default默认轮播图作为第一张轮播图</li>
+<li>通过<code>textCenter</code>控制轮播图的文字和按钮是否居中显示, <code>imgwidthFull</code>设置轮播图是否宽度为100%，但是高度不为100%，<code>full</code>表示轮播图宽高都是100%</li>
+</ul>
+<p>当这样设置的时候</p>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token comment">## 轮播图样式更改</span>
+<span class="token comment"># 轮播图的文字和按钮居中显示 (针对 imgwidthFull和 full都是false的时候)</span>
+<span class="token key atrule">textCenter</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+<span class="token comment"># 图片宽度为100% (轮播图的文字和按钮只能居中显示)</span>
+<span class="token key atrule">imgwidthFull</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+<span class="token comment"># 整个轮播图宽高都是100%  (轮播图的文字和按钮只能居中显示)</span>
+<span class="token key atrule">full</span><span class="token punctuation">:</span> <span class="token boolean important">false</span> <span class="token comment"># full 优先级大于 imgwidthFull</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>轮播图是这样显示的</p>
+<div class="gallery ">
+              <p><img "" class="lazyload placeholder" data-original="/img/base.png" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" alt="图片在中间显示"><br><img "" class="lazyload placeholder" data-original="/img/base2.png" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" alt="图片在中间显示"></p>
+            </div>
+
+<p>当这样设置的时候</p>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token comment">## 轮播图样式更改</span>
+<span class="token comment"># 轮播图的文字和按钮居中显示 (针对 imgwidthFull和 full都是false的时候)</span>
+<span class="token key atrule">textCenter</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+<span class="token comment"># 图片宽度为100% (轮播图的文字和按钮只能居中显示)</span>
+<span class="token key atrule">imgwidthFull</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+<span class="token comment"># 整个轮播图宽高都是100%  (轮播图的文字和按钮只能居中显示)</span>
+<span class="token key atrule">full</span><span class="token punctuation">:</span> <span class="token boolean important">false</span> <span class="token comment"># full 优先级大于 imgwidthFull</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>轮播图是这样显示的</p>
+<div class="gallery ">
+              <p><img "" class="lazyload placeholder" data-original="/img/text-center.png" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" alt="图片、文字和按钮在中间显示"><br><img "" class="lazyload placeholder" data-original="/img/text-center2.png" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" alt="图片、文字和按钮在中间显示"></p>
+            </div>
+
+<p>当这样设置的时候</p>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token comment">## 轮播图样式更改</span>
+<span class="token comment"># 轮播图的文字和按钮居中显示 (针对 imgwidthFull和 full都是false的时候)</span>
+<span class="token key atrule">textCenter</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+<span class="token comment"># 图片宽度为100% (轮播图的文字和按钮只能居中显示)</span>
+<span class="token key atrule">imgwidthFull</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+<span class="token comment"># 整个轮播图宽高都是100%  (轮播图的文字和按钮只能居中显示)</span>
+<span class="token key atrule">full</span><span class="token punctuation">:</span> <span class="token boolean important">false</span> <span class="token comment"># full 优先级大于 imgwidthFull</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>轮播图是这样显示的</p>
+<div class="gallery ">
+              <p><img "" class="lazyload placeholder" data-original="/img/width-full.png" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" alt="图片宽度为100%"><br><img "" class="lazyload placeholder" data-original="/img/width-full2.png" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" alt="图片宽度为100%"></p>
+            </div>
+
+<p>当这样设置的时候</p>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token comment">## 轮播图样式更改</span>
+<span class="token comment"># 轮播图的文字和按钮居中显示 (针对 imgwidthFull和 full都是false的时候)</span>
+<span class="token key atrule">textCenter</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+<span class="token comment"># 图片宽度为100% (轮播图的文字和按钮只能居中显示)</span>
+<span class="token key atrule">imgwidthFull</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+<span class="token comment"># 整个轮播图宽高都是100%  (轮播图的文字和按钮只能居中显示)</span>
+<span class="token key atrule">full</span><span class="token punctuation">:</span> <span class="token boolean important">true</span> <span class="token comment"># full 优先级大于 imgwidthFull</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>轮播图是这样显示的</p>
+<div class="gallery ">
+              <p><img "" class="lazyload placeholder" data-original="/img/full.png" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" alt="图片宽高为100%"><br><img "" class="lazyload placeholder" data-original="/img/full2.png" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" alt="图片宽高为100%"></p>
+            </div>
+
+<h3 id="首页座右铭"><a href="#首页座右铭" class="headerlink" title="首页座右铭"></a>首页座右铭</h3><pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">motto</span><span class="token punctuation">:</span>
+  <span class="token key atrule">on</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">title</span><span class="token punctuation">:</span> <span class="token string">'座右铭'</span>
+  <span class="token key atrule">content</span><span class="token punctuation">:</span> <span class="token string">'沉淀后我愿意做个温暖的人，有自己的喜好，有自己的原则，有自己的信仰，不急功近利，不浮夸轻薄。宠辱不惊，淡定安逸，心静如水，不忘初心，方得始终。——凌茜'</span>
+  <span class="token key atrule">background</span><span class="token punctuation">:</span> <span class="token string">'url("https://img10.360buyimg.com/ddimg/jfs/t1/166587/8/21344/72069/6088c24fEda5fdeb6/f9730ab637b7ca47.png")'</span> <span class="token comment"># url("xxx") or red or #000 or rgba() ..</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="首页公告"><a href="#首页公告" class="headerlink" title="首页公告"></a>首页公告</h3><pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">notice</span><span class="token punctuation">:</span>
+  <span class="token key atrule">on</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">seamless</span><span class="token punctuation">:</span> <span class="token boolean important">false</span> <span class="token comment"># 为true时，则无缝不停止滚动，false是会停一下的滚动</span>
+  <span class="token key atrule">title</span><span class="token punctuation">:</span> <span class="token string">'公告'</span>
+  <span class="token key atrule">background</span><span class="token punctuation">:</span> <span class="token string">'url("https://img10.360buyimg.com/ddimg/jfs/t1/166587/8/21344/72069/6088c24fEda5fdeb6/f9730ab637b7ca47.png")'</span> <span class="token comment"># url("xxx") or red or #000 or rgba() ..</span>
+  <span class="token key atrule">list</span><span class="token punctuation">:</span> <span class="token comment"># list相当于数组对象，[&#123;title:'xx',date: 'xx', url: 'xxx', color: 'red'&#125;]根据自己实际情况，增加或者删除</span>
+    <span class="token punctuation">-</span> <span class="token key atrule">title</span><span class="token punctuation">:</span> <span class="token string">'#博客更新到2.0了'</span>
+      <span class="token key atrule">date</span><span class="token punctuation">:</span> <span class="token string">'2021-04-28'</span>
+      <span class="token key atrule">url</span><span class="token punctuation">:</span> <span class="token string">'http://baidu.com'</span>   <span class="token comment"># 可以为空, 也可以是本地页面地址如 '/archives'</span>
+      <span class="token key atrule">color</span><span class="token punctuation">:</span> red   <span class="token comment"># 字体颜色</span>
+    <span class="token punctuation">-</span> <span class="token key atrule">title</span><span class="token punctuation">:</span> <span class="token string">'#新增 轮播图支持三种模式了，功能也增强了 ~'</span>
+      <span class="token key atrule">date</span><span class="token punctuation">:</span> <span class="token string">'2021-04-28'</span>
+      <span class="token key atrule">url</span><span class="token punctuation">:</span> <span class="token string">'http://baidu.com'</span>
+      <span class="token key atrule">color</span><span class="token punctuation">:</span> red
+    <span class="token punctuation">-</span> <span class="token key atrule">title</span><span class="token punctuation">:</span> <span class="token string">'#新增 支持二级导航'</span>
+      <span class="token key atrule">date</span><span class="token punctuation">:</span> <span class="token string">'2021-04-28'</span>
+      <span class="token key atrule">url</span><span class="token punctuation">:</span> <span class="token string">'http://baidu.com'</span>
+      <span class="token key atrule">color</span><span class="token punctuation">:</span> blue
+    <span class="token punctuation">-</span> <span class="token key atrule">title</span><span class="token punctuation">:</span> <span class="token string">'#新增 归档，分类等页面头部图片位置可以设置为视频 ~'</span>
+      <span class="token key atrule">date</span><span class="token punctuation">:</span> <span class="token string">'2021-04-28'</span>
+      <span class="token key atrule">url</span><span class="token punctuation">:</span> <span class="token string">'http://baidu.com'</span>
+      <span class="token key atrule">color</span><span class="token punctuation">:</span> <span class="token string">'#42b983'</span>
+    <span class="token punctuation">-</span> <span class="token key atrule">title</span><span class="token punctuation">:</span> <span class="token string">'#新增 头部导航可以设置为在顶部透明，并且可以任意设置背景颜色了 ~'</span>
+      <span class="token key atrule">date</span><span class="token punctuation">:</span> <span class="token string">'2021-04-28'</span>
+      <span class="token key atrule">url</span><span class="token punctuation">:</span> <span class="token string">'http://baidu.com'</span>
+    <span class="token punctuation">-</span> <span class="token key atrule">title</span><span class="token punctuation">:</span> <span class="token string">'#新增 首页增加了座右铭和公告栏目 ~'</span>
+      <span class="token key atrule">date</span><span class="token punctuation">:</span> <span class="token string">'2021-04-28'</span>
+      <span class="token key atrule">url</span><span class="token punctuation">:</span> <span class="token string">'http://baidu.com'</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="图库"><a href="#图库" class="headerlink" title="图库"></a>图库</h3><p>新建页面</p>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml">hexo new page gallery<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>然后在<code>gallery/index.md</code>中使用<code>galleryGroup</code>标签即可</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token hr punctuation">---</span>
+title: 图库
+date: 2021-05-10 15:39:04
+toc: false
+<span class="token title important">img: https://pic2.zhimg.com/80/v2-2cf3b62a87045ee279096449cf6f3ac1_1440w.jpg?source=1940ef5c
+<span class="token punctuation">---</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>gallery-group-main<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    &#123;% galleryGroup '壁纸' '收藏的一些壁纸' '/gallery/bizhi' https://pic1.zhimg.com/80/v2-23c3820e8abfb1cef689531af2dc6d09<span class="token italic"><span class="token punctuation">_</span><span class="token content">1440w.jpg?source=1940ef5c %&#125;
+    &#123;% galleryGroup '古典图片' '中国古典图片' '/gallery/gudian' https://pic1.zhimg.com/80/v2-8d542d68cbbf0e5f503da9e3f72b8447</span><span class="token punctuation">_</span></span>1440w.jpg?source=1940ef5c %&#125;
+    &#123;% galleryGroup 'OH MY GIRL' '关于OH MY GIRL的图片' '/Gallery/ohmygirl' https://i.loli.net/2019/12/25/hOqbQ3BIwa6KWpo.jpg %&#125;
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>相册详情页,也是创建一个页面</p>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml">hexo new page xxxx<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>然后，使用<code>gallery</code>标签</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token hr punctuation">---</span>
+title: 壁纸
+date: 2021-05-10 15:39:04
+toc: false
+<span class="token title important">img: https://pic1.zhimg.com/80/v2-92cc20bdf4674b6c6337478bb06657b3_1440w.jpg?source=1940ef5c
+<span class="token punctuation">---</span></span>
+&#123;% gallery %&#125;
+<span class="token url">![<span class="token content">图片描述</span>](https://pic4.zhimg.com/80/v2-5dfab6525ec92b4caf3f09e1ee72a23b_1440w.jpg?source=1940ef5c)</span>
+<span class="token url">![<span class="token content">图片描述</span>](https://pic4.zhimg.com/80/v2-5c062983ace7db9601880019190fb5a8_1440w.jpg?source=1940ef5c)</span>
+&#123;% endgallery %&#125;
+&#123;% gallery %&#125;
+<span class="token url">![<span class="token content">图片描述</span>](https://pic1.zhimg.com/80/v2-154228684029ae0c2183f65a9568c310_1440w.jpg?source=1940ef5c)</span>
+<span class="token url">![<span class="token content">图片描述</span>](https://pic4.zhimg.com/80/v2-121618e14ad58dcedf8637127087ff27_1440w.jpg?source=1940ef5c)</span>
+<span class="token url">![<span class="token content">图片描述</span>](https://pic2.zhimg.com/80/v2-d61b1af36a619fec1b32775d75f4900d_1440w.jpg?source=1940ef5c)</span>
+<span class="token url">![<span class="token content">图片描述</span>](https://pic3.zhimg.com/80/v2-f94047ce45907e0966a681089835c04d_1440w.jpg?source=1940ef5c)</span>
+&#123;% endgallery %&#125;
+&#123;% gallery %&#125;
+<span class="token url">![<span class="token content">图片描述</span>](https://pic4.zhimg.com/80/v2-604a15cef201cf177943af2d915eb2e7_1440w.jpg?source=1940ef5c)</span>
+<span class="token url">![<span class="token content">图片描述</span>](https://pic1.zhimg.com/80/v2-bf6c555e7c61a57ba4a1fd95a9a32975_1440w.jpg?source=1940ef5c)</span>
+&#123;% endgallery %&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="网站favicon和logo"><a href="#网站favicon和logo" class="headerlink" title="网站favicon和logo"></a>网站favicon和logo</h3><p>设置主题文件夹下的<code>_config.yml</code>文件中的<code>favicon</code>和<code>logo</code>属性即可</p>
+<h3 id="页面预加载动画"><a href="#页面预加载动画" class="headerlink" title="页面预加载动画"></a>页面预加载动画</h3><pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">preloader</span><span class="token punctuation">:</span>
+  <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">false</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <h3 id="回到顶部"><a href="#回到顶部" class="headerlink" title="回到顶部"></a>回到顶部</h3><p>设置主题文件夹下的<code>_config.yml</code>文件中的<code>goTop</code>属性即可控制隐藏显示</p>
 <h3 id="文章详情页图片放大功能"><a href="#文章详情页图片放大功能" class="headerlink" title="文章详情页图片放大功能"></a>文章详情页图片放大功能</h3><p>设置主题文件夹下的<code>_config.yml</code>文件中的<code>fancybox</code>属性即可</p>
 <h3 id="修改页脚"><a href="#修改页脚" class="headerlink" title="修改页脚"></a>修改页脚</h3><p>页脚底部的网站统计功能，使用的是<a target="_blank" rel="noopener" href="http://busuanzi.ibruce.info/">不蒜子</a>，设置主题文件夹下的<code>_config.yml</code>文件中的<code>busuanzi</code>属性即可控制隐藏显示<br>页脚信息可以在<code>/layout/_partial/footer.ejs</code> 文件中进行手动修改。本主题使用<a target="_blank" rel="noopener" href="http://www.fontawesome.com.cn/faicons/">Font Awesome图标</a></p>
@@ -941,6 +1260,14 @@ books   <span class="token comment">#书籍</span><span aria-hidden="true" class
 <p><strong>注意</strong>: 本主题中使用的 <code>Font Awesome</code> 版本为 <code>4.7.0</code>。</p>
 </blockquote>
 <h3 id="修改打赏的二维码图片"><a href="#修改打赏的二维码图片" class="headerlink" title="修改打赏的二维码图片"></a>修改打赏的二维码图片</h3><p>设置主题文件夹下的<code>_config.yml</code>文件中的<code>donate</code>属性为true，然后更改<code>Alipay</code>和<code>WeChatpay</code>图片路径即可</p>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token comment"># 打赏功能</span>
+<span class="token key atrule">donate</span><span class="token punctuation">:</span>
+  <span class="token key atrule">on</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+<span class="token key atrule">donate_message</span><span class="token punctuation">:</span> 你的赏识是我前进的动力
+<span class="token comment"># 支付宝打赏图片相对路径</span>
+<span class="token key atrule">Alipay</span><span class="token punctuation">:</span> <span class="token string">'/medias/zfb.jpg'</span>
+<span class="token comment"># 微信打赏图片相对路径</span>
+<span class="token key atrule">WeChatpay</span><span class="token punctuation">:</span> <span class="token string">'/medias/wx.jpg'</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h3 id="文章详情页分享功能"><a href="#文章详情页分享功能" class="headerlink" title="文章详情页分享功能"></a>文章详情页分享功能</h3><p>设置主题文件夹下的<code>_config.yml</code>文件中的<code>sharejs</code>属性true或者false即可，通过sites配置需要分享的网站</p>
 <pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token comment"># 分享功能</span>
 <span class="token key atrule">sharejs</span><span class="token punctuation">:</span> 
@@ -1076,22 +1403,63 @@ books   <span class="token comment">#书籍</span><span aria-hidden="true" class
   <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2 class="bamboo-h " id="主题更改">主题更改</h2><br/>
 <h3 id="归档、标签、分类、关于我、友情链接页面图片自定义"><a href="#归档、标签、分类、关于我、友情链接页面图片自定义" class="headerlink" title="归档、标签、分类、关于我、友情链接页面图片自定义"></a>归档、标签、分类、关于我、友情链接页面图片自定义</h3><p>通过主题文件夹下的<code>_config.yml</code>文件中的相应属性进行设置，属性如下：</p>
-<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token comment"># 归档页面图片 or 'http://xxx'</span>
-<span class="token key atrule">archiveImg</span><span class="token punctuation">:</span> <span class="token string">'/medias/archive.jpg'</span>
-<span class="token comment"># 标签页面图片</span>
-<span class="token key atrule">tagImg</span><span class="token punctuation">:</span> <span class="token string">'/medias/tag.jpg'</span>
-<span class="token comment"># 标签详情页面图片</span>
-<span class="token key atrule">tagDetailImg</span><span class="token punctuation">:</span> <span class="token string">'/medias/tagDetail.jpg'</span>
-<span class="token comment"># 分类页面图片</span>
-<span class="token key atrule">categoriesImg</span><span class="token punctuation">:</span> <span class="token string">'/medias/categories.jpg'</span>
-<span class="token comment">#分类详情页面图片</span>
-<span class="token key atrule">categoryDetailImg</span><span class="token punctuation">:</span> <span class="token string">'/medias/categoryDetail.jpg'</span>
-<span class="token comment"># 关于我页面图片</span>
-<span class="token key atrule">aboutImg</span><span class="token punctuation">:</span> <span class="token string">'/medias/about.jpg'</span>
-<span class="token comment"># 友情链接页面图片</span>
-<span class="token key atrule">friendsImg</span><span class="token punctuation">:</span> <span class="token string">'/medias/friend.jpg'</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token comment"># 归档页面图片、描述、视频，全屏 or 'http://xxx'</span>
+<span class="token key atrule">archive</span><span class="token punctuation">:</span>
+  <span class="token key atrule">title</span><span class="token punctuation">:</span> <span class="token string">'archive'</span>
+  <span class="token key atrule">img</span><span class="token punctuation">:</span> <span class="token string">'https://pic1.zhimg.com/80/v2-1414b3a4b205e19060db18a20d08723a_1440w.jpg?source=1940ef5c'</span>
+  <span class="token key atrule">desc</span><span class="token punctuation">:</span> <span class="token string">'愿你如风，被人温柔以待'</span>
+  <span class="token key atrule">full</span><span class="token punctuation">:</span> <span class="token boolean important">true</span> <span class="token comment"># 设置为true，则图片全屏显示</span>
+  <span class="token key atrule">video</span><span class="token punctuation">:</span> <span class="token string">''</span> <span class="token comment"># 如果有值，则在屏幕大于920px的时候，全屏显示视频，为空则显示图片(img)</span>
+
+<span class="token comment"># 标签页面，配置同上</span>
+<span class="token key atrule">tag</span><span class="token punctuation">:</span>
+  <span class="token key atrule">title</span><span class="token punctuation">:</span> <span class="token string">'tags'</span>
+  <span class="token key atrule">img</span><span class="token punctuation">:</span> <span class="token string">'https://pic2.zhimg.com/80/v2-bf6c555e7c61a57ba4a1fd95a9a32975_1440w.jpg'</span> <span class="token comment"># 标签页上面的图片</span>
+  <span class="token key atrule">desc</span><span class="token punctuation">:</span> <span class="token string">'愿你如风，被人温柔以待'</span>
+  <span class="token key atrule">full</span><span class="token punctuation">:</span> <span class="token boolean important">false</span> <span class="token comment"># 标签页上面的图片是否全屏显示</span>
+  <span class="token key atrule">video</span><span class="token punctuation">:</span> <span class="token string">''</span> <span class="token comment"># 如果有值，则在屏幕大于920px的时候，全屏显示视频</span>
+
+<span class="token comment"># 标签详情页面，配置同上</span>
+<span class="token key atrule">tagDetail</span><span class="token punctuation">:</span>
+  <span class="token key atrule">title</span><span class="token punctuation">:</span> <span class="token string">'tag'</span>
+  <span class="token key atrule">img</span><span class="token punctuation">:</span> <span class="token string">'https://pic1.zhimg.com/80/v2-604a15cef201cf177943af2d915eb2e7_1440w.jpg?source=1940ef5c'</span>
+  <span class="token key atrule">desc</span><span class="token punctuation">:</span> <span class="token string">'愿你如风，被人温柔以待'</span> <span class="token comment"># 标签页详情上上面的图片上的文字</span>
+  <span class="token key atrule">full</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+  <span class="token key atrule">video</span><span class="token punctuation">:</span> <span class="token string">''</span>
+
+<span class="token comment"># 分类页面，配置同上</span>
+<span class="token key atrule">categories</span><span class="token punctuation">:</span>
+  <span class="token key atrule">title</span><span class="token punctuation">:</span> <span class="token string">'categories'</span>
+  <span class="token key atrule">img</span><span class="token punctuation">:</span> <span class="token string">'https://pic2.zhimg.com/80/v2-7c496c95897fb15768593cc5170c8b1a_1440w.jpg?source=1940ef5c'</span>
+  <span class="token key atrule">desc</span><span class="token punctuation">:</span> <span class="token string">'愿你如风，被人温柔以待'</span>
+  <span class="token key atrule">full</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+  <span class="token key atrule">video</span><span class="token punctuation">:</span> <span class="token string">'https://assets.mixkit.co/videos/preview/mixkit-flying-through-the-clouds-with-the-radiant-sun-14171-large.mp4'</span>
+
+<span class="token comment">#分类详情页面，配置同上</span>
+<span class="token key atrule">categoryDetail</span><span class="token punctuation">:</span>
+  <span class="token key atrule">title</span><span class="token punctuation">:</span> <span class="token string">'category'</span>
+  <span class="token key atrule">img</span><span class="token punctuation">:</span> <span class="token string">'https://pic3.zhimg.com/80/v2-98dcd81cb0d1fee52a807c13cedb8338_1440w.jpg?source=1940ef5c'</span>
+  <span class="token key atrule">desc</span><span class="token punctuation">:</span> <span class="token string">'愿你如风，被人温柔以待'</span>
+  <span class="token key atrule">full</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+  <span class="token key atrule">video</span><span class="token punctuation">:</span> <span class="token string">''</span>
+
+<span class="token comment"># 关于我页面，配置同上</span>
+<span class="token key atrule">about</span><span class="token punctuation">:</span>
+  <span class="token key atrule">title</span><span class="token punctuation">:</span> <span class="token string">'about'</span>
+  <span class="token key atrule">img</span><span class="token punctuation">:</span> <span class="token string">'https://pic4.zhimg.com/80/v2-d12b0c9802720897793993a5a199720f_1440w.jpg'</span>
+  <span class="token key atrule">desc</span><span class="token punctuation">:</span> <span class="token string">'愿你如风，被人温柔以待'</span>
+  <span class="token key atrule">full</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+  <span class="token key atrule">video</span><span class="token punctuation">:</span> <span class="token string">'https://v2.kwaicdn.com/upic/2021/05/03/13/BMjAyMTA1MDMxMzQ3MzVfMTUxODA2NDIxMl80ODkyMDM5Mjc5Nl8yXzM=_b_B334b55d2322fff12bf0a0af8071be244.mp4?pkey=AAXSe64OkKMSrFMnrWv7r_-0PaWRdgAQh8rj_5XH_we7SbLqsTGeDuvdg8H7OnBE5QVi3i5QD4t1RkgVNae_S4k9xCNFUT_YgYAz1R14kgrooQAA0nhx8RJcDnMQUu2ptDI&amp;tag=1-1620358290-xpcwebsearch-0-51wqpbzhrm-e9bc03271f9f300b&amp;clientCacheKey=3xx2ka5hzxvxv5k_b.mp4&amp;tt=b&amp;di=1b11e53d&amp;bp=10004'</span>
+
+<span class="token comment"># 友情链接页面，配置同上</span>
+<span class="token key atrule">friends</span><span class="token punctuation">:</span>
+  <span class="token key atrule">title</span><span class="token punctuation">:</span> <span class="token string">'friends'</span>
+  <span class="token key atrule">img</span><span class="token punctuation">:</span> <span class="token string">'https://pic2.zhimg.com/80/v2-2407599a217ba89f9499c282f129d44d_1440w.jpg?source=1940ef5c'</span>
+  <span class="token key atrule">desc</span><span class="token punctuation">:</span> <span class="token string">'愿你如风，被人温柔以待'</span>
+  <span class="token key atrule">full</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">video</span><span class="token punctuation">:</span> <span class="token string">''</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h3 id="自定义主题"><a href="#自定义主题" class="headerlink" title="自定义主题"></a>自定义主题</h3><p>默认主题颜色是绿色<code>#42b983</code>，可以通过设置主题文件夹下的<code>_config.yml</code>文件中的<code>color_scheme</code>属性，进行配置，参数如下:</p>
-<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token comment"># 主题颜色，字体，背景图片, 背景颜色等配置，针对的是所有文章</span>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token comment"># 主题颜色</span>
 <span class="token key atrule">color_scheme</span><span class="token punctuation">:</span>
   <span class="token comment"># ------------</span>
   <span class="token comment"># 通用颜色</span>
@@ -1110,8 +1478,13 @@ books   <span class="token comment">#书籍</span><span aria-hidden="true" class
     <span class="token key atrule">pace</span><span class="token punctuation">:</span> <span class="token string">'#f6a427'</span>
     <span class="token comment"># 滚动条颜色, 空字符串则滚动条使用 主题色，否则强制使用该颜色</span>
     <span class="token key atrule">scroll</span><span class="token punctuation">:</span> <span class="token string">'#42b983'</span>
-    <span class="token comment"># 首页页面的底部背景颜色，默认透明('transparent')，可以是白色('#fff')等颜色, 也可以是图片，例如  'url("https://img11.360buyimg.com/ddimg/jfs/t1/169624/29/16/4603017/5fec2c79Eecbd536a/308b28b82a013cd2.png")'</span>
-    <span class="token key atrule">bgFloor</span><span class="token punctuation">:</span> <span class="token string">'url("https://img11.360buyimg.com/ddimg/jfs/t1/169624/29/16/4603017/5fec2c79Eecbd536a/308b28b82a013cd2.png")'</span> <span class="token comment"># 如果是图片地址，url里面请用双引号</span>
+    <span class="token comment"># 首页文章列表的背景颜色, url("http://xxx.png") or red or #000 or rgba() ..</span>
+    <span class="token key atrule">postListBackground</span><span class="token punctuation">:</span> <span class="token string">'rgba(255,255,255,1)'</span>
+    <span class="token comment"># 首页页面的底部背景颜色，空字符串透明('transparent')，可以是白色('#fff')等颜色, 也可以是图片，例如  'url("https://img11.360buyimg.com/ddimg/jfs/t1/169624/29/16/4603017/5fec2c79Eecbd536a/308b28b82a013cd2.png")'</span>
+    <span class="token key atrule">bgFloor</span><span class="token punctuation">:</span> <span class="token string">'url("https://pic1.zhimg.com/80/v2-b4b71405d08bc1952025ba1bd5db54f3_1440w.jpg?source=1940ef5c")'</span> <span class="token comment"># 如果是图片地址，url里面请用双引号</span>
+    <span class="token comment"># 头部导航是否背景透明，滚动条在对顶端的时候,头部导航背景透明</span>
+    <span class="token key atrule">headerMenuTransparent</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+    <span class="token key atrule">headerMenuBackgroundColor</span><span class="token punctuation">:</span> <span class="token string">''</span> <span class="token comment"># 头部导航背景颜色, 为空则使用主题色, 写法: alpha(#42b983, 0.8) or rgba(268, 264, 269, 0.8) or #42b983 or red</span>
   <span class="token comment"># 文章详情页 颜色属性</span>
   <span class="token key atrule">post</span><span class="token punctuation">:</span>
     <span class="token comment"># 文章详情页面-->标题在图片上时候的颜色</span>
@@ -1122,7 +1495,7 @@ books   <span class="token comment">#书籍</span><span aria-hidden="true" class
     <span class="token key atrule">copyBackground</span><span class="token punctuation">:</span> <span class="token string">''</span>
     <span class="token comment">#文章详情页面--> copy按钮文字颜色, 空字符串则copy按钮字体颜色为 主题色块内部的文字颜色，否则强制使用该颜色</span>
     <span class="token key atrule">copyColor</span><span class="token punctuation">:</span> <span class="token string">''</span>
-    <span class="token comment"># 代码高亮部分的背景色, 空字符串则使用-代码高亮插件-的背景颜色，否则强制使用该颜色作为代码高亮背景色</span>
+    <span class="token comment"># 代码高亮部分的背景色, 空字符串则使用-代码高亮配置-的背景颜色，否则强制使用该颜色作为代码高亮背景色</span>
     <span class="token key atrule">codeBackground</span><span class="token punctuation">:</span> <span class="token string">''</span>
     <span class="token comment"># 文章详情页面--> p标签使用 ``符号 突出的文字颜色</span>
     <span class="token key atrule">pLight</span><span class="token punctuation">:</span> <span class="token string">'#d63200'</span>
@@ -1143,12 +1516,7 @@ books   <span class="token comment">#书籍</span><span aria-hidden="true" class
     <span class="token comment"># 如果背景只想要一个图片：可以使用 ['http://xxxxxx'] 或者 'http://xxxxxxx'，这样的写法, 图片地址也可以是本地路径('/img/xxx.png' or '/medias/xxx.png')</span>
     <span class="token comment"># 也可以是颜色字符串（例如'#C7EDCC', 或者rgba(0 ,0 ,0, 0.8) 那么会使用该颜色作为背景）</span>
     <span class="token comment"># 空字符串则背景颜色为透明</span>
-    <span class="token key atrule">bgImg</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>
-      <span class="token string">'https://pic2.zhimg.com/80/v2-bcb819edb98e081817066eb6b0e6a2ef_1440w.jpg?source=1940ef5c'</span><span class="token punctuation">,</span> 
-      <span class="token string">'https://pic2.zhimg.com/80/v2-f1b467abef1caeb5537f399da4ddbc9d_1440w.jpg?source=1940ef5c'</span><span class="token punctuation">,</span>
-      <span class="token string">'https://pic2.zhimg.com/80/v2-c513cb0d2eff43b5391ea682f1ba07c6_1440w.jpg?source=1940ef5c'</span><span class="token punctuation">,</span>
-      <span class="token string">'https://pic2.zhimg.com/80/v2-d0fe3a2cc79628c6a017f0066d4dee63_1440w.jpg?source=1940ef5c'</span>
-    <span class="token punctuation">]</span>
+    <span class="token key atrule">bgImg</span><span class="token punctuation">:</span> <span class="token string">''</span>
     <span class="token comment"># 背景图幻灯片模式--延迟时间</span>
     <span class="token comment"># 如果bgImg设置为数组，数组里面是多个图片地址,则 bgImgDelay表示背景图幻灯片的 延迟间隔时间</span>
     <span class="token key atrule">bgImgDelay</span><span class="token punctuation">:</span> <span class="token number">180000</span> <span class="token comment"># 默认三分钟，切换一张图片</span>
@@ -1204,6 +1572,21 @@ books   <span class="token comment">#书籍</span><span aria-hidden="true" class
 <td>表示该文章在首页轮播封面需要显示的图片路径，如果没有，则默认使用文章的特色图片</td>
 </tr>
 <tr>
+<td>swiperDesc</td>
+<td>无</td>
+<td>表示该文章在首页轮播封面需要显示的文字描述（摘要），如果没有，则使用<code>excerpt</code>，如果<code>excerpt</code>也没有，则取文章内容</td>
+</tr>
+<tr>
+<td>img</td>
+<td>无</td>
+<td>文章特征图，该文章显示的图片，没有则默认使用文章的特色图片</td>
+</tr>
+<tr>
+<td>excerpt</td>
+<td>无</td>
+<td>文章描述（摘要），该文章在首页的描述文字，如果没有，则取<code>swiperImg</code>,如果<code>swiperImg</code>也没有，则取文章内容</td>
+</tr>
+<tr>
 <td>top</td>
 <td>false</td>
 <td>将该值设为true，则将该篇文章显示在首页的置顶栏目中</td>
@@ -1232,11 +1615,6 @@ books   <span class="token comment">#书籍</span><span aria-hidden="true" class
 <td>donate</td>
 <td>true</td>
 <td>将该值设为false，则该篇文章不显示打赏按钮</td>
-</tr>
-<tr>
-<td>img</td>
-<td>无</td>
-<td>文章特征图，该文章显示的图片，没有则默认使用文章的特色图片</td>
 </tr>
 <tr>
 <td>bgImg</td>
@@ -1277,47 +1655,49 @@ books   <span class="token comment">#书籍</span><span aria-hidden="true" class
 <h2 class="bamboo-h " id="内置标签">内置标签</h2><br/>
 <div class="note info"><p><strong>提示</strong></p><p>使用该功能，请先将hexo版本升级到5.0.0以上，在根目录下的<code>package.json</code>文件中可查看hexo的版本号</p></div>
 
-<div class="link-group"><div class="tagLink"><a class="link-card" title="按钮" target="_blank" rel="noopener" href="https://yuang01.gitee.io/2021/02/08/btn/"><div class="left"><img "" class="lazyload placeholder" data-original="https://cdn.pixabay.com/photo/2018/12/05/13/41/panda-3857754__340.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"/></div><div class="right"><p class="text">按钮</p><p class="url">https://yuang01.gitee.io/2021/02/08/btn/</p></div></a></div>
+<div class="link-group"><div class="tagLink"><a class="link-card" title="按钮" href="/2021/02/08/btn/"><div class="left"><img "" class="lazyload placeholder" data-original="https://cdn.pixabay.com/photo/2018/12/05/13/41/panda-3857754__340.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"/></div><div class="right"><p class="text">按钮</p><p class="url">/2021/02/08/btn/</p></div></a></div>
 
-<div class="tagLink"><a class="link-card" title="audio音频" target="_blank" rel="noopener" href="https://yuang01.gitee.io/2021/02/08/audio/"><div class="left"><img "" class="lazyload placeholder" data-original="https://cdn.pixabay.com/photo/2018/12/05/13/41/panda-3857754__340.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"/></div><div class="right"><p class="text">audio音频</p><p class="url">https://yuang01.gitee.io/2021/02/08/audio/</p></div></a></div>
+<div class="tagLink"><a class="link-card" title="audio音频" href="/2021/02/08/audio/"><div class="left"><img "" class="lazyload placeholder" data-original="https://cdn.pixabay.com/photo/2018/12/05/13/41/panda-3857754__340.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"/></div><div class="right"><p class="text">audio音频</p><p class="url">/2021/02/08/audio/</p></div></a></div>
 
-<div class="tagLink"><a class="link-card" title="folding折叠" target="_blank" rel="noopener" href="https://yuang01.gitee.io/2021/02/08/folding/"><div class="left"><img "" class="lazyload placeholder" data-original="https://cdn.pixabay.com/photo/2018/12/05/13/41/panda-3857754__340.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"/></div><div class="right"><p class="text">folding折叠</p><p class="url">https://yuang01.gitee.io/2021/02/08/folding/</p></div></a></div>
+<div class="tagLink"><a class="link-card" title="folding折叠" href="/2021/02/08/folding/"><div class="left"><img "" class="lazyload placeholder" data-original="https://cdn.pixabay.com/photo/2018/12/05/13/41/panda-3857754__340.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"/></div><div class="right"><p class="text">folding折叠</p><p class="url">/2021/02/08/folding/</p></div></a></div>
 
-<div class="tagLink"><a class="link-card" title="checkbox多选" target="_blank" rel="noopener" href="https://yuang01.gitee.io/2021/02/08/checkbox/"><div class="left"><img "" class="lazyload placeholder" data-original="https://cdn.pixabay.com/photo/2018/12/05/13/41/panda-3857754__340.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"/></div><div class="right"><p class="text">checkbox多选</p><p class="url">https://yuang01.gitee.io/2021/02/08/checkbox/</p></div></a></div>
+<div class="tagLink"><a class="link-card" title="checkbox多选" href="/2021/02/08/checkbox/"><div class="left"><img "" class="lazyload placeholder" data-original="https://cdn.pixabay.com/photo/2018/12/05/13/41/panda-3857754__340.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"/></div><div class="right"><p class="text">checkbox多选</p><p class="url">/2021/02/08/checkbox/</p></div></a></div>
 
-<div class="tagLink"><a class="link-card" title="github卡片" target="_blank" rel="noopener" href="https://yuang01.gitee.io/2021/02/08/ghcard/"><div class="left"><img "" class="lazyload placeholder" data-original="https://cdn.pixabay.com/photo/2018/12/05/13/41/panda-3857754__340.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"/></div><div class="right"><p class="text">github卡片</p><p class="url">https://yuang01.gitee.io/2021/02/08/ghcard/</p></div></a></div>
+<div class="tagLink"><a class="link-card" title="github卡片" href="/2021/02/08/ghcard/"><div class="left"><img "" class="lazyload placeholder" data-original="https://cdn.pixabay.com/photo/2018/12/05/13/41/panda-3857754__340.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"/></div><div class="right"><p class="text">github卡片</p><p class="url">/2021/02/08/ghcard/</p></div></a></div>
 
-<div class="tagLink"><a class="link-card" title="gallery图片" target="_blank" rel="noopener" href="https://yuang01.gitee.io/2021/02/08/gallery/"><div class="left"><img "" class="lazyload placeholder" data-original="https://cdn.pixabay.com/photo/2018/12/05/13/41/panda-3857754__340.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"/></div><div class="right"><p class="text">gallery图片</p><p class="url">https://yuang01.gitee.io/2021/02/08/gallery/</p></div></a></div>
+<div class="tagLink"><a class="link-card" title="gallery图片" href="/2021/02/08/gallery/"><div class="left"><img "" class="lazyload placeholder" data-original="https://cdn.pixabay.com/photo/2018/12/05/13/41/panda-3857754__340.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"/></div><div class="right"><p class="text">gallery图片</p><p class="url">/2021/02/08/gallery/</p></div></a></div>
 
-<div class="tagLink"><a class="link-card" title="inlineimage和image图片" target="_blank" rel="noopener" href="https://yuang01.gitee.io/2021/02/08/inlineimage/"><div class="left"><img "" class="lazyload placeholder" data-original="https://cdn.pixabay.com/photo/2018/12/05/13/41/panda-3857754__340.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"/></div><div class="right"><p class="text">inlineimage和image图片</p><p class="url">https://yuang01.gitee.io/2021/02/08/inlineimage/</p></div></a></div>
+<div class="tagLink"><a class="link-card" title="galleryGroup图片" href="/2021/05/11/gallerygroup/"><div class="left"><img "" class="lazyload placeholder" data-original="https://cdn.pixabay.com/photo/2018/12/05/13/41/panda-3857754__340.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"/></div><div class="right"><p class="text">galleryGroup图片</p><p class="url">/2021/05/11/gallerygroup/</p></div></a></div>
 
-<div class="tagLink"><a class="link-card" title="link标签" target="_blank" rel="noopener" href="https://yuang01.gitee.io/2021/02/08/link/"><div class="left"><img "" class="lazyload placeholder" data-original="https://cdn.pixabay.com/photo/2018/12/05/13/41/panda-3857754__340.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"/></div><div class="right"><p class="text">link标签</p><p class="url">https://yuang01.gitee.io/2021/02/08/link/</p></div></a></div>
+<div class="tagLink"><a class="link-card" title="inlineimage和image图片" href="/2021/02/08/inlineimage/"><div class="left"><img "" class="lazyload placeholder" data-original="https://cdn.pixabay.com/photo/2018/12/05/13/41/panda-3857754__340.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"/></div><div class="right"><p class="text">inlineimage和image图片</p><p class="url">/2021/02/08/inlineimage/</p></div></a></div>
 
-<div class="tagLink"><a class="link-card" title="note标签" target="_blank" rel="noopener" href="https://yuang01.gitee.io/2021/02/08/note/"><div class="left"><img "" class="lazyload placeholder" data-original="https://cdn.pixabay.com/photo/2018/12/05/13/41/panda-3857754__340.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"/></div><div class="right"><p class="text">note标签</p><p class="url">https://yuang01.gitee.io/2021/02/08/note/</p></div></a></div>
+<div class="tagLink"><a class="link-card" title="link标签" href="/2021/02/08/link/"><div class="left"><img "" class="lazyload placeholder" data-original="https://cdn.pixabay.com/photo/2018/12/05/13/41/panda-3857754__340.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"/></div><div class="right"><p class="text">link标签</p><p class="url">/2021/02/08/link/</p></div></a></div>
 
-<div class="tagLink"><a class="link-card" title="段落文本P" target="_blank" rel="noopener" href="https://yuang01.gitee.io/2021/02/08/p/"><div class="left"><img "" class="lazyload placeholder" data-original="https://cdn.pixabay.com/photo/2018/12/05/13/41/panda-3857754__340.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"/></div><div class="right"><p class="text">段落文本P</p><p class="url">https://yuang01.gitee.io/2021/02/08/p/</p></div></a></div>
+<div class="tagLink"><a class="link-card" title="note标签" href="/2021/02/08/note/"><div class="left"><img "" class="lazyload placeholder" data-original="https://cdn.pixabay.com/photo/2018/12/05/13/41/panda-3857754__340.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"/></div><div class="right"><p class="text">note标签</p><p class="url">/2021/02/08/note/</p></div></a></div>
 
-<div class="tagLink"><a class="link-card" title="单选按钮" target="_blank" rel="noopener" href="https://yuang01.gitee.io/2021/02/08/radio/"><div class="left"><img "" class="lazyload placeholder" data-original="https://cdn.pixabay.com/photo/2018/12/05/13/41/panda-3857754__340.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"/></div><div class="right"><p class="text">单选按钮</p><p class="url">https://yuang01.gitee.io/2021/02/08/radio/</p></div></a></div>
+<div class="tagLink"><a class="link-card" title="段落文本P" href="/2021/02/08/p/"><div class="left"><img "" class="lazyload placeholder" data-original="https://cdn.pixabay.com/photo/2018/12/05/13/41/panda-3857754__340.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"/></div><div class="right"><p class="text">段落文本P</p><p class="url">/2021/02/08/p/</p></div></a></div>
 
-<div class="tagLink"><a class="link-card" title="文本高亮pbg" target="_blank" rel="noopener" href="https://yuang01.gitee.io/2021/02/08/pbg/"><div class="left"><img "" class="lazyload placeholder" data-original="https://cdn.pixabay.com/photo/2018/12/05/13/41/panda-3857754__340.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"/></div><div class="right"><p class="text">文本高亮pbg</p><p class="url">https://yuang01.gitee.io/2021/02/08/pbg/</p></div></a></div>
+<div class="tagLink"><a class="link-card" title="单选按钮" href="/2021/02/08/radio/"><div class="left"><img "" class="lazyload placeholder" data-original="https://cdn.pixabay.com/photo/2018/12/05/13/41/panda-3857754__340.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"/></div><div class="right"><p class="text">单选按钮</p><p class="url">/2021/02/08/radio/</p></div></a></div>
 
-<div class="tagLink"><a class="link-card" title="site-cardb标签" target="_blank" rel="noopener" href="https://yuang01.gitee.io/2021/02/08/site-card/"><div class="left"><img "" class="lazyload placeholder" data-original="https://cdn.pixabay.com/photo/2018/12/05/13/41/panda-3857754__340.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"/></div><div class="right"><p class="text">site-cardb标签</p><p class="url">https://yuang01.gitee.io/2021/02/08/site-card/</p></div></a></div>
+<div class="tagLink"><a class="link-card" title="文本高亮pbg" href="/2021/02/08/pbg/"><div class="left"><img "" class="lazyload placeholder" data-original="https://cdn.pixabay.com/photo/2018/12/05/13/41/panda-3857754__340.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"/></div><div class="right"><p class="text">文本高亮pbg</p><p class="url">/2021/02/08/pbg/</p></div></a></div>
 
-<div class="tagLink"><a class="link-card" title="tab标签" target="_blank" rel="noopener" href="https://yuang01.gitee.io/2021/02/08/tab/"><div class="left"><img "" class="lazyload placeholder" data-original="https://cdn.pixabay.com/photo/2018/12/05/13/41/panda-3857754__340.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"/></div><div class="right"><p class="text">tab标签</p><p class="url">https://yuang01.gitee.io/2021/02/08/tab/</p></div></a></div>
+<div class="tagLink"><a class="link-card" title="site-cardb标签" href="/2021/02/08/site-card/"><div class="left"><img "" class="lazyload placeholder" data-original="https://cdn.pixabay.com/photo/2018/12/05/13/41/panda-3857754__340.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"/></div><div class="right"><p class="text">site-cardb标签</p><p class="url">/2021/02/08/site-card/</p></div></a></div>
 
-<div class="tagLink"><a class="link-card" title="span文字颜色" target="_blank" rel="noopener" href="https://yuang01.gitee.io/2021/02/08/span/"><div class="left"><img "" class="lazyload placeholder" data-original="https://cdn.pixabay.com/photo/2018/12/05/13/41/panda-3857754__340.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"/></div><div class="right"><p class="text">span文字颜色</p><p class="url">https://yuang01.gitee.io/2021/02/08/span/</p></div></a></div>
+<div class="tagLink"><a class="link-card" title="tab标签" href="/2021/02/08/tab/"><div class="left"><img "" class="lazyload placeholder" data-original="https://cdn.pixabay.com/photo/2018/12/05/13/41/panda-3857754__340.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"/></div><div class="right"><p class="text">tab标签</p><p class="url">/2021/02/08/tab/</p></div></a></div>
 
-<div class="tagLink"><a class="link-card" title="timeline时间线" target="_blank" rel="noopener" href="https://yuang01.gitee.io/2021/02/08/timeline/"><div class="left"><img "" class="lazyload placeholder" data-original="https://cdn.pixabay.com/photo/2018/12/05/13/41/panda-3857754__340.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"/></div><div class="right"><p class="text">timeline时间线</p><p class="url">https://yuang01.gitee.io/2021/02/08/timeline/</p></div></a></div>
+<div class="tagLink"><a class="link-card" title="span文字颜色" href="/2021/02/08/span/"><div class="left"><img "" class="lazyload placeholder" data-original="https://cdn.pixabay.com/photo/2018/12/05/13/41/panda-3857754__340.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"/></div><div class="right"><p class="text">span文字颜色</p><p class="url">/2021/02/08/span/</p></div></a></div>
 
-<div class="tagLink"><a class="link-card" title="text文本样式标签" target="_blank" rel="noopener" href="https://yuang01.gitee.io/2021/02/08/text/"><div class="left"><img "" class="lazyload placeholder" data-original="https://cdn.pixabay.com/photo/2018/12/05/13/41/panda-3857754__340.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"/></div><div class="right"><p class="text">text文本样式标签</p><p class="url">https://yuang01.gitee.io/2021/02/08/text/</p></div></a></div>
+<div class="tagLink"><a class="link-card" title="timeline时间线" href="/2021/02/08/timeline/"><div class="left"><img "" class="lazyload placeholder" data-original="https://cdn.pixabay.com/photo/2018/12/05/13/41/panda-3857754__340.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"/></div><div class="right"><p class="text">timeline时间线</p><p class="url">/2021/02/08/timeline/</p></div></a></div>
 
-<div class="tagLink"><a class="link-card" title="video视频" target="_blank" rel="noopener" href="https://yuang01.gitee.io/2021/02/08/video/"><div class="left"><img "" class="lazyload placeholder" data-original="https://cdn.pixabay.com/photo/2018/12/05/13/41/panda-3857754__340.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"/></div><div class="right"><p class="text">video视频</p><p class="url">https://yuang01.gitee.io/2021/02/08/video/</p></div></a></div>
+<div class="tagLink"><a class="link-card" title="text文本样式标签" href="/2021/02/08/text/"><div class="left"><img "" class="lazyload placeholder" data-original="https://cdn.pixabay.com/photo/2018/12/05/13/41/panda-3857754__340.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"/></div><div class="right"><p class="text">text文本样式标签</p><p class="url">/2021/02/08/text/</p></div></a></div>
 
-<div class="tagLink"><a class="link-card" title="title标题" target="_blank" rel="noopener" href="https://yuang01.gitee.io/2021/02/08/title/"><div class="left"><img "" class="lazyload placeholder" data-original="https://cdn.pixabay.com/photo/2018/12/05/13/41/panda-3857754__340.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"/></div><div class="right"><p class="text">title标题</p><p class="url">https://yuang01.gitee.io/2021/02/08/title/</p></div></a></div>
+<div class="tagLink"><a class="link-card" title="video视频" href="/2021/02/08/video/"><div class="left"><img "" class="lazyload placeholder" data-original="https://cdn.pixabay.com/photo/2018/12/05/13/41/panda-3857754__340.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"/></div><div class="right"><p class="text">video视频</p><p class="url">/2021/02/08/video/</p></div></a></div>
 
-<div class="tagLink"><a class="link-card" title="noteblock标签" target="_blank" rel="noopener" href="https://yuang01.gitee.io/2021/02/08/noteblock/"><div class="left"><img "" class="lazyload placeholder" data-original="https://cdn.pixabay.com/photo/2018/12/05/13/41/panda-3857754__340.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"/></div><div class="right"><p class="text">noteblock标签</p><p class="url">https://yuang01.gitee.io/2021/02/08/noteblock/</p></div></a></div>
+<div class="tagLink"><a class="link-card" title="title标题" href="/2021/02/08/title/"><div class="left"><img "" class="lazyload placeholder" data-original="https://cdn.pixabay.com/photo/2018/12/05/13/41/panda-3857754__340.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"/></div><div class="right"><p class="text">title标题</p><p class="url">/2021/02/08/title/</p></div></a></div>
 
-<div class="tagLink"><a class="link-card" title="progress标签" target="_blank" rel="noopener" href="https://yuang01.gitee.io/2021/02/22/progress/"><div class="left"><img "" class="lazyload placeholder" data-original="https://cdn.pixabay.com/photo/2018/12/05/13/41/panda-3857754__340.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"/></div><div class="right"><p class="text">progress标签</p><p class="url">https://yuang01.gitee.io/2021/02/22/progress/</p></div></a></div>
+<div class="tagLink"><a class="link-card" title="noteblock标签" href="/2021/02/08/noteblock/"><div class="left"><img "" class="lazyload placeholder" data-original="https://cdn.pixabay.com/photo/2018/12/05/13/41/panda-3857754__340.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"/></div><div class="right"><p class="text">noteblock标签</p><p class="url">/2021/02/08/noteblock/</p></div></a></div>
+
+<div class="tagLink"><a class="link-card" title="progress标签" href="/2021/02/22/progress/"><div class="left"><img "" class="lazyload placeholder" data-original="https://cdn.pixabay.com/photo/2018/12/05/13/41/panda-3857754__340.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"/></div><div class="right"><p class="text">progress标签</p><p class="url">/2021/02/22/progress/</p></div></a></div>
 </div>
 
 <p>可通过如下参数配置基本颜色和默认图片</p>
@@ -1336,11 +1716,8 @@ books   <span class="token comment">#书籍</span><span aria-hidden="true" class
   <span class="token comment"># link标签的左侧默认图片</span>
   <span class="token key atrule">linkImg</span><span class="token punctuation">:</span> <span class="token string">'https://cdn.pixabay.com/photo/2018/12/05/13/41/panda-3857754__340.jpg'</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2 class="bamboo-h " id="结语">结语</h2><br/>
-<p>你都看到这了，诺 <img no-lazy class="inline" src="https://img10.360buyimg.com/ddimg/jfs/t1/153554/13/17636/9218/601cc240Eaa721783/72f7a6d04e586fb6.jpg" style="height:80px;"/> 太棒了。<br>那不如再帮我点个star吧，哈哈</p>
+<p>你都看到这了，诺 <img no-lazy class="inline" src="https://img10.360buyimg.com/ddimg/jfs/t1/153554/13/17636/9218/601cc240Eaa721783/72f7a6d04e586fb6.jpg" style="height:80px;"/> 太棒了。<br>如果你觉得还可以，请点个star吧</p>
 <a class="ghcard" rel="external nofollow noopener noreferrer noopener" target="_blank" href="https://github.com/yuang01/hexo-theme-bamboo"><img "" class="lazyload placeholder" data-original="https://github-readme-stats.vercel.app/api/pin/?username=yuang01&repo=hexo-theme-bamboo&theme=vue&show_owner=true" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"/></a>
-
-<p>观众老爷： <img no-lazy class="inline" src="https://img11.360buyimg.com/ddimg/jfs/t1/166717/14/5541/5704/601cce5bEc5ae4ac3/69ff73675f0c0de7.jpg" style="height:120px;"/><br>博主： <img no-lazy class="inline" src="https://sc01.alicdn.com/kf/H02efd003c12b40b891b3de3a24fd16b0a.jpg" style="height:120px;"/>，有问题加我QQ哦，一起讨(lai)论(da)问(wang)题(zhe),<img no-lazy class="inline" src="https://ae02.alicdn.com/kf/H2ade072f02bb4eedaecbb544637cec51K.jpg" style="height:120px;"/>最后祝大家<span class='p large danger'>新春快乐</span></p>
-
       </div>
       
         <div class="copyright">
@@ -1370,7 +1747,7 @@ books   <span class="token comment">#书籍</span><span aria-hidden="true" class
 
   
   <div class="post-nav-prev post-nav-item">
-    <div class="post-nav-img lazyload" data-original="/medias/13.jpg" style="background-size: cover; 
+    <div class="post-nav-img lazyload" data-original="https://pic3.zhimg.com/80/v2-e35c656df5d483dc74831129ddb31256_1440w.jpg" style="background-size: cover; 
       background-position: center center;">
     </div>
     <a href="/2021/02/22/progress/" class="post-nav-link">
@@ -1396,7 +1773,7 @@ books   <span class="token comment">#书籍</span><span aria-hidden="true" class
 
   
   <div class="post-nav-next post-nav-item">
-    <div class="post-nav-img lazyload" data-original="/medias/11.jpg" style="background-size: cover; 
+    <div class="post-nav-img lazyload" data-original="https://pic1.zhimg.com/80/v2-1f5fecc916dcb213570e1a79be2a5d65_1440w.jpg?source=1940ef5c" style="background-size: cover; 
       background-position: center center;">
     </div>
     <a href="/2021/02/08/btn/" class="post-nav-link">
@@ -1540,8 +1917,8 @@ books   <span class="token comment">#书籍</span><span aria-hidden="true" class
 			el: '#vcomment',
 			notify: false,
 			verify: false,
-			app_id: "nmal09L0arSjEFBUUCSpWzyK-gzGzoHsz",
-			app_key: "xiiSst0NtHRg1POFFV32iqKI",
+			app_id: "",
+			app_key: "",
 			placeholder: "客官，说点什么吧",
 			avatar: "",
 			master: "74c5ec8dbf377427e36067ce97c29a3f",   //博主邮箱md5
@@ -2455,7 +2832,7 @@ books   <span class="token comment">#书籍</span><span aria-hidden="true" class
       headingSelector: headerEl,
       scrollSmooth: true,
       scrollSmoothOffset: -80,
-      headingsOffset: 130,
+      headingsOffset: -($(window).height() * 0.4 - 45),
       positionFixedSelector: '.toc-main',
       positionFixedClass: 'is-position-fixed',
       fixedSidebarOffset: 'auto',
@@ -2466,8 +2843,8 @@ books   <span class="token comment">#书籍</span><span aria-hidden="true" class
 
 <style>
 .is-position-fixed {
-  position:fixed !important;
-  top: 64px;
+  position:sticky !important;
+  top: 74px;
 }
 .toc-main ul {
   counter-reset: show-list;
@@ -2515,6 +2892,8 @@ books   <span class="token comment">#书籍</span><span aria-hidden="true" class
       });
     </script>
   
+
+
 </div>
 
 

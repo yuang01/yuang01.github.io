@@ -125,6 +125,8 @@ var vm = new Vue({
   <link href="/js/danmu/barrager.css" rel="stylesheet">
 <script src="/js/danmu/jquery.barrager.js"></script>
   <body>
+    <!-- 页面预加载动画 -->
+
     <!-- 判断是否为黑夜模式 -->
     <script>
       let isDark = JSON.parse(localStorage.getItem('dark')) || JSON.parse('false');
@@ -134,8 +136,9 @@ var vm = new Vue({
       }
     </script>
 
-    <header class="header bg-color" 
-  style="position: fixed; 
+    
+<header class="header " id="navHeader"
+  style="position: fixed;
   left: 0; top: 0; z-index: 10;width: 100%;"
 >
   <div class="header-content">
@@ -152,61 +155,125 @@ var vm = new Vue({
       <h3 class="drawer-box-head_title">Bamboo</h3>
       <h5 class="drawer-box-head_desc">千磨万击还坚劲，任尔东西南北风</h5>
     </div>
+    
     <div class="drawer-box-content">
       <ul class="drawer-box-content_menu">
         
-          <li class="drawer-box-content_item">
-            <a href="/" class="menu-item-link">
-              
-                <i class="fa fa-home" aria-hidden="true"></i>
-              
-              <span>首页</span>
-            </a>
+          <li class="drawer-box-content_item" style="position: relative;">
+            
+              <a href="/" class="drawer-menu-item-link">
+                
+                  <i class="fa fa-home" aria-hidden="true"></i>
+                
+                <span class="name">首页</span>
+              </a>
+            
           </li>
         
-          <li class="drawer-box-content_item">
-            <a href="/archives" class="menu-item-link">
-              
-                <i class="fa fa-home" aria-hidden="true"></i>
-              
-              <span>归档</span>
-            </a>
+          <li class="drawer-box-content_item" style="position: relative;">
+            
+              <a href="/archives" class="drawer-menu-item-link">
+                
+                  <i class="fa fa-archive" aria-hidden="true"></i>
+                
+                <span class="name">归档</span>
+              </a>
+            
           </li>
         
-          <li class="drawer-box-content_item">
-            <a href="/tags" class="menu-item-link">
-              
-                <i class="fa fa-tags" aria-hidden="true"></i>
-              
-              <span>标签</span>
-            </a>
+          <li class="drawer-box-content_item" style="position: relative;">
+            
+              <a href="/tags" class="drawer-menu-item-link">
+                
+                  <i class="fa fa-tags" aria-hidden="true"></i>
+                
+                <span class="name">标签</span>
+              </a>
+            
           </li>
         
-          <li class="drawer-box-content_item">
-            <a href="/categories" class="menu-item-link">
-              
-                <i class="fa fa-bookmark" aria-hidden="true"></i>
-              
-              <span>分类</span>
-            </a>
+          <li class="drawer-box-content_item" style="position: relative;">
+            
+              <a href="/categories" class="drawer-menu-item-link">
+                
+                  <i class="fa fa-bookmark" aria-hidden="true"></i>
+                
+                <span class="name">分类</span>
+              </a>
+            
           </li>
         
-          <li class="drawer-box-content_item">
-            <a href="/about" class="menu-item-link">
-              
-                <i class="fa fa-user" aria-hidden="true"></i>
-              
-              <span>关于</span>
-            </a>
+          <li class="drawer-box-content_item" style="position: relative;">
+            
+              <a href="/about" class="drawer-menu-item-link">
+                
+                  <i class="fa fa-user" aria-hidden="true"></i>
+                
+                <span class="name">关于</span>
+              </a>
+            
           </li>
         
-          <li class="drawer-box-content_item">
-            <a href="/friends" class="menu-item-link">
-              
-                <i class="fa fa-link" aria-hidden="true"></i>
-              
-              <span>友情链接</span>
-            </a>
+          <li class="drawer-box-content_item" style="position: relative;">
+            
+              <a href="/friends" class="drawer-menu-item-link">
+                
+                <span class="name">友情链接</span>
+              </a>
+            
+          </li>
+        
+          <li class="drawer-box-content_item" style="position: relative;">
+            
+              <a href="javascript:;" class="drawer-menu-item-link has-children" @click="openOrCloseMenu(6)">
+                <span>
+                  
+                    <i class="fa fa-link"></i>
+                  
+                  <span class="name">更多</span>
+                </span>
+                <i class="fa fa-chevron-left arrow " :class="{'icon-rotate': isOpen(6)}" aria-hidden="true"></i>
+              </a>
+              <ul class="drawer-sub-menu" v-if="isOpen(6)">
+                
+                <li>
+                  <a href="/gallery">
+                    
+                    <i class="fa fa-music" style="margin-top: -20px;"></i>
+                    
+                    <span>图库</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/huoban">
+                    
+                    <i class="fa fa-film" style="margin-top: -20px;"></i>
+                    
+                    <span>友情连接</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/me">
+                    
+                    <i class="fa fa-film" style="margin-top: -20px;"></i>
+                    
+                    <span>关于我</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="http://baidu.com">
+                    
+                    <i class="fa fa-film" style="margin-top: -20px;"></i>
+                    
+                    <span>百度</span>
+                  </a>
+                </li>
+                
+              </ul>
+            
           </li>
         
         <li class="drawer-box-content_item">
@@ -227,17 +294,33 @@ var vm = new Vue({
     data: {
       visible: false,
       top: 0,
+      openArr: [],
     },
     computed: {
     },
     mounted() {
     },
     methods: {
+      isOpen(index) {
+        if (this.openArr.includes(index)) {
+          return true;
+        } else {
+          return false;
+        }
+      },
+      openOrCloseMenu(curIndex) {
+        const index = this.openArr.indexOf(curIndex);
+        if (index !== -1) {
+          this.openArr.splice(index, 1);
+        } else {
+          this.openArr.push(curIndex);
+        }
+      },
       showDialogDrawer() {
         this.visible = true;
         // 防止页面滚动，只能让弹框滚动
         this.top = $(document).scrollTop()
-        body.style.cssText = 'width: 100%; height: 100%; position: fixed; top: -' + this.top  + 'px; left: 0; overflow: hidden;';
+        body.style.cssText = 'width: 100%; height: 100%;overflow: hidden;';
       },
       cancelDialogDrawer() {
         this.visible = false;
@@ -248,68 +331,132 @@ var vm = new Vue({
     created() {}
   })
 </script>
+
     </div>
     <div class="blog-title" id="author-avatar">
-      <div class="avatar">
-        <img src="/medias/logo.png" alt="logo">
-      </div>
+      
+        <div class="avatar">
+          <img src="/medias/logo.png" alt="logo">
+        </div>
+      
       <a href="/" class="logo">Bamboo</a>
     </div>
     <nav class="navbar">
       <ul class="menu">
         
-          <li class="menu-item">
-            <a href="/" class="menu-item-link">
-              
-                <i class="fa fa-home" aria-hidden="true"></i>
-              
-              <span>首页</span>
-            </a>
+          <li class="menu-item" style="position: relative;">
+            
+              <a href="/" class="menu-item-link">
+                
+                  <i class="fa fa-home" aria-hidden="true"></i>
+                
+                <span class="name">首页</span>
+              </a>
+            
           </li>
         
-          <li class="menu-item">
-            <a href="/archives" class="menu-item-link">
-              
-                <i class="fa fa-archive" aria-hidden="true"></i>
-              
-              <span>归档</span>
-            </a>
+          <li class="menu-item" style="position: relative;">
+            
+              <a href="/archives" class="menu-item-link">
+                
+                  <i class="fa fa-archive" aria-hidden="true"></i>
+                
+                <span class="name">归档</span>
+              </a>
+            
           </li>
         
-          <li class="menu-item">
-            <a href="/tags" class="menu-item-link">
-              
-                <i class="fa fa-tags" aria-hidden="true"></i>
-              
-              <span>标签</span>
-            </a>
+          <li class="menu-item" style="position: relative;">
+            
+              <a href="/tags" class="menu-item-link">
+                
+                  <i class="fa fa-tags" aria-hidden="true"></i>
+                
+                <span class="name">标签</span>
+              </a>
+            
           </li>
         
-          <li class="menu-item">
-            <a href="/categories" class="menu-item-link">
-              
-                <i class="fa fa-bookmark" aria-hidden="true"></i>
-              
-              <span>分类</span>
-            </a>
+          <li class="menu-item" style="position: relative;">
+            
+              <a href="/categories" class="menu-item-link">
+                
+                  <i class="fa fa-bookmark" aria-hidden="true"></i>
+                
+                <span class="name">分类</span>
+              </a>
+            
           </li>
         
-          <li class="menu-item">
-            <a href="/about" class="menu-item-link">
-              
-                <i class="fa fa-user" aria-hidden="true"></i>
-              
-              <span>关于</span>
-            </a>
+          <li class="menu-item" style="position: relative;">
+            
+              <a href="/about" class="menu-item-link">
+                
+                  <i class="fa fa-user" aria-hidden="true"></i>
+                
+                <span class="name">关于</span>
+              </a>
+            
           </li>
         
-          <li class="menu-item">
-            <a href="/friends" class="menu-item-link">
-              
-                <i class="fa fa-link" aria-hidden="true"></i>
-              
-              <span>友情链接</span>
-            </a>
+          <li class="menu-item" style="position: relative;">
+            
+              <a href="/friends" class="menu-item-link">
+                
+                <span class="name">友情链接</span>
+              </a>
+            
+          </li>
+        
+          <li class="menu-item" style="position: relative;">
+            
+              <a href="javascript:;" class="menu-item-link">
+                
+                  <i class="fa fa-link"></i>
+                
+                <span class="name">更多</span>
+                <i class="fa fa-chevron-down arrow" aria-hidden="true"></i>
+              </a>
+              <ul class="sub-menu">
+                
+                <li>
+                  <a href="/gallery">
+                    
+                    <i class="fa fa-music" style="margin-top: -20px;"></i>
+                    
+                    <span>图库</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/huoban">
+                    
+                    <i class="fa fa-film" style="margin-top: -20px;"></i>
+                    
+                    <span>友情连接</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/me">
+                    
+                    <i class="fa fa-film" style="margin-top: -20px;"></i>
+                    
+                    <span>关于我</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="http://baidu.com">
+                    
+                    <i class="fa fa-film" style="margin-top: -20px;"></i>
+                    
+                    <span>百度</span>
+                  </a>
+                </li>
+                
+              </ul>
+            
           </li>
         
       </ul>
@@ -370,8 +517,10 @@ var vm = new Vue({
           <i class="fa fa-close" aria-hidden="true" style="float:right;" @click.self="cancelDialogVisible()"></i>
         </div> -->
         <h2>
-          <i class="fa fa-search" aria-hidden="true"></i>
-          <span class="title">本地搜索</span>
+          <span>
+            <i class="fa fa-search" aria-hidden="true"></i>
+            <span class="title">本地搜索</span>
+          </span>
           <i class="fa fa-close close" style="float:right;" aria-hidden="true" @click.self="cancelDialogVisible()"></i>
         </h2>
         <form class="site-search-form">
@@ -466,14 +615,25 @@ var vm = new Vue({
     </script>
     <script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script> 
     
+
+    <!-- 当头部导航设置为背景透明的时候  -->
+    
+      <script src="/js/header/index.js"></script>
+    
 </header>
-    <main class="main" style="margin-top: 60px;">
+    <main class="main" style="margin-top: 0;">
       
 <link href="https://cdn.bootcdn.net/ajax/libs/Swiper/5.4.1/css/swiper.min.css" rel="stylesheet">
 
 
+  <link href="/js/vue-typed-js/index.css" rel="stylesheet">
 
-<div class="swiper-length" style="display: none;">21</div>
+
+
+
+
+
+<div class="swiper-length" style="display: none;">2</div>
 <div id="appSwiper"
   class=""
   @mouseenter="stopAutoPlay()" 
@@ -482,6 +642,40 @@ var vm = new Vue({
   <swiper v-cloak ref="mySwiper" :options="swiperOptions" @slideChangeTransitionEnd="slideChangeTransitionEnd">
     
       
+        <swiper-slide>
+          <div class="item swiper-lazy" data-background="https://img11.360buyimg.com/ddimg/jfs/t1/160978/33/20686/2476596/6083e62dEa588862b/63f8f2163ab61b2f.png" style="background-size: 90000px; 
+            background-position: left center;" style="position: relative;">
+            <div class="swiper-bgmask" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;"></div>
+              <div class="flag">
+                <div class="img-mask swiper-lazy" data-background="https://img11.360buyimg.com/ddimg/jfs/t1/160978/33/20686/2476596/6083e62dEa588862b/63f8f2163ab61b2f.png" style="height: 100%; background-size: cover; 
+                  background-position: center center;">
+                  <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>   
+                </div>
+                <div class="flag-text">
+                  <div class="flag-text-content">
+                    <div class="title ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">青墨书晚风</div>
+                    
+                      <div class="ani animated default-excerpt" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">
+                        <vue-typed-js :strings="defaultDesc" :loop="defaultDescTypedLoop" typeSpeed="10000">
+                          <h1 class="typing"></h1>
+                        </vue-typed-js>
+                      </div>
+                      
+                  </div>
+                  <div style="display: flex;" class="flag-text-btns">
+                    
+                      <div class="ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s"><a target="_blank" rel="noopener" href="https://yuang01.gitee.io/2021/02/08/hexo-theme-bamboo-new/" class="read-more border-color swiper-btn-color" style="display: inline-block; z-index:1;">阅读文档</a></div>
+                    
+                    
+                      <div class="ani animated" style="margin-left: 10px;" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s"><a target="_blank" rel="noopener" href="https://gitee.com/yuang01/hexo-theme-bamboo/repository/archive/dev.zip" class="read-more border-color swiper-btn-color2" style="display: inline-block; z-index:1;border: 1px solid white;">下载主题</a></div>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+        </swiper-slide>
+      
+      
         
         
       
@@ -492,20 +686,24 @@ var vm = new Vue({
         
           
           <swiper-slide>
-            <div class="item swiper-lazy" data-background="/medias/11.jpg" style=" background-size: 90000px; 
-            background-position: center center;" style="position: relative;">
+            <div class="item swiper-lazy" data-background="https://img13.360buyimg.com/ddimg/jfs/t1/179066/36/814/284417/60840a15E419a1e0b/9c68dbe001b4b980.jpg" style=" background-size: 90000px; 
+            background-position: left center;" style="position: relative;">
             <div class="swiper-bgmask" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;"></div>
               <div class="flag" style="z-index: 2;">
-                <div class="img-mask swiper-lazy" data-background="/medias/11.jpg" style="height: 100%; background-size: cover; 
+                <div class="img-mask swiper-lazy" data-background="https://img13.360buyimg.com/ddimg/jfs/t1/179066/36/814/284417/60840a15E419a1e0b/9c68dbe001b4b980.jpg" style="height: 100%; background-size: cover; 
                   background-position: center center;">
                   <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>  
                 </div>
                 <div class="flag-text">
-                  <div>
-                    <div class="title ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">Hexo主题--Bamboo介绍</div>
-                    <div class="excerpt ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s"><p>该文档是版本1.8的文档，版本号可以从主题下的<code>package.json</code>查看<br>这是一款既可以<span class='p large red'>花</span><span class='p large green'>里</span><span class='p large blue'>胡</span><span class='p large info'>哨</span>又可以<span class='p large'>简洁</span>的主题，只需要简单配置即可，<a href="https://yuang01.github.io/">演示示例</a>，| QQ交流:<code>1730241541</code></p></div>
+                  <div class="flag-text-content">
+                    <div class="title ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">
+                      <a href="/2021/02/08/hexo-theme-bamboo-new/">
+                        Hexo主题--Bamboo介绍
+                      </a>
+                    </div>
+                    <div class="excerpt ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">该文档是版本1.8的文档，版本号可以从主题下的`package.json`查看该文档是版本1.8的文档该文档是版本1.8的文档，版本号可以从主题下的`package.json`查看该文档是版本1.8的文档该文档是版本1.8的文档，</div>
                   </div>
-                  <div class="ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s"><a href="/2021/02/08/hexo-theme-bamboo-new/" class="read-more border-color swiper-btn-color" style="display: inline-block; z-index:1;">阅读更多</a></div>
+                  <div class="bottom-one-btn ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s"><a href="/2021/02/08/hexo-theme-bamboo-new/" class="read-more border-color swiper-btn-color" style="display: inline-block; z-index:1;">阅读更多</a></div>
                 </div>
               </div>
             </div>
@@ -515,478 +713,65 @@ var vm = new Vue({
       
         
         
-          
-          <swiper-slide>
-            <div class="item swiper-lazy" data-background="/medias/11.jpg" style=" background-size: 90000px; 
-            background-position: center center;" style="position: relative;">
-            <div class="swiper-bgmask" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;"></div>
-              <div class="flag" style="z-index: 2;">
-                <div class="img-mask swiper-lazy" data-background="/medias/11.jpg" style="height: 100%; background-size: cover; 
-                  background-position: center center;">
-                  <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>  
-                </div>
-                <div class="flag-text">
-                  <div>
-                    <div class="title ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">按钮</div>
-                    <div class="excerpt ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">融入段落中按钮
-不设置任何参数的 按钮 适合融入段落中。
-不设置任何参数的 按钮 适合融入段落中。
-不设置任何参数的 按钮 适合融入段落中。
-不设置任何参数的 按钮 适合融入段落中。
-不设置任何参数的 按钮 适合融入段落中。
-上述实例源码不</div>
-                  </div>
-                  <div class="ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s"><a href="/2021/02/08/btn/" class="read-more border-color swiper-btn-color" style="display: inline-block; z-index:1;">阅读更多</a></div>
-                </div>
-              </div>
-            </div>
-
-          </swiper-slide>
+      
+        
         
       
         
         
-          
-          <swiper-slide>
-            <div class="item swiper-lazy" data-background="/medias/1.jpg" style=" background-size: 90000px; 
-            background-position: center center;" style="position: relative;">
-            <div class="swiper-bgmask" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;"></div>
-              <div class="flag" style="z-index: 2;">
-                <div class="img-mask swiper-lazy" data-background="/medias/1.jpg" style="height: 100%; background-size: cover; 
-                  background-position: center center;">
-                  <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>  
-                </div>
-                <div class="flag-text">
-                  <div>
-                    <div class="title ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">audio音频</div>
-                    <div class="excerpt ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">事例
-
-Your browser does not support the audio tag.
-
-写法
-&#123;% audio http://qiniu.cunzhuang.top/%E5%85%AD%E5%93%B2%20-%20%</div>
-                  </div>
-                  <div class="ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s"><a href="/2021/02/08/audio/" class="read-more border-color swiper-btn-color" style="display: inline-block; z-index:1;">阅读更多</a></div>
-                </div>
-              </div>
-            </div>
-
-          </swiper-slide>
+      
+        
         
       
         
         
-          
-          <swiper-slide>
-            <div class="item swiper-lazy" data-background="/medias/4.jpg" style=" background-size: 90000px; 
-            background-position: center center;" style="position: relative;">
-            <div class="swiper-bgmask" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;"></div>
-              <div class="flag" style="z-index: 2;">
-                <div class="img-mask swiper-lazy" data-background="/medias/4.jpg" style="height: 100%; background-size: cover; 
-                  background-position: center center;">
-                  <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>  
-                </div>
-                <div class="flag-text">
-                  <div>
-                    <div class="title ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">checkbox</div>
-                    <div class="excerpt ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">
-            纯文本测试
-            
-
-            支持简单的 markdown 语法
-            
-
-            支持自定义颜色
-            
-
-         </div>
-                  </div>
-                  <div class="ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s"><a href="/2021/02/08/checkbox/" class="read-more border-color swiper-btn-color" style="display: inline-block; z-index:1;">阅读更多</a></div>
-                </div>
-              </div>
-            </div>
-
-          </swiper-slide>
+      
+        
         
       
         
         
-          
-          <swiper-slide>
-            <div class="item swiper-lazy" data-background="/medias/3.jpg" style=" background-size: 90000px; 
-            background-position: center center;" style="position: relative;">
-            <div class="swiper-bgmask" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;"></div>
-              <div class="flag" style="z-index: 2;">
-                <div class="img-mask swiper-lazy" data-background="/medias/3.jpg" style="height: 100%; background-size: cover; 
-                  background-position: center center;">
-                  <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>  
-                </div>
-                <div class="flag-text">
-                  <div>
-                    <div class="title ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">folding折叠</div>
-                    <div class="excerpt ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">
-基本
-
- 查看图片测试 
-              
-              
-              
-            
-上述事例代码&#123;% folding 查看图片测试 %&#125;
-  ![](https</div>
-                  </div>
-                  <div class="ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s"><a href="/2021/02/08/folding/" class="read-more border-color swiper-btn-color" style="display: inline-block; z-index:1;">阅读更多</a></div>
-                </div>
-              </div>
-            </div>
-
-          </swiper-slide>
+      
+        
         
       
         
         
-          
-          <swiper-slide>
-            <div class="item swiper-lazy" data-background="/medias/10.jpg" style=" background-size: 90000px; 
-            background-position: center center;" style="position: relative;">
-            <div class="swiper-bgmask" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;"></div>
-              <div class="flag" style="z-index: 2;">
-                <div class="img-mask swiper-lazy" data-background="/medias/10.jpg" style="height: 100%; background-size: cover; 
-                  background-position: center center;">
-                  <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>  
-                </div>
-                <div class="flag-text">
-                  <div>
-                    <div class="title ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">gallery图片</div>
-                    <div class="excerpt ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">提示使用该标签请先将主题下的_config.yml中的fancybox设置为true
-
-一行一个图片
-
-
-              
-            
-上述事例代码&#123;% gallery %&#125;
-![图片描述](h</div>
-                  </div>
-                  <div class="ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s"><a href="/2021/02/08/gallery/" class="read-more border-color swiper-btn-color" style="display: inline-block; z-index:1;">阅读更多</a></div>
-                </div>
-              </div>
-            </div>
-
-          </swiper-slide>
+      
+        
         
       
         
         
-          
-          <swiper-slide>
-            <div class="item swiper-lazy" data-background="/medias/5.jpg" style=" background-size: 90000px; 
-            background-position: center center;" style="position: relative;">
-            <div class="swiper-bgmask" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;"></div>
-              <div class="flag" style="z-index: 2;">
-                <div class="img-mask swiper-lazy" data-background="/medias/5.jpg" style="height: 100%; background-size: cover; 
-                  background-position: center center;">
-                  <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>  
-                </div>
-                <div class="flag-text">
-                  <div>
-                    <div class="title ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">Github卡片</div>
-                    <div class="excerpt ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">Github用户卡片
-
-上述示例代码&#123;% ghcard yuang01 %&#125;
-表格中加入用户卡片
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### 上述示例代码
-
-
-
-
-| &#123;% ghcard yuang01 </div>
-                  </div>
-                  <div class="ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s"><a href="/2021/02/08/ghcard/" class="read-more border-color swiper-btn-color" style="display: inline-block; z-index:1;">阅读更多</a></div>
-                </div>
-              </div>
-            </div>
-
-          </swiper-slide>
+      
+        
         
       
         
         
-          
-          <swiper-slide>
-            <div class="item swiper-lazy" data-background="/medias/11.jpg" style=" background-size: 90000px; 
-            background-position: center center;" style="position: relative;">
-            <div class="swiper-bgmask" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;"></div>
-              <div class="flag" style="z-index: 2;">
-                <div class="img-mask swiper-lazy" data-background="/medias/11.jpg" style="height: 100%; background-size: cover; 
-                  background-position: center center;">
-                  <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>  
-                </div>
-                <div class="flag-text">
-                  <div>
-                    <div class="title ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">lineImage标签</div>
-                    <div class="excerpt ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">段落中插入图片
-这是  一段话。
-这又是  一段话。
-这又是  一段话。
-上述事例代码这是 &#123;% inlineimage http://img.doutula.com/production/uploads/image/2019/0</div>
-                  </div>
-                  <div class="ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s"><a href="/2021/02/08/inlineimage/" class="read-more border-color swiper-btn-color" style="display: inline-block; z-index:1;">阅读更多</a></div>
-                </div>
-              </div>
-            </div>
-
-          </swiper-slide>
+      
+        
         
       
         
         
-          
-          <swiper-slide>
-            <div class="item swiper-lazy" data-background="/medias/9.jpg" style=" background-size: 90000px; 
-            background-position: center center;" style="position: relative;">
-            <div class="swiper-bgmask" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;"></div>
-              <div class="flag" style="z-index: 2;">
-                <div class="img-mask swiper-lazy" data-background="/medias/9.jpg" style="height: 100%; background-size: cover; 
-                  background-position: center center;">
-                  <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>  
-                </div>
-                <div class="flag-text">
-                  <div>
-                    <div class="title ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">Link标签</div>
-                    <div class="excerpt ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">超链接标签
-
-如何参与项目http://www.baidu.com
-
-如何参与项目http://www.baidu.com
-上述事例代码&#123;% link 如何参与项目, http://www.baidu.com, https://c</div>
-                  </div>
-                  <div class="ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s"><a href="/2021/02/08/link/" class="read-more border-color swiper-btn-color" style="display: inline-block; z-index:1;">阅读更多</a></div>
-                </div>
-              </div>
-            </div>
-
-          </swiper-slide>
+      
+        
         
       
         
         
-          
-          <swiper-slide>
-            <div class="item swiper-lazy" data-background="/medias/1.jpg" style=" background-size: 90000px; 
-            background-position: center center;" style="position: relative;">
-            <div class="swiper-bgmask" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;"></div>
-              <div class="flag" style="z-index: 2;">
-                <div class="img-mask swiper-lazy" data-background="/medias/1.jpg" style="height: 100%; background-size: cover; 
-                  background-position: center center;">
-                  <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>  
-                </div>
-                <div class="flag-text">
-                  <div>
-                    <div class="title ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">Note标签</div>
-                    <div class="excerpt ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">note演示效果
-
-markdown默认写法，左边框颜色，随着主题色改变
-
-我有一只小毛驴，我从来都不骑。
-适合引用一段话
-这是一个警告
-这是一个错误
-这是一个成功
-这是一个信息
-
-
-
-上述事例源码> markdown默认写法，左边框颜色，</div>
-                  </div>
-                  <div class="ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s"><a href="/2021/02/08/note/" class="read-more border-color swiper-btn-color" style="display: inline-block; z-index:1;">阅读更多</a></div>
-                </div>
-              </div>
-            </div>
-
-          </swiper-slide>
+      
+        
         
       
         
         
-          
-          <swiper-slide>
-            <div class="item swiper-lazy" data-background="/medias/14.jpg" style=" background-size: 90000px; 
-            background-position: center center;" style="position: relative;">
-            <div class="swiper-bgmask" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;"></div>
-              <div class="flag" style="z-index: 2;">
-                <div class="img-mask swiper-lazy" data-background="/medias/14.jpg" style="height: 100%; background-size: cover; 
-                  background-position: center center;">
-                  <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>  
-                </div>
-                <div class="flag-text">
-                  <div>
-                    <div class="title ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">NoteBlock</div>
-                    <div class="excerpt ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">noteblock演示效果
-
-标题（可选）asdsd
-
-标题（可选）asdsd
-
-标题（可选）asdsd
-
-标题（可选）asdsd
-
-标题（可选）asdsd
-
-标题（可选）asdsd
-
-上述事例代码&#123;% noteblock bas</div>
-                  </div>
-                  <div class="ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s"><a href="/2021/02/08/noteblock/" class="read-more border-color swiper-btn-color" style="display: inline-block; z-index:1;">阅读更多</a></div>
-                </div>
-              </div>
-            </div>
-
-          </swiper-slide>
-        
       
         
         
-          
-          <swiper-slide>
-            <div class="item swiper-lazy" data-background="/medias/10.jpg" style=" background-size: 90000px; 
-            background-position: center center;" style="position: relative;">
-            <div class="swiper-bgmask" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;"></div>
-              <div class="flag" style="z-index: 2;">
-                <div class="img-mask swiper-lazy" data-background="/medias/10.jpg" style="height: 100%; background-size: cover; 
-                  background-position: center center;">
-                  <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>  
-                </div>
-                <div class="flag-text">
-                  <div>
-                    <div class="title ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">段落文本</div>
-                    <div class="excerpt ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">段落文本演示
-我是一个文本高亮大萨达所多撒多撒多撒大多多撒多撒多撒大所多撒大多
-我是一个文本高亮大萨达所多撒多撒多撒大多多撒多撒多撒大所多撒大多
-我是一个文本高亮大萨达所多撒多撒多撒大多多撒多撒多撒大所多撒大多
-我是一个文本高亮大萨达所多撒</div>
-                  </div>
-                  <div class="ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s"><a href="/2021/02/08/p/" class="read-more border-color swiper-btn-color" style="display: inline-block; z-index:1;">阅读更多</a></div>
-                </div>
-              </div>
-            </div>
-
-          </swiper-slide>
-        
       
         
-        
-          
-          <swiper-slide>
-            <div class="item swiper-lazy" data-background="/medias/1.jpg" style=" background-size: 90000px; 
-            background-position: center center;" style="position: relative;">
-            <div class="swiper-bgmask" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;"></div>
-              <div class="flag" style="z-index: 2;">
-                <div class="img-mask swiper-lazy" data-background="/medias/1.jpg" style="height: 100%; background-size: cover; 
-                  background-position: center center;">
-                  <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>  
-                </div>
-                <div class="flag-text">
-                  <div>
-                    <div class="title ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">文本高亮</div>
-                    <div class="excerpt ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">文本高亮演示效果
-这是一个简单的文字我是一个文本高亮，唱着我们心肠的曲折这是一个简单的文字我是一个文本高亮，唱着我们心肠的曲折这是一个简单的文字我是一个文本高亮，唱着我们心肠的曲折这是一个简单的文字我是一个文本高亮，唱着我们心肠的曲折这是一</div>
-                  </div>
-                  <div class="ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s"><a href="/2021/02/08/pbg/" class="read-more border-color swiper-btn-color" style="display: inline-block; z-index:1;">阅读更多</a></div>
-                </div>
-              </div>
-            </div>
-
-          </swiper-slide>
-        
-      
-        
-        
-          
-          <swiper-slide>
-            <div class="item swiper-lazy" data-background="/medias/3.jpg" style=" background-size: 90000px; 
-            background-position: center center;" style="position: relative;">
-            <div class="swiper-bgmask" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;"></div>
-              <div class="flag" style="z-index: 2;">
-                <div class="img-mask swiper-lazy" data-background="/medias/3.jpg" style="height: 100%; background-size: cover; 
-                  background-position: center center;">
-                  <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>  
-                </div>
-                <div class="flag-text">
-                  <div>
-                    <div class="title ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">radio</div>
-                    <div class="excerpt ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">radio
-
-            纯文本测试
-            
-
-            支持简单的 markdown 语法
-            
-
-            支持自定义颜色
-            
-
-   </div>
-                  </div>
-                  <div class="ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s"><a href="/2021/02/08/radio/" class="read-more border-color swiper-btn-color" style="display: inline-block; z-index:1;">阅读更多</a></div>
-                </div>
-              </div>
-            </div>
-
-          </swiper-slide>
-        
-      
-        
-        
-          
-          <swiper-slide>
-            <div class="item swiper-lazy" data-background="/medias/8.jpg" style=" background-size: 90000px; 
-            background-position: center center;" style="position: relative;">
-            <div class="swiper-bgmask" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;"></div>
-              <div class="flag" style="z-index: 2;">
-                <div class="img-mask swiper-lazy" data-background="/medias/8.jpg" style="height: 100%; background-size: cover; 
-                  background-position: center center;">
-                  <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>  
-                </div>
-                <div class="flag-text">
-                  <div>
-                    <div class="title ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">site-card</div>
-                    <div class="excerpt ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">site-card演示
-WDZ这是一个喜爱二次元的小伙伴博客
-yuang01这是我的博客
-WDZ这是一个喜爱二次元的小伙伴博客
-yuang01这是我的博客
-WDZ这是一个喜爱二次元的小伙伴博客
-上述事例代码&#123;% sitegroup</div>
-                  </div>
-                  <div class="ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s"><a href="/2021/02/08/site-card/" class="read-more border-color swiper-btn-color" style="display: inline-block; z-index:1;">阅读更多</a></div>
-                </div>
-              </div>
-            </div>
-
-          </swiper-slide>
         
       
         
@@ -994,7 +779,7 @@ WDZ这是一个喜爱二次元的小伙伴博客
           
           <swiper-slide>
             <div class="item swiper-lazy" data-background="/medias/7.jpg" style=" background-size: 90000px; 
-            background-position: center center;" style="position: relative;">
+            background-position: left center;" style="position: relative;">
             <div class="swiper-bgmask" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;"></div>
               <div class="flag" style="z-index: 2;">
                 <div class="img-mask swiper-lazy" data-background="/medias/7.jpg" style="height: 100%; background-size: cover; 
@@ -1002,254 +787,20 @@ WDZ这是一个喜爱二次元的小伙伴博客
                   <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>  
                 </div>
                 <div class="flag-text">
-                  <div>
-                    <div class="title ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">文字颜色</div>
-                    <div class="excerpt ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">文字颜色演示效果
-这是一个简单的文字我是一个文字高亮，唱着我们心肠的曲折这是一个简单的文字我是一个文字高亮，唱着我们心肠的曲折这是一个简单的文字我是一个文字高亮，唱着我们心肠的曲折这是一个简单的文字我是一个文字高亮，唱着我们心肠的曲折这是一</div>
+                  <div class="flag-text-content">
+                    <div class="title ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">
+                      <a href="/2020/09/10/hello-world/">
+                        Hello World
+                      </a>
+                    </div>
+                    <div class="excerpt ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s"><p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p></div>
                   </div>
-                  <div class="ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s"><a href="/2021/02/08/span/" class="read-more border-color swiper-btn-color" style="display: inline-block; z-index:1;">阅读更多</a></div>
+                  <div class="bottom-one-btn ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s"><a href="/2020/09/10/hello-world/" class="read-more border-color swiper-btn-color" style="display: inline-block; z-index:1;">阅读更多</a></div>
                 </div>
               </div>
             </div>
 
           </swiper-slide>
-        
-      
-        
-        
-          
-          <swiper-slide>
-            <div class="item swiper-lazy" data-background="/medias/12.jpg" style=" background-size: 90000px; 
-            background-position: center center;" style="position: relative;">
-            <div class="swiper-bgmask" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;"></div>
-              <div class="flag" style="z-index: 2;">
-                <div class="img-mask swiper-lazy" data-background="/medias/12.jpg" style="height: 100%; background-size: cover; 
-                  background-position: center center;">
-                  <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>  
-                </div>
-                <div class="flag-text">
-                  <div>
-                    <div class="title ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">tab</div>
-                    <div class="excerpt ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">tab事例
-栏目1栏目2。。。！！！
-上述事例代码&#123;% tabs tab-id %&#125;
-
-&lt;!-- tab 栏目1 -->
-
-。。。
-
-&lt;!-- endtab -->
-
-&lt;!-- tab 栏目2 -->
-</div>
-                  </div>
-                  <div class="ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s"><a href="/2021/02/08/tab/" class="read-more border-color swiper-btn-color" style="display: inline-block; z-index:1;">阅读更多</a></div>
-                </div>
-              </div>
-            </div>
-
-          </swiper-slide>
-        
-      
-        
-        
-          
-          <swiper-slide>
-            <div class="item swiper-lazy" data-background="/medias/6.jpg" style=" background-size: 90000px; 
-            background-position: center center;" style="position: relative;">
-            <div class="swiper-bgmask" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;"></div>
-              <div class="flag" style="z-index: 2;">
-                <div class="img-mask swiper-lazy" data-background="/medias/6.jpg" style="height: 100%; background-size: cover; 
-                  background-position: center center;">
-                  <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>  
-                </div>
-                <div class="flag-text">
-                  <div>
-                    <div class="title ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">Text文本样式标签</div>
-                    <div class="excerpt ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">Text文本样式标签演示
-
-带 下划线 的文本
-带 着重号 的文本
-带 波浪线 的文本
-带 删除线 的文本
-键盘样式的文本 command + D
-密码样式的文本：这里没有验证码
-上述事例代码&#123;% title h2, Text文本</div>
-                  </div>
-                  <div class="ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s"><a href="/2021/02/08/text/" class="read-more border-color swiper-btn-color" style="display: inline-block; z-index:1;">阅读更多</a></div>
-                </div>
-              </div>
-            </div>
-
-          </swiper-slide>
-        
-      
-        
-        
-          
-          <swiper-slide>
-            <div class="item swiper-lazy" data-background="/medias/6.jpg" style=" background-size: 90000px; 
-            background-position: center center;" style="position: relative;">
-            <div class="swiper-bgmask" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;"></div>
-              <div class="flag" style="z-index: 2;">
-                <div class="img-mask swiper-lazy" data-background="/medias/6.jpg" style="height: 100%; background-size: cover; 
-                  background-position: center center;">
-                  <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>  
-                </div>
-                <div class="flag-text">
-                  <div>
-                    <div class="title ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">timeline时间线</div>
-                    <div class="excerpt ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">timeline时间线演示
-
-2021-01-01 1.0.3 -&gt; 1.0.3
-我是一个测试文字ghghgh。我是一个测试问题二’qweqw’，请问企鹅请问请问佛挡杀fgfgf佛第三节课。我是一个测试问题三’fgfgfg’，请问企鹅</div>
-                  </div>
-                  <div class="ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s"><a href="/2021/02/08/timeline/" class="read-more border-color swiper-btn-color" style="display: inline-block; z-index:1;">阅读更多</a></div>
-                </div>
-              </div>
-            </div>
-
-          </swiper-slide>
-        
-      
-        
-        
-          
-          <swiper-slide>
-            <div class="item swiper-lazy" data-background="/medias/7.jpg" style=" background-size: 90000px; 
-            background-position: center center;" style="position: relative;">
-            <div class="swiper-bgmask" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;"></div>
-              <div class="flag" style="z-index: 2;">
-                <div class="img-mask swiper-lazy" data-background="/medias/7.jpg" style="height: 100%; background-size: cover; 
-                  background-position: center center;">
-                  <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>  
-                </div>
-                <div class="flag-text">
-                  <div>
-                    <div class="title ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">title</div>
-                    <div class="excerpt ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">title演示
-
-我是标题
-
-你好啊，未来越来越好哦
-我是标题
-
-你好啊，加油哦
-我是标题
-
-我是标题
-上述事例代码&#123;% title h1, 我是标题 %&#125;
-
-你好啊，未来越来越好哦
-
-&#123;% title h2,</div>
-                  </div>
-                  <div class="ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s"><a href="/2021/02/08/title/" class="read-more border-color swiper-btn-color" style="display: inline-block; z-index:1;">阅读更多</a></div>
-                </div>
-              </div>
-            </div>
-
-          </swiper-slide>
-        
-      
-        
-        
-          
-          <swiper-slide>
-            <div class="item swiper-lazy" data-background="/medias/3.jpg" style=" background-size: 90000px; 
-            background-position: center center;" style="position: relative;">
-            <div class="swiper-bgmask" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;"></div>
-              <div class="flag" style="z-index: 2;">
-                <div class="img-mask swiper-lazy" data-background="/medias/3.jpg" style="height: 100%; background-size: cover; 
-                  background-position: center center;">
-                  <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>  
-                </div>
-                <div class="flag-text">
-                  <div>
-                    <div class="title ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">video视频</div>
-                    <div class="excerpt ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">video演示
-100%宽度
-Your browser does not support the video tag.
-
-50%宽度
-Your browser does not support the video tag.
-Your bro</div>
-                  </div>
-                  <div class="ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s"><a href="/2021/02/08/video/" class="read-more border-color swiper-btn-color" style="display: inline-block; z-index:1;">阅读更多</a></div>
-                </div>
-              </div>
-            </div>
-
-          </swiper-slide>
-        
-      
-        
-        
-      
-        
-        
-      
-        
-        
-      
-        
-        
-      
-        
-        
-      
-        
-        
-      
-        
-        
-      
-        
-        
-      
-        
-        
-      
-        
-        
-      
-        
-        
-      
-        
-        
-      
-        
-        
-      
-        
-        
-      
-        
-        
-      
-        
-        
-      
-        
-        
-      
-        
-        
-      
-        
-        
-      
-        
-        
-      
-        
-        
-      
-        
-        
-      
-        
         
       
     <div class="swiper-pagination" slot="pagination" style=""></div>
@@ -1257,6 +808,14 @@ Your bro</div>
     <div class="swiper-button-next swiper-button-white" slot="button-next" style=""></div>
     
   </swiper>
+  
+    <div id="scroll-down" @click="toPostContent()">
+      <a href="javascript:;">
+        <i class="fa fa-angle-down scroll-down-effects"></i>
+      </a>
+    </div>
+  
+  <canvas id="header_canvas"style="position:absolute;bottom:0;width:100%;pointer-events:none;"></canvas>
 </div>
 <script src="/js/swiper.min.js"></script>
 <script src="/js/vue-awesome-swiper.js"></script>
@@ -1264,15 +823,25 @@ Your bro</div>
 <script type="text/javascript">
   Vue.use(window.VueAwesomeSwiper)
 </script>
+
+
+  <script src="/js/vue-typed-js/index.js"></script>
+
+
 <script>
-  let autoplay = 'true';
+  let autoplay = JSON.parse('false');
   let delay = '5000';
-  let loop = JSON.parse('true');
+  let loop = JSON.parse('true') ? false : JSON.parse('true');
   let effect = 'slide';
   let swiperLength = parseInt(document.querySelector(".swiper-length").innerText);
+  let defaultDesc = '煮酒洗净尘嚣，论知交,万般付之一笑，共偕老';
+  defaultDesc = defaultDesc.split(',');
+  let defaultDescTypedLoop = JSON.parse('true');
   var vm = new Vue({
     el: '#appSwiper',
     data: {
+      defaultDesc: defaultDesc,
+      defaultDescTypedLoop,
       swiperOptions: {
         pagination: {
           el: '.swiper-pagination',
@@ -1321,13 +890,30 @@ Your bro</div>
       },
       slideChangeTransitionEnd() {
         console.log('1');
+      },
+      toPostContent() {
+        const fullHeight = $(window).height() - 60;
+        $('html,body').animate({scrollTop: fullHeight},500);
       }
     },
     created() {}
   })
 </script>
 
+  <script src="/js/bubble/homeBubble.js"></script>
+
 <style>
+#appSwiper {
+  position: relative;
+}
+.default-excerpt {
+  font-size: 1.6rem;
+  margin-top: 1rem;
+  font-family: Titillium Web,'PingFang SC','Hiragino Sans GB','Microsoft JhengHei','Microsoft YaHei',sans-serif;
+}
+.bottom-one-btn {
+  margin-top: 15px;
+}
 .swiper-container {
   overflow: hidden;
   z-index: 0;
@@ -1369,11 +955,22 @@ Your bro</div>
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  z-index: 9999;
 }
 .flag-text .title {
   font-size: 1.8rem;
+  font-family: Long Cang,cursive;
+}
+.flag-text .title a {
+  color: #fff;
+  transition: color 0.3s;
+}
+.flag-text .title a:hover {
+  color: #42b983;
 }
 .flag-text .excerpt {
+  color: #eee;
+  font-family: Ubuntu,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
   width: 70%;
   line-height: 27px;
   height: 135px;
@@ -1396,6 +993,50 @@ Your bro</div>
   color: #ffffff;
   border-radius: 20px;
 }
+#scroll-down {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2.5rem;
+  color: #fff;
+  cursor: pointer;
+  z-index: 2;
+}
+#scroll-down a {
+  color: #fff;
+}
+@-webkit-keyframes rightan
+  {
+  
+  0%
+  {
+    transform: translateY(0);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translateY(-30px);
+    opacity: 1;
+  }
+  100%
+  {
+    transform: translateY(0);
+    opacity: 0.5;
+  }
+}
+.scroll-down-effects {
+  animation: rightan 1.5s infinite;
+}
+/* 当头部导航设置为背景透明的时候 */
+
+  .swiper-slide {
+    height: 400px;
+  }
+  .flag-text {
+    top: 80px;
+  }
+
+
 @media (min-width: 992px) {
   .swiper-button-prev {
     margin-left: 20%;
@@ -1422,6 +1063,10 @@ Your bro</div>
   .flag-text .title {
     font-size: 1.5rem;
     margin-top: 50px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
   }
   .flag-text {
     position: absolute;
@@ -1434,8 +1079,8 @@ Your bro</div>
   }
   .flag-text .excerpt {
     width: 100%;
-    line-height: 20px;
-    height: 100px;
+    line-height: 25px;
+    height: 125px;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 5;
@@ -1489,7 +1134,199 @@ Your bro</div>
     right: 0;
   }
 }
+/* 当头部导航设置为背景透明的时候 */
+
+  @media (max-width: 992px) {
+    .flag-text {
+      top: 60px;
+      height: 80%;
+    }
+  }
+  @media (max-width: 551px) {
+    .swiper-slide {
+      height: 310px;
+    }
+  }
+
+
+/* 文字或者按钮居中显示 */
+
+  .flag-text {
+    left: 10%;
+  }
+  .flag-text .flag-text-content {
+    width: 100%;
+    text-align: center;
+  }
+  .flag-text .title {
+    width: 100%;
+    text-align: center;
+  }
+  .flag-text .excerpt { 
+    width: 100%;
+    text-align: center;
+  }
+  .bottom-one-btn {
+    display: flex;
+    justify-content: center;
+  }
+  .default-excerpt {
+    display: flex;
+    justify-content: center;
+    font-size: 1.6rem;
+    font-family: Titillium Web,'PingFang SC','Hiragino Sans GB','Microsoft JhengHei','Microsoft YaHei',sans-serif;
+  }
+  .flag-text-btns {
+    justify-content: center;
+  }
+  @media (min-width: 992px) {
+    .flag-text .excerpt {
+      line-height: 30px;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 5;
+      overflow: hidden;
+    }
+  }
+  @media (max-width: 992px) {
+    .flag-text {
+      margin-left: 0;
+      transform: translateX(0);
+    }
+  }
+
+
+
+
+/* 全屏显示 */
+
+  .flag {
+    width: 100%;
+  }
+  .swiper-slide {
+    height: calc(100vh - 60px);
+    
+      height: 100vh;
+    
+  }
+  .flag-text {
+    top: 50%;
+    left: 15%;
+    transform: translateY(-50%);
+    width: 70%;
+    height: auto;
+  }
+  .flag-text .title {
+    font-size: 2.8rem;
+    line-height: 1.5em;
+    max-height: none;
+    /* overflow: visible; */
+  }
+  .flag-text .excerpt {
+    font-size: 1.25rem;
+    height: 150px;
+  }
+  .flag-text .read-more {
+    margin-top: 10px;
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    margin-top: -60px!important;
+  }
+  .swiper-btn-color,
+  .swiper-btn-color2 {
+    background-color: transparent;
+    border: 1px solid #fff;
+  }
+  .swiper-btn-color:hover,
+  .swiper-btn-color2:hover {
+    background-color: #42b983;
+    border: 1px solid #42b983!important;
+  }
+  .flag-text-btns {
+    justify-content: center;
+  }
+  .swiper-button-prev {
+    margin-left: 10px;
+    transform: translateX(0);
+    border-radius: 50%;
+    padding: 0;
+    width: 50px;
+    height: 50px;
+  }
+  .swiper-button-next {
+    margin-right: 10px;
+    transform: translateX(0);
+    border-radius: 50%;
+    padding: 0;
+    width: 50px;
+    height: 50px;
+  }
+  .swiper-button-next:after, .swiper-button-prev:after {
+    font-size: 1.2rem;
+  }
+  @media (min-width: 992px) {
+    .flag-text .excerpt {
+      line-height: 35px;
+      height: 175px;
+    }
+    .default-excerpt {
+      min-height: 150px;
+    }
+    .typed-element {
+      align-items: unset;
+    }
+  }
+  @media (max-width: 992px) {
+    .flag-text {
+      margin-left: 0;
+      height: 60%;
+      top: 55%;
+    }
+    .flag-text .title {
+      font-size: 2.4rem;
+      margin-top: 0;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      overflow: hidden;
+    }
+    .flag-text .excerpt {
+      line-height: 35px;
+      height: 185px;
+    }
+    .flag-text .read-more {
+      margin-top: 20px;
+    }
+  }
+  @media (max-width: 551px) {
+    .flag-text {
+      height: 60%;
+    }
+    .flag-text .title {
+      font-size: 2.2rem;
+    }
+    .flag-text .excerpt {
+      line-height: 30px;
+    }
+    .flag-text .read-more {
+      margin-top: 50px;
+      padding: 10px 30px;
+    }
+    .swiper-button-prev {
+      margin-left: 0;
+    }
+    .swiper-button-next {
+      margin-right: 0;
+    }
+    .default-excerpt {
+      margin-top: 1rem;
+    }
+  }
+
 </style>
+
+
 
 
 
@@ -1498,7 +1335,7 @@ Your bro</div>
 <div class="bg-floor" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -2;"></div>
 <section class="posts">
   
-    <article class="post" data-aos="fade-up" style="   flex-direction: row-reverse;">
+    <article class="post" data-aos="fade-up" style="flex-direction: row-reverse;   ">
       <div class="post-main">
         <div class="post-info">
           <div class="post-time">
@@ -1526,8 +1363,7 @@ Your bro</div>
           </div>
           <div class="post-img-mobile">
             
-              
-              <a href="/2021/02/08/link/" class="lazyload" data-original="/medias/9.jpg" style="background-size: cover; 
+              <a href="/2021/02/08/link/" class="lazyload" data-original="https://pic2.zhimg.com/80/v2-19975cec2eaae0083992a79315bd232b_1440w.jpg?source=1940ef5c" style="background-size: cover; 
                 background-position: center center;">
               </a>
             
@@ -1543,20 +1379,20 @@ Your bro</div>
         </div>
         <div class="post-more">
           <a href="/2021/02/08/link/">
-            <i class="iconfont iconmore" style="float: right;  flex-direction: row-reverse;" title="阅读更多"></i>
+            <i class="iconfont iconmore" style="float: right;  " title="阅读更多"></i>
           </a>
         </div>
       </div>
       <div class="post-img">
         
-          <a href="/2021/02/08/link/" class="lazyload" data-original="/medias/9.jpg" style="background-size: cover; 
+          <a href="/2021/02/08/link/" class="lazyload" data-original="https://pic2.zhimg.com/80/v2-19975cec2eaae0083992a79315bd232b_1440w.jpg?source=1940ef5c" style="background-size: cover; 
             background-position: center center;">
           </a>
         
       </div>
     </article>
   
-    <article class="post" data-aos="fade-up" style="   flex-direction: row-reverse;">
+    <article class="post" data-aos="fade-up" style="   ">
       <div class="post-main">
         <div class="post-info">
           <div class="post-time">
@@ -1584,8 +1420,7 @@ Your bro</div>
           </div>
           <div class="post-img-mobile">
             
-              
-              <a href="/2021/02/08/note/" class="lazyload" data-original="/medias/1.jpg" style="background-size: cover; 
+              <a href="/2021/02/08/note/" class="lazyload" data-original="https://pic2.zhimg.com/80/v2-faf73fcede052da243fef1b36604b8f9_1440w.jpg?source=1940ef5c" style="background-size: cover; 
                 background-position: center center;">
               </a>
             
@@ -1609,20 +1444,20 @@ markdown默认写法，左边框颜色，随着主题色改变
         </div>
         <div class="post-more">
           <a href="/2021/02/08/note/">
-            <i class="iconfont iconmore" style="  flex-direction: row-reverse;" title="阅读更多"></i>
+            <i class="iconfont iconmore" style="  " title="阅读更多"></i>
           </a>
         </div>
       </div>
       <div class="post-img">
         
-          <a href="/2021/02/08/note/" class="lazyload" data-original="/medias/1.jpg" style="background-size: cover; 
+          <a href="/2021/02/08/note/" class="lazyload" data-original="https://pic2.zhimg.com/80/v2-faf73fcede052da243fef1b36604b8f9_1440w.jpg?source=1940ef5c" style="background-size: cover; 
             background-position: center center;">
           </a>
         
       </div>
     </article>
   
-    <article class="post" data-aos="fade-up" style="   flex-direction: row-reverse;">
+    <article class="post" data-aos="fade-up" style="flex-direction: row-reverse;   ">
       <div class="post-main">
         <div class="post-info">
           <div class="post-time">
@@ -1650,8 +1485,7 @@ markdown默认写法，左边框颜色，随着主题色改变
           </div>
           <div class="post-img-mobile">
             
-              
-              <a href="/2021/02/08/noteblock/" class="lazyload" data-original="/medias/14.jpg" style="background-size: cover; 
+              <a href="/2021/02/08/noteblock/" class="lazyload" data-original="https://pic1.zhimg.com/80/v2-90914c5403377b128b78dd9ce5e1079e_1440w.jpg?source=1940ef5c" style="background-size: cover; 
                 background-position: center center;">
               </a>
             
@@ -1676,20 +1510,20 @@ markdown默认写法，左边框颜色，随着主题色改变
         </div>
         <div class="post-more">
           <a href="/2021/02/08/noteblock/">
-            <i class="iconfont iconmore" style="float: right;  flex-direction: row-reverse;" title="阅读更多"></i>
+            <i class="iconfont iconmore" style="float: right;  " title="阅读更多"></i>
           </a>
         </div>
       </div>
       <div class="post-img">
         
-          <a href="/2021/02/08/noteblock/" class="lazyload" data-original="/medias/14.jpg" style="background-size: cover; 
+          <a href="/2021/02/08/noteblock/" class="lazyload" data-original="https://pic1.zhimg.com/80/v2-90914c5403377b128b78dd9ce5e1079e_1440w.jpg?source=1940ef5c" style="background-size: cover; 
             background-position: center center;">
           </a>
         
       </div>
     </article>
   
-    <article class="post" data-aos="fade-up" style="   flex-direction: row-reverse;">
+    <article class="post" data-aos="fade-up" style="   ">
       <div class="post-main">
         <div class="post-info">
           <div class="post-time">
@@ -1717,8 +1551,7 @@ markdown默认写法，左边框颜色，随着主题色改变
           </div>
           <div class="post-img-mobile">
             
-              
-              <a href="/2021/02/08/p/" class="lazyload" data-original="/medias/10.jpg" style="background-size: cover; 
+              <a href="/2021/02/08/p/" class="lazyload" data-original="https://pic4.zhimg.com/80/v2-513fd25e66ae237fca305e8ebf4de594_1440w.jpg?source=1940ef5c" style="background-size: cover; 
                 background-position: center center;">
               </a>
             
@@ -1733,20 +1566,20 @@ markdown默认写法，左边框颜色，随着主题色改变
         </div>
         <div class="post-more">
           <a href="/2021/02/08/p/">
-            <i class="iconfont iconmore" style="  flex-direction: row-reverse;" title="阅读更多"></i>
+            <i class="iconfont iconmore" style="  " title="阅读更多"></i>
           </a>
         </div>
       </div>
       <div class="post-img">
         
-          <a href="/2021/02/08/p/" class="lazyload" data-original="/medias/10.jpg" style="background-size: cover; 
+          <a href="/2021/02/08/p/" class="lazyload" data-original="https://pic4.zhimg.com/80/v2-513fd25e66ae237fca305e8ebf4de594_1440w.jpg?source=1940ef5c" style="background-size: cover; 
             background-position: center center;">
           </a>
         
       </div>
     </article>
   
-    <article class="post" data-aos="fade-up" style="   flex-direction: row-reverse;">
+    <article class="post" data-aos="fade-up" style="flex-direction: row-reverse;   ">
       <div class="post-main">
         <div class="post-info">
           <div class="post-time">
@@ -1774,33 +1607,31 @@ markdown默认写法，左边框颜色，随着主题色改变
           </div>
           <div class="post-img-mobile">
             
-              
-              <a href="/2021/02/08/pbg/" class="lazyload" data-original="/medias/1.jpg" style="background-size: cover; 
+              <a href="/2021/02/08/pbg/" class="lazyload" data-original="https://pic1.zhimg.com/80/v2-c274041256201850e4a51998c5c48b77_1440w.jpg?source=1940ef5c" style="background-size: cover; 
                 background-position: center center;">
               </a>
             
           </div>
           <div class="post-content">
-            文本高亮演示效果
-这是一个简单的文字我是一个文本高亮，唱着我们心肠的曲折这是一个简单的文字我是一个文本高亮，唱着我们心肠的曲折这是一个简单的文字我是一个文本高亮，唱着我们心肠的曲折这是一个简单的文字我是一个文本高亮，唱着我们心肠的曲折这是一
+            文本高亮标签
           </div>
         </div>
         <div class="post-more">
           <a href="/2021/02/08/pbg/">
-            <i class="iconfont iconmore" style="float: right;  flex-direction: row-reverse;" title="阅读更多"></i>
+            <i class="iconfont iconmore" style="float: right;  " title="阅读更多"></i>
           </a>
         </div>
       </div>
       <div class="post-img">
         
-          <a href="/2021/02/08/pbg/" class="lazyload" data-original="/medias/1.jpg" style="background-size: cover; 
+          <a href="/2021/02/08/pbg/" class="lazyload" data-original="https://pic1.zhimg.com/80/v2-c274041256201850e4a51998c5c48b77_1440w.jpg?source=1940ef5c" style="background-size: cover; 
             background-position: center center;">
           </a>
         
       </div>
     </article>
   
-    <article class="post" data-aos="fade-up" style="   flex-direction: row-reverse;">
+    <article class="post" data-aos="fade-up" style="   ">
       <div class="post-main">
         <div class="post-info">
           <div class="post-time">
@@ -1828,8 +1659,7 @@ markdown默认写法，左边框颜色，随着主题色改变
           </div>
           <div class="post-img-mobile">
             
-              
-              <a href="/2021/02/08/radio/" class="lazyload" data-original="/medias/3.jpg" style="background-size: cover; 
+              <a href="/2021/02/08/radio/" class="lazyload" data-original="https://pic3.zhimg.com/80/v2-1d9e8203f167bb1c51d6899df5c626ca_1440w.jpg" style="background-size: cover; 
                 background-position: center center;">
               </a>
             
@@ -1851,20 +1681,20 @@ markdown默认写法，左边框颜色，随着主题色改变
         </div>
         <div class="post-more">
           <a href="/2021/02/08/radio/">
-            <i class="iconfont iconmore" style="  flex-direction: row-reverse;" title="阅读更多"></i>
+            <i class="iconfont iconmore" style="  " title="阅读更多"></i>
           </a>
         </div>
       </div>
       <div class="post-img">
         
-          <a href="/2021/02/08/radio/" class="lazyload" data-original="/medias/3.jpg" style="background-size: cover; 
+          <a href="/2021/02/08/radio/" class="lazyload" data-original="https://pic3.zhimg.com/80/v2-1d9e8203f167bb1c51d6899df5c626ca_1440w.jpg" style="background-size: cover; 
             background-position: center center;">
           </a>
         
       </div>
     </article>
   
-    <article class="post" data-aos="fade-up" style="   flex-direction: row-reverse;">
+    <article class="post" data-aos="fade-up" style="flex-direction: row-reverse;   ">
       <div class="post-main">
         <div class="post-info">
           <div class="post-time">
@@ -1892,8 +1722,7 @@ markdown默认写法，左边框颜色，随着主题色改变
           </div>
           <div class="post-img-mobile">
             
-              
-              <a href="/2021/02/08/site-card/" class="lazyload" data-original="/medias/8.jpg" style="background-size: cover; 
+              <a href="/2021/02/08/site-card/" class="lazyload" data-original="https://pic3.zhimg.com/80/v2-0cd97ad46cb2a18343565aa60adeab0e_1440w.jpg" style="background-size: cover; 
                 background-position: center center;">
               </a>
             
@@ -1910,20 +1739,20 @@ WDZ这是一个喜爱二次元的小伙伴博客
         </div>
         <div class="post-more">
           <a href="/2021/02/08/site-card/">
-            <i class="iconfont iconmore" style="float: right;  flex-direction: row-reverse;" title="阅读更多"></i>
+            <i class="iconfont iconmore" style="float: right;  " title="阅读更多"></i>
           </a>
         </div>
       </div>
       <div class="post-img">
         
-          <a href="/2021/02/08/site-card/" class="lazyload" data-original="/medias/8.jpg" style="background-size: cover; 
+          <a href="/2021/02/08/site-card/" class="lazyload" data-original="https://pic3.zhimg.com/80/v2-0cd97ad46cb2a18343565aa60adeab0e_1440w.jpg" style="background-size: cover; 
             background-position: center center;">
           </a>
         
       </div>
     </article>
   
-    <article class="post" data-aos="fade-up" style="   flex-direction: row-reverse;">
+    <article class="post" data-aos="fade-up" style="   ">
       <div class="post-main">
         <div class="post-info">
           <div class="post-time">
@@ -1951,8 +1780,7 @@ WDZ这是一个喜爱二次元的小伙伴博客
           </div>
           <div class="post-img-mobile">
             
-              
-              <a href="/2021/02/08/span/" class="lazyload" data-original="/medias/7.jpg" style="background-size: cover; 
+              <a href="/2021/02/08/span/" class="lazyload" data-original="https://pic4.zhimg.com/80/v2-37134f732bbe21779fdb2fc8dca410c7_1440w.jpg" style="background-size: cover; 
                 background-position: center center;">
               </a>
             
@@ -1964,20 +1792,20 @@ WDZ这是一个喜爱二次元的小伙伴博客
         </div>
         <div class="post-more">
           <a href="/2021/02/08/span/">
-            <i class="iconfont iconmore" style="  flex-direction: row-reverse;" title="阅读更多"></i>
+            <i class="iconfont iconmore" style="  " title="阅读更多"></i>
           </a>
         </div>
       </div>
       <div class="post-img">
         
-          <a href="/2021/02/08/span/" class="lazyload" data-original="/medias/7.jpg" style="background-size: cover; 
+          <a href="/2021/02/08/span/" class="lazyload" data-original="https://pic4.zhimg.com/80/v2-37134f732bbe21779fdb2fc8dca410c7_1440w.jpg" style="background-size: cover; 
             background-position: center center;">
           </a>
         
       </div>
     </article>
   
-    <article class="post" data-aos="fade-up" style="   flex-direction: row-reverse;">
+    <article class="post" data-aos="fade-up" style="flex-direction: row-reverse;   ">
       <div class="post-main">
         <div class="post-info">
           <div class="post-time">
@@ -2005,8 +1833,7 @@ WDZ这是一个喜爱二次元的小伙伴博客
           </div>
           <div class="post-img-mobile">
             
-              
-              <a href="/2021/02/08/tab/" class="lazyload" data-original="/medias/12.jpg" style="background-size: cover; 
+              <a href="/2021/02/08/tab/" class="lazyload" data-original="https://pic4.zhimg.com/80/v2-5a575bb8ac734707f1ec05d6de6a0e0b_1440w.jpg" style="background-size: cover; 
                 background-position: center center;">
               </a>
             
@@ -2028,20 +1855,20 @@ WDZ这是一个喜爱二次元的小伙伴博客
         </div>
         <div class="post-more">
           <a href="/2021/02/08/tab/">
-            <i class="iconfont iconmore" style="float: right;  flex-direction: row-reverse;" title="阅读更多"></i>
+            <i class="iconfont iconmore" style="float: right;  " title="阅读更多"></i>
           </a>
         </div>
       </div>
       <div class="post-img">
         
-          <a href="/2021/02/08/tab/" class="lazyload" data-original="/medias/12.jpg" style="background-size: cover; 
+          <a href="/2021/02/08/tab/" class="lazyload" data-original="https://pic4.zhimg.com/80/v2-5a575bb8ac734707f1ec05d6de6a0e0b_1440w.jpg" style="background-size: cover; 
             background-position: center center;">
           </a>
         
       </div>
     </article>
   
-    <article class="post" data-aos="fade-up" style="   flex-direction: row-reverse;">
+    <article class="post" data-aos="fade-up" style="   ">
       <div class="post-main">
         <div class="post-info">
           <div class="post-time">
@@ -2069,8 +1896,7 @@ WDZ这是一个喜爱二次元的小伙伴博客
           </div>
           <div class="post-img-mobile">
             
-              
-              <a href="/2021/02/08/text/" class="lazyload" data-original="/medias/6.jpg" style="background-size: cover; 
+              <a href="/2021/02/08/text/" class="lazyload" data-original="https://pic4.zhimg.com/v2-8ad0cffeaa7dec5dd1930eebc6ff863f_b.jpg" style="background-size: cover; 
                 background-position: center center;">
               </a>
             
@@ -2089,13 +1915,13 @@ WDZ这是一个喜爱二次元的小伙伴博客
         </div>
         <div class="post-more">
           <a href="/2021/02/08/text/">
-            <i class="iconfont iconmore" style="  flex-direction: row-reverse;" title="阅读更多"></i>
+            <i class="iconfont iconmore" style="  " title="阅读更多"></i>
           </a>
         </div>
       </div>
       <div class="post-img">
         
-          <a href="/2021/02/08/text/" class="lazyload" data-original="/medias/6.jpg" style="background-size: cover; 
+          <a href="/2021/02/08/text/" class="lazyload" data-original="https://pic4.zhimg.com/v2-8ad0cffeaa7dec5dd1930eebc6ff863f_b.jpg" style="background-size: cover; 
             background-position: center center;">
           </a>
         
@@ -2105,7 +1931,7 @@ WDZ这是一个喜爱二次元的小伙伴博客
 </section>
 
   <!-- <nav class="page-nav">
-    <a class="extend prev" rel="prev" href="/">上一页</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/3/">下一页</a>
+    <a class="extend prev" rel="prev" href="/">上一页</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/">下一页</a>
   </nav> -->
   <div class="page-nav">
     
@@ -2115,7 +1941,7 @@ WDZ这是一个喜爱二次元的小伙伴博客
       </a>
     
     <div class="page-info">
-        <div class="page-info-text">2 / 5</div>
+        <div class="page-info-text">2 / 3</div>
     </div>
     
       <a href="/page/3/"
@@ -2133,28 +1959,6 @@ WDZ这是一个喜爱二次元的小伙伴博客
   
 
 
-
-<!-- 灯笼1 -->
-<div class="deng-box">
-  <div class="deng">
-      <div class="xian"></div>
-      <div class="deng-a">
-          <div class="deng-b"><div class="deng-t">节</div></div>
-      </div>
-      <div class="shui shui-a"><div class="shui-c"></div><div class="shui-b"></div></div>
-  </div>
-</div>
-
-<!-- 灯笼2 -->
-<div class="deng-box1">
-  <div class="deng">
-      <div class="xian"></div>
-      <div class="deng-a">
-          <div class="deng-b"><div class="deng-t">春</div></div>
-      </div>
-      <div class="shui shui-a"><div class="shui-c"></div><div class="shui-b"></div></div>
-  </div>
-</div>
 
 
     </main>

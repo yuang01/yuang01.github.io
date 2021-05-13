@@ -125,6 +125,8 @@ var vm = new Vue({
   <link href="/js/danmu/barrager.css" rel="stylesheet">
 <script src="/js/danmu/jquery.barrager.js"></script>
   <body>
+    <!-- 页面预加载动画 -->
+
     <!-- 判断是否为黑夜模式 -->
     <script>
       let isDark = JSON.parse(localStorage.getItem('dark')) || JSON.parse('false');
@@ -134,8 +136,9 @@ var vm = new Vue({
       }
     </script>
 
-    <header class="header bg-color" 
-  style="position: fixed; 
+    
+<header class="header " id="navHeader"
+  style="position: fixed;
   left: 0; top: 0; z-index: 10;width: 100%;"
 >
   <div class="header-content">
@@ -152,61 +155,125 @@ var vm = new Vue({
       <h3 class="drawer-box-head_title">Bamboo</h3>
       <h5 class="drawer-box-head_desc">千磨万击还坚劲，任尔东西南北风</h5>
     </div>
+    
     <div class="drawer-box-content">
       <ul class="drawer-box-content_menu">
         
-          <li class="drawer-box-content_item">
-            <a href="/" class="menu-item-link">
-              
-                <i class="fa fa-home" aria-hidden="true"></i>
-              
-              <span>首页</span>
-            </a>
+          <li class="drawer-box-content_item" style="position: relative;">
+            
+              <a href="/" class="drawer-menu-item-link">
+                
+                  <i class="fa fa-home" aria-hidden="true"></i>
+                
+                <span class="name">首页</span>
+              </a>
+            
           </li>
         
-          <li class="drawer-box-content_item">
-            <a href="/archives" class="menu-item-link">
-              
-                <i class="fa fa-home" aria-hidden="true"></i>
-              
-              <span>归档</span>
-            </a>
+          <li class="drawer-box-content_item" style="position: relative;">
+            
+              <a href="/archives" class="drawer-menu-item-link">
+                
+                  <i class="fa fa-archive" aria-hidden="true"></i>
+                
+                <span class="name">归档</span>
+              </a>
+            
           </li>
         
-          <li class="drawer-box-content_item">
-            <a href="/tags" class="menu-item-link">
-              
-                <i class="fa fa-tags" aria-hidden="true"></i>
-              
-              <span>标签</span>
-            </a>
+          <li class="drawer-box-content_item" style="position: relative;">
+            
+              <a href="/tags" class="drawer-menu-item-link">
+                
+                  <i class="fa fa-tags" aria-hidden="true"></i>
+                
+                <span class="name">标签</span>
+              </a>
+            
           </li>
         
-          <li class="drawer-box-content_item">
-            <a href="/categories" class="menu-item-link">
-              
-                <i class="fa fa-bookmark" aria-hidden="true"></i>
-              
-              <span>分类</span>
-            </a>
+          <li class="drawer-box-content_item" style="position: relative;">
+            
+              <a href="/categories" class="drawer-menu-item-link">
+                
+                  <i class="fa fa-bookmark" aria-hidden="true"></i>
+                
+                <span class="name">分类</span>
+              </a>
+            
           </li>
         
-          <li class="drawer-box-content_item">
-            <a href="/about" class="menu-item-link">
-              
-                <i class="fa fa-user" aria-hidden="true"></i>
-              
-              <span>关于</span>
-            </a>
+          <li class="drawer-box-content_item" style="position: relative;">
+            
+              <a href="/about" class="drawer-menu-item-link">
+                
+                  <i class="fa fa-user" aria-hidden="true"></i>
+                
+                <span class="name">关于</span>
+              </a>
+            
           </li>
         
-          <li class="drawer-box-content_item">
-            <a href="/friends" class="menu-item-link">
-              
-                <i class="fa fa-link" aria-hidden="true"></i>
-              
-              <span>友情链接</span>
-            </a>
+          <li class="drawer-box-content_item" style="position: relative;">
+            
+              <a href="/friends" class="drawer-menu-item-link">
+                
+                <span class="name">友情链接</span>
+              </a>
+            
+          </li>
+        
+          <li class="drawer-box-content_item" style="position: relative;">
+            
+              <a href="javascript:;" class="drawer-menu-item-link has-children" @click="openOrCloseMenu(6)">
+                <span>
+                  
+                    <i class="fa fa-link"></i>
+                  
+                  <span class="name">更多</span>
+                </span>
+                <i class="fa fa-chevron-left arrow " :class="{'icon-rotate': isOpen(6)}" aria-hidden="true"></i>
+              </a>
+              <ul class="drawer-sub-menu" v-if="isOpen(6)">
+                
+                <li>
+                  <a href="/gallery">
+                    
+                    <i class="fa fa-music" style="margin-top: -20px;"></i>
+                    
+                    <span>图库</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/huoban">
+                    
+                    <i class="fa fa-film" style="margin-top: -20px;"></i>
+                    
+                    <span>友情连接</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/me">
+                    
+                    <i class="fa fa-film" style="margin-top: -20px;"></i>
+                    
+                    <span>关于我</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="http://baidu.com">
+                    
+                    <i class="fa fa-film" style="margin-top: -20px;"></i>
+                    
+                    <span>百度</span>
+                  </a>
+                </li>
+                
+              </ul>
+            
           </li>
         
         <li class="drawer-box-content_item">
@@ -227,17 +294,33 @@ var vm = new Vue({
     data: {
       visible: false,
       top: 0,
+      openArr: [],
     },
     computed: {
     },
     mounted() {
     },
     methods: {
+      isOpen(index) {
+        if (this.openArr.includes(index)) {
+          return true;
+        } else {
+          return false;
+        }
+      },
+      openOrCloseMenu(curIndex) {
+        const index = this.openArr.indexOf(curIndex);
+        if (index !== -1) {
+          this.openArr.splice(index, 1);
+        } else {
+          this.openArr.push(curIndex);
+        }
+      },
       showDialogDrawer() {
         this.visible = true;
         // 防止页面滚动，只能让弹框滚动
         this.top = $(document).scrollTop()
-        body.style.cssText = 'width: 100%; height: 100%; position: fixed; top: -' + this.top  + 'px; left: 0; overflow: hidden;';
+        body.style.cssText = 'width: 100%; height: 100%;overflow: hidden;';
       },
       cancelDialogDrawer() {
         this.visible = false;
@@ -248,68 +331,132 @@ var vm = new Vue({
     created() {}
   })
 </script>
+
     </div>
     <div class="blog-title" id="author-avatar">
-      <div class="avatar">
-        <img src="/medias/logo.png" alt="logo">
-      </div>
+      
+        <div class="avatar">
+          <img src="/medias/logo.png" alt="logo">
+        </div>
+      
       <a href="/" class="logo">Bamboo</a>
     </div>
     <nav class="navbar">
       <ul class="menu">
         
-          <li class="menu-item">
-            <a href="/" class="menu-item-link">
-              
-                <i class="fa fa-home" aria-hidden="true"></i>
-              
-              <span>首页</span>
-            </a>
+          <li class="menu-item" style="position: relative;">
+            
+              <a href="/" class="menu-item-link">
+                
+                  <i class="fa fa-home" aria-hidden="true"></i>
+                
+                <span class="name">首页</span>
+              </a>
+            
           </li>
         
-          <li class="menu-item">
-            <a href="/archives" class="menu-item-link">
-              
-                <i class="fa fa-archive" aria-hidden="true"></i>
-              
-              <span>归档</span>
-            </a>
+          <li class="menu-item" style="position: relative;">
+            
+              <a href="/archives" class="menu-item-link">
+                
+                  <i class="fa fa-archive" aria-hidden="true"></i>
+                
+                <span class="name">归档</span>
+              </a>
+            
           </li>
         
-          <li class="menu-item">
-            <a href="/tags" class="menu-item-link">
-              
-                <i class="fa fa-tags" aria-hidden="true"></i>
-              
-              <span>标签</span>
-            </a>
+          <li class="menu-item" style="position: relative;">
+            
+              <a href="/tags" class="menu-item-link">
+                
+                  <i class="fa fa-tags" aria-hidden="true"></i>
+                
+                <span class="name">标签</span>
+              </a>
+            
           </li>
         
-          <li class="menu-item">
-            <a href="/categories" class="menu-item-link">
-              
-                <i class="fa fa-bookmark" aria-hidden="true"></i>
-              
-              <span>分类</span>
-            </a>
+          <li class="menu-item" style="position: relative;">
+            
+              <a href="/categories" class="menu-item-link">
+                
+                  <i class="fa fa-bookmark" aria-hidden="true"></i>
+                
+                <span class="name">分类</span>
+              </a>
+            
           </li>
         
-          <li class="menu-item">
-            <a href="/about" class="menu-item-link">
-              
-                <i class="fa fa-user" aria-hidden="true"></i>
-              
-              <span>关于</span>
-            </a>
+          <li class="menu-item" style="position: relative;">
+            
+              <a href="/about" class="menu-item-link">
+                
+                  <i class="fa fa-user" aria-hidden="true"></i>
+                
+                <span class="name">关于</span>
+              </a>
+            
           </li>
         
-          <li class="menu-item">
-            <a href="/friends" class="menu-item-link">
-              
-                <i class="fa fa-link" aria-hidden="true"></i>
-              
-              <span>友情链接</span>
-            </a>
+          <li class="menu-item" style="position: relative;">
+            
+              <a href="/friends" class="menu-item-link">
+                
+                <span class="name">友情链接</span>
+              </a>
+            
+          </li>
+        
+          <li class="menu-item" style="position: relative;">
+            
+              <a href="javascript:;" class="menu-item-link">
+                
+                  <i class="fa fa-link"></i>
+                
+                <span class="name">更多</span>
+                <i class="fa fa-chevron-down arrow" aria-hidden="true"></i>
+              </a>
+              <ul class="sub-menu">
+                
+                <li>
+                  <a href="/gallery">
+                    
+                    <i class="fa fa-music" style="margin-top: -20px;"></i>
+                    
+                    <span>图库</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/huoban">
+                    
+                    <i class="fa fa-film" style="margin-top: -20px;"></i>
+                    
+                    <span>友情连接</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/me">
+                    
+                    <i class="fa fa-film" style="margin-top: -20px;"></i>
+                    
+                    <span>关于我</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="http://baidu.com">
+                    
+                    <i class="fa fa-film" style="margin-top: -20px;"></i>
+                    
+                    <span>百度</span>
+                  </a>
+                </li>
+                
+              </ul>
+            
           </li>
         
       </ul>
@@ -370,8 +517,10 @@ var vm = new Vue({
           <i class="fa fa-close" aria-hidden="true" style="float:right;" @click.self="cancelDialogVisible()"></i>
         </div> -->
         <h2>
-          <i class="fa fa-search" aria-hidden="true"></i>
-          <span class="title">本地搜索</span>
+          <span>
+            <i class="fa fa-search" aria-hidden="true"></i>
+            <span class="title">本地搜索</span>
+          </span>
           <i class="fa fa-close close" style="float:right;" aria-hidden="true" @click.self="cancelDialogVisible()"></i>
         </h2>
         <form class="site-search-form">
@@ -466,14 +615,65 @@ var vm = new Vue({
     </script>
     <script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script> 
     
+
+    <!-- 当头部导航设置为背景透明的时候  -->
+    
+      <script src="/js/header/index.js"></script>
+    
 </header>
-    <main class="main" style="margin-top: 60px;">
+    <main class="main" style="margin-top: 0;">
       
 
 <div class="bg-dark-floor" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -2;"></div>
-<div class="lazyload category-header" data-original="/medias/categoryDetail.jpg" style="width: 100%;height: 50vh;overflow: hidden;background-size: cover; 
-background-position: center center;">
+<div class="lazyload category-header" data-original="https://pic3.zhimg.com/80/v2-98dcd81cb0d1fee52a807c13cedb8338_1440w.jpg?source=1940ef5c">
+  <div class="category-header-title">
+    category
+  </div>
+  <div class="category-header-desc">
+    
+      <span class="title" id="category-header-desc"></span>
+      <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+          <script>
+          var typed = new Typed("#category-header-desc", {
+              strings: ['愿你如风，被人温柔以待'],
+              startDelay: 100,
+              typeSpeed: 100,
+              loop: true,
+              backSpeed: 50,
+              showCursor: true
+          });
+          </script>
+      
+  </div>
+  <div class="mask-box"></div>
 </div>
+
+<div class="category-video">
+  <video class="full-video" autoplay loop muted>
+      <source style="width: 100%;height: 100vh;" src="/">
+  </video>
+  <div class="video-header-title">
+    category
+  </div>
+  <div class="video-header-desc">
+  
+      <span class="title" id="video-header-desc"></span>
+      <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+          <script>
+          var typed = new Typed("#video-header-desc", {
+              strings: ['愿你如风，被人温柔以待'],
+              startDelay: 100,
+              typeSpeed: 100,
+              loop: true,
+              backSpeed: 50,
+              showCursor: true
+          });
+          </script>
+      
+  </div>
+  <div class="mask-box"></div>
+</div>
+
 <div class="category">
   <div class="category-name">
     <div class="name" style="background-color: #FEF9E7;">前端 分类</div>
@@ -486,14 +686,17 @@ background-position: center center;">
         <div class="post-info">
           <div class="post-time">
             <i class="fa fa-clock-o" aria-hidden="true"></i>
-            <span class="post-time">2021-03-05</span>
+            <span class="post-time">2021-05-11</span>
           </div>
           <div class="post-title">
-            <a class="post-title-link" href="/2021/03/05/wo-shi-zhong-wen/">中文</a>
+            <a class="post-title-link" href="/2021/05/11/gallerygroup/">galleryGroup图片</a>
           </div>
           <div class="post-meta">
             <div class="post-tags">
               
+    <i class="iconfont icontag"></i>
+    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tag/" rel="tag">tag</a></li></ul>
+
             </div>
             <div class="post-categories">
               
@@ -506,26 +709,43 @@ background-position: center center;">
           </div>
           <div class="post-img-mobile">
             
-              
-              <a href="/2021/03/05/wo-shi-zhong-wen/" class="lazyload" data-original="/medias/15.jpg" style="background-size: cover; 
+              <a href="/2021/05/11/gallerygroup/" class="lazyload" data-original="https://pic1.zhimg.com/80/v2-0937a04a47457f2b6b22756adbc5b188_1440w.jpg" style="background-size: cover; 
                 background-position: center center;">
               </a>
             
           </div>
           <div class="post-content">
-            
+            提示使用该标签请先将主题下的_config.yml中的fancybox设置为true
 
+galleryGroup图片示例
+
+
+    
+  
+  
+  
+  壁纸
+  收藏的一些壁纸
+  
+  
+  
+  
+    
+  
+  
+  
+  
           </div>
         </div>
         <div class="post-more">
-          <a href="/2021/03/05/wo-shi-zhong-wen/">
+          <a href="/2021/05/11/gallerygroup/">
             <i class="iconfont iconmore" style="float: right;" title="阅读更多"></i>
           </a>
         </div>
       </div>
       <div class="post-img">
         
-          <a href="/2021/03/05/wo-shi-zhong-wen/" class="lazyload" data-original="/medias/15.jpg" style="background-size: cover; 
+          <a href="/2021/05/11/gallerygroup/" class="lazyload" data-original="https://pic1.zhimg.com/80/v2-0937a04a47457f2b6b22756adbc5b188_1440w.jpg" style="background-size: cover; 
             background-position: center center;">
           </a>
         
@@ -561,22 +781,13 @@ background-position: center center;">
           </div>
           <div class="post-img-mobile">
             
-              
-              <a href="/2021/02/22/progress/" class="lazyload" data-original="/medias/13.jpg" style="background-size: cover; 
+              <a href="/2021/02/22/progress/" class="lazyload" data-original="https://pic3.zhimg.com/80/v2-e35c656df5d483dc74831129ddb31256_1440w.jpg" style="background-size: cover; 
                 background-position: center center;">
               </a>
             
           </div>
           <div class="post-content">
-            该标签适用版本为1.8.1及以上
-进度条示例
-进度条测试
-进度条测试
-进度条测试
-进度条测试
-进度条测试
-上述示例代码&#123;% progress 70 danger 进度条测试 %&#125;
-&#123;% progress 60 
+            进度条标签
           </div>
         </div>
         <div class="post-more">
@@ -587,7 +798,7 @@ background-position: center center;">
       </div>
       <div class="post-img">
         
-          <a href="/2021/02/22/progress/" class="lazyload" data-original="/medias/13.jpg" style="background-size: cover; 
+          <a href="/2021/02/22/progress/" class="lazyload" data-original="https://pic3.zhimg.com/80/v2-e35c656df5d483dc74831129ddb31256_1440w.jpg" style="background-size: cover; 
             background-position: center center;">
           </a>
         
@@ -623,13 +834,13 @@ background-position: center center;">
           </div>
           <div class="post-img-mobile">
             
-              <a href="/2021/02/08/hexo-theme-bamboo-new/" class="lazyload" data-original="/medias/7.jpg" style="background-size: cover; 
+              <a href="/2021/02/08/hexo-theme-bamboo-new/" class="lazyload" data-original="https://pic1.zhimg.com/80/v2-12c6659b2ac19bc2e241703d65177870_1440w.jpg?source=1940ef5c" style="background-size: cover; 
                 background-position: center center;">
               </a>
             
           </div>
           <div class="post-content">
-            <p>该文档是版本1.8的文档，版本号可以从主题下的<code>package.json</code>查看<br>这是一款既可以<span class='p large red'>花</span><span class='p large green'>里</span><span class='p large blue'>胡</span><span class='p large info'>哨</span>又可以<span class='p large'>简洁</span>的主题，只需要简单配置即可，<a href="https://yuang01.github.io/">演示示例</a>，| QQ交流:<code>1730241541</code></p>
+            有钱终成眷属，没钱亲眼目睹
           </div>
         </div>
         <div class="post-more">
@@ -640,7 +851,7 @@ background-position: center center;">
       </div>
       <div class="post-img">
         
-          <a href="/2021/02/08/hexo-theme-bamboo-new/" class="lazyload" data-original="/medias/7.jpg" style="background-size: cover; 
+          <a href="/2021/02/08/hexo-theme-bamboo-new/" class="lazyload" data-original="https://pic1.zhimg.com/80/v2-12c6659b2ac19bc2e241703d65177870_1440w.jpg?source=1940ef5c" style="background-size: cover; 
             background-position: center center;">
           </a>
         
@@ -676,8 +887,7 @@ background-position: center center;">
           </div>
           <div class="post-img-mobile">
             
-              
-              <a href="/2021/02/08/btn/" class="lazyload" data-original="/medias/11.jpg" style="background-size: cover; 
+              <a href="/2021/02/08/btn/" class="lazyload" data-original="https://pic1.zhimg.com/80/v2-1f5fecc916dcb213570e1a79be2a5d65_1440w.jpg?source=1940ef5c" style="background-size: cover; 
                 background-position: center center;">
               </a>
             
@@ -700,7 +910,7 @@ background-position: center center;">
       </div>
       <div class="post-img">
         
-          <a href="/2021/02/08/btn/" class="lazyload" data-original="/medias/11.jpg" style="background-size: cover; 
+          <a href="/2021/02/08/btn/" class="lazyload" data-original="https://pic1.zhimg.com/80/v2-1f5fecc916dcb213570e1a79be2a5d65_1440w.jpg?source=1940ef5c" style="background-size: cover; 
             background-position: center center;">
           </a>
         
@@ -736,8 +946,7 @@ background-position: center center;">
           </div>
           <div class="post-img-mobile">
             
-              
-              <a href="/2021/02/08/audio/" class="lazyload" data-original="/medias/1.jpg" style="background-size: cover; 
+              <a href="/2021/02/08/audio/" class="lazyload" data-original="https://pic2.zhimg.com/80/v2-035165460d504f2b072ee777d1d40ab6_1440w.jpg?source=1940ef5c" style="background-size: cover; 
                 background-position: center center;">
               </a>
             
@@ -759,7 +968,7 @@ Your browser does not support the audio tag.
       </div>
       <div class="post-img">
         
-          <a href="/2021/02/08/audio/" class="lazyload" data-original="/medias/1.jpg" style="background-size: cover; 
+          <a href="/2021/02/08/audio/" class="lazyload" data-original="https://pic2.zhimg.com/80/v2-035165460d504f2b072ee777d1d40ab6_1440w.jpg?source=1940ef5c" style="background-size: cover; 
             background-position: center center;">
           </a>
         
@@ -795,14 +1004,15 @@ Your browser does not support the audio tag.
           </div>
           <div class="post-img-mobile">
             
-              
-              <a href="/2021/02/08/checkbox/" class="lazyload" data-original="/medias/4.jpg" style="background-size: cover; 
+              <a href="/2021/02/08/checkbox/" class="lazyload" data-original="https://pic1.zhimg.com/80/v2-b45cff10c7ebebe5c68fba3b134d81f4_1440w.jpg?source=1940ef5c" style="background-size: cover; 
                 background-position: center center;">
               </a>
             
           </div>
           <div class="post-content">
-            
+            进度条示例
+
+
             纯文本测试
             
 
@@ -812,7 +1022,7 @@ Your browser does not support the audio tag.
             支持自定义颜色
             
 
-         
+  
           </div>
         </div>
         <div class="post-more">
@@ -823,7 +1033,7 @@ Your browser does not support the audio tag.
       </div>
       <div class="post-img">
         
-          <a href="/2021/02/08/checkbox/" class="lazyload" data-original="/medias/4.jpg" style="background-size: cover; 
+          <a href="/2021/02/08/checkbox/" class="lazyload" data-original="https://pic1.zhimg.com/80/v2-b45cff10c7ebebe5c68fba3b134d81f4_1440w.jpg?source=1940ef5c" style="background-size: cover; 
             background-position: center center;">
           </a>
         
@@ -859,8 +1069,7 @@ Your browser does not support the audio tag.
           </div>
           <div class="post-img-mobile">
             
-              
-              <a href="/2021/02/08/folding/" class="lazyload" data-original="/medias/3.jpg" style="background-size: cover; 
+              <a href="/2021/02/08/folding/" class="lazyload" data-original="https://pic4.zhimg.com/80/v2-3b4ca49ff4fc567faa76ce6f02cffac9_1440w.jpg?source=1940ef5c" style="background-size: cover; 
                 background-position: center center;">
               </a>
             
@@ -886,7 +1095,7 @@ Your browser does not support the audio tag.
       </div>
       <div class="post-img">
         
-          <a href="/2021/02/08/folding/" class="lazyload" data-original="/medias/3.jpg" style="background-size: cover; 
+          <a href="/2021/02/08/folding/" class="lazyload" data-original="https://pic4.zhimg.com/80/v2-3b4ca49ff4fc567faa76ce6f02cffac9_1440w.jpg?source=1940ef5c" style="background-size: cover; 
             background-position: center center;">
           </a>
         
@@ -922,8 +1131,7 @@ Your browser does not support the audio tag.
           </div>
           <div class="post-img-mobile">
             
-              
-              <a href="/2021/02/08/gallery/" class="lazyload" data-original="/medias/10.jpg" style="background-size: cover; 
+              <a href="/2021/02/08/gallery/" class="lazyload" data-original="https://pic2.zhimg.com/80/v2-1ecd92421c8823c396f96d15325e6d42_1440w.jpg?source=1940ef5c" style="background-size: cover; 
                 background-position: center center;">
               </a>
             
@@ -948,7 +1156,7 @@ Your browser does not support the audio tag.
       </div>
       <div class="post-img">
         
-          <a href="/2021/02/08/gallery/" class="lazyload" data-original="/medias/10.jpg" style="background-size: cover; 
+          <a href="/2021/02/08/gallery/" class="lazyload" data-original="https://pic2.zhimg.com/80/v2-1ecd92421c8823c396f96d15325e6d42_1440w.jpg?source=1940ef5c" style="background-size: cover; 
             background-position: center center;">
           </a>
         
@@ -984,8 +1192,7 @@ Your browser does not support the audio tag.
           </div>
           <div class="post-img-mobile">
             
-              
-              <a href="/2021/02/08/ghcard/" class="lazyload" data-original="/medias/5.jpg" style="background-size: cover; 
+              <a href="/2021/02/08/ghcard/" class="lazyload" data-original="https://pic3.zhimg.com/80/v2-b7c7899676492453229763b26835f6dc_1440w.jpg?source=1940ef5c" style="background-size: cover; 
                 background-position: center center;">
               </a>
             
@@ -1016,12 +1223,8 @@ Your browser does not support the audio tag.
 
 
 
-### 上述示例代码
-
-
-
-
-| &#123;% ghcard yuang01 
+上述示例代码
+| &#123;% ghcard yuang01 %&#125; 
           </div>
         </div>
         <div class="post-more">
@@ -1032,7 +1235,7 @@ Your browser does not support the audio tag.
       </div>
       <div class="post-img">
         
-          <a href="/2021/02/08/ghcard/" class="lazyload" data-original="/medias/5.jpg" style="background-size: cover; 
+          <a href="/2021/02/08/ghcard/" class="lazyload" data-original="https://pic3.zhimg.com/80/v2-b7c7899676492453229763b26835f6dc_1440w.jpg?source=1940ef5c" style="background-size: cover; 
             background-position: center center;">
           </a>
         
@@ -1068,8 +1271,7 @@ Your browser does not support the audio tag.
           </div>
           <div class="post-img-mobile">
             
-              
-              <a href="/2021/02/08/inlineimage/" class="lazyload" data-original="/medias/11.jpg" style="background-size: cover; 
+              <a href="/2021/02/08/inlineimage/" class="lazyload" data-original="https://pic2.zhimg.com/80/v2-1678d94c8b4e6be640584c2dabef1586_1440w.jpg?source=1940ef5c" style="background-size: cover; 
                 background-position: center center;">
               </a>
             
@@ -1090,7 +1292,7 @@ Your browser does not support the audio tag.
       </div>
       <div class="post-img">
         
-          <a href="/2021/02/08/inlineimage/" class="lazyload" data-original="/medias/11.jpg" style="background-size: cover; 
+          <a href="/2021/02/08/inlineimage/" class="lazyload" data-original="https://pic2.zhimg.com/80/v2-1678d94c8b4e6be640584c2dabef1586_1440w.jpg?source=1940ef5c" style="background-size: cover; 
             background-position: center center;">
           </a>
         

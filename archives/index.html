@@ -125,6 +125,8 @@ var vm = new Vue({
   <link href="/js/danmu/barrager.css" rel="stylesheet">
 <script src="/js/danmu/jquery.barrager.js"></script>
   <body>
+    <!-- 页面预加载动画 -->
+
     <!-- 判断是否为黑夜模式 -->
     <script>
       let isDark = JSON.parse(localStorage.getItem('dark')) || JSON.parse('false');
@@ -134,8 +136,9 @@ var vm = new Vue({
       }
     </script>
 
-    <header class="header bg-color" 
-  style="position: fixed; 
+    
+<header class="header " id="navHeader"
+  style="position: fixed;
   left: 0; top: 0; z-index: 10;width: 100%;"
 >
   <div class="header-content">
@@ -152,61 +155,125 @@ var vm = new Vue({
       <h3 class="drawer-box-head_title">Bamboo</h3>
       <h5 class="drawer-box-head_desc">千磨万击还坚劲，任尔东西南北风</h5>
     </div>
+    
     <div class="drawer-box-content">
       <ul class="drawer-box-content_menu">
         
-          <li class="drawer-box-content_item">
-            <a href="/" class="menu-item-link">
-              
-                <i class="fa fa-home" aria-hidden="true"></i>
-              
-              <span>首页</span>
-            </a>
+          <li class="drawer-box-content_item" style="position: relative;">
+            
+              <a href="/" class="drawer-menu-item-link">
+                
+                  <i class="fa fa-home" aria-hidden="true"></i>
+                
+                <span class="name">首页</span>
+              </a>
+            
           </li>
         
-          <li class="drawer-box-content_item">
-            <a href="/archives" class="menu-item-link">
-              
-                <i class="fa fa-home" aria-hidden="true"></i>
-              
-              <span>归档</span>
-            </a>
+          <li class="drawer-box-content_item" style="position: relative;">
+            
+              <a href="/archives" class="drawer-menu-item-link">
+                
+                  <i class="fa fa-archive" aria-hidden="true"></i>
+                
+                <span class="name">归档</span>
+              </a>
+            
           </li>
         
-          <li class="drawer-box-content_item">
-            <a href="/tags" class="menu-item-link">
-              
-                <i class="fa fa-tags" aria-hidden="true"></i>
-              
-              <span>标签</span>
-            </a>
+          <li class="drawer-box-content_item" style="position: relative;">
+            
+              <a href="/tags" class="drawer-menu-item-link">
+                
+                  <i class="fa fa-tags" aria-hidden="true"></i>
+                
+                <span class="name">标签</span>
+              </a>
+            
           </li>
         
-          <li class="drawer-box-content_item">
-            <a href="/categories" class="menu-item-link">
-              
-                <i class="fa fa-bookmark" aria-hidden="true"></i>
-              
-              <span>分类</span>
-            </a>
+          <li class="drawer-box-content_item" style="position: relative;">
+            
+              <a href="/categories" class="drawer-menu-item-link">
+                
+                  <i class="fa fa-bookmark" aria-hidden="true"></i>
+                
+                <span class="name">分类</span>
+              </a>
+            
           </li>
         
-          <li class="drawer-box-content_item">
-            <a href="/about" class="menu-item-link">
-              
-                <i class="fa fa-user" aria-hidden="true"></i>
-              
-              <span>关于</span>
-            </a>
+          <li class="drawer-box-content_item" style="position: relative;">
+            
+              <a href="/about" class="drawer-menu-item-link">
+                
+                  <i class="fa fa-user" aria-hidden="true"></i>
+                
+                <span class="name">关于</span>
+              </a>
+            
           </li>
         
-          <li class="drawer-box-content_item">
-            <a href="/friends" class="menu-item-link">
-              
-                <i class="fa fa-link" aria-hidden="true"></i>
-              
-              <span>友情链接</span>
-            </a>
+          <li class="drawer-box-content_item" style="position: relative;">
+            
+              <a href="/friends" class="drawer-menu-item-link">
+                
+                <span class="name">友情链接</span>
+              </a>
+            
+          </li>
+        
+          <li class="drawer-box-content_item" style="position: relative;">
+            
+              <a href="javascript:;" class="drawer-menu-item-link has-children" @click="openOrCloseMenu(6)">
+                <span>
+                  
+                    <i class="fa fa-link"></i>
+                  
+                  <span class="name">更多</span>
+                </span>
+                <i class="fa fa-chevron-left arrow " :class="{'icon-rotate': isOpen(6)}" aria-hidden="true"></i>
+              </a>
+              <ul class="drawer-sub-menu" v-if="isOpen(6)">
+                
+                <li>
+                  <a href="/gallery">
+                    
+                    <i class="fa fa-music" style="margin-top: -20px;"></i>
+                    
+                    <span>图库</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/huoban">
+                    
+                    <i class="fa fa-film" style="margin-top: -20px;"></i>
+                    
+                    <span>友情连接</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/me">
+                    
+                    <i class="fa fa-film" style="margin-top: -20px;"></i>
+                    
+                    <span>关于我</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="http://baidu.com">
+                    
+                    <i class="fa fa-film" style="margin-top: -20px;"></i>
+                    
+                    <span>百度</span>
+                  </a>
+                </li>
+                
+              </ul>
+            
           </li>
         
         <li class="drawer-box-content_item">
@@ -227,17 +294,33 @@ var vm = new Vue({
     data: {
       visible: false,
       top: 0,
+      openArr: [],
     },
     computed: {
     },
     mounted() {
     },
     methods: {
+      isOpen(index) {
+        if (this.openArr.includes(index)) {
+          return true;
+        } else {
+          return false;
+        }
+      },
+      openOrCloseMenu(curIndex) {
+        const index = this.openArr.indexOf(curIndex);
+        if (index !== -1) {
+          this.openArr.splice(index, 1);
+        } else {
+          this.openArr.push(curIndex);
+        }
+      },
       showDialogDrawer() {
         this.visible = true;
         // 防止页面滚动，只能让弹框滚动
         this.top = $(document).scrollTop()
-        body.style.cssText = 'width: 100%; height: 100%; position: fixed; top: -' + this.top  + 'px; left: 0; overflow: hidden;';
+        body.style.cssText = 'width: 100%; height: 100%;overflow: hidden;';
       },
       cancelDialogDrawer() {
         this.visible = false;
@@ -248,68 +331,132 @@ var vm = new Vue({
     created() {}
   })
 </script>
+
     </div>
     <div class="blog-title" id="author-avatar">
-      <div class="avatar">
-        <img src="/medias/logo.png" alt="logo">
-      </div>
+      
+        <div class="avatar">
+          <img src="/medias/logo.png" alt="logo">
+        </div>
+      
       <a href="/" class="logo">Bamboo</a>
     </div>
     <nav class="navbar">
       <ul class="menu">
         
-          <li class="menu-item">
-            <a href="/" class="menu-item-link">
-              
-                <i class="fa fa-home" aria-hidden="true"></i>
-              
-              <span>首页</span>
-            </a>
+          <li class="menu-item" style="position: relative;">
+            
+              <a href="/" class="menu-item-link">
+                
+                  <i class="fa fa-home" aria-hidden="true"></i>
+                
+                <span class="name">首页</span>
+              </a>
+            
           </li>
         
-          <li class="menu-item">
-            <a href="/archives" class="menu-item-link">
-              
-                <i class="fa fa-archive" aria-hidden="true"></i>
-              
-              <span>归档</span>
-            </a>
+          <li class="menu-item" style="position: relative;">
+            
+              <a href="/archives" class="menu-item-link">
+                
+                  <i class="fa fa-archive" aria-hidden="true"></i>
+                
+                <span class="name">归档</span>
+              </a>
+            
           </li>
         
-          <li class="menu-item">
-            <a href="/tags" class="menu-item-link">
-              
-                <i class="fa fa-tags" aria-hidden="true"></i>
-              
-              <span>标签</span>
-            </a>
+          <li class="menu-item" style="position: relative;">
+            
+              <a href="/tags" class="menu-item-link">
+                
+                  <i class="fa fa-tags" aria-hidden="true"></i>
+                
+                <span class="name">标签</span>
+              </a>
+            
           </li>
         
-          <li class="menu-item">
-            <a href="/categories" class="menu-item-link">
-              
-                <i class="fa fa-bookmark" aria-hidden="true"></i>
-              
-              <span>分类</span>
-            </a>
+          <li class="menu-item" style="position: relative;">
+            
+              <a href="/categories" class="menu-item-link">
+                
+                  <i class="fa fa-bookmark" aria-hidden="true"></i>
+                
+                <span class="name">分类</span>
+              </a>
+            
           </li>
         
-          <li class="menu-item">
-            <a href="/about" class="menu-item-link">
-              
-                <i class="fa fa-user" aria-hidden="true"></i>
-              
-              <span>关于</span>
-            </a>
+          <li class="menu-item" style="position: relative;">
+            
+              <a href="/about" class="menu-item-link">
+                
+                  <i class="fa fa-user" aria-hidden="true"></i>
+                
+                <span class="name">关于</span>
+              </a>
+            
           </li>
         
-          <li class="menu-item">
-            <a href="/friends" class="menu-item-link">
-              
-                <i class="fa fa-link" aria-hidden="true"></i>
-              
-              <span>友情链接</span>
-            </a>
+          <li class="menu-item" style="position: relative;">
+            
+              <a href="/friends" class="menu-item-link">
+                
+                <span class="name">友情链接</span>
+              </a>
+            
+          </li>
+        
+          <li class="menu-item" style="position: relative;">
+            
+              <a href="javascript:;" class="menu-item-link">
+                
+                  <i class="fa fa-link"></i>
+                
+                <span class="name">更多</span>
+                <i class="fa fa-chevron-down arrow" aria-hidden="true"></i>
+              </a>
+              <ul class="sub-menu">
+                
+                <li>
+                  <a href="/gallery">
+                    
+                    <i class="fa fa-music" style="margin-top: -20px;"></i>
+                    
+                    <span>图库</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/huoban">
+                    
+                    <i class="fa fa-film" style="margin-top: -20px;"></i>
+                    
+                    <span>友情连接</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/me">
+                    
+                    <i class="fa fa-film" style="margin-top: -20px;"></i>
+                    
+                    <span>关于我</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="http://baidu.com">
+                    
+                    <i class="fa fa-film" style="margin-top: -20px;"></i>
+                    
+                    <span>百度</span>
+                  </a>
+                </li>
+                
+              </ul>
+            
           </li>
         
       </ul>
@@ -370,8 +517,10 @@ var vm = new Vue({
           <i class="fa fa-close" aria-hidden="true" style="float:right;" @click.self="cancelDialogVisible()"></i>
         </div> -->
         <h2>
-          <i class="fa fa-search" aria-hidden="true"></i>
-          <span class="title">本地搜索</span>
+          <span>
+            <i class="fa fa-search" aria-hidden="true"></i>
+            <span class="title">本地搜索</span>
+          </span>
           <i class="fa fa-close close" style="float:right;" aria-hidden="true" @click.self="cancelDialogVisible()"></i>
         </h2>
         <form class="site-search-form">
@@ -466,13 +615,63 @@ var vm = new Vue({
     </script>
     <script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script> 
     
+
+    <!-- 当头部导航设置为背景透明的时候  -->
+    
+      <script src="/js/header/index.js"></script>
+    
 </header>
-    <main class="main" style="margin-top: 60px;">
+    <main class="main" style="margin-top: 0;">
       <div class="bg-dark-floor" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -2;"></div>
-<div class="lazyload archive-header" data-original="/medias/archive.jpg" style="width: 100%;height: 50vh;overflow: hidden;background-size: cover; 
-background-position: center center;">
-<!-- <span class="title">归档</span> -->
+<div class="lazyload archive-header" data-original="https://pic1.zhimg.com/80/v2-1414b3a4b205e19060db18a20d08723a_1440w.jpg?source=1940ef5c" >
+  <div class="archive-header-title">
+    archive
+  </div>
+  <div class="archive-header-desc">
+  
+  <span class="title" id="archive-header-desc"></span>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+      <script>
+      var typed = new Typed("#archive-header-desc", {
+          strings: ['愿你如风，被人温柔以待'],
+          startDelay: 100,
+          typeSpeed: 100,
+          loop: true,
+          backSpeed: 50,
+          showCursor: true
+      });
+      </script>
+  
+  </div>
+  <div class="mask-box"></div>
 </div>
+
+<div class="archive-video">
+  <video class="full-video" autoplay loop muted>
+      <source style="width: 100%;height: 100vh;" src="/">
+  </video>
+  <div class="video-header-title">
+    archive
+  </div>
+  <div class="video-header-desc">
+  
+      <span class="title" id="video-header-desc"></span>
+      <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+          <script>
+          var typed = new Typed("#video-header-desc", {
+              strings: ['愿你如风，被人温柔以待'],
+              startDelay: 100,
+              typeSpeed: 100,
+              loop: true,
+              backSpeed: 50,
+              showCursor: true
+          });
+          </script>
+      
+  </div>
+  <div class="mask-box"></div>
+</div>
+
 <div class="archive-main">
   <section class="archive">
     <div class="archive-content">
@@ -487,8 +686,8 @@ background-position: center center;">
             </div>
           
           <li class="post-item" data-aos="fade-left">
-            <span class="post-date">03-05</span>
-            <a class="post-title" href="/2021/03/05/wo-shi-zhong-wen/">中文</a>
+            <span class="post-date">05-11</span>
+            <a class="post-title" href="/2021/05/11/gallerygroup/">galleryGroup图片</a>
           </li>
         
           
@@ -550,12 +749,12 @@ background-position: center center;">
   </section>
   
   <!-- <nav class="page-nav">
-    <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="page-number" href="/archives/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/5/">5</a><a class="extend next" rel="next" href="/archives/page/2/">下一页</a>
+    <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="page-number" href="/archives/page/3/">3</a><a class="extend next" rel="next" href="/archives/page/2/">下一页</a>
   </nav> -->
   <div class="page-nav">
     
     <div class="page-info">
-        <div class="page-info-text">1 / 5</div>
+        <div class="page-info-text">1 / 3</div>
     </div>
     
       <a href="/archives/page/2/"

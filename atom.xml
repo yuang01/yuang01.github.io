@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yuang01.github.io/"/>
-  <updated>2021-02-23T07:03:48.750Z</updated>
+  <updated>2021-05-11T01:35:49.572Z</updated>
   <id>http://yuang01.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>中文</title>
-    <link href="http://yuang01.github.io/2021/03/05/wo-shi-zhong-wen/"/>
-    <id>http://yuang01.github.io/2021/03/05/wo-shi-zhong-wen/</id>
-    <published>2021-03-05T09:35:59.000Z</published>
-    <updated>2021-02-23T07:03:48.750Z</updated>
+    <title>galleryGroup图片</title>
+    <link href="http://yuang01.github.io/2021/05/11/gallerygroup/"/>
+    <id>http://yuang01.github.io/2021/05/11/gallerygroup/</id>
+    <published>2021-05-10T16:00:00.000Z</published>
+    <updated>2021-05-11T01:35:49.572Z</updated>
     
     <summary type="html">
     
@@ -29,7 +29,7 @@
       
         
         
-          &lt;p&gt;&lt;img &quot;&quot; class=&quot;lazyload placeholder&quot; data-original=&quot;1.jpg&quot;
+          &lt;div class=&quot;note
         
       
     
@@ -39,6 +39,8 @@
       <category term="前端" scheme="http://yuang01.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
+      <category term="tag" scheme="http://yuang01.github.io/tags/tag/"/>
+    
   </entry>
   
   <entry>
@@ -46,19 +48,11 @@
     <link href="http://yuang01.github.io/2021/02/22/progress/"/>
     <id>http://yuang01.github.io/2021/02/22/progress/</id>
     <published>2021-02-22T03:35:00.000Z</published>
-    <updated>2021-03-03T02:29:10.071Z</updated>
+    <updated>2021-05-13T02:43:35.635Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;div class=&quot;note info&quot;&gt;&lt;p&gt;该标签适用版本为&lt;code&gt;1.8.1&lt;/code&gt;及以上&lt;/p&gt;&lt;/div&gt;
-&lt;h2 class=&quot;bamboo-h &quot; id=&quot;进度条示例&quot;&gt;进度条示例&lt;/h2&gt;&lt;br/&gt;
-&lt;div
-        
-      
+      进度条标签
     
     </summary>
     
@@ -75,11 +69,11 @@
     <link href="http://yuang01.github.io/2021/02/08/hexo-theme-bamboo-new/"/>
     <id>http://yuang01.github.io/2021/02/08/hexo-theme-bamboo-new/</id>
     <published>2021-02-08T04:35:00.000Z</published>
-    <updated>2021-03-02T06:38:10.487Z</updated>
+    <updated>2021-05-13T02:42:54.020Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;该文档是版本1.8的文档，版本号可以从主题下的&lt;code&gt;package.json&lt;/code&gt;查看&lt;br&gt;这是一款既可以&lt;span class=&#39;p large red&#39;&gt;花&lt;/span&gt;&lt;span class=&#39;p large green&#39;&gt;里&lt;/span&gt;&lt;span class=&#39;p large blue&#39;&gt;胡&lt;/span&gt;&lt;span class=&#39;p large info&#39;&gt;哨&lt;/span&gt;又可以&lt;span class=&#39;p large&#39;&gt;简洁&lt;/span&gt;的主题，只需要简单配置即可，&lt;a href=&quot;https://yuang01.github.io/&quot;&gt;演示示例&lt;/a&gt;，| QQ交流:&lt;code&gt;1730241541&lt;/code&gt;&lt;/p&gt;
+      有钱终成眷属，没钱亲眼目睹
     
     </summary>
     
@@ -98,7 +92,7 @@
     <link href="http://yuang01.github.io/2021/02/08/btn/"/>
     <id>http://yuang01.github.io/2021/02/08/btn/</id>
     <published>2021-02-08T03:36:00.000Z</published>
-    <updated>2021-03-03T03:13:53.130Z</updated>
+    <updated>2021-05-12T02:16:08.590Z</updated>
     
     <summary type="html">
     
@@ -126,7 +120,7 @@
     <link href="http://yuang01.github.io/2021/02/08/audio/"/>
     <id>http://yuang01.github.io/2021/02/08/audio/</id>
     <published>2021-02-08T03:35:00.000Z</published>
-    <updated>2021-02-22T03:02:38.249Z</updated>
+    <updated>2021-05-11T01:44:42.600Z</updated>
     
     <summary type="html">
     
@@ -155,7 +149,7 @@
     <link href="http://yuang01.github.io/2021/02/08/checkbox/"/>
     <id>http://yuang01.github.io/2021/02/08/checkbox/</id>
     <published>2021-02-08T03:35:00.000Z</published>
-    <updated>2021-02-22T03:02:46.207Z</updated>
+    <updated>2021-05-11T01:45:08.369Z</updated>
     
     <summary type="html">
     
@@ -163,10 +157,11 @@
       
         
         
-          &lt;div class=&#39;checkbox&#39;&gt;&lt;input type=&quot;checkbox&quot; /&gt;
+          &lt;h2 class=&quot;bamboo-h &quot; id=&quot;进度条示例&quot;&gt;进度条示例&lt;/h2&gt;&lt;br/&gt;
+
+&lt;div class=&#39;checkbox&#39;&gt;&lt;input type=&quot;checkbox&quot; /&gt;
             &lt;p&gt;纯文本测试&lt;/p&gt;
-            &lt;/div&gt;
-&lt;div class=&#39;checkbox checked&#39;&gt;&lt;input
+           
         
       
     
@@ -185,7 +180,7 @@
     <link href="http://yuang01.github.io/2021/02/08/folding/"/>
     <id>http://yuang01.github.io/2021/02/08/folding/</id>
     <published>2021-02-08T03:35:00.000Z</published>
-    <updated>2021-02-22T03:02:48.380Z</updated>
+    <updated>2021-05-11T01:45:36.721Z</updated>
     
     <summary type="html">
     
@@ -213,7 +208,7 @@
     <link href="http://yuang01.github.io/2021/02/08/gallery/"/>
     <id>http://yuang01.github.io/2021/02/08/gallery/</id>
     <published>2021-02-08T03:35:00.000Z</published>
-    <updated>2021-02-22T03:02:52.884Z</updated>
+    <updated>2021-05-11T01:46:04.190Z</updated>
     
     <summary type="html">
     
@@ -240,7 +235,7 @@
     <link href="http://yuang01.github.io/2021/02/08/ghcard/"/>
     <id>http://yuang01.github.io/2021/02/08/ghcard/</id>
     <published>2021-02-08T03:35:00.000Z</published>
-    <updated>2021-02-22T03:02:55.095Z</updated>
+    <updated>2021-05-11T01:57:17.503Z</updated>
     
     <summary type="html">
     
@@ -268,7 +263,7 @@
     <link href="http://yuang01.github.io/2021/02/08/inlineimage/"/>
     <id>http://yuang01.github.io/2021/02/08/inlineimage/</id>
     <published>2021-02-08T03:35:00.000Z</published>
-    <updated>2021-02-22T03:03:03.831Z</updated>
+    <updated>2021-05-11T01:46:36.338Z</updated>
     
     <summary type="html">
     
@@ -296,7 +291,7 @@
     <link href="http://yuang01.github.io/2021/02/08/link/"/>
     <id>http://yuang01.github.io/2021/02/08/link/</id>
     <published>2021-02-08T03:35:00.000Z</published>
-    <updated>2021-02-22T03:03:08.839Z</updated>
+    <updated>2021-05-11T01:46:46.282Z</updated>
     
     <summary type="html">
     
@@ -325,7 +320,7 @@
     <link href="http://yuang01.github.io/2021/02/08/note/"/>
     <id>http://yuang01.github.io/2021/02/08/note/</id>
     <published>2021-02-08T03:35:00.000Z</published>
-    <updated>2021-02-22T03:03:11.416Z</updated>
+    <updated>2021-05-11T01:46:56.258Z</updated>
     
     <summary type="html">
     
@@ -356,7 +351,7 @@
     <link href="http://yuang01.github.io/2021/02/08/noteblock/"/>
     <id>http://yuang01.github.io/2021/02/08/noteblock/</id>
     <published>2021-02-08T03:35:00.000Z</published>
-    <updated>2021-02-22T03:03:13.719Z</updated>
+    <updated>2021-05-11T01:47:04.721Z</updated>
     
     <summary type="html">
     
@@ -385,7 +380,7 @@
     <link href="http://yuang01.github.io/2021/02/08/p/"/>
     <id>http://yuang01.github.io/2021/02/08/p/</id>
     <published>2021-02-08T03:35:00.000Z</published>
-    <updated>2021-02-22T03:03:20.203Z</updated>
+    <updated>2021-05-11T01:47:15.160Z</updated>
     
     <summary type="html">
     
@@ -414,18 +409,11 @@
     <link href="http://yuang01.github.io/2021/02/08/pbg/"/>
     <id>http://yuang01.github.io/2021/02/08/pbg/</id>
     <published>2021-02-08T03:35:00.000Z</published>
-    <updated>2021-02-22T03:04:09.747Z</updated>
+    <updated>2021-05-13T02:43:53.527Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h2 class=&quot;bamboo-h &quot; id=&quot;文本高亮演示效果&quot;&gt;文本高亮演示效果&lt;/h2&gt;&lt;br/&gt;
-&lt;p&gt;这是一个简单的文字&lt;span class=&#39;pbg yellow&#39;&gt;我是一个文本高亮&lt;/span&gt;，唱着我们心肠的曲折&lt;br&gt;这是一个简单的文字&lt;span
-        
-      
+      文本高亮标签
     
     </summary>
     
@@ -442,7 +430,7 @@
     <link href="http://yuang01.github.io/2021/02/08/radio/"/>
     <id>http://yuang01.github.io/2021/02/08/radio/</id>
     <published>2021-02-08T03:35:00.000Z</published>
-    <updated>2021-02-22T03:03:28.659Z</updated>
+    <updated>2021-05-11T01:49:07.317Z</updated>
     
     <summary type="html">
     
@@ -472,7 +460,7 @@
     <link href="http://yuang01.github.io/2021/02/08/site-card/"/>
     <id>http://yuang01.github.io/2021/02/08/site-card/</id>
     <published>2021-02-08T03:35:00.000Z</published>
-    <updated>2021-02-22T03:04:04.056Z</updated>
+    <updated>2021-05-11T01:49:15.949Z</updated>
     
     <summary type="html">
     
@@ -500,7 +488,7 @@
     <link href="http://yuang01.github.io/2021/02/08/span/"/>
     <id>http://yuang01.github.io/2021/02/08/span/</id>
     <published>2021-02-08T03:35:00.000Z</published>
-    <updated>2021-02-22T03:04:18.017Z</updated>
+    <updated>2021-05-11T01:49:31.529Z</updated>
     
     <summary type="html">
     
@@ -528,7 +516,7 @@
     <link href="http://yuang01.github.io/2021/02/08/tab/"/>
     <id>http://yuang01.github.io/2021/02/08/tab/</id>
     <published>2021-02-08T03:35:00.000Z</published>
-    <updated>2021-02-22T03:04:20.407Z</updated>
+    <updated>2021-05-11T01:49:44.091Z</updated>
     
     <summary type="html">
     
@@ -556,7 +544,7 @@
     <link href="http://yuang01.github.io/2021/02/08/text/"/>
     <id>http://yuang01.github.io/2021/02/08/text/</id>
     <published>2021-02-08T03:35:00.000Z</published>
-    <updated>2021-02-22T03:04:26.448Z</updated>
+    <updated>2021-05-11T01:51:48.999Z</updated>
     
     <summary type="html">
     

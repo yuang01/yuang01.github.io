@@ -125,6 +125,8 @@ var vm = new Vue({
   <link href="/js/danmu/barrager.css" rel="stylesheet">
 <script src="/js/danmu/jquery.barrager.js"></script>
   <body>
+    <!-- 页面预加载动画 -->
+
     <!-- 判断是否为黑夜模式 -->
     <script>
       let isDark = JSON.parse(localStorage.getItem('dark')) || JSON.parse('false');
@@ -134,8 +136,9 @@ var vm = new Vue({
       }
     </script>
 
-    <header class="header bg-color" 
-  style="position: fixed; 
+    
+<header class="header " id="navHeader"
+  style="position: fixed;
   left: 0; top: 0; z-index: 10;width: 100%;"
 >
   <div class="header-content">
@@ -152,61 +155,125 @@ var vm = new Vue({
       <h3 class="drawer-box-head_title">Bamboo</h3>
       <h5 class="drawer-box-head_desc">千磨万击还坚劲，任尔东西南北风</h5>
     </div>
+    
     <div class="drawer-box-content">
       <ul class="drawer-box-content_menu">
         
-          <li class="drawer-box-content_item">
-            <a href="/" class="menu-item-link">
-              
-                <i class="fa fa-home" aria-hidden="true"></i>
-              
-              <span>首页</span>
-            </a>
+          <li class="drawer-box-content_item" style="position: relative;">
+            
+              <a href="/" class="drawer-menu-item-link">
+                
+                  <i class="fa fa-home" aria-hidden="true"></i>
+                
+                <span class="name">首页</span>
+              </a>
+            
           </li>
         
-          <li class="drawer-box-content_item">
-            <a href="/archives" class="menu-item-link">
-              
-                <i class="fa fa-home" aria-hidden="true"></i>
-              
-              <span>归档</span>
-            </a>
+          <li class="drawer-box-content_item" style="position: relative;">
+            
+              <a href="/archives" class="drawer-menu-item-link">
+                
+                  <i class="fa fa-archive" aria-hidden="true"></i>
+                
+                <span class="name">归档</span>
+              </a>
+            
           </li>
         
-          <li class="drawer-box-content_item">
-            <a href="/tags" class="menu-item-link">
-              
-                <i class="fa fa-tags" aria-hidden="true"></i>
-              
-              <span>标签</span>
-            </a>
+          <li class="drawer-box-content_item" style="position: relative;">
+            
+              <a href="/tags" class="drawer-menu-item-link">
+                
+                  <i class="fa fa-tags" aria-hidden="true"></i>
+                
+                <span class="name">标签</span>
+              </a>
+            
           </li>
         
-          <li class="drawer-box-content_item">
-            <a href="/categories" class="menu-item-link">
-              
-                <i class="fa fa-bookmark" aria-hidden="true"></i>
-              
-              <span>分类</span>
-            </a>
+          <li class="drawer-box-content_item" style="position: relative;">
+            
+              <a href="/categories" class="drawer-menu-item-link">
+                
+                  <i class="fa fa-bookmark" aria-hidden="true"></i>
+                
+                <span class="name">分类</span>
+              </a>
+            
           </li>
         
-          <li class="drawer-box-content_item">
-            <a href="/about" class="menu-item-link">
-              
-                <i class="fa fa-user" aria-hidden="true"></i>
-              
-              <span>关于</span>
-            </a>
+          <li class="drawer-box-content_item" style="position: relative;">
+            
+              <a href="/about" class="drawer-menu-item-link">
+                
+                  <i class="fa fa-user" aria-hidden="true"></i>
+                
+                <span class="name">关于</span>
+              </a>
+            
           </li>
         
-          <li class="drawer-box-content_item">
-            <a href="/friends" class="menu-item-link">
-              
-                <i class="fa fa-link" aria-hidden="true"></i>
-              
-              <span>友情链接</span>
-            </a>
+          <li class="drawer-box-content_item" style="position: relative;">
+            
+              <a href="/friends" class="drawer-menu-item-link">
+                
+                <span class="name">友情链接</span>
+              </a>
+            
+          </li>
+        
+          <li class="drawer-box-content_item" style="position: relative;">
+            
+              <a href="javascript:;" class="drawer-menu-item-link has-children" @click="openOrCloseMenu(6)">
+                <span>
+                  
+                    <i class="fa fa-link"></i>
+                  
+                  <span class="name">更多</span>
+                </span>
+                <i class="fa fa-chevron-left arrow " :class="{'icon-rotate': isOpen(6)}" aria-hidden="true"></i>
+              </a>
+              <ul class="drawer-sub-menu" v-if="isOpen(6)">
+                
+                <li>
+                  <a href="/gallery">
+                    
+                    <i class="fa fa-music" style="margin-top: -20px;"></i>
+                    
+                    <span>图库</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/huoban">
+                    
+                    <i class="fa fa-film" style="margin-top: -20px;"></i>
+                    
+                    <span>友情连接</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/me">
+                    
+                    <i class="fa fa-film" style="margin-top: -20px;"></i>
+                    
+                    <span>关于我</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="http://baidu.com">
+                    
+                    <i class="fa fa-film" style="margin-top: -20px;"></i>
+                    
+                    <span>百度</span>
+                  </a>
+                </li>
+                
+              </ul>
+            
           </li>
         
         <li class="drawer-box-content_item">
@@ -227,17 +294,33 @@ var vm = new Vue({
     data: {
       visible: false,
       top: 0,
+      openArr: [],
     },
     computed: {
     },
     mounted() {
     },
     methods: {
+      isOpen(index) {
+        if (this.openArr.includes(index)) {
+          return true;
+        } else {
+          return false;
+        }
+      },
+      openOrCloseMenu(curIndex) {
+        const index = this.openArr.indexOf(curIndex);
+        if (index !== -1) {
+          this.openArr.splice(index, 1);
+        } else {
+          this.openArr.push(curIndex);
+        }
+      },
       showDialogDrawer() {
         this.visible = true;
         // 防止页面滚动，只能让弹框滚动
         this.top = $(document).scrollTop()
-        body.style.cssText = 'width: 100%; height: 100%; position: fixed; top: -' + this.top  + 'px; left: 0; overflow: hidden;';
+        body.style.cssText = 'width: 100%; height: 100%;overflow: hidden;';
       },
       cancelDialogDrawer() {
         this.visible = false;
@@ -248,68 +331,132 @@ var vm = new Vue({
     created() {}
   })
 </script>
+
     </div>
     <div class="blog-title" id="author-avatar">
-      <div class="avatar">
-        <img src="/medias/logo.png" alt="logo">
-      </div>
+      
+        <div class="avatar">
+          <img src="/medias/logo.png" alt="logo">
+        </div>
+      
       <a href="/" class="logo">Bamboo</a>
     </div>
     <nav class="navbar">
       <ul class="menu">
         
-          <li class="menu-item">
-            <a href="/" class="menu-item-link">
-              
-                <i class="fa fa-home" aria-hidden="true"></i>
-              
-              <span>首页</span>
-            </a>
+          <li class="menu-item" style="position: relative;">
+            
+              <a href="/" class="menu-item-link">
+                
+                  <i class="fa fa-home" aria-hidden="true"></i>
+                
+                <span class="name">首页</span>
+              </a>
+            
           </li>
         
-          <li class="menu-item">
-            <a href="/archives" class="menu-item-link">
-              
-                <i class="fa fa-archive" aria-hidden="true"></i>
-              
-              <span>归档</span>
-            </a>
+          <li class="menu-item" style="position: relative;">
+            
+              <a href="/archives" class="menu-item-link">
+                
+                  <i class="fa fa-archive" aria-hidden="true"></i>
+                
+                <span class="name">归档</span>
+              </a>
+            
           </li>
         
-          <li class="menu-item">
-            <a href="/tags" class="menu-item-link">
-              
-                <i class="fa fa-tags" aria-hidden="true"></i>
-              
-              <span>标签</span>
-            </a>
+          <li class="menu-item" style="position: relative;">
+            
+              <a href="/tags" class="menu-item-link">
+                
+                  <i class="fa fa-tags" aria-hidden="true"></i>
+                
+                <span class="name">标签</span>
+              </a>
+            
           </li>
         
-          <li class="menu-item">
-            <a href="/categories" class="menu-item-link">
-              
-                <i class="fa fa-bookmark" aria-hidden="true"></i>
-              
-              <span>分类</span>
-            </a>
+          <li class="menu-item" style="position: relative;">
+            
+              <a href="/categories" class="menu-item-link">
+                
+                  <i class="fa fa-bookmark" aria-hidden="true"></i>
+                
+                <span class="name">分类</span>
+              </a>
+            
           </li>
         
-          <li class="menu-item">
-            <a href="/about" class="menu-item-link">
-              
-                <i class="fa fa-user" aria-hidden="true"></i>
-              
-              <span>关于</span>
-            </a>
+          <li class="menu-item" style="position: relative;">
+            
+              <a href="/about" class="menu-item-link">
+                
+                  <i class="fa fa-user" aria-hidden="true"></i>
+                
+                <span class="name">关于</span>
+              </a>
+            
           </li>
         
-          <li class="menu-item">
-            <a href="/friends" class="menu-item-link">
-              
-                <i class="fa fa-link" aria-hidden="true"></i>
-              
-              <span>友情链接</span>
-            </a>
+          <li class="menu-item" style="position: relative;">
+            
+              <a href="/friends" class="menu-item-link">
+                
+                <span class="name">友情链接</span>
+              </a>
+            
+          </li>
+        
+          <li class="menu-item" style="position: relative;">
+            
+              <a href="javascript:;" class="menu-item-link">
+                
+                  <i class="fa fa-link"></i>
+                
+                <span class="name">更多</span>
+                <i class="fa fa-chevron-down arrow" aria-hidden="true"></i>
+              </a>
+              <ul class="sub-menu">
+                
+                <li>
+                  <a href="/gallery">
+                    
+                    <i class="fa fa-music" style="margin-top: -20px;"></i>
+                    
+                    <span>图库</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/huoban">
+                    
+                    <i class="fa fa-film" style="margin-top: -20px;"></i>
+                    
+                    <span>友情连接</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/me">
+                    
+                    <i class="fa fa-film" style="margin-top: -20px;"></i>
+                    
+                    <span>关于我</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="http://baidu.com">
+                    
+                    <i class="fa fa-film" style="margin-top: -20px;"></i>
+                    
+                    <span>百度</span>
+                  </a>
+                </li>
+                
+              </ul>
+            
           </li>
         
       </ul>
@@ -370,8 +517,10 @@ var vm = new Vue({
           <i class="fa fa-close" aria-hidden="true" style="float:right;" @click.self="cancelDialogVisible()"></i>
         </div> -->
         <h2>
-          <i class="fa fa-search" aria-hidden="true"></i>
-          <span class="title">本地搜索</span>
+          <span>
+            <i class="fa fa-search" aria-hidden="true"></i>
+            <span class="title">本地搜索</span>
+          </span>
           <i class="fa fa-close close" style="float:right;" aria-hidden="true" @click.self="cancelDialogVisible()"></i>
         </h2>
         <form class="site-search-form">
@@ -466,15 +615,20 @@ var vm = new Vue({
     </script>
     <script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script> 
     
+
+    <!-- 当头部导航设置为背景透明的时候  -->
+    
+      <script src="/js/header/index.js"></script>
+    
 </header>
-    <main class="main" style="margin-top: 60px;">
+    <main class="main" style="margin-top: 0;">
       
  <!-- prismjs 代码高亮 -->
  
     
     <link href="/js/prism/prism-line-numbers.css" rel="stylesheet">
     
-        <link href="/js/prism/prism-solarizedlight.min.css" rel="stylesheet">
+        <link href="/js/prism/prism.min.css" rel="stylesheet">
     
   
 
@@ -550,7 +704,7 @@ var vm = new Vue({
             clearInterval(this.time);
         },
         mounted() {
-            let prop = ''|| 'https://api.ixiaowai.cn/gqapi/gqapi.php,https://api.btstu.cn/sjbz/api.php,https://api.mz-moe.cn/img.php';
+            let prop = ''|| 'https://pic4.zhimg.com/80/v2-5030587bac1b856d09e0a119ff6d7c04_1440w.jpg,https://api.btstu.cn/sjbz/api.php';
             let isImg = prop.includes('.bmp') || prop.includes('.jpg') || prop.includes('.png') || prop.includes('.tif') || prop.includes('.gif') || prop.includes('.pcx') || prop.includes('.tga') || prop.includes('.exif') || prop.includes('.fpx') || prop.includes('.psd') || prop.includes('.cdr') || prop.includes('.pcd') || prop.includes('.dxf') || prop.includes('.ufo') || prop.includes('.eps') || prop.includes('.ai') || prop.includes('.raw') || prop.includes('.WMF') || prop.includes('.webp') || prop.includes('.jpeg') || prop.includes('http://') || prop.includes('https://') 
             if (isImg) {
                 let img = prop.split(',');
@@ -599,10 +753,10 @@ var vm = new Vue({
 
 
 
-<div class="post-detail-header lazyload" id="thumbnail_canvas" data-original="/medias/11.jpg" style="background-repeat: no-repeat; background-size: cover; 
+<div class="post-detail-header lazyload" id="thumbnail_canvas" data-original="https://pic1.zhimg.com/80/v2-1f5fecc916dcb213570e1a79be2a5d65_1440w.jpg?source=1940ef5c" style="background-repeat: no-repeat; background-size: cover; 
   background-position: center center;position: relative;">
   <div class="post-detail-header-mask"></div>
-  <canvas id="header_canvas"style="position:absolute;bottom:0"></canvas>
+  <canvas id="header_canvas"style="position:absolute;bottom:0;pointer-events:none;"></canvas>
   
     <div class="title-box">
       
@@ -719,9 +873,9 @@ var vm = new Vue({
 <h2 class="bamboo-h " id="带有头像和名称的按钮">带有头像和名称的按钮</h2><br/>
 <h3 class="bamboo-h-b" id="一行两个" style="color:!important">一行两个</h3><div></div>
 <div class="btns circle grid2">
-            <a class="button" target="_blank" rel="noopener" href='https://baidu.com' title='团子'><img src='https://img2.woyaogexing.com/2021/02/28/d7601bf4bfe64327bc5885d61a51e90b!400x400.jpeg'>团子</a>
-<a class="button" target="_blank" rel="noopener" href='https://baidu.com' title='青鸟'><img src='https://img2.woyaogexing.com/2021/02/26/4ab7bac8fb8f4f34b25fac4435b5012a!400x400.jpeg'>青鸟</a>
-<a class="button" target="_blank" rel="noopener" href='https://baidu.com' title='哆啦A梦'><img src='https://img2.woyaogexing.com/2021/02/25/fdbd593f554c421daf17910c1bf4735b!400x400.jpeg'>哆啦A梦</a>
+            <a class="button" target="_blank" rel="noopener" href='https://baidu.com' title='草帽海贼团'><img src='https://img2.woyaogexing.com/2021/01/30/007e3777e7e64c4aae95ae812708a7bf!400x400.jpeg'>草帽海贼团</a>
+<a class="button" target="_blank" rel="noopener" href='https://baidu.com' title='小绵羊'><img src='https://img2.woyaogexing.com/2021/01/30/4c59f9dd4aae421fae21344aec8c7b60!400x400.jpeg'>小绵羊</a>
+<a class="button" target="_blank" rel="noopener" href='https://baidu.com' title='沫兮'><img src='https://img2.woyaogexing.com/2021/01/30/1b2aec116f0b49c682badc5befd43905!400x400.jpeg'>沫兮</a>
 <a class="button" target="_blank" rel="noopener" href='https://baidu.com' title='凯爹'><img src='https://p.qqan.com/up/2021-1/16112058848478910.jpg'>凯爹</a>
 <a class="button" target="_blank" rel="noopener" href='https://baidu.com' title='阿离'><img src='https://p.qqan.com/up/2021-1/16118869719896010.jpg'>阿离</a>
 <a class="button" target="_blank" rel="noopener" href='https://baidu.com' title='韩信'><img src='https://p.qqan.com/up/2021-1/16118869704182020.jpg'>韩信</a>
@@ -831,13 +985,13 @@ var vm = new Vue({
   <i class='fa fa-apple'></i>
   <b>这个是微信</b>
   <p class='p red'>微信</p>
-  <img src='/yuang/medias/wx.jpg'>
+  <img src='/medias/wx.jpg'>
 </a>
 <a target="_blank" rel="noopener" href='https://apps.apple.com/cn/app/heart-mate-lite-hrm-utility/id1475747930?ls=1'>
   <i class='fa fa-apple'></i>
   <b>这个是支付宝</b>
   <p class='p green'>支付宝</p>
-  <img src='/yuang/medias/zfb.jpg'>
+  <img src='/medias/zfb.jpg'>
 </a>
           </div>
 <h3 id="上述示例代码"><a href="#上述示例代码" class="headerlink" title="上述示例代码"></a>上述示例代码</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">&#123;</span>% btns circle center grid5 %<span class="token punctuation">&#125;</span>
@@ -845,13 +999,13 @@ var vm = new Vue({
     <span class="token operator">&lt;</span>i <span class="token assign-left variable">class</span><span class="token operator">=</span><span class="token string">'fa fa-apple'</span><span class="token operator">></span><span class="token operator">&lt;</span>/i<span class="token operator">></span>
     <span class="token operator">&lt;</span>b<span class="token operator">></span>这个是微信<span class="token operator">&lt;</span>/b<span class="token operator">></span>
     <span class="token punctuation">&#123;</span>% p red, 微信 %<span class="token punctuation">&#125;</span>
-    <span class="token operator">&lt;</span>img <span class="token assign-left variable">src</span><span class="token operator">=</span><span class="token string">'/yuang/medias/wx.jpg'</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span>img <span class="token assign-left variable">src</span><span class="token operator">=</span><span class="token string">'/medias/wx.jpg'</span><span class="token operator">></span>
   <span class="token operator">&lt;</span>/a<span class="token operator">></span>
   <span class="token operator">&lt;</span>a <span class="token assign-left variable">href</span><span class="token operator">=</span><span class="token string">'https://apps.apple.com/cn/app/heart-mate-lite-hrm-utility/id1475747930?ls=1'</span><span class="token operator">></span>
     <span class="token operator">&lt;</span>i <span class="token assign-left variable">class</span><span class="token operator">=</span><span class="token string">'fa fa-apple'</span><span class="token operator">></span><span class="token operator">&lt;</span>/i<span class="token operator">></span>
     <span class="token operator">&lt;</span>b<span class="token operator">></span>这个是支付宝<span class="token operator">&lt;</span>/b<span class="token operator">></span>
     <span class="token punctuation">&#123;</span>% p green, 支付宝 %<span class="token punctuation">&#125;</span>
-    <span class="token operator">&lt;</span>img <span class="token assign-left variable">src</span><span class="token operator">=</span><span class="token string">'/yuang/medias/zfb.jpg'</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span>img <span class="token assign-left variable">src</span><span class="token operator">=</span><span class="token string">'/medias/zfb.jpg'</span><span class="token operator">></span>
   <span class="token operator">&lt;</span>/a<span class="token operator">></span>
 <span class="token punctuation">&#123;</span>% endbtns %<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
       </div>
@@ -883,7 +1037,7 @@ var vm = new Vue({
 
   
   <div class="post-nav-prev post-nav-item">
-    <div class="post-nav-img lazyload" data-original="/medias/7.jpg" style="background-size: cover; 
+    <div class="post-nav-img lazyload" data-original="https://pic1.zhimg.com/80/v2-12c6659b2ac19bc2e241703d65177870_1440w.jpg?source=1940ef5c" style="background-size: cover; 
       background-position: center center;">
     </div>
     <a href="/2021/02/08/hexo-theme-bamboo-new/" class="post-nav-link">
@@ -902,7 +1056,7 @@ var vm = new Vue({
 
   
   <div class="post-nav-next post-nav-item">
-    <div class="post-nav-img lazyload" data-original="/medias/1.jpg" style="background-size: cover; 
+    <div class="post-nav-img lazyload" data-original="https://pic2.zhimg.com/80/v2-035165460d504f2b072ee777d1d40ab6_1440w.jpg?source=1940ef5c" style="background-size: cover; 
       background-position: center center;">
     </div>
     <a href="/2021/02/08/audio/" class="post-nav-link">
@@ -1048,8 +1202,8 @@ Your browser does not support the audio tag.
 			el: '#vcomment',
 			notify: false,
 			verify: false,
-			app_id: "nmal09L0arSjEFBUUCSpWzyK-gzGzoHsz",
-			app_key: "xiiSst0NtHRg1POFFV32iqKI",
+			app_id: "",
+			app_key: "",
 			placeholder: "客官，说点什么吧",
 			avatar: "",
 			master: "74c5ec8dbf377427e36067ce97c29a3f",   //博主邮箱md5
@@ -1963,7 +2117,7 @@ Your browser does not support the audio tag.
       headingSelector: headerEl,
       scrollSmooth: true,
       scrollSmoothOffset: -80,
-      headingsOffset: 130,
+      headingsOffset: -($(window).height() * 0.4 - 45),
       positionFixedSelector: '.toc-main',
       positionFixedClass: 'is-position-fixed',
       fixedSidebarOffset: 'auto',
@@ -1974,8 +2128,8 @@ Your browser does not support the audio tag.
 
 <style>
 .is-position-fixed {
-  position:fixed !important;
-  top: 64px;
+  position:sticky !important;
+  top: 74px;
 }
 .toc-main ul {
   counter-reset: show-list;
@@ -2023,6 +2177,8 @@ Your browser does not support the audio tag.
       });
     </script>
   
+
+
 </div>
 
 
