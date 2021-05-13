@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yuang01.github.io/"/>
-  <updated>2021-05-11T01:35:49.572Z</updated>
+  <updated>2021-05-13T03:51:21.007Z</updated>
   <id>http://yuang01.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://yuang01.github.io/2021/05/11/gallerygroup/"/>
     <id>http://yuang01.github.io/2021/05/11/gallerygroup/</id>
     <published>2021-05-10T16:00:00.000Z</published>
-    <updated>2021-05-11T01:35:49.572Z</updated>
+    <updated>2021-05-13T03:51:21.007Z</updated>
     
     <summary type="html">
     
@@ -69,7 +69,7 @@
     <link href="http://yuang01.github.io/2021/02/08/hexo-theme-bamboo-new/"/>
     <id>http://yuang01.github.io/2021/02/08/hexo-theme-bamboo-new/</id>
     <published>2021-02-08T04:35:00.000Z</published>
-    <updated>2021-05-13T02:42:54.020Z</updated>
+    <updated>2021-05-13T03:50:00.087Z</updated>
     
     <summary type="html">
     
@@ -540,11 +540,11 @@
   </entry>
   
   <entry>
-    <title>timeline时间线</title>
-    <link href="http://yuang01.github.io/2021/02/08/timeline/"/>
-    <id>http://yuang01.github.io/2021/02/08/timeline/</id>
+    <title>Text文本样式标签</title>
+    <link href="http://yuang01.github.io/2021/02/08/text/"/>
+    <id>http://yuang01.github.io/2021/02/08/text/</id>
     <published>2021-02-08T03:35:00.000Z</published>
-    <updated>2021-05-11T01:52:11.565Z</updated>
+    <updated>2021-05-11T01:51:48.999Z</updated>
     
     <summary type="html">
     
@@ -552,9 +552,11 @@
       
         
         
-          &lt;h2 class=&quot;bamboo-h &quot; id=&quot;timeline时间线演示&quot;&gt;timeline时间线演示&lt;/h2&gt;&lt;br/&gt;
-&lt;div class=&quot;timeline&quot;&gt;
-&lt;div class=&quot;timenode&quot;&gt;&lt;div
+          &lt;h2 class=&quot;bamboo-h &quot; id=&quot;Text文本样式标签演示&quot;&gt;Text文本样式标签演示&lt;/h2&gt;&lt;br/&gt;
+
+&lt;p&gt;带 &lt;u&gt;下划线&lt;/u&gt; 的文本&lt;/p&gt;
+&lt;p&gt;带 &lt;emp&gt;着重号&lt;/emp&gt; 的文本&lt;/p&gt;
+&lt;p&gt;带 &lt;wavy&gt;波浪线&lt;/wavy&gt;
         
       
     
