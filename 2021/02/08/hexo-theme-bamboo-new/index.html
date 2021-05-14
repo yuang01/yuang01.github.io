@@ -92,7 +92,7 @@ var vm = new Vue({
     methods: {
         WebLocation() {
             let language = navigator.language;
-            let deploy = 'https://gitee.com/yuang01/yuang01.git';
+            let deploy = 'https://github.com/yuang01/yuang01.github.io.git';
             if (language == 'zh-CN') {
                 if (deploy == 'https://github.com/yuang01/yuang01.github.io.git') {
                     this.$confirm({
@@ -825,18 +825,21 @@ var vm = new Vue({
 <h2 class="bamboo-h " id="下载">下载</h2><br/>
 <p>首先你需要有一个<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/">Hexo</a>，按照官网的方法，很容易的就能创建一个hexo博客。</p>
 <div class="tagLink"><a class="link-card" title="Hexo" target="_blank" rel="noopener" href="https://hexo.io/zh-cn/"><div class="left"><img "" class="lazyload placeholder" data-original="https://d33wubrfki0l68.cloudfront.net/6657ba50e702d84afb32fe846bed54fba1a77add/827ae/logo.svg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"/></div><div class="right"><p class="text">Hexo</p><p class="url">https://hexo.io/zh-cn/</p></div></a></div>
-<h3 id="Github上克隆或者下载"><a href="#Github上克隆或者下载" class="headerlink" title="Github上克隆或者下载"></a>Github上克隆或者下载</h3><p>当你有了hexo博客之后，进入<code>themes</code>文件夹下使用 <code>Git clone</code> 命令来下载:</p>
+<div class="tabs" id="tab-id"><ul class="nav-tabs"><li class="tab active"><a class="#tab-id-1">Github安装</a></li><li class="tab"><a class="#tab-id-2">Gitee安装</a></li><li class="tab"><a class="#tab-id-3">npm安装</a></li></ul><div class="tab-content"><div class="tab-pane active" id="tab-id-1"><p>当你有了hexo博客之后，进入<code>themes</code>文件夹下使用 <code>Git clone</code> 命令来下载:</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> clone https://github.com/yuang01/hexo-theme-bamboo.git<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <div class="tagLink"><a class="link-card" title="hexo-theme-bamboo" target="_blank" rel="noopener" href="https://github.com/yuang01/hexo-theme-bamboo"><div class="left"><img "" class="lazyload placeholder" data-original="https://ewr1.vultrobjects.com/imgspice3/000/010/433/253_f8c_a65.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"/></div><div class="right"><p class="text">hexo-theme-bamboo</p><p class="url">https://github.com/yuang01/hexo-theme-bamboo</p></div></a></div>
 
-<p>或者点击下载zip包，解压放入<code>themes</code>文件夹下</p>
-<span class='btn center large'><a class="button" target="_blank" rel="noopener" href='https://github.com/yuang01/hexo-theme-bamboo/archive/dev.zip' title='开始下载'><i class='fa fa-download'></i>开始下载</a></span>
-<h3 id="Gitee上克隆或者下载"><a href="#Gitee上克隆或者下载" class="headerlink" title="Gitee上克隆或者下载"></a>Gitee上克隆或者下载</h3><p>当你有了hexo博客之后，进入<code>themes</code>文件夹下使用 <code>Git clone</code> 命令来下载:</p>
+<p>或者点击下载zip包，解压放入<code>themes</code>文件夹下<br><span class='btn center large'><a class="button" target="_blank" rel="noopener" href='https://github.com/yuang01/hexo-theme-bamboo/archive/dev.zip' title='开始下载'><i class='fa fa-download'></i>开始下载</a></span></p></div><div class="tab-pane" id="tab-id-2"><p>当你有了hexo博客之后，进入<code>themes</code>文件夹下使用 <code>Git clone</code> 命令来下载:</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> clone https://gitee.com/yuang01/hexo-theme-bamboo.git<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <div class="tagLink"><a class="link-card" title="hexo-theme-bamboo" target="_blank" rel="noopener" href="https://gitee.com/yuang01/hexo-theme-bamboo"><div class="left"><img "" class="lazyload placeholder" data-original="https://img10.360buyimg.com/ddimg/jfs/t1/154000/26/17136/4231/601cb685E622bcee5/1a923dacb1d98f64.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"/></div><div class="right"><p class="text">hexo-theme-bamboo</p><p class="url">https://gitee.com/yuang01/hexo-theme-bamboo</p></div></a></div>
-<p>或者点击下载zip包，解压放入<code>themes</code>文件夹下</p>
-<span class='btn center large'><a class="button" target="_blank" rel="noopener" href='https://gitee.com/yuang01/hexo-theme-bamboo/repository/archive/dev.zip' title='开始下载'><i class='fa fa-download'></i>开始下载</a></span>
+或者点击下载zip包，解压放入`themes`文件夹下
+<span class='btn center large'><a class="button" target="_blank" rel="noopener" href='https://gitee.com/yuang01/hexo-theme-bamboo/repository/archive/dev.zip' title='开始下载'><i class='fa fa-download'></i>开始下载</a></span></div><div class="tab-pane" id="tab-id-3"><div class="note info"><p>此方法只支持Hexo在5.0.0版本以上<br><strong>通过 npm 安装并不会在 themes 里生成主题文件夹，而是在 node_modules 里生成</strong></p></div>
+在你的博客根目录里
+<pre class="line-numbers language-powershell" data-language="powershell"><code class="language-powershell">npm i hexo<span class="token operator">-</span>theme<span class="token operator">-</span>bamboo<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<div class="note success"><p>升级方法：在博客根目录下，运行 <code>npm update hexo-theme-bamboo</code></p></div>
 
+<h4 id="应用主题"><a href="#应用主题" class="headerlink" title="应用主题"></a>应用主题</h4><p>修改hexo根目录下的站点配置文件<code>_config.yml</code>，把主题改为<code>bamboo</code></p>
+<p>接着在hexo根目录下新建文件<code>_config.bamboo.yml</code>,从<code>node_modules</code>文件夹下找到<code>hexo-theme-bamboo</code>文件夹下的<code>_config.yml</code>，将里面的内容复制到<code>_config.bamboo.yml</code>文件中即可，在<code>_config.bamboo.yml</code>文件中对主题进行配置</p></div></div></div>
 <h2 class="bamboo-h " id="基本配置">基本配置</h2><br/>
 <h3 id="切换主题"><a href="#切换主题" class="headerlink" title="切换主题"></a>切换主题</h3><p>修改 Hexo 根目录下的 <code>_config.yml</code> 的  <code>theme</code> 的值：<code>theme: hexo-theme-bamboo</code></p>
 <h4 class="bamboo-h-b" id="`_config.yml` 文件的其它修改建议:" style="color:!important">`_config.yml` 文件的其它修改建议:</h4><div></div>
@@ -1718,7 +1721,6 @@ toc: false
 <h2 class="bamboo-h " id="结语">结语</h2><br/>
 <p>你都看到这了，诺 <img no-lazy class="inline" src="https://img10.360buyimg.com/ddimg/jfs/t1/153554/13/17636/9218/601cc240Eaa721783/72f7a6d04e586fb6.jpg" style="height:80px;"/> 太棒了。<br>如果你觉得还可以，请点个star吧</p>
 <a class="ghcard" rel="external nofollow noopener noreferrer noopener" target="_blank" href="https://github.com/yuang01/hexo-theme-bamboo"><img "" class="lazyload placeholder" data-original="https://github-readme-stats.vercel.app/api/pin/?username=yuang01&repo=hexo-theme-bamboo&theme=vue&show_owner=true" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"/></a>
-
       </div>
       
         <div class="copyright">
