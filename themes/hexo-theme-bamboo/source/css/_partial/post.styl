@@ -1,8 +1,7 @@
 // 文章详情
 .row {
   display: flex;
-  overflow: hidden;
-  // background-color: #42b983;
+  // overflow: hidden;
 }
 .justify-position {
   justify-content: space-between;  
@@ -59,7 +58,7 @@
       position: absolute;
       top: 150px;
       left: -25px;
-      width: 20px;
+      width: 25px;
       height 60px;
       font-size: 12px;
       background-color: #fa0;
@@ -128,8 +127,16 @@
   }
   img {
     max-width: 100%;
-    // margin: 0 50%;
-    // transform: translateX(-50%);
+    margin: 0 50%;
+    transform: translateX(-50%);
+  }
+  .gallery,
+  .btns,
+  .site-card {
+    img {
+      margin: 0;
+      transform: translateX(0);
+    }
   }
   blockquote {
     border-left: 5px solid #42b983;

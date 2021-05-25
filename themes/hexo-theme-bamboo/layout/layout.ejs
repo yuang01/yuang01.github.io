@@ -3,13 +3,10 @@
   <%- partial('_partial/head') %>
   <script src="<%- url_for('/js/jquery3.5.1.js') %>"></script>
   <script src="<%- url_for('/js/vue2.6.11.js') %>"></script>
-<<<<<<< HEAD
-  <%- partial('_partial/toJump') %>
-=======
   <link href="<%- url_for('/js/danmu/barrager.css') %>" rel="stylesheet">
 <script src="<%- url_for('/js/danmu/jquery.barrager.js') %>"></script>
->>>>>>> f4afe3086475b020da6f92a841e8f58921f3b580
   <body>
+    <%- partial('_partial/loaded') %>
     <!-- 判断是否为黑夜模式 -->
     <script>
       let isDark = JSON.parse(localStorage.getItem('dark')) || JSON.parse('<%= theme.dark.default %>');
@@ -20,7 +17,7 @@
     </script>
 
     <%- partial('_partial/header') %>
-    <main class="main" style="<% if(theme.headMenuFixed) { %>margin-top: 60px;<% } %>">
+    <main class="main" style="<% if(theme.color_scheme.common.headerMenuTransparent) { %>margin-top: 0;<% } else { %>margin-top: 60px;<% } %>">
       <%- body %>
     </main>
     <%- partial('_partial/footer') %>
