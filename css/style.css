@@ -3462,7 +3462,7 @@ pre:hover::-webkit-scrollbar-thumb:hover,
 .darkModel .bg-color,
 .darkModel .header-bg-color,
 .darkModel .header .header-content .navbar .menu .menu-item .sub-menu li {
-  background-color: #222;
+  background: #222;
 }
 .darkModel .github-corner svg {
   fill: #f0f6fc !important;
