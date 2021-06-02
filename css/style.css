@@ -2548,6 +2548,7 @@ pre:hover::-webkit-scrollbar-thumb:hover,
   border: none;
   margin: 0;
   padding: 1em;
+  overflow-y: hidden;
 }
 .post figure.highlight .gutter + .code pre {
   padding: 1em 0;

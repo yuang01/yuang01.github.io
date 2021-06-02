@@ -198,9 +198,7 @@
               <a href="javascript:;" class="drawer-menu-item-link has-children" @click="openOrCloseMenu(6)">
                 <span>
                   
-                    <i class="fa fa-link"></i>
-                  
-                  <span class="name">更多</span>
+                  <span class="name">🐱更多</span>
                 </span>
                 <i class="fa fa-chevron-left arrow " :class="{'icon-rotate': isOpen(6)}" aria-hidden="true"></i>
               </a>
@@ -209,36 +207,28 @@
                 <li>
                   <a href="/gallery">
                     
-                    <i class="fa fa-music" style="margin-top: -20px;"></i>
-                    
-                    <span>图库</span>
+                    <span>📷图库</span>
                   </a>
                 </li>
                 
                 <li>
                   <a href="/huoban">
                     
-                    <i class="fa fa-film" style="margin-top: -20px;"></i>
-                    
-                    <span>友情连接</span>
+                    <span>👪友情连接</span>
                   </a>
                 </li>
                 
                 <li>
                   <a href="/me">
                     
-                    <i class="fa fa-film" style="margin-top: -20px;"></i>
-                    
-                    <span>关于我</span>
+                    <span>🧒🏻关于我</span>
                   </a>
                 </li>
                 
                 <li>
                   <a target="_blank" rel="noopener" href="http://baidu.com">
                     
-                    <i class="fa fa-film" style="margin-top: -20px;"></i>
-                    
-                    <span>百度</span>
+                    <span>🉐百度</span>
                   </a>
                 </li>
                 
@@ -382,9 +372,7 @@
             
               <a href="javascript:;" class="menu-item-link">
                 
-                  <i class="fa fa-link"></i>
-                
-                <span class="name">更多</span>
+                <span class="name">🐱更多</span>
                 <i class="fa fa-chevron-down arrow" aria-hidden="true"></i>
               </a>
               <ul class="sub-menu">
@@ -392,36 +380,28 @@
                 <li>
                   <a href="/gallery">
                     
-                    <i class="fa fa-music" style="margin-top: -20px;"></i>
-                    
-                    <span>图库</span>
+                    <span>📷图库</span>
                   </a>
                 </li>
                 
                 <li>
                   <a href="/huoban">
                     
-                    <i class="fa fa-film" style="margin-top: -20px;"></i>
-                    
-                    <span>友情连接</span>
+                    <span>👪友情连接</span>
                   </a>
                 </li>
                 
                 <li>
                   <a href="/me">
                     
-                    <i class="fa fa-film" style="margin-top: -20px;"></i>
-                    
-                    <span>关于我</span>
+                    <span>🧒🏻关于我</span>
                   </a>
                 </li>
                 
                 <li>
                   <a target="_blank" rel="noopener" href="http://baidu.com">
                     
-                    <i class="fa fa-film" style="margin-top: -20px;"></i>
-                    
-                    <span>百度</span>
+                    <span>🉐百度</span>
                   </a>
                 </li>
                 
@@ -600,6 +580,15 @@
     
         <link href="/js/prism/prism.min.css" rel="stylesheet">
     
+
+    <style>
+        pre[class*="language-"] {
+            overflow-y: hidden;
+        }
+        .line-numbers .line-numbers-rows {
+            border: none;
+        }
+    </style>
   
 
 <div class="bg-dark-floor" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -1;"></div>
@@ -1566,7 +1555,7 @@ toc: false
 <tr>
 <td>excerpt</td>
 <td>无</td>
-<td>文章描述（摘要），该文章在首页的描述文字，如果没有，则取<code>swiperImg</code>,如果<code>swiperImg</code>也没有，则取文章内容</td>
+<td>文章描述（摘要），该文章在首页的描述文字，如果没有，则取<code>swiperDesc</code>,如果<code>swiperDesc</code>也没有，则取文章内容（优先取<code>&lt;!-- more --&gt;</code>上面的内容）</td>
 </tr>
 <tr>
 <td>top</td>
@@ -1630,10 +1619,18 @@ toc: false
 </tr>
 </tbody></table>
 <h2 class="bamboo-h " id="建议">建议</h2><br/>
-<p>图片都可以用http图片地址哦，不仅方便，图片加载速度也快些，但是一些百度图片或者其他网站的图片外链都做了防盗链，所以推荐大家将图片上传到图床，或者七牛云什么的。</p>
-<blockquote>
+<ul>
+<li>图片都可以用http图片地址哦，不仅方便，图片加载速度也快些，但是一些百度图片或者其他网站的图片外链都做了防盗链，所以推荐大家将图片上传到图床，或者七牛云什么的。<blockquote>
 <p>这里推荐一个<a target="_blank" rel="noopener" href="https://image.kieng.cn/">图床网站</a>，但是私密图片不要上传到这里哦</p>
 </blockquote>
+</li>
+<li>Emoji表情不需要，也不推荐安装其他插件，推荐这个网站，直接复制粘贴就能显示在<code>IOS</code>，<code>Android</code>，<code>OSX</code>和<code>Windows</code>系统上。<blockquote>
+<p>这里推荐一个<a target="_blank" rel="noopener" href="https://copy.emojiall.com/zh-hans/">Emoji网站</a><br>事例(example)：<br>😚😋😛😝😜🤪🤨🧐🤓😎😍<br>⚽比赛？🎊聚会？🎃节日？🎮游戏？热爱参加活动的你是否经常使用这些emoji？这个分类汇聚了所有活动与节日🔮，并持续在更新。🎆假期生活就应该疯狂且有趣，当你感到无聊时，不如来逛逛这个分类找点灵感🎗。请继续往下逛，一起探索生活的美好吧🎁。<br>这是主分类⚽ 活动的表情符号列表页面。它包括5个子分类，例如：🎈 事件, 🏅 奖牌, 🏀 运动, 🎯 游戏, 🎨 艺术和工艺。您可以单击下面的链接查看详细信息并复制表情符号。<br>还可以放在头部导航中哦</p>
+</blockquote>
+<div class="img-wrap"><div class="img-bg"><img class="img lazyload placeholder" "" class="lazyload placeholder" data-original="https://img10.360buyimg.com/ddimg/jfs/t1/189451/27/6185/1405918/60b7348dE008bf9d5/91a39401104b58ff.png" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" alt="头部导航加彩色图标"/></div><span class="image-caption">头部导航加彩色图标</span></div>
+
+</li>
+</ul>
 <h2 class="bamboo-h " id="内置标签">内置标签</h2><br/>
 <div class="note info"><p><strong>提示</strong></p><p>使用该功能，请先将hexo版本升级到5.0.0以上，在根目录下的<code>package.json</code>文件中可查看hexo的版本号</p></div>
 
