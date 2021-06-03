@@ -359,6 +359,7 @@ pre:hover::-webkit-scrollbar-thumb:hover,
   line-height: 45px;
 }
 .header .header-content .navbar .menu .menu-item .sub-menu li:first-child {
+  overflow: hidden;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
@@ -3473,6 +3474,10 @@ pre:hover::-webkit-scrollbar-thumb:hover,
 .darkModel .header #he-plugin-simple .s-sticker-city {
   color: #f0f6fc !important;
 }
+.darkModel .header .header-content .navbar .menu .menu-item .sub-menu a:hover,
+.darkModel .header .header-content .navbar .menu .menu-item:hover {
+  background-color: #000;
+}
 .note {
   padding: 12px 24px 12px 30px;
   border-left-width: 4px;
@@ -5325,6 +5330,43 @@ div.tabs .tab-content .tab-pane > .note:last-child {
   0% {
     background-position-x: 1rem;
   }
+}
+.bamboo-circle {
+  display: inline-block;
+  position: relative;
+}
+.bamboo-circle .bamboo-circle-content {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  line-height: 1;
+}
+.bamboo-circle .bamboo-circle-success {
+  color: #67c23a;
+}
+.bamboo-circle .bamboo-circle-success p {
+  color: #67c23a;
+}
+.bamboo-circle .bamboo-circle-info {
+  color: #409eff;
+}
+.bamboo-circle .bamboo-circle-info p {
+  color: #409eff;
+}
+.bamboo-circle .bamboo-circle-warning {
+  color: #e6a23c;
+}
+.bamboo-circle .bamboo-circle-warning p {
+  color: #e6a23c;
+}
+.bamboo-circle .bamboo-circle-danger {
+  color: #f66;
+}
+.bamboo-circle .bamboo-circle-danger p {
+  color: #f66;
 }
 .deng-box {
   position: fixed;
