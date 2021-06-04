@@ -3,14 +3,18 @@ title: testimg
 date: 2021-01-05 17:35:59
 tags:
 categories: 前端
+typora-root-url: ./testimg
 ---
 ![Image text](/img/1.jpg)
+![Image 22222](2.jpg)
 asda
+
+-- haha --
 
 我是一段文字
 > asa
 
-==我是高亮==
+== 我是高亮 ==
 
 * 第一项
 * 第二项
@@ -42,4 +46,5 @@ asda
 asdad
 ### 我是老三
 qwewqewq
+
 #### 我是老四

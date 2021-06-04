@@ -14,7 +14,7 @@ timezone: ''
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: http://yuang01.github.io
-root: /yuang
+root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -41,21 +41,25 @@ external_link:
   exclude: ''
 filename_case: 0
 render_drafts: false
-post_asset_folder: false
+post_asset_folder: true
 relative_link: false
 future: true
 highlight:
   enable: false
-  line_number: false
+  line_number: true
   auto_detect: false
   tab_replace: ''
   wrap: true
   hljs: false
-
+prismjs:
+  enable: true
+  preprocess: true
+  line_number: true
+  tab_replace: ''
 prism_plugin:
   mode: 'preprocess'    # realtime/preprocess
   theme: 'hopscotch'
-  line_number: false    # default false
+  line_number: true    # default false
   custom_css:
 
 search:
@@ -122,7 +126,7 @@ feed:
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://gitee.com/yuang01/yuang01.git
+  repo: https://github.com/yuang01/yuang01.github.io.git
 
 #  repo: https://github.com/yuang01/yuang01.github.io.git
 # https://gitee.com/yuang01/yuang01.git

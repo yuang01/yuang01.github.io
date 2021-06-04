@@ -1,0 +1,6 @@
+{
+    "i18n-ally.localesPaths": [
+        "themes/hexo-theme-bamboo/languages",
+        "themes/landscape/languages"
+    ]
+}

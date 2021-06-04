@@ -49,7 +49,7 @@ copyright:
     link: "link: "
     license_title: "Copyright notice: "
     left_license_content: "All articles on this website, unless otherwise stated, adopt "
-    right_license_content: "reprint polocy. If reproduced, please indicate source!"
+    right_license_content: "reprint policy. If reproduced, please indicate source!"
 
 friends: friends
 keyword: Please enter keywords
@@ -64,6 +64,7 @@ times: times
 people: people
 
 recommendedArticles: Recommend Articles
-readMore: Read more
+readMore: Read More
 copy: copy
 paperCatalog: catalog
+loading: loading

@@ -17,18 +17,15 @@ $borderRadius = 10px
   height: $height;
   box-sizing: border-box;
   transition: all 0.3s;
-  // background-image: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%);
   
   .header-content {
     min-width: calc(60% + 150px);
-    // min-width: 70%;
     height: 100%;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
     .bars {
-      // display: none
     }
     .navbar {
       height: 100%;
@@ -82,7 +79,6 @@ $borderRadius = 10px
             .sub-menu {
               padding-top: 5px;
               height: auto; 
-              // display: block;
               transform: translateY(0);
               opacity: 1;
               a:hover {
@@ -97,7 +93,6 @@ $borderRadius = 10px
             top: 100%;
             left: calc((140px - 100%) / -2);
             border-radius: $borderRadius;
-            // display: none;
             height: 0;
             transition: all 0.3s;
             overflow: hidden;
@@ -105,11 +100,16 @@ $borderRadius = 10px
             transition: all 0.3s;
             opacity: 0;
             li {
-              background-color: $color-primary;
+              if hexo-config('color_scheme.common.headerMenuBackgroundColor') {
+                background: convert(hexo-config('color_scheme.common.headerMenuBackgroundColor'));
+              }  else {
+                background: $color-primary
+              }
               width: 140px;
               text-align: center;
               line-height: 45px;
               &:first-child {
+                overflow: hidden;
                 border-top-left-radius: $borderRadius;
                 border-top-right-radius: $borderRadius;
               }

@@ -17,21 +17,21 @@ menu:
     icon: fa fa-user
   Friends:
     url: /friends
-  更多: # 这是二级菜单的写法
-   icon: fa fa-link
+  🐱更多: # 这是二级菜单的写法
+  #  icon: fa fa-link
    children:
-    - name: 图库
+    - name: 📷图库
       url: /gallery
-      icon: fa fa-music
-    - name: 友情连接
+      # icon: fa fa-music
+    - name: 👪友情连接
       url: /huoban
-      icon: fa fa-film
-    - name: 关于我
+      # icon: fa fa-film
+    - name: 🧒🏻关于我
       url: /me
-      icon: fa fa-film
-    - name: 百度
+      # icon: fa fa-film
+    - name: 🉐百度
       url: http://baidu.com
-      icon: fa fa-film
+      # icon: fa fa-film
 
 # github账号
 Github: https://github.com/yuang01/hexo-theme-bamboo
@@ -44,7 +44,7 @@ favicon: /favicon.ico # or .png .jpg .svg .gif .jpeg .ico
 
 # 页面预加载动画
 preloader:
-  on: false
+  on: true
 
 # 首页轮播图设置
 swiper:
@@ -66,7 +66,7 @@ swiper:
   defaultTile: '青墨书晚风' # 标题
   defaultDesc: ['煮酒洗净尘嚣，论知交', '万般付之一笑，共偕老'] #描 述
   defaultLeftBtnText: '阅读文档' # 左边按钮文字, 空字符串则不显示
-  defaultLeftBtnLink: 'https://yuang01.gitee.io/2021/02/08/hexo-theme-bamboo-new/' # 左边按钮链接 
+  defaultLeftBtnLink: 'https://yuang01.github.io/2021/02/08/hexo-theme-bamboo-new/' # 左边按钮链接 
   defaultRightBtnText: '下载主题' # 右边按钮的文字，空字符串则不显示
   defaultRightBtnLink: 'https://gitee.com/yuang01/hexo-theme-bamboo/repository/archive/dev.zip' # 右边的按钮的链接
   defaultDescTyped: true # defaultDesc文字是否开启打字特效
@@ -548,7 +548,9 @@ color_scheme:
     bgImgTransition: 'fade' # fade, scale, translate-fade,
     ## bgImg，bgImgDelay，bgImgTransition三个属性除了可以在这里全局配置，还可以在单独的文章里配置
     ## 单独的文章里配置，则这bgImg，bgImgDelay，bgImgTransition三个属性优先使用单独的文章里配置的
-
+  footer:
+    background: '' 
+    # 为空则使用 theme主题色，写法: alpha(#42b983, 0.8) or rgba(268, 264, 269, 0.8) or #42b983 or red or 也可以是渐变颜色 linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%) or 也可以是url("图片地址")
 
 # tag标签 按钮，文本高亮等等..
 tag_plugins:
