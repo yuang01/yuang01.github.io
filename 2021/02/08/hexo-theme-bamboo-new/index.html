@@ -1069,6 +1069,8 @@ books   <span class="token comment">#书籍</span><span aria-hidden="true" class
   <span class="token key atrule">bubble</span><span class="token punctuation">:</span> <span class="token boolean important">true</span> <span class="token comment"># 轮播图是否显示气泡,也可以打开底下的花瓣或者雪花特效 sakura（花瓣）: true snow(雪花): true</span>
   <span class="token comment"># 当没有文章设置swiper: true时候，轮播图会显示以下default默认内容，可自行切换对应内容</span>
   <span class="token key atrule">defaultImg</span><span class="token punctuation">:</span> <span class="token string">'https://img11.360buyimg.com/ddimg/jfs/t1/160978/33/20686/2476596/6083e62dEa588862b/63f8f2163ab61b2f.png'</span> <span class="token comment"># 图片，没有则随机选取</span>
+  <span class="token key atrule">defaultVideo</span><span class="token punctuation">:</span> <span class="token string">''</span> <span class="token comment"># video，min-width:992px show，视频</span>
+  <span class="token key atrule">defaultVideoLoadingImg</span><span class="token punctuation">:</span> <span class="token string">'https://img14.360buyimg.com/ddimg/jfs/t1/150557/6/19578/249564/60320406Ed5c42418/0d18299f505e4268.gif'</span> <span class="token comment"># video loading img -- use .gif img, 视频预加载动画，使用gif图片作为loading，为空则视频没有预加载动画</span>
   <span class="token key atrule">defaultTile</span><span class="token punctuation">:</span> <span class="token string">'青墨书晚风'</span> <span class="token comment"># 标题</span>
   <span class="token key atrule">defaultDesc</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">'煮酒洗净尘嚣，论知交'</span><span class="token punctuation">,</span> <span class="token string">'万般付之一笑，共偕老'</span><span class="token punctuation">]</span> <span class="token comment">#描 述</span>
   <span class="token key atrule">defaultLeftBtnText</span><span class="token punctuation">:</span> <span class="token string">'阅读文档'</span> <span class="token comment"># 左边按钮文字, 空字符串则不显示</span>
@@ -1086,7 +1088,7 @@ books   <span class="token comment">#书籍</span><span aria-hidden="true" class
   <span class="token key atrule">imgwidthFull</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
   <span class="token comment"># 整个轮播图宽高都是100%  (轮播图的文字和按钮只能居中显示)</span>
   <span class="token key atrule">full</span><span class="token punctuation">:</span> <span class="token boolean important">true</span> <span class="token comment"># full 优先级大于 imgwidthFull</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li><code>defaultAddToSwiper</code>表示，当有文章设置了<code>swiper:true</code>的时候，将default默认轮播图作为第一张轮播图</li>
 <li>通过<code>textCenter</code>控制轮播图的文字和按钮是否居中显示, <code>imgwidthFull</code>设置轮播图是否宽度为100%，但是高度不为100%，<code>full</code>表示轮播图宽高都是100%</li>
@@ -1142,6 +1144,18 @@ books   <span class="token comment">#书籍</span><span aria-hidden="true" class
 <div class="gallery ">
               <p><img "" class="lazyload placeholder" data-original="/img/full.png" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" alt="图片宽高为100%"><br><img "" class="lazyload placeholder" data-original="/img/full2.png" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" alt="图片宽高为100%"></p>
             </div>
+
+<blockquote>
+<p>还可以通过设置<code>defaultVideo</code>参数将默认轮播图的背景设置为视频，视频在屏幕大于992px的时候显示，小于992px则显示图片。效果如下所示:</p>
+</blockquote>
+<div class="video"><video controls preload><source src='/video/bamboo.mp4' type='video/mp4'>Your browser does not support the video tag.</video></div>
+<blockquote>
+<p>那免费的视频从哪里找呢，我推荐下面两个免费视频网站，直接右键复制网站视频链接就行了，不用下载下来</p>
+</blockquote>
+<div class="link-group"><div class="tagLink"><a class="link-card" title="mixkit" target="_blank" rel="noopener" href="https://mixkit.co/"><div class="left"><img "" class="lazyload placeholder" data-original="https://cdn.pixabay.com/photo/2018/12/05/13/41/panda-3857754__340.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"/></div><div class="right"><p class="text">mixkit</p><p class="url">https://mixkit.co/</p></div></a></div>
+
+<div class="tagLink"><a class="link-card" title="coverr" target="_blank" rel="noopener" href="https://coverr.co/"><div class="left"><img "" class="lazyload placeholder" data-original="https://cdn.pixabay.com/photo/2018/12/05/13/41/panda-3857754__340.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"/></div><div class="right"><p class="text">coverr</p><p class="url">https://coverr.co/</p></div></a></div>
+</div>
 
 <p>上面的都是头部导航透明的，如果你不想导航透明，则可以设置底下的<code>color_scheme.common.headerMenuTransparent</code>为<code>false</code>，这样看上去和以前的版本就是一样的效果了<br><img "" class="lazyload placeholder" data-original="https://img10.360buyimg.com/ddimg/jfs/t1/195127/39/6433/1605024/60b98cc8E066b88d4/25ef8fce6fa2966f.png" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" alt="头部导航不透明"></p>
 <h3 id="首页座右铭"><a href="#首页座右铭" class="headerlink" title="首页座右铭"></a>首页座右铭</h3><pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">motto</span><span class="token punctuation">:</span>
@@ -1897,6 +1911,12 @@ toc: false
     })
     gitalk.render('gitalk-container')
 </script>
+
+<style>
+    .gt-container .gt-meta {
+        z-index: 2;
+    }
+</style>
           
         </div>
       
