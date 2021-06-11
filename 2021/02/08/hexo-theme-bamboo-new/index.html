@@ -717,23 +717,11 @@
   <div class="post-detail-header-mask"></div>
   <canvas id="header_canvas"style="position:absolute;bottom:0;pointer-events:none;"></canvas>
   
-    <div class="title-box">
-      
-        <span class="title" id="post-detail-header-title"></span>
-        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
-          <script>
-            var typed = new Typed("#post-detail-header-title", {
-              strings: ['Hexo主题--Bamboo介绍'],
-              startDelay: 100,
-              typeSpeed: 100,
-              loop: false,
-              backSpeed: 50,
-              showCursor: false
-            });
-          </script>
-        
-    </div>
-  
+  <div class="title-box">
+    <span class="title">
+      Hexo主题--Bamboo介绍
+    </span>
+  </div>
   
   
     <script src="/js/bubble/bubble.js"></script>
@@ -744,7 +732,6 @@
 <div class="row justify-position">
   <div class="main-content">
     <article class="post post-detail">
-      
       
       <div class="post-meta">
         <i class="fa fa-clock-o" aria-hidden="true"></i>
@@ -1272,7 +1259,6 @@ toc: false
 <span class="token key atrule">sakura</span><span class="token punctuation">:</span>
   <span class="token key atrule">on</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
   <span class="token key atrule">onlyPc</span><span class="token punctuation">:</span> <span class="token boolean important">false</span> <span class="token comment"># 设为true，只有pc端显示花瓣特效</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="文章详情页的标题显示位置"><a href="#文章详情页的标题显示位置" class="headerlink" title="文章详情页的标题显示位置"></a>文章详情页的标题显示位置</h3><p>设置主题文件夹下的<code>_config.yml</code>文件中的<code>postTitleTop</code>属性true或者false即可，true的时候，显示在上方的图片中，false显示在文章内容上面</p>
 <h3 id="输入框打字特效"><a href="#输入框打字特效" class="headerlink" title="输入框打字特效"></a>输入框打字特效</h3><p>搜索弹框中的输入框打字特效，设置主题文件夹下的<code>_config.yml</code>文件中的<code>inputEffects</code>属性为true或者false即可。</p>
 <h3 id="live-2d人物"><a href="#live-2d人物" class="headerlink" title="live-2d人物"></a>live-2d人物</h3><p>设置主题文件夹下的<code>_config.yml</code>文件中的<code>live2d</code>属性为true或者false，可以通过<code>modelId</code>属性选择模型，注意，live-2d人物只有在屏幕宽度最小为992px的时候才显示</p>
 <pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token comment"># live-2d(左下角动画人物)</span>

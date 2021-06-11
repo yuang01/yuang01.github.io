@@ -1098,6 +1098,7 @@ pre:hover::-webkit-scrollbar-thumb:hover,
   z-index: 2;
   font-size: 2.5rem;
   font-family: MV Boli;
+  color: #fff;
 }
 .tags-header .tags-header-desc {
   z-index: 2;
@@ -1136,6 +1137,7 @@ pre:hover::-webkit-scrollbar-thumb:hover,
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  color: #fff;
 }
 .tags-video .video-header-desc {
   z-index: 2;
@@ -1241,6 +1243,7 @@ pre:hover::-webkit-scrollbar-thumb:hover,
   z-index: 2;
   font-size: 2.5rem;
   font-family: MV Boli;
+  color: #fff;
 }
 .categories-header .categories-header-desc {
   z-index: 2;
@@ -1279,6 +1282,7 @@ pre:hover::-webkit-scrollbar-thumb:hover,
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  color: #fff;
 }
 .categories-video .video-header-desc {
   z-index: 2;
@@ -1765,6 +1769,7 @@ pre:hover::-webkit-scrollbar-thumb:hover,
   z-index: 2;
   font-size: 2.5rem;
   font-family: MV Boli;
+  color: #fff;
 }
 .archive-header .archive-header-desc {
   z-index: 2;
@@ -1803,6 +1808,7 @@ pre:hover::-webkit-scrollbar-thumb:hover,
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  color: #fff;
 }
 .archive-video .video-header-desc {
   z-index: 2;
@@ -1932,6 +1938,7 @@ pre:hover::-webkit-scrollbar-thumb:hover,
   z-index: 2;
   font-size: 2.5rem;
   font-family: MV Boli;
+  color: #fff;
 }
 .tag-header .tag-header-desc {
   z-index: 2;
@@ -1970,6 +1977,7 @@ pre:hover::-webkit-scrollbar-thumb:hover,
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  color: #fff;
 }
 .tag-video .video-header-desc {
   z-index: 2;
@@ -2048,6 +2056,7 @@ pre:hover::-webkit-scrollbar-thumb:hover,
   z-index: 2;
   font-size: 2.5rem;
   font-family: MV Boli;
+  color: #fff;
 }
 .category-header .category-header-desc {
   z-index: 2;
@@ -2086,6 +2095,7 @@ pre:hover::-webkit-scrollbar-thumb:hover,
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  color: #fff;
 }
 .category-video .video-header-desc {
   z-index: 2;
@@ -2171,6 +2181,7 @@ pre:hover::-webkit-scrollbar-thumb:hover,
   z-index: 2;
   font-size: 2.5rem;
   font-family: MV Boli;
+  color: #fff;
 }
 .friends-header .friends-header-desc {
   z-index: 2;
@@ -2209,6 +2220,7 @@ pre:hover::-webkit-scrollbar-thumb:hover,
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  color: #fff;
 }
 .friends-video .video-header-desc {
   z-index: 2;
@@ -2321,6 +2333,7 @@ pre:hover::-webkit-scrollbar-thumb:hover,
   z-index: 2;
   font-size: 2.5rem;
   font-family: MV Boli;
+  color: #fff;
 }
 .about-header .about-header-desc {
   z-index: 2;
@@ -2359,6 +2372,7 @@ pre:hover::-webkit-scrollbar-thumb:hover,
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  color: #fff;
 }
 .about-video .video-header-desc {
   z-index: 2;
