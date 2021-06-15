@@ -1220,7 +1220,33 @@ toc: false
   <span class="token key atrule">on</span><span class="token punctuation">:</span> <span class="token boolean important">false</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <h3 id="回到顶部"><a href="#回到顶部" class="headerlink" title="回到顶部"></a>回到顶部</h3><p>设置主题文件夹下的<code>_config.yml</code>文件中的<code>goTop</code>属性即可控制隐藏显示</p>
 <h3 id="文章详情页图片放大功能"><a href="#文章详情页图片放大功能" class="headerlink" title="文章详情页图片放大功能"></a>文章详情页图片放大功能</h3><p>设置主题文件夹下的<code>_config.yml</code>文件中的<code>fancybox</code>属性即可</p>
-<h3 id="修改页脚"><a href="#修改页脚" class="headerlink" title="修改页脚"></a>修改页脚</h3><p>页脚底部的网站统计功能，使用的是<a target="_blank" rel="noopener" href="http://busuanzi.ibruce.info/">不蒜子</a>，设置主题文件夹下的<code>_config.yml</code>文件中的<code>busuanzi</code>属性即可控制隐藏显示<br>页脚信息可以在<code>/layout/_partial/footer.ejs</code> 文件中进行手动修改。本主题使用<a target="_blank" rel="noopener" href="http://www.fontawesome.com.cn/faicons/">Font Awesome图标</a></p>
+<h3 id="修改页脚"><a href="#修改页脚" class="headerlink" title="修改页脚"></a>修改页脚</h3><p>页脚底部的网站统计功能，使用的是<a target="_blank" rel="noopener" href="http://busuanzi.ibruce.info/">不蒜子</a>，设置主题文件夹下的<code>_config.yml</code>文件中的<code>busuanzi</code>属性即可控制隐藏显示</p>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token comment"># 设置网站页脚</span>
+<span class="token key atrule">site_footer</span><span class="token punctuation">:</span>
+  <span class="token key atrule">social</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> <span class="token key atrule">icon</span><span class="token punctuation">:</span> fa fa<span class="token punctuation">-</span>rss
+      <span class="token key atrule">url</span><span class="token punctuation">:</span> /atom.xml
+    <span class="token punctuation">-</span> <span class="token key atrule">icon</span><span class="token punctuation">:</span> fa fa<span class="token punctuation">-</span>envelope
+      <span class="token key atrule">url</span><span class="token punctuation">:</span> mailto<span class="token punctuation">:</span>1730241541@qq.com
+    <span class="token punctuation">-</span> <span class="token key atrule">icon</span><span class="token punctuation">:</span> fa fa<span class="token punctuation">-</span>github
+      <span class="token key atrule">url</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//github.com/yuang01/hexo<span class="token punctuation">-</span>theme<span class="token punctuation">-</span>bamboo
+    <span class="token punctuation">-</span> <span class="token key atrule">icon</span><span class="token punctuation">:</span> fa fa<span class="token punctuation">-</span>qq
+      <span class="token key atrule">url</span><span class="token punctuation">:</span> tencent<span class="token punctuation">:</span>//AddContact/<span class="token punctuation">?</span>fromId=50<span class="token important">&amp;fromSubId=1&amp;subcmd=all&amp;uin=1730241541</span>
+  <span class="token key atrule">copyright</span><span class="token punctuation">:</span> <span class="token string">'Copyright © 2019 - 2020 &lt;a href="https://github.com/yuang01">yuang01&lt;/a> | Powered by &lt;a href="https://hexo.io/zh-cn/docs/">Hexo&lt;/a> | Theme &lt;a href="https://github.com/yuang01/theme">Bamboo&lt;/a> '</span>
+  <span class="token key atrule">custom</span><span class="token punctuation">:</span> <span class="token comment"># 根据需要自行取消注释，label: 'markdown格式'，会在下面继续增加内容</span>
+    <span class="token comment"># - label: '&lt;br>'</span>
+    <span class="token comment"># - label: '[Hello World](http://baidu.com)'</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>or</p>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">site_footer</span><span class="token punctuation">:</span>
+  <span class="token key atrule">social</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> <span class="token key atrule">img</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//seikim.com/i/2021/06/15/h4fynr.svg
+      <span class="token key atrule">url</span><span class="token punctuation">:</span> fa fa<span class="token punctuation">-</span>github<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>or </p>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">site_footer</span><span class="token punctuation">:</span>
+  <span class="token key atrule">social</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> <span class="token key atrule">avatar</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//seikim.com/i/2021/06/15/h4fynr.svg
+      <span class="token key atrule">url</span><span class="token punctuation">:</span> fa fa<span class="token punctuation">-</span>github<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>本主题使用<a target="_blank" rel="noopener" href="http://www.fontawesome.com.cn/faicons/">Font Awesome图标</a></p>
 <blockquote>
 <p><strong>注意</strong>: 本主题中使用的 <code>Font Awesome</code> 版本为 <code>4.7.0</code>。</p>
 </blockquote>
