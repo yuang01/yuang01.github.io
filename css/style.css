@@ -1100,6 +1100,8 @@ pre:hover::-webkit-scrollbar-thumb:hover,
 }
 .bg-light-floor-tags {
   background: ;
+  background-size: cover;
+  background-position: center center;
 }
 .tags-header {
   position: relative;
@@ -1248,6 +1250,8 @@ pre:hover::-webkit-scrollbar-thumb:hover,
 }
 .bg-light-floor-categories {
   background: ;
+  background-size: cover;
+  background-position: center center;
 }
 .categories-header {
   position: relative;
@@ -1776,6 +1780,8 @@ pre:hover::-webkit-scrollbar-thumb:hover,
 }
 .bg-light-floor-archive {
   background: ;
+  background-size: cover;
+  background-position: center center;
 }
 .archive-main {
   min-height: 60vh;
@@ -1952,6 +1958,8 @@ pre:hover::-webkit-scrollbar-thumb:hover,
 }
 .bg-light-floor-tagDetail {
   background: ;
+  background-size: cover;
+  background-position: center center;
 }
 .tag-header {
   position: relative;
@@ -2073,6 +2081,8 @@ pre:hover::-webkit-scrollbar-thumb:hover,
 }
 .bg-light-floor-categoryDetail {
   background: ;
+  background-size: cover;
+  background-position: center center;
 }
 .category-header {
   position: relative;
@@ -2194,6 +2204,8 @@ pre:hover::-webkit-scrollbar-thumb:hover,
 }
 .bg-light-floor-friends {
   background: ;
+  background-size: cover;
+  background-position: center center;
 }
 .friends-title {
   font-size: 1.6em;
@@ -2355,6 +2367,8 @@ pre:hover::-webkit-scrollbar-thumb:hover,
 }
 .bg-light-floor-about {
   background: ;
+  background-size: cover;
+  background-position: center center;
 }
 .about-header {
   position: relative;
