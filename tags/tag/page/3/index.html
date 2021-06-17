@@ -129,112 +129,114 @@
     <div class="drawer-box-content">
       <ul class="drawer-box-content_menu">
         
-          <li class="drawer-box-content_item" style="position: relative;">
-            
-              <a href="/" class="drawer-menu-item-link">
-                
-                  <i class="fa fa-home" aria-hidden="true"></i>
-                
-                <span class="name">首页</span>
-              </a>
-            
-          </li>
-        
-          <li class="drawer-box-content_item" style="position: relative;">
-            
-              <a href="/archives" class="drawer-menu-item-link">
-                
-                  <i class="fa fa-archive" aria-hidden="true"></i>
-                
-                <span class="name">归档</span>
-              </a>
-            
-          </li>
-        
-          <li class="drawer-box-content_item" style="position: relative;">
-            
-              <a href="/tags" class="drawer-menu-item-link">
-                
-                  <i class="fa fa-tags" aria-hidden="true"></i>
-                
-                <span class="name">标签</span>
-              </a>
-            
-          </li>
-        
-          <li class="drawer-box-content_item" style="position: relative;">
-            
-              <a href="/categories" class="drawer-menu-item-link">
-                
-                  <i class="fa fa-bookmark" aria-hidden="true"></i>
-                
-                <span class="name">分类</span>
-              </a>
-            
-          </li>
-        
-          <li class="drawer-box-content_item" style="position: relative;">
-            
-              <a href="/about" class="drawer-menu-item-link">
-                
-                  <i class="fa fa-user" aria-hidden="true"></i>
-                
-                <span class="name">关于</span>
-              </a>
-            
-          </li>
-        
-          <li class="drawer-box-content_item" style="position: relative;">
-            
-              <a href="/friends" class="drawer-menu-item-link">
-                
-                <span class="name">友情链接</span>
-              </a>
-            
-          </li>
-        
-          <li class="drawer-box-content_item" style="position: relative;">
-            
-              <a href="javascript:;" class="drawer-menu-item-link has-children" @click="openOrCloseMenu(6)">
-                <span>
+          
+            <li class="drawer-box-content_item" style="position: relative;">
+              
+                <a href="/" class="drawer-menu-item-link">
                   
-                  <span class="name">🐱更多</span>
-                </span>
-                <i class="fa fa-chevron-left arrow " :class="{'icon-rotate': isOpen(6)}" aria-hidden="true"></i>
-              </a>
-              <ul class="drawer-sub-menu" v-if="isOpen(6)">
-                
-                <li>
-                  <a href="/gallery">
+                    <i class="fa fa-home" aria-hidden="true"></i>
+                  
+                  <span class="name">首页</span>
+                </a>
+              
+            </li>
+          
+            <li class="drawer-box-content_item" style="position: relative;">
+              
+                <a href="/archives" class="drawer-menu-item-link">
+                  
+                    <i class="fa fa-archive" aria-hidden="true"></i>
+                  
+                  <span class="name">归档</span>
+                </a>
+              
+            </li>
+          
+            <li class="drawer-box-content_item" style="position: relative;">
+              
+                <a href="/tags" class="drawer-menu-item-link">
+                  
+                    <i class="fa fa-tags" aria-hidden="true"></i>
+                  
+                  <span class="name">标签</span>
+                </a>
+              
+            </li>
+          
+            <li class="drawer-box-content_item" style="position: relative;">
+              
+                <a href="/categories" class="drawer-menu-item-link">
+                  
+                    <i class="fa fa-bookmark" aria-hidden="true"></i>
+                  
+                  <span class="name">分类</span>
+                </a>
+              
+            </li>
+          
+            <li class="drawer-box-content_item" style="position: relative;">
+              
+                <a href="/about" class="drawer-menu-item-link">
+                  
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                  
+                  <span class="name">关于</span>
+                </a>
+              
+            </li>
+          
+            <li class="drawer-box-content_item" style="position: relative;">
+              
+                <a href="/friends" class="drawer-menu-item-link">
+                  
+                  <span class="name">友情链接</span>
+                </a>
+              
+            </li>
+          
+            <li class="drawer-box-content_item" style="position: relative;">
+              
+                <a href="javascript:;" class="drawer-menu-item-link has-children" @click="openOrCloseMenu(6)">
+                  <span>
                     
-                    <span>📷图库</span>
-                  </a>
-                </li>
-                
-                <li>
-                  <a href="/huoban">
-                    
-                    <span>👪友情连接</span>
-                  </a>
-                </li>
-                
-                <li>
-                  <a href="/me">
-                    
-                    <span>🧒🏻关于我</span>
-                  </a>
-                </li>
-                
-                <li>
-                  <a target="_blank" rel="noopener" href="http://baidu.com">
-                    
-                    <span>🉐百度</span>
-                  </a>
-                </li>
-                
-              </ul>
-            
-          </li>
+                    <span class="name">🐱更多</span>
+                  </span>
+                  <i class="fa fa-chevron-left arrow " :class="{'icon-rotate': isOpen(6)}" aria-hidden="true"></i>
+                </a>
+                <ul class="drawer-sub-menu" v-if="isOpen(6)">
+                  
+                  <li>
+                    <a href="/gallery">
+                      
+                      <span>📷图库</span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="/huoban">
+                      
+                      <span>👪友情连接</span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="/me">
+                      
+                      <span>🧒🏻关于我</span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a target="_blank" rel="noopener" href="http://baidu.com">
+                      
+                      <span>🉐百度</span>
+                    </a>
+                  </li>
+                  
+                </ul>
+              
+            </li>
+          
         
         <li class="drawer-box-content_item">
           <a target="_blank" rel="noopener" href="https://github.com/yuang01/hexo-theme-bamboo">
@@ -304,110 +306,112 @@
     <nav class="navbar">
       <ul class="menu">
         
-          <li class="menu-item" style="position: relative;">
-            
-              <a href="/" class="menu-item-link">
-                
-                  <i class="fa fa-home" aria-hidden="true"></i>
-                
-                <span class="name">首页</span>
-              </a>
-            
-          </li>
-        
-          <li class="menu-item" style="position: relative;">
-            
-              <a href="/archives" class="menu-item-link">
-                
-                  <i class="fa fa-archive" aria-hidden="true"></i>
-                
-                <span class="name">归档</span>
-              </a>
-            
-          </li>
-        
-          <li class="menu-item" style="position: relative;">
-            
-              <a href="/tags" class="menu-item-link">
-                
-                  <i class="fa fa-tags" aria-hidden="true"></i>
-                
-                <span class="name">标签</span>
-              </a>
-            
-          </li>
-        
-          <li class="menu-item" style="position: relative;">
-            
-              <a href="/categories" class="menu-item-link">
-                
-                  <i class="fa fa-bookmark" aria-hidden="true"></i>
-                
-                <span class="name">分类</span>
-              </a>
-            
-          </li>
-        
-          <li class="menu-item" style="position: relative;">
-            
-              <a href="/about" class="menu-item-link">
-                
-                  <i class="fa fa-user" aria-hidden="true"></i>
-                
-                <span class="name">关于</span>
-              </a>
-            
-          </li>
-        
-          <li class="menu-item" style="position: relative;">
-            
-              <a href="/friends" class="menu-item-link">
-                
-                <span class="name">友情链接</span>
-              </a>
-            
-          </li>
-        
-          <li class="menu-item" style="position: relative;">
-            
-              <a href="javascript:;" class="menu-item-link">
-                
-                <span class="name">🐱更多</span>
-                <i class="fa fa-chevron-down arrow" aria-hidden="true"></i>
-              </a>
-              <ul class="sub-menu">
-                
-                <li>
-                  <a href="/gallery">
-                    
-                    <span>📷图库</span>
-                  </a>
-                </li>
-                
-                <li>
-                  <a href="/huoban">
-                    
-                    <span>👪友情连接</span>
-                  </a>
-                </li>
-                
-                <li>
-                  <a href="/me">
-                    
-                    <span>🧒🏻关于我</span>
-                  </a>
-                </li>
-                
-                <li>
-                  <a target="_blank" rel="noopener" href="http://baidu.com">
-                    
-                    <span>🉐百度</span>
-                  </a>
-                </li>
-                
-              </ul>
-            
-          </li>
+          
+            <li class="menu-item" style="position: relative;">
+              
+                <a href="/" class="menu-item-link">
+                  
+                    <i class="fa fa-home" aria-hidden="true"></i>
+                  
+                  <span class="name">首页</span>
+                </a>
+              
+            </li>
+          
+            <li class="menu-item" style="position: relative;">
+              
+                <a href="/archives" class="menu-item-link">
+                  
+                    <i class="fa fa-archive" aria-hidden="true"></i>
+                  
+                  <span class="name">归档</span>
+                </a>
+              
+            </li>
+          
+            <li class="menu-item" style="position: relative;">
+              
+                <a href="/tags" class="menu-item-link">
+                  
+                    <i class="fa fa-tags" aria-hidden="true"></i>
+                  
+                  <span class="name">标签</span>
+                </a>
+              
+            </li>
+          
+            <li class="menu-item" style="position: relative;">
+              
+                <a href="/categories" class="menu-item-link">
+                  
+                    <i class="fa fa-bookmark" aria-hidden="true"></i>
+                  
+                  <span class="name">分类</span>
+                </a>
+              
+            </li>
+          
+            <li class="menu-item" style="position: relative;">
+              
+                <a href="/about" class="menu-item-link">
+                  
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                  
+                  <span class="name">关于</span>
+                </a>
+              
+            </li>
+          
+            <li class="menu-item" style="position: relative;">
+              
+                <a href="/friends" class="menu-item-link">
+                  
+                  <span class="name">友情链接</span>
+                </a>
+              
+            </li>
+          
+            <li class="menu-item" style="position: relative;">
+              
+                <a href="javascript:;" class="menu-item-link">
+                  
+                  <span class="name">🐱更多</span>
+                  <i class="fa fa-chevron-down arrow" aria-hidden="true"></i>
+                </a>
+                <ul class="sub-menu">
+                  
+                  <li>
+                    <a href="/gallery">
+                      
+                      <span>📷图库</span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="/huoban">
+                      
+                      <span>👪友情连接</span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="/me">
+                      
+                      <span>🧒🏻关于我</span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a target="_blank" rel="noopener" href="http://baidu.com">
+                      
+                      <span>🉐百度</span>
+                    </a>
+                  </li>
+                  
+                </ul>
+              
+            </li>
+          
         
       </ul>
       
@@ -575,6 +579,8 @@
       
 
 <div class="bg-dark-floor" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -2;"></div>
+<div class="bg-light-floor-tagDetail" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -3;"></div>
+
 <div class="lazyload tag-header" data-original="https://pic1.zhimg.com/80/v2-604a15cef201cf177943af2d915eb2e7_1440w.jpg?source=1940ef5c">
   <div class="tag-header-title">
     tag
@@ -639,6 +645,67 @@
             <span class="post-time">2021-02-08</span>
           </div>
           <div class="post-title">
+            <a class="post-title-link" href="/2021/02/08/text/">Text文本样式标签</a>
+          </div>
+          <div class="post-meta">
+            <div class="post-tags">
+              
+    <i class="iconfont icontag"></i>
+    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tag/" rel="tag">tag</a></li></ul>
+
+            </div>
+            <div class="post-categories">
+              
+<div class="article-category">
+  <i class="iconfont iconbookmark1"></i>
+  <a class="article-category-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a>
+</div>
+
+            </div>
+          </div>
+          <div class="post-img-mobile">
+            
+              <a href="/2021/02/08/text/" class="lazyload" data-original="https://pic4.zhimg.com/v2-8ad0cffeaa7dec5dd1930eebc6ff863f_b.jpg" style="background-size: cover; 
+                background-position: center center;">
+              </a>
+            
+          </div>
+          <div class="post-content">
+            Text文本样式标签演示
+
+带 下划线 的文本
+带 着重号 的文本
+带 波浪线 的文本
+带 删除线 的文本
+键盘样式的文本 command + D
+密码样式的文本：这里没有验证码
+上述事例代码&#123;% title h2, Text文本
+          </div>
+        </div>
+        <div class="post-more">
+          <a href="/2021/02/08/text/">
+            <i class="iconfont iconmore" style="float: right;" title="阅读更多"></i>
+          </a>
+        </div>
+      </div>
+      <div class="post-img">
+        
+          <a href="/2021/02/08/text/" class="lazyload" data-original="https://pic4.zhimg.com/v2-8ad0cffeaa7dec5dd1930eebc6ff863f_b.jpg" style="background-size: cover; 
+            background-position: center center;">
+          </a>
+        
+      </div>
+    </article>
+    
+    <article class="post" data-aos="fade-up"
+      style="">
+      <div class="post-main">
+        <div class="post-info">
+          <div class="post-time">
+            <i class="fa fa-clock-o" aria-hidden="true"></i>
+            <span class="post-time">2021-02-08</span>
+          </div>
+          <div class="post-title">
             <a class="post-title-link" href="/2021/02/08/timeline/">timeline时间线</a>
           </div>
           <div class="post-meta">
@@ -673,13 +740,81 @@
         </div>
         <div class="post-more">
           <a href="/2021/02/08/timeline/">
-            <i class="iconfont iconmore" style="float: right;" title="阅读更多"></i>
+            <i class="iconfont iconmore" style="" title="阅读更多"></i>
           </a>
         </div>
       </div>
       <div class="post-img">
         
           <a href="/2021/02/08/timeline/" class="lazyload" data-original="https://pic4.zhimg.com/v2-672bbb43fda6c749b16e2b8c8d69e15f_b.jpg" style="background-size: cover; 
+            background-position: center center;">
+          </a>
+        
+      </div>
+    </article>
+    
+    <article class="post" data-aos="fade-up"
+      style="flex-direction: row-reverse;">
+      <div class="post-main">
+        <div class="post-info">
+          <div class="post-time">
+            <i class="fa fa-clock-o" aria-hidden="true"></i>
+            <span class="post-time">2021-02-08</span>
+          </div>
+          <div class="post-title">
+            <a class="post-title-link" href="/2021/02/08/title/">title</a>
+          </div>
+          <div class="post-meta">
+            <div class="post-tags">
+              
+    <i class="iconfont icontag"></i>
+    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tag/" rel="tag">tag</a></li></ul>
+
+            </div>
+            <div class="post-categories">
+              
+<div class="article-category">
+  <i class="iconfont iconbookmark1"></i>
+  <a class="article-category-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a>
+</div>
+
+            </div>
+          </div>
+          <div class="post-img-mobile">
+            
+              <a href="/2021/02/08/title/" class="lazyload" data-original="https://pic1.zhimg.com/v2-cdf0dd8357e2cf573f32d0d65cff6404_b.jpg" style="background-size: cover; 
+                background-position: center center;">
+              </a>
+            
+          </div>
+          <div class="post-content">
+            title演示
+
+我是标题
+
+你好啊，未来越来越好哦
+我是标题
+
+你好啊，加油哦
+我是标题
+
+我是标题
+上述事例代码&#123;% title h1, 我是标题 %&#125;
+
+你好啊，未来越来越好哦
+
+&#123;% title h2,
+          </div>
+        </div>
+        <div class="post-more">
+          <a href="/2021/02/08/title/">
+            <i class="iconfont iconmore" style="float: right;" title="阅读更多"></i>
+          </a>
+        </div>
+      </div>
+      <div class="post-img">
+        
+          <a href="/2021/02/08/title/" class="lazyload" data-original="https://pic1.zhimg.com/v2-cdf0dd8357e2cf573f32d0d65cff6404_b.jpg" style="background-size: cover; 
             background-position: center center;">
           </a>
         
@@ -768,21 +903,46 @@ Your bro
     <div class="footer bg-color">
   <div class="footer-main">
     <div class="link">
-      <a target="_blank" rel="noopener" href="https://github.com/yuang01/hexo-theme-bamboo">
-        <i class="fa fa-github" aria-hidden="true"></i>
-      </a>
-      <a href="mailto:1730241541@qq.com">
-        <i class="fa fa-envelope-o" aria-hidden="true"></i>
-      </a>
-      <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1730241541">
-        <i class="fa fa-qq" aria-hidden="true"></i>
-      </a>
-      <a href="/atom.xml" target="_blank">
-        <i class="fa fa-rss" aria-hidden="true"></i>
-      </a>
+      
+        
+          <a href="/atom.xml" class="social">
+            
+              <i class="fa fa-rss" aria-hidden="true"></i>
+            
+          </a>
+        
+      
+        
+          <a href="mailto:1730241541@qq.com" class="social">
+            
+              <i class="fa fa-envelope" aria-hidden="true"></i>
+            
+          </a>
+        
+      
+        
+          <a target="_blank" rel="noopener" href="https://github.com/yuang01/hexo-theme-bamboo" class="social">
+            
+              <i class="fa fa-github" aria-hidden="true"></i>
+            
+          </a>
+        
+      
+        
+          <a href="tencent://AddContact/?fromId=50&amp;fromSubId=1&amp;subcmd=all&amp;uin=1730241541" class="social">
+            
+              <i class="fa fa-qq" aria-hidden="true"></i>
+            
+          </a>
+        
+      
     </div>
     <div class="footer-copyright">
-      Copyright © 2019 - 2020 <a target="_blank" rel="noopener" href="https://github.com/yuang01">yuang01</a> | Powered by <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">Hexo</a> | Theme <a target="_blank" rel="noopener" href="https://github.com/yuang01/theme">Bamboo</a> 
+      <p>Copyright © 2019 - 2020 <a target="_blank" rel="noopener" href="https://github.com/yuang01">yuang01</a> | Powered by <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">Hexo</a> | Theme <a target="_blank" rel="noopener" href="https://github.com/yuang01/theme">Bamboo</a> </p>
+
+    </div>
+    <div class="footer-custom">
+      
     </div>
     <!-- 不蒜子统计 -->
     

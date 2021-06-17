@@ -10,7 +10,7 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-  <title>gallery图片 | Bamboo</title>
+  <title>issues-sites标签 | Bamboo</title>
 
   
     
@@ -716,14 +716,14 @@
 
 
 
-<div class="post-detail-header lazyload" id="thumbnail_canvas" data-original="https://pic2.zhimg.com/80/v2-1ecd92421c8823c396f96d15325e6d42_1440w.jpg?source=1940ef5c" style="background-repeat: no-repeat; background-size: cover; 
+<div class="post-detail-header lazyload" id="thumbnail_canvas" data-original="https://w.wallhaven.cc/full/g8/wallhaven-g8wg6q.png" style="background-repeat: no-repeat; background-size: cover; 
   background-position: center center;position: relative;">
   <div class="post-detail-header-mask"></div>
   <canvas id="header_canvas"style="position:absolute;bottom:0;pointer-events:none;"></canvas>
   
   <div class="title-box">
     <span class="title">
-      gallery图片
+      issues-sites标签
     </span>
   </div>
   
@@ -739,7 +739,7 @@
       
       <div class="post-meta">
         <i class="fa fa-clock-o" aria-hidden="true"></i>
-        <span class="post-time">2021-02-08</span>
+        <span class="post-time">2021-06-16</span>
       </div>
       
       <div class="post-tags-categories">
@@ -765,88 +765,33 @@
         
       </div>
       <div class="post-content">
-        <div class="note info"><p><strong>提示</strong></p><p>使用该标签请先将主题下的<code>_config.yml</code>中的<code>fancybox</code>设置为<code>true</code></p></div>
+        <p>该标签会去拿到某个repo仓库的issue内容，用<code>sites标签</code>的形式显示出来，可以用做网站的<code>友链</code>功能<br>该标签和<code>issues-timeline</code>标签都适用于<code>github</code>和<code>gitee</code></p>
+<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><p>issue里面需要有JSON代码块：</p>
+<pre class="line-numbers language-json" data-language="json"><code class="language-json"><span class="token punctuation">&#123;</span>
+    <span class="token property">"title"</span><span class="token operator">:</span> <span class="token string">""</span><span class="token punctuation">,</span>
+    <span class="token property">"url"</span><span class="token operator">:</span> <span class="token string">""</span><span class="token punctuation">,</span>
+    <span class="token property">"avatar"</span><span class="token operator">:</span> <span class="token string">""</span><span class="token punctuation">,</span>
+    <span class="token property">"screenshot"</span><span class="token operator">:</span> <span class="token string">""</span><span class="token punctuation">,</span>
+    <span class="token property">"description"</span><span class="token operator">:</span> <span class="token string">""</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="Github写法"><a href="#Github写法" class="headerlink" title="Github写法"></a>Github写法</h2><pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">&#123;% issues sites | api=https://api.github.com/repos/yuang01/friends/issues?sort=updated&amp;state=open&amp;page=1&amp;per_page=100&amp;labels=active %&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h2 id="Gitee写法"><a href="#Gitee写法" class="headerlink" title="Gitee写法"></a>Gitee写法</h2><pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">&#123;% issues sites | api=https://gitee.com/api/v5/repos/yuang01/friends/issues?sort=updated&amp;state=open&amp;page=1&amp;per_page=100&amp;labels=active %&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><code>yuang01</code>: 用户名，<code>friends</code>: 仓库名<br>上例中的 <code>labels=active</code> 参数可以控制默认的 issue 不显示，只有自己审核通过添加了 <code>active</code> 标签之后才会显示。上述示例对应的仓库链接：</p>
+<div class="link-group"><div class="tagLink"><a class="link-card" title="yuang01/friends (Github)" target="_blank" rel="noopener" href="https://github.com/yuang01/friends/issues"><div class="left"><img "" class="lazyload placeholder" data-original="https://cdn.pixabay.com/photo/2018/12/05/13/41/panda-3857754__340.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"/></div><div class="right"><p class="text">yuang01/friends (Github)</p><p class="url">https://github.com/yuang01/friends/issues</p></div></a></div>
 
-<h2 class="bamboo-h " id="一行一个图片">一行一个图片</h2><br/>
+<div class="tagLink"><a class="link-card" title="yuang01/friends (Gitee)" target="_blank" rel="noopener" href="https://gitee.com/yuang01/friends/issues"><div class="left"><img "" class="lazyload placeholder" data-original="https://cdn.pixabay.com/photo/2018/12/05/13/41/panda-3857754__340.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"/></div><div class="right"><p class="text">yuang01/friends (Gitee)</p><p class="url">https://gitee.com/yuang01/friends/issues</p></div></a></div></div>
+<h2 id="效果-Github-example"><a href="#效果-Github-example" class="headerlink" title="效果(Github example)"></a>效果(Github example)</h2><div class="issues-api sites"api="https://api.github.com/repos/yuang01/friends/issues?sort=updated&state=open&page=1&per_page=100&labels=active"></div>
 
-<div class="gallery ">
-              <p><img "" class="lazyload placeholder" data-original="https://pic4.zhimg.com/80/v2-515859a54d7c9b89c070c6132dff4527_1440w.jpg?source=1940ef5c" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" alt="图片描述"></p>
-            </div>
-<h3 id="上述事例代码"><a href="#上述事例代码" class="headerlink" title="上述事例代码"></a>上述事例代码</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">&#123;</span>% gallery %<span class="token punctuation">&#125;</span>
-<span class="token operator">!</span><span class="token punctuation">[</span>图片描述<span class="token punctuation">]</span><span class="token punctuation">(</span>https://pic4.zhimg.com/80/v2-515859a54d7c9b89c070c6132dff4527_1440w.jpg?source<span class="token operator">=</span>1940ef5c<span class="token punctuation">)</span>
-<span class="token punctuation">&#123;</span>% endgallery %<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<h2 class="bamboo-h " id="一行多个图片（不换行）">一行多个图片（不换行）</h2><br/>
+<h2 id="效果-Gitee-example"><a href="#效果-Gitee-example" class="headerlink" title="效果(Gitee example)"></a>效果(Gitee example)</h2><div class="issues-api sites"api="https://gitee.com/api/v5/repos/yuang01/friends/issues?sort=updated&state=open&page=1&per_page=100&labels=active"></div>
 
-<div class="gallery ">
-              <p><img "" class="lazyload placeholder" data-original="https://pic2.zhimg.com/80/v2-bcb819edb98e081817066eb6b0e6a2ef_1440w.jpg?source=1940ef5c" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" alt="图片描述"><br><img "" class="lazyload placeholder" data-original="https://pic2.zhimg.com/80/v2-f1b467abef1caeb5537f399da4ddbc9d_1440w.jpg?source=1940ef5c" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" alt="图片描述"><br><img "" class="lazyload placeholder" data-original="https://pic2.zhimg.com/80/v2-c513cb0d2eff43b5391ea682f1ba07c6_1440w.jpg?source=1940ef5c" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" alt="图片描述"></p>
-            </div>
-<h3 id="上述事例代码-1"><a href="#上述事例代码-1" class="headerlink" title="上述事例代码"></a>上述事例代码</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">&#123;</span>% gallery %<span class="token punctuation">&#125;</span>
-<span class="token operator">!</span><span class="token punctuation">[</span>图片描述<span class="token punctuation">]</span><span class="token punctuation">(</span>https://pic2.zhimg.com/80/v2-bcb819edb98e081817066eb6b0e6a2ef_1440w.jpg?source<span class="token operator">=</span>1940ef5c<span class="token punctuation">)</span>
-<span class="token operator">!</span><span class="token punctuation">[</span>图片描述<span class="token punctuation">]</span><span class="token punctuation">(</span>https://pic2.zhimg.com/80/v2-f1b467abef1caeb5537f399da4ddbc9d_1440w.jpg?source<span class="token operator">=</span>1940ef5c<span class="token punctuation">)</span>
-<span class="token operator">!</span><span class="token punctuation">[</span>图片描述<span class="token punctuation">]</span><span class="token punctuation">(</span>https://pic2.zhimg.com/80/v2-c513cb0d2eff43b5391ea682f1ba07c6_1440w.jpg?source<span class="token operator">=</span>1940ef5c<span class="token punctuation">)</span>
-<span class="token punctuation">&#123;</span>% endgallery %<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 class="bamboo-h " id="多行多个图片（每行2～8个图片）">多行多个图片（每行2～8个图片）</h2><br/>
-<p>多行多个图片（每行2～8个图片）</p>
-<div class="gallery stretch" col='4'>
-              <p><img "" class="lazyload placeholder" data-original="https://pic2.zhimg.com/80/v2-bcb819edb98e081817066eb6b0e6a2ef_1440w.jpg?source=1940ef5c" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" alt="图片描述"><br><img "" class="lazyload placeholder" data-original="https://pic2.zhimg.com/80/v2-f1b467abef1caeb5537f399da4ddbc9d_1440w.jpg?source=1940ef5c" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" alt="图片描述"><br><img "" class="lazyload placeholder" data-original="https://pic2.zhimg.com/80/v2-c513cb0d2eff43b5391ea682f1ba07c6_1440w.jpg?source=1940ef5c" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" alt="图片描述"><br><img "" class="lazyload placeholder" data-original="https://pic2.zhimg.com/80/v2-bcb819edb98e081817066eb6b0e6a2ef_1440w.jpg?source=1940ef5c" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" alt="图片描述"><br><img "" class="lazyload placeholder" data-original="https://pic2.zhimg.com/80/v2-f1b467abef1caeb5537f399da4ddbc9d_1440w.jpg?source=1940ef5c" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" alt="图片描述"><br><img "" class="lazyload placeholder" data-original="https://pic2.zhimg.com/80/v2-c513cb0d2eff43b5391ea682f1ba07c6_1440w.jpg?source=1940ef5c" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" alt="图片描述"></p>
-            </div>
-<h3 id="上述事例代码-2"><a href="#上述事例代码-2" class="headerlink" title="上述事例代码"></a>上述事例代码</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">&#123;</span>% gallery stretch, <span class="token number">4</span> %<span class="token punctuation">&#125;</span>
-<span class="token operator">!</span><span class="token punctuation">[</span>图片描述<span class="token punctuation">]</span><span class="token punctuation">(</span>https://pic2.zhimg.com/80/v2-bcb819edb98e081817066eb6b0e6a2ef_1440w.jpg?source<span class="token operator">=</span>1940ef5c<span class="token punctuation">)</span>
-<span class="token operator">!</span><span class="token punctuation">[</span>图片描述<span class="token punctuation">]</span><span class="token punctuation">(</span>https://pic2.zhimg.com/80/v2-f1b467abef1caeb5537f399da4ddbc9d_1440w.jpg?source<span class="token operator">=</span>1940ef5c<span class="token punctuation">)</span>
-<span class="token operator">!</span><span class="token punctuation">[</span>图片描述<span class="token punctuation">]</span><span class="token punctuation">(</span>https://pic2.zhimg.com/80/v2-c513cb0d2eff43b5391ea682f1ba07c6_1440w.jpg?source<span class="token operator">=</span>1940ef5c<span class="token punctuation">)</span>
-<span class="token operator">!</span><span class="token punctuation">[</span>图片描述<span class="token punctuation">]</span><span class="token punctuation">(</span>https://pic2.zhimg.com/80/v2-bcb819edb98e081817066eb6b0e6a2ef_1440w.jpg?source<span class="token operator">=</span>1940ef5c<span class="token punctuation">)</span>
-<span class="token operator">!</span><span class="token punctuation">[</span>图片描述<span class="token punctuation">]</span><span class="token punctuation">(</span>https://pic2.zhimg.com/80/v2-f1b467abef1caeb5537f399da4ddbc9d_1440w.jpg?source<span class="token operator">=</span>1940ef5c<span class="token punctuation">)</span>
-<span class="token operator">!</span><span class="token punctuation">[</span>图片描述<span class="token punctuation">]</span><span class="token punctuation">(</span>https://pic2.zhimg.com/80/v2-c513cb0d2eff43b5391ea682f1ba07c6_1440w.jpg?source<span class="token operator">=</span>1940ef5c<span class="token punctuation">)</span>
-<span class="token punctuation">&#123;</span>% endgallery %<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>多行多个图片（每行2～8个图片）</p>
-<div class="gallery stretch" col='8'>
-              <p><img "" class="lazyload placeholder" data-original="https://pic2.zhimg.com/80/v2-bcb819edb98e081817066eb6b0e6a2ef_1440w.jpg?source=1940ef5c" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" alt="图片描述"><br><img "" class="lazyload placeholder" data-original="https://pic2.zhimg.com/80/v2-f1b467abef1caeb5537f399da4ddbc9d_1440w.jpg?source=1940ef5c" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" alt="图片描述"><br><img "" class="lazyload placeholder" data-original="https://pic2.zhimg.com/80/v2-c513cb0d2eff43b5391ea682f1ba07c6_1440w.jpg?source=1940ef5c" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" alt="图片描述"><br><img "" class="lazyload placeholder" data-original="https://pic2.zhimg.com/80/v2-d0fe3a2cc79628c6a017f0066d4dee63_1440w.jpg?source=1940ef5c" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" alt="图片描述"><br><img "" class="lazyload placeholder" data-original="https://pic4.zhimg.com/80/v2-f7d6c7021cff3e23d8481faec2048890_1440w.jpg?source=1940ef5c" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" alt="图片描述"><br><img "" class="lazyload placeholder" data-original="https://pic4.zhimg.com/80/v2-d191b620ff97a55b634786528206002a_1440w.jpg?source=1940ef5c" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" alt="图片描述"><br><img "" class="lazyload placeholder" data-original="https://pic2.zhimg.com/80/v2-bcb819edb98e081817066eb6b0e6a2ef_1440w.jpg?source=1940ef5c" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" alt="图片描述"><br><img "" class="lazyload placeholder" data-original="https://pic2.zhimg.com/80/v2-f1b467abef1caeb5537f399da4ddbc9d_1440w.jpg?source=1940ef5c" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" alt="图片描述"><br><img "" class="lazyload placeholder" data-original="https://pic2.zhimg.com/80/v2-c513cb0d2eff43b5391ea682f1ba07c6_1440w.jpg?source=1940ef5c" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" alt="图片描述"><br><img "" class="lazyload placeholder" data-original="https://pic2.zhimg.com/80/v2-d0fe3a2cc79628c6a017f0066d4dee63_1440w.jpg?source=1940ef5c" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" alt="图片描述"><br><img "" class="lazyload placeholder" data-original="https://pic4.zhimg.com/80/v2-f7d6c7021cff3e23d8481faec2048890_1440w.jpg?source=1940ef5c" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" alt="图片描述"><br><img "" class="lazyload placeholder" data-original="https://pic4.zhimg.com/80/v2-d191b620ff97a55b634786528206002a_1440w.jpg?source=1940ef5c" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" alt="图片描述"><br><img "" class="lazyload placeholder" data-original="https://pic2.zhimg.com/80/v2-f1b467abef1caeb5537f399da4ddbc9d_1440w.jpg?source=1940ef5c" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" alt="图片描述"><br><img "" class="lazyload placeholder" data-original="https://pic2.zhimg.com/80/v2-c513cb0d2eff43b5391ea682f1ba07c6_1440w.jpg?source=1940ef5c" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" alt="图片描述"><br><img "" class="lazyload placeholder" data-original="https://pic2.zhimg.com/80/v2-d0fe3a2cc79628c6a017f0066d4dee63_1440w.jpg?source=1940ef5c" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" alt="图片描述"><br><img "" class="lazyload placeholder" data-original="https://pic4.zhimg.com/80/v2-f7d6c7021cff3e23d8481faec2048890_1440w.jpg?source=1940ef5c" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" alt="图片描述"></p>
-            </div>
+<h2 id="分组显示"><a href="#分组显示" class="headerlink" title="分组显示"></a>分组显示</h2><p>sites 类型的 issues 默认不分组，如果需要分组，可指定分组依据「key」，和分组白名单「value1」「value2」等，例如：</p>
+<pre class="line-numbers language-none"><code class="language-none">group&#x3D;version:v4,v3,v2<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>这个参数的作用就是，筛选出 JSON 中包含 <code>&quot;version&quot;: &quot;v4&quot;</code> 或者 <code>&quot;version&quot;: &quot;v3&quot;</code> 或者 <code>&quot;version&quot;: &quot;v2&quot;</code> 的数据，并分组显示。</p>
+<h2 id="分组写法"><a href="#分组写法" class="headerlink" title="分组写法"></a>分组写法</h2><pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">&#123;% issues sites | api=https://api.github.com/repos/yuang01/examples/issues?sort=updated&amp;state=open&amp;page=1&amp;per_page=100 | group=version:版本：v3.0,版本：v2.0,版本：v1.0 %&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>比较长，鼠标往后拖<br>分组示例对应的仓库链接：</p>
+<div class="tagLink"><a class="link-card" title="yuang01/examples (Github)" target="_blank" rel="noopener" href="https://github.com/yuang01/examples/issues"><div class="left"><img "" class="lazyload placeholder" data-original="https://cdn.pixabay.com/photo/2018/12/05/13/41/panda-3857754__340.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"/></div><div class="right"><p class="text">yuang01/examples (Github)</p><p class="url">https://github.com/yuang01/examples/issues</p></div></a></div>
 
-<h3 id="上述事例代码-3"><a href="#上述事例代码-3" class="headerlink" title="上述事例代码"></a>上述事例代码</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">多行多个图片（每行2～8个图片）
-<span class="token punctuation">&#123;</span>% gallery stretch, <span class="token number">8</span> %<span class="token punctuation">&#125;</span>
-<span class="token operator">!</span><span class="token punctuation">[</span>图片描述<span class="token punctuation">]</span><span class="token punctuation">(</span>https://pic2.zhimg.com/80/v2-bcb819edb98e081817066eb6b0e6a2ef_1440w.jpg?source<span class="token operator">=</span>1940ef5c<span class="token punctuation">)</span>
-<span class="token operator">!</span><span class="token punctuation">[</span>图片描述<span class="token punctuation">]</span><span class="token punctuation">(</span>https://pic2.zhimg.com/80/v2-f1b467abef1caeb5537f399da4ddbc9d_1440w.jpg?source<span class="token operator">=</span>1940ef5c<span class="token punctuation">)</span>
-<span class="token operator">!</span><span class="token punctuation">[</span>图片描述<span class="token punctuation">]</span><span class="token punctuation">(</span>https://pic2.zhimg.com/80/v2-c513cb0d2eff43b5391ea682f1ba07c6_1440w.jpg?source<span class="token operator">=</span>1940ef5c<span class="token punctuation">)</span>
-<span class="token operator">!</span><span class="token punctuation">[</span>图片描述<span class="token punctuation">]</span><span class="token punctuation">(</span>https://pic2.zhimg.com/80/v2-d0fe3a2cc79628c6a017f0066d4dee63_1440w.jpg?source<span class="token operator">=</span>1940ef5c<span class="token punctuation">)</span>
-<span class="token operator">!</span><span class="token punctuation">[</span>图片描述<span class="token punctuation">]</span><span class="token punctuation">(</span>https://pic4.zhimg.com/80/v2-f7d6c7021cff3e23d8481faec2048890_1440w.jpg?source<span class="token operator">=</span>1940ef5c<span class="token punctuation">)</span>
-<span class="token operator">!</span><span class="token punctuation">[</span>图片描述<span class="token punctuation">]</span><span class="token punctuation">(</span>https://pic4.zhimg.com/80/v2-d191b620ff97a55b634786528206002a_1440w.jpg?source<span class="token operator">=</span>1940ef5c<span class="token punctuation">)</span>
-<span class="token operator">!</span><span class="token punctuation">[</span>图片描述<span class="token punctuation">]</span><span class="token punctuation">(</span>https://pic2.zhimg.com/80/v2-bcb819edb98e081817066eb6b0e6a2ef_1440w.jpg?source<span class="token operator">=</span>1940ef5c<span class="token punctuation">)</span>
-<span class="token operator">!</span><span class="token punctuation">[</span>图片描述<span class="token punctuation">]</span><span class="token punctuation">(</span>https://pic2.zhimg.com/80/v2-f1b467abef1caeb5537f399da4ddbc9d_1440w.jpg?source<span class="token operator">=</span>1940ef5c<span class="token punctuation">)</span>
-<span class="token operator">!</span><span class="token punctuation">[</span>图片描述<span class="token punctuation">]</span><span class="token punctuation">(</span>https://pic2.zhimg.com/80/v2-c513cb0d2eff43b5391ea682f1ba07c6_1440w.jpg?source<span class="token operator">=</span>1940ef5c<span class="token punctuation">)</span>
-<span class="token operator">!</span><span class="token punctuation">[</span>图片描述<span class="token punctuation">]</span><span class="token punctuation">(</span>https://pic2.zhimg.com/80/v2-d0fe3a2cc79628c6a017f0066d4dee63_1440w.jpg?source<span class="token operator">=</span>1940ef5c<span class="token punctuation">)</span>
-<span class="token operator">!</span><span class="token punctuation">[</span>图片描述<span class="token punctuation">]</span><span class="token punctuation">(</span>https://pic4.zhimg.com/80/v2-f7d6c7021cff3e23d8481faec2048890_1440w.jpg?source<span class="token operator">=</span>1940ef5c<span class="token punctuation">)</span>
-<span class="token operator">!</span><span class="token punctuation">[</span>图片描述<span class="token punctuation">]</span><span class="token punctuation">(</span>https://pic4.zhimg.com/80/v2-d191b620ff97a55b634786528206002a_1440w.jpg?source<span class="token operator">=</span>1940ef5c<span class="token punctuation">)</span>
-<span class="token operator">!</span><span class="token punctuation">[</span>图片描述<span class="token punctuation">]</span><span class="token punctuation">(</span>https://pic2.zhimg.com/80/v2-f1b467abef1caeb5537f399da4ddbc9d_1440w.jpg?source<span class="token operator">=</span>1940ef5c<span class="token punctuation">)</span>
-<span class="token operator">!</span><span class="token punctuation">[</span>图片描述<span class="token punctuation">]</span><span class="token punctuation">(</span>https://pic2.zhimg.com/80/v2-c513cb0d2eff43b5391ea682f1ba07c6_1440w.jpg?source<span class="token operator">=</span>1940ef5c<span class="token punctuation">)</span>
-<span class="token operator">!</span><span class="token punctuation">[</span>图片描述<span class="token punctuation">]</span><span class="token punctuation">(</span>https://pic2.zhimg.com/80/v2-d0fe3a2cc79628c6a017f0066d4dee63_1440w.jpg?source<span class="token operator">=</span>1940ef5c<span class="token punctuation">)</span>
-<span class="token operator">!</span><span class="token punctuation">[</span>图片描述<span class="token punctuation">]</span><span class="token punctuation">(</span>https://pic4.zhimg.com/80/v2-f7d6c7021cff3e23d8481faec2048890_1440w.jpg?source<span class="token operator">=</span>1940ef5c<span class="token punctuation">)</span>
-<span class="token punctuation">&#123;</span>% endgallery %<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 class="bamboo-h " id="组合使用">组合使用</h2><br/>
-
-<div class="gallery ">
-              <p><img "" class="lazyload placeholder" data-original="https://pic2.zhimg.com/80/v2-bcb819edb98e081817066eb6b0e6a2ef_1440w.jpg?source=1940ef5c" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" alt="图片描述"><br><img "" class="lazyload placeholder" data-original="https://pic2.zhimg.com/80/v2-f1b467abef1caeb5537f399da4ddbc9d_1440w.jpg?source=1940ef5c" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" alt="图片描述"></p>
-            </div>
-<div class="gallery ">
-              <p><img "" class="lazyload placeholder" data-original="https://pic2.zhimg.com/80/v2-bcb819edb98e081817066eb6b0e6a2ef_1440w.jpg?source=1940ef5c" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" alt="图片描述"><br><img "" class="lazyload placeholder" data-original="https://pic2.zhimg.com/80/v2-f1b467abef1caeb5537f399da4ddbc9d_1440w.jpg?source=1940ef5c" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" alt="图片描述"><br><img "" class="lazyload placeholder" data-original="https://pic2.zhimg.com/80/v2-c513cb0d2eff43b5391ea682f1ba07c6_1440w.jpg?source=1940ef5c" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" alt="图片描述"><br><img "" class="lazyload placeholder" data-original="https://pic2.zhimg.com/80/v2-c513cb0d2eff43b5391ea682f1ba07c6_1440w.jpg?source=1940ef5c" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" alt="图片描述"></p>
-            </div>
-<div class="gallery ">
-              <p><img "" class="lazyload placeholder" data-original="https://pic2.zhimg.com/80/v2-bcb819edb98e081817066eb6b0e6a2ef_1440w.jpg?source=1940ef5c" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" alt="图片描述"><br><img "" class="lazyload placeholder" data-original="https://pic2.zhimg.com/80/v2-f1b467abef1caeb5537f399da4ddbc9d_1440w.jpg?source=1940ef5c" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" alt="图片描述"></p>
-            </div>
-<h3 id="上述事例代码-4"><a href="#上述事例代码-4" class="headerlink" title="上述事例代码"></a>上述事例代码</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">&#123;</span>% gallery %<span class="token punctuation">&#125;</span>
-<span class="token operator">!</span><span class="token punctuation">[</span>图片描述<span class="token punctuation">]</span><span class="token punctuation">(</span>https://pic2.zhimg.com/80/v2-bcb819edb98e081817066eb6b0e6a2ef_1440w.jpg?source<span class="token operator">=</span>1940ef5c<span class="token punctuation">)</span>
-<span class="token operator">!</span><span class="token punctuation">[</span>图片描述<span class="token punctuation">]</span><span class="token punctuation">(</span>https://pic2.zhimg.com/80/v2-f1b467abef1caeb5537f399da4ddbc9d_1440w.jpg?source<span class="token operator">=</span>1940ef5c<span class="token punctuation">)</span>
-<span class="token punctuation">&#123;</span>% endgallery %<span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#123;</span>% gallery %<span class="token punctuation">&#125;</span>
-<span class="token operator">!</span><span class="token punctuation">[</span>图片描述<span class="token punctuation">]</span><span class="token punctuation">(</span>https://pic2.zhimg.com/80/v2-bcb819edb98e081817066eb6b0e6a2ef_1440w.jpg?source<span class="token operator">=</span>1940ef5c<span class="token punctuation">)</span>
-<span class="token operator">!</span><span class="token punctuation">[</span>图片描述<span class="token punctuation">]</span><span class="token punctuation">(</span>https://pic2.zhimg.com/80/v2-f1b467abef1caeb5537f399da4ddbc9d_1440w.jpg?source<span class="token operator">=</span>1940ef5c<span class="token punctuation">)</span>
-<span class="token operator">!</span><span class="token punctuation">[</span>图片描述<span class="token punctuation">]</span><span class="token punctuation">(</span>https://pic2.zhimg.com/80/v2-c513cb0d2eff43b5391ea682f1ba07c6_1440w.jpg?source<span class="token operator">=</span>1940ef5c<span class="token punctuation">)</span>
-<span class="token operator">!</span><span class="token punctuation">[</span>图片描述<span class="token punctuation">]</span><span class="token punctuation">(</span>https://pic2.zhimg.com/80/v2-c513cb0d2eff43b5391ea682f1ba07c6_1440w.jpg?source<span class="token operator">=</span>1940ef5c<span class="token punctuation">)</span>
-<span class="token punctuation">&#123;</span>% endgallery %<span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#123;</span>% gallery %<span class="token punctuation">&#125;</span>
-<span class="token operator">!</span><span class="token punctuation">[</span>图片描述<span class="token punctuation">]</span><span class="token punctuation">(</span>https://pic2.zhimg.com/80/v2-bcb819edb98e081817066eb6b0e6a2ef_1440w.jpg?source<span class="token operator">=</span>1940ef5c<span class="token punctuation">)</span>
-<span class="token operator">!</span><span class="token punctuation">[</span>图片描述<span class="token punctuation">]</span><span class="token punctuation">(</span>https://pic2.zhimg.com/80/v2-f1b467abef1caeb5537f399da4ddbc9d_1440w.jpg?source<span class="token operator">=</span>1940ef5c<span class="token punctuation">)</span>
-<span class="token punctuation">&#123;</span>% endgallery %<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="分组效果-example"><a href="#分组效果-example" class="headerlink" title="分组效果(example)"></a>分组效果(example)</h2><div class="issues-api sites"api="https://api.github.com/repos/yuang01/examples/issues?sort=updated&state=open&page=1&per_page=100"group="version:版本：v3.0,版本：v2.0,版本：v1.0"></div>
       </div>
       
         <div class="copyright">
@@ -856,7 +801,7 @@
     </li>
     <li class="post-copyright-link">
     <strong>文章链接:  </strong>
-    <a href="/2021/02/08/gallery/" target="_blank" title="gallery图片">http://yuang01.github.io/2021/02/08/gallery/</a>
+    <a href="/2021/06/16/issuessites/" target="_blank" title="issues-sites标签">http://yuang01.github.io/2021/06/16/issuessites/</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明:   </strong>
@@ -874,49 +819,21 @@
 
 
 
-  
-  <div class="post-nav-prev post-nav-item">
-    <div class="post-nav-img lazyload" data-original="https://pic4.zhimg.com/80/v2-3b4ca49ff4fc567faa76ce6f02cffac9_1440w.jpg?source=1940ef5c" style="background-size: cover; 
-      background-position: center center;">
-    </div>
-    <a href="/2021/02/08/folding/" class="post-nav-link">
-      <div class="title">
-        <i class="fa fa-angle-left"></i> 上一篇:
-        <div>folding折叠</div>
-      </div>
-      
-      <!-- <div class="content">
-        
-基本
-
- 查看图片测试 
-              
-              
-              
- 
-      </div> -->
-    </a>
-  </div>
-
 
 
   
   <div class="post-nav-next post-nav-item">
-    <div class="post-nav-img lazyload" data-original="https://pic3.zhimg.com/80/v2-b7c7899676492453229763b26835f6dc_1440w.jpg?source=1940ef5c" style="background-size: cover; 
+    <div class="post-nav-img lazyload" data-original="https://w.wallhaven.cc/full/e7/wallhaven-e78jpo.jpg" style="background-size: cover; 
       background-position: center center;">
     </div>
-    <a href="/2021/02/08/ghcard/" class="post-nav-link">
+    <a href="/2021/06/16/issuestimeline/" class="post-nav-link">
       <div class="title">
         下一篇: <i class="fa fa-angle-right"></i>
-        <div>Github卡片</div>
+        <div>issues-timeline标签</div>
       </div>
       <!-- <div class="content">
-        Github用户卡片
-
-上述示例代码&#123;% ghcard yuang01 %&#125;
-表格中加入用户卡片
-
-
+        该标签会去拿到某个repo仓库的issue内容，用timeline标签的形式显示出来
+写法github&#123;% i
       </div> -->
     </a>
   </div>

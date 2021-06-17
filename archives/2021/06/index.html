@@ -10,7 +10,7 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-  <title>radio | Bamboo</title>
+  <title>归档: 2021/6 | Bamboo</title>
 
   
     
@@ -576,563 +576,86 @@
     
 </header>
     <main class="main" style="margin-top: 0;">
-      
- <!-- prismjs 代码高亮 -->
- 
-    
-    <link href="/js/prism/prism-line-numbers.css" rel="stylesheet">
-    
-        <link href="/js/prism/prism.min.css" rel="stylesheet">
-    
-
-    <style>
-        pre[class*="language-"] {
-            overflow-y: hidden;
-        }
-        .line-numbers .line-numbers-rows {
-            border: none;
-        }
-    </style>
-  
-
-<div class="bg-dark-floor" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -1;"></div>
-<div id="appBgSwiper" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -2;" :style="{'background-color': bgColor ? bgColor : 'transparent'}">
-    <transition-group tag="ul" :name="names">
-        <li v-for='(image,index) in img' :key='index' v-show="index === mark" class="bg-swiper-box">
-            <img :src="image" class="bg-swiper-img">
-        </li>
-    </transition-group>
-</div>
-<script>
-    var vm = new Vue({
-        el: '#appBgSwiper',
-        data: {
-            names: '' || 'fade' || 'fade', // translate-fade fade
-            mark: 0,
-            img: [],
-            bgColor: '',
-            time: null
-        },
-        methods: {   //添加方法
-            change(i, m) {
-                if (i > m) {
-                    // this.names = 'fade';
-                } else if (i < m) {
-                    // this.names = 'fade';
-                } else {
-                    return;
-                }
-                this.mark = i;
-            },
-            prev() {
-                // this.names = 'fade';
-                this.mark--;
-                if (this.mark === -1) {
-                    this.mark = 3;
-                    return
-                }
-            },
-            next() {
-                // this.names = 'fade';
-                this.mark++;
-                if (this.mark === this.img.length) {
-                    this.mark = 0;
-                    return
-                }
-            },
-            autoPlay() {
-                // this.names = 'fade';
-                this.mark++;
-                if (this.mark === this.img.length) {
-                    this.mark = 0;
-                    return
-                }
-            },
-            play() {
-                let bgImgDelay = '' || '180000'
-                let delay = parseInt(bgImgDelay) || 180000;
-                this.time = setInterval(this.autoPlay, delay);
-            },
-            enter() {
-                clearInterval(this.time);
-            },
-            leave() {
-                this.play();
-            }
-        },
-        created() {
-            this.play()
-        },
-        beforeDestroy() {
-            clearInterval(this.time);
-        },
-        mounted() {
-            let prop = ''|| 'https://pic4.zhimg.com/80/v2-5030587bac1b856d09e0a119ff6d7c04_1440w.jpg,https://api.btstu.cn/sjbz/api.php';
-            let isImg = prop.includes('.bmp') || prop.includes('.jpg') || prop.includes('.png') || prop.includes('.tif') || prop.includes('.gif') || prop.includes('.pcx') || prop.includes('.tga') || prop.includes('.exif') || prop.includes('.fpx') || prop.includes('.psd') || prop.includes('.cdr') || prop.includes('.pcd') || prop.includes('.dxf') || prop.includes('.ufo') || prop.includes('.eps') || prop.includes('.ai') || prop.includes('.raw') || prop.includes('.WMF') || prop.includes('.webp') || prop.includes('.jpeg') || prop.includes('http://') || prop.includes('https://') 
-            if (isImg) {
-                let img = prop.split(',');
-                let configRoot = '/'
-                let arrImg = [];
-                img.forEach(el => {
-                    var Expression=/http(s)?:\/\/([\w-]+\.)+[\w-]+(\/[\w- .\/?%&=]*)?/;
-			        var objExp = new RegExp(Expression);
-
-                    if(objExp.test(el)) {
-                        // http or https
-                        arrImg.push(el);
-                    } else {
-                        // 非http or https开头
-                        // 本地文件
-                        let firstStr = el.charAt(0);
-                        if (firstStr == '/') {
-                            el = el.substr(1); // 删除第一个字符 '/',因为 configRoot最后一个字符为 /
-                        }
-                        el = configRoot + el;
-                        arrImg.push(el);
-                    }
-                })
-                this.img = arrImg;
-            } else {
-                this.bgColor = prop;
-            }
-        }
-    })
-</script>
-
-<style>
-    .bg-swiper-box {
-        position: absolute;
-        display: block;
-        width: 100%;
-        height: 100%;
-    }
-    .bg-swiper-img {
-        object-fit: cover;
-        width: 100%;
-        height: 100%;
-    }
-</style>
-
-
-
-
-<div class="post-detail-header lazyload" id="thumbnail_canvas" data-original="https://pic3.zhimg.com/80/v2-1d9e8203f167bb1c51d6899df5c626ca_1440w.jpg" style="background-repeat: no-repeat; background-size: cover; 
-  background-position: center center;position: relative;">
-  <div class="post-detail-header-mask"></div>
-  <canvas id="header_canvas"style="position:absolute;bottom:0;pointer-events:none;"></canvas>
-  
-  <div class="title-box">
-    <span class="title">
-      radio
-    </span>
+      <div class="bg-dark-floor" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -2;"></div>
+<div class="bg-light-floor-archive" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -3;"></div>
+<div class="lazyload archive-header" data-original="https://pic1.zhimg.com/80/v2-1414b3a4b205e19060db18a20d08723a_1440w.jpg?source=1940ef5c" >
+  <div class="archive-header-title">
+    archive
   </div>
+  <div class="archive-header-desc">
   
-  
-    <script src="/js/bubble/bubble.js"></script>
-  
-</div>
-
-
-<div class="row justify-position">
-  <div class="main-content">
-    <article class="post post-detail">
-      
-      <div class="post-meta">
-        <i class="fa fa-clock-o" aria-hidden="true"></i>
-        <span class="post-time">2021-02-08</span>
-      </div>
-      
-      <div class="post-tags-categories">
-        
-        <div class="tags">
-          <i class="iconfont icontag"></i>
-          
-            <a href="/tags/tag/" class="">
-              tag
-            </a>
-          
-        </div>
-        
-        
-        <div class="categories">
-          <i class="iconfont iconbookmark1"></i>
-          
-            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="">
-              前端
-            </a>
-          
-        </div>
-        
-      </div>
-      <div class="post-content">
-        <h2 class="bamboo-h " id="radio">radio</h2><br/>
-<div class='checkbox'><input type="radio" />
-            <p>纯文本测试</p>
-            </div>
-<div class='checkbox checked'><input type="radio" checked="checked"/>
-            <p>支持简单的 <a target="_blank" rel="noopener" href="https://guides.github.com/features/mastering-markdown/">markdown</a> 语法</p>
-            </div>
-<div class='checkbox red'><input type="radio" />
-            <p>支持自定义颜色</p>
-            </div>
-<div class='checkbox green'><input type="radio" />
-            <p>绿色</p>
-            </div>
-<div class='checkbox yellow'><input type="radio" />
-            <p>黄色</p>
-            </div>
-<div class='checkbox cyan'><input type="radio" />
-            <p>青色</p>
-            </div>
-<div class='checkbox blue'><input type="radio" />
-            <p>蓝色</p>
-            </div>
-<div class='checkbox warning'><input type="radio" />
-            <p>warning色</p>
-            </div>
-<div class='checkbox success'><input type="radio" />
-            <p>success色</p>
-            </div>
-<div class='checkbox danger'><input type="radio" />
-            <p>danger色</p>
-            </div>
-<div class='checkbox info'><input type="radio" />
-            <p>info色</p>
-            </div>
-<h3 id="上述代码示例"><a href="#上述代码示例" class="headerlink" title="上述代码示例"></a>上述代码示例</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">&#123;</span>% radio 纯文本测试 %<span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#123;</span>% radio checked, 支持简单的 <span class="token punctuation">[</span>markdown<span class="token punctuation">]</span><span class="token punctuation">(</span>https://guides.github.com/features/mastering-markdown/<span class="token punctuation">)</span> 语法 %<span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#123;</span>% radio red, 支持自定义颜色 %<span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#123;</span>% radio green, 绿色 %<span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#123;</span>% radio yellow, 黄色 %<span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#123;</span>% radio cyan, 青色 %<span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#123;</span>% radio blue, 蓝色 %<span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#123;</span>% radio warning, warning色 %<span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#123;</span>% radio success, success色 %<span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#123;</span>% radio danger, danger色 %<span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#123;</span>% radio info, info色 %<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-      </div>
-      
-        <div class="copyright">
-  <ul class="post-copyright">
-    <li class="post-copyright-author">
-    <strong>作者:  </strong>YuAng</a>
-    </li>
-    <li class="post-copyright-link">
-    <strong>文章链接:  </strong>
-    <a href="/2021/02/08/radio/" target="_blank" title="radio">http://yuang01.github.io/2021/02/08/radio/</a>
-    </li>
-    <li class="post-copyright-license">
-      <strong>版权声明:   </strong>
-      本网站所有文章除特别声明外,均采用 <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">CC BY-NC-ND 4.0</a>
-      许可协议。转载请注明出处!
-    </li>
-  </ul>
-<div>
-      
-    </article>
-    <!-- 上一篇文章和下一篇文章 -->
-    
-      
-<div class="post-nav">
-
-
-
-  
-  <div class="post-nav-prev post-nav-item">
-    <div class="post-nav-img lazyload" data-original="https://pic1.zhimg.com/80/v2-c274041256201850e4a51998c5c48b77_1440w.jpg?source=1940ef5c" style="background-size: cover; 
-      background-position: center center;">
-    </div>
-    <a href="/2021/02/08/pbg/" class="post-nav-link">
-      <div class="title">
-        <i class="fa fa-angle-left"></i> 上一篇:
-        <div>文本高亮</div>
-      </div>
-      
-      <!-- <div class="content">
-        文本高亮演示效果
-这是一个简单的文字我是一个文本高亮，唱着我们心肠的曲折这是一个简单的文字我是一个文本高亮，唱着我们心肠
-      </div> -->
-    </a>
-  </div>
-
-
-
-  
-  <div class="post-nav-next post-nav-item">
-    <div class="post-nav-img lazyload" data-original="https://pic3.zhimg.com/80/v2-0cd97ad46cb2a18343565aa60adeab0e_1440w.jpg" style="background-size: cover; 
-      background-position: center center;">
-    </div>
-    <a href="/2021/02/08/site-card/" class="post-nav-link">
-      <div class="title">
-        下一篇: <i class="fa fa-angle-right"></i>
-        <div>site-card</div>
-      </div>
-      <!-- <div class="content">
-        site-card演示
-木兮这是描述
-yuang01这是描述哦
-木兮这是描述
-yuang01这是描述哦
-木兮这是描述
-上
-      </div> -->
-    </a>
-  </div>
-
-</div>
-
-    
-    
-
-    <!-- 打赏 -->
-    
-      <div id="appDonate" class="post-donate">
-  <div id="donate_board" class="donate_bar center" ref="donate">
-    <a id="btn_donate" class="btn_donate" href="javascript:;" title="打赏" @click="showDialogDrawer()"></a>
-  </div>
-  <transition name="fade">
-    <div 
-      class="donate-box-mask"
-      v-cloak 
-      v-if="visible"
-      @click="cancelDialogDrawer()"
-    >
-    </div>
-  </transition>
-  <transition name="bounce">
-    <div class="donate-box" v-cloak v-if="visible">
-      <div class="donate-box_close">
-        <i class="fa fa-times" aria-hidden="true" @click="cancelDialogDrawer"></i>
-      </div>
-      <div class="donate-box_title">
-        <h4>
-          你的赏识是我前进的动力
-        </h4>
-      </div>
-      <div class="donate-box_tab">
-        <div class="Alipay" :class="{'active': tabActive === 'Alipay'}" @click="changeTabActive('Alipay')">
-          支付宝
-        </div>
-        <div class="WeChatpay" :class="{'active': tabActive === 'WeChatpay'}" @click="changeTabActive('WeChatpay')">
-          微信
-        </div>
-      </div>
-      <div class="donate-box_img">
-        <div class="AlipayImg" v-if="tabActive === 'Alipay'">
-          <img src="/medias/zfb.jpg" alt="支付宝打赏" />
-        </div> 
-        <div class="WeChatpayImg" v-if="tabActive === 'WeChatpay'">
-          <img src="/medias/wx.jpg" alt="微信打赏" />
-        </div>
-      </div>
-    </div>
-  </transition>
-</div>
-
-<script>
-  var body = document.body || document.documentElement || window;
-  var vm = new Vue({
-    el: '#appDonate',
-    data: {
-      visible: false,
-      tabActive: 'Alipay',
-      top: 0,
-    },
-    computed: {
-    },
-    mounted() {
-    },
-    methods: {
-      showDialogDrawer() {
-        this.visible = true;
-        // 防止页面滚动，只能让弹框滚动
-        // function getScroll() {
-        //   return {
-        //     left: window.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft || 0,
-        //     top: window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0
-        //   };
-        // }
-        this.top = $(document).scrollTop() // or getScroll().top
-        // console.log('aa', $('.main-content'));
-        body.style.cssText = 'overflow: hidden;';
-      },
-      cancelDialogDrawer() {
-        this.visible = false;
-        body.removeAttribute('style');
-        $(document).scrollTop(this.top)
-      },
-      changeTabActive(name) {
-        this.tabActive = name;
-      }
-    },
-    created() {}
-  })
-</script>
-    
-
-    <!-- 分享 -->
-    
-      <!-- https://github.com/overtrue/share.js -->
-
-<div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
-
-<script src="/js/shareJs/social-share.min.js"></script>
-</script>
-
-<style>
-  .social-share {
-    margin: 20px 0;
-  }
-</style>
-
-
-    
-    
-    <!-- 评论 -->
-      
-        <div id="myComment">
-          
-            <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/gitalk/1.7.2/gitalk.css">
-<div id="gitalk-container"></div>
-<script src="https://cdn.bootcdn.net/ajax/libs/gitalk/1.7.2/gitalk.js"></script>
-<script type="text/javascript">
-    var gitalk = new Gitalk({
-        clientID: '418a1890782d27e5bc5b',
-        clientSecret: 'd0dc4f3b77ae21d4cdd95030cd1c9198e2c7bf9e',
-        id: window.location.pathname,
-        repo: 'yuang01.github.io',
-        owner: 'yuang01',
-        admin: ['yuang01']
-    })
-    gitalk.render('gitalk-container')
-</script>
-
-<style>
-    .gt-container .gt-meta {
-        z-index: 2;
-    }
-</style>
-          
-        </div>
-      
-  </div>
-
-  
-    <div class="toc-aside">
-      <div class="toc-main">
-        <div class="toc-aside-title">
-          <i class="fa fa-list-ul" aria-hidden="true"></i><span>本文目录</span>
-          <div class="toc-open-close">本文目录</div>
-        </div>
-        <div class="toc-content">
-          <link href="/js/tocbot/tocbot.css" rel="stylesheet">
-<script src="/js/tocbot/tocbot.min.js"></script>
-<div class="toc"></div>
-
-<script>
-  if ($('.toc').length > 0) {
-    var headerEl = 'h2, h3, h4',  //headers 
-      content = '.post-detail',//文章容器
-      idArr = {};  //标题数组以确定是否增加索引id
-      //add #id
-
-    $(content).children(headerEl).each(function () {
-      //去除空格以及多余标点
-      var headerId = $(this).text().replace(/[\s|\~|`|\!|\@|\#|\$|\%|\^|\&|\*|\(|\)|\_|\+|\=|\||\|\[|\]|\{|\}|\;|\:|\"|\'|\,|\<|\.|\>|\/|\?|\：|\，|\。]/g, '');
-
-      headerId = headerId.toLowerCase();
-      if (idArr[headerId]) {
-        //id已经存在
-        $(this).attr('id', headerId + '-' + idArr[headerId]);
-        idArr[headerId]++;
-      }
-      else {
-        //id未存在
-        idArr[headerId] = 1;
-        $(this).attr('id', headerId);
-      }
-    });
-
-    tocbot.init({
-      // Where to render the table of contents.
-      tocSelector: '.toc',
-      // Where to grab the headings to build the table of contents.
-      contentSelector: content,
-      // Which headings to grab inside of the contentSelector element.
-      headingSelector: headerEl,
-      scrollSmooth: true,
-      scrollSmoothOffset: -80,
-      headingsOffset: -($(window).height() * 0.4 - 45),
-      positionFixedSelector: '.toc-main',
-      positionFixedClass: 'is-position-fixed',
-      fixedSidebarOffset: 'auto',
-    });
-  }
-
-</script>
-
-<style>
-.is-position-fixed {
-  position:sticky !important;
-  top: 74px;
-}
-.toc-main ul {
-  counter-reset: show-list;
-}
-.toc-main ul li::before {
-  content: counter(item)".";
-  display: block;
-  position: absolute;
-  left: 12px;
-  top:0;
-}
-.toc > .toc-list {
-  padding-left: 35px;
-}
-.toc>.toc-list li {
-  list-style: decimal;
-}
-.toc-list {
-  padding-left: 25px;
-}
-</style>
-        </div>
-      </div>
-    </div>
-
-    
-
-    <script>
-      let openOrCloseBtn = $('.toc-aside .toc-aside-title .toc-open-close');
-      let open = eval('' || 'true');
-      openOrCloseBtn.click(function() {
-        if (open === true) {
-          $(".toc-aside").css({'width': 0, 'padding': 0});
-          $(".toc-content").css({'width': 0});
-          $(".toc-aside-title span, .toc-aside-title i").css({'display': 'none'});
-          $(".main-content").css({'width': '75%', 'margin': '10px auto'});
-          open = false;
-        } else {
-          $(".toc-aside").css({'width': '300px', 'padding': '0 10px'});
-          $(".toc-content").css({'width': '300px'});
-          $(".toc-aside-title span, .toc-aside-title i").css({'display': 'inline-block'});
-          $(".main-content").css({'width': '65%', 'margin-right': '10px', 'margin-left': 'calc(35% - 350px)'});
-          open = true;
-        }
+  <span class="title" id="archive-header-desc"></span>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+      <script>
+      var typed = new Typed("#archive-header-desc", {
+          strings: ['愿你如风，被人温柔以待'],
+          startDelay: 100,
+          typeSpeed: 100,
+          loop: true,
+          backSpeed: 50,
+          showCursor: true
       });
-    </script>
+      </script>
   
-
-  <script>
-  function loadIssuesJS() {
-    if ($(".post-detail").find(".issues-api").length == 0) return;
-    document.write('<script type="text/javascript" src="/js/issues/index.js"><\/script>');
-  };
-  loadIssuesJS();
-</script>
+  </div>
+  <div class="mask-box"></div>
 </div>
 
+<div class="archive-video">
+  <video class="full-video" autoplay loop muted>
+      <source style="width: 100%;height: 100vh;" src="/">
+  </video>
+  <div class="video-header-title">
+    archive
+  </div>
+  <div class="video-header-desc">
+  
+      <span class="title" id="video-header-desc"></span>
+      <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+          <script>
+          var typed = new Typed("#video-header-desc", {
+              strings: ['愿你如风，被人温柔以待'],
+              startDelay: 100,
+              typeSpeed: 100,
+              loop: true,
+              backSpeed: 50,
+              showCursor: true
+          });
+          </script>
+      
+  </div>
+  <div class="mask-box"></div>
+</div>
 
+<div class="archive-main">
+  <section class="archive">
+    <div class="archive-content">
+      <ul class="post-archive">
+        
+        
+          
+            
+            <div class="year" data-aos="zoom-in-up">
+                <div class="bullet"></div>
+                <a href="/archives/2021">2021</a>
+            </div>
+          
+          <li class="post-item" data-aos="fade-left">
+            <span class="post-date">06-16</span>
+            <a class="post-title" href="/2021/06/16/issuessites/">issues-sites标签</a>
+          </li>
+        
+          
+          <li class="post-item" data-aos="fade-left">
+            <span class="post-date">06-16</span>
+            <a class="post-title" href="/2021/06/16/issuestimeline/">issues-timeline标签</a>
+          </li>
+        
+      </ul>
+    </div>
+  </section>
+  
+</div>
     </main>
     <div class="footer bg-color">
   <div class="footer-main">
