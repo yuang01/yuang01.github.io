@@ -65,6 +65,8 @@
     </style>
     <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
     <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+
+    
 <meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="Bamboo" type="application/atom+xml">
 </head>
 
@@ -94,10 +96,11 @@
 
 <script>
   var endLoading = function () {
-  document.body.style.overflow = 'auto';
-  document.getElementById('loader').classList.add("loading");
+    document.body.style.overflow = 'auto';
+    document.getElementById('loader').classList.add("loading");
   }
-  window.addEventListener('load',endLoading);
+  window.addEventListener('DOMContentLoaded',endLoading);
+  
 </script>
 
     
@@ -120,7 +123,10 @@
   <div class="header-content">
     <div class="bars">
       <div id="appDrawer" class="sidebar-image">
-  <i class="fa fa-bars" aria-hidden="true" @click="showDialogDrawer"></i>
+  <div class="drawer-box-icon">
+    <i class="fa fa-bars" aria-hidden="true" @click="showDialogDrawer"></i>
+  </div>
+  
   <transition name="fade">
     <div class="drawer-box_mask" v-cloak style="display: none;" v-show="visible" @click.self="cancelDialogDrawer">
     </div>
@@ -144,6 +150,63 @@
                   
                   <span class="name">首页</span>
                 </a>
+              
+            </li>
+          
+            <li class="drawer-box-content_item" style="position: relative;">
+              
+                <a href="javascript:;" class="drawer-menu-item-link has-children" @click="openOrCloseMenu(1)">
+                  <span>
+                    
+                    <span class="name">📄文档</span>
+                  </span>
+                  <i class="fa fa-chevron-left arrow " :class="{'icon-rotate': isOpen(1)}" aria-hidden="true"></i>
+                </a>
+                <ul class="drawer-sub-menu" v-if="isOpen(1)">
+                  
+                  <li>
+                    <a href="/2021/07/05/hexo-theme-bamboo-new">
+                      
+                      <span>基本配置</span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="/2021/07/05/hexo-theme-bamboo/v2.3.0-page/">
+                      
+                      <span>页面功能配置</span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="/2021/07/05/hexo-theme-bamboo/v2.3.0-theme/">
+                      
+                      <span>主题更改</span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="/2021/07/05/hexo-theme-bamboo/v2.3.0-front-matter/">
+                      
+                      <span>Front-matter介绍</span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="/2021/07/05/hexo-theme-bamboo/v2.3.0-tags/">
+                      
+                      <span>内置标签</span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="/2021/07/05/hexo-theme-bamboo/v2.3.0-suggest/">
+                      
+                      <span>建议</span>
+                    </a>
+                  </li>
+                  
+                </ul>
               
             </li>
           
@@ -202,14 +265,14 @@
           
             <li class="drawer-box-content_item" style="position: relative;">
               
-                <a href="javascript:;" class="drawer-menu-item-link has-children" @click="openOrCloseMenu(6)">
+                <a href="javascript:;" class="drawer-menu-item-link has-children" @click="openOrCloseMenu(7)">
                   <span>
                     
                     <span class="name">🐱更多</span>
                   </span>
-                  <i class="fa fa-chevron-left arrow " :class="{'icon-rotate': isOpen(6)}" aria-hidden="true"></i>
+                  <i class="fa fa-chevron-left arrow " :class="{'icon-rotate': isOpen(7)}" aria-hidden="true"></i>
                 </a>
-                <ul class="drawer-sub-menu" v-if="isOpen(6)">
+                <ul class="drawer-sub-menu" v-if="isOpen(7)">
                   
                   <li>
                     <a href="/gallery">
@@ -244,12 +307,14 @@
             </li>
           
         
-        <li class="drawer-box-content_item">
-          <a target="_blank" rel="noopener" href="https://github.com/yuang01/hexo-theme-bamboo">
-            <i class="fa fa-github" aria-hidden="true"></i>
-            <span>Github</span>
-          </a>
-        </li>
+        
+          <li class="drawer-box-content_item">
+            <a target="_blank" rel="noopener" href="https://github.com/yuang01/hexo-theme-bamboo">
+              <i class="fa fa-github" aria-hidden="true"></i>
+              <span>Github</span>
+            </a>
+          </li>
+        
       </ul>
     </div>
   </div>
@@ -315,7 +380,7 @@
           
             <li class="menu-item" style="position: relative;">
               
-                <a href="/" class="menu-item-link">
+                <a href="/" class="menu-item-link" title="首页">
                   
                     <i class="fa fa-home" aria-hidden="true"></i>
                   
@@ -326,7 +391,62 @@
           
             <li class="menu-item" style="position: relative;">
               
-                <a href="/archives" class="menu-item-link">
+                <a href="javascript:;" class="menu-item-link" title="📄文档">
+                  
+                  <span class="name">📄文档</span>
+                  <i class="fa fa-chevron-down arrow" aria-hidden="true"></i>
+                </a>
+                <ul class="sub-menu">
+                  
+                  <li>
+                    <a href="/2021/07/05/hexo-theme-bamboo-new">
+                      
+                      <span>基本配置</span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="/2021/07/05/hexo-theme-bamboo/v2.3.0-page/">
+                      
+                      <span>页面功能配置</span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="/2021/07/05/hexo-theme-bamboo/v2.3.0-theme/">
+                      
+                      <span>主题更改</span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="/2021/07/05/hexo-theme-bamboo/v2.3.0-front-matter/">
+                      
+                      <span>Front-matter介绍</span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="/2021/07/05/hexo-theme-bamboo/v2.3.0-tags/">
+                      
+                      <span>内置标签</span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="/2021/07/05/hexo-theme-bamboo/v2.3.0-suggest/">
+                      
+                      <span>建议</span>
+                    </a>
+                  </li>
+                  
+                </ul>
+              
+            </li>
+          
+            <li class="menu-item" style="position: relative;">
+              
+                <a href="/archives" class="menu-item-link" title="归档">
                   
                     <i class="fa fa-archive" aria-hidden="true"></i>
                   
@@ -337,7 +457,7 @@
           
             <li class="menu-item" style="position: relative;">
               
-                <a href="/tags" class="menu-item-link">
+                <a href="/tags" class="menu-item-link" title="标签">
                   
                     <i class="fa fa-tags" aria-hidden="true"></i>
                   
@@ -348,7 +468,7 @@
           
             <li class="menu-item" style="position: relative;">
               
-                <a href="/categories" class="menu-item-link">
+                <a href="/categories" class="menu-item-link" title="分类">
                   
                     <i class="fa fa-bookmark" aria-hidden="true"></i>
                   
@@ -359,7 +479,7 @@
           
             <li class="menu-item" style="position: relative;">
               
-                <a href="/about" class="menu-item-link">
+                <a href="/about" class="menu-item-link" title="关于">
                   
                     <i class="fa fa-user" aria-hidden="true"></i>
                   
@@ -370,7 +490,7 @@
           
             <li class="menu-item" style="position: relative;">
               
-                <a href="/friends" class="menu-item-link">
+                <a href="/friends" class="menu-item-link" title="友情链接">
                   
                   <span class="name">友情链接</span>
                 </a>
@@ -379,7 +499,7 @@
           
             <li class="menu-item" style="position: relative;">
               
-                <a href="javascript:;" class="menu-item-link">
+                <a href="javascript:;" class="menu-item-link" title="🐱更多">
                   
                   <span class="name">🐱更多</span>
                   <i class="fa fa-chevron-down arrow" aria-hidden="true"></i>
@@ -435,7 +555,7 @@
             <i class="fa fa-search" aria-hidden="true"></i>
             <span class="title">本地搜索</span>
           </span>
-          <i class="fa fa-close close" style="float:right;" aria-hidden="true" @click.self="cancelDialogVisible()"></i>
+          <i class="fa fa-close close" pointer style="float:right;" aria-hidden="true" @click.self="cancelDialogVisible()"></i>
         </h2>
         <form class="site-search-form">
           <input type="text"
@@ -501,7 +621,8 @@
     </nav>
   </div>
   
-  <a target="_blank" rel="noopener" href="https://github.com/yuang01/hexo-theme-bamboo" class="github-corner color-primary" aria-label="View source on GitHub"><svg width="60" height="60" viewBox="0 0 250 250" style="fill:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+    <a target="_blank" rel="noopener" href="https://github.com/yuang01/hexo-theme-bamboo" class="github-corner color-primary" aria-label="View source on GitHub"><svg width="60" height="60" viewBox="0 0 250 250" style="fill:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+  
   
     <div id="he-plugin-simple"></div>
     <script>
@@ -532,14 +653,106 @@
 
     <!-- 当头部导航设置为背景透明的时候  -->
     
-      <script src="/js/header/index.js"></script>
+      <script src="/js/header/index.js" data-pjax></script>
     
 </header>
 
+    <!-- 需要在上面加载的js -->
+    <script>
+    function loadScript(src, cb) {
+        setTimeout(function () {
+            var HEAD = document.getElementsByTagName('head')[0] || document.documentElement;
+            var script = document.createElement('script');
+            script.setAttribute('type', 'text/javascript');
+            if (cb) script.onload = cb;
+            script.setAttribute('src', src);
+            HEAD.appendChild(script);
+        });
+    }
+
+    //https://github.com/filamentgroup/loadCSS
+    var loadCSS = function (href, before, media, attributes) {
+        var doc = window.document;
+        var ss = doc.createElement("link");
+        var ref;
+        if (before) {
+            ref = before;
+        }
+        else {
+            var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+            ref = refs[refs.length - 1];
+        }
+        var sheets = doc.styleSheets;
+        if (attributes) {
+            for (var attributeName in attributes) {
+                if (attributes.hasOwnProperty(attributeName)) {
+                    ss.setAttribute(attributeName, attributes[attributeName]);
+                }
+            }
+        }
+        ss.rel = "stylesheet";
+        ss.href = href;
+        ss.media = "only x";
+        function ready(cb) {
+            if (doc.body) {
+                return cb();
+            }
+            setTimeout(function () {
+                ready(cb);
+            });
+        }
+        ready(function () {
+            ref.parentNode.insertBefore(ss, (before ? ref : ref.nextSibling));
+        });
+        var onloadcssdefined = function (cb) {
+            var resolvedHref = ss.href;
+            var i = sheets.length;
+            while (i--) {
+                if (sheets[i].href === resolvedHref) {
+                    return cb();
+                }
+            }
+            setTimeout(function () {
+                onloadcssdefined(cb);
+            });
+        };
+        function loadCB() {
+            if (ss.addEventListener) {
+                ss.removeEventListener("load", loadCB);
+            }
+            ss.media = media || "all";
+        }
+        if (ss.addEventListener) {
+            ss.addEventListener("load", loadCB);
+        }
+        ss.onloadcssdefined = onloadcssdefined;
+        onloadcssdefined(loadCB);
+        return ss;
+    };
+    
+</script>
+ 
+
+<!-- 轮播图所需要的js -->
+<script src="/js/swiper/swiper.min.js"></script>
+<script src="/js/swiper/vue-awesome-swiper.js"></script>
+<script src="/js/swiper/swiper.animate1.0.3.min.js"></script>
+
+
+  <script src="/js/vue-typed-js/index.js"></script>
+
+
+<!-- 首页的公告滚动插件的js需要重新加载 -->
+<script src="/js/vue-seamless-scroll/index.js"></script>
+
+<!-- 打字机效果js -->
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+
+
     <!-- 内容区域 -->
-    <main class="main" style="margin-top: 0;">
+    <main class="main" id="pjax-container" style="margin-top: 0;">
       <!-- 首页轮播 -->
-<link href="https://cdn.bootcdn.net/ajax/libs/Swiper/5.4.1/css/swiper.min.css" rel="stylesheet">
+<link href="/js/swiper/swiper@5.4.1.min.css" rel="stylesheet">
 
 
   <link href="/js/vue-typed-js/index.css" rel="stylesheet">
@@ -549,7 +762,7 @@
 
 
 
-<div class="swiper-length" style="display: none;">2</div>
+<div class="swiper-length" style="display: none;">7</div>
 <div id="appSwiper"
   class=""
   @mouseenter="stopAutoPlay()" 
@@ -559,14 +772,14 @@
     
       
         <swiper-slide>
-          <div class="item swiper-lazy" data-background="https://img11.360buyimg.com/ddimg/jfs/t1/160978/33/20686/2476596/6083e62dEa588862b/63f8f2163ab61b2f.png" style="background-size: 90000px; 
+          <div class="item swiper-lazy" data-background="https://img11.360buyimg.com/ddimg/jfs/t1/160978/33/20686/2476596/6083e62dEa588862b/63f8f2163ab61b2f.png" style="background-size: 300000px; 
             background-position: left center;" style="position: relative;">
             <div class="swiper-bgmask" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;"></div>
               <div class="flag">
                 
                 <div class="swiper-video">
-                  <video class="full-video" poster="https://img14.360buyimg.com/ddimg/jfs/t1/150557/6/19578/249564/60320406Ed5c42418/0d18299f505e4268.gif" autoplay loop muted style="width: 100%;height:100%;object-fit: cover;">
-                    <source style="width: 100%;height: 100vh;"  src="https://assets.mixkit.co/videos/preview/mixkit-raft-going-slowly-down-a-river-1218-large.mp4">
+                  <video class="full-video" poster="https://img14.360buyimg.com/ddimg/jfs/t1/175057/18/19582/882056/60ee7ac8Ef0045710/202d2ad878684a3b.gif" autoplay loop muted style="width: 100%;height:100%;object-fit: cover;">
+                    <source style="width: 100%;height: 100vh;"  src="http://121.4.241.135/gf3.mp4">
                   </video>
                   <div class="swiper-video-maskBox"></div>
                 </div>
@@ -580,7 +793,7 @@
                     <div class="title ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">青墨书晚风</div>
                     
                       <div class="ani animated default-excerpt" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">
-                        <vue-typed-js :strings="defaultDesc" :loop="defaultDescTypedLoop" typeSpeed="10000">
+                        <vue-typed-js :strings="defaultDesc" :loop="defaultDescTypedLoop" :type-speed="100" :back-speed="50">
                           <h1 class="typing"></h1>
                         </vue-typed-js>
                       </div>
@@ -588,52 +801,185 @@
                   </div>
                   <div style="display: flex;" class="flag-text-btns">
                     
-                      <div class="ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s"><a href="https://yuang01.github.io/2021/02/08/hexo-theme-bamboo-new/" class="read-more border-color swiper-btn-color" style="display: inline-block; z-index:1;">阅读文档</a></div>
+                      <div class="ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s"><a href="https://yuang01.github.io/2021/02/08/hexo-theme-bamboo-new/" class="read-more swiper-btn-color" style="display: inline-block; z-index:1;">阅读文档</a></div>
                     
                     
-                      <div class="ani animated" style="margin-left: 10px;" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s"><a target="_blank" rel="noopener" href="https://gitee.com/yuang01/hexo-theme-bamboo/repository/archive/dev.zip" class="read-more border-color swiper-btn-color2" style="display: inline-block; z-index:1;border: 1px solid white;">下载主题</a></div>
+                      <div class="ani animated" style="margin-left: 10px;" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s"><a target="_blank" rel="noopener" href="https://gitee.com/yuang01/hexo-theme-bamboo/repository/archive/dev.zip" class="read-more swiper-btn-color2" style="display: inline-block; z-index:1;border: 1px solid white;">下载主题</a></div>
                     
                   </div>
                 </div>
               </div>
-            </div>
+          </div>
         </swiper-slide>
       
       
         
         
-      
-        
-        
-      
-        
-        
-      
-        
-        
-      
-        
-        
           
           <swiper-slide>
-            <div class="item swiper-lazy" data-background="https://img13.360buyimg.com/ddimg/jfs/t1/179066/36/814/284417/60840a15E419a1e0b/9c68dbe001b4b980.jpg" style=" background-size: 90000px; 
+            <div class="item swiper-lazy" data-background="https://img10.360buyimg.com/ddimg/jfs/t1/180344/4/14703/246455/60f3ac57E43fdf363/412adfa574c34196.jpg" style=" background-size: 300000px; 
             background-position: left center;" style="position: relative;">
-            <div class="swiper-bgmask" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;"></div>
+              <div class="swiper-bgmask" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;"></div>
               <div class="flag" style="z-index: 2;">
-                <div class="img-mask swiper-lazy" data-background="https://img13.360buyimg.com/ddimg/jfs/t1/179066/36/814/284417/60840a15E419a1e0b/9c68dbe001b4b980.jpg" style="height: 100%; background-size: cover; 
+                <div class="img-mask swiper-lazy" data-background="https://img10.360buyimg.com/ddimg/jfs/t1/180344/4/14703/246455/60f3ac57E43fdf363/412adfa574c34196.jpg" style="height: 100%; background-size: cover; 
                   background-position: center center;">
                   <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>  
                 </div>
                 <div class="flag-text">
                   <div class="flag-text-content">
                     <div class="title ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">
-                      <a href="/2021/02/08/hexo-theme-bamboo-new/">
-                        Hexo主题--Bamboo介绍
+                      <a href="/2021/07/05/hexo-theme-bamboo-new/">
+                        Bamboo主题-基本配置（一）
                       </a>
                     </div>
-                    <div class="excerpt ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">该文档是版本2.0.0的文档，版本号可以从主题下的`package.json`查看</div>
+                    <div class="excerpt ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">该文档是版本2.3.0的文档，版本号可以从主题下的`package.json`查看</div>
                   </div>
-                  <div class="bottom-one-btn ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s"><a href="/2021/02/08/hexo-theme-bamboo-new/" class="read-more border-color swiper-btn-color" style="display: inline-block; z-index:1;">阅读更多</a></div>
+                  <div class="bottom-one-btn ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s"><a href="/2021/07/05/hexo-theme-bamboo-new/" class="read-more swiper-btn-color" style="display: inline-block; z-index:1;">阅读更多</a></div>
+                </div>
+              </div>
+            </div>
+
+          </swiper-slide>
+        
+      
+        
+        
+          
+          <swiper-slide>
+            <div class="item swiper-lazy" data-background="https://pica.zhimg.com/80/v2-4dc929a46e9fb56c13911592af0be9dc_1440w.jpg?source=1940ef5c" style=" background-size: 300000px; 
+            background-position: left center;" style="position: relative;">
+              <div class="swiper-bgmask" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;"></div>
+              <div class="flag" style="z-index: 2;">
+                <div class="img-mask swiper-lazy" data-background="https://pica.zhimg.com/80/v2-4dc929a46e9fb56c13911592af0be9dc_1440w.jpg?source=1940ef5c" style="height: 100%; background-size: cover; 
+                  background-position: center center;">
+                  <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>  
+                </div>
+                <div class="flag-text">
+                  <div class="flag-text-content">
+                    <div class="title ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">
+                      <a href="/2021/07/05/hexo-theme-bamboo/v2.3.0-page/">
+                        Bamboo主题-页面功能配置（二）
+                      </a>
+                    </div>
+                    <div class="excerpt ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">该文档是版本2.3.0的文档，版本号可以从主题下的`package.json`查看</div>
+                  </div>
+                  <div class="bottom-one-btn ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s"><a href="/2021/07/05/hexo-theme-bamboo/v2.3.0-page/" class="read-more swiper-btn-color" style="display: inline-block; z-index:1;">阅读更多</a></div>
+                </div>
+              </div>
+            </div>
+
+          </swiper-slide>
+        
+      
+        
+        
+          
+          <swiper-slide>
+            <div class="item swiper-lazy" data-background="https://w.wallhaven.cc/full/48/wallhaven-48yppo.jpg" style=" background-size: 300000px; 
+            background-position: left center;" style="position: relative;">
+              <div class="swiper-bgmask" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;"></div>
+              <div class="flag" style="z-index: 2;">
+                <div class="img-mask swiper-lazy" data-background="https://w.wallhaven.cc/full/48/wallhaven-48yppo.jpg" style="height: 100%; background-size: cover; 
+                  background-position: center center;">
+                  <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>  
+                </div>
+                <div class="flag-text">
+                  <div class="flag-text-content">
+                    <div class="title ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">
+                      <a href="/2021/07/05/hexo-theme-bamboo/v2.3.0-theme/">
+                        Bamboo主题-主题更改（三）
+                      </a>
+                    </div>
+                    <div class="excerpt ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">该文档是版本2.3.0的文档，版本号可以从主题下的`package.json`查看</div>
+                  </div>
+                  <div class="bottom-one-btn ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s"><a href="/2021/07/05/hexo-theme-bamboo/v2.3.0-theme/" class="read-more swiper-btn-color" style="display: inline-block; z-index:1;">阅读更多</a></div>
+                </div>
+              </div>
+            </div>
+
+          </swiper-slide>
+        
+      
+        
+        
+          
+          <swiper-slide>
+            <div class="item swiper-lazy" data-background="https://pic3.zhimg.com/80/v2-5c159c149e01a6edfe215c8707b60a9d_1440w.jpg?source=1940ef5c" style=" background-size: 300000px; 
+            background-position: left center;" style="position: relative;">
+              <div class="swiper-bgmask" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;"></div>
+              <div class="flag" style="z-index: 2;">
+                <div class="img-mask swiper-lazy" data-background="https://pic3.zhimg.com/80/v2-5c159c149e01a6edfe215c8707b60a9d_1440w.jpg?source=1940ef5c" style="height: 100%; background-size: cover; 
+                  background-position: center center;">
+                  <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>  
+                </div>
+                <div class="flag-text">
+                  <div class="flag-text-content">
+                    <div class="title ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">
+                      <a href="/2021/07/05/hexo-theme-bamboo/v2.3.0-front-matter/">
+                        Bamboo主题-Front-matter介绍（四）
+                      </a>
+                    </div>
+                    <div class="excerpt ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">该文档是版本2.3.0的文档，版本号可以从主题下的`package.json`查看</div>
+                  </div>
+                  <div class="bottom-one-btn ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s"><a href="/2021/07/05/hexo-theme-bamboo/v2.3.0-front-matter/" class="read-more swiper-btn-color" style="display: inline-block; z-index:1;">阅读更多</a></div>
+                </div>
+              </div>
+            </div>
+
+          </swiper-slide>
+        
+      
+        
+        
+          
+          <swiper-slide>
+            <div class="item swiper-lazy" data-background="https://img14.360buyimg.com/ddimg/jfs/t1/184128/30/13883/1673623/60f3ad05E7099ac6e/4d5ff4c2e5d67132.jpg" style=" background-size: 300000px; 
+            background-position: left center;" style="position: relative;">
+              <div class="swiper-bgmask" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;"></div>
+              <div class="flag" style="z-index: 2;">
+                <div class="img-mask swiper-lazy" data-background="https://img14.360buyimg.com/ddimg/jfs/t1/184128/30/13883/1673623/60f3ad05E7099ac6e/4d5ff4c2e5d67132.jpg" style="height: 100%; background-size: cover; 
+                  background-position: center center;">
+                  <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>  
+                </div>
+                <div class="flag-text">
+                  <div class="flag-text-content">
+                    <div class="title ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">
+                      <a href="/2021/07/05/hexo-theme-bamboo/v2.3.0-tags/">
+                        Bamboo主题-内置标签（五）
+                      </a>
+                    </div>
+                    <div class="excerpt ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">该文档是版本2.3.0的文档，版本号可以从主题下的`package.json`查看</div>
+                  </div>
+                  <div class="bottom-one-btn ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s"><a href="/2021/07/05/hexo-theme-bamboo/v2.3.0-tags/" class="read-more swiper-btn-color" style="display: inline-block; z-index:1;">阅读更多</a></div>
+                </div>
+              </div>
+            </div>
+
+          </swiper-slide>
+        
+      
+        
+        
+          
+          <swiper-slide>
+            <div class="item swiper-lazy" data-background="https://pic1.zhimg.com/80/v2-a48800108645e7f7e8e432a150fe7f96_1440w.jpg?source=1940ef5c" style=" background-size: 300000px; 
+            background-position: left center;" style="position: relative;">
+              <div class="swiper-bgmask" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;"></div>
+              <div class="flag" style="z-index: 2;">
+                <div class="img-mask swiper-lazy" data-background="https://pic1.zhimg.com/80/v2-a48800108645e7f7e8e432a150fe7f96_1440w.jpg?source=1940ef5c" style="height: 100%; background-size: cover; 
+                  background-position: center center;">
+                  <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>  
+                </div>
+                <div class="flag-text">
+                  <div class="flag-text-content">
+                    <div class="title ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">
+                      <a href="/2021/07/05/hexo-theme-bamboo/v2.3.0-suggest/">
+                        Bamboo主题-建议（六）
+                      </a>
+                    </div>
+                    <div class="excerpt ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">该文档是版本2.3.0的文档，版本号可以从主题下的`package.json`查看该文档是版本2.3.0的文档，版本号可以从主题下的`package.json`查看该文档是版本2.3.0的文档，版本号可以从主题下的`package.json`查看该文档是版本2.3.0的文档，版本号可以从主题下的`package.json`查看该文档是版本2.3.0的文档，版本号可以从主题下的`package.json`查看该文档是版本2.3.0的文档，版本号可以从主题下的`package.json`查看该文档是版本2.3.0的文档，版本号可以从主题下的`package.json`查看该文档是版本2.3.0的文档，版本号可以从主题下的`package.json`查看该文档是版本2.3.0的文档，版本号可以从主题下的`package.json`查看该文档是版本2.3.0的文档，版本号可以从主题下的`package.json`查看该文档是版本2.3.0的文档，版本号可以从主题下的`package.json`查看该文档是版本2.3.0的文档，版本号可以从主题下的`package.json`查看该文档是版本2.3.0的文档，版本号可以从主题下的`package.json`查看</div>
+                  </div>
+                  <div class="bottom-one-btn ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s"><a href="/2021/07/05/hexo-theme-bamboo/v2.3.0-suggest/" class="read-more swiper-btn-color" style="display: inline-block; z-index:1;">阅读更多</a></div>
                 </div>
               </div>
             </div>
@@ -706,13 +1052,25 @@
       
         
         
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
           
           <swiper-slide>
-            <div class="item swiper-lazy" data-background="/medias/7.jpg" style=" background-size: 90000px; 
+            <div class="item swiper-lazy" data-background="/medias/2.jpg" style=" background-size: 300000px; 
             background-position: left center;" style="position: relative;">
-            <div class="swiper-bgmask" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;"></div>
+              <div class="swiper-bgmask" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;"></div>
               <div class="flag" style="z-index: 2;">
-                <div class="img-mask swiper-lazy" data-background="/medias/7.jpg" style="height: 100%; background-size: cover; 
+                <div class="img-mask swiper-lazy" data-background="/medias/2.jpg" style="height: 100%; background-size: cover; 
                   background-position: center center;">
                   <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>  
                 </div>
@@ -725,7 +1083,7 @@
                     </div>
                     <div class="excerpt ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s"><p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p></div>
                   </div>
-                  <div class="bottom-one-btn ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s"><a href="/2020/09/10/hello-world/" class="read-more border-color swiper-btn-color" style="display: inline-block; z-index:1;">阅读更多</a></div>
+                  <div class="bottom-one-btn ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s"><a href="/2020/09/10/hello-world/" class="read-more swiper-btn-color" style="display: inline-block; z-index:1;">阅读更多</a></div>
                 </div>
               </div>
             </div>
@@ -733,9 +1091,9 @@
           </swiper-slide>
         
       
-    <div class="swiper-pagination" slot="pagination" style=""></div>
-    <div class="swiper-button-prev swiper-button-white" slot="button-prev" style=""></div>
-    <div class="swiper-button-next swiper-button-white" slot="button-next" style=""></div>
+    <div class="swiper-pagination" slot="pagination" pointer style="display: none;"></div>
+    <div class="swiper-button-prev swiper-button-white" pointer slot="button-prev" style=""></div>
+    <div class="swiper-button-next swiper-button-white" pointer slot="button-next" style=""></div>
     
   </swiper>
   
@@ -747,26 +1105,20 @@
   
   <canvas id="header_canvas"style="position:absolute;bottom:0;width:100%;pointer-events:none;"></canvas>
 </div>
-<script src="/js/swiper/swiper.min.js"></script>
-<script src="/js/swiper/vue-awesome-swiper.js"></script>
-<script src="/js/swiper/swiper.animate1.0.3.min.js"></script>
+
 <script type="text/javascript">
   Vue.use(window.VueAwesomeSwiper)
 </script>
 
-
-  <script src="/js/vue-typed-js/index.js"></script>
-
-
 <script>
-  let autoplay = JSON.parse('false');
-  let delay = '5000';
-  let loop = JSON.parse('true') ? false : JSON.parse('true');
-  let effect = 'slide';
-  let swiperLength = parseInt(document.querySelector(".swiper-length").innerText);
-  let defaultDesc = '煮酒洗净尘嚣，论知交,万般付之一笑，共偕老';
+  var autoplay = JSON.parse('false');
+  var delay = '5000';
+  var loop = JSON.parse('true') ? false : JSON.parse('true');
+  var effect = 'slide';
+  var swiperLength = parseInt(document.querySelector(".swiper-length").innerText);
+  var defaultDesc = '心居山野身处社,万世繁华待宁静,闲散清风踏绿悠,山绵绵绣清风来';
   defaultDesc = defaultDesc.split(',');
-  let defaultDescTypedLoop = JSON.parse('true');
+  var defaultDescTypedLoop = JSON.parse('true');
   var vm = new Vue({
     el: '#appSwiper',
     data: {
@@ -835,6 +1187,7 @@
 <style>
 #appSwiper {
   position: relative;
+  user-select: none;
 }
 .default-excerpt {
   font-size: 1.6rem;
@@ -902,8 +1255,8 @@
   color: #eee;
   font-family: Ubuntu,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
   width: 70%;
-  line-height: 27px;
-  height: 135px;
+  line-height: 30px;
+  height: 150px;
   margin-top: 2%;
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -1304,10 +1657,325 @@
 
 <!-- hash算法 -->
 
-<div class="bg-floor" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -2;"></div>
+<div class="bg-floor" id="home-bg-floor" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -2;"></div>
 <section class="posts">
   
     <article class="post" data-aos="fade-up" style="flex-direction: row-reverse;   ">
+      <div class="post-main">
+        <div class="post-info">
+          <div class="post-time">
+            <i class="fa fa-clock-o" aria-hidden="true"></i>
+            <span class="post-time">2021-02-08</span>
+          </div>
+          <div class="post-title">
+            <a class="post-title-link" href="/2021/02/08/btn/">按钮</a>
+          </div>
+          <div class="post-meta">
+            <div class="post-tags">
+              <!-- 文章详情页的标签 -->
+
+    <i class="iconfont icontag"></i>
+    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tag/" rel="tag">tag</a></li></ul>
+
+            </div>
+            <div class="post-categories">
+              <!-- 文章详情页的分类 -->
+
+<div class="article-category">
+  <i class="iconfont iconbookmark1"></i>
+  <a class="article-category-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a>
+</div>
+
+
+            </div>
+          </div>
+          <div class="post-img-mobile">
+            
+              <a href="/2021/02/08/btn/" class="lazyload" data-original="https://pic1.zhimg.com/80/v2-1f5fecc916dcb213570e1a79be2a5d65_1440w.jpg?source=1940ef5c" style="background-size: cover; 
+                background-position: center center;">
+              </a>
+            
+          </div>
+          <div class="post-content">
+            融入段落中按钮
+不设置任何参数的 按钮 适合融入段落中。
+不设置任何参数的 按钮 适合融入段落中。
+不设置任何参数的 按钮 适合融入段落中。
+不设置任何参数的 按钮 适合融入段落中。
+不设置任何参数的 按钮 适合融入段落中。
+上述实例源码不
+          </div>
+        </div>
+        <div class="post-more">
+          <a href="/2021/02/08/btn/">
+            <i class="iconfont iconmore" pointer style="float: right;  " title="阅读更多"></i>
+          </a>
+        </div>
+      </div>
+      <div class="post-img">
+        
+          <a href="/2021/02/08/btn/" class="lazyload" data-original="https://pic1.zhimg.com/80/v2-1f5fecc916dcb213570e1a79be2a5d65_1440w.jpg?source=1940ef5c" style="background-size: cover; 
+            background-position: center center;">
+          </a>
+        
+      </div>
+    </article>
+  
+    <article class="post" data-aos="fade-up" style="   ">
+      <div class="post-main">
+        <div class="post-info">
+          <div class="post-time">
+            <i class="fa fa-clock-o" aria-hidden="true"></i>
+            <span class="post-time">2021-02-08</span>
+          </div>
+          <div class="post-title">
+            <a class="post-title-link" href="/2021/02/08/audio/">audio音频</a>
+          </div>
+          <div class="post-meta">
+            <div class="post-tags">
+              <!-- 文章详情页的标签 -->
+
+    <i class="iconfont icontag"></i>
+    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tag/" rel="tag">tag</a></li></ul>
+
+            </div>
+            <div class="post-categories">
+              <!-- 文章详情页的分类 -->
+
+<div class="article-category">
+  <i class="iconfont iconbookmark1"></i>
+  <a class="article-category-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a>
+</div>
+
+
+            </div>
+          </div>
+          <div class="post-img-mobile">
+            
+              <a href="/2021/02/08/audio/" class="lazyload" data-original="https://pic2.zhimg.com/80/v2-035165460d504f2b072ee777d1d40ab6_1440w.jpg?source=1940ef5c" style="background-size: cover; 
+                background-position: center center;">
+              </a>
+            
+          </div>
+          <div class="post-content">
+            事例
+
+Your browser does not support the audio tag.
+
+写法
+&#123;% audio http://qiniu.cunzhuang.top/%E5%85%AD%E5%93%B2%20-%20%
+          </div>
+        </div>
+        <div class="post-more">
+          <a href="/2021/02/08/audio/">
+            <i class="iconfont iconmore" pointer style="  " title="阅读更多"></i>
+          </a>
+        </div>
+      </div>
+      <div class="post-img">
+        
+          <a href="/2021/02/08/audio/" class="lazyload" data-original="https://pic2.zhimg.com/80/v2-035165460d504f2b072ee777d1d40ab6_1440w.jpg?source=1940ef5c" style="background-size: cover; 
+            background-position: center center;">
+          </a>
+        
+      </div>
+    </article>
+  
+    <article class="post" data-aos="fade-up" style="flex-direction: row-reverse;   ">
+      <div class="post-main">
+        <div class="post-info">
+          <div class="post-time">
+            <i class="fa fa-clock-o" aria-hidden="true"></i>
+            <span class="post-time">2021-02-08</span>
+          </div>
+          <div class="post-title">
+            <a class="post-title-link" href="/2021/02/08/checkbox/">checkbox</a>
+          </div>
+          <div class="post-meta">
+            <div class="post-tags">
+              <!-- 文章详情页的标签 -->
+
+    <i class="iconfont icontag"></i>
+    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tag/" rel="tag">tag</a></li></ul>
+
+            </div>
+            <div class="post-categories">
+              <!-- 文章详情页的分类 -->
+
+<div class="article-category">
+  <i class="iconfont iconbookmark1"></i>
+  <a class="article-category-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a>
+</div>
+
+
+            </div>
+          </div>
+          <div class="post-img-mobile">
+            
+              <a href="/2021/02/08/checkbox/" class="lazyload" data-original="https://pic1.zhimg.com/80/v2-b45cff10c7ebebe5c68fba3b134d81f4_1440w.jpg?source=1940ef5c" style="background-size: cover; 
+                background-position: center center;">
+              </a>
+            
+          </div>
+          <div class="post-content">
+            进度条示例
+
+
+            纯文本测试
+            
+
+            支持简单的 markdown 语法
+            
+
+            支持自定义颜色
+            
+
+  
+          </div>
+        </div>
+        <div class="post-more">
+          <a href="/2021/02/08/checkbox/">
+            <i class="iconfont iconmore" pointer style="float: right;  " title="阅读更多"></i>
+          </a>
+        </div>
+      </div>
+      <div class="post-img">
+        
+          <a href="/2021/02/08/checkbox/" class="lazyload" data-original="https://pic1.zhimg.com/80/v2-b45cff10c7ebebe5c68fba3b134d81f4_1440w.jpg?source=1940ef5c" style="background-size: cover; 
+            background-position: center center;">
+          </a>
+        
+      </div>
+    </article>
+  
+    <article class="post" data-aos="fade-up" style="   ">
+      <div class="post-main">
+        <div class="post-info">
+          <div class="post-time">
+            <i class="fa fa-clock-o" aria-hidden="true"></i>
+            <span class="post-time">2021-02-08</span>
+          </div>
+          <div class="post-title">
+            <a class="post-title-link" href="/2021/02/08/folding/">folding折叠</a>
+          </div>
+          <div class="post-meta">
+            <div class="post-tags">
+              <!-- 文章详情页的标签 -->
+
+    <i class="iconfont icontag"></i>
+    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tag/" rel="tag">tag</a></li></ul>
+
+            </div>
+            <div class="post-categories">
+              <!-- 文章详情页的分类 -->
+
+<div class="article-category">
+  <i class="iconfont iconbookmark1"></i>
+  <a class="article-category-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a>
+</div>
+
+
+            </div>
+          </div>
+          <div class="post-img-mobile">
+            
+              <a href="/2021/02/08/folding/" class="lazyload" data-original="https://pic4.zhimg.com/80/v2-3b4ca49ff4fc567faa76ce6f02cffac9_1440w.jpg?source=1940ef5c" style="background-size: cover; 
+                background-position: center center;">
+              </a>
+            
+          </div>
+          <div class="post-content">
+            
+基本
+
+ 查看图片测试 
+              
+              
+              
+            
+上述事例代码&#123;% folding 查看图片测试 %&#125;
+  ![](https
+          </div>
+        </div>
+        <div class="post-more">
+          <a href="/2021/02/08/folding/">
+            <i class="iconfont iconmore" pointer style="  " title="阅读更多"></i>
+          </a>
+        </div>
+      </div>
+      <div class="post-img">
+        
+          <a href="/2021/02/08/folding/" class="lazyload" data-original="https://pic4.zhimg.com/80/v2-3b4ca49ff4fc567faa76ce6f02cffac9_1440w.jpg?source=1940ef5c" style="background-size: cover; 
+            background-position: center center;">
+          </a>
+        
+      </div>
+    </article>
+  
+    <article class="post" data-aos="fade-up" style="flex-direction: row-reverse;   ">
+      <div class="post-main">
+        <div class="post-info">
+          <div class="post-time">
+            <i class="fa fa-clock-o" aria-hidden="true"></i>
+            <span class="post-time">2021-02-08</span>
+          </div>
+          <div class="post-title">
+            <a class="post-title-link" href="/2021/02/08/gallery/">gallery图片</a>
+          </div>
+          <div class="post-meta">
+            <div class="post-tags">
+              <!-- 文章详情页的标签 -->
+
+    <i class="iconfont icontag"></i>
+    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tag/" rel="tag">tag</a></li></ul>
+
+            </div>
+            <div class="post-categories">
+              <!-- 文章详情页的分类 -->
+
+<div class="article-category">
+  <i class="iconfont iconbookmark1"></i>
+  <a class="article-category-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a>
+</div>
+
+
+            </div>
+          </div>
+          <div class="post-img-mobile">
+            
+              <a href="/2021/02/08/gallery/" class="lazyload" data-original="https://pic2.zhimg.com/80/v2-1ecd92421c8823c396f96d15325e6d42_1440w.jpg?source=1940ef5c" style="background-size: cover; 
+                background-position: center center;">
+              </a>
+            
+          </div>
+          <div class="post-content">
+            提示使用该标签请先将主题下的_config.yml中的fancybox设置为true
+
+一行一个图片
+
+
+              
+            
+上述事例代码&#123;% gallery %&#125;
+![图片描述](h
+          </div>
+        </div>
+        <div class="post-more">
+          <a href="/2021/02/08/gallery/">
+            <i class="iconfont iconmore" pointer style="float: right;  " title="阅读更多"></i>
+          </a>
+        </div>
+      </div>
+      <div class="post-img">
+        
+          <a href="/2021/02/08/gallery/" class="lazyload" data-original="https://pic2.zhimg.com/80/v2-1ecd92421c8823c396f96d15325e6d42_1440w.jpg?source=1940ef5c" style="background-size: cover; 
+            background-position: center center;">
+          </a>
+        
+      </div>
+    </article>
+  
+    <article class="post" data-aos="fade-up" style="   ">
       <div class="post-main">
         <div class="post-info">
           <div class="post-time">
@@ -1375,7 +2043,7 @@
         </div>
         <div class="post-more">
           <a href="/2021/02/08/ghcard/">
-            <i class="iconfont iconmore" style="float: right;  " title="阅读更多"></i>
+            <i class="iconfont iconmore" pointer style="  " title="阅读更多"></i>
           </a>
         </div>
       </div>
@@ -1388,7 +2056,7 @@
       </div>
     </article>
   
-    <article class="post" data-aos="fade-up" style="   ">
+    <article class="post" data-aos="fade-up" style="flex-direction: row-reverse;   ">
       <div class="post-main">
         <div class="post-info">
           <div class="post-time">
@@ -1434,7 +2102,7 @@
         </div>
         <div class="post-more">
           <a href="/2021/02/08/inlineimage/">
-            <i class="iconfont iconmore" style="  " title="阅读更多"></i>
+            <i class="iconfont iconmore" pointer style="float: right;  " title="阅读更多"></i>
           </a>
         </div>
       </div>
@@ -1447,7 +2115,7 @@
       </div>
     </article>
   
-    <article class="post" data-aos="fade-up" style="flex-direction: row-reverse;   ">
+    <article class="post" data-aos="fade-up" style="   ">
       <div class="post-main">
         <div class="post-info">
           <div class="post-time">
@@ -1494,7 +2162,7 @@
         </div>
         <div class="post-more">
           <a href="/2021/02/08/link/">
-            <i class="iconfont iconmore" style="float: right;  " title="阅读更多"></i>
+            <i class="iconfont iconmore" pointer style="  " title="阅读更多"></i>
           </a>
         </div>
       </div>
@@ -1507,7 +2175,7 @@
       </div>
     </article>
   
-    <article class="post" data-aos="fade-up" style="   ">
+    <article class="post" data-aos="fade-up" style="flex-direction: row-reverse;   ">
       <div class="post-main">
         <div class="post-info">
           <div class="post-time">
@@ -1562,7 +2230,7 @@ markdown默认写法，左边框颜色，随着主题色改变
         </div>
         <div class="post-more">
           <a href="/2021/02/08/note/">
-            <i class="iconfont iconmore" style="  " title="阅读更多"></i>
+            <i class="iconfont iconmore" pointer style="float: right;  " title="阅读更多"></i>
           </a>
         </div>
       </div>
@@ -1575,7 +2243,7 @@ markdown默认写法，左边框颜色，随着主题色改变
       </div>
     </article>
   
-    <article class="post" data-aos="fade-up" style="flex-direction: row-reverse;   ">
+    <article class="post" data-aos="fade-up" style="   ">
       <div class="post-main">
         <div class="post-info">
           <div class="post-time">
@@ -1631,7 +2299,7 @@ markdown默认写法，左边框颜色，随着主题色改变
         </div>
         <div class="post-more">
           <a href="/2021/02/08/noteblock/">
-            <i class="iconfont iconmore" style="float: right;  " title="阅读更多"></i>
+            <i class="iconfont iconmore" pointer style="  " title="阅读更多"></i>
           </a>
         </div>
       </div>
@@ -1644,309 +2312,11 @@ markdown默认写法，左边框颜色，随着主题色改变
       </div>
     </article>
   
-    <article class="post" data-aos="fade-up" style="   ">
-      <div class="post-main">
-        <div class="post-info">
-          <div class="post-time">
-            <i class="fa fa-clock-o" aria-hidden="true"></i>
-            <span class="post-time">2021-02-08</span>
-          </div>
-          <div class="post-title">
-            <a class="post-title-link" href="/2021/02/08/p/">段落文本</a>
-          </div>
-          <div class="post-meta">
-            <div class="post-tags">
-              <!-- 文章详情页的标签 -->
-
-    <i class="iconfont icontag"></i>
-    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tag/" rel="tag">tag</a></li></ul>
-
-            </div>
-            <div class="post-categories">
-              <!-- 文章详情页的分类 -->
-
-<div class="article-category">
-  <i class="iconfont iconbookmark1"></i>
-  <a class="article-category-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a>
-</div>
-
-
-            </div>
-          </div>
-          <div class="post-img-mobile">
-            
-              <a href="/2021/02/08/p/" class="lazyload" data-original="https://pic4.zhimg.com/80/v2-513fd25e66ae237fca305e8ebf4de594_1440w.jpg?source=1940ef5c" style="background-size: cover; 
-                background-position: center center;">
-              </a>
-            
-          </div>
-          <div class="post-content">
-            段落文本演示
-我是一个文本高亮大萨达所多撒多撒多撒大多多撒多撒多撒大所多撒大多
-我是一个文本高亮大萨达所多撒多撒多撒大多多撒多撒多撒大所多撒大多
-我是一个文本高亮大萨达所多撒多撒多撒大多多撒多撒多撒大所多撒大多
-我是一个文本高亮大萨达所多撒
-          </div>
-        </div>
-        <div class="post-more">
-          <a href="/2021/02/08/p/">
-            <i class="iconfont iconmore" style="  " title="阅读更多"></i>
-          </a>
-        </div>
-      </div>
-      <div class="post-img">
-        
-          <a href="/2021/02/08/p/" class="lazyload" data-original="https://pic4.zhimg.com/80/v2-513fd25e66ae237fca305e8ebf4de594_1440w.jpg?source=1940ef5c" style="background-size: cover; 
-            background-position: center center;">
-          </a>
-        
-      </div>
-    </article>
-  
-    <article class="post" data-aos="fade-up" style="flex-direction: row-reverse;   ">
-      <div class="post-main">
-        <div class="post-info">
-          <div class="post-time">
-            <i class="fa fa-clock-o" aria-hidden="true"></i>
-            <span class="post-time">2021-02-08</span>
-          </div>
-          <div class="post-title">
-            <a class="post-title-link" href="/2021/02/08/pbg/">文本高亮</a>
-          </div>
-          <div class="post-meta">
-            <div class="post-tags">
-              <!-- 文章详情页的标签 -->
-
-    <i class="iconfont icontag"></i>
-    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tag/" rel="tag">tag</a></li></ul>
-
-            </div>
-            <div class="post-categories">
-              <!-- 文章详情页的分类 -->
-
-<div class="article-category">
-  <i class="iconfont iconbookmark1"></i>
-  <a class="article-category-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a>
-</div>
-
-
-            </div>
-          </div>
-          <div class="post-img-mobile">
-            
-              <a href="/2021/02/08/pbg/" class="lazyload" data-original="https://pic1.zhimg.com/80/v2-c274041256201850e4a51998c5c48b77_1440w.jpg?source=1940ef5c" style="background-size: cover; 
-                background-position: center center;">
-              </a>
-            
-          </div>
-          <div class="post-content">
-            文本高亮标签
-          </div>
-        </div>
-        <div class="post-more">
-          <a href="/2021/02/08/pbg/">
-            <i class="iconfont iconmore" style="float: right;  " title="阅读更多"></i>
-          </a>
-        </div>
-      </div>
-      <div class="post-img">
-        
-          <a href="/2021/02/08/pbg/" class="lazyload" data-original="https://pic1.zhimg.com/80/v2-c274041256201850e4a51998c5c48b77_1440w.jpg?source=1940ef5c" style="background-size: cover; 
-            background-position: center center;">
-          </a>
-        
-      </div>
-    </article>
-  
-    <article class="post" data-aos="fade-up" style="   ">
-      <div class="post-main">
-        <div class="post-info">
-          <div class="post-time">
-            <i class="fa fa-clock-o" aria-hidden="true"></i>
-            <span class="post-time">2021-02-08</span>
-          </div>
-          <div class="post-title">
-            <a class="post-title-link" href="/2021/02/08/radio/">radio</a>
-          </div>
-          <div class="post-meta">
-            <div class="post-tags">
-              <!-- 文章详情页的标签 -->
-
-    <i class="iconfont icontag"></i>
-    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tag/" rel="tag">tag</a></li></ul>
-
-            </div>
-            <div class="post-categories">
-              <!-- 文章详情页的分类 -->
-
-<div class="article-category">
-  <i class="iconfont iconbookmark1"></i>
-  <a class="article-category-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a>
-</div>
-
-
-            </div>
-          </div>
-          <div class="post-img-mobile">
-            
-              <a href="/2021/02/08/radio/" class="lazyload" data-original="https://pic3.zhimg.com/80/v2-1d9e8203f167bb1c51d6899df5c626ca_1440w.jpg" style="background-size: cover; 
-                background-position: center center;">
-              </a>
-            
-          </div>
-          <div class="post-content">
-            radio
-
-            纯文本测试
-            
-
-            支持简单的 markdown 语法
-            
-
-            支持自定义颜色
-            
-
-   
-          </div>
-        </div>
-        <div class="post-more">
-          <a href="/2021/02/08/radio/">
-            <i class="iconfont iconmore" style="  " title="阅读更多"></i>
-          </a>
-        </div>
-      </div>
-      <div class="post-img">
-        
-          <a href="/2021/02/08/radio/" class="lazyload" data-original="https://pic3.zhimg.com/80/v2-1d9e8203f167bb1c51d6899df5c626ca_1440w.jpg" style="background-size: cover; 
-            background-position: center center;">
-          </a>
-        
-      </div>
-    </article>
-  
-    <article class="post" data-aos="fade-up" style="flex-direction: row-reverse;   ">
-      <div class="post-main">
-        <div class="post-info">
-          <div class="post-time">
-            <i class="fa fa-clock-o" aria-hidden="true"></i>
-            <span class="post-time">2021-02-08</span>
-          </div>
-          <div class="post-title">
-            <a class="post-title-link" href="/2021/02/08/site-card/">site-card</a>
-          </div>
-          <div class="post-meta">
-            <div class="post-tags">
-              <!-- 文章详情页的标签 -->
-
-    <i class="iconfont icontag"></i>
-    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tag/" rel="tag">tag</a></li></ul>
-
-            </div>
-            <div class="post-categories">
-              <!-- 文章详情页的分类 -->
-
-<div class="article-category">
-  <i class="iconfont iconbookmark1"></i>
-  <a class="article-category-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a>
-</div>
-
-
-            </div>
-          </div>
-          <div class="post-img-mobile">
-            
-              <a href="/2021/02/08/site-card/" class="lazyload" data-original="https://pic3.zhimg.com/80/v2-0cd97ad46cb2a18343565aa60adeab0e_1440w.jpg" style="background-size: cover; 
-                background-position: center center;">
-              </a>
-            
-          </div>
-          <div class="post-content">
-            site-card演示
-木兮这是描述
-yuang01这是描述哦
-木兮这是描述
-yuang01这是描述哦
-木兮这是描述
-上述事例代码&#123;% sitegroup %&#125;
-    &#123;% site 木兮, url=http
-          </div>
-        </div>
-        <div class="post-more">
-          <a href="/2021/02/08/site-card/">
-            <i class="iconfont iconmore" style="float: right;  " title="阅读更多"></i>
-          </a>
-        </div>
-      </div>
-      <div class="post-img">
-        
-          <a href="/2021/02/08/site-card/" class="lazyload" data-original="https://pic3.zhimg.com/80/v2-0cd97ad46cb2a18343565aa60adeab0e_1440w.jpg" style="background-size: cover; 
-            background-position: center center;">
-          </a>
-        
-      </div>
-    </article>
-  
-    <article class="post" data-aos="fade-up" style="   ">
-      <div class="post-main">
-        <div class="post-info">
-          <div class="post-time">
-            <i class="fa fa-clock-o" aria-hidden="true"></i>
-            <span class="post-time">2021-02-08</span>
-          </div>
-          <div class="post-title">
-            <a class="post-title-link" href="/2021/02/08/span/">文字颜色</a>
-          </div>
-          <div class="post-meta">
-            <div class="post-tags">
-              <!-- 文章详情页的标签 -->
-
-    <i class="iconfont icontag"></i>
-    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tag/" rel="tag">tag</a></li></ul>
-
-            </div>
-            <div class="post-categories">
-              <!-- 文章详情页的分类 -->
-
-<div class="article-category">
-  <i class="iconfont iconbookmark1"></i>
-  <a class="article-category-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a>
-</div>
-
-
-            </div>
-          </div>
-          <div class="post-img-mobile">
-            
-              <a href="/2021/02/08/span/" class="lazyload" data-original="https://pic4.zhimg.com/80/v2-37134f732bbe21779fdb2fc8dca410c7_1440w.jpg" style="background-size: cover; 
-                background-position: center center;">
-              </a>
-            
-          </div>
-          <div class="post-content">
-            文字颜色演示效果
-这是一个简单的文字我是一个文字高亮，唱着我们心肠的曲折这是一个简单的文字我是一个文字高亮，唱着我们心肠的曲折这是一个简单的文字我是一个文字高亮，唱着我们心肠的曲折这是一个简单的文字我是一个文字高亮，唱着我们心肠的曲折这是一
-          </div>
-        </div>
-        <div class="post-more">
-          <a href="/2021/02/08/span/">
-            <i class="iconfont iconmore" style="  " title="阅读更多"></i>
-          </a>
-        </div>
-      </div>
-      <div class="post-img">
-        
-          <a href="/2021/02/08/span/" class="lazyload" data-original="https://pic4.zhimg.com/80/v2-37134f732bbe21779fdb2fc8dca410c7_1440w.jpg" style="background-size: cover; 
-            background-position: center center;">
-          </a>
-        
-      </div>
-    </article>
-  
 </section>
 <!-- 翻页 -->
 
   <!-- <nav class="page-nav">
-    <a class="extend prev" rel="prev" href="/">上一页</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/">下一页</a>
+    <a class="extend prev" rel="prev" href="/">上一页</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/3/">下一页</a>
   </nav> -->
   <div class="page-nav">
     
@@ -1956,7 +2326,7 @@ yuang01这是描述哦
       </a>
     
     <div class="page-info">
-        <div class="page-info-text">2 / 3</div>
+        <div class="page-info-text">2 / 4</div>
     </div>
     
       <a href="/page/3/"
@@ -1969,10 +2339,6 @@ yuang01这是描述哦
 
 <!-- 花瓣和雪花飘落 -->
 <!-- 雪花和花瓣特效 -->
-
-  
-    <script src="/js/falling/sakura.js"></script>
-  
 
 
 
@@ -2031,16 +2397,13 @@ yuang01这是描述哦
       
   <!-- 不蒜子统计 -->
   <span id="busuanzi_container_site_pv">
-        <i class="fa fa-book" aria-hidden="true"></i>本站总阅读量：<span id="busuanzi_value_page_pv"></span> 次
-  </span>
-  <span id="busuanzi_container_site_pv">
         <i class="fa fa-eye" aria-hidden="true"></i>本站总访问量：<span id="busuanzi_value_site_pv"></span> 次
   </span>
   <span class="post-meta-divider">|</span>
   <span id="busuanzi_container_site_uv" style='display:none'>
         <i class="fa fa-users" aria-hidden="true"></i>本站访客数：<span id="busuanzi_value_site_uv"></span> 人
   </span>
-  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" data-pjax></script>
 
     
   </div>
@@ -2097,7 +2460,7 @@ yuang01这是描述哦
     
     <!-- 渲染回到顶部按钮 -->
     
-      <div class="goTop top-btn-color border-color">
+      <div class="goTop top-btn-color" pointer>
   <i class="fa fa-arrow-up" aria-hidden="true"></i>
 </div>
 <script src="/js/goTop.js"></script>
@@ -2108,16 +2471,12 @@ yuang01这是描述哦
 <style>
 .aplayer .aplayer-lrc p {
   
-  display: none;
-  
   font-size: 12px;
   font-weight: 700;
   line-height: 16px !important;
 }
 
 .aplayer .aplayer-lrc p.aplayer-lrc-current {
-  
-  display: none;
   
   font-size: 15px;
   color: #42b983;
@@ -2138,9 +2497,9 @@ yuang01这是描述哦
   class=""
   server="tencent"
   type="song"
-  id="0014xbQc1w6RTJ"
+  id="004D5Ehi3qyyu7"
   fixed='true'
-  autoplay='false'
+  autoplay='true'
   theme='#42b983'
   loop='all'
   order='random'
@@ -2165,17 +2524,6 @@ yuang01这是描述哦
     
       <script src="/js/fancybox/jquery.fancybox.min.js"></script>
     
-    
-    <!-- 鼠标点击特效 -->
-    <!-- 爱心点击 -->
-
-	
-		<canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 999; pointer-events: none;" ></canvas>
-		<script src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script>
-		<script src="/js/cursor/explosion.min.js"></script>
-	
-
-
 
     <!-- 百度解析 -->
     <!-- Baidu Analytics -->
@@ -2198,10 +2546,129 @@ yuang01这是描述哦
 
     
     <!-- 背景彩带 -->
-    <script type="text/javascript" size="100" alpha='0.4' zIndex="-1" src="/js/ribbon.min.js"></script>
     
-    <!-- div滚动到显示区域的动画 -->
     
+    <script src="/js/app.js" data-pjax></script>
+    
+    <!-- 文章目录所需js -->
+<link href="/js/tocbot/tocbot.css" rel="stylesheet">
+<script src="/js/tocbot/tocbot.min.js"></script>
+
+<script>
+  var headerEl = 'h2, h3, h4',  //headers 
+      content = '.post-detail',//文章容器
+      idArr = {};  //标题数组以确定是否增加索引id
+      //add #id
+  var option = {
+    // Where to render the table of contents.
+    tocSelector: '.toc',
+    // Where to grab the headings to build the table of contents.
+    contentSelector: content,
+    // Which headings to grab inside of the contentSelector element.
+    headingSelector: headerEl,
+    scrollSmooth: true,
+    scrollSmoothOffset: -80,
+    headingsOffset: -($(window).height() * 0.4 - 45),
+    positionFixedSelector: '.toc-main',
+    positionFixedClass: 'is-position-fixed',
+    fixedSidebarOffset: 'auto',
+  }
+  if ($('.toc').length > 0) {
+
+    $(content).children(headerEl).each(function () {
+      //去除空格以及多余标点
+      var headerId = $(this).text().replace(/[\s|\~|`|\!|\@|\#|\$|\%|\^|\&|\*|\(|\)|\_|\+|\=|\||\|\[|\]|\{|\}|\;|\:|\"|\'|\,|\<|\.|\>|\/|\?|\：|\，|\。]/g, '');
+
+      headerId = headerId.toLowerCase();
+      if (idArr[headerId]) {
+        //id已经存在
+        $(this).attr('id', headerId + '-' + idArr[headerId]);
+        idArr[headerId]++;
+      }
+      else {
+        //id未存在
+        idArr[headerId] = 1;
+        $(this).attr('id', headerId);
+      }
+    });
+
+    tocbot.init(option);
+    
+  }
+
+
+  document.addEventListener('pjax:send', function () {
+    if ($('.toc').length) {
+      tocbot.destroy();
+    }
+  });
+
+  document.addEventListener('pjax:complete', function () {
+    if ($('.toc').length) {
+      tocbot.init(option);
+    }
+  });
+
+  
+</script>
+
+<style>
+.is-position-fixed {
+  position:sticky !important;
+  top: 74px;
+}
+.toc-main ul {
+  counter-reset: show-list;
+}
+.toc-main ul li::before {
+  content: counter(item)".";
+  display: block;
+  position: absolute;
+  left: 12px;
+  top:0;
+}
+/* .toc > .toc-list {
+  padding-left: 35px;
+}
+.toc>.toc-list li {
+  list-style: decimal;
+}
+.toc-list {
+  padding-left: 25px;
+} */
+</style> 
+
+<!-- 渲染issues标签里的内容 -->
+<script>
+  function loadIssuesJS() {
+    if ($(".post-detail").find(".issues-api").length == 0) {
+      return;
+    } 
+    loadScript('/js/issues/index.js');
+  };
+  $(function () {
+    loadIssuesJS();
+  });
+  document.addEventListener('pjax:complete', function () {
+    if (typeof IssuesAPI == "undefined") {
+      loadIssuesJS();
+    }
+  })
+</script>
+
+<!-- 鼠标点击特效 -->
+<!-- 爱心点击 -->
+
+	
+		<canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 999; pointer-events: none;" ></canvas>
+		<script src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script>
+		<script src="/js/cursor/explosion.min.js"></script>
+	
+
+
+
+<!-- div滚动到显示区域的动画 -->
+
   <script src="/js/aos/aos.js"></script>
   <script>
     // https://github.com/michalsnik/aos
@@ -2236,13 +2703,14 @@ yuang01这是描述哦
   </script>
 
     
-    <!-- 复制提示 -->
-    
+<!-- 复制提示 -->
+<!-- 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/v-plugs-ayu/lib/ayu.css">
   <script src="https://cdn.jsdelivr.net/npm/v-plugs-ayu/lib/ayu.umd.min.js"></script>
+  <script src="/js/clipboard/clipboard.min.js"></script>
   <div id="appCopy">
   </div>
-  <script>
+  <script data-pjax>
     var vm = new Vue({
       el: '#appCopy',
       data: {
@@ -2251,20 +2719,130 @@ yuang01这是描述哦
       },
       mounted() {
         const that = this;
+        var copy = '复制';
+        /* code */
+        var initCopyCode = function () {
+          var copyHtml = '';
+          copyHtml += '<button class="btn-copy" data-clipboard-snippet="" style="position:absolute;top:0;right:0;z-index:1;">';
+          copyHtml += '<i class="fa fa-copy"></i><span>' + copy + '</span>';
+          copyHtml += '</button>';
+          $(".post-detail pre").not('.gutter pre').wrap("<div class='codeBox' style='position:relative;width:100%;'></div>")
+          $(".post-detail pre").not('.gutter pre').before(copyHtml);
+          new ClipboardJS('.btn-copy', {
+            target: function (trigger) {
+              return trigger.nextElementSibling;
+            }
+          });
+        }
+        initCopyCode();
+        $('.btn-copy').unbind('click').bind('click', function () {
+          console.log('888');
+          doSomething();
+        })
         //  监听 ctrl + c事件  
+        // $(document).unbind('keypress').bind('keypress', function (e) {
+        //   if (e.ctrlKey && e.keyCode == 67) {
+        //     console.log('111111111111111');
+        //     doSomething();
+        //     // 返回false, 防止重复触发copy事件  
+        //     return false;
+        //   }
+        // })
+
+        // // 鼠标右键的复制事件  
+        // $(document).unbind('copy').bind('copy', function (e) {
+        //   console.log('222222222222222222');
+        //   doSomething();
+        //   // console.log('右键复制 监听成功');
+        // });
+
+        function doSomething() {
+          that.$notify({
+            title: "成功",
+            content: "代码已复制，请遵守相关授权协议。",
+            type: 'success'
+          })
+          // console.log('ctrl + c 监听成功');  
+        }
+      },
+      methods: {
+      },
+      created() { }
+    })
+  </script>
+ -->
+
+<!-- 输入框打字特效 -->
+<!-- 输入框打字特效 -->
+
+  <script src="/js/activate-power-mode.js"></script>
+  <script>
+    POWERMODE.colorful = true;  // 打开随机颜色特效
+    POWERMODE.shake = false;    // 关闭输入框抖动
+    document.body.addEventListener('input', POWERMODE);//监听打字事件
+  </script>
+
+
+<!-- markdown代码一键复制功能 -->
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/v-plugs-ayu/lib/ayu.css">
+  <script src="https://cdn.jsdelivr.net/npm/v-plugs-ayu/lib/ayu.umd.min.js"></script>
+  <script src="/js/clipboard/clipboard.min.js"></script>
+  <div id="appCopy">
+  </div>
+  <script data-pjax>
+    var vm = new Vue({
+      el: '#appCopy',
+      data: {
+      },
+      computed: {
+      },
+      mounted() {
+        const that = this;
+        var copy = '复制';
+        /* code */
+        var initCopyCode = function () {
+          var copyHtml = '';
+          copyHtml += '<button class="btn-copy" data-clipboard-snippet="" style="position:absolute;top:0;right:0;z-index:1;">';
+          copyHtml += '<i class="fa fa-copy"></i><span>' + copy + '</span>';
+          copyHtml += '</button>';
+          $(".post-detail pre").not('.gutter pre').wrap("<div class='codeBox' style='position:relative;width:100%;'></div>")
+          $(".post-detail pre").not('.gutter pre').before(copyHtml);
+          new ClipboardJS('.btn-copy', {
+            target: function (trigger) {
+              return trigger.nextElementSibling;
+            }
+          });
+        }
+        initCopyCode();
+        $('.btn-copy').unbind('click').bind('click', function () {
+          console.log('888');
+          doSomething();
+        })
         $(document).unbind('keypress').bind('keypress', function (e) {
           if (e.ctrlKey && e.keyCode == 67) {
+            console.log('111111111111111');
             doSomething();
             // 返回false, 防止重复触发copy事件  
-            return false;
+            // return false;
           }
         })
+        //  监听 ctrl + c事件  
+        // $(document).unbind('keypress').bind('keypress', function (e) {
+        //   if (e.ctrlKey && e.keyCode == 67) {
+        //     console.log('111111111111111');
+        //     doSomething();
+        //     // 返回false, 防止重复触发copy事件  
+        //     return false;
+        //   }
+        // })
 
-        // 鼠标右键的复制事件  
-        $(document).unbind('copy').bind('copy', function (e) {
-          doSomething();
-          // console.log('右键复制 监听成功');
-        });
+        // // 鼠标右键的复制事件  
+        // $(document).unbind('copy').bind('copy', function (e) {
+        //   console.log('222222222222222222');
+        //   doSomething();
+        //   // console.log('右键复制 监听成功');
+        // });
 
         function doSomething() {
           that.$notify({
@@ -2282,55 +2860,129 @@ yuang01这是描述哦
   </script>
 
 
-    <!-- 输入框打字特效 -->
-    <!-- 输入框打字特效 -->
-
-  <script src="/js/activate-power-mode.js"></script>
-  <script>
-    POWERMODE.colorful = true;  // 打开随机颜色特效
-    POWERMODE.shake = false;    // 关闭输入框抖动
-    document.body.addEventListener('input', POWERMODE);//监听打字事件
-  </script>
-
-
-    <!-- markdown代码一键复制功能 -->
-    <!-- markdown代码一键复制功能 -->
-<script src="/js/clipboard/clipboard.min.js"></script>
-<script>
-  !function (e, t, a) {
-    var copy = '复制';
-    /* code */
-    var initCopyCode = function () {
-      var copyHtml = '';
-      copyHtml += '<button class="btn-copy" data-clipboard-snippet="" style="position:absolute;top:0;right:0;z-index:1;">';
-      copyHtml += '<i class="fa fa-copy"></i><span>' + copy + '</span>';
-      copyHtml += '</button>';
-      $(".post-detail pre").not('.gutter pre').wrap("<div class='codeBox' style='position:relative;width:100%;'></div>")
-      $(".post-detail pre").not('.gutter pre').before(copyHtml);
-      new ClipboardJS('.btn-copy', {
-        target: function (trigger) {
-          return trigger.nextElementSibling;
-        }
-      });
-    }
-    initCopyCode();
-  }(window, document);
-</script>
-    
-    <!-- 图片懒加载 -->
-    <script src="/js/lazyload/lazyload@1.9.1.js"></script>
-<script>
+<!-- 图片懒加载 -->
+<script src="/js/lazyload/lazyload@1.9.1.js"></script>
+<script data-pjax>
   $(function () {
     $("div.lazyload, img.lazyload, a.lazyload").lazyload(
       {
-        effect: "fadeIn",
+        effect: "show",
         placeholder: "https://img10.360buyimg.com/ddimg/jfs/t1/159345/8/2271/222193/5ff7b36fEe49f5663/a95287c20385127f.gif"    //图片未加载出来时显示的占位图
       }
     );
   });
 </script>
+
+<!-- 评论所需js -->
+
     
-    <script src="/js/app.js"></script>
+        <script src="https://cdn.bootcdn.net/ajax/libs/gitalk/1.7.2/gitalk.js"></script>
+<script type="text/javascript">
+    comment_el = '#gitalk-container';
+    load_gitalk = function () {
+        if ($(comment_el).length) {
+            var gitalk = new Gitalk({
+                clientID: '418a1890782d27e5bc5b',
+                clientSecret: 'd0dc4f3b77ae21d4cdd95030cd1c9198e2c7bf9e',
+                id: window.location.pathname,
+                repo: 'yuang01.github.io',
+                owner: 'yuang01',
+                admin: ['yuang01']
+            })
+            gitalk.render('gitalk-container')
+        }
+    }    
+    $(document).ready(load_gitalk);
+    document.addEventListener('pjax:complete', function () {
+        load_gitalk();
+    });
+</script>
+    
+
+
+
+
+
+    <!-- pjax -->
+    
+
+<!-- pjax -->
+
+
+  <script src="/js/pjax@0.2.8/index.js"></script>
+  
+    <!-- 样式位于：source/css/_third-party/pjaxanimate.styl -->
+
+<div class="pjax-animate">
+  
+    <div class="loading-circle"><div id="loader-circle"></div></div>
+    <script>
+      window.ShowLoading = function() {
+        $(".loading-circle").css("display", "block");
+      };
+      window.HideLoading = function() {
+        $(".loading-circle").css("display", "none");
+      }
+    </script>
+  
+	<script>
+    document.addEventListener('pjax:complete', function () {
+      window.HideLoading();
+    })
+    document.addEventListener('pjax:send', function () {
+      window.ShowLoading();
+    })
+    document.addEventListener('pjax:error', function () {
+      window.HideLoading();
+    })
+	</script>
+</div>
+
+  
+
+  <script>
+    var pjax = new Pjax({
+      elements: 'a[href]:not([href^="#"]):not([href="javascript:void(0)"])',   // 拦截正常带链接的 a 标签
+      selectors: ["#pjax-container","title"],                                   // 根据实际需要确认重载区域
+      cacheBust: false,   // url 地址追加时间戳，用以避免浏览器缓存
+      timeout: 5000
+    });
+
+    document.addEventListener('pjax:send', function (e) {
+
+      try {
+        var currentUrl = window.location.pathname;
+        var targetUrl = e.triggerElement.href;
+        var banUrl = [""];
+        if (banUrl[0] != "") {
+          banUrl.forEach(item => {
+            if(currentUrl.indexOf(item) != -1 || targetUrl.indexOf(item) != -1) {
+              window.location.href = targetUrl;
+            }
+          });
+        }
+      } catch (error) {}
+
+      $(window).unbind('resize');
+      $(window).unbind('scroll');
+      $(document).unbind('scroll');
+      $(document).unbind('click');
+      $('body').unbind('click');
+
+    })
+    
+    document.addEventListener('pjax:complete', function () {
+      $('script[data-pjax], .pjax-reload script').each(function () {
+        $(this).parent().append($(this).remove());
+      });
+    });
+
+    document.addEventListener('pjax:error', function (e) {
+      window.location.href = e.triggerElement.href;
+    })
+  </script>
+
+
 
   </body>
 </html>
