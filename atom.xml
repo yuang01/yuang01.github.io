@@ -41,10 +41,10 @@
   
   <entry>
     <title>Bamboo主题-页面功能配置（二）</title>
-    <link href="http://yuang01.github.io/2021/07/05/hexo-theme-bamboo/v2.3.0-page/"/>
-    <id>http://yuang01.github.io/2021/07/05/hexo-theme-bamboo/v2.3.0-page/</id>
+    <link href="http://yuang01.github.io/2021/07/05/hexo-theme-bamboo/page/"/>
+    <id>http://yuang01.github.io/2021/07/05/hexo-theme-bamboo/page/</id>
     <published>2021-07-05T03:11:00.000Z</published>
-    <updated>2021-07-18T07:24:01.642Z</updated>
+    <updated>2021-07-18T09:40:24.948Z</updated>
     
     <summary type="html">
     
@@ -64,10 +64,10 @@
   
   <entry>
     <title>Bamboo主题-主题更改（三）</title>
-    <link href="http://yuang01.github.io/2021/07/05/hexo-theme-bamboo/v2.3.0-theme/"/>
-    <id>http://yuang01.github.io/2021/07/05/hexo-theme-bamboo/v2.3.0-theme/</id>
+    <link href="http://yuang01.github.io/2021/07/05/hexo-theme-bamboo/theme/"/>
+    <id>http://yuang01.github.io/2021/07/05/hexo-theme-bamboo/theme/</id>
     <published>2021-07-05T03:10:00.000Z</published>
-    <updated>2021-07-18T04:07:06.488Z</updated>
+    <updated>2021-07-18T09:40:48.979Z</updated>
     
     <summary type="html">
     
@@ -87,10 +87,10 @@
   
   <entry>
     <title>Bamboo主题-Front-matter介绍（四）</title>
-    <link href="http://yuang01.github.io/2021/07/05/hexo-theme-bamboo/v2.3.0-front-matter/"/>
-    <id>http://yuang01.github.io/2021/07/05/hexo-theme-bamboo/v2.3.0-front-matter/</id>
+    <link href="http://yuang01.github.io/2021/07/05/hexo-theme-bamboo/front-matter/"/>
+    <id>http://yuang01.github.io/2021/07/05/hexo-theme-bamboo/front-matter/</id>
     <published>2021-07-05T03:09:00.000Z</published>
-    <updated>2021-07-18T04:38:13.146Z</updated>
+    <updated>2021-07-18T09:40:15.906Z</updated>
     
     <summary type="html">
     
@@ -110,10 +110,10 @@
   
   <entry>
     <title>Bamboo主题-内置标签（五）</title>
-    <link href="http://yuang01.github.io/2021/07/05/hexo-theme-bamboo/v2.3.0-tags/"/>
-    <id>http://yuang01.github.io/2021/07/05/hexo-theme-bamboo/v2.3.0-tags/</id>
+    <link href="http://yuang01.github.io/2021/07/05/hexo-theme-bamboo/tags/"/>
+    <id>http://yuang01.github.io/2021/07/05/hexo-theme-bamboo/tags/</id>
     <published>2021-07-05T03:08:00.000Z</published>
-    <updated>2021-07-18T04:32:14.039Z</updated>
+    <updated>2021-07-18T09:40:41.348Z</updated>
     
     <summary type="html">
     
@@ -133,10 +133,10 @@
   
   <entry>
     <title>Bamboo主题-建议（六）</title>
-    <link href="http://yuang01.github.io/2021/07/05/hexo-theme-bamboo/v2.3.0-suggest/"/>
-    <id>http://yuang01.github.io/2021/07/05/hexo-theme-bamboo/v2.3.0-suggest/</id>
+    <link href="http://yuang01.github.io/2021/07/05/hexo-theme-bamboo/suggest/"/>
+    <id>http://yuang01.github.io/2021/07/05/hexo-theme-bamboo/suggest/</id>
     <published>2021-07-05T03:07:00.000Z</published>
-    <updated>2021-07-18T08:47:06.497Z</updated>
+    <updated>2021-07-18T09:40:33.625Z</updated>
     
     <summary type="html">
     
@@ -517,11 +517,11 @@
   </entry>
   
   <entry>
-    <title>NoteBlock</title>
-    <link href="http://yuang01.github.io/2021/02/08/noteblock/"/>
-    <id>http://yuang01.github.io/2021/02/08/noteblock/</id>
+    <title>段落文本</title>
+    <link href="http://yuang01.github.io/2021/02/08/p/"/>
+    <id>http://yuang01.github.io/2021/02/08/p/</id>
     <published>2021-02-08T03:35:00.000Z</published>
-    <updated>2021-05-11T01:47:04.721Z</updated>
+    <updated>2021-05-11T01:47:15.160Z</updated>
     
     <summary type="html">
     
@@ -529,9 +529,9 @@
       
         
         
-          &lt;h2 class=&quot;bamboo-h &quot; id=&quot;noteblock演示效果&quot;&gt;noteblock演示效果&lt;/h2&gt;&lt;br/&gt;
-
-&lt;div class=&quot;note
+          &lt;h2 class=&quot;bamboo-h &quot; id=&quot;段落文本演示&quot;&gt;段落文本演示&lt;/h2&gt;&lt;br/&gt;
+&lt;p class=&#39;p yellow&#39;&gt;我是一个文本高亮大萨达所多撒多撒多撒大多多撒多撒多撒大所多撒大多&lt;/p&gt;
+&lt;p class=&#39;p
         
       
     
