@@ -910,20 +910,23 @@
 
   
   <div class="post-nav-prev post-nav-item">
-    <div class="post-nav-img lazyload" data-original="https://pic4.zhimg.com/v2-672bbb43fda6c749b16e2b8c8d69e15f_b.jpg" style="background-size: cover; 
+    <div class="post-nav-img lazyload" data-original="https://pic4.zhimg.com/v2-8ad0cffeaa7dec5dd1930eebc6ff863f_b.jpg" style="background-size: cover; 
       background-position: center center;">
     </div>
-    <a href="/post/timeline/" class="post-nav-link">
+    <a href="/post/text/" class="post-nav-link">
       <div class="title">
         <i class="fa fa-angle-left"></i> 上一篇:
-        <div class="title-text">timeline时间线</div>
+        <div class="title-text">Text文本样式标签</div>
       </div>
       
       <!-- <div class="content">
-        timeline时间线演示
+        Text文本样式标签演示
 
-2021-01-01 1.0.3 -&gt; 1.0.3
-我是一个测试文字ghghgh。我
+带 下划线 的文本
+带 着重号 的文本
+带 波浪线 的文本
+带 删除线 的文本
+键盘样式的文
       </div> -->
     </a>
   </div>
@@ -1583,7 +1586,7 @@ Your browser does not support the video tag.
 <!-- div滚动到显示区域的动画 -->
 
   <script src="/js/aos/aos.js"></script>
-  <script data-pjax>
+  <script>
     // https://github.com/michalsnik/aos
     var themeOffset = parseInt('120') || 120;
     var themeDelay = parseInt('0') || 0;
@@ -1613,6 +1616,10 @@ Your browser does not support the video tag.
       anchorPlacement: themeAnchorPlacement, // defines which position of the element regarding to window should trigger the animation
 
     });
+
+    document.addEventListener('pjax:complete', function () {
+      AOS.refresh();
+    })
   </script>
 
 

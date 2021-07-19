@@ -927,22 +927,6 @@
           <li class="post-item" data-aos="fade-left">
             
             <div class="post-img-box">
-              <a href="/post/text/" class="post-img lazyload" data-original="https://pic4.zhimg.com/v2-8ad0cffeaa7dec5dd1930eebc6ff863f_b.jpg" style="background-size: cover; 
-                background-position: center center;">
-              </a>
-            </div>
-            <div class="post-date-title">
-              <div>
-                <span class="post-date">02-08</span>
-              </div>
-              <a class="post-title" href="/post/text/">Text文本样式标签</a>
-            </div>
-          </li>
-        
-          
-          <li class="post-item" data-aos="fade-left">
-            
-            <div class="post-img-box">
               <a href="/post/timeline/" class="post-img lazyload" data-original="https://pic4.zhimg.com/v2-672bbb43fda6c749b16e2b8c8d69e15f_b.jpg" style="background-size: cover; 
                 background-position: center center;">
               </a>
@@ -952,6 +936,22 @@
                 <span class="post-date">02-08</span>
               </div>
               <a class="post-title" href="/post/timeline/">timeline时间线</a>
+            </div>
+          </li>
+        
+          
+          <li class="post-item" data-aos="fade-left">
+            
+            <div class="post-img-box">
+              <a href="/post/text/" class="post-img lazyload" data-original="https://pic4.zhimg.com/v2-8ad0cffeaa7dec5dd1930eebc6ff863f_b.jpg" style="background-size: cover; 
+                background-position: center center;">
+              </a>
+            </div>
+            <div class="post-date-title">
+              <div>
+                <span class="post-date">02-08</span>
+              </div>
+              <a class="post-title" href="/post/text/">Text文本样式标签</a>
             </div>
           </li>
         
@@ -1327,7 +1327,7 @@
 <!-- div滚动到显示区域的动画 -->
 
   <script src="/js/aos/aos.js"></script>
-  <script data-pjax>
+  <script>
     // https://github.com/michalsnik/aos
     var themeOffset = parseInt('120') || 120;
     var themeDelay = parseInt('0') || 0;
@@ -1357,6 +1357,10 @@
       anchorPlacement: themeAnchorPlacement, // defines which position of the element regarding to window should trigger the animation
 
     });
+
+    document.addEventListener('pjax:complete', function () {
+      AOS.refresh();
+    })
   </script>
 
 

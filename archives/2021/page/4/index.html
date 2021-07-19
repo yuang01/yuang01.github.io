@@ -1178,7 +1178,7 @@
 <!-- div滚动到显示区域的动画 -->
 
   <script src="/js/aos/aos.js"></script>
-  <script data-pjax>
+  <script>
     // https://github.com/michalsnik/aos
     var themeOffset = parseInt('120') || 120;
     var themeDelay = parseInt('0') || 0;
@@ -1208,6 +1208,10 @@
       anchorPlacement: themeAnchorPlacement, // defines which position of the element regarding to window should trigger the animation
 
     });
+
+    document.addEventListener('pjax:complete', function () {
+      AOS.refresh();
+    })
   </script>
 
 

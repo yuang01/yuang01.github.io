@@ -901,21 +901,20 @@
 
   
   <div class="post-nav-prev post-nav-item">
-    <div class="post-nav-img lazyload" data-original="https://pic4.zhimg.com/80/v2-5a575bb8ac734707f1ec05d6de6a0e0b_1440w.jpg" style="background-size: cover; 
+    <div class="post-nav-img lazyload" data-original="https://pic4.zhimg.com/v2-672bbb43fda6c749b16e2b8c8d69e15f_b.jpg" style="background-size: cover; 
       background-position: center center;">
     </div>
-    <a href="/post/tab/" class="post-nav-link">
+    <a href="/post/timeline/" class="post-nav-link">
       <div class="title">
         <i class="fa fa-angle-left"></i> 上一篇:
-        <div class="title-text">tab</div>
+        <div class="title-text">timeline时间线</div>
       </div>
       
       <!-- <div class="content">
-        tab事例
-栏目1栏目2。。。！！！
-上述事例代码&#123;% tabs tab-id %&#125;
+        timeline时间线演示
 
-&lt;!-
+2021-01-01 1.0.3 -&gt; 1.0.3
+我是一个测试文字ghghgh。我
       </div> -->
     </a>
   </div>
@@ -924,19 +923,27 @@
 
   
   <div class="post-nav-next post-nav-item">
-    <div class="post-nav-img lazyload" data-original="https://pic4.zhimg.com/v2-672bbb43fda6c749b16e2b8c8d69e15f_b.jpg" style="background-size: cover; 
+    <div class="post-nav-img lazyload" data-original="https://pic1.zhimg.com/v2-cdf0dd8357e2cf573f32d0d65cff6404_b.jpg" style="background-size: cover; 
       background-position: center center;">
     </div>
-    <a href="/post/timeline/" class="post-nav-link">
+    <a href="/post/title/" class="post-nav-link">
       <div class="title">
         下一篇: <i class="fa fa-angle-right"></i>
-        <div class="title-text">timeline时间线</div>
+        <div class="title-text">title</div>
       </div>
       <!-- <div class="content">
-        timeline时间线演示
+        title演示
 
-2021-01-01 1.0.3 -&gt; 1.0.3
-我是一个测试文字ghghgh。我
+我是标题
+
+你好啊，未来越来越好哦
+我是标题
+
+你好啊，加油哦
+我是标题
+
+我是标题
+上述事例代码&#
       </div> -->
     </a>
   </div>
@@ -1575,7 +1582,7 @@
 <!-- div滚动到显示区域的动画 -->
 
   <script src="/js/aos/aos.js"></script>
-  <script data-pjax>
+  <script>
     // https://github.com/michalsnik/aos
     var themeOffset = parseInt('120') || 120;
     var themeDelay = parseInt('0') || 0;
@@ -1605,6 +1612,10 @@
       anchorPlacement: themeAnchorPlacement, // defines which position of the element regarding to window should trigger the animation
 
     });
+
+    document.addEventListener('pjax:complete', function () {
+      AOS.refresh();
+    })
   </script>
 
 
