@@ -113,7 +113,7 @@
     <link href="http://yuang01.github.io/post/hexo-theme-bamboo/tags/"/>
     <id>http://yuang01.github.io/post/hexo-theme-bamboo/tags/</id>
     <published>2021-07-05T03:08:00.000Z</published>
-    <updated>2021-07-19T01:14:25.497Z</updated>
+    <updated>2021-07-19T02:39:15.820Z</updated>
     
     <summary type="html">
     
@@ -517,11 +517,11 @@
   </entry>
   
   <entry>
-    <title>段落文本</title>
-    <link href="http://yuang01.github.io/post/p/"/>
-    <id>http://yuang01.github.io/post/p/</id>
+    <title>NoteBlock</title>
+    <link href="http://yuang01.github.io/post/noteblock/"/>
+    <id>http://yuang01.github.io/post/noteblock/</id>
     <published>2021-02-08T03:35:00.000Z</published>
-    <updated>2021-05-11T01:47:15.160Z</updated>
+    <updated>2021-05-11T01:47:04.721Z</updated>
     
     <summary type="html">
     
@@ -529,9 +529,9 @@
       
         
         
-          &lt;h2 class=&quot;bamboo-h &quot; id=&quot;段落文本演示&quot;&gt;段落文本演示&lt;/h2&gt;&lt;br/&gt;
-&lt;p class=&#39;p yellow&#39;&gt;我是一个文本高亮大萨达所多撒多撒多撒大多多撒多撒多撒大所多撒大多&lt;/p&gt;
-&lt;p class=&#39;p
+          &lt;h2 class=&quot;bamboo-h &quot; id=&quot;noteblock演示效果&quot;&gt;noteblock演示效果&lt;/h2&gt;&lt;br/&gt;
+
+&lt;div class=&quot;note
         
       
     
