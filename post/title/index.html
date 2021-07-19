@@ -1580,29 +1580,18 @@ Your browser does not support the video tag.
   })
 </script>
 
-<!-- 鼠标点击特效 -->
-<!-- 爱心点击 -->
-
-	
-		<canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 999; pointer-events: none;" ></canvas>
-		<script src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script>
-		<script src="/js/cursor/explosion.min.js"></script>
-	
-
-
-
 <!-- div滚动到显示区域的动画 -->
 
   <script src="/js/aos/aos.js"></script>
-  <script>
+  <script data-pjax>
     // https://github.com/michalsnik/aos
-    const themeOffset = parseInt('120') || 120;
-    const themeDelay = parseInt('0') || 0;
-    const themeDuration = parseInt('400') || 400;
-    const themeEasing = 'ease' || 'ease';
-    const themeOnce = eval('true') || false;
-    const themeMirror = eval('false') || false;
-    const themeAnchorPlacement = 'top-bottom' || 'top-bottom';
+    var themeOffset = parseInt('120') || 120;
+    var themeDelay = parseInt('0') || 0;
+    var themeDuration = parseInt('400') || 400;
+    var themeEasing = 'ease' || 'ease';
+    var themeOnce = eval('true') || false;
+    var themeMirror = eval('false') || false;
+    var themeAnchorPlacement = 'top-bottom' || 'top-bottom';
     AOS.init({
       // Global settings:
       disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
@@ -1626,75 +1615,6 @@ Your browser does not support the video tag.
     });
   </script>
 
-    
-<!-- 复制提示 -->
-<!-- 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/v-plugs-ayu/lib/ayu.css">
-  <script src="https://cdn.jsdelivr.net/npm/v-plugs-ayu/lib/ayu.umd.min.js"></script>
-  <script src="/js/clipboard/clipboard.min.js"></script>
-  <div id="appCopy">
-  </div>
-  <script data-pjax>
-    var vm = new Vue({
-      el: '#appCopy',
-      data: {
-      },
-      computed: {
-      },
-      mounted() {
-        const that = this;
-        var copy = '复制';
-        /* code */
-        var initCopyCode = function () {
-          var copyHtml = '';
-          copyHtml += '<button class="btn-copy" data-clipboard-snippet="" style="position:absolute;top:0;right:0;z-index:1;">';
-          copyHtml += '<i class="fa fa-copy"></i><span>' + copy + '</span>';
-          copyHtml += '</button>';
-          $(".post-detail pre").not('.gutter pre').wrap("<div class='codeBox' style='position:relative;width:100%;'></div>")
-          $(".post-detail pre").not('.gutter pre').before(copyHtml);
-          new ClipboardJS('.btn-copy', {
-            target: function (trigger) {
-              return trigger.nextElementSibling;
-            }
-          });
-        }
-        initCopyCode();
-        $('.btn-copy').unbind('click').bind('click', function () {
-          console.log('888');
-          doSomething();
-        })
-        //  监听 ctrl + c事件  
-        // $(document).unbind('keypress').bind('keypress', function (e) {
-        //   if (e.ctrlKey && e.keyCode == 67) {
-        //     console.log('111111111111111');
-        //     doSomething();
-        //     // 返回false, 防止重复触发copy事件  
-        //     return false;
-        //   }
-        // })
-
-        // // 鼠标右键的复制事件  
-        // $(document).unbind('copy').bind('copy', function (e) {
-        //   console.log('222222222222222222');
-        //   doSomething();
-        //   // console.log('右键复制 监听成功');
-        // });
-
-        function doSomething() {
-          that.$notify({
-            title: "成功",
-            content: "代码已复制，请遵守相关授权协议。",
-            type: 'success'
-          })
-          // console.log('ctrl + c 监听成功');  
-        }
-      },
-      methods: {
-      },
-      created() { }
-    })
-  </script>
- -->
 
 <!-- 输入框打字特效 -->
 <!-- 输入框打字特效 -->
@@ -1823,6 +1743,15 @@ Your browser does not support the video tag.
 </script>
     
 
+
+<!-- 鼠标点击特效 -->
+<!-- 爱心点击 -->
+
+	
+		<canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 999; pointer-events: none;" ></canvas>
+		<script src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script>
+		<script src="/js/cursor/explosion.min.js"></script>
+	
 
 
 
