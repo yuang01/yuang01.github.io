@@ -21,7 +21,7 @@
 
   <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico">
   <link rel="stylesheet" href="https://at.alicdn.com/t/font_1911880_c1nvbyezg17.css">
-  <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
   
     <script>
@@ -992,7 +992,7 @@
 
   <div id="myComment">
     
-      <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/gitalk/1.7.2/gitalk.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.css">
 <div id="gitalk-container"></div>
 
 <style>
@@ -1369,7 +1369,7 @@
     bottom: 300px;
   }
 </style> -->
-<script src="https://cdn.bootcdn.net/ajax/libs/aplayer/1.10.1/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
     
 
@@ -1593,12 +1593,10 @@
         }
         initCopyCode();
         $('.btn-copy').unbind('click').bind('click', function () {
-          console.log('888');
           doSomething();
         })
         $(document).unbind('keypress').bind('keypress', function (e) {
           if (e.ctrlKey && e.keyCode == 67) {
-            console.log('111111111111111');
             doSomething();
             // 返回false, 防止重复触发copy事件  
             // return false;
@@ -1607,7 +1605,6 @@
         //  监听 ctrl + c事件  
         // $(document).unbind('keypress').bind('keypress', function (e) {
         //   if (e.ctrlKey && e.keyCode == 67) {
-        //     console.log('111111111111111');
         //     doSomething();
         //     // 返回false, 防止重复触发copy事件  
         //     return false;
@@ -1616,9 +1613,7 @@
 
         // // 鼠标右键的复制事件  
         // $(document).unbind('copy').bind('copy', function (e) {
-        //   console.log('222222222222222222');
         //   doSomething();
-        //   // console.log('右键复制 监听成功');
         // });
 
         function doSomething() {
@@ -1627,7 +1622,6 @@
             content: "代码已复制，请遵守相关授权协议。",
             type: 'success'
           })
-          // console.log('ctrl + c 监听成功');  
         }
       },
       methods: {
@@ -1653,7 +1647,7 @@
 <!-- 评论所需js -->
 
     
-        <script src="https://cdn.bootcdn.net/ajax/libs/gitalk/1.7.2/gitalk.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js"></script>
 <script type="text/javascript">
     comment_el = '#gitalk-container';
     load_gitalk = function () {
