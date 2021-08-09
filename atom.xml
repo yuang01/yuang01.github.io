@@ -44,7 +44,7 @@
     <link href="http://yuang01.github.io/post/hexo-theme-bamboo/page/"/>
     <id>http://yuang01.github.io/post/hexo-theme-bamboo/page/</id>
     <published>2021-07-05T03:11:00.000Z</published>
-    <updated>2021-07-18T09:40:24.948Z</updated>
+    <updated>2021-08-09T01:42:39.617Z</updated>
     
     <summary type="html">
     
@@ -346,11 +346,11 @@
   </entry>
   
   <entry>
-    <title>folding折叠</title>
-    <link href="http://yuang01.github.io/post/folding/"/>
-    <id>http://yuang01.github.io/post/folding/</id>
+    <title>gallery图片</title>
+    <link href="http://yuang01.github.io/post/gallery/"/>
+    <id>http://yuang01.github.io/post/gallery/</id>
     <published>2021-02-08T03:35:00.000Z</published>
-    <updated>2021-05-11T01:45:36.721Z</updated>
+    <updated>2021-05-11T01:46:04.190Z</updated>
     
     <summary type="html">
     
@@ -358,8 +358,7 @@
       
         
         
-          &lt;p&gt;&lt;span&gt;&lt;img src=&#39;https://cdn.jsdelivr.net/gh/deepkolos/wechat-emoji/emoji/不屑.png&#39; style=&#39;height:24px&#39;&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;h2 class=&quot;bamboo-h &quot;
+          &lt;div class=&quot;note
         
       
     
@@ -374,11 +373,11 @@
   </entry>
   
   <entry>
-    <title>gallery图片</title>
-    <link href="http://yuang01.github.io/post/gallery/"/>
-    <id>http://yuang01.github.io/post/gallery/</id>
+    <title>folding折叠</title>
+    <link href="http://yuang01.github.io/post/folding/"/>
+    <id>http://yuang01.github.io/post/folding/</id>
     <published>2021-02-08T03:35:00.000Z</published>
-    <updated>2021-05-11T01:46:04.190Z</updated>
+    <updated>2021-05-11T01:45:36.721Z</updated>
     
     <summary type="html">
     
@@ -386,7 +385,8 @@
       
         
         
-          &lt;div class=&quot;note
+          &lt;p&gt;&lt;span&gt;&lt;img src=&#39;https://cdn.jsdelivr.net/gh/deepkolos/wechat-emoji/emoji/不屑.png&#39; style=&#39;height:24px&#39;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h2 class=&quot;bamboo-h &quot;
         
       
     
@@ -517,11 +517,11 @@
   </entry>
   
   <entry>
-    <title>NoteBlock</title>
-    <link href="http://yuang01.github.io/post/noteblock/"/>
-    <id>http://yuang01.github.io/post/noteblock/</id>
+    <title>段落文本</title>
+    <link href="http://yuang01.github.io/post/p/"/>
+    <id>http://yuang01.github.io/post/p/</id>
     <published>2021-02-08T03:35:00.000Z</published>
-    <updated>2021-05-11T01:47:04.721Z</updated>
+    <updated>2021-05-11T01:47:15.160Z</updated>
     
     <summary type="html">
     
@@ -529,9 +529,9 @@
       
         
         
-          &lt;h2 class=&quot;bamboo-h &quot; id=&quot;noteblock演示效果&quot;&gt;noteblock演示效果&lt;/h2&gt;&lt;br/&gt;
-
-&lt;div class=&quot;note
+          &lt;h2 class=&quot;bamboo-h &quot; id=&quot;段落文本演示&quot;&gt;段落文本演示&lt;/h2&gt;&lt;br/&gt;
+&lt;p class=&#39;p yellow&#39;&gt;我是一个文本高亮大萨达所多撒多撒多撒大多多撒多撒多撒大所多撒大多&lt;/p&gt;
+&lt;p class=&#39;p
         
       
     
