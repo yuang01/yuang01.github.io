@@ -40,6 +40,7 @@
     </script>
   
   
+  
 <link rel="stylesheet" href="/css/animate.min.css">
 
   
@@ -67,6 +68,24 @@
     <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
 
     
+
+    <!-- import link -->
+    
+        
+            
+        
+            
+        
+    
+    <!-- import script -->
+    
+        
+            
+        
+            
+        
+    
+
 <meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="Bamboo" type="application/atom+xml">
 </head>
 
@@ -847,6 +866,22 @@
           <li class="post-item" data-aos="fade-left">
             
             <div class="post-img-box">
+              <a href="/post/p/" class="post-img lazyload" data-original="https://pic4.zhimg.com/80/v2-513fd25e66ae237fca305e8ebf4de594_1440w.jpg?source=1940ef5c" style="background-size: cover; 
+                background-position: center center;">
+              </a>
+            </div>
+            <div class="post-date-title">
+              <div>
+                <span class="post-date">02-08</span>
+              </div>
+              <a class="post-title" href="/post/p/">段落文本</a>
+            </div>
+          </li>
+        
+          
+          <li class="post-item" data-aos="fade-left">
+            
+            <div class="post-img-box">
               <a href="/post/pbg/" class="post-img lazyload" data-original="https://pic1.zhimg.com/80/v2-c274041256201850e4a51998c5c48b77_1440w.jpg?source=1940ef5c" style="background-size: cover; 
                 background-position: center center;">
               </a>
@@ -879,22 +914,6 @@
           <li class="post-item" data-aos="fade-left">
             
             <div class="post-img-box">
-              <a href="/post/span/" class="post-img lazyload" data-original="https://pic4.zhimg.com/80/v2-37134f732bbe21779fdb2fc8dca410c7_1440w.jpg" style="background-size: cover; 
-                background-position: center center;">
-              </a>
-            </div>
-            <div class="post-date-title">
-              <div>
-                <span class="post-date">02-08</span>
-              </div>
-              <a class="post-title" href="/post/span/">文字颜色</a>
-            </div>
-          </li>
-        
-          
-          <li class="post-item" data-aos="fade-left">
-            
-            <div class="post-img-box">
               <a href="/post/site-card/" class="post-img lazyload" data-original="https://pic3.zhimg.com/80/v2-0cd97ad46cb2a18343565aa60adeab0e_1440w.jpg" style="background-size: cover; 
                 background-position: center center;">
               </a>
@@ -904,6 +923,22 @@
                 <span class="post-date">02-08</span>
               </div>
               <a class="post-title" href="/post/site-card/">site-card</a>
+            </div>
+          </li>
+        
+          
+          <li class="post-item" data-aos="fade-left">
+            
+            <div class="post-img-box">
+              <a href="/post/span/" class="post-img lazyload" data-original="https://pic4.zhimg.com/80/v2-37134f732bbe21779fdb2fc8dca410c7_1440w.jpg" style="background-size: cover; 
+                background-position: center center;">
+              </a>
+            </div>
+            <div class="post-date-title">
+              <div>
+                <span class="post-date">02-08</span>
+              </div>
+              <a class="post-title" href="/post/span/">文字颜色</a>
             </div>
           </li>
         
@@ -968,22 +1003,6 @@
                 <span class="post-date">02-08</span>
               </div>
               <a class="post-title" href="/post/title/">title</a>
-            </div>
-          </li>
-        
-          
-          <li class="post-item" data-aos="fade-left">
-            
-            <div class="post-img-box">
-              <a href="/post/video/" class="post-img lazyload" data-original="https://pic3.zhimg.com/v2-806666b346e90aa0506069930e453b2a_b.jpg" style="background-size: cover; 
-                background-position: center center;">
-              </a>
-            </div>
-            <div class="post-date-title">
-              <div>
-                <span class="post-date">02-08</span>
-              </div>
-              <a class="post-title" href="/post/video/">video视频</a>
             </div>
           </li>
         
@@ -1531,7 +1550,7 @@
 
   <script>
     var pjax = new Pjax({
-      elements: 'a[href]:not([href^="#"]):not([href="javascript:void(0)"])',   // 拦截正常带链接的 a 标签
+      elements: 'a[href]:not([href^="#"]):not([href="javascript:void(0)"]):not([no-pjax])',   // 拦截正常带链接的 a 标签
       selectors: ["#pjax-container","title"],                                   // 根据实际需要确认重载区域
       cacheBust: false,   // url 地址追加时间戳，用以避免浏览器缓存
       timeout: 5000

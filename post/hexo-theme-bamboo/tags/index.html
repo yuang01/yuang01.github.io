@@ -40,6 +40,7 @@
     </script>
   
   
+  
 <link rel="stylesheet" href="/css/animate.min.css">
 
   
@@ -67,6 +68,24 @@
     <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
 
     
+
+    <!-- import link -->
+    
+        
+            
+        
+            
+        
+    
+    <!-- import script -->
+    
+        
+            
+        
+            
+        
+    
+
 <meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="Bamboo" type="application/atom+xml">
 </head>
 
@@ -811,7 +830,7 @@
       
         <div class="post-detail-header_wordcount">
           <span class="totalcount">
-            <i class="fa fa-file-text-o"></i> 字数统计: 288 |
+            <i class="fa fa-file-text-o"></i> 字数统计: 297 |
           </span>
   
           <span class="min2read">
@@ -890,7 +909,8 @@
 <div class="tagLink"><a class="link-card" title="issuesSites标签" href="/post/issuessites/"><span class="link-card-backdrop" style="background-image: url(https://cdn.pixabay.com/photo/2018/12/05/13/41/panda-3857754__340.jpg)"></span><div class="left"><img "" class="lazyload placeholder" data-original="https://cdn.pixabay.com/photo/2018/12/05/13/41/panda-3857754__340.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"/></div><div class="right"><p class="text">issuesSites标签</p><p class="url">/post/issuessites/</p></div></a></div>
 
 <div class="tagLink"><a class="link-card" title="issuesTimeline标签" href="/post/issuestimeline/"><span class="link-card-backdrop" style="background-image: url(https://cdn.pixabay.com/photo/2018/12/05/13/41/panda-3857754__340.jpg)"></span><div class="left"><img "" class="lazyload placeholder" data-original="https://cdn.pixabay.com/photo/2018/12/05/13/41/panda-3857754__340.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"/></div><div class="right"><p class="text">issuesTimeline标签</p><p class="url">/post/issuestimeline/</p></div></a></div>
-</div>
+
+<div class="tagLink"><a class="link-card" title="getFiles文件获取标签" href="/post/getfiles/"><span class="link-card-backdrop" style="background-image: url(https://cdn.pixabay.com/photo/2018/12/05/13/41/panda-3857754__340.jpg)"></span><div class="left"><img "" class="lazyload placeholder" data-original="https://cdn.pixabay.com/photo/2018/12/05/13/41/panda-3857754__340.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"/></div><div class="right"><p class="text">getFiles文件获取标签</p><p class="url">/post/getfiles/</p></div></a></div></div>
 
 <p>可通过如下参数配置基本颜色和默认图片</p>
 <pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token comment"># tag标签 按钮，文本高亮等等..</span>
@@ -1830,7 +1850,7 @@ titl
 
   <script>
     var pjax = new Pjax({
-      elements: 'a[href]:not([href^="#"]):not([href="javascript:void(0)"])',   // 拦截正常带链接的 a 标签
+      elements: 'a[href]:not([href^="#"]):not([href="javascript:void(0)"]):not([no-pjax])',   // 拦截正常带链接的 a 标签
       selectors: ["#pjax-container","title"],                                   // 根据实际需要确认重载区域
       cacheBust: false,   // url 地址追加时间戳，用以避免浏览器缓存
       timeout: 5000

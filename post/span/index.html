@@ -40,6 +40,7 @@
     </script>
   
   
+  
 <link rel="stylesheet" href="/css/animate.min.css">
 
   
@@ -67,6 +68,24 @@
     <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
 
     
+
+    <!-- import link -->
+    
+        
+            
+        
+            
+        
+    
+    <!-- import script -->
+    
+        
+            
+        
+            
+        
+    
+
 <meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="Bamboo" type="application/atom+xml">
 </head>
 
@@ -897,38 +916,15 @@
 
   
   <div class="post-nav-prev post-nav-item">
-    <div class="post-nav-img lazyload" data-original="https://pic3.zhimg.com/80/v2-1d9e8203f167bb1c51d6899df5c626ca_1440w.jpg" style="background-size: cover; 
-      background-position: center center;">
-    </div>
-    <a href="/post/radio/" class="post-nav-link">
-      <div class="title">
-        <i class="fa fa-angle-left"></i> 上一篇:
-        <div class="title-text">radio</div>
-      </div>
-      
-      <!-- <div class="content">
-        radio
-
-            纯文本测试
-            
-
-            支持简单的 mar
-      </div> -->
-    </a>
-  </div>
-
-
-
-  
-  <div class="post-nav-next post-nav-item">
     <div class="post-nav-img lazyload" data-original="https://pic3.zhimg.com/80/v2-0cd97ad46cb2a18343565aa60adeab0e_1440w.jpg" style="background-size: cover; 
       background-position: center center;">
     </div>
     <a href="/post/site-card/" class="post-nav-link">
       <div class="title">
-        下一篇: <i class="fa fa-angle-right"></i>
+        <i class="fa fa-angle-left"></i> 上一篇:
         <div class="title-text">site-card</div>
       </div>
+      
       <!-- <div class="content">
         site-card演示
 木兮这是描述
@@ -937,6 +933,28 @@ yuang01这是描述哦
 yuang01这是描述哦
 木兮这是描述
 上
+      </div> -->
+    </a>
+  </div>
+
+
+
+  
+  <div class="post-nav-next post-nav-item">
+    <div class="post-nav-img lazyload" data-original="https://pic4.zhimg.com/80/v2-5a575bb8ac734707f1ec05d6de6a0e0b_1440w.jpg" style="background-size: cover; 
+      background-position: center center;">
+    </div>
+    <a href="/post/tab/" class="post-nav-link">
+      <div class="title">
+        下一篇: <i class="fa fa-angle-right"></i>
+        <div class="title-text">tab</div>
+      </div>
+      <!-- <div class="content">
+        tab事例
+栏目1栏目2。。。！！！
+上述事例代码&#123;% tabs tab-id %&#125;
+
+&lt;!-
       </div> -->
     </a>
   </div>
@@ -1779,7 +1797,7 @@ yuang01这是描述哦
 
   <script>
     var pjax = new Pjax({
-      elements: 'a[href]:not([href^="#"]):not([href="javascript:void(0)"])',   // 拦截正常带链接的 a 标签
+      elements: 'a[href]:not([href^="#"]):not([href="javascript:void(0)"]):not([no-pjax])',   // 拦截正常带链接的 a 标签
       selectors: ["#pjax-container","title"],                                   // 根据实际需要确认重载区域
       cacheBust: false,   // url 地址追加时间戳，用以避免浏览器缓存
       timeout: 5000

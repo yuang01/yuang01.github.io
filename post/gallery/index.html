@@ -40,6 +40,7 @@
     </script>
   
   
+  
 <link rel="stylesheet" href="/css/animate.min.css">
 
   
@@ -67,6 +68,24 @@
     <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
 
     
+
+    <!-- import link -->
+    
+        
+            
+        
+            
+        
+    
+    <!-- import script -->
+    
+        
+            
+        
+            
+        
+    
+
 <meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="Bamboo" type="application/atom+xml">
 </head>
 
@@ -962,39 +981,15 @@
 
   
   <div class="post-nav-prev post-nav-item">
-    <div class="post-nav-img lazyload" data-original="https://pic1.zhimg.com/80/v2-b45cff10c7ebebe5c68fba3b134d81f4_1440w.jpg?source=1940ef5c" style="background-size: cover; 
-      background-position: center center;">
-    </div>
-    <a href="/post/checkbox/" class="post-nav-link">
-      <div class="title">
-        <i class="fa fa-angle-left"></i> 上一篇:
-        <div class="title-text">checkbox</div>
-      </div>
-      
-      <!-- <div class="content">
-        进度条示例
-
-
-            纯文本测试
-            
-
-            支持简单的 ma
-      </div> -->
-    </a>
-  </div>
-
-
-
-  
-  <div class="post-nav-next post-nav-item">
     <div class="post-nav-img lazyload" data-original="https://pic4.zhimg.com/80/v2-3b4ca49ff4fc567faa76ce6f02cffac9_1440w.jpg?source=1940ef5c" style="background-size: cover; 
       background-position: center center;">
     </div>
     <a href="/post/folding/" class="post-nav-link">
       <div class="title">
-        下一篇: <i class="fa fa-angle-right"></i>
+        <i class="fa fa-angle-left"></i> 上一篇:
         <div class="title-text">folding折叠</div>
       </div>
+      
       <!-- <div class="content">
         
 基本
@@ -1004,6 +999,29 @@
               
               
  
+      </div> -->
+    </a>
+  </div>
+
+
+
+  
+  <div class="post-nav-next post-nav-item">
+    <div class="post-nav-img lazyload" data-original="https://pic3.zhimg.com/80/v2-b7c7899676492453229763b26835f6dc_1440w.jpg?source=1940ef5c" style="background-size: cover; 
+      background-position: center center;">
+    </div>
+    <a href="/post/ghcard/" class="post-nav-link">
+      <div class="title">
+        下一篇: <i class="fa fa-angle-right"></i>
+        <div class="title-text">Github卡片</div>
+      </div>
+      <!-- <div class="content">
+        Github用户卡片
+
+上述示例代码&#123;% ghcard yuang01 %&#125;
+表格中加入用户卡片
+
+
       </div> -->
     </a>
   </div>
@@ -1846,7 +1864,7 @@
 
   <script>
     var pjax = new Pjax({
-      elements: 'a[href]:not([href^="#"]):not([href="javascript:void(0)"])',   // 拦截正常带链接的 a 标签
+      elements: 'a[href]:not([href^="#"]):not([href="javascript:void(0)"]):not([no-pjax])',   // 拦截正常带链接的 a 标签
       selectors: ["#pjax-container","title"],                                   // 根据实际需要确认重载区域
       cacheBust: false,   // url 地址追加时间戳，用以避免浏览器缓存
       timeout: 5000

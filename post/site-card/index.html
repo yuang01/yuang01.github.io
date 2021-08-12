@@ -40,6 +40,7 @@
     </script>
   
   
+  
 <link rel="stylesheet" href="/css/animate.min.css">
 
   
@@ -67,6 +68,24 @@
     <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
 
     
+
+    <!-- import link -->
+    
+        
+            
+        
+            
+        
+    
+    <!-- import script -->
+    
+        
+            
+        
+            
+        
+    
+
 <meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="Bamboo" type="application/atom+xml">
 </head>
 
@@ -893,18 +912,22 @@
 
   
   <div class="post-nav-prev post-nav-item">
-    <div class="post-nav-img lazyload" data-original="https://pic4.zhimg.com/80/v2-37134f732bbe21779fdb2fc8dca410c7_1440w.jpg" style="background-size: cover; 
+    <div class="post-nav-img lazyload" data-original="https://pic3.zhimg.com/80/v2-1d9e8203f167bb1c51d6899df5c626ca_1440w.jpg" style="background-size: cover; 
       background-position: center center;">
     </div>
-    <a href="/post/span/" class="post-nav-link">
+    <a href="/post/radio/" class="post-nav-link">
       <div class="title">
         <i class="fa fa-angle-left"></i> 上一篇:
-        <div class="title-text">文字颜色</div>
+        <div class="title-text">radio</div>
       </div>
       
       <!-- <div class="content">
-        文字颜色演示效果
-这是一个简单的文字我是一个文字高亮，唱着我们心肠的曲折这是一个简单的文字我是一个文字高亮，唱着我们心肠
+        radio
+
+            纯文本测试
+            
+
+            支持简单的 mar
       </div> -->
     </a>
   </div>
@@ -913,20 +936,17 @@
 
   
   <div class="post-nav-next post-nav-item">
-    <div class="post-nav-img lazyload" data-original="https://pic4.zhimg.com/80/v2-5a575bb8ac734707f1ec05d6de6a0e0b_1440w.jpg" style="background-size: cover; 
+    <div class="post-nav-img lazyload" data-original="https://pic4.zhimg.com/80/v2-37134f732bbe21779fdb2fc8dca410c7_1440w.jpg" style="background-size: cover; 
       background-position: center center;">
     </div>
-    <a href="/post/tab/" class="post-nav-link">
+    <a href="/post/span/" class="post-nav-link">
       <div class="title">
         下一篇: <i class="fa fa-angle-right"></i>
-        <div class="title-text">tab</div>
+        <div class="title-text">文字颜色</div>
       </div>
       <!-- <div class="content">
-        tab事例
-栏目1栏目2。。。！！！
-上述事例代码&#123;% tabs tab-id %&#125;
-
-&lt;!-
+        文字颜色演示效果
+这是一个简单的文字我是一个文字高亮，唱着我们心肠的曲折这是一个简单的文字我是一个文字高亮，唱着我们心肠
       </div> -->
     </a>
   </div>
@@ -1769,7 +1789,7 @@
 
   <script>
     var pjax = new Pjax({
-      elements: 'a[href]:not([href^="#"]):not([href="javascript:void(0)"])',   // 拦截正常带链接的 a 标签
+      elements: 'a[href]:not([href^="#"]):not([href="javascript:void(0)"]):not([no-pjax])',   // 拦截正常带链接的 a 标签
       selectors: ["#pjax-container","title"],                                   // 根据实际需要确认重载区域
       cacheBust: false,   // url 地址追加时间戳，用以避免浏览器缓存
       timeout: 5000

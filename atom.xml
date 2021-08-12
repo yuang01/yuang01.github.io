@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yuang01.github.io/"/>
-  <updated>2021-07-19T09:22:52.149Z</updated>
+  <updated>2021-08-12T02:27:34.238Z</updated>
   <id>http://yuang01.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>getFiles文件获取</title>
+    <link href="http://yuang01.github.io/post/getfiles/"/>
+    <id>http://yuang01.github.io/post/getfiles/</id>
+    <published>2021-08-10T03:35:00.000Z</published>
+    <updated>2021-08-12T02:27:34.238Z</updated>
+    
+    <summary type="html">
+    
+      会把某个文件夹下的文件显示在页面上。
+    
+    </summary>
+    
+    
+      <category term="前端" scheme="http://yuang01.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="tag" scheme="http://yuang01.github.io/tags/tag/"/>
+    
+  </entry>
   
   <entry>
     <title>Bamboo主题-基本配置（一）</title>
@@ -113,7 +134,7 @@
     <link href="http://yuang01.github.io/post/hexo-theme-bamboo/tags/"/>
     <id>http://yuang01.github.io/post/hexo-theme-bamboo/tags/</id>
     <published>2021-07-05T03:08:00.000Z</published>
-    <updated>2021-07-19T02:39:15.820Z</updated>
+    <updated>2021-08-12T02:32:20.665Z</updated>
     
     <summary type="html">
     
@@ -346,33 +367,6 @@
   </entry>
   
   <entry>
-    <title>gallery图片</title>
-    <link href="http://yuang01.github.io/post/gallery/"/>
-    <id>http://yuang01.github.io/post/gallery/</id>
-    <published>2021-02-08T03:35:00.000Z</published>
-    <updated>2021-05-11T01:46:04.190Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;div class=&quot;note
-        
-      
-    
-    </summary>
-    
-    
-      <category term="前端" scheme="http://yuang01.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="tag" scheme="http://yuang01.github.io/tags/tag/"/>
-    
-  </entry>
-  
-  <entry>
     <title>folding折叠</title>
     <link href="http://yuang01.github.io/post/folding/"/>
     <id>http://yuang01.github.io/post/folding/</id>
@@ -387,6 +381,33 @@
         
           &lt;p&gt;&lt;span&gt;&lt;img src=&#39;https://cdn.jsdelivr.net/gh/deepkolos/wechat-emoji/emoji/不屑.png&#39; style=&#39;height:24px&#39;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;h2 class=&quot;bamboo-h &quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="前端" scheme="http://yuang01.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="tag" scheme="http://yuang01.github.io/tags/tag/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>gallery图片</title>
+    <link href="http://yuang01.github.io/post/gallery/"/>
+    <id>http://yuang01.github.io/post/gallery/</id>
+    <published>2021-02-08T03:35:00.000Z</published>
+    <updated>2021-05-11T01:46:04.190Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;div class=&quot;note
         
       
     
@@ -503,35 +524,6 @@
 &lt;p&gt;markdown默认写法，左边框颜色，随着主题色改变&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;div class=&quot;note
-        
-      
-    
-    </summary>
-    
-    
-      <category term="前端" scheme="http://yuang01.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="tag" scheme="http://yuang01.github.io/tags/tag/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>段落文本</title>
-    <link href="http://yuang01.github.io/post/p/"/>
-    <id>http://yuang01.github.io/post/p/</id>
-    <published>2021-02-08T03:35:00.000Z</published>
-    <updated>2021-05-11T01:47:15.160Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 class=&quot;bamboo-h &quot; id=&quot;段落文本演示&quot;&gt;段落文本演示&lt;/h2&gt;&lt;br/&gt;
-&lt;p class=&#39;p yellow&#39;&gt;我是一个文本高亮大萨达所多撒多撒多撒大多多撒多撒多撒大所多撒大多&lt;/p&gt;
-&lt;p class=&#39;p
         
       
     
