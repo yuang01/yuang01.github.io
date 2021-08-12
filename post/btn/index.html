@@ -1118,21 +1118,22 @@
 
   
   <div class="post-nav-next post-nav-item">
-    <div class="post-nav-img lazyload" data-original="https://pic2.zhimg.com/80/v2-035165460d504f2b072ee777d1d40ab6_1440w.jpg?source=1940ef5c" style="background-size: cover; 
+    <div class="post-nav-img lazyload" data-original="https://pic1.zhimg.com/80/v2-b45cff10c7ebebe5c68fba3b134d81f4_1440w.jpg?source=1940ef5c" style="background-size: cover; 
       background-position: center center;">
     </div>
-    <a href="/post/audio/" class="post-nav-link">
+    <a href="/post/checkbox/" class="post-nav-link">
       <div class="title">
         下一篇: <i class="fa fa-angle-right"></i>
-        <div class="title-text">audio音频</div>
+        <div class="title-text">checkbox</div>
       </div>
       <!-- <div class="content">
-        事例
+        进度条示例
 
-Your browser does not support the audio tag.
 
-写法
-&#123;%
+            纯文本测试
+            
+
+            支持简单的 ma
       </div> -->
     </a>
   </div>
@@ -1780,7 +1781,7 @@ Your browser does not support the audio tag.
     var themeOnce = eval('true') || false;
     var themeMirror = eval('false') || false;
     var themeAnchorPlacement = 'top-bottom' || 'top-bottom';
-    AOS.init({
+    var obj = {
       // Global settings:
       disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
       startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
@@ -1800,10 +1801,11 @@ Your browser does not support the audio tag.
       mirror: themeMirror, // whether elements should animate out while scrolling past them
       anchorPlacement: themeAnchorPlacement, // defines which position of the element regarding to window should trigger the animation
 
-    });
+    }
+    AOS.init(obj);
 
     document.addEventListener('pjax:complete', function () {
-      AOS.refresh();
+      AOS.refresh(obj);
     })
   </script>
 

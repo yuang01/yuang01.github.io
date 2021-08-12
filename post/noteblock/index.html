@@ -961,18 +961,21 @@ markdown默认写法，左边框颜色，随着主题色改变
 
   
   <div class="post-nav-next post-nav-item">
-    <div class="post-nav-img lazyload" data-original="https://pic4.zhimg.com/80/v2-513fd25e66ae237fca305e8ebf4de594_1440w.jpg?source=1940ef5c" style="background-size: cover; 
+    <div class="post-nav-img lazyload" data-original="https://pic2.zhimg.com/80/v2-035165460d504f2b072ee777d1d40ab6_1440w.jpg?source=1940ef5c" style="background-size: cover; 
       background-position: center center;">
     </div>
-    <a href="/post/p/" class="post-nav-link">
+    <a href="/post/audio/" class="post-nav-link">
       <div class="title">
         下一篇: <i class="fa fa-angle-right"></i>
-        <div class="title-text">段落文本</div>
+        <div class="title-text">audio音频</div>
       </div>
       <!-- <div class="content">
-        段落文本演示
-我是一个文本高亮大萨达所多撒多撒多撒大多多撒多撒多撒大所多撒大多
-我是一个文本高亮大萨达所多撒多撒多撒大多
+        事例
+
+Your browser does not support the audio tag.
+
+写法
+&#123;%
       </div> -->
     </a>
   </div>
@@ -1620,7 +1623,7 @@ markdown默认写法，左边框颜色，随着主题色改变
     var themeOnce = eval('true') || false;
     var themeMirror = eval('false') || false;
     var themeAnchorPlacement = 'top-bottom' || 'top-bottom';
-    AOS.init({
+    var obj = {
       // Global settings:
       disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
       startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
@@ -1640,10 +1643,11 @@ markdown默认写法，左边框颜色，随着主题色改变
       mirror: themeMirror, // whether elements should animate out while scrolling past them
       anchorPlacement: themeAnchorPlacement, // defines which position of the element regarding to window should trigger the animation
 
-    });
+    }
+    AOS.init(obj);
 
     document.addEventListener('pjax:complete', function () {
-      AOS.refresh();
+      AOS.refresh(obj);
     })
   </script>
 
