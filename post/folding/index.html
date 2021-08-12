@@ -1628,7 +1628,11 @@ hahaha <span class="token operator">&lt;</span>span<span class="token operator">
 
     }
     AOS.init(obj);
-
+    document.addEventListener('pjax:send', function () {
+      $(window).unbind('resize');
+      $(window).unbind('scroll');
+      $(document).unbind('scroll');
+    })
     document.addEventListener('pjax:complete', function () {
       AOS.refresh(obj);
     })

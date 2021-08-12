@@ -850,7 +850,7 @@
           <li class="post-item" data-aos="fade-left">
             
             <div class="post-img-box">
-              <a href="/post/link/" class="post-img lazyload" data-original="https://pic2.zhimg.com/80/v2-19975cec2eaae0083992a79315bd232b_1440w.jpg?source=1940ef5c" style="background-size: cover; 
+              <a href="/post/note/" class="post-img lazyload" data-original="https://pic2.zhimg.com/80/v2-faf73fcede052da243fef1b36604b8f9_1440w.jpg?source=1940ef5c" style="background-size: cover; 
                 background-position: center center;">
               </a>
             </div>
@@ -858,7 +858,7 @@
               <div>
                 <span class="post-date">02-08</span>
               </div>
-              <a class="post-title" href="/post/link/">Link标签</a>
+              <a class="post-title" href="/post/note/">Note标签</a>
             </div>
           </li>
         
@@ -898,22 +898,6 @@
           <li class="post-item" data-aos="fade-left">
             
             <div class="post-img-box">
-              <a href="/post/radio/" class="post-img lazyload" data-original="https://pic3.zhimg.com/80/v2-1d9e8203f167bb1c51d6899df5c626ca_1440w.jpg" style="background-size: cover; 
-                background-position: center center;">
-              </a>
-            </div>
-            <div class="post-date-title">
-              <div>
-                <span class="post-date">02-08</span>
-              </div>
-              <a class="post-title" href="/post/radio/">radio</a>
-            </div>
-          </li>
-        
-          
-          <li class="post-item" data-aos="fade-left">
-            
-            <div class="post-img-box">
               <a href="/post/site-card/" class="post-img lazyload" data-original="https://pic3.zhimg.com/80/v2-0cd97ad46cb2a18343565aa60adeab0e_1440w.jpg" style="background-size: cover; 
                 background-position: center center;">
               </a>
@@ -923,6 +907,22 @@
                 <span class="post-date">02-08</span>
               </div>
               <a class="post-title" href="/post/site-card/">site-card</a>
+            </div>
+          </li>
+        
+          
+          <li class="post-item" data-aos="fade-left">
+            
+            <div class="post-img-box">
+              <a href="/post/radio/" class="post-img lazyload" data-original="https://pic3.zhimg.com/80/v2-1d9e8203f167bb1c51d6899df5c626ca_1440w.jpg" style="background-size: cover; 
+                background-position: center center;">
+              </a>
+            </div>
+            <div class="post-date-title">
+              <div>
+                <span class="post-date">02-08</span>
+              </div>
+              <a class="post-title" href="/post/radio/">radio</a>
             </div>
           </li>
         
@@ -962,6 +962,22 @@
           <li class="post-item" data-aos="fade-left">
             
             <div class="post-img-box">
+              <a href="/post/title/" class="post-img lazyload" data-original="https://pic1.zhimg.com/v2-cdf0dd8357e2cf573f32d0d65cff6404_b.jpg" style="background-size: cover; 
+                background-position: center center;">
+              </a>
+            </div>
+            <div class="post-date-title">
+              <div>
+                <span class="post-date">02-08</span>
+              </div>
+              <a class="post-title" href="/post/title/">title</a>
+            </div>
+          </li>
+        
+          
+          <li class="post-item" data-aos="fade-left">
+            
+            <div class="post-img-box">
               <a href="/post/text/" class="post-img lazyload" data-original="https://pic4.zhimg.com/v2-8ad0cffeaa7dec5dd1930eebc6ff863f_b.jpg" style="background-size: cover; 
                 background-position: center center;">
               </a>
@@ -987,22 +1003,6 @@
                 <span class="post-date">02-08</span>
               </div>
               <a class="post-title" href="/post/timeline/">timeline时间线</a>
-            </div>
-          </li>
-        
-          
-          <li class="post-item" data-aos="fade-left">
-            
-            <div class="post-img-box">
-              <a href="/post/title/" class="post-img lazyload" data-original="https://pic1.zhimg.com/v2-cdf0dd8357e2cf573f32d0d65cff6404_b.jpg" style="background-size: cover; 
-                background-position: center center;">
-              </a>
-            </div>
-            <div class="post-date-title">
-              <div>
-                <span class="post-date">02-08</span>
-              </div>
-              <a class="post-title" href="/post/title/">title</a>
             </div>
           </li>
         
@@ -1377,7 +1377,11 @@
 
     }
     AOS.init(obj);
-
+    document.addEventListener('pjax:send', function () {
+      $(window).unbind('resize');
+      $(window).unbind('scroll');
+      $(document).unbind('scroll');
+    })
     document.addEventListener('pjax:complete', function () {
       AOS.refresh(obj);
     })
