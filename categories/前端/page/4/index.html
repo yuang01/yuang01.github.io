@@ -69,6 +69,10 @@
 
     
 
+    
+        <script src="/js/aos/aos.js"></script>
+    
+    
     <!-- import link -->
     
         
@@ -819,7 +823,7 @@
             <span class="post-time">2021-02-08</span>
           </div>
           <div class="post-title">
-            <a class="post-title-link" href="/post/title/">title</a>
+            <a class="post-title-link" href="/post/video/">video视频</a>
           </div>
           <div class="post-meta">
             <div class="post-tags">
@@ -842,39 +846,30 @@
           </div>
           <div class="post-img-mobile">
             
-              <a href="/post/title/" class="lazyload" data-original="https://pic1.zhimg.com/v2-cdf0dd8357e2cf573f32d0d65cff6404_b.jpg" style="background-size: cover; 
+              <a href="/post/video/" class="lazyload" data-original="https://pic3.zhimg.com/v2-806666b346e90aa0506069930e453b2a_b.jpg" style="background-size: cover; 
                 background-position: center center;">
               </a>
             
           </div>
           <div class="post-content">
-            title演示
+            video演示
+100%宽度
+Your browser does not support the video tag.
 
-我是标题
-
-你好啊，未来越来越好哦
-我是标题
-
-你好啊，加油哦
-我是标题
-
-我是标题
-上述事例代码&#123;% title h1, 我是标题 %&#125;
-
-你好啊，未来越来越好哦
-
-&#123;% title h2,
+50%宽度
+Your browser does not support the video tag.
+Your bro
           </div>
         </div>
         <div class="post-more">
-          <a href="/post/title/">
+          <a href="/post/video/">
             <i class="iconfont iconmore" pointer style="float: right;" title="阅读更多"></i>
           </a>
         </div>
       </div>
       <div class="post-img">
         
-          <a href="/post/title/" class="lazyload" data-original="https://pic1.zhimg.com/v2-cdf0dd8357e2cf573f32d0d65cff6404_b.jpg" style="background-size: cover; 
+          <a href="/post/video/" class="lazyload" data-original="https://pic3.zhimg.com/v2-806666b346e90aa0506069930e453b2a_b.jpg" style="background-size: cover; 
             background-position: center center;">
           </a>
         
@@ -1297,7 +1292,7 @@ asa
 
 <!-- div滚动到显示区域的动画 -->
 
-  <script src="/js/aos/aos.js"></script>
+  <!-- <script src="/js/aos/aos.js"></script> -->
   <script>
     // https://github.com/michalsnik/aos
     var themeOffset = parseInt('120') || 120;
@@ -1307,7 +1302,8 @@ asa
     var themeOnce = eval('true') || false;
     var themeMirror = eval('false') || false;
     var themeAnchorPlacement = 'top-bottom' || 'top-bottom';
-    var obj = {
+
+    AOS.init({
       // Global settings:
       disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
       startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
@@ -1327,15 +1323,10 @@ asa
       mirror: themeMirror, // whether elements should animate out while scrolling past them
       anchorPlacement: themeAnchorPlacement, // defines which position of the element regarding to window should trigger the animation
 
-    }
-    AOS.init(obj);
-    document.addEventListener('pjax:send', function () {
-      $(window).unbind('resize');
-      $(window).unbind('scroll');
-      $(document).unbind('scroll');
-    })
+    });
+
     document.addEventListener('pjax:complete', function () {
-      AOS.refresh(obj);
+      AOS.refresh();
     })
   </script>
 

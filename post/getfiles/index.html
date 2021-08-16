@@ -69,6 +69,10 @@
 
     
 
+    
+        <script src="/js/aos/aos.js"></script>
+    
+    
     <!-- import link -->
     
         
@@ -1571,7 +1575,7 @@ Hexoht
 
 <!-- div滚动到显示区域的动画 -->
 
-  <script src="/js/aos/aos.js"></script>
+  <!-- <script src="/js/aos/aos.js"></script> -->
   <script>
     // https://github.com/michalsnik/aos
     var themeOffset = parseInt('120') || 120;
@@ -1581,7 +1585,8 @@ Hexoht
     var themeOnce = eval('true') || false;
     var themeMirror = eval('false') || false;
     var themeAnchorPlacement = 'top-bottom' || 'top-bottom';
-    var obj = {
+
+    AOS.init({
       // Global settings:
       disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
       startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
@@ -1601,15 +1606,10 @@ Hexoht
       mirror: themeMirror, // whether elements should animate out while scrolling past them
       anchorPlacement: themeAnchorPlacement, // defines which position of the element regarding to window should trigger the animation
 
-    }
-    AOS.init(obj);
-    document.addEventListener('pjax:send', function () {
-      $(window).unbind('resize');
-      $(window).unbind('scroll');
-      $(document).unbind('scroll');
-    })
+    });
+
     document.addEventListener('pjax:complete', function () {
-      AOS.refresh(obj);
+      AOS.refresh();
     })
   </script>
 

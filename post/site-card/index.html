@@ -69,6 +69,10 @@
 
     
 
+    
+        <script src="/js/aos/aos.js"></script>
+    
+    
     <!-- import link -->
     
         
@@ -912,18 +916,22 @@
 
   
   <div class="post-nav-prev post-nav-item">
-    <div class="post-nav-img lazyload" data-original="https://pic1.zhimg.com/80/v2-c274041256201850e4a51998c5c48b77_1440w.jpg?source=1940ef5c" style="background-size: cover; 
+    <div class="post-nav-img lazyload" data-original="https://pic3.zhimg.com/80/v2-1d9e8203f167bb1c51d6899df5c626ca_1440w.jpg" style="background-size: cover; 
       background-position: center center;">
     </div>
-    <a href="/post/pbg/" class="post-nav-link">
+    <a href="/post/radio/" class="post-nav-link">
       <div class="title">
         <i class="fa fa-angle-left"></i> 上一篇:
-        <div class="title-text">文本高亮</div>
+        <div class="title-text">radio</div>
       </div>
       
       <!-- <div class="content">
-        文本高亮演示效果
-这是一个简单的文字我是一个文本高亮，唱着我们心肠的曲折这是一个简单的文字我是一个文本高亮，唱着我们心肠
+        radio
+
+            纯文本测试
+            
+
+            支持简单的 mar
       </div> -->
     </a>
   </div>
@@ -932,21 +940,17 @@
 
   
   <div class="post-nav-next post-nav-item">
-    <div class="post-nav-img lazyload" data-original="https://pic3.zhimg.com/80/v2-1d9e8203f167bb1c51d6899df5c626ca_1440w.jpg" style="background-size: cover; 
+    <div class="post-nav-img lazyload" data-original="https://pic4.zhimg.com/80/v2-37134f732bbe21779fdb2fc8dca410c7_1440w.jpg" style="background-size: cover; 
       background-position: center center;">
     </div>
-    <a href="/post/radio/" class="post-nav-link">
+    <a href="/post/span/" class="post-nav-link">
       <div class="title">
         下一篇: <i class="fa fa-angle-right"></i>
-        <div class="title-text">radio</div>
+        <div class="title-text">文字颜色</div>
       </div>
       <!-- <div class="content">
-        radio
-
-            纯文本测试
-            
-
-            支持简单的 mar
+        文字颜色演示效果
+这是一个简单的文字我是一个文字高亮，唱着我们心肠的曲折这是一个简单的文字我是一个文字高亮，唱着我们心肠
       </div> -->
     </a>
   </div>
@@ -1584,7 +1588,7 @@
 
 <!-- div滚动到显示区域的动画 -->
 
-  <script src="/js/aos/aos.js"></script>
+  <!-- <script src="/js/aos/aos.js"></script> -->
   <script>
     // https://github.com/michalsnik/aos
     var themeOffset = parseInt('120') || 120;
@@ -1594,7 +1598,8 @@
     var themeOnce = eval('true') || false;
     var themeMirror = eval('false') || false;
     var themeAnchorPlacement = 'top-bottom' || 'top-bottom';
-    var obj = {
+
+    AOS.init({
       // Global settings:
       disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
       startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
@@ -1614,15 +1619,10 @@
       mirror: themeMirror, // whether elements should animate out while scrolling past them
       anchorPlacement: themeAnchorPlacement, // defines which position of the element regarding to window should trigger the animation
 
-    }
-    AOS.init(obj);
-    document.addEventListener('pjax:send', function () {
-      $(window).unbind('resize');
-      $(window).unbind('scroll');
-      $(document).unbind('scroll');
-    })
+    });
+
     document.addEventListener('pjax:complete', function () {
-      AOS.refresh(obj);
+      AOS.refresh();
     })
   </script>
 
