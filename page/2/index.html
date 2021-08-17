@@ -2702,11 +2702,11 @@ markdown默认写法，左边框颜色，随着主题色改变
 
     }
     AOS.init(objAos);
-    document.addEventListener('pjax:send', function () {
-      $(window).unbind('resize');
-      $(window).unbind('scroll');
-      $(document).unbind('scroll');
-    });
+    // document.addEventListener('pjax:send', function () {
+    //   $(window).unbind('resize');
+    //   $(window).unbind('scroll');
+    //   $(document).unbind('scroll');
+    // });
     document.addEventListener('pjax:complete', function () {
       AOS.init(objAos);
     })
