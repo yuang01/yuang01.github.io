@@ -916,18 +916,18 @@
 
   
   <div class="post-nav-prev post-nav-item">
-    <div class="post-nav-img lazyload" data-original="https://pic1.zhimg.com/80/v2-c274041256201850e4a51998c5c48b77_1440w.jpg?source=1940ef5c" style="background-size: cover; 
+    <div class="post-nav-img lazyload" data-original="https://pic4.zhimg.com/80/v2-37134f732bbe21779fdb2fc8dca410c7_1440w.jpg" style="background-size: cover; 
       background-position: center center;">
     </div>
-    <a href="/post/pbg/" class="post-nav-link">
+    <a href="/post/span/" class="post-nav-link">
       <div class="title">
         <i class="fa fa-angle-left"></i> 上一篇:
-        <div class="title-text">文本高亮</div>
+        <div class="title-text">文字颜色</div>
       </div>
       
       <!-- <div class="content">
-        文本高亮演示效果
-这是一个简单的文字我是一个文本高亮，唱着我们心肠的曲折这是一个简单的文字我是一个文本高亮，唱着我们心肠
+        文字颜色演示效果
+这是一个简单的文字我是一个文字高亮，唱着我们心肠的曲折这是一个简单的文字我是一个文字高亮，唱着我们心肠
       </div> -->
     </a>
   </div>
@@ -936,17 +936,20 @@
 
   
   <div class="post-nav-next post-nav-item">
-    <div class="post-nav-img lazyload" data-original="https://pic4.zhimg.com/80/v2-37134f732bbe21779fdb2fc8dca410c7_1440w.jpg" style="background-size: cover; 
+    <div class="post-nav-img lazyload" data-original="https://pic4.zhimg.com/80/v2-5a575bb8ac734707f1ec05d6de6a0e0b_1440w.jpg" style="background-size: cover; 
       background-position: center center;">
     </div>
-    <a href="/post/span/" class="post-nav-link">
+    <a href="/post/tab/" class="post-nav-link">
       <div class="title">
         下一篇: <i class="fa fa-angle-right"></i>
-        <div class="title-text">文字颜色</div>
+        <div class="title-text">tab</div>
       </div>
       <!-- <div class="content">
-        文字颜色演示效果
-这是一个简单的文字我是一个文字高亮，唱着我们心肠的曲折这是一个简单的文字我是一个文字高亮，唱着我们心肠
+        tab事例
+栏目1栏目2。。。！！！
+上述事例代码&#123;% tabs tab-id %&#125;
+
+&lt;!-
       </div> -->
     </a>
   </div>
@@ -1621,6 +1624,9 @@
       $(window).unbind('resize');
       $(window).unbind('scroll');
       $(document).unbind('scroll');
+      $('article[data-aos]').each(function(){
+        $(this).removeClass('aos-init aos-animate');
+      });
     });
     document.addEventListener('pjax:complete', function () {
       AOS.refresh(objAos);
