@@ -14,10 +14,6 @@
   <title>NoteBlock | Bamboo</title>
 
   
-    
-<link rel="stylesheet" href="/js/aos/aos.css">
-
-  
 
   <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico">
   <link rel="stylesheet" href="https://at.alicdn.com/t/font_1911880_c1nvbyezg17.css">
@@ -69,8 +65,6 @@
 
     
     
-    
-        <script src="/js/aos/aos.js"></script>
     
 
     <!-- import link -->
@@ -941,21 +935,22 @@
 
   
   <div class="post-nav-prev post-nav-item">
-    <div class="post-nav-img lazyload" data-original="https://pic2.zhimg.com/80/v2-19975cec2eaae0083992a79315bd232b_1440w.jpg?source=1940ef5c" style="background-size: cover; 
+    <div class="post-nav-img lazyload" data-original="https://pic2.zhimg.com/80/v2-faf73fcede052da243fef1b36604b8f9_1440w.jpg?source=1940ef5c" style="background-size: cover; 
       background-position: center center;">
     </div>
-    <a href="/post/link/" class="post-nav-link">
+    <a href="/post/note/" class="post-nav-link">
       <div class="title">
         <i class="fa fa-angle-left"></i> 上一篇:
-        <div class="title-text">Link标签</div>
+        <div class="title-text">Note标签</div>
       </div>
       
       <!-- <div class="content">
-        超链接标签
+        note演示效果
 
-如何参与项目http://www.baidu.com
+markdown默认写法，左边框颜色，随着主题色改变
 
-如何参与项目http://www.baidu.co
+我有一只小毛驴，我从来都不骑。
+适合引用一段
       </div> -->
     </a>
   </div>
@@ -964,21 +959,18 @@
 
   
   <div class="post-nav-next post-nav-item">
-    <div class="post-nav-img lazyload" data-original="https://pic2.zhimg.com/80/v2-faf73fcede052da243fef1b36604b8f9_1440w.jpg?source=1940ef5c" style="background-size: cover; 
+    <div class="post-nav-img lazyload" data-original="https://pic4.zhimg.com/80/v2-513fd25e66ae237fca305e8ebf4de594_1440w.jpg?source=1940ef5c" style="background-size: cover; 
       background-position: center center;">
     </div>
-    <a href="/post/note/" class="post-nav-link">
+    <a href="/post/p/" class="post-nav-link">
       <div class="title">
         下一篇: <i class="fa fa-angle-right"></i>
-        <div class="title-text">Note标签</div>
+        <div class="title-text">段落文本</div>
       </div>
       <!-- <div class="content">
-        note演示效果
-
-markdown默认写法，左边框颜色，随着主题色改变
-
-我有一只小毛驴，我从来都不骑。
-适合引用一段
+        段落文本演示
+我是一个文本高亮大萨达所多撒多撒多撒大多多撒多撒多撒大所多撒大多
+我是一个文本高亮大萨达所多撒多撒多撒大多
       </div> -->
     </a>
   </div>
@@ -1617,42 +1609,6 @@ markdown默认写法，左边框颜色，随着主题色改变
 </script>
 
 <!-- div滚动到显示区域的动画 -->
-
-  <script>
-    // https://github.com/michalsnik/aos
-    var themeOffset = parseInt('120') || 120;
-    var themeDelay = parseInt('0') || 0;
-    var themeDuration = parseInt('0') || 400;
-    var themeEasing = 'ease' || 'ease';
-    var themeOnce = eval('true') || false;
-    var themeMirror = eval('false') || false;
-    var themeAnchorPlacement = 'top-bottom' || 'top-bottom';
-    AOS.init({
-      // Global settings:
-      disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
-      startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
-      initClassName: 'aos-init', // class applied after initialization
-      animatedClassName: 'aos-animate', // class applied on animation
-      useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
-      disableMutationObserver: false, // disables automatic mutations' detections (advanced)
-      debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
-      throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
-
-      // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
-      offset: themeOffset, // offset (in px) from the original trigger point
-      delay: themeDelay, // values from 0 to 3000, with step 50ms
-      duration: themeDuration, // values from 0 to 3000, with step 50ms
-      easing: themeEasing, // default easing for AOS animations
-      once: themeOnce, // whether animation should happen only once - while scrolling down
-      mirror: themeMirror, // whether elements should animate out while scrolling past them
-      anchorPlacement: themeAnchorPlacement, // defines which position of the element regarding to window should trigger the animation
-
-    });
-
-    document.addEventListener('pjax:complete', function () {
-      AOS.refresh();
-    })
-  </script>
 
 
 <!-- 输入框打字特效 -->
