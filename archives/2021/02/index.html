@@ -982,22 +982,6 @@
           <li class="post-item" data-aos="fade-left">
             
             <div class="post-img-box">
-              <a href="/post/link/" class="post-img lazyload" data-original="https://pic2.zhimg.com/80/v2-19975cec2eaae0083992a79315bd232b_1440w.jpg?source=1940ef5c" style="background-size: cover; 
-                background-position: center center;">
-              </a>
-            </div>
-            <div class="post-date-title">
-              <div>
-                <span class="post-date">02-08</span>
-              </div>
-              <a class="post-title" href="/post/link/">Link标签</a>
-            </div>
-          </li>
-        
-          
-          <li class="post-item" data-aos="fade-left">
-            
-            <div class="post-img-box">
               <a href="/post/note/" class="post-img lazyload" data-original="https://pic2.zhimg.com/80/v2-faf73fcede052da243fef1b36604b8f9_1440w.jpg?source=1940ef5c" style="background-size: cover; 
                 background-position: center center;">
               </a>
@@ -1007,6 +991,22 @@
                 <span class="post-date">02-08</span>
               </div>
               <a class="post-title" href="/post/note/">Note标签</a>
+            </div>
+          </li>
+        
+          
+          <li class="post-item" data-aos="fade-left">
+            
+            <div class="post-img-box">
+              <a href="/post/link/" class="post-img lazyload" data-original="https://pic2.zhimg.com/80/v2-19975cec2eaae0083992a79315bd232b_1440w.jpg?source=1940ef5c" style="background-size: cover; 
+                background-position: center center;">
+              </a>
+            </div>
+            <div class="post-date-title">
+              <div>
+                <span class="post-date">02-08</span>
+              </div>
+              <a class="post-title" href="/post/link/">Link标签</a>
             </div>
           </li>
         
@@ -1375,13 +1375,13 @@
 
     }
     AOS.init(objAos);
-    // document.addEventListener('pjax:send', function () {
-    //   $(window).unbind('resize');
-    //   $(window).unbind('scroll');
-    //   $(document).unbind('scroll');
-    // });
+    document.addEventListener('pjax:send', function () {
+      $(window).unbind('resize');
+      $(window).unbind('scroll');
+      $(document).unbind('scroll');
+    });
     document.addEventListener('pjax:complete', function () {
-      AOS.init(objAos);
+      AOS.refresh(objAos);
     })
   </script>
 

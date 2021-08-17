@@ -1629,13 +1629,13 @@ yuang01这是描述哦
 
     }
     AOS.init(objAos);
-    // document.addEventListener('pjax:send', function () {
-    //   $(window).unbind('resize');
-    //   $(window).unbind('scroll');
-    //   $(document).unbind('scroll');
-    // });
+    document.addEventListener('pjax:send', function () {
+      $(window).unbind('resize');
+      $(window).unbind('scroll');
+      $(document).unbind('scroll');
+    });
     document.addEventListener('pjax:complete', function () {
-      AOS.init(objAos);
+      AOS.refresh(objAos);
     })
   </script>
 
