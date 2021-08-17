@@ -854,7 +854,7 @@
           <li class="post-item" data-aos="fade-left">
             
             <div class="post-img-box">
-              <a href="/post/video/" class="post-img lazyload" data-original="https://pic3.zhimg.com/v2-806666b346e90aa0506069930e453b2a_b.jpg" style="background-size: cover; 
+              <a href="/post/text/" class="post-img lazyload" data-original="https://pic4.zhimg.com/v2-8ad0cffeaa7dec5dd1930eebc6ff863f_b.jpg" style="background-size: cover; 
                 background-position: center center;">
               </a>
             </div>
@@ -862,7 +862,7 @@
               <div>
                 <span class="post-date">02-08</span>
               </div>
-              <a class="post-title" href="/post/video/">video视频</a>
+              <a class="post-title" href="/post/text/">Text文本样式标签</a>
             </div>
           </li>
         
@@ -1251,9 +1251,6 @@
       $(window).unbind('resize');
       $(window).unbind('scroll');
       $(document).unbind('scroll');
-      $('article[data-aos]').each(function(){
-        $(this).removeClass('aos-init aos-animate');
-      });
     });
     document.addEventListener('pjax:complete', function () {
       AOS.refresh(objAos);

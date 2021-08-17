@@ -933,20 +933,20 @@
 
   
   <div class="post-nav-prev post-nav-item">
-    <div class="post-nav-img lazyload" data-original="https://pic4.zhimg.com/v2-672bbb43fda6c749b16e2b8c8d69e15f_b.jpg" style="background-size: cover; 
+    <div class="post-nav-img lazyload" data-original="https://pic3.zhimg.com/v2-806666b346e90aa0506069930e453b2a_b.jpg" style="background-size: cover; 
       background-position: center center;">
     </div>
-    <a href="/post/timeline/" class="post-nav-link">
+    <a href="/post/video/" class="post-nav-link">
       <div class="title">
         <i class="fa fa-angle-left"></i> 上一篇:
-        <div class="title-text">timeline时间线</div>
+        <div class="title-text">video视频</div>
       </div>
       
       <!-- <div class="content">
-        timeline时间线演示
+        video演示
+100%宽度
+Your browser does not support the video tag.
 
-2021-01-01 1.0.3 -&gt; 1.0.3
-我是一个测试文字ghghgh。我
       </div> -->
     </a>
   </div>
@@ -955,19 +955,19 @@
 
   
   <div class="post-nav-next post-nav-item">
-    <div class="post-nav-img lazyload" data-original="https://pic3.zhimg.com/v2-806666b346e90aa0506069930e453b2a_b.jpg" style="background-size: cover; 
+    <div class="post-nav-img lazyload" data-original="https://pic4.zhimg.com/v2-672bbb43fda6c749b16e2b8c8d69e15f_b.jpg" style="background-size: cover; 
       background-position: center center;">
     </div>
-    <a href="/post/video/" class="post-nav-link">
+    <a href="/post/timeline/" class="post-nav-link">
       <div class="title">
         下一篇: <i class="fa fa-angle-right"></i>
-        <div class="title-text">video视频</div>
+        <div class="title-text">timeline时间线</div>
       </div>
       <!-- <div class="content">
-        video演示
-100%宽度
-Your browser does not support the video tag.
+        timeline时间线演示
 
+2021-01-01 1.0.3 -&gt; 1.0.3
+我是一个测试文字ghghgh。我
       </div> -->
     </a>
   </div>
@@ -1642,9 +1642,6 @@ Your browser does not support the video tag.
       $(window).unbind('resize');
       $(window).unbind('scroll');
       $(document).unbind('scroll');
-      $('article[data-aos]').each(function(){
-        $(this).removeClass('aos-init aos-animate');
-      });
     });
     document.addEventListener('pjax:complete', function () {
       AOS.refresh(objAos);

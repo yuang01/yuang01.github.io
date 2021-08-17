@@ -2975,9 +2975,6 @@ galleryGroup图片示例
       $(window).unbind('resize');
       $(window).unbind('scroll');
       $(document).unbind('scroll');
-      $('article[data-aos]').each(function(){
-        $(this).removeClass('aos-init aos-animate');
-      });
     });
     document.addEventListener('pjax:complete', function () {
       AOS.refresh(objAos);

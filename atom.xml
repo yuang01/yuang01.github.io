@@ -507,11 +507,11 @@
   </entry>
   
   <entry>
-    <title>Note标签</title>
-    <link href="http://yuang01.github.io/post/note/"/>
-    <id>http://yuang01.github.io/post/note/</id>
+    <title>NoteBlock</title>
+    <link href="http://yuang01.github.io/post/noteblock/"/>
+    <id>http://yuang01.github.io/post/noteblock/</id>
     <published>2021-02-08T03:35:00.000Z</published>
-    <updated>2021-05-11T01:46:56.258Z</updated>
+    <updated>2021-05-11T01:47:04.721Z</updated>
     
     <summary type="html">
     
@@ -519,10 +519,8 @@
       
         
         
-          &lt;h2 class=&quot;bamboo-h &quot; id=&quot;note演示效果&quot;&gt;note演示效果&lt;/h2&gt;&lt;br/&gt;
-&lt;blockquote&gt;
-&lt;p&gt;markdown默认写法，左边框颜色，随着主题色改变&lt;/p&gt;
-&lt;/blockquote&gt;
+          &lt;h2 class=&quot;bamboo-h &quot; id=&quot;noteblock演示效果&quot;&gt;noteblock演示效果&lt;/h2&gt;&lt;br/&gt;
+
 &lt;div class=&quot;note
         
       
