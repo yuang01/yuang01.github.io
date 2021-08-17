@@ -927,21 +927,24 @@
 
   
   <div class="post-nav-prev post-nav-item">
-    <div class="post-nav-img lazyload" data-original="https://pic2.zhimg.com/80/v2-1678d94c8b4e6be640584c2dabef1586_1440w.jpg?source=1940ef5c" style="background-size: cover; 
+    <div class="post-nav-img lazyload" data-original="https://pic4.zhimg.com/80/v2-3b4ca49ff4fc567faa76ce6f02cffac9_1440w.jpg?source=1940ef5c" style="background-size: cover; 
       background-position: center center;">
     </div>
-    <a href="/post/inlineimage/" class="post-nav-link">
+    <a href="/post/folding/" class="post-nav-link">
       <div class="title">
         <i class="fa fa-angle-left"></i> 上一篇:
-        <div class="title-text">lineImage标签</div>
+        <div class="title-text">folding折叠</div>
       </div>
       
       <!-- <div class="content">
-        段落中插入图片
-这是  一段话。
-这又是  一段话。
-这又是  一段话。
-上述事例代码这是 &#123;% inline
+        
+基本
+
+ 查看图片测试 
+              
+              
+              
+ 
       </div> -->
     </a>
   </div>
@@ -1604,7 +1607,7 @@ markdown默认写法，左边框颜色，随着主题色改变
 
 <!-- div滚动到显示区域的动画 -->
 
-  <script>
+  <script data-pjax>
     // https://github.com/michalsnik/aos
     var themeOffset = parseInt('120') || 120;
     var themeDelay = parseInt('0') || 0;
@@ -1613,7 +1616,7 @@ markdown默认写法，左边框颜色，随着主题色改变
     var themeOnce = eval('true') || false;
     var themeMirror = eval('false') || false;
     var themeAnchorPlacement = 'top-bottom' || 'top-bottom';
-    AOS.init({
+    var objAos = {
       // Global settings:
       disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
       startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
@@ -1633,10 +1636,15 @@ markdown默认写法，左边框颜色，随着主题色改变
       mirror: themeMirror, // whether elements should animate out while scrolling past them
       anchorPlacement: themeAnchorPlacement, // defines which position of the element regarding to window should trigger the animation
 
+    }
+    AOS.init(objAos);
+    document.addEventListener('pjax:send', function () {
+      $(window).unbind('resize');
+      $(window).unbind('scroll');
+      $(document).unbind('scroll');
     });
-
     document.addEventListener('pjax:complete', function () {
-      AOS.refresh();
+      AOS.refresh(objAos);
     })
   </script>
 

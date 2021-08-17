@@ -775,7 +775,14 @@
     <!-- 内容区域 -->
     <main class="main" id="pjax-container" style="margin-top: 0;">
       
-<style type="text/css">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style type="text/css">
     /* don't remove. */
     .page404-cover {
         /* height: 75vh; */
@@ -794,8 +801,9 @@
       margin: auto;
     }
 </style>
- 
- 
+</head>
+<body>
+   
 <script src="/js/my404/bodymovin.js"></script>
 <script src="/js/my404/data.js"></script>
  
@@ -812,7 +820,8 @@
         });
     </script>
 </div>
-
+</body>
+</html>
     </main>
 
     <!-- 页脚 -->
@@ -1126,7 +1135,7 @@
 
 <!-- div滚动到显示区域的动画 -->
 
-  <script>
+  <script data-pjax>
     // https://github.com/michalsnik/aos
     var themeOffset = parseInt('120') || 120;
     var themeDelay = parseInt('0') || 0;
@@ -1135,7 +1144,7 @@
     var themeOnce = eval('true') || false;
     var themeMirror = eval('false') || false;
     var themeAnchorPlacement = 'top-bottom' || 'top-bottom';
-    AOS.init({
+    var objAos = {
       // Global settings:
       disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
       startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
@@ -1155,10 +1164,15 @@
       mirror: themeMirror, // whether elements should animate out while scrolling past them
       anchorPlacement: themeAnchorPlacement, // defines which position of the element regarding to window should trigger the animation
 
+    }
+    AOS.init(objAos);
+    document.addEventListener('pjax:send', function () {
+      $(window).unbind('resize');
+      $(window).unbind('scroll');
+      $(document).unbind('scroll');
     });
-
     document.addEventListener('pjax:complete', function () {
-      AOS.refresh();
+      AOS.refresh(objAos);
     })
   </script>
 

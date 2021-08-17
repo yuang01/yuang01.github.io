@@ -985,24 +985,23 @@
 
   
   <div class="post-nav-prev post-nav-item">
-    <div class="post-nav-img lazyload" data-original="https://pic4.zhimg.com/80/v2-3b4ca49ff4fc567faa76ce6f02cffac9_1440w.jpg?source=1940ef5c" style="background-size: cover; 
+    <div class="post-nav-img lazyload" data-original="https://pic1.zhimg.com/80/v2-b45cff10c7ebebe5c68fba3b134d81f4_1440w.jpg?source=1940ef5c" style="background-size: cover; 
       background-position: center center;">
     </div>
-    <a href="/post/folding/" class="post-nav-link">
+    <a href="/post/checkbox/" class="post-nav-link">
       <div class="title">
         <i class="fa fa-angle-left"></i> 上一篇:
-        <div class="title-text">folding折叠</div>
+        <div class="title-text">checkbox</div>
       </div>
       
       <!-- <div class="content">
-        
-基本
+        进度条示例
 
- 查看图片测试 
-              
-              
-              
- 
+
+            纯文本测试
+            
+
+            支持简单的 ma
       </div> -->
     </a>
   </div>
@@ -1665,7 +1664,7 @@
 
 <!-- div滚动到显示区域的动画 -->
 
-  <script>
+  <script data-pjax>
     // https://github.com/michalsnik/aos
     var themeOffset = parseInt('120') || 120;
     var themeDelay = parseInt('0') || 0;
@@ -1674,7 +1673,7 @@
     var themeOnce = eval('true') || false;
     var themeMirror = eval('false') || false;
     var themeAnchorPlacement = 'top-bottom' || 'top-bottom';
-    AOS.init({
+    var objAos = {
       // Global settings:
       disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
       startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
@@ -1694,10 +1693,15 @@
       mirror: themeMirror, // whether elements should animate out while scrolling past them
       anchorPlacement: themeAnchorPlacement, // defines which position of the element regarding to window should trigger the animation
 
+    }
+    AOS.init(objAos);
+    document.addEventListener('pjax:send', function () {
+      $(window).unbind('resize');
+      $(window).unbind('scroll');
+      $(document).unbind('scroll');
     });
-
     document.addEventListener('pjax:complete', function () {
-      AOS.refresh();
+      AOS.refresh(objAos);
     })
   </script>
 
