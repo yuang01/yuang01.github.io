@@ -940,17 +940,20 @@
 
   
   <div class="post-nav-next post-nav-item">
-    <div class="post-nav-img lazyload" data-original="https://pic4.zhimg.com/80/v2-37134f732bbe21779fdb2fc8dca410c7_1440w.jpg" style="background-size: cover; 
+    <div class="post-nav-img lazyload" data-original="https://pic4.zhimg.com/80/v2-5a575bb8ac734707f1ec05d6de6a0e0b_1440w.jpg" style="background-size: cover; 
       background-position: center center;">
     </div>
-    <a href="/post/span/" class="post-nav-link">
+    <a href="/post/tab/" class="post-nav-link">
       <div class="title">
         下一篇: <i class="fa fa-angle-right"></i>
-        <div class="title-text">文字颜色</div>
+        <div class="title-text">tab</div>
       </div>
       <!-- <div class="content">
-        文字颜色演示效果
-这是一个简单的文字我是一个文字高亮，唱着我们心肠的曲折这是一个简单的文字我是一个文字高亮，唱着我们心肠
+        tab事例
+栏目1栏目2。。。！！！
+上述事例代码&#123;% tabs tab-id %&#125;
+
+&lt;!-
       </div> -->
     </a>
   </div>
@@ -1599,7 +1602,7 @@
     var themeOnce = eval('true') || false;
     var themeMirror = eval('false') || false;
     var themeAnchorPlacement = 'top-bottom' || 'top-bottom';
-    var objAos = {
+    AOS.init({
       // Global settings:
       disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
       startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
@@ -1619,15 +1622,10 @@
       mirror: themeMirror, // whether elements should animate out while scrolling past them
       anchorPlacement: themeAnchorPlacement, // defines which position of the element regarding to window should trigger the animation
 
-    }
-    AOS.init(objAos);
-    document.addEventListener('pjax:send', function () {
-      $(window).unbind('resize');
-      $(window).unbind('scroll');
-      $(document).unbind('scroll');
     });
+
     document.addEventListener('pjax:complete', function () {
-      AOS.refresh(objAos);
+      AOS.refresh();
     })
   </script>
 

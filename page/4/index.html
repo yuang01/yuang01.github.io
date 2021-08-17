@@ -1695,7 +1695,7 @@
             <span class="post-time">2021-02-08</span>
           </div>
           <div class="post-title">
-            <a class="post-title-link" href="/post/text/">Text文本样式标签</a>
+            <a class="post-title-link" href="/post/video/">video视频</a>
           </div>
           <div class="post-meta">
             <div class="post-tags">
@@ -1718,32 +1718,30 @@
           </div>
           <div class="post-img-mobile">
             
-              <a href="/post/text/" class="lazyload" data-original="https://pic4.zhimg.com/v2-8ad0cffeaa7dec5dd1930eebc6ff863f_b.jpg" style="background-size: cover; 
+              <a href="/post/video/" class="lazyload" data-original="https://pic3.zhimg.com/v2-806666b346e90aa0506069930e453b2a_b.jpg" style="background-size: cover; 
                 background-position: center center;">
               </a>
             
           </div>
           <div class="post-content">
-            Text文本样式标签演示
+            video演示
+100%宽度
+Your browser does not support the video tag.
 
-带 下划线 的文本
-带 着重号 的文本
-带 波浪线 的文本
-带 删除线 的文本
-键盘样式的文本 command + D
-密码样式的文本：这里没有验证码
-上述事例代码&#123;% title h2, Text文本
+50%宽度
+Your browser does not support the video tag.
+Your bro
           </div>
         </div>
         <div class="post-more">
-          <a href="/post/text/">
+          <a href="/post/video/">
             <i class="iconfont iconmore" pointer style="float: right;  " title="阅读更多"></i>
           </a>
         </div>
       </div>
       <div class="post-img">
         
-          <a href="/post/text/" class="lazyload" data-original="https://pic4.zhimg.com/v2-8ad0cffeaa7dec5dd1930eebc6ff863f_b.jpg" style="background-size: cover; 
+          <a href="/post/video/" class="lazyload" data-original="https://pic3.zhimg.com/v2-806666b346e90aa0506069930e453b2a_b.jpg" style="background-size: cover; 
             background-position: center center;">
           </a>
         
@@ -2229,7 +2227,7 @@ asa
     var themeOnce = eval('true') || false;
     var themeMirror = eval('false') || false;
     var themeAnchorPlacement = 'top-bottom' || 'top-bottom';
-    var objAos = {
+    AOS.init({
       // Global settings:
       disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
       startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
@@ -2249,15 +2247,10 @@ asa
       mirror: themeMirror, // whether elements should animate out while scrolling past them
       anchorPlacement: themeAnchorPlacement, // defines which position of the element regarding to window should trigger the animation
 
-    }
-    AOS.init(objAos);
-    document.addEventListener('pjax:send', function () {
-      $(window).unbind('resize');
-      $(window).unbind('scroll');
-      $(document).unbind('scroll');
     });
+
     document.addEventListener('pjax:complete', function () {
-      AOS.refresh(objAos);
+      AOS.refresh();
     })
   </script>
 

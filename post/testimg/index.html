@@ -937,23 +937,20 @@
 
   
   <div class="post-nav-prev post-nav-item">
-    <div class="post-nav-img lazyload" data-original="https://pic4.zhimg.com/v2-8ad0cffeaa7dec5dd1930eebc6ff863f_b.jpg" style="background-size: cover; 
+    <div class="post-nav-img lazyload" data-original="https://pic3.zhimg.com/v2-806666b346e90aa0506069930e453b2a_b.jpg" style="background-size: cover; 
       background-position: center center;">
     </div>
-    <a href="/post/text/" class="post-nav-link">
+    <a href="/post/video/" class="post-nav-link">
       <div class="title">
         <i class="fa fa-angle-left"></i> 上一篇:
-        <div class="title-text">Text文本样式标签</div>
+        <div class="title-text">video视频</div>
       </div>
       
       <!-- <div class="content">
-        Text文本样式标签演示
+        video演示
+100%宽度
+Your browser does not support the video tag.
 
-带 下划线 的文本
-带 着重号 的文本
-带 波浪线 的文本
-带 删除线 的文本
-键盘样式的文
       </div> -->
     </a>
   </div>
@@ -1620,7 +1617,7 @@
     var themeOnce = eval('true') || false;
     var themeMirror = eval('false') || false;
     var themeAnchorPlacement = 'top-bottom' || 'top-bottom';
-    var objAos = {
+    AOS.init({
       // Global settings:
       disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
       startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
@@ -1640,15 +1637,10 @@
       mirror: themeMirror, // whether elements should animate out while scrolling past them
       anchorPlacement: themeAnchorPlacement, // defines which position of the element regarding to window should trigger the animation
 
-    }
-    AOS.init(objAos);
-    document.addEventListener('pjax:send', function () {
-      $(window).unbind('resize');
-      $(window).unbind('scroll');
-      $(document).unbind('scroll');
     });
+
     document.addEventListener('pjax:complete', function () {
-      AOS.refresh(objAos);
+      AOS.refresh();
     })
   </script>
 

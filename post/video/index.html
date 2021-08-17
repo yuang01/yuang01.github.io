@@ -945,37 +945,15 @@
 
   
   <div class="post-nav-prev post-nav-item">
-    <div class="post-nav-img lazyload" data-original="https://pic4.zhimg.com/80/v2-5a575bb8ac734707f1ec05d6de6a0e0b_1440w.jpg" style="background-size: cover; 
-      background-position: center center;">
-    </div>
-    <a href="/post/tab/" class="post-nav-link">
-      <div class="title">
-        <i class="fa fa-angle-left"></i> 上一篇:
-        <div class="title-text">tab</div>
-      </div>
-      
-      <!-- <div class="content">
-        tab事例
-栏目1栏目2。。。！！！
-上述事例代码&#123;% tabs tab-id %&#125;
-
-&lt;!-
-      </div> -->
-    </a>
-  </div>
-
-
-
-  
-  <div class="post-nav-next post-nav-item">
     <div class="post-nav-img lazyload" data-original="https://pic1.zhimg.com/v2-cdf0dd8357e2cf573f32d0d65cff6404_b.jpg" style="background-size: cover; 
       background-position: center center;">
     </div>
     <a href="/post/title/" class="post-nav-link">
       <div class="title">
-        下一篇: <i class="fa fa-angle-right"></i>
+        <i class="fa fa-angle-left"></i> 上一篇:
         <div class="title-text">title</div>
       </div>
+      
       <!-- <div class="content">
         title演示
 
@@ -989,6 +967,38 @@
 
 我是标题
 上述事例代码&#
+      </div> -->
+    </a>
+  </div>
+
+
+
+  
+  <div class="post-nav-next post-nav-item">
+    <div class="post-nav-img lazyload" data-original="/medias/11.jpg" style="background-size: cover; 
+      background-position: center center;">
+    </div>
+    <a href="/post/testimg/" class="post-nav-link">
+      <div class="title">
+        下一篇: <i class="fa fa-angle-right"></i>
+        <div class="title-text">testimg</div>
+      </div>
+      <!-- <div class="content">
+        asda
+– haha –
+我是一段文字
+
+asa
+
+== 我是高亮 ==
+
+第一项
+第二项
+第三项
+
+
+第一项
+第二项
       </div> -->
     </a>
   </div>
@@ -1637,7 +1647,7 @@
     var themeOnce = eval('true') || false;
     var themeMirror = eval('false') || false;
     var themeAnchorPlacement = 'top-bottom' || 'top-bottom';
-    var objAos = {
+    AOS.init({
       // Global settings:
       disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
       startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
@@ -1657,15 +1667,10 @@
       mirror: themeMirror, // whether elements should animate out while scrolling past them
       anchorPlacement: themeAnchorPlacement, // defines which position of the element regarding to window should trigger the animation
 
-    }
-    AOS.init(objAos);
-    document.addEventListener('pjax:send', function () {
-      $(window).unbind('resize');
-      $(window).unbind('scroll');
-      $(document).unbind('scroll');
     });
+
     document.addEventListener('pjax:complete', function () {
-      AOS.refresh(objAos);
+      AOS.refresh();
     })
   </script>
 

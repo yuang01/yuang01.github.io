@@ -948,18 +948,21 @@
 
   
   <div class="post-nav-prev post-nav-item">
-    <div class="post-nav-img lazyload" data-original="https://pic1.zhimg.com/80/v2-c274041256201850e4a51998c5c48b77_1440w.jpg?source=1940ef5c" style="background-size: cover; 
+    <div class="post-nav-img lazyload" data-original="https://pic2.zhimg.com/80/v2-19975cec2eaae0083992a79315bd232b_1440w.jpg?source=1940ef5c" style="background-size: cover; 
       background-position: center center;">
     </div>
-    <a href="/post/pbg/" class="post-nav-link">
+    <a href="/post/link/" class="post-nav-link">
       <div class="title">
         <i class="fa fa-angle-left"></i> 上一篇:
-        <div class="title-text">文本高亮</div>
+        <div class="title-text">Link标签</div>
       </div>
       
       <!-- <div class="content">
-        文本高亮演示效果
-这是一个简单的文字我是一个文本高亮，唱着我们心肠的曲折这是一个简单的文字我是一个文本高亮，唱着我们心肠
+        超链接标签
+
+如何参与项目http://www.baidu.com
+
+如何参与项目http://www.baidu.co
       </div> -->
     </a>
   </div>
@@ -1632,7 +1635,7 @@ yuang01这是描述哦
     var themeOnce = eval('true') || false;
     var themeMirror = eval('false') || false;
     var themeAnchorPlacement = 'top-bottom' || 'top-bottom';
-    var objAos = {
+    AOS.init({
       // Global settings:
       disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
       startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
@@ -1652,15 +1655,10 @@ yuang01这是描述哦
       mirror: themeMirror, // whether elements should animate out while scrolling past them
       anchorPlacement: themeAnchorPlacement, // defines which position of the element regarding to window should trigger the animation
 
-    }
-    AOS.init(objAos);
-    document.addEventListener('pjax:send', function () {
-      $(window).unbind('resize');
-      $(window).unbind('scroll');
-      $(document).unbind('scroll');
     });
+
     document.addEventListener('pjax:complete', function () {
-      AOS.refresh(objAos);
+      AOS.refresh();
     })
   </script>
 
