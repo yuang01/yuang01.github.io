@@ -13,8 +13,6 @@
 
   <title>文字颜色 | Bamboo</title>
 
-  
-
   <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico">
   <link rel="stylesheet" href="https://at.alicdn.com/t/font_1911880_c1nvbyezg17.css">
   <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -63,8 +61,6 @@
     <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
     <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
 
-    
-    
     
 
     <!-- import link -->
@@ -767,8 +763,9 @@
 
 
     <!-- 内容区域 -->
-    <main class="main" id="pjax-container" style="margin-top: 0;">
-      
+    <div id="safearea">
+      <main class="main" id="pjax-container" style="margin-top: 0;">
+        
  <!-- prismjs 代码高亮 -->
  
     
@@ -914,23 +911,22 @@
 
   
   <div class="post-nav-prev post-nav-item">
-    <div class="post-nav-img lazyload" data-original="https://pic3.zhimg.com/80/v2-0cd97ad46cb2a18343565aa60adeab0e_1440w.jpg" style="background-size: cover; 
+    <div class="post-nav-img lazyload" data-original="https://pic3.zhimg.com/80/v2-1d9e8203f167bb1c51d6899df5c626ca_1440w.jpg" style="background-size: cover; 
       background-position: center center;">
     </div>
-    <a href="/post/site-card/" class="post-nav-link">
+    <a href="/post/radio/" class="post-nav-link">
       <div class="title">
         <i class="fa fa-angle-left"></i> 上一篇:
-        <div class="title-text">site-card</div>
+        <div class="title-text">radio</div>
       </div>
       
       <!-- <div class="content">
-        site-card演示
-木兮这是描述
-yuang01这是描述哦
-木兮这是描述
-yuang01这是描述哦
-木兮这是描述
-上
+        radio
+
+            纯文本测试
+            
+
+            支持简单的 mar
       </div> -->
     </a>
   </div>
@@ -1071,19 +1067,8 @@ yuang01这是描述哦
 
   <div id="myComment">
     
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.css">
-<div id="gitalk-container"></div>
+      <div id="gitment-container"></div>
 
-<style>
-    .gt-container .gt-meta {
-        z-index: 2;
-    }
-    .gt-container .gt-header-comment {
-        width:100%;
-        box-sizing: border-box;
-        margin-left: 0;
-    }
-</style>
     
   </div>
 
@@ -1279,7 +1264,8 @@ yuang01这是描述哦
     }
 </style>
 
-    </main>
+      </main>
+    </div>
 
     <!-- 页脚 -->
     <div class="footer bg-color">
@@ -1590,9 +1576,6 @@ yuang01这是描述哦
   })
 </script>
 
-<!-- div滚动到显示区域的动画 -->
-
-
 <!-- 输入框打字特效 -->
 <!-- 输入框打字特效 -->
 
@@ -1688,30 +1671,75 @@ yuang01这是描述哦
   });
 </script>
 
+<!-- 卡片滚动动画 -->
+   
+
 <!-- 评论所需js -->
 
     
-        <script src="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js"></script>
-<script type="text/javascript">
-    comment_el = '#gitalk-container';
-    load_gitalk = function () {
-        if ($(comment_el).length) {
-            var gitalk = new Gitalk({
-                clientID: '418a1890782d27e5bc5b',
-                clientSecret: 'd0dc4f3b77ae21d4cdd95030cd1c9198e2c7bf9e',
-                id: window.location.pathname,
-                repo: 'yuang01.github.io',
-                owner: 'yuang01',
-                admin: ['yuang01']
-            })
-            gitalk.render('gitalk-container')
+        <script type="text/javascript">
+    var bamboo = {};
+    bamboo.utterance = {};
+    
+    function check_utterance() {
+        let isDark = JSON.parse(localStorage.getItem('dark'))  || JSON.parse('false');
+        if (isDark) {
+            bamboo.utterance.Theme = 'github-dark';
+        } else {
+            bamboo.utterance.Theme = 'github-light';
         }
-    }    
-    $(document).ready(load_gitalk);
+
+        return document.getElementById("gitment-container");
+    }
+    comment_el = '#gitment-container';
+    load_utterance = function () {
+        if ($(comment_el).length) {
+            // 匿名函数，防止污染全局变量
+            const HEAD = check_utterance();
+            
+            var utterances = document.createElement('script');
+            utterances.type = 'text/javascript';
+            utterances.async = true;
+            utterances.setAttribute('issue-term','pathname')
+            utterances.setAttribute('theme', bamboo.utterance.Theme)
+            utterances.setAttribute('repo','yuang01/yuang01.github.io')
+            utterances.crossorigin = 'anonymous';
+            utterances.src = 'https://utteranc.es/client.js';
+            // content 是要插入评论的地方
+            document.getElementById('gitment-container').appendChild(utterances);
+            
+        }
+    }
+
+    function dark_utterance() {
+        const HEAD = check_utterance();
+        if (!HEAD) return;
+        const message = {
+            type: 'set-theme',
+            theme: bamboo.utterance.Theme
+        };
+        const utteranceIframe = document.querySelector('iframe');
+        utteranceIframe.contentWindow.postMessage(message, 'https://utteranc.es');
+    }
+
+    $(document).ready(load_utterance);
     document.addEventListener('pjax:complete', function () {
-        load_gitalk();
+        load_utterance();
     });
+
+    $('.dark').click(function() {
+        setTimeout(() => {
+            dark_utterance();
+        });
+    })
+    
 </script>
+
+<style>
+    .utterances {
+        max-width: inherit!important;
+    }
+</style>
     
 
 
