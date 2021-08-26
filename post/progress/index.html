@@ -1376,66 +1376,80 @@ galleryGroup图片示例
     </div>
 
     <!-- 页脚 -->
-    <div class="footer bg-color">
-  <div class="footer-main">
-    <div class="link">
-      
-        
-          <a href="/atom.xml" class="social">
-            
-              <i class="fa fa-rss" aria-hidden="true"></i>
-            
-          </a>
-        
-      
-        
-          <a href="mailto:1730241541@qq.com" class="social">
-            
-              <i class="fa fa-envelope" aria-hidden="true"></i>
-            
-          </a>
-        
-      
-        
-          <a target="_blank" rel="noopener" href="https://github.com/yuang01/hexo-theme-bamboo" class="social">
-            
-              <i class="fa fa-github" aria-hidden="true"></i>
-            
-          </a>
-        
-      
-        
-          <a href="tencent://AddContact/?fromId=50&amp;fromSubId=1&amp;subcmd=all&amp;uin=1730241541" class="social">
-            
-              <i class="fa fa-qq" aria-hidden="true"></i>
-            
-          </a>
-        
-      
-    </div>
-    <div class="footer-copyright">
-      <p>Copyright © 2019 - 2020 <a target="_blank" rel="noopener" href="https://github.com/yuang01">yuang01</a> | Powered by <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">Hexo</a> | Theme <a target="_blank" rel="noopener" href="https://github.com/yuang01/theme">Bamboo</a> </p>
-
-    </div>
-    <div class="footer-custom">
-      
-    </div>
-    <!-- 不蒜子统计 -->
     
+  
+  <div class="footer bg-color">
+    <div class="footer-main">
       
-  <!-- 不蒜子统计 -->
-  <span id="busuanzi_container_site_pv">
-        <i class="fa fa-eye" aria-hidden="true"></i>本站总访问量：<span id="busuanzi_value_site_pv"></span> 次
-  </span>
-  <span class="post-meta-divider">|</span>
-  <span id="busuanzi_container_site_uv" style='display:none'>
-        <i class="fa fa-users" aria-hidden="true"></i>本站访客数：<span id="busuanzi_value_site_uv"></span> 人
-  </span>
-  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" data-pjax></script>
+        
+          <div class="link">
+            
+              
+                <a href="/atom.xml" class="social">
+                  
+                    <i class="fa fa-rss" aria-hidden="true"></i>
+                  
+                </a>
+              
+            
+              
+                <a href="mailto:1730241541@qq.com" class="social">
+                  
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                  
+                </a>
+              
+            
+              
+                <a target="_blank" rel="noopener" href="https://github.com/yuang01/hexo-theme-bamboo" class="social">
+                  
+                    <i class="fa fa-github" aria-hidden="true"></i>
+                  
+                </a>
+              
+            
+              
+                <a href="tencent://AddContact/?fromId=50&amp;fromSubId=1&amp;subcmd=all&amp;uin=1730241541" class="social">
+                  
+                    <i class="fa fa-qq" aria-hidden="true"></i>
+                  
+                </a>
+              
+            
+          </div>
+        
+      
+        
+          <div class="footer-copyright">
+            <p>Copyright © 2019 - 2020 <a target="_blank" rel="noopener" href="https://github.com/yuang01">yuang01</a> | Powered by <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">Hexo</a> | Theme <a target="_blank" rel="noopener" href="https://github.com/yuang01/theme">Bamboo</a> </p>
 
-    
+          </div>
+        
+      
+        
+          
+            <!-- 不蒜子统计 -->
+            <!-- 不蒜子统计 -->
+<span id="busuanzi_container_site_pv">
+      <i class="fa fa-eye" aria-hidden="true"></i>本站总访问量：<span id="busuanzi_value_site_pv"></span> 次
+</span>
+<span class="post-meta-divider">|</span>
+<span id="busuanzi_container_site_uv" style='display:none'>
+      <i class="fa fa-users" aria-hidden="true"></i>本站访客数：<span id="busuanzi_value_site_uv"></span> 人
+</span>
+
+          
+        
+      
+        
+          <div class="footer-custom">
+            
+          </div>
+        
+      
+    </div>
   </div>
-</div>
+
 
 
     <!-- 渲染暗黑按钮 -->
@@ -1857,6 +1871,9 @@ galleryGroup图片示例
 
 
 
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" data-pjax></script>
+
+
     <!-- pjax -->
     
 
@@ -1933,6 +1950,11 @@ galleryGroup图片示例
 
     document.addEventListener('pjax:error', function (e) {
       window.location.href = e.triggerElement.href;
+    })
+    
+    // 刷新不从顶部开始
+    document.addEventListener("DOMContentLoaded", function () {
+      history.scrollRestoration = 'auto';
     })
   </script>
 
