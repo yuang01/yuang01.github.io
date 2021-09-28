@@ -998,22 +998,14 @@
   <!-- 目录 -->
   <!-- 文章详情页右侧目录 -->
 
-  <style>
-    .toc-aside {
-      width: 0;
-      padding: 0;
+  <script>
+    if (window.innerWidth >= 992) {
+      $(".toc-aside").css({'width': 0, 'padding': 0});
+      $(".toc-content").css({'width': 0});
+      $(".toc-aside-title span, .toc-aside-title i").css({'display': 'none'});
+      $(".main-content").css({'width': '75%', 'margin': '10px auto'});
     }
-    .toc-aside .toc-content {
-      width: 0;
-    }
-    .toc-aside-title span, .toc-aside-title i {
-      display: none;
-    }
-    .main-content {
-      width: 75%;
-      margin: 10px auto;
-    }
-  </style>
+  </script>
 
 
   <!-- 图片放大 Wrap images with fancybox support -->
