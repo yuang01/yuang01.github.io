@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yuang01.github.io/"/>
-  <updated>2021-08-12T03:12:13.768Z</updated>
+  <updated>2021-09-28T09:42:37.963Z</updated>
   <id>http://yuang01.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Bamboo主题-首页新增侧边栏</title>
+    <link href="http://yuang01.github.io/post/hexo-theme-bamboo/sidebar/"/>
+    <id>http://yuang01.github.io/post/hexo-theme-bamboo/sidebar/</id>
+    <published>2021-09-28T03:11:00.000Z</published>
+    <updated>2021-09-28T09:42:37.963Z</updated>
+    
+    <summary type="html">
+    
+      首页新增侧边栏
+    
+    </summary>
+    
+    
+      <category term="前端" scheme="http://yuang01.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="Hexo" scheme="http://yuang01.github.io/tags/Hexo/"/>
+    
+      <category term="sidebar" scheme="http://yuang01.github.io/tags/sidebar/"/>
+    
+  </entry>
   
   <entry>
     <title>getFiles文件获取</title>
@@ -42,7 +65,7 @@
     <link href="http://yuang01.github.io/post/hexo-theme-bamboo-new/"/>
     <id>http://yuang01.github.io/post/hexo-theme-bamboo-new/</id>
     <published>2021-07-05T03:12:00.000Z</published>
-    <updated>2021-07-19T09:22:52.149Z</updated>
+    <updated>2021-09-28T02:24:29.592Z</updated>
     
     <summary type="html">
     
@@ -65,7 +88,7 @@
     <link href="http://yuang01.github.io/post/hexo-theme-bamboo/page/"/>
     <id>http://yuang01.github.io/post/hexo-theme-bamboo/page/</id>
     <published>2021-07-05T03:11:00.000Z</published>
-    <updated>2021-08-09T01:42:39.617Z</updated>
+    <updated>2021-09-28T02:26:57.016Z</updated>
     
     <summary type="html">
     
@@ -336,34 +359,6 @@
   </entry>
   
   <entry>
-    <title>folding折叠</title>
-    <link href="http://yuang01.github.io/post/folding/"/>
-    <id>http://yuang01.github.io/post/folding/</id>
-    <published>2021-02-08T03:35:00.000Z</published>
-    <updated>2021-05-11T01:45:36.721Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;&lt;span&gt;&lt;img src=&#39;https://cdn.jsdelivr.net/gh/deepkolos/wechat-emoji/emoji/不屑.png&#39; style=&#39;height:24px&#39;&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;h2 class=&quot;bamboo-h &quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="前端" scheme="http://yuang01.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="tag" scheme="http://yuang01.github.io/tags/tag/"/>
-    
-  </entry>
-  
-  <entry>
     <title>checkbox</title>
     <link href="http://yuang01.github.io/post/checkbox/"/>
     <id>http://yuang01.github.io/post/checkbox/</id>
@@ -381,6 +376,34 @@
 &lt;div class=&#39;checkbox&#39;&gt;&lt;input type=&quot;checkbox&quot; /&gt;
             &lt;p&gt;纯文本测试&lt;/p&gt;
            
+        
+      
+    
+    </summary>
+    
+    
+      <category term="前端" scheme="http://yuang01.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="tag" scheme="http://yuang01.github.io/tags/tag/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>folding折叠</title>
+    <link href="http://yuang01.github.io/post/folding/"/>
+    <id>http://yuang01.github.io/post/folding/</id>
+    <published>2021-02-08T03:35:00.000Z</published>
+    <updated>2021-05-11T01:45:36.721Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;span&gt;&lt;img src=&#39;https://cdn.jsdelivr.net/gh/deepkolos/wechat-emoji/emoji/不屑.png&#39; style=&#39;height:24px&#39;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h2 class=&quot;bamboo-h &quot;
         
       
     
@@ -493,37 +516,6 @@
           &lt;h2 class=&quot;bamboo-h &quot; id=&quot;超链接标签&quot;&gt;超链接标签&lt;/h2&gt;&lt;br/&gt;
 
 &lt;div class=&quot;tagLink&quot;&gt;&lt;a class=&quot;link-card&quot; title=&quot;如何参与项目&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="前端" scheme="http://yuang01.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="tag" scheme="http://yuang01.github.io/tags/tag/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Note标签</title>
-    <link href="http://yuang01.github.io/post/note/"/>
-    <id>http://yuang01.github.io/post/note/</id>
-    <published>2021-02-08T03:35:00.000Z</published>
-    <updated>2021-05-11T01:46:56.258Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 class=&quot;bamboo-h &quot; id=&quot;note演示效果&quot;&gt;note演示效果&lt;/h2&gt;&lt;br/&gt;
-&lt;blockquote&gt;
-&lt;p&gt;markdown默认写法，左边框颜色，随着主题色改变&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;div class=&quot;note
         
       
     

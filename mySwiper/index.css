@@ -1,0 +1,41 @@
+
+.myswiper .swiper-slide {
+    position: relative;
+}
+
+.myswiper .swiper-slide p {
+    position: absolute;
+    font-size: 18px;
+    top: 50px;
+    left: 10px;
+    z-index: 9999;
+    color: #fff;
+}
+.myswiper .swiper-slide a.toPath {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.myswiper .swiper-slide h2 {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 9999;
+    color: #fff;
+    font-size: 24px;
+}
+.myswiper .swiper-slide img {
+    filter: brightness(0.8); /* 图片变暗 ,字体看得清 */
+}
+.myswiper.swiper-container-vertical .swiper-pagination-bullet-active {
+    height: 30px;
+    border-radius: 10px;
+    transition: all 0.3s;
+}
+
+/* 暗黑模式样式在  .darkModel { }  类下 */
+/* 例如 
+    .darkModel .aaa {
+        color: #c9d1d9;
+    }
+} */

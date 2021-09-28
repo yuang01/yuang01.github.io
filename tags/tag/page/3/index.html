@@ -15,7 +15,7 @@
 
   <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico">
   <link rel="stylesheet" href="https://at.alicdn.com/t/font_1911880_c1nvbyezg17.css">
-  <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/gh/inkss/fontawesome@5.15.3/css/all.min.css" rel="stylesheet">
 
   
     <script>
@@ -137,7 +137,7 @@
     <div class="bars">
       <div id="appDrawer" class="sidebar-image">
   <div class="drawer-box-icon">
-    <i class="fa fa-bars" aria-hidden="true" @click="showDialogDrawer"></i>
+    <i class="fas fa-bars" aria-hidden="true" @click="showDialogDrawer"></i>
   </div>
   
   <transition name="fade">
@@ -146,7 +146,7 @@
   </transition>
   <div class="drawer-box" :class="{'active': visible}">
     <div class="drawer-box-head bg-color">
-      <img class="drawer-box-head_logo" src="/medias/logo.png" alt="logo">
+      <img class="drawer-box-head_logo lazyload placeholder" src="/medias/logo.png" class="lazyload placeholder" data-srcset="/medias/logo.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="logo">
       <h3 class="drawer-box-head_title">Bamboo</h3>
       <h5 class="drawer-box-head_desc">千磨万击还坚劲，任尔东西南北风</h5>
     </div>
@@ -173,7 +173,7 @@
                     
                     <span class="name">📄文档</span>
                   </span>
-                  <i class="fa fa-chevron-left arrow " :class="{'icon-rotate': isOpen(1)}" aria-hidden="true"></i>
+                  <i class="fas fa-chevron-left arrow " :class="{'icon-rotate': isOpen(1)}" aria-hidden="true"></i>
                 </a>
                 <ul class="drawer-sub-menu" v-if="isOpen(1)">
                   
@@ -283,7 +283,7 @@
                     
                     <span class="name">🐱更多</span>
                   </span>
-                  <i class="fa fa-chevron-left arrow " :class="{'icon-rotate': isOpen(7)}" aria-hidden="true"></i>
+                  <i class="fas fa-chevron-left arrow " :class="{'icon-rotate': isOpen(7)}" aria-hidden="true"></i>
                 </a>
                 <ul class="drawer-sub-menu" v-if="isOpen(7)">
                   
@@ -323,7 +323,7 @@
         
           <li class="drawer-box-content_item">
             <a target="_blank" rel="noopener" href="https://github.com/yuang01/hexo-theme-bamboo">
-              <i class="fa fa-github" aria-hidden="true"></i>
+              <i class="fas fa-github" aria-hidden="true"></i>
               <span>Github</span>
             </a>
           </li>
@@ -382,7 +382,7 @@
     <div class="blog-title" id="author-avatar">
       
         <div class="avatar">
-          <img src="/medias/logo.png" alt="logo">
+          <img src="/medias/logo.png" class="lazyload placeholder" data-srcset="/medias/logo.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="logo">
         </div>
       
       <a href="/" class="logo">Bamboo</a>
@@ -407,7 +407,7 @@
                 <a href="javascript:;" class="menu-item-link" title="📄文档">
                   
                   <span class="name">📄文档</span>
-                  <i class="fa fa-chevron-down arrow" aria-hidden="true"></i>
+                  <i class="fas fa-chevron-down arrow" aria-hidden="true"></i>
                 </a>
                 <ul class="sub-menu">
                   
@@ -515,7 +515,7 @@
                 <a href="javascript:;" class="menu-item-link" title="🐱更多">
                   
                   <span class="name">🐱更多</span>
-                  <i class="fa fa-chevron-down arrow" aria-hidden="true"></i>
+                  <i class="fas fa-chevron-down arrow" aria-hidden="true"></i>
                 </a>
                 <ul class="sub-menu">
                   
@@ -556,19 +556,16 @@
       
       
         <div id="appSearch">
-  <div class="search"  @click="showDialog()"><i class="fa fa-search" aria-hidden="true"></i></div>
+  <div class="search"  @click="showDialog()"><i class="fas fa-search" aria-hidden="true"></i></div>
   <transition name="fade">
     <div class="message-box_wrapper" style="display: none;" v-cloak v-show="dialogVisible" @click.self="cancelDialogVisible()">
       <div class="message-box animated bounceInDown">
-        <!-- <div class="close" style="overflow: hidden;">
-          <i class="fa fa-close" aria-hidden="true" style="float:right;" @click.self="cancelDialogVisible()"></i>
-        </div> -->
         <h2>
           <span>
-            <i class="fa fa-search" aria-hidden="true"></i>
+            <i class="fas fa-search" aria-hidden="true"></i>
             <span class="title">本地搜索</span>
           </span>
-          <i class="fa fa-close close" pointer style="float:right;" aria-hidden="true" @click.self="cancelDialogVisible()"></i>
+          <i class="fas fa-times close" pointer style="float:right;" aria-hidden="true" @click.self="cancelDialogVisible()"></i>
         </h2>
         <form class="site-search-form">
           <input type="text"
@@ -672,79 +669,78 @@
 
     <!-- 需要在上面加载的js -->
     <script>
-    function loadScript(src, cb) {
-        setTimeout(function () {
-            var HEAD = document.getElementsByTagName('head')[0] || document.documentElement;
-            var script = document.createElement('script');
-            script.setAttribute('type', 'text/javascript');
-            if (cb) script.onload = cb;
-            script.setAttribute('src', src);
-            HEAD.appendChild(script);
-        });
-    }
+  function loadScript(src, cb) {
+    setTimeout(function () {
+      var HEAD = document.getElementsByTagName('head')[0] || document.documentElement;
+      var script = document.createElement('script');
+      script.setAttribute('type', 'text/javascript');
+      if (cb) script.onload = cb;
+      script.setAttribute('src', src);
+      HEAD.appendChild(script);
+    });
+  }
 
-    //https://github.com/filamentgroup/loadCSS
-    var loadCSS = function (href, before, media, attributes) {
-        var doc = window.document;
-        var ss = doc.createElement("link");
-        var ref;
-        if (before) {
-            ref = before;
+  //https://github.com/filamentgroup/loadCSS
+  var loadCSS = function (href, before, media, attributes) {
+    var doc = window.document;
+    var ss = doc.createElement("link");
+    var ref;
+    if (before) {
+      ref = before;
+    }
+    else {
+      var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+      ref = refs[refs.length - 1];
+    }
+    var sheets = doc.styleSheets;
+    if (attributes) {
+      for (var attributeName in attributes) {
+        if (attributes.hasOwnProperty(attributeName)) {
+          ss.setAttribute(attributeName, attributes[attributeName]);
         }
-        else {
-            var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
-            ref = refs[refs.length - 1];
+      }
+    }
+    ss.rel = "stylesheet";
+    ss.href = href;
+    ss.media = "only x";
+    function ready(cb) {
+      if (doc.body) {
+        return cb();
+      }
+      setTimeout(function () {
+        ready(cb);
+      });
+    }
+    ready(function () {
+      ref.parentNode.insertBefore(ss, (before ? ref : ref.nextSibling));
+    });
+    var onloadcssdefined = function (cb) {
+      var resolvedHref = ss.href;
+      var i = sheets.length;
+      while (i--) {
+        if (sheets[i].href === resolvedHref) {
+          return cb();
         }
-        var sheets = doc.styleSheets;
-        if (attributes) {
-            for (var attributeName in attributes) {
-                if (attributes.hasOwnProperty(attributeName)) {
-                    ss.setAttribute(attributeName, attributes[attributeName]);
-                }
-            }
-        }
-        ss.rel = "stylesheet";
-        ss.href = href;
-        ss.media = "only x";
-        function ready(cb) {
-            if (doc.body) {
-                return cb();
-            }
-            setTimeout(function () {
-                ready(cb);
-            });
-        }
-        ready(function () {
-            ref.parentNode.insertBefore(ss, (before ? ref : ref.nextSibling));
-        });
-        var onloadcssdefined = function (cb) {
-            var resolvedHref = ss.href;
-            var i = sheets.length;
-            while (i--) {
-                if (sheets[i].href === resolvedHref) {
-                    return cb();
-                }
-            }
-            setTimeout(function () {
-                onloadcssdefined(cb);
-            });
-        };
-        function loadCB() {
-            if (ss.addEventListener) {
-                ss.removeEventListener("load", loadCB);
-            }
-            ss.media = media || "all";
-        }
-        if (ss.addEventListener) {
-            ss.addEventListener("load", loadCB);
-        }
-        ss.onloadcssdefined = onloadcssdefined;
-        onloadcssdefined(loadCB);
-        return ss;
+      }
+      setTimeout(function () {
+        onloadcssdefined(cb);
+      });
     };
-    
-</script>
- 
+    function loadCB() {
+      if (ss.addEventListener) {
+        ss.removeEventListener("load", loadCB);
+      }
+      ss.media = media || "all";
+    }
+    if (ss.addEventListener) {
+      ss.addEventListener("load", loadCB);
+    }
+    ss.onloadcssdefined = onloadcssdefined;
+    onloadcssdefined(loadCB);
+    return ss;
+  };
+
+</script> 
 
 <!-- 轮播图所需要的js -->
 <script src="/js/swiper/swiper.min.js"></script>
@@ -770,7 +766,7 @@
 <div class="bg-dark-floor" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -2;"></div>
 <div class="bg-light-floor-tagDetail" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -3;"></div>
 
-<div class="lazyload tag-header" data-original="https://pic3.zhimg.com/80/v2-8adab63c74651ce33c16f41c86b60817_1440w.jpg">
+<div class="tag-header" style="background-image: url('https://pic3.zhimg.com/80/v2-8adab63c74651ce33c16f41c86b60817_1440w.jpg');">
   <div class="tag-header-title">
     tag
   </div>
@@ -804,14 +800,17 @@
   <div class="tag-name">
     <div class="name" style="background-color: #FEF9E7;">tag 分类</div>
   </div>
-  <section class="posts">
+  <!-- 每一篇文章卡片 -->
+  <!-- hash算法 -->
+
+<section class="posts">
+  
     
-    <article class="post reveal"
-      style="flex-direction: row-reverse;">
+    <article class="post reveal" style="flex-direction: row-reverse;   ">
       <div class="post-main">
         <div class="post-info">
           <div class="post-time">
-            <i class="fa fa-clock-o" aria-hidden="true"></i>
+            <i class="fas fa-clock" aria-hidden="true"></i>
             <span class="post-time">2021-02-08</span>
           </div>
           <div class="post-title">
@@ -837,11 +836,10 @@
             </div>
           </div>
           <div class="post-img-mobile">
-            
-              <a href="/post/tab/" class="lazyload" data-original="https://pic4.zhimg.com/80/v2-5a575bb8ac734707f1ec05d6de6a0e0b_1440w.jpg" style="background-size: cover; 
-                background-position: center center;">
-              </a>
-            
+            <a href="/post/tab/" style="background-size: cover; 
+              background-position: center center;">
+              <img class="lazyload lazyload placeholder" src="https://pic4.zhimg.com/80/v2-5a575bb8ac734707f1ec05d6de6a0e0b_1440w.jpg" class="lazyload placeholder" data-srcset="https://pic4.zhimg.com/80/v2-5a575bb8ac734707f1ec05d6de6a0e0b_1440w.jpg" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="">
+            </a>
           </div>
           <div class="post-content">
             tab事例
@@ -860,25 +858,24 @@
         </div>
         <div class="post-more">
           <a href="/post/tab/">
-            <i class="iconfont iconmore" pointer style="float: right;" title="阅读更多"></i>
+            <i class="iconfont iconmore" pointer style="float: right;  " title="阅读更多"></i>
           </a>
         </div>
       </div>
       <div class="post-img">
-        
-          <a href="/post/tab/" class="lazyload" data-original="https://pic4.zhimg.com/80/v2-5a575bb8ac734707f1ec05d6de6a0e0b_1440w.jpg" style="background-size: cover; 
-            background-position: center center;">
-          </a>
-        
+        <a href="/post/tab/" style="background-size: cover; 
+          background-position: center center;">
+          <img class="lazyload lazyload placeholder" src="https://pic4.zhimg.com/80/v2-5a575bb8ac734707f1ec05d6de6a0e0b_1440w.jpg" class="lazyload placeholder" data-srcset="https://pic4.zhimg.com/80/v2-5a575bb8ac734707f1ec05d6de6a0e0b_1440w.jpg" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="">
+        </a>
       </div>
     </article>
+  
     
-    <article class="post reveal"
-      style="">
+    <article class="post reveal" style="   ">
       <div class="post-main">
         <div class="post-info">
           <div class="post-time">
-            <i class="fa fa-clock-o" aria-hidden="true"></i>
+            <i class="fas fa-clock" aria-hidden="true"></i>
             <span class="post-time">2021-02-08</span>
           </div>
           <div class="post-title">
@@ -904,11 +901,10 @@
             </div>
           </div>
           <div class="post-img-mobile">
-            
-              <a href="/post/text/" class="lazyload" data-original="https://pic4.zhimg.com/v2-8ad0cffeaa7dec5dd1930eebc6ff863f_b.jpg" style="background-size: cover; 
-                background-position: center center;">
-              </a>
-            
+            <a href="/post/text/" style="background-size: cover; 
+              background-position: center center;">
+              <img class="lazyload lazyload placeholder" src="https://pic4.zhimg.com/v2-8ad0cffeaa7dec5dd1930eebc6ff863f_b.jpg" class="lazyload placeholder" data-srcset="https://pic4.zhimg.com/v2-8ad0cffeaa7dec5dd1930eebc6ff863f_b.jpg" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="">
+            </a>
           </div>
           <div class="post-content">
             Text文本样式标签演示
@@ -924,25 +920,24 @@
         </div>
         <div class="post-more">
           <a href="/post/text/">
-            <i class="iconfont iconmore" pointer style="" title="阅读更多"></i>
+            <i class="iconfont iconmore" pointer style="  " title="阅读更多"></i>
           </a>
         </div>
       </div>
       <div class="post-img">
-        
-          <a href="/post/text/" class="lazyload" data-original="https://pic4.zhimg.com/v2-8ad0cffeaa7dec5dd1930eebc6ff863f_b.jpg" style="background-size: cover; 
-            background-position: center center;">
-          </a>
-        
+        <a href="/post/text/" style="background-size: cover; 
+          background-position: center center;">
+          <img class="lazyload lazyload placeholder" src="https://pic4.zhimg.com/v2-8ad0cffeaa7dec5dd1930eebc6ff863f_b.jpg" class="lazyload placeholder" data-srcset="https://pic4.zhimg.com/v2-8ad0cffeaa7dec5dd1930eebc6ff863f_b.jpg" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="">
+        </a>
       </div>
     </article>
+  
     
-    <article class="post reveal"
-      style="flex-direction: row-reverse;">
+    <article class="post reveal" style="flex-direction: row-reverse;   ">
       <div class="post-main">
         <div class="post-info">
           <div class="post-time">
-            <i class="fa fa-clock-o" aria-hidden="true"></i>
+            <i class="fas fa-clock" aria-hidden="true"></i>
             <span class="post-time">2021-02-08</span>
           </div>
           <div class="post-title">
@@ -968,11 +963,10 @@
             </div>
           </div>
           <div class="post-img-mobile">
-            
-              <a href="/post/timeline/" class="lazyload" data-original="https://pic4.zhimg.com/v2-672bbb43fda6c749b16e2b8c8d69e15f_b.jpg" style="background-size: cover; 
-                background-position: center center;">
-              </a>
-            
+            <a href="/post/timeline/" style="background-size: cover; 
+              background-position: center center;">
+              <img class="lazyload lazyload placeholder" src="https://pic4.zhimg.com/v2-672bbb43fda6c749b16e2b8c8d69e15f_b.jpg" class="lazyload placeholder" data-srcset="https://pic4.zhimg.com/v2-672bbb43fda6c749b16e2b8c8d69e15f_b.jpg" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="">
+            </a>
           </div>
           <div class="post-content">
             timeline时间线演示
@@ -983,25 +977,24 @@
         </div>
         <div class="post-more">
           <a href="/post/timeline/">
-            <i class="iconfont iconmore" pointer style="float: right;" title="阅读更多"></i>
+            <i class="iconfont iconmore" pointer style="float: right;  " title="阅读更多"></i>
           </a>
         </div>
       </div>
       <div class="post-img">
-        
-          <a href="/post/timeline/" class="lazyload" data-original="https://pic4.zhimg.com/v2-672bbb43fda6c749b16e2b8c8d69e15f_b.jpg" style="background-size: cover; 
-            background-position: center center;">
-          </a>
-        
+        <a href="/post/timeline/" style="background-size: cover; 
+          background-position: center center;">
+          <img class="lazyload lazyload placeholder" src="https://pic4.zhimg.com/v2-672bbb43fda6c749b16e2b8c8d69e15f_b.jpg" class="lazyload placeholder" data-srcset="https://pic4.zhimg.com/v2-672bbb43fda6c749b16e2b8c8d69e15f_b.jpg" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="">
+        </a>
       </div>
     </article>
+  
     
-    <article class="post reveal"
-      style="">
+    <article class="post reveal" style="   ">
       <div class="post-main">
         <div class="post-info">
           <div class="post-time">
-            <i class="fa fa-clock-o" aria-hidden="true"></i>
+            <i class="fas fa-clock" aria-hidden="true"></i>
             <span class="post-time">2021-02-08</span>
           </div>
           <div class="post-title">
@@ -1027,11 +1020,10 @@
             </div>
           </div>
           <div class="post-img-mobile">
-            
-              <a href="/post/title/" class="lazyload" data-original="https://pic1.zhimg.com/v2-cdf0dd8357e2cf573f32d0d65cff6404_b.jpg" style="background-size: cover; 
-                background-position: center center;">
-              </a>
-            
+            <a href="/post/title/" style="background-size: cover; 
+              background-position: center center;">
+              <img class="lazyload lazyload placeholder" src="https://pic1.zhimg.com/v2-cdf0dd8357e2cf573f32d0d65cff6404_b.jpg" class="lazyload placeholder" data-srcset="https://pic1.zhimg.com/v2-cdf0dd8357e2cf573f32d0d65cff6404_b.jpg" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="">
+            </a>
           </div>
           <div class="post-content">
             title演示
@@ -1054,25 +1046,24 @@
         </div>
         <div class="post-more">
           <a href="/post/title/">
-            <i class="iconfont iconmore" pointer style="" title="阅读更多"></i>
+            <i class="iconfont iconmore" pointer style="  " title="阅读更多"></i>
           </a>
         </div>
       </div>
       <div class="post-img">
-        
-          <a href="/post/title/" class="lazyload" data-original="https://pic1.zhimg.com/v2-cdf0dd8357e2cf573f32d0d65cff6404_b.jpg" style="background-size: cover; 
-            background-position: center center;">
-          </a>
-        
+        <a href="/post/title/" style="background-size: cover; 
+          background-position: center center;">
+          <img class="lazyload lazyload placeholder" src="https://pic1.zhimg.com/v2-cdf0dd8357e2cf573f32d0d65cff6404_b.jpg" class="lazyload placeholder" data-srcset="https://pic1.zhimg.com/v2-cdf0dd8357e2cf573f32d0d65cff6404_b.jpg" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="">
+        </a>
       </div>
     </article>
+  
     
-    <article class="post reveal"
-      style="flex-direction: row-reverse;">
+    <article class="post reveal" style="flex-direction: row-reverse;   ">
       <div class="post-main">
         <div class="post-info">
           <div class="post-time">
-            <i class="fa fa-clock-o" aria-hidden="true"></i>
+            <i class="fas fa-clock" aria-hidden="true"></i>
             <span class="post-time">2021-02-08</span>
           </div>
           <div class="post-title">
@@ -1098,11 +1089,10 @@
             </div>
           </div>
           <div class="post-img-mobile">
-            
-              <a href="/post/video/" class="lazyload" data-original="https://pic3.zhimg.com/v2-806666b346e90aa0506069930e453b2a_b.jpg" style="background-size: cover; 
-                background-position: center center;">
-              </a>
-            
+            <a href="/post/video/" style="background-size: cover; 
+              background-position: center center;">
+              <img class="lazyload lazyload placeholder" src="https://pic3.zhimg.com/v2-806666b346e90aa0506069930e453b2a_b.jpg" class="lazyload placeholder" data-srcset="https://pic3.zhimg.com/v2-806666b346e90aa0506069930e453b2a_b.jpg" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="">
+            </a>
           </div>
           <div class="post-content">
             video演示
@@ -1116,21 +1106,21 @@ Your bro
         </div>
         <div class="post-more">
           <a href="/post/video/">
-            <i class="iconfont iconmore" pointer style="float: right;" title="阅读更多"></i>
+            <i class="iconfont iconmore" pointer style="float: right;  " title="阅读更多"></i>
           </a>
         </div>
       </div>
       <div class="post-img">
-        
-          <a href="/post/video/" class="lazyload" data-original="https://pic3.zhimg.com/v2-806666b346e90aa0506069930e453b2a_b.jpg" style="background-size: cover; 
-            background-position: center center;">
-          </a>
-        
+        <a href="/post/video/" style="background-size: cover; 
+          background-position: center center;">
+          <img class="lazyload lazyload placeholder" src="https://pic3.zhimg.com/v2-806666b346e90aa0506069930e453b2a_b.jpg" class="lazyload placeholder" data-srcset="https://pic3.zhimg.com/v2-806666b346e90aa0506069930e453b2a_b.jpg" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="">
+        </a>
       </div>
     </article>
-    
-  </section>
+  
+</section>
 </div>
+
 
   <!-- <nav class="page-nav">
     <a class="extend prev" rel="prev" href="/tags/tag/page/2/">上一页</a><a class="page-number" href="/tags/tag/">1</a><a class="page-number" href="/tags/tag/page/2/">2</a><span class="page-number current">3</span>
@@ -1139,7 +1129,7 @@ Your bro
     
       <a href="/tags/tag/page/2/"
          class="page-nav-pre">
-         <i class="fa fa-angle-left"></i><span class="ml-5">上一页</span>
+         <i class="fas fa-angle-left"></i><span class="ml-5">上一页</span>
       </a>
     
     <div class="page-info">
@@ -1147,6 +1137,7 @@ Your bro
     </div>
     
   </div>
+
 
       </main>
     </div>
@@ -1163,7 +1154,7 @@ Your bro
               
                 <a href="/atom.xml" class="social">
                   
-                    <i class="fa fa-rss" aria-hidden="true"></i>
+                    <i class="fas fa-rss" aria-hidden="true"></i>
                   
                 </a>
               
@@ -1171,7 +1162,7 @@ Your bro
               
                 <a href="mailto:1730241541@qq.com" class="social">
                   
-                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                    <i class="fas fa-envelope" aria-hidden="true"></i>
                   
                 </a>
               
@@ -1179,7 +1170,7 @@ Your bro
               
                 <a target="_blank" rel="noopener" href="https://github.com/yuang01/hexo-theme-bamboo" class="social">
                   
-                    <i class="fa fa-github" aria-hidden="true"></i>
+                    <i class="fab fa-github" aria-hidden="true"></i>
                   
                 </a>
               
@@ -1187,7 +1178,7 @@ Your bro
               
                 <a href="tencent://AddContact/?fromId=50&amp;fromSubId=1&amp;subcmd=all&amp;uin=1730241541" class="social">
                   
-                    <i class="fa fa-qq" aria-hidden="true"></i>
+                    <i class="fab fa-qq" aria-hidden="true"></i>
                   
                 </a>
               
@@ -1207,11 +1198,11 @@ Your bro
             <!-- 不蒜子统计 -->
             <!-- 不蒜子统计 -->
 <span id="busuanzi_container_site_pv">
-      <i class="fa fa-eye" aria-hidden="true"></i>本站总访问量：<span id="busuanzi_value_site_pv"></span> 次
+      <i class="fas fa-eye" aria-hidden="true"></i>本站总访问量：<span id="busuanzi_value_site_pv"></span> 次
 </span>
 <span class="post-meta-divider">|</span>
 <span id="busuanzi_container_site_uv" style='display:none'>
-      <i class="fa fa-users" aria-hidden="true"></i>本站访客数：<span id="busuanzi_value_site_uv"></span> 人
+      <i class="fas fa-users" aria-hidden="true"></i>本站访客数：<span id="busuanzi_value_site_uv"></span> 人
 </span>
 
           
@@ -1232,7 +1223,7 @@ Your bro
     
       <div class="dark">
   <div class="dark-content">
-    <i class="fa fa-moon-o" aria-hidden="true"></i>
+    <i class="fas fa-moon" aria-hidden="true"></i>
     <!-- <span>关灯</span> -->
   </div>
   
@@ -1245,7 +1236,7 @@ Your bro
       $(".dark-content").replaceWith(
           `
           <div class='dark-content'>
-            <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+            <i class="fas fa-lightbulb" aria-hidden="true"></i>
           </div>
           `
         );
@@ -1257,7 +1248,7 @@ Your bro
         $(".dark-content").replaceWith(
           `
           <div class='dark-content'>
-            <i class="fa fa-moon-o" aria-hidden="true"></i>
+            <i class="fas fa-moon" aria-hidden="true"></i>
           </div>
           `
         );
@@ -1267,7 +1258,7 @@ Your bro
         $(".dark-content").replaceWith(
           `
           <div class='dark-content'>
-            <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+            <i class="fas fa-lightbulb" aria-hidden="true"></i>
           </div>
           `
         );
@@ -1279,9 +1270,10 @@ Your bro
     <!-- 渲染回到顶部按钮 -->
     
       <div class="goTop top-btn-color" pointer>
-  <i class="fa fa-arrow-up" aria-hidden="true"></i>
+  <i class="fas fa-arrow-up" aria-hidden="true"></i>
 </div>
 <script src="/js/goTop.js"></script>
+
     
     <!-- 渲染左下角音乐播放器 -->
     
@@ -1365,7 +1357,8 @@ Your bro
     
     <!-- 背景彩带 -->
     
-    
+
+    <script src="/js/utils/index.js"></script>
     <script src="/js/app.js" data-pjax></script>
     
     <!-- 文章目录所需js -->
@@ -1374,9 +1367,9 @@ Your bro
 
 <script>
   var headerEl = 'h2, h3, h4',  //headers 
-      content = '.post-detail',//文章容器
-      idArr = {};  //标题数组以确定是否增加索引id
-      //add #id
+    content = '.post-detail',//文章容器
+    idArr = {};  //标题数组以确定是否增加索引id
+  //add #id
   var option = {
     // Where to render the table of contents.
     tocSelector: '.toc',
@@ -1390,6 +1383,8 @@ Your bro
     positionFixedSelector: '.toc-main',
     positionFixedClass: 'is-position-fixed',
     fixedSidebarOffset: 'auto',
+    activeLinkClass: 'is-active-link',
+    // onClick: function (e) {},
   }
   if ($('.toc').length > 0) {
 
@@ -1410,10 +1405,41 @@ Your bro
       }
     });
 
-    tocbot.init(option);
-    
+    document.addEventListener("DOMContentLoaded", function () {
+      tocbot.init(option);
+      mobileTocClick();
+    });
+
   }
 
+  window.tocScrollFn = function () {
+    return bamboo.throttle(function () {
+      findHeadPosition();
+    }, 100)()
+  }
+  window.addEventListener('scroll', tocScrollFn);
+
+  const findHeadPosition = function (top) {
+    if ($('.toc').length <= 0) {
+      return false;
+    }
+    setTimeout(() => {  // or DOMContentLoaded 
+      autoScrollToc();
+    }, 0);
+  }
+
+  const autoScrollToc = function () {
+    const $activeItem = document.querySelector('.is-active-link');
+    const $cardToc = document.querySelector('.toc-content');
+    const activePosition = $activeItem.getBoundingClientRect().top
+    const sidebarScrollTop = $cardToc.scrollTop
+    if (activePosition > (document.documentElement.clientHeight - 100)) {
+      $cardToc.scrollTop = sidebarScrollTop + 150
+    }
+    if (activePosition < 100) {
+      $cardToc.scrollTop = sidebarScrollTop - 150
+    }
+  }
 
   document.addEventListener('pjax:send', function () {
     if ($('.toc').length) {
@@ -1424,36 +1450,60 @@ Your bro
   document.addEventListener('pjax:complete', function () {
     if ($('.toc').length) {
       tocbot.init(option);
+      mobileTocClick();
     }
   });
-
   
+  // 手机端toc按钮点击出现目录
+  const mobileTocClick = function () {
+    const $cardTocLayout = document.getElementsByClassName('toc-aside')[0];
+    const $cardToc = $cardTocLayout.getElementsByClassName('toc-content')[0];
+    let right = '45px';
+    if (window.innerWidth >= 551 && window.innerWidth <= 992) {
+      right = '100px'
+    }
+    const mobileToc = {
+      open: () => {
+        $cardTocLayout.style.cssText = 'animation: toc-open .3s; opacity: 1; right: ' + right
+      },
+
+      close: () => {
+        $cardTocLayout.style.animation = 'toc-close .2s'
+        setTimeout(() => {
+          $cardTocLayout.style.cssText = "opacity:''; animation: ''; right: ''"
+        }, 100)
+      }
+    }
+    document.getElementById('toc-mobile-btn').addEventListener('click', () => {
+      if (window.getComputedStyle($cardTocLayout).getPropertyValue('opacity') === '0') mobileToc.open()
+      else mobileToc.close()
+    })
+
+    $cardToc.addEventListener('click', (e) => {
+      if (window.innerWidth < 992) { // 小于992px的时候
+        mobileToc.close()
+      }
+    })
+  }
 </script>
 
 <style>
-.is-position-fixed {
-  position:sticky !important;
-  top: 74px;
-}
-.toc-main ul {
-  counter-reset: show-list;
-}
-.toc-main ul li::before {
-  content: counter(item)".";
-  display: block;
-  position: absolute;
-  left: 12px;
-  top:0;
-}
-/* .toc > .toc-list {
-  padding-left: 35px;
-}
-.toc>.toc-list li {
-  list-style: decimal;
-}
-.toc-list {
-  padding-left: 25px;
-} */
+  .is-position-fixed {
+    position: sticky !important;
+    top: 74px;
+  }
+
+  .toc-main ul {
+    counter-reset: show-list;
+  }
+
+  .toc-main ul li::before {
+    content: counter(item)".";
+    display: block;
+    position: absolute;
+    left: 12px;
+    top: 0;
+  }
 </style> 
 
 <!-- 渲染issues标签里的内容 -->
@@ -1506,7 +1556,7 @@ Your bro
         var initCopyCode = function () {
           var copyHtml = '';
           copyHtml += '<button class="btn-copy" data-clipboard-snippet="" style="position:absolute;top:0;right:0;z-index:1;">';
-          copyHtml += '<i class="fa fa-copy"></i><span>' + copy + '</span>';
+          copyHtml += '<i class="fas fa-copy"></i><span>' + copy + '</span>';
           copyHtml += '</button>';
           $(".post-detail pre").not('.gutter pre').wrap("<div class='codeBox' style='position:relative;width:100%;'></div>")
           $(".post-detail pre").not('.gutter pre').before(copyHtml);
@@ -1523,23 +1573,8 @@ Your bro
         $(document).unbind('keypress').bind('keypress', function (e) {
           if (e.ctrlKey && e.keyCode == 67) {
             doSomething();
-            // 返回false, 防止重复触发copy事件  
-            // return false;
           }
         })
-        //  监听 ctrl + c事件  
-        // $(document).unbind('keypress').bind('keypress', function (e) {
-        //   if (e.ctrlKey && e.keyCode == 67) {
-        //     doSomething();
-        //     // 返回false, 防止重复触发copy事件  
-        //     return false;
-        //   }
-        // })
-
-        // // 鼠标右键的复制事件  
-        // $(document).unbind('copy').bind('copy', function (e) {
-        //   doSomething();
-        // });
 
         function doSomething() {
           that.$notify({
@@ -1554,37 +1589,51 @@ Your bro
       created() { }
     })
   </script>
-
+  
 
 <!-- 图片懒加载 -->
-<script src="/js/lazyload/lazyload@1.9.1.js"></script>
-<script data-pjax>
-  $(function () {
-    $("div.lazyload, img.lazyload, a.lazyload").lazyload(
-      {
-        effect: "show",
-        placeholder: "https://img10.360buyimg.com/ddimg/jfs/t1/159345/8/2271/222193/5ff7b36fEe49f5663/a95287c20385127f.gif"    //图片未加载出来时显示的占位图
-      }
-    );
+<script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.0/dist/lazyload.min.js"></script>
+<script>
+  // https://www.npmjs.com/package/vanilla-lazyload
+  // Set the options globally
+  // to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazyload",
+    threshold: 0
+  };
+  // Listen to the initialization event
+  // and get the instance of LazyLoad
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+  document.addEventListener('DOMContentLoaded', function () {
+    lazyLoadInstance.update();
+  });
+  document.addEventListener('pjax:complete', function () {
+    lazyLoadInstance.update();
   });
 </script>
+
 
 <!-- 卡片滚动动画 -->
    
 
 <!-- 评论所需js -->
 
-    
-        <script type="text/javascript">
-    var bamboo = {};
-    bamboo.utterance = {};
+  
+    <script type="text/javascript">
+    var utteranceCommon = {};
     
     function check_utterance() {
         let isDark = JSON.parse(localStorage.getItem('dark'))  || JSON.parse('false');
         if (isDark) {
-            bamboo.utterance.Theme = 'github-dark';
+            utteranceCommon.Theme = 'github-dark';
         } else {
-            bamboo.utterance.Theme = 'github-light';
+            utteranceCommon.Theme = 'github-light';
         }
 
         return document.getElementById("gitment-container");
@@ -1599,7 +1648,7 @@ Your bro
             utterances.type = 'text/javascript';
             utterances.async = true;
             utterances.setAttribute('issue-term','pathname')
-            utterances.setAttribute('theme', bamboo.utterance.Theme)
+            utterances.setAttribute('theme', utteranceCommon.Theme)
             utterances.setAttribute('repo','yuang01/yuang01.github.io')
             utterances.crossorigin = 'anonymous';
             utterances.src = 'https://utteranc.es/client.js';
@@ -1614,7 +1663,7 @@ Your bro
         if (!HEAD) return;
         const message = {
             type: 'set-theme',
-            theme: bamboo.utterance.Theme
+            theme: utteranceCommon.Theme
         };
         const utteranceIframe = document.querySelector('iframe');
         utteranceIframe.contentWindow.postMessage(message, 'https://utteranc.es');
@@ -1638,7 +1687,7 @@ Your bro
         max-width: inherit!important;
     }
 </style>
-    
+  
 
 
 <!-- 鼠标点击特效 -->
@@ -1647,7 +1696,7 @@ Your bro
 
 
 
-    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" data-pjax></script>
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" data-pjax></script>
 
 
     <!-- pjax -->
