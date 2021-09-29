@@ -2026,8 +2026,17 @@ pre:hover::-webkit-scrollbar-thumb:hover,
 .page-nav .page-nav-next .mr-5 {
   margin-right: 5px;
 }
+.w-70 {
+  width: 70%;
+  margin: 0 auto;
+}
+@media (max-width: 551px) {
+  .w-70 {
+    width: 100%;
+  }
+}
 @media (max-width: 992px) {
-  .page-nav {
+  .w-70 {
     width: 90%;
   }
 }
@@ -2503,20 +2512,6 @@ pre:hover::-webkit-scrollbar-thumb:hover,
 }
 .archive-main {
   min-height: 60vh;
-}
-.archive-main .archive-paginator {
-  width: 70%;
-  margin: 0 auto;
-}
-@media (max-width: 551px) {
-  .archive-main .archive-paginator {
-    width: 100%;
-  }
-}
-@media (max-width: 992px) {
-  .archive-main .archive-paginator {
-    width: 90%;
-  }
 }
 .archive {
   padding: 0 40px 0 60px;
