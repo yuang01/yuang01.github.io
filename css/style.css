@@ -2241,26 +2241,12 @@ pre:hover::-webkit-scrollbar-thumb:hover,
     width: 100%;
   }
 }
-@-webkit-keyframes mymove {
-  0% {
-    transform: scale(1); /*开始为原始大小*/
-  }
-  25% {
-    transform: scale(1.2); /*放大1.2倍*/
-  }
-  50% {
-    transform: scale(1);
-  }
-  75% {
-    transform: scale(1.2);
-  }
-}
 @-moz-keyframes mymove {
   0% {
-    transform: scale(1); /*开始为原始大小*/
+    transform: scale(1); /* 开始为原始大小 */
   }
   25% {
-    transform: scale(1.2); /*放大1.2倍*/
+    transform: scale(1.2); /* 放大1.2倍 */
   }
   50% {
     transform: scale(1);
@@ -2271,10 +2257,10 @@ pre:hover::-webkit-scrollbar-thumb:hover,
 }
 @-webkit-keyframes mymove {
   0% {
-    transform: scale(1); /*开始为原始大小*/
+    transform: scale(1); /* 开始为原始大小 */
   }
   25% {
-    transform: scale(1.2); /*放大1.2倍*/
+    transform: scale(1.2); /* 放大1.2倍 */
   }
   50% {
     transform: scale(1);
@@ -2285,10 +2271,10 @@ pre:hover::-webkit-scrollbar-thumb:hover,
 }
 @-o-keyframes mymove {
   0% {
-    transform: scale(1); /*开始为原始大小*/
+    transform: scale(1); /* 开始为原始大小 */
   }
   25% {
-    transform: scale(1.2); /*放大1.2倍*/
+    transform: scale(1.2); /* 放大1.2倍 */
   }
   50% {
     transform: scale(1);
@@ -2299,10 +2285,66 @@ pre:hover::-webkit-scrollbar-thumb:hover,
 }
 @keyframes mymove {
   0% {
-    transform: scale(1); /*开始为原始大小*/
+    transform: scale(1); /* 开始为原始大小 */
   }
   25% {
-    transform: scale(1.2); /*放大1.2倍*/
+    transform: scale(1.2); /* 放大1.2倍 */
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.2);
+  }
+}
+@-moz-keyframes mymove {
+  0% {
+    transform: scale(1); /* 开始为原始大小 */
+  }
+  25% {
+    transform: scale(1.2); /* 放大1.2倍 */
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.2);
+  }
+}
+@-webkit-keyframes mymove {
+  0% {
+    transform: scale(1); /* 开始为原始大小 */
+  }
+  25% {
+    transform: scale(1.2); /* 放大1.2倍 */
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.2);
+  }
+}
+@-o-keyframes mymove {
+  0% {
+    transform: scale(1); /* 开始为原始大小 */
+  }
+  25% {
+    transform: scale(1.2); /* 放大1.2倍 */
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.2);
+  }
+}
+@keyframes mymove {
+  0% {
+    transform: scale(1); /* 开始为原始大小 */
+  }
+  25% {
+    transform: scale(1.2); /* 放大1.2倍 */
   }
   50% {
     transform: scale(1);
@@ -2616,7 +2658,7 @@ pre:hover::-webkit-scrollbar-thumb:hover,
   top: 10px;
   width: 18px;
   height: 18px;
-  content: "📚";
+  content: '📚';
   margin-right: 5px;
   font: normal normal normal 14px/1 FontAwesome;
   font-size: 15px;
@@ -3458,7 +3500,7 @@ pre:hover::-webkit-scrollbar-thumb:hover,
 .donate_bar .donate_txt {
   display: block;
   color: #9d9d9d;
-  font: 14px/2 "Microsoft Yahei";
+  font: 14px/2 'Microsoft Yahei';
 }
 .post-donate {
   display: flex;
@@ -3696,7 +3738,7 @@ pre:hover::-webkit-scrollbar-thumb:hover,
 #appDrawer .drawer-box .drawer-box-head .drawer-box-head_title {
   text-align: center;
   font-size: 1.6em;
-  font-family: "Comic Sans MS", cursive, LiSu, sans-serif;
+  font-family: 'Comic Sans MS', cursive, LiSu, sans-serif;
   text-decoration: none;
 }
 #appDrawer .drawer-box .drawer-box-head .drawer-box-head_desc {
@@ -3761,15 +3803,15 @@ pre:hover::-webkit-scrollbar-thumb:hover,
   }
 }
 .pace .pace-progress {
-  background: #f6a427 !important; /*进度条颜色*/
+  background: #f6a427 !important; /* 进度条颜色 */
   height: 3px;
 }
 .pace .pace-progress-inner {
-  box-shadow: 0 0 10px #1e92fb, 0 0 5px #1e92fb; /*阴影颜色*/
+  box-shadow: 0 0 10px #1e92fb, 0 0 5px #1e92fb; /* 阴影颜色 */
 }
 .pace .pace-activity {
-  border-top-color: #1e92fb; /*上边框颜色*/
-  border-left-color: #1e92fb; /*左边框颜色*/
+  border-top-color: #1e92fb; /* 上边框颜色 */
+  border-left-color: #1e92fb; /* 左边框颜色 */
 }
 .deng-box {
   position: fixed;
@@ -3869,7 +3911,7 @@ pre:hover::-webkit-scrollbar-thumb:hover,
   left: 29px;
   height: 12px;
   width: 60px;
-  content: " ";
+  content: ' ';
   display: block;
   z-index: 1999;
   border-radius: 5px 5px 0 0;
@@ -3883,7 +3925,7 @@ pre:hover::-webkit-scrollbar-thumb:hover,
   left: 10px;
   height: 12px;
   width: 60px;
-  content: " ";
+  content: ' ';
   display: block;
   margin-left: 20px;
   border-radius: 0 0 5px 5px;
@@ -3903,28 +3945,6 @@ pre:hover::-webkit-scrollbar-thumb:hover,
 .night .deng-box,
 .night .deng-box1 {
   background: transparent !important;
-}
-@-moz-keyframes swing {
-  0% {
-    -moz-transform: rotate(-10deg);
-  }
-  50% {
-    -moz-transform: rotate(10deg);
-  }
-  100% {
-    -moz-transform: rotate(-10deg);
-  }
-}
-@-webkit-keyframes swing {
-  0% {
-    -webkit-transform: rotate(-10deg);
-  }
-  50% {
-    -webkit-transform: rotate(10deg);
-  }
-  100% {
-    -webkit-transform: rotate(-10deg);
-  }
 }
 @-moz-keyframes swing {
   0% {
@@ -3968,6 +3988,94 @@ pre:hover::-webkit-scrollbar-thumb:hover,
   }
   100% {
     transform: rotate(-10deg);
+  }
+}
+@-moz-keyframes swing {
+  0% {
+    -moz-transform: rotate(-10deg);
+  }
+  50% {
+    -moz-transform: rotate(10deg);
+  }
+  100% {
+    -moz-transform: rotate(-10deg);
+  }
+}
+@-webkit-keyframes swing {
+  0% {
+    -moz-transform: rotate(-10deg);
+  }
+  50% {
+    -moz-transform: rotate(10deg);
+  }
+  100% {
+    -moz-transform: rotate(-10deg);
+  }
+}
+@-o-keyframes swing {
+  0% {
+    -moz-transform: rotate(-10deg);
+  }
+  50% {
+    -moz-transform: rotate(10deg);
+  }
+  100% {
+    -moz-transform: rotate(-10deg);
+  }
+}
+@keyframes swing {
+  0% {
+    -moz-transform: rotate(-10deg);
+  }
+  50% {
+    -moz-transform: rotate(10deg);
+  }
+  100% {
+    -moz-transform: rotate(-10deg);
+  }
+}
+@-moz-keyframes swing {
+  0% {
+    -webkit-transform: rotate(-10deg);
+  }
+  50% {
+    -webkit-transform: rotate(10deg);
+  }
+  100% {
+    -webkit-transform: rotate(-10deg);
+  }
+}
+@-webkit-keyframes swing {
+  0% {
+    -webkit-transform: rotate(-10deg);
+  }
+  50% {
+    -webkit-transform: rotate(10deg);
+  }
+  100% {
+    -webkit-transform: rotate(-10deg);
+  }
+}
+@-o-keyframes swing {
+  0% {
+    -webkit-transform: rotate(-10deg);
+  }
+  50% {
+    -webkit-transform: rotate(10deg);
+  }
+  100% {
+    -webkit-transform: rotate(-10deg);
+  }
+}
+@keyframes swing {
+  0% {
+    -webkit-transform: rotate(-10deg);
+  }
+  50% {
+    -webkit-transform: rotate(10deg);
+  }
+  100% {
+    -webkit-transform: rotate(-10deg);
   }
 }
 .danmu {
