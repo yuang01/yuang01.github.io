@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yuang01.github.io/"/>
-  <updated>2021-09-28T09:42:37.963Z</updated>
+  <updated>2021-10-08T07:50:34.746Z</updated>
   <id>http://yuang01.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>新增mathjax</title>
+    <link href="http://yuang01.github.io/post/mathjax/index/"/>
+    <id>http://yuang01.github.io/post/mathjax/index/</id>
+    <published>2021-10-08T06:03:20.000Z</published>
+    <updated>2021-10-08T07:50:34.746Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;在文章中设置&lt;code&gt;mathjax: true&lt;/code&gt;即可&lt;/p&gt;
+&lt;h2 id=&quot;事例：&quot;&gt;&lt;a href=&quot;#事例：&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="mathjax" scheme="http://yuang01.github.io/categories/mathjax/"/>
+    
+    
+      <category term="mathjax" scheme="http://yuang01.github.io/tags/mathjax/"/>
+    
+  </entry>
   
   <entry>
     <title>Bamboo主题-首页新增侧边栏</title>
@@ -431,34 +459,6 @@
         
         
           &lt;div class=&quot;note
-        
-      
-    
-    </summary>
-    
-    
-      <category term="前端" scheme="http://yuang01.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="tag" scheme="http://yuang01.github.io/tags/tag/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Github卡片</title>
-    <link href="http://yuang01.github.io/post/ghcard/"/>
-    <id>http://yuang01.github.io/post/ghcard/</id>
-    <published>2021-02-08T03:35:00.000Z</published>
-    <updated>2021-05-11T01:57:17.503Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 class=&quot;bamboo-h &quot; id=&quot;Github用户卡片&quot;&gt;Github用户卡片&lt;/h2&gt;&lt;br/&gt;
-&lt;a class=&quot;ghcard&quot; rel=&quot;external nofollow noopener noreferrer&quot;
         
       
     
