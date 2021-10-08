@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yuang01.github.io/"/>
-  <updated>2021-10-08T07:50:34.746Z</updated>
+  <updated>2021-10-08T08:10:48.200Z</updated>
   <id>http://yuang01.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://yuang01.github.io/post/mathjax/index/"/>
     <id>http://yuang01.github.io/post/mathjax/index/</id>
     <published>2021-10-08T06:03:20.000Z</published>
-    <updated>2021-10-08T07:50:34.746Z</updated>
+    <updated>2021-10-08T08:10:48.200Z</updated>
     
     <summary type="html">
     
@@ -30,6 +30,9 @@
         
         
           &lt;p&gt;在文章中设置&lt;code&gt;mathjax: true&lt;/code&gt;即可&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;需要v2.6.4+版本&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h2 id=&quot;事例：&quot;&gt;&lt;a href=&quot;#事例：&quot; class=&quot;headerlink&quot;
         
       
