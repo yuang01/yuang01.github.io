@@ -1250,20 +1250,30 @@ Your browser does not support the video tag.
 
 
   <script>
-  if (document.getElementsByClassName('mermaid').length) {
-    if (window.mermaidJsLoad) mermaid.init()
-    else {
-      loadScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js').then(() => {
-        window.mermaidJsLoad = true
-        mermaid.initialize({
-          theme: 'default',
+  function loadMermaid() {
+    if (document.getElementsByClassName('mermaid').length) {
+      if (window.mermaidJsLoad) mermaid.init()
+      else {
+        loadScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js').then(() => {
+          window.mermaidJsLoad = true
+          mermaid.initialize({
+            theme: 'default',
+          })
+          if ('true') {
+            mermaid.init();
+          }
         })
-        if (!'true') {
-          mermaid.init();
-        }
-      })
+      }
     }
-  }
+  };
+  document.addEventListener("DOMContentLoaded", function () {
+    loadMermaid();
+  })
+
+  document.addEventListener('pjax:complete', function () {
+    loadMermaid();
+  })
+  
 </script>
 
 
