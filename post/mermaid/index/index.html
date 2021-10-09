@@ -826,11 +826,7 @@
     <article class="post post-detail">
       <div class="post-content">
         <blockquote>
-<blockquote>
-<blockquote>
 <p>支持2.6.5+</p>
-</blockquote>
-</blockquote>
 </blockquote>
 <h2 id="事例："><a href="#事例：" class="headerlink" title="事例："></a>事例：</h2><div class="mermaid">pie
     title Key elements in Product X
@@ -1234,6 +1230,24 @@ graph TD;
 </style>
 
 
+
+
+  <script>
+  if (document.getElementsByClassName('mermaid').length) {
+    if (window.mermaidJsLoad) mermaid.init()
+    else {
+      loadScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js').then(() => {
+        window.mermaidJsLoad = true
+        mermaid.initialize({
+          theme: 'default',
+        })
+        if (!'true') {
+          mermaid.init();
+        }
+      })
+    }
+  }
+</script>
 
 
       </main>

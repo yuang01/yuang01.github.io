@@ -1505,6 +1505,24 @@ books   <span class="token comment">#书籍</span><span aria-hidden="true" class
 
 
 
+  <script>
+  if (document.getElementsByClassName('mermaid').length) {
+    if (window.mermaidJsLoad) mermaid.init()
+    else {
+      loadScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js').then(() => {
+        window.mermaidJsLoad = true
+        mermaid.initialize({
+          theme: 'default',
+        })
+        if (!'true') {
+          mermaid.init();
+        }
+      })
+    }
+  }
+</script>
+
+
       </main>
     </div>
 

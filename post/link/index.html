@@ -1245,6 +1245,24 @@ markdown默认写法，左边框颜色，随着主题色改变
 
 
 
+  <script>
+  if (document.getElementsByClassName('mermaid').length) {
+    if (window.mermaidJsLoad) mermaid.init()
+    else {
+      loadScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js').then(() => {
+        window.mermaidJsLoad = true
+        mermaid.initialize({
+          theme: 'default',
+        })
+        if (!'true') {
+          mermaid.init();
+        }
+      })
+    }
+  }
+</script>
+
+
       </main>
     </div>
 

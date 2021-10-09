@@ -883,15 +883,11 @@
       
       <!-- <div class="content">
         
-
-
 支持2.6.5+
-
-
 
 事例：pie
     title Key elements in Product X
-  
+    &q
       </div> -->
     </a>
   </div>
@@ -1282,6 +1278,24 @@
 </script>
 
 
+
+
+  <script>
+  if (document.getElementsByClassName('mermaid').length) {
+    if (window.mermaidJsLoad) mermaid.init()
+    else {
+      loadScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js').then(() => {
+        window.mermaidJsLoad = true
+        mermaid.initialize({
+          theme: 'default',
+        })
+        if (!'true') {
+          mermaid.init();
+        }
+      })
+    }
+  }
+</script>
 
 
       </main>

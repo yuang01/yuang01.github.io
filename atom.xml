@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yuang01.github.io/"/>
-  <updated>2021-10-09T07:32:10.284Z</updated>
+  <updated>2021-10-09T07:41:23.588Z</updated>
   <id>http://yuang01.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://yuang01.github.io/post/mermaid/index/"/>
     <id>http://yuang01.github.io/post/mermaid/index/</id>
     <published>2021-10-09T06:03:20.000Z</published>
-    <updated>2021-10-09T07:32:10.284Z</updated>
+    <updated>2021-10-09T07:41:23.588Z</updated>
     
     <summary type="html">
     
@@ -30,13 +30,10 @@
         
         
           &lt;blockquote&gt;
-&lt;blockquote&gt;
-&lt;blockquote&gt;
 &lt;p&gt;支持2.6.5+&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;/blockquote&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&quot;事例：&quot;&gt;&lt;a href=&quot;#事例：&quot;
+&lt;h2 id=&quot;事例：&quot;&gt;&lt;a href=&quot;#事例：&quot; class=&quot;headerlink&quot; title=&quot;事例：&quot;&gt;&lt;/a&gt;事例：&lt;/h2&gt;&lt;div class=&quot;mermaid&quot;&gt;pie
+
         
       
     
