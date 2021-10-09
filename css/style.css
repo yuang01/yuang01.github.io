@@ -4432,6 +4432,7 @@ pre:hover::-webkit-scrollbar-thumb:hover,
 .darkModel .post-detail .post-copyright {
   background-color: rgba(240,246,252,0.149);
 }
+.darkModel .mermaid,
 .darkModel img {
   filter: brightness(0.8);
 }
@@ -6753,4 +6754,17 @@ div.tabs .tab-content .tab-pane > .note:last-child {
     -ms-transform: rotate(360deg);
     transform: rotate(360deg);
   }
+}
+.article mjx-container {
+  font-family: 'Menlo, Monaco, monospace, courier, sans-serif';
+  padding: 16px 8px;
+  border-radius: 4px;
+  min-width: 0 !important;
+}
+.article mjx-container[jax="CHTML"][display="true"],
+.article .has-jax {
+  overflow: auto hidden;
+}
+.article mjx-container + br {
+  display: none;
 }

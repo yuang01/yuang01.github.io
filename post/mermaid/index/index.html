@@ -11,7 +11,7 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-  <title>gallery图片 | Bamboo</title>
+  <title>新增mermaid | Bamboo</title>
 
   <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico">
   <link rel="stylesheet" href="https://at.alicdn.com/t/font_1911880_c1nvbyezg17.css">
@@ -765,21 +765,21 @@
 
 
 <div class="post-detail-header" id="thumbnail_canvas" style="background-repeat: no-repeat; background-size: cover; 
-  background-position: center center;position: relative;background-image:url('https://pic2.zhimg.com/80/v2-1ecd92421c8823c396f96d15325e6d42_1440w.jpg?source=1940ef5c')">
+  background-position: center center;position: relative;background-image:url('https://pica.zhimg.com/80/v2-a71e05c37fb4970d8e5640eab6833805_1440w.jpg?source=1940ef5c')">
   <div class="post-detail-header-mask"></div>
   <canvas id="header_canvas"style="position:absolute;bottom:0;pointer-events:none;"></canvas>
   
   <div class="post-detail-header_info-box">
     <div class="title-box">
       <span class="title">
-        gallery图片
+        新增mermaid
       </span>
     </div>
     
     
       
         <span class="post-detail-header_date">
-          <i class="fas fa-calendar"></i> 发表于：2021-02-08 |
+          <i class="fas fa-calendar"></i> 发表于：2021-10-09 |
         </span>
       
 
@@ -787,8 +787,8 @@
         <span class="post-detail-header_categories">
           <i class="iconfont iconbookmark1"></i> 分类：
           
-            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-detail-header_category">
-              前端
+            <a href="/categories/mermaid/" class="post-detail-header_category">
+              mermaid
             </a>
           
         </span>
@@ -797,11 +797,11 @@
       
         <div class="post-detail-header_wordcount">
           <span class="totalcount">
-            <i class="fas fa-file-text-o"></i> 字数统计: 644 |
+            <i class="fas fa-file-text-o"></i> 字数统计: 95 |
           </span>
   
           <span class="min2read">
-            <i class="fas fa-clock"></i> 阅读时长: 3分钟 |
+            <i class="fas fa-clock"></i> 阅读时长: 1分钟 |
           </span>
   
           
@@ -825,95 +825,51 @@
   <div class="main-content">
     <article class="post post-detail">
       <div class="post-content">
-        <div class="note info"><p><strong>提示</strong></p><p>使用该标签请先将主题下的<code>_config.yml</code>中的<code>fancybox</code>设置为<code>true</code></p></div>
+        <blockquote>
+<blockquote>
+<blockquote>
+<p>支持2.6.5+</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<h2 id="事例："><a href="#事例：" class="headerlink" title="事例："></a>事例：</h2><div class="mermaid">pie
+    title Key elements in Product X
+    &quot;Calcium&quot; : 42.96
+    &quot;Potassium&quot; : 50.05
+    &quot;Magnesium&quot; : 10.01
+    &quot;Iron&quot; :  5</div>
 
-<h2 class="bamboo-h " id="一行一个图片">一行一个图片</h2><br/>
+<div class="mermaid">graph TD;
+    A--&gt;B;
+    A--&gt;C;
+    B--&gt;D;
+    C--&gt;D;</div>
 
-<div class="gallery ">
-              <p><img src="https://pic4.zhimg.com/80/v2-515859a54d7c9b89c070c6132dff4527_1440w.jpg?source=1940ef5c" class="lazyload placeholder" data-srcset="https://pic4.zhimg.com/80/v2-515859a54d7c9b89c070c6132dff4527_1440w.jpg?source=1940ef5c" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="图片描述"></p>
-            </div>
-<h3 id="上述事例代码"><a href="#上述事例代码" class="headerlink" title="上述事例代码"></a>上述事例代码</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">&#123;</span>% gallery %<span class="token punctuation">&#125;</span>
-<span class="token operator">!</span><span class="token punctuation">[</span>图片描述<span class="token punctuation">]</span><span class="token punctuation">(</span>https://pic4.zhimg.com/80/v2-515859a54d7c9b89c070c6132dff4527_1440w.jpg?source<span class="token operator">=</span>1940ef5c<span class="token punctuation">)</span>
-<span class="token punctuation">&#123;</span>% endgallery %<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<h2 class="bamboo-h " id="一行多个图片（不换行）">一行多个图片（不换行）</h2><br/>
+<p>写法：</p>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token punctuation">&#123;</span>% mermaid %<span class="token punctuation">&#125;</span>
+pie
+    title Key elements in Product X
+    <span class="token key atrule">"Calcium"</span> <span class="token punctuation">:</span> <span class="token number">42.96</span>
+    <span class="token key atrule">"Potassium"</span> <span class="token punctuation">:</span> <span class="token number">50.05</span>
+    <span class="token key atrule">"Magnesium"</span> <span class="token punctuation">:</span> <span class="token number">10.01</span>
+    <span class="token key atrule">"Iron"</span> <span class="token punctuation">:</span>  <span class="token number">5</span>
+<span class="token punctuation">&#123;</span>% endmermaid %<span class="token punctuation">&#125;</span>
 
-<div class="gallery ">
-              <p><img src="https://pic2.zhimg.com/80/v2-bcb819edb98e081817066eb6b0e6a2ef_1440w.jpg?source=1940ef5c" class="lazyload placeholder" data-srcset="https://pic2.zhimg.com/80/v2-bcb819edb98e081817066eb6b0e6a2ef_1440w.jpg?source=1940ef5c" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="图片描述"><br><img src="https://pic2.zhimg.com/80/v2-f1b467abef1caeb5537f399da4ddbc9d_1440w.jpg?source=1940ef5c" class="lazyload placeholder" data-srcset="https://pic2.zhimg.com/80/v2-f1b467abef1caeb5537f399da4ddbc9d_1440w.jpg?source=1940ef5c" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="图片描述"><br><img src="https://pic2.zhimg.com/80/v2-c513cb0d2eff43b5391ea682f1ba07c6_1440w.jpg?source=1940ef5c" class="lazyload placeholder" data-srcset="https://pic2.zhimg.com/80/v2-c513cb0d2eff43b5391ea682f1ba07c6_1440w.jpg?source=1940ef5c" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="图片描述"></p>
-            </div>
-<h3 id="上述事例代码-1"><a href="#上述事例代码-1" class="headerlink" title="上述事例代码"></a>上述事例代码</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">&#123;</span>% gallery %<span class="token punctuation">&#125;</span>
-<span class="token operator">!</span><span class="token punctuation">[</span>图片描述<span class="token punctuation">]</span><span class="token punctuation">(</span>https://pic2.zhimg.com/80/v2-bcb819edb98e081817066eb6b0e6a2ef_1440w.jpg?source<span class="token operator">=</span>1940ef5c<span class="token punctuation">)</span>
-<span class="token operator">!</span><span class="token punctuation">[</span>图片描述<span class="token punctuation">]</span><span class="token punctuation">(</span>https://pic2.zhimg.com/80/v2-f1b467abef1caeb5537f399da4ddbc9d_1440w.jpg?source<span class="token operator">=</span>1940ef5c<span class="token punctuation">)</span>
-<span class="token operator">!</span><span class="token punctuation">[</span>图片描述<span class="token punctuation">]</span><span class="token punctuation">(</span>https://pic2.zhimg.com/80/v2-c513cb0d2eff43b5391ea682f1ba07c6_1440w.jpg?source<span class="token operator">=</span>1940ef5c<span class="token punctuation">)</span>
-<span class="token punctuation">&#123;</span>% endgallery %<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 class="bamboo-h " id="多行多个图片（每行2～8个图片）">多行多个图片（每行2～8个图片）</h2><br/>
-<p>多行多个图片（每行2～8个图片）</p>
-<div class="gallery stretch" col='4'>
-              <p><img src="https://pic2.zhimg.com/80/v2-bcb819edb98e081817066eb6b0e6a2ef_1440w.jpg?source=1940ef5c" class="lazyload placeholder" data-srcset="https://pic2.zhimg.com/80/v2-bcb819edb98e081817066eb6b0e6a2ef_1440w.jpg?source=1940ef5c" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="图片描述"><br><img src="https://pic2.zhimg.com/80/v2-f1b467abef1caeb5537f399da4ddbc9d_1440w.jpg?source=1940ef5c" class="lazyload placeholder" data-srcset="https://pic2.zhimg.com/80/v2-f1b467abef1caeb5537f399da4ddbc9d_1440w.jpg?source=1940ef5c" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="图片描述"><br><img src="https://pic2.zhimg.com/80/v2-c513cb0d2eff43b5391ea682f1ba07c6_1440w.jpg?source=1940ef5c" class="lazyload placeholder" data-srcset="https://pic2.zhimg.com/80/v2-c513cb0d2eff43b5391ea682f1ba07c6_1440w.jpg?source=1940ef5c" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="图片描述"><br><img src="https://pic2.zhimg.com/80/v2-bcb819edb98e081817066eb6b0e6a2ef_1440w.jpg?source=1940ef5c" class="lazyload placeholder" data-srcset="https://pic2.zhimg.com/80/v2-bcb819edb98e081817066eb6b0e6a2ef_1440w.jpg?source=1940ef5c" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="图片描述"><br><img src="https://pic2.zhimg.com/80/v2-f1b467abef1caeb5537f399da4ddbc9d_1440w.jpg?source=1940ef5c" class="lazyload placeholder" data-srcset="https://pic2.zhimg.com/80/v2-f1b467abef1caeb5537f399da4ddbc9d_1440w.jpg?source=1940ef5c" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="图片描述"><br><img src="https://pic2.zhimg.com/80/v2-c513cb0d2eff43b5391ea682f1ba07c6_1440w.jpg?source=1940ef5c" class="lazyload placeholder" data-srcset="https://pic2.zhimg.com/80/v2-c513cb0d2eff43b5391ea682f1ba07c6_1440w.jpg?source=1940ef5c" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="图片描述"></p>
-            </div>
-<h3 id="上述事例代码-2"><a href="#上述事例代码-2" class="headerlink" title="上述事例代码"></a>上述事例代码</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">&#123;</span>% gallery stretch, <span class="token number">4</span> %<span class="token punctuation">&#125;</span>
-<span class="token operator">!</span><span class="token punctuation">[</span>图片描述<span class="token punctuation">]</span><span class="token punctuation">(</span>https://pic2.zhimg.com/80/v2-bcb819edb98e081817066eb6b0e6a2ef_1440w.jpg?source<span class="token operator">=</span>1940ef5c<span class="token punctuation">)</span>
-<span class="token operator">!</span><span class="token punctuation">[</span>图片描述<span class="token punctuation">]</span><span class="token punctuation">(</span>https://pic2.zhimg.com/80/v2-f1b467abef1caeb5537f399da4ddbc9d_1440w.jpg?source<span class="token operator">=</span>1940ef5c<span class="token punctuation">)</span>
-<span class="token operator">!</span><span class="token punctuation">[</span>图片描述<span class="token punctuation">]</span><span class="token punctuation">(</span>https://pic2.zhimg.com/80/v2-c513cb0d2eff43b5391ea682f1ba07c6_1440w.jpg?source<span class="token operator">=</span>1940ef5c<span class="token punctuation">)</span>
-<span class="token operator">!</span><span class="token punctuation">[</span>图片描述<span class="token punctuation">]</span><span class="token punctuation">(</span>https://pic2.zhimg.com/80/v2-bcb819edb98e081817066eb6b0e6a2ef_1440w.jpg?source<span class="token operator">=</span>1940ef5c<span class="token punctuation">)</span>
-<span class="token operator">!</span><span class="token punctuation">[</span>图片描述<span class="token punctuation">]</span><span class="token punctuation">(</span>https://pic2.zhimg.com/80/v2-f1b467abef1caeb5537f399da4ddbc9d_1440w.jpg?source<span class="token operator">=</span>1940ef5c<span class="token punctuation">)</span>
-<span class="token operator">!</span><span class="token punctuation">[</span>图片描述<span class="token punctuation">]</span><span class="token punctuation">(</span>https://pic2.zhimg.com/80/v2-c513cb0d2eff43b5391ea682f1ba07c6_1440w.jpg?source<span class="token operator">=</span>1940ef5c<span class="token punctuation">)</span>
-<span class="token punctuation">&#123;</span>% endgallery %<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>多行多个图片（每行2～8个图片）</p>
-<div class="gallery stretch" col='8'>
-              <p><img src="https://pic2.zhimg.com/80/v2-bcb819edb98e081817066eb6b0e6a2ef_1440w.jpg?source=1940ef5c" class="lazyload placeholder" data-srcset="https://pic2.zhimg.com/80/v2-bcb819edb98e081817066eb6b0e6a2ef_1440w.jpg?source=1940ef5c" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="图片描述"><br><img src="https://pic2.zhimg.com/80/v2-f1b467abef1caeb5537f399da4ddbc9d_1440w.jpg?source=1940ef5c" class="lazyload placeholder" data-srcset="https://pic2.zhimg.com/80/v2-f1b467abef1caeb5537f399da4ddbc9d_1440w.jpg?source=1940ef5c" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="图片描述"><br><img src="https://pic2.zhimg.com/80/v2-c513cb0d2eff43b5391ea682f1ba07c6_1440w.jpg?source=1940ef5c" class="lazyload placeholder" data-srcset="https://pic2.zhimg.com/80/v2-c513cb0d2eff43b5391ea682f1ba07c6_1440w.jpg?source=1940ef5c" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="图片描述"><br><img src="https://pic2.zhimg.com/80/v2-d0fe3a2cc79628c6a017f0066d4dee63_1440w.jpg?source=1940ef5c" class="lazyload placeholder" data-srcset="https://pic2.zhimg.com/80/v2-d0fe3a2cc79628c6a017f0066d4dee63_1440w.jpg?source=1940ef5c" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="图片描述"><br><img src="https://pic4.zhimg.com/80/v2-f7d6c7021cff3e23d8481faec2048890_1440w.jpg?source=1940ef5c" class="lazyload placeholder" data-srcset="https://pic4.zhimg.com/80/v2-f7d6c7021cff3e23d8481faec2048890_1440w.jpg?source=1940ef5c" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="图片描述"><br><img src="https://pic4.zhimg.com/80/v2-d191b620ff97a55b634786528206002a_1440w.jpg?source=1940ef5c" class="lazyload placeholder" data-srcset="https://pic4.zhimg.com/80/v2-d191b620ff97a55b634786528206002a_1440w.jpg?source=1940ef5c" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="图片描述"><br><img src="https://pic2.zhimg.com/80/v2-bcb819edb98e081817066eb6b0e6a2ef_1440w.jpg?source=1940ef5c" class="lazyload placeholder" data-srcset="https://pic2.zhimg.com/80/v2-bcb819edb98e081817066eb6b0e6a2ef_1440w.jpg?source=1940ef5c" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="图片描述"><br><img src="https://pic2.zhimg.com/80/v2-f1b467abef1caeb5537f399da4ddbc9d_1440w.jpg?source=1940ef5c" class="lazyload placeholder" data-srcset="https://pic2.zhimg.com/80/v2-f1b467abef1caeb5537f399da4ddbc9d_1440w.jpg?source=1940ef5c" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="图片描述"><br><img src="https://pic2.zhimg.com/80/v2-c513cb0d2eff43b5391ea682f1ba07c6_1440w.jpg?source=1940ef5c" class="lazyload placeholder" data-srcset="https://pic2.zhimg.com/80/v2-c513cb0d2eff43b5391ea682f1ba07c6_1440w.jpg?source=1940ef5c" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="图片描述"><br><img src="https://pic2.zhimg.com/80/v2-d0fe3a2cc79628c6a017f0066d4dee63_1440w.jpg?source=1940ef5c" class="lazyload placeholder" data-srcset="https://pic2.zhimg.com/80/v2-d0fe3a2cc79628c6a017f0066d4dee63_1440w.jpg?source=1940ef5c" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="图片描述"><br><img src="https://pic4.zhimg.com/80/v2-f7d6c7021cff3e23d8481faec2048890_1440w.jpg?source=1940ef5c" class="lazyload placeholder" data-srcset="https://pic4.zhimg.com/80/v2-f7d6c7021cff3e23d8481faec2048890_1440w.jpg?source=1940ef5c" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="图片描述"><br><img src="https://pic4.zhimg.com/80/v2-d191b620ff97a55b634786528206002a_1440w.jpg?source=1940ef5c" class="lazyload placeholder" data-srcset="https://pic4.zhimg.com/80/v2-d191b620ff97a55b634786528206002a_1440w.jpg?source=1940ef5c" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="图片描述"><br><img src="https://pic2.zhimg.com/80/v2-f1b467abef1caeb5537f399da4ddbc9d_1440w.jpg?source=1940ef5c" class="lazyload placeholder" data-srcset="https://pic2.zhimg.com/80/v2-f1b467abef1caeb5537f399da4ddbc9d_1440w.jpg?source=1940ef5c" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="图片描述"><br><img src="https://pic2.zhimg.com/80/v2-c513cb0d2eff43b5391ea682f1ba07c6_1440w.jpg?source=1940ef5c" class="lazyload placeholder" data-srcset="https://pic2.zhimg.com/80/v2-c513cb0d2eff43b5391ea682f1ba07c6_1440w.jpg?source=1940ef5c" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="图片描述"><br><img src="https://pic2.zhimg.com/80/v2-d0fe3a2cc79628c6a017f0066d4dee63_1440w.jpg?source=1940ef5c" class="lazyload placeholder" data-srcset="https://pic2.zhimg.com/80/v2-d0fe3a2cc79628c6a017f0066d4dee63_1440w.jpg?source=1940ef5c" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="图片描述"><br><img src="https://pic4.zhimg.com/80/v2-f7d6c7021cff3e23d8481faec2048890_1440w.jpg?source=1940ef5c" class="lazyload placeholder" data-srcset="https://pic4.zhimg.com/80/v2-f7d6c7021cff3e23d8481faec2048890_1440w.jpg?source=1940ef5c" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="图片描述"></p>
-            </div>
-
-<h3 id="上述事例代码-3"><a href="#上述事例代码-3" class="headerlink" title="上述事例代码"></a>上述事例代码</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">多行多个图片（每行2～8个图片）
-<span class="token punctuation">&#123;</span>% gallery stretch, <span class="token number">8</span> %<span class="token punctuation">&#125;</span>
-<span class="token operator">!</span><span class="token punctuation">[</span>图片描述<span class="token punctuation">]</span><span class="token punctuation">(</span>https://pic2.zhimg.com/80/v2-bcb819edb98e081817066eb6b0e6a2ef_1440w.jpg?source<span class="token operator">=</span>1940ef5c<span class="token punctuation">)</span>
-<span class="token operator">!</span><span class="token punctuation">[</span>图片描述<span class="token punctuation">]</span><span class="token punctuation">(</span>https://pic2.zhimg.com/80/v2-f1b467abef1caeb5537f399da4ddbc9d_1440w.jpg?source<span class="token operator">=</span>1940ef5c<span class="token punctuation">)</span>
-<span class="token operator">!</span><span class="token punctuation">[</span>图片描述<span class="token punctuation">]</span><span class="token punctuation">(</span>https://pic2.zhimg.com/80/v2-c513cb0d2eff43b5391ea682f1ba07c6_1440w.jpg?source<span class="token operator">=</span>1940ef5c<span class="token punctuation">)</span>
-<span class="token operator">!</span><span class="token punctuation">[</span>图片描述<span class="token punctuation">]</span><span class="token punctuation">(</span>https://pic2.zhimg.com/80/v2-d0fe3a2cc79628c6a017f0066d4dee63_1440w.jpg?source<span class="token operator">=</span>1940ef5c<span class="token punctuation">)</span>
-<span class="token operator">!</span><span class="token punctuation">[</span>图片描述<span class="token punctuation">]</span><span class="token punctuation">(</span>https://pic4.zhimg.com/80/v2-f7d6c7021cff3e23d8481faec2048890_1440w.jpg?source<span class="token operator">=</span>1940ef5c<span class="token punctuation">)</span>
-<span class="token operator">!</span><span class="token punctuation">[</span>图片描述<span class="token punctuation">]</span><span class="token punctuation">(</span>https://pic4.zhimg.com/80/v2-d191b620ff97a55b634786528206002a_1440w.jpg?source<span class="token operator">=</span>1940ef5c<span class="token punctuation">)</span>
-<span class="token operator">!</span><span class="token punctuation">[</span>图片描述<span class="token punctuation">]</span><span class="token punctuation">(</span>https://pic2.zhimg.com/80/v2-bcb819edb98e081817066eb6b0e6a2ef_1440w.jpg?source<span class="token operator">=</span>1940ef5c<span class="token punctuation">)</span>
-<span class="token operator">!</span><span class="token punctuation">[</span>图片描述<span class="token punctuation">]</span><span class="token punctuation">(</span>https://pic2.zhimg.com/80/v2-f1b467abef1caeb5537f399da4ddbc9d_1440w.jpg?source<span class="token operator">=</span>1940ef5c<span class="token punctuation">)</span>
-<span class="token operator">!</span><span class="token punctuation">[</span>图片描述<span class="token punctuation">]</span><span class="token punctuation">(</span>https://pic2.zhimg.com/80/v2-c513cb0d2eff43b5391ea682f1ba07c6_1440w.jpg?source<span class="token operator">=</span>1940ef5c<span class="token punctuation">)</span>
-<span class="token operator">!</span><span class="token punctuation">[</span>图片描述<span class="token punctuation">]</span><span class="token punctuation">(</span>https://pic2.zhimg.com/80/v2-d0fe3a2cc79628c6a017f0066d4dee63_1440w.jpg?source<span class="token operator">=</span>1940ef5c<span class="token punctuation">)</span>
-<span class="token operator">!</span><span class="token punctuation">[</span>图片描述<span class="token punctuation">]</span><span class="token punctuation">(</span>https://pic4.zhimg.com/80/v2-f7d6c7021cff3e23d8481faec2048890_1440w.jpg?source<span class="token operator">=</span>1940ef5c<span class="token punctuation">)</span>
-<span class="token operator">!</span><span class="token punctuation">[</span>图片描述<span class="token punctuation">]</span><span class="token punctuation">(</span>https://pic4.zhimg.com/80/v2-d191b620ff97a55b634786528206002a_1440w.jpg?source<span class="token operator">=</span>1940ef5c<span class="token punctuation">)</span>
-<span class="token operator">!</span><span class="token punctuation">[</span>图片描述<span class="token punctuation">]</span><span class="token punctuation">(</span>https://pic2.zhimg.com/80/v2-f1b467abef1caeb5537f399da4ddbc9d_1440w.jpg?source<span class="token operator">=</span>1940ef5c<span class="token punctuation">)</span>
-<span class="token operator">!</span><span class="token punctuation">[</span>图片描述<span class="token punctuation">]</span><span class="token punctuation">(</span>https://pic2.zhimg.com/80/v2-c513cb0d2eff43b5391ea682f1ba07c6_1440w.jpg?source<span class="token operator">=</span>1940ef5c<span class="token punctuation">)</span>
-<span class="token operator">!</span><span class="token punctuation">[</span>图片描述<span class="token punctuation">]</span><span class="token punctuation">(</span>https://pic2.zhimg.com/80/v2-d0fe3a2cc79628c6a017f0066d4dee63_1440w.jpg?source<span class="token operator">=</span>1940ef5c<span class="token punctuation">)</span>
-<span class="token operator">!</span><span class="token punctuation">[</span>图片描述<span class="token punctuation">]</span><span class="token punctuation">(</span>https://pic4.zhimg.com/80/v2-f7d6c7021cff3e23d8481faec2048890_1440w.jpg?source<span class="token operator">=</span>1940ef5c<span class="token punctuation">)</span>
-<span class="token punctuation">&#123;</span>% endgallery %<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 class="bamboo-h " id="组合使用">组合使用</h2><br/>
-
-<div class="gallery ">
-              <p><img src="https://pic2.zhimg.com/80/v2-bcb819edb98e081817066eb6b0e6a2ef_1440w.jpg?source=1940ef5c" class="lazyload placeholder" data-srcset="https://pic2.zhimg.com/80/v2-bcb819edb98e081817066eb6b0e6a2ef_1440w.jpg?source=1940ef5c" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="图片描述"><br><img src="https://pic2.zhimg.com/80/v2-f1b467abef1caeb5537f399da4ddbc9d_1440w.jpg?source=1940ef5c" class="lazyload placeholder" data-srcset="https://pic2.zhimg.com/80/v2-f1b467abef1caeb5537f399da4ddbc9d_1440w.jpg?source=1940ef5c" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="图片描述"></p>
-            </div>
-<div class="gallery ">
-              <p><img src="https://pic2.zhimg.com/80/v2-bcb819edb98e081817066eb6b0e6a2ef_1440w.jpg?source=1940ef5c" class="lazyload placeholder" data-srcset="https://pic2.zhimg.com/80/v2-bcb819edb98e081817066eb6b0e6a2ef_1440w.jpg?source=1940ef5c" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="图片描述"><br><img src="https://pic2.zhimg.com/80/v2-f1b467abef1caeb5537f399da4ddbc9d_1440w.jpg?source=1940ef5c" class="lazyload placeholder" data-srcset="https://pic2.zhimg.com/80/v2-f1b467abef1caeb5537f399da4ddbc9d_1440w.jpg?source=1940ef5c" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="图片描述"><br><img src="https://pic2.zhimg.com/80/v2-c513cb0d2eff43b5391ea682f1ba07c6_1440w.jpg?source=1940ef5c" class="lazyload placeholder" data-srcset="https://pic2.zhimg.com/80/v2-c513cb0d2eff43b5391ea682f1ba07c6_1440w.jpg?source=1940ef5c" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="图片描述"><br><img src="https://pic2.zhimg.com/80/v2-c513cb0d2eff43b5391ea682f1ba07c6_1440w.jpg?source=1940ef5c" class="lazyload placeholder" data-srcset="https://pic2.zhimg.com/80/v2-c513cb0d2eff43b5391ea682f1ba07c6_1440w.jpg?source=1940ef5c" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="图片描述"></p>
-            </div>
-<div class="gallery ">
-              <p><img src="https://pic2.zhimg.com/80/v2-bcb819edb98e081817066eb6b0e6a2ef_1440w.jpg?source=1940ef5c" class="lazyload placeholder" data-srcset="https://pic2.zhimg.com/80/v2-bcb819edb98e081817066eb6b0e6a2ef_1440w.jpg?source=1940ef5c" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="图片描述"><br><img src="https://pic2.zhimg.com/80/v2-f1b467abef1caeb5537f399da4ddbc9d_1440w.jpg?source=1940ef5c" class="lazyload placeholder" data-srcset="https://pic2.zhimg.com/80/v2-f1b467abef1caeb5537f399da4ddbc9d_1440w.jpg?source=1940ef5c" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="图片描述"></p>
-            </div>
-<h3 id="上述事例代码-4"><a href="#上述事例代码-4" class="headerlink" title="上述事例代码"></a>上述事例代码</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">&#123;</span>% gallery %<span class="token punctuation">&#125;</span>
-<span class="token operator">!</span><span class="token punctuation">[</span>图片描述<span class="token punctuation">]</span><span class="token punctuation">(</span>https://pic2.zhimg.com/80/v2-bcb819edb98e081817066eb6b0e6a2ef_1440w.jpg?source<span class="token operator">=</span>1940ef5c<span class="token punctuation">)</span>
-<span class="token operator">!</span><span class="token punctuation">[</span>图片描述<span class="token punctuation">]</span><span class="token punctuation">(</span>https://pic2.zhimg.com/80/v2-f1b467abef1caeb5537f399da4ddbc9d_1440w.jpg?source<span class="token operator">=</span>1940ef5c<span class="token punctuation">)</span>
-<span class="token punctuation">&#123;</span>% endgallery %<span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#123;</span>% gallery %<span class="token punctuation">&#125;</span>
-<span class="token operator">!</span><span class="token punctuation">[</span>图片描述<span class="token punctuation">]</span><span class="token punctuation">(</span>https://pic2.zhimg.com/80/v2-bcb819edb98e081817066eb6b0e6a2ef_1440w.jpg?source<span class="token operator">=</span>1940ef5c<span class="token punctuation">)</span>
-<span class="token operator">!</span><span class="token punctuation">[</span>图片描述<span class="token punctuation">]</span><span class="token punctuation">(</span>https://pic2.zhimg.com/80/v2-f1b467abef1caeb5537f399da4ddbc9d_1440w.jpg?source<span class="token operator">=</span>1940ef5c<span class="token punctuation">)</span>
-<span class="token operator">!</span><span class="token punctuation">[</span>图片描述<span class="token punctuation">]</span><span class="token punctuation">(</span>https://pic2.zhimg.com/80/v2-c513cb0d2eff43b5391ea682f1ba07c6_1440w.jpg?source<span class="token operator">=</span>1940ef5c<span class="token punctuation">)</span>
-<span class="token operator">!</span><span class="token punctuation">[</span>图片描述<span class="token punctuation">]</span><span class="token punctuation">(</span>https://pic2.zhimg.com/80/v2-c513cb0d2eff43b5391ea682f1ba07c6_1440w.jpg?source<span class="token operator">=</span>1940ef5c<span class="token punctuation">)</span>
-<span class="token punctuation">&#123;</span>% endgallery %<span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#123;</span>% gallery %<span class="token punctuation">&#125;</span>
-<span class="token operator">!</span><span class="token punctuation">[</span>图片描述<span class="token punctuation">]</span><span class="token punctuation">(</span>https://pic2.zhimg.com/80/v2-bcb819edb98e081817066eb6b0e6a2ef_1440w.jpg?source<span class="token operator">=</span>1940ef5c<span class="token punctuation">)</span>
-<span class="token operator">!</span><span class="token punctuation">[</span>图片描述<span class="token punctuation">]</span><span class="token punctuation">(</span>https://pic2.zhimg.com/80/v2-f1b467abef1caeb5537f399da4ddbc9d_1440w.jpg?source<span class="token operator">=</span>1940ef5c<span class="token punctuation">)</span>
-<span class="token punctuation">&#123;</span>% endgallery %<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">&#123;</span>% mermaid %<span class="token punctuation">&#125;</span>
+graph TD;
+    A<span class="token punctuation">-</span><span class="token punctuation">-</span><span class="token punctuation">></span>B;
+    A<span class="token punctuation">-</span><span class="token punctuation">-</span><span class="token punctuation">></span>C;
+    B<span class="token punctuation">-</span><span class="token punctuation">-</span><span class="token punctuation">></span>D;
+    C<span class="token punctuation">-</span><span class="token punctuation">-</span><span class="token punctuation">></span>D;
+<span class="token punctuation">&#123;</span>% endmermaid %<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<div class="tagLink"><a class="link-card" title="mermaid" target="_blank" rel="noopener" href="https://github.com/mermaid-js/mermaid"><span class="link-card-backdrop" style="background-image: url(https://cdn.pixabay.com/photo/2018/12/05/13/41/panda-3857754__340.jpg)"></span><div class="left"><img src="https://cdn.pixabay.com/photo/2018/12/05/13/41/panda-3857754__340.jpg" class="lazyload placeholder" data-srcset="https://cdn.pixabay.com/photo/2018/12/05/13/41/panda-3857754__340.jpg" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg"/></div><div class="right"><p class="text">mermaid</p><p class="url">https://github.com/mermaid-js/mermaid</p></div></a></div>
       </div>
       <div class="post-tags-categories">
         
         <div class="tags">
           
-            <a href="/tags/tag/" class="">
-              tag
+            <a href="/tags/mermaid/" class="">
+              mermaid
             </a>
           
         </div>
@@ -927,7 +883,7 @@
     </li>
     <li class="post-copyright-link">
     <strong>文章链接:  </strong>
-    <a href="//post/gallery/" target="_blank" title="gallery图片">http://yuang01.github.io//post/gallery/</a>
+    <a href="//post/mermaid/index/" target="_blank" title="新增mermaid">http://yuang01.github.io//post/mermaid/index/</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明:   </strong>
@@ -945,51 +901,25 @@
 
 
 
-  
-  <div class="post-nav-prev post-nav-item">
-    <div class="post-nav-img" style="background-size: cover; 
-      background-position: center center;">
-      <img class="lazyload lazyload placeholder" src="https://pic4.zhimg.com/80/v2-3b4ca49ff4fc567faa76ce6f02cffac9_1440w.jpg?source=1940ef5c" class="lazyload placeholder" data-srcset="https://pic4.zhimg.com/80/v2-3b4ca49ff4fc567faa76ce6f02cffac9_1440w.jpg?source=1940ef5c" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="">
-    </div>
-    <a href="/post/folding/" class="post-nav-link">
-      <div class="title">
-        <i class="fas fa-angle-left"></i> 上一篇:
-        <div class="title-text">folding折叠</div>
-      </div>
-      
-      <!-- <div class="content">
-        
-基本
-
- 查看图片测试 
-              
-              
-              
- 
-      </div> -->
-    </a>
-  </div>
-
 
 
   
   <div class="post-nav-next post-nav-item">
     <div class="post-nav-img" style="background-size: cover; 
       background-position: center center;">
-      <img class="lazyload lazyload placeholder" src="https://pic3.zhimg.com/80/v2-b7c7899676492453229763b26835f6dc_1440w.jpg?source=1940ef5c" class="lazyload placeholder" data-srcset="https://pic3.zhimg.com/80/v2-b7c7899676492453229763b26835f6dc_1440w.jpg?source=1940ef5c" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" src="" alt="">
+      <img class="lazyload lazyload placeholder" src="https://pic1.zhimg.com/80/v2-78d724c077f0af2f991e18ea1d5516c3_1440w.jpg?source=1940ef5c" class="lazyload placeholder" data-srcset="https://pic1.zhimg.com/80/v2-78d724c077f0af2f991e18ea1d5516c3_1440w.jpg?source=1940ef5c" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" src="" alt="">
     </div>
-    <a href="/post/ghcard/" class="post-nav-link">
+    <a href="/post/mathjax/index/" class="post-nav-link">
       <div class="title">
         下一篇: <i class="fas fa-angle-right"></i>
-        <div class="title-text">Github卡片</div>
+        <div class="title-text">新增mathjax</div>
       </div>
       <!-- <div class="content">
-        Github用户卡片
+        在文章中设置mathjax: true即可
 
-上述示例代码&#123;% ghcard yuang01 %&#125;
-表格中加入用户卡片
+需要v2.6.4+版本
 
-
+事例：$\sum_{i=0}^N\int_{a}
       </div> -->
     </a>
   </div>
@@ -1154,7 +1084,7 @@
   <script>
     function openBtnClickFn () {
       let openOrCloseBtn = $('.toc-aside .toc-aside-title .toc-open-close');
-      let open = eval('false' || 'false');
+      let open = eval('' || 'false');
       openOrCloseBtn.click(function() {
         if (open === true) {
           $(".toc-aside").css({'width': 0, 'padding': 0});

@@ -670,74 +670,50 @@
     <!-- 需要在上面加载的js -->
     <script>
   function loadScript(src, cb) {
-    setTimeout(function () {
-      var HEAD = document.getElementsByTagName('head')[0] || document.documentElement;
-      var script = document.createElement('script');
-      script.setAttribute('type', 'text/javascript');
-      if (cb) script.onload = cb;
-      script.setAttribute('src', src);
-      HEAD.appendChild(script);
+    return new Promise(resolve => {
+      setTimeout(function () {
+        var HEAD = document.getElementsByTagName("head")[0] || document.documentElement;
+        var script = document.createElement("script");
+        script.setAttribute("type", "text/javascript");
+        if (cb) {
+          if (JSON.stringify(cb)) {
+            for (let p in cb) {
+              if (p == "onload") {
+                script[p] = () => {
+                  cb[p]()
+                  resolve()
+                }
+              } else {
+                script[p] = cb[p]
+                script.onload = resolve
+              }
+            }
+          } else {
+            script.onload = () => {
+              cb()
+              resolve()
+            };
+          }
+        } else {
+          script.onload = resolve
+        }
+        script.setAttribute("src", src);
+        HEAD.appendChild(script);
+      });
     });
   }
 
   //https://github.com/filamentgroup/loadCSS
   var loadCSS = function (href, before, media, attributes) {
-    var doc = window.document;
-    var ss = doc.createElement("link");
-    var ref;
-    if (before) {
-      ref = before;
-    }
-    else {
-      var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
-      ref = refs[refs.length - 1];
-    }
-    var sheets = doc.styleSheets;
-    if (attributes) {
-      for (var attributeName in attributes) {
-        if (attributes.hasOwnProperty(attributeName)) {
-          ss.setAttribute(attributeName, attributes[attributeName]);
-        }
-      }
-    }
-    ss.rel = "stylesheet";
-    ss.href = href;
-    ss.media = "only x";
-    function ready(cb) {
-      if (doc.body) {
-        return cb();
-      }
+    return new Promise(resolve => {
       setTimeout(function () {
-        ready(cb);
+        var link = document.createElement('link');
+        link.rel = "stylesheet";
+        link.href = src;
+        link.onload = resolve;
+        document.getElementsByTagName("head")[0].appendChild(link);
       });
-    }
-    ready(function () {
-      ref.parentNode.insertBefore(ss, (before ? ref : ref.nextSibling));
     });
-    var onloadcssdefined = function (cb) {
-      var resolvedHref = ss.href;
-      var i = sheets.length;
-      while (i--) {
-        if (sheets[i].href === resolvedHref) {
-          return cb();
-        }
-      }
-      setTimeout(function () {
-        onloadcssdefined(cb);
-      });
-    };
-    function loadCB() {
-      if (ss.addEventListener) {
-        ss.removeEventListener("load", loadCB);
-      }
-      ss.media = media || "all";
-    }
-    if (ss.addEventListener) {
-      ss.addEventListener("load", loadCB);
-    }
-    ss.onloadcssdefined = onloadcssdefined;
-    onloadcssdefined(loadCB);
-    return ss;
   };
 
 </script> 
@@ -772,7 +748,7 @@
 
 
 
-<div class="swiper-length" style="display: none;">9</div>
+<div class="swiper-length" style="display: none;">10</div>
 <div id="appSwiper"
   class=""
   @mouseenter="stopAutoPlay()" 
@@ -822,6 +798,45 @@
           </div>
         </swiper-slide>
       
+      
+        
+        
+          
+          <swiper-slide>
+            <div class="item swiper-lazy" data-background="https://pica.zhimg.com/80/v2-a71e05c37fb4970d8e5640eab6833805_1440w.jpg?source=1940ef5c" style=" background-size: 300000px; 
+            background-position: left center;" style="position: relative;">
+              <div class="swiper-bgmask" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;"></div>
+              <div class="flag" style="z-index: 2;">
+                <div class="img-mask swiper-lazy" data-background="https://pica.zhimg.com/80/v2-a71e05c37fb4970d8e5640eab6833805_1440w.jpg?source=1940ef5c" style="height: 100%; background-size: cover; 
+                  background-position: center center;">
+                  <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>  
+                </div>
+                <div class="flag-text">
+                  <div class="flag-text-content">
+                    <div class="title ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">
+                      <a href="/post/mermaid/index/">
+                        新增mermaid
+                      </a>
+                    </div>
+                    <div class="excerpt ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">
+
+
+支持2.6.5+
+
+
+
+事例：pie
+    title Key elements in Product X
+    &quot;Calcium&quot; : 42.96
+    &quot;Potassium&quot; : 50</div>
+                  </div>
+                  <div class="bottom-one-btn ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s"><a href="/post/mermaid/index/" class="read-more swiper-btn-color" style="display: inline-block; z-index:1;">阅读更多</a></div>
+                </div>
+              </div>
+            </div>
+
+          </swiper-slide>
+        
       
         
         
@@ -2031,6 +2046,8 @@
 			
 		
 			
+		
+			
 				<div class="article-link">
 					
 					<div class="article" style="background-size: cover; 
@@ -2169,6 +2186,70 @@
         <div class="post-info">
           <div class="post-time">
             <i class="fas fa-clock" aria-hidden="true"></i>
+            <span class="post-time">2021-10-09</span>
+          </div>
+          <div class="post-title">
+            <a class="post-title-link" href="/post/mermaid/index/">新增mermaid</a>
+          </div>
+          <div class="post-meta">
+            <div class="post-tags">
+              <!-- 文章详情页的标签 -->
+
+    <i class="iconfont icontag"></i>
+    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mermaid/" rel="tag">mermaid</a></li></ul>
+
+            </div>
+            <div class="post-categories">
+              <!-- 文章详情页的分类 -->
+
+<div class="article-category">
+  <i class="iconfont iconbookmark1"></i>
+  <a class="article-category-link" href="/categories/mermaid/">mermaid</a>
+</div>
+
+
+            </div>
+          </div>
+          <div class="post-img-mobile">
+            <a href="/post/mermaid/index/" style="background-size: cover; 
+              background-position: center center;">
+              <img class="lazyload lazyload placeholder" src="https://pica.zhimg.com/80/v2-a71e05c37fb4970d8e5640eab6833805_1440w.jpg?source=1940ef5c" class="lazyload placeholder" data-srcset="https://pica.zhimg.com/80/v2-a71e05c37fb4970d8e5640eab6833805_1440w.jpg?source=1940ef5c" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="">
+            </a>
+          </div>
+          <div class="post-content">
+            
+
+
+支持2.6.5+
+
+
+
+事例：pie
+    title Key elements in Product X
+    &quot;Calcium&quot; : 42.96
+    &quot;Potassium&quot; : 50
+          </div>
+        </div>
+        <div class="post-more">
+          <a href="/post/mermaid/index/">
+            <i class="iconfont iconmore" pointer style="float: right;  " title="阅读更多"></i>
+          </a>
+        </div>
+      </div>
+      <div class="post-img">
+        <a href="/post/mermaid/index/" style="background-size: cover; 
+          background-position: center center;">
+          <img class="lazyload lazyload placeholder" src="https://pica.zhimg.com/80/v2-a71e05c37fb4970d8e5640eab6833805_1440w.jpg?source=1940ef5c" class="lazyload placeholder" data-srcset="https://pica.zhimg.com/80/v2-a71e05c37fb4970d8e5640eab6833805_1440w.jpg?source=1940ef5c" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="">
+        </a>
+      </div>
+    </article>
+  
+    
+    <article class="post reveal" style="   ">
+      <div class="post-main">
+        <div class="post-info">
+          <div class="post-time">
+            <i class="fas fa-clock" aria-hidden="true"></i>
             <span class="post-time">2021-10-08</span>
           </div>
           <div class="post-title">
@@ -2210,7 +2291,7 @@
         </div>
         <div class="post-more">
           <a href="/post/mathjax/index/">
-            <i class="iconfont iconmore" pointer style="float: right;  " title="阅读更多"></i>
+            <i class="iconfont iconmore" pointer style="  " title="阅读更多"></i>
           </a>
         </div>
       </div>
@@ -2223,7 +2304,7 @@
     </article>
   
     
-    <article class="post reveal" style="   ">
+    <article class="post reveal" style="flex-direction: row-reverse;   ">
       <div class="post-main">
         <div class="post-info">
           <div class="post-time">
@@ -2264,7 +2345,7 @@
         </div>
         <div class="post-more">
           <a href="/post/hexo-theme-bamboo/sidebar/">
-            <i class="iconfont iconmore" pointer style="  " title="阅读更多"></i>
+            <i class="iconfont iconmore" pointer style="float: right;  " title="阅读更多"></i>
           </a>
         </div>
       </div>
@@ -2277,7 +2358,7 @@
     </article>
   
     
-    <article class="post reveal" style="flex-direction: row-reverse;   ">
+    <article class="post reveal" style="   ">
       <div class="post-main">
         <div class="post-info">
           <div class="post-time">
@@ -2318,7 +2399,7 @@
         </div>
         <div class="post-more">
           <a href="/post/getfiles/">
-            <i class="iconfont iconmore" pointer style="float: right;  " title="阅读更多"></i>
+            <i class="iconfont iconmore" pointer style="  " title="阅读更多"></i>
           </a>
         </div>
       </div>
@@ -2331,7 +2412,7 @@
     </article>
   
     
-    <article class="post reveal" style="   ">
+    <article class="post reveal" style="flex-direction: row-reverse;   ">
       <div class="post-main">
         <div class="post-info">
           <div class="post-time">
@@ -2372,7 +2453,7 @@
         </div>
         <div class="post-more">
           <a href="/post/hexo-theme-bamboo-new/">
-            <i class="iconfont iconmore" pointer style="  " title="阅读更多"></i>
+            <i class="iconfont iconmore" pointer style="float: right;  " title="阅读更多"></i>
           </a>
         </div>
       </div>
@@ -2385,7 +2466,7 @@
     </article>
   
     
-    <article class="post reveal" style="flex-direction: row-reverse;   ">
+    <article class="post reveal" style="   ">
       <div class="post-main">
         <div class="post-info">
           <div class="post-time">
@@ -2426,7 +2507,7 @@
         </div>
         <div class="post-more">
           <a href="/post/hexo-theme-bamboo/page/">
-            <i class="iconfont iconmore" pointer style="float: right;  " title="阅读更多"></i>
+            <i class="iconfont iconmore" pointer style="  " title="阅读更多"></i>
           </a>
         </div>
       </div>
@@ -2439,7 +2520,7 @@
     </article>
   
     
-    <article class="post reveal" style="   ">
+    <article class="post reveal" style="flex-direction: row-reverse;   ">
       <div class="post-main">
         <div class="post-info">
           <div class="post-time">
@@ -2480,7 +2561,7 @@
         </div>
         <div class="post-more">
           <a href="/post/hexo-theme-bamboo/theme/">
-            <i class="iconfont iconmore" pointer style="  " title="阅读更多"></i>
+            <i class="iconfont iconmore" pointer style="float: right;  " title="阅读更多"></i>
           </a>
         </div>
       </div>
@@ -2493,7 +2574,7 @@
     </article>
   
     
-    <article class="post reveal" style="flex-direction: row-reverse;   ">
+    <article class="post reveal" style="   ">
       <div class="post-main">
         <div class="post-info">
           <div class="post-time">
@@ -2534,7 +2615,7 @@
         </div>
         <div class="post-more">
           <a href="/post/hexo-theme-bamboo/front-matter/">
-            <i class="iconfont iconmore" pointer style="float: right;  " title="阅读更多"></i>
+            <i class="iconfont iconmore" pointer style="  " title="阅读更多"></i>
           </a>
         </div>
       </div>
@@ -2547,7 +2628,7 @@
     </article>
   
     
-    <article class="post reveal" style="   ">
+    <article class="post reveal" style="flex-direction: row-reverse;   ">
       <div class="post-main">
         <div class="post-info">
           <div class="post-time">
@@ -2588,7 +2669,7 @@
         </div>
         <div class="post-more">
           <a href="/post/hexo-theme-bamboo/tags/">
-            <i class="iconfont iconmore" pointer style="  " title="阅读更多"></i>
+            <i class="iconfont iconmore" pointer style="float: right;  " title="阅读更多"></i>
           </a>
         </div>
       </div>
@@ -2601,7 +2682,7 @@
     </article>
   
     
-    <article class="post reveal" style="flex-direction: row-reverse;   ">
+    <article class="post reveal" style="   ">
       <div class="post-main">
         <div class="post-info">
           <div class="post-time">
@@ -2642,7 +2723,7 @@
         </div>
         <div class="post-more">
           <a href="/post/hexo-theme-bamboo/suggest/">
-            <i class="iconfont iconmore" pointer style="float: right;  " title="阅读更多"></i>
+            <i class="iconfont iconmore" pointer style="  " title="阅读更多"></i>
           </a>
         </div>
       </div>
@@ -2650,63 +2731,6 @@
         <a href="/post/hexo-theme-bamboo/suggest/" style="background-size: cover; 
           background-position: center center;">
           <img class="lazyload lazyload placeholder" src="https://pic3.zhimg.com/80/v2-6262f763cbd2decf3b71740ffaaf7df2_1440w.jpg?source=1940ef5c" class="lazyload placeholder" data-srcset="https://pic3.zhimg.com/80/v2-6262f763cbd2decf3b71740ffaaf7df2_1440w.jpg?source=1940ef5c" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="">
-        </a>
-      </div>
-    </article>
-  
-    
-    <article class="post reveal" style="   ">
-      <div class="post-main">
-        <div class="post-info">
-          <div class="post-time">
-            <i class="fas fa-clock" aria-hidden="true"></i>
-            <span class="post-time">2021-06-16</span>
-          </div>
-          <div class="post-title">
-            <a class="post-title-link" href="/post/issuessites/">issues-sites标签</a>
-          </div>
-          <div class="post-meta">
-            <div class="post-tags">
-              <!-- 文章详情页的标签 -->
-
-    <i class="iconfont icontag"></i>
-    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tag/" rel="tag">tag</a></li></ul>
-
-            </div>
-            <div class="post-categories">
-              <!-- 文章详情页的分类 -->
-
-<div class="article-category">
-  <i class="iconfont iconbookmark1"></i>
-  <a class="article-category-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a>
-</div>
-
-
-            </div>
-          </div>
-          <div class="post-img-mobile">
-            <a href="/post/issuessites/" style="background-size: cover; 
-              background-position: center center;">
-              <img class="lazyload lazyload placeholder" src="https://img11.360buyimg.com/ddimg/jfs/t1/173445/21/15206/1609537/60caebaaE18d21c8d/757aea972636a1b8.png" class="lazyload placeholder" data-srcset="https://img11.360buyimg.com/ddimg/jfs/t1/173445/21/15206/1609537/60caebaaE18d21c8d/757aea972636a1b8.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="">
-            </a>
-          </div>
-          <div class="post-content">
-            该标签会去拿到某个repo仓库的issue内容，用sites标签的形式显示出来，可以用做网站的友链功能该标签和issues-timeline标签都适用于github和gitee
-使用方法issue里面需要有JSON代码块：
-&#123;
- 
-          </div>
-        </div>
-        <div class="post-more">
-          <a href="/post/issuessites/">
-            <i class="iconfont iconmore" pointer style="  " title="阅读更多"></i>
-          </a>
-        </div>
-      </div>
-      <div class="post-img">
-        <a href="/post/issuessites/" style="background-size: cover; 
-          background-position: center center;">
-          <img class="lazyload lazyload placeholder" src="https://img11.360buyimg.com/ddimg/jfs/t1/173445/21/15206/1609537/60caebaaE18d21c8d/757aea972636a1b8.png" class="lazyload placeholder" data-srcset="https://img11.360buyimg.com/ddimg/jfs/t1/173445/21/15206/1609537/60caebaaE18d21c8d/757aea972636a1b8.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="">
         </a>
       </div>
     </article>
@@ -2834,6 +2858,11 @@
               ><div class='name'>mathjax</div><div class='badge'>(1)</div></a></li>
           
             <li><a class="flat-box"
+              title="/categories/mermaid/" href="/categories/mermaid/"
+              id="categoriesmermaid"
+              ><div class='name'>mermaid</div><div class='badge'>(1)</div></a></li>
+          
+            <li><a class="flat-box"
               title="/categories/%E5%89%8D%E7%AB%AF/" href="/categories/%E5%89%8D%E7%AB%AF/"
               id="categoriesE5898DE7ABAF"
               ><div class='name'>前端</div><div class='badge'>(33)</div></a></li>
@@ -2856,7 +2885,7 @@
 
 
     <div class='content'>
-    <a href="/tags/Hexo/" style="font-size: 20.67px; color: #6c6c6c">Hexo</a> <a href="/tags/hexo-theme-bamboo/" style="font-size: 17.33px; color: #828282">hexo-theme-bamboo</a> <a href="/tags/mathjax/" style="font-size: 14px; color: #999">mathjax</a> <a href="/tags/sidebar/" style="font-size: 14px; color: #999">sidebar</a> <a href="/tags/tag/" style="font-size: 24px; color: #555">tag</a>
+    <a href="/tags/Hexo/" style="font-size: 20.67px; color: #6c6c6c">Hexo</a> <a href="/tags/hexo-theme-bamboo/" style="font-size: 17.33px; color: #828282">hexo-theme-bamboo</a> <a href="/tags/mathjax/" style="font-size: 14px; color: #999">mathjax</a> <a href="/tags/mermaid/" style="font-size: 14px; color: #999">mermaid</a> <a href="/tags/sidebar/" style="font-size: 14px; color: #999">sidebar</a> <a href="/tags/tag/" style="font-size: 24px; color: #555">tag</a>
     </div>
 </section>
 
@@ -2877,6 +2906,27 @@
       <!-- hash算法 -->
       
       <div class="aside-list">
+        
+          <div class="aside-list-item">
+            
+            
+            
+
+            <div class="post-img-box">
+              <a href="/post/mermaid/index/" class="post-img " style="background-size: cover; 
+                background-position: center center;">
+                <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="https://pica.zhimg.com/80/v2-a71e05c37fb4970d8e5640eab6833805_1440w.jpg?source=1940ef5c" class="lazyload placeholder" data-srcset="https://pica.zhimg.com/80/v2-a71e05c37fb4970d8e5640eab6833805_1440w.jpg?source=1940ef5c" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="">
+              </a>
+            </div>
+            <div class="post-date-title">
+              <div>
+                
+                  <span class="post-date">10-09</span>
+                
+              </div>
+              <a class="post-title" href="/post/mermaid/index/">新增mermaid</a>
+            </div>
+          </div>
         
           <div class="aside-list-item">
             
@@ -2962,27 +3012,6 @@
             </div>
           </div>
         
-          <div class="aside-list-item">
-            
-            
-            
-
-            <div class="post-img-box">
-              <a href="/post/hexo-theme-bamboo/page/" class="post-img " style="background-size: cover; 
-                background-position: center center;">
-                <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="https://pica.zhimg.com/80/v2-4dc929a46e9fb56c13911592af0be9dc_1440w.jpg?source=1940ef5c" class="lazyload placeholder" data-srcset="https://pica.zhimg.com/80/v2-4dc929a46e9fb56c13911592af0be9dc_1440w.jpg?source=1940ef5c" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="">
-              </a>
-            </div>
-            <div class="post-date-title">
-              <div>
-                
-                  <span class="post-date">07-05</span>
-                
-              </div>
-              <a class="post-title" href="/post/hexo-theme-bamboo/page/">Bamboo主题-页面功能配置（二）</a>
-            </div>
-          </div>
-        
       </div>
     </div>
   </section>
@@ -2990,7 +3019,7 @@
     
   <section class="widget side_archives">
     
-    <header><a style="color: red" href='/archives/'><i class="fas fa-archive fa-fw" aria-hidden="true"></i><span class='name'>归档</span></a></header><div class="content"><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/10/"><span class="card-archive-list-date">十月 2021</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/09/"><span class="card-archive-list-date">九月 2021</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/08/"><span class="card-archive-list-date">八月 2021</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/07/"><span class="card-archive-list-date">七月 2021</span><span class="card-archive-list-count">6</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/06/"><span class="card-archive-list-date">六月 2021</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/05/"><span class="card-archive-list-date">五月 2021</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/02/"><span class="card-archive-list-date">二月 2021</span><span class="card-archive-list-count">21</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/01/"><span class="card-archive-list-date">一月 2021</span><span class="card-archive-list-count">1</span></a></li></ul></div>
+    <header><a style="color: red" href='/archives/'><i class="fas fa-archive fa-fw" aria-hidden="true"></i><span class='name'>归档</span></a></header><div class="content"><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/10/"><span class="card-archive-list-date">十月 2021</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/09/"><span class="card-archive-list-date">九月 2021</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/08/"><span class="card-archive-list-date">八月 2021</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/07/"><span class="card-archive-list-date">七月 2021</span><span class="card-archive-list-count">6</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/06/"><span class="card-archive-list-date">六月 2021</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/05/"><span class="card-archive-list-date">五月 2021</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/02/"><span class="card-archive-list-date">二月 2021</span><span class="card-archive-list-count">21</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/01/"><span class="card-archive-list-date">一月 2021</span><span class="card-archive-list-count">1</span></a></li></ul></div>
   </section>
 
     <section class="widget side_webinfo">
@@ -3007,7 +3036,7 @@
       
         <div class="webinfo-item">
           <div>文章数目：</div>
-          <div>35 篇</div>
+          <div>36 篇</div>
         </div>
       
 
@@ -3029,7 +3058,7 @@
       
         <div class="webinfo-item">
           <div>本站总字数：</div>
-          <div>28.4k 字</div>
+          <div>28.5k 字</div>
         </div>
       
 
@@ -3055,8 +3084,8 @@
         <div class="webinfo-item">
           <div>最后活动时间：</div>
           
-            <div id="last-update" style="display: none;">Fri Oct 08 2021 16:10:58 GMT+0800 (GMT+08:00)</div>
-            <div id="last-update-show">2021-10-08 日</div>
+            <div id="last-update" style="display: none;">Sat Oct 09 2021 15:38:37 GMT+0800 (GMT+08:00)</div>
+            <div id="last-update-show">2021-10-09 日</div>
           
         </div>
         
@@ -3106,7 +3135,7 @@
           try {
             document.getElementById('last-update-show').innerHTML = timeago(new Date(lastUpDate));
           } catch (error) {
-            document.getElementById('last-update-show').innerHTML = '2021-10-08 日';
+            document.getElementById('last-update-show').innerHTML = '2021-10-09 日';
           }
         </script>
         
@@ -3448,7 +3477,7 @@
   window.addEventListener('scroll', tocScrollFn);
 
   const findHeadPosition = function (top) {
-    if ($('.toc').length <= 0) {
+    if ($('.toc-list').length <= 0) {
       return false;
     }
     setTimeout(() => {  // or DOMContentLoaded 
@@ -3654,66 +3683,66 @@
 
   
     <script type="text/javascript">
-    var utteranceCommon = {};
-    
-    function check_utterance() {
-        let isDark = JSON.parse(localStorage.getItem('dark'))  || JSON.parse('false');
-        if (isDark) {
-            utteranceCommon.Theme = 'github-dark';
-        } else {
-            utteranceCommon.Theme = 'github-light';
-        }
+  var utteranceCommon = {};
 
-        return document.getElementById("gitment-container");
-    }
-    comment_el = '#gitment-container';
-    load_utterance = function () {
-        if ($(comment_el).length) {
-            // 匿名函数，防止污染全局变量
-            const HEAD = check_utterance();
-            
-            var utterances = document.createElement('script');
-            utterances.type = 'text/javascript';
-            utterances.async = true;
-            utterances.setAttribute('issue-term','pathname')
-            utterances.setAttribute('theme', utteranceCommon.Theme)
-            utterances.setAttribute('repo','yuang01/yuang01.github.io')
-            utterances.crossorigin = 'anonymous';
-            utterances.src = 'https://utteranc.es/client.js';
-            // content 是要插入评论的地方
-            document.getElementById('gitment-container').appendChild(utterances);
-            
-        }
+  function check_utterance() {
+    let isDark = JSON.parse(localStorage.getItem('dark')) || JSON.parse('false');
+    if (isDark) {
+      utteranceCommon.Theme = 'github-dark';
+    } else {
+      utteranceCommon.Theme = 'github-light';
     }
 
-    function dark_utterance() {
-        const HEAD = check_utterance();
-        if (!HEAD) return;
-        const message = {
-            type: 'set-theme',
-            theme: utteranceCommon.Theme
-        };
-        const utteranceIframe = document.querySelector('iframe');
-        utteranceIframe.contentWindow.postMessage(message, 'https://utteranc.es');
-    }
+    return document.getElementById("gitment-container");
+  }
+  comment_el = '#gitment-container';
+  load_utterance = function () {
+    if ($(comment_el).length) {
+      // 匿名函数，防止污染全局变量
+      const HEAD = check_utterance();
 
-    $(document).ready(load_utterance);
-    document.addEventListener('pjax:complete', function () {
-        load_utterance();
+      var utterances = document.createElement('script');
+      utterances.type = 'text/javascript';
+      utterances.async = true;
+      utterances.setAttribute('issue-term', 'pathname')
+      utterances.setAttribute('theme', utteranceCommon.Theme)
+      utterances.setAttribute('repo', 'yuang01/yuang01.github.io')
+      utterances.crossorigin = 'anonymous';
+      utterances.src = 'https://utteranc.es/client.js';
+      // content 是要插入评论的地方
+      document.getElementById('gitment-container').appendChild(utterances);
+
+    }
+  }
+
+  function dark_utterance() {
+    const HEAD = check_utterance();
+    if (!HEAD) return;
+    const message = {
+      type: 'set-theme',
+      theme: utteranceCommon.Theme
+    };
+    const utteranceIframe = document.querySelector('iframe');
+    utteranceIframe.contentWindow.postMessage(message, 'https://utteranc.es');
+  }
+
+  $(document).ready(load_utterance);
+  document.addEventListener('pjax:complete', function () {
+    load_utterance();
+  });
+
+  $('.dark').click(function () {
+    setTimeout(() => {
+      dark_utterance();
     });
+  })
 
-    $('.dark').click(function() {
-        setTimeout(() => {
-            dark_utterance();
-        });
-    })
-    
 </script>
 
 <style>
-    .utterances {
-        max-width: inherit!important;
-    }
+  .utterances {
+    max-width: inherit !important;
+  }
 </style>
   
 

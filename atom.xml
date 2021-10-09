@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yuang01.github.io/"/>
-  <updated>2021-10-08T08:10:48.200Z</updated>
+  <updated>2021-10-09T07:32:10.284Z</updated>
   <id>http://yuang01.github.io/</id>
   
   <author>
@@ -15,6 +15,40 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>新增mermaid</title>
+    <link href="http://yuang01.github.io/post/mermaid/index/"/>
+    <id>http://yuang01.github.io/post/mermaid/index/</id>
+    <published>2021-10-09T06:03:20.000Z</published>
+    <updated>2021-10-09T07:32:10.284Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;支持2.6.5+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;事例：&quot;&gt;&lt;a href=&quot;#事例：&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="mermaid" scheme="http://yuang01.github.io/categories/mermaid/"/>
+    
+    
+      <category term="mermaid" scheme="http://yuang01.github.io/tags/mermaid/"/>
+    
+  </entry>
   
   <entry>
     <title>新增mathjax</title>
@@ -490,34 +524,6 @@
         
           &lt;h2 class=&quot;bamboo-h &quot; id=&quot;Github用户卡片&quot;&gt;Github用户卡片&lt;/h2&gt;&lt;br/&gt;
 &lt;a class=&quot;ghcard&quot; rel=&quot;external nofollow noopener noreferrer&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="前端" scheme="http://yuang01.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="tag" scheme="http://yuang01.github.io/tags/tag/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>lineImage标签</title>
-    <link href="http://yuang01.github.io/post/inlineimage/"/>
-    <id>http://yuang01.github.io/post/inlineimage/</id>
-    <published>2021-02-08T03:35:00.000Z</published>
-    <updated>2021-05-11T01:46:36.338Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 class=&quot;bamboo-h &quot; id=&quot;段落中插入图片&quot;&gt;段落中插入图片&lt;/h2&gt;&lt;br/&gt;
-&lt;p&gt;这是 &lt;img no-lazy class=&quot;inline&quot;
         
       
     

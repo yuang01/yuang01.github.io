@@ -670,74 +670,50 @@
     <!-- 需要在上面加载的js -->
     <script>
   function loadScript(src, cb) {
-    setTimeout(function () {
-      var HEAD = document.getElementsByTagName('head')[0] || document.documentElement;
-      var script = document.createElement('script');
-      script.setAttribute('type', 'text/javascript');
-      if (cb) script.onload = cb;
-      script.setAttribute('src', src);
-      HEAD.appendChild(script);
+    return new Promise(resolve => {
+      setTimeout(function () {
+        var HEAD = document.getElementsByTagName("head")[0] || document.documentElement;
+        var script = document.createElement("script");
+        script.setAttribute("type", "text/javascript");
+        if (cb) {
+          if (JSON.stringify(cb)) {
+            for (let p in cb) {
+              if (p == "onload") {
+                script[p] = () => {
+                  cb[p]()
+                  resolve()
+                }
+              } else {
+                script[p] = cb[p]
+                script.onload = resolve
+              }
+            }
+          } else {
+            script.onload = () => {
+              cb()
+              resolve()
+            };
+          }
+        } else {
+          script.onload = resolve
+        }
+        script.setAttribute("src", src);
+        HEAD.appendChild(script);
+      });
     });
   }
 
   //https://github.com/filamentgroup/loadCSS
   var loadCSS = function (href, before, media, attributes) {
-    var doc = window.document;
-    var ss = doc.createElement("link");
-    var ref;
-    if (before) {
-      ref = before;
-    }
-    else {
-      var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
-      ref = refs[refs.length - 1];
-    }
-    var sheets = doc.styleSheets;
-    if (attributes) {
-      for (var attributeName in attributes) {
-        if (attributes.hasOwnProperty(attributeName)) {
-          ss.setAttribute(attributeName, attributes[attributeName]);
-        }
-      }
-    }
-    ss.rel = "stylesheet";
-    ss.href = href;
-    ss.media = "only x";
-    function ready(cb) {
-      if (doc.body) {
-        return cb();
-      }
+    return new Promise(resolve => {
       setTimeout(function () {
-        ready(cb);
+        var link = document.createElement('link');
+        link.rel = "stylesheet";
+        link.href = src;
+        link.onload = resolve;
+        document.getElementsByTagName("head")[0].appendChild(link);
       });
-    }
-    ready(function () {
-      ref.parentNode.insertBefore(ss, (before ? ref : ref.nextSibling));
     });
-    var onloadcssdefined = function (cb) {
-      var resolvedHref = ss.href;
-      var i = sheets.length;
-      while (i--) {
-        if (sheets[i].href === resolvedHref) {
-          return cb();
-        }
-      }
-      setTimeout(function () {
-        onloadcssdefined(cb);
-      });
-    };
-    function loadCB() {
-      if (ss.addEventListener) {
-        ss.removeEventListener("load", loadCB);
-      }
-      ss.media = media || "all";
-    }
-    if (ss.addEventListener) {
-      ss.addEventListener("load", loadCB);
-    }
-    ss.onloadcssdefined = onloadcssdefined;
-    onloadcssdefined(loadCB);
-    return ss;
   };
 
 </script> 
@@ -1117,6 +1093,8 @@
 </style>
 
 
+
+
       </main>
     </div>
 
@@ -1398,7 +1376,7 @@
   window.addEventListener('scroll', tocScrollFn);
 
   const findHeadPosition = function (top) {
-    if ($('.toc').length <= 0) {
+    if ($('.toc-list').length <= 0) {
       return false;
     }
     setTimeout(() => {  // or DOMContentLoaded 
@@ -1604,66 +1582,66 @@
 
   
     <script type="text/javascript">
-    var utteranceCommon = {};
-    
-    function check_utterance() {
-        let isDark = JSON.parse(localStorage.getItem('dark'))  || JSON.parse('false');
-        if (isDark) {
-            utteranceCommon.Theme = 'github-dark';
-        } else {
-            utteranceCommon.Theme = 'github-light';
-        }
+  var utteranceCommon = {};
 
-        return document.getElementById("gitment-container");
-    }
-    comment_el = '#gitment-container';
-    load_utterance = function () {
-        if ($(comment_el).length) {
-            // 匿名函数，防止污染全局变量
-            const HEAD = check_utterance();
-            
-            var utterances = document.createElement('script');
-            utterances.type = 'text/javascript';
-            utterances.async = true;
-            utterances.setAttribute('issue-term','pathname')
-            utterances.setAttribute('theme', utteranceCommon.Theme)
-            utterances.setAttribute('repo','yuang01/yuang01.github.io')
-            utterances.crossorigin = 'anonymous';
-            utterances.src = 'https://utteranc.es/client.js';
-            // content 是要插入评论的地方
-            document.getElementById('gitment-container').appendChild(utterances);
-            
-        }
+  function check_utterance() {
+    let isDark = JSON.parse(localStorage.getItem('dark')) || JSON.parse('false');
+    if (isDark) {
+      utteranceCommon.Theme = 'github-dark';
+    } else {
+      utteranceCommon.Theme = 'github-light';
     }
 
-    function dark_utterance() {
-        const HEAD = check_utterance();
-        if (!HEAD) return;
-        const message = {
-            type: 'set-theme',
-            theme: utteranceCommon.Theme
-        };
-        const utteranceIframe = document.querySelector('iframe');
-        utteranceIframe.contentWindow.postMessage(message, 'https://utteranc.es');
-    }
+    return document.getElementById("gitment-container");
+  }
+  comment_el = '#gitment-container';
+  load_utterance = function () {
+    if ($(comment_el).length) {
+      // 匿名函数，防止污染全局变量
+      const HEAD = check_utterance();
 
-    $(document).ready(load_utterance);
-    document.addEventListener('pjax:complete', function () {
-        load_utterance();
+      var utterances = document.createElement('script');
+      utterances.type = 'text/javascript';
+      utterances.async = true;
+      utterances.setAttribute('issue-term', 'pathname')
+      utterances.setAttribute('theme', utteranceCommon.Theme)
+      utterances.setAttribute('repo', 'yuang01/yuang01.github.io')
+      utterances.crossorigin = 'anonymous';
+      utterances.src = 'https://utteranc.es/client.js';
+      // content 是要插入评论的地方
+      document.getElementById('gitment-container').appendChild(utterances);
+
+    }
+  }
+
+  function dark_utterance() {
+    const HEAD = check_utterance();
+    if (!HEAD) return;
+    const message = {
+      type: 'set-theme',
+      theme: utteranceCommon.Theme
+    };
+    const utteranceIframe = document.querySelector('iframe');
+    utteranceIframe.contentWindow.postMessage(message, 'https://utteranc.es');
+  }
+
+  $(document).ready(load_utterance);
+  document.addEventListener('pjax:complete', function () {
+    load_utterance();
+  });
+
+  $('.dark').click(function () {
+    setTimeout(() => {
+      dark_utterance();
     });
+  })
 
-    $('.dark').click(function() {
-        setTimeout(() => {
-            dark_utterance();
-        });
-    })
-    
 </script>
 
 <style>
-    .utterances {
-        max-width: inherit!important;
-    }
+  .utterances {
+    max-width: inherit !important;
+  }
 </style>
   
 
