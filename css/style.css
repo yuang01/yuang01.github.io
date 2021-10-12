@@ -3193,7 +3193,7 @@ pre:hover::-webkit-scrollbar-thumb:hover,
   background-color: #fff;
   padding: 20px;
   border-radius: 10px;
-  margin: 20px;
+  margin: 20px 10px;
 }
 #about .basic-info .items {
   display: flex;
@@ -3221,6 +3221,7 @@ pre:hover::-webkit-scrollbar-thumb:hover,
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  box-sizing: border-box;
 }
 #about .basic-info .skill .bar-box {
   position: relative;
@@ -3231,6 +3232,12 @@ pre:hover::-webkit-scrollbar-thumb:hover,
   overflow: hidden;
   margin-top: 20px;
   margin-right: 5%;
+}
+@media (max-width: 551px) {
+  #about .basic-info .skill .bar-box {
+    width: 100%;
+    margin-right: 0;
+  }
 }
 #about .basic-info .skill .bar-box .bar {
   width: 35%;
