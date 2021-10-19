@@ -596,6 +596,9 @@
     computed: {
     },
     mounted() {
+      window.addEventListener('pjax:complete', () => {
+        this.dialogVisible = false;
+      })
     },
     methods: {
       showDialog() {
