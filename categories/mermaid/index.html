@@ -597,7 +597,7 @@
     },
     mounted() {
       window.addEventListener('pjax:complete', () => {
-        this.dialogVisible = false;
+        this.cancelDialogVisible();
       })
     },
     methods: {
