@@ -662,8 +662,11 @@ pre:hover::-webkit-scrollbar-thumb:hover,
     transform: scale(1);
   }
 }
-.header-bg-color {
+.header-bg-color,
+.no-img-top,
+.no-swiper {
   background: rgba(66,185,131,0.8);
+  transition: all 0.3s;
 }
 .header {
   position: relative;
@@ -673,7 +676,7 @@ pre:hover::-webkit-scrollbar-thumb:hover,
   align-items: center;
   height: 60px;
   box-sizing: border-box;
-  transition: all 0.3s;
+  z-index: 2;
 }
 .header .header-content {
   width: calc(70% + 260px);
@@ -808,6 +811,38 @@ pre:hover::-webkit-scrollbar-thumb:hover,
 .header #he-plugin-simple .s-sticker-tmp,
 .header #he-plugin-simple .s-sticker-city {
   color: #fff !important;
+}
+@-moz-keyframes headerNoOpacity {
+  0% {
+    transform: translateY(-50px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@-webkit-keyframes headerNoOpacity {
+  0% {
+    transform: translateY(-50px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@-o-keyframes headerNoOpacity {
+  0% {
+    transform: translateY(-50px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes headerNoOpacity {
+  0% {
+    transform: translateY(-50px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 @media (min-width: 992px) {
   .bars {
@@ -1062,6 +1097,46 @@ pre:hover::-webkit-scrollbar-thumb:hover,
   margin-top: 10px;
   flex-wrap: wrap;
 }
+@-moz-keyframes header-effect {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@-webkit-keyframes header-effect {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@-o-keyframes header-effect {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes header-effect {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 @media (max-width: 551px) {
   .post-detail-header {
     height: 360px;
@@ -1087,6 +1162,7 @@ pre:hover::-webkit-scrollbar-thumb:hover,
 }
 .row {
   display: flex;
+  box-sizing: border-box;
 }
 .justify-position {
   justify-content: space-between;
@@ -1106,7 +1182,6 @@ pre:hover::-webkit-scrollbar-thumb:hover,
   width: 300px;
   padding: 0 10px;
   background-color: rgba(255,255,255,0.9);
-  transition: width 0.3s;
 }
 @media screen and (max-width: 992px) {
   .toc-aside {
@@ -4583,6 +4658,8 @@ pre:hover::-webkit-scrollbar-thumb:hover,
 }
 .darkModel .bg-color,
 .darkModel .header-bg-color,
+.darkModel .no-swiper,
+.darkModel .no-img-top,
 .darkModel .header .header-content .navbar .menu .menu-item .sub-menu li {
   background: #222;
 }

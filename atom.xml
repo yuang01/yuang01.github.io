@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yuang01.github.io/"/>
-  <updated>2021-10-09T07:41:23.588Z</updated>
+  <updated>2021-11-08T05:46:09.558Z</updated>
   <id>http://yuang01.github.io/</id>
   
   <author>
@@ -15,6 +15,21 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="http://yuang01.github.io/post/imgtop/"/>
+    <id>http://yuang01.github.io/post/imgtop/</id>
+    <published>2021-11-08T05:46:09.558Z</published>
+    <updated>2021-11-08T05:46:09.558Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>新增mermaid</title>
@@ -196,7 +211,7 @@
     <link href="http://yuang01.github.io/post/hexo-theme-bamboo/front-matter/"/>
     <id>http://yuang01.github.io/post/hexo-theme-bamboo/front-matter/</id>
     <published>2021-07-05T03:09:00.000Z</published>
-    <updated>2021-10-08T07:31:24.265Z</updated>
+    <updated>2021-11-08T05:45:47.246Z</updated>
     
     <summary type="html">
     
@@ -493,34 +508,6 @@
         
         
           &lt;div class=&quot;note
-        
-      
-    
-    </summary>
-    
-    
-      <category term="前端" scheme="http://yuang01.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="tag" scheme="http://yuang01.github.io/tags/tag/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Github卡片</title>
-    <link href="http://yuang01.github.io/post/ghcard/"/>
-    <id>http://yuang01.github.io/post/ghcard/</id>
-    <published>2021-02-08T03:35:00.000Z</published>
-    <updated>2021-05-11T01:57:17.503Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 class=&quot;bamboo-h &quot; id=&quot;Github用户卡片&quot;&gt;Github用户卡片&lt;/h2&gt;&lt;br/&gt;
-&lt;a class=&quot;ghcard&quot; rel=&quot;external nofollow noopener noreferrer&quot;
         
       
     
