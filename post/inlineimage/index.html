@@ -11,7 +11,7 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-  <title>文章设置topImg | Bamboo</title>
+  <title>lineImage标签 | Bamboo</title>
 
   <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico">
   <link rel="stylesheet" href="https://at.alicdn.com/t/font_1911880_c1nvbyezg17.css">
@@ -212,7 +212,7 @@
       <main class="main" id="pjax-container">
         <!-- 头部导航 -->
         
-<header class="header  no-img-top " 
+<header class="header   " 
   id="navHeader"
   style="position: fixed;
   left: 0; top: 0; z-index: 10;width: 100%;"
@@ -772,19 +772,96 @@
 <div class="bg-dark-floor" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -1;"></div>
 
 
+  <!-- 文章详情页顶部图片和标题 -->
+
+
+
+
+<div class="post-detail-header" id="thumbnail_canvas" style="background-repeat: no-repeat; background-size: cover; 
+  background-position: center center;position: relative;background-image:url('https://pic2.zhimg.com/80/v2-1678d94c8b4e6be640584c2dabef1586_1440w.jpg?source=1940ef5c')">
+  <div class="post-detail-header-mask"></div>
+  <canvas id="header_canvas"style="position:absolute;bottom:0;pointer-events:none;"></canvas>
+  
+  <div class="post-detail-header_info-box">
+    <div class="title-box">
+      <span class="title">
+        lineImage标签
+      </span>
+    </div>
+    
+    
+      
+        <span class="post-detail-header_date">
+          <i class="fas fa-calendar"></i> 发表于：2021-02-08 |
+        </span>
+      
+
+      
+        <span class="post-detail-header_categories">
+          <i class="iconfont iconbookmark1"></i> 分类：
+          
+            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-detail-header_category">
+              前端
+            </a>
+          
+        </span>
+      
+
+      
+        <div class="post-detail-header_wordcount">
+          <span class="totalcount">
+            <i class="fas fa-file-text-o"></i> 字数统计: 258 |
+          </span>
+  
+          <span class="min2read">
+            <i class="fas fa-clock"></i> 阅读时长: 1分钟 |
+          </span>
+  
+          
+            <span class="reading">
+              <i class="fas fa-eye"></i> 阅读量：<span id="busuanzi_value_page_pv"></span>
+            </span>
+          
+        </div>
+      
+    
+  </div>
+  
+  
+    <script src="/js/bubble/bubble.js"></script>
+  
+</div>
+
+
+
 
 
 <div class="row justify-position" 
-  style="padding-top: 60px;">
+  style="padding-top: 0px;">
   <div class="main-content">
     <article class="post post-detail">
       <div class="post-content">
-        <blockquote>
-<p>支持版本为v2.7.0+</p>
-</blockquote>
-<p>在文章中设置<code>imgTop: false</code>，则不显示顶部图片</p>
-<p>如果首页轮播图不想要的话，则在主题<code>config.yml</code>中将<code>swiper.on</code>设置为false即可</p>
+        <h2 class="bamboo-h " id="段落中插入图片">段落中插入图片</h2><br/>
+<p>这是 <img no-lazy class="inline" src="http://img.doutula.com/production/uploads/image/2019/08/15/20190815849485_fKMqYD.gif" style="height:1.5em"/> 一段话。</p>
+<p>这又是 <img no-lazy class="inline" src="http://img.doutula.com/production/uploads/image/2019/08/15/20190815849485_fKMqYD.gif" style="height:40px;"/> 一段话。</p>
+<p>这又是 <img no-lazy class="inline" src="http://img.doutula.com/production/uploads/image/2019/08/15/20190815849485_fKMqYD.gif" style="height:100px;"/> 一段话。</p>
+<h3 id="上述事例代码"><a href="#上述事例代码" class="headerlink" title="上述事例代码"></a>上述事例代码</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">这是 <span class="token punctuation">&#123;</span>% inlineimage http://img.doutula.com/production/uploads/image/2019/08/15/20190815849485_fKMqYD.gif %<span class="token punctuation">&#125;</span> 一段话。
 
+这又是 <span class="token punctuation">&#123;</span>% inlineimage http://img.doutula.com/production/uploads/image/2019/08/15/20190815849485_fKMqYD.gif, <span class="token assign-left variable">height</span><span class="token operator">=</span>40px %<span class="token punctuation">&#125;</span> 一段话。
+
+这又是 <span class="token punctuation">&#123;</span>% inlineimage http://img.doutula.com/production/uploads/image/2019/08/15/20190815849485_fKMqYD.gif, <span class="token assign-left variable">height</span><span class="token operator">=</span>100px %<span class="token punctuation">&#125;</span> 一段话。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 class="bamboo-h " id="自定义图片并添加描述">自定义图片并添加描述</h2><br/>
+
+<div class="img-wrap"><div class="img-bg"><img class="img lazyload placeholder" src="https://pic2.zhimg.com/80/v2-cc93c338d57783702bea4506aee7007d_1440w.jpg?source=1940ef5c" class="lazyload placeholder" data-srcset="https://pic2.zhimg.com/80/v2-cc93c338d57783702bea4506aee7007d_1440w.jpg?source=1940ef5c" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="自定义图片"/></div><span class="image-caption">自定义图片</span></div>
+<h3 id="上述事例代码-1"><a href="#上述事例代码-1" class="headerlink" title="上述事例代码"></a>上述事例代码</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">&#123;</span>% image https://pic2.zhimg.com/80/v2-cc93c338d57783702bea4506aee7007d_1440w.jpg?source<span class="token operator">=</span>1940ef5c, <span class="token assign-left variable">alt</span><span class="token operator">=</span>自定义图片 %<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h2 class="bamboo-h " id="指定宽度">指定宽度</h2><br/>
+<div class="img-wrap"><div class="img-bg"><img class="img lazyload placeholder" src="https://api.ixiaowai.cn/gqapi/gqapi.php" class="lazyload placeholder" data-srcset="https://api.ixiaowai.cn/gqapi/gqapi.php" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="随机生成风景（alt描述可有可无）" style="width:400px;"/></div><span class="image-caption">随机生成风景（alt描述可有可无）</span></div>
+<div class="img-wrap"><div class="img-bg"><img class="img lazyload placeholder" src="https://api.ixiaowai.cn/api/api.php" class="lazyload placeholder" data-srcset="https://api.ixiaowai.cn/api/api.php" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="随机生成二次元壁纸" style="width:400px;"/></div><span class="image-caption">随机生成二次元壁纸</span></div>
+<h3 id="上述事例代码-2"><a href="#上述事例代码-2" class="headerlink" title="上述事例代码"></a>上述事例代码</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">&#123;</span>% image https://api.ixiaowai.cn/gqapi/gqapi.php, <span class="token assign-left variable">width</span><span class="token operator">=</span>400px, <span class="token assign-left variable">alt</span><span class="token operator">=</span>随机生成风景（alt描述可有可无） %<span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#123;</span>% image https://api.ixiaowai.cn/api/api.php, <span class="token assign-left variable">width</span><span class="token operator">=</span>400px, <span class="token assign-left variable">alt</span><span class="token operator">=</span>随机生成二次元壁纸 %<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h2 class="bamboo-h " id="设置占位背景色">设置占位背景色</h2><br/>
+<div class="img-wrap"><div class="img-bg" style="background:#1D0C04"><img class="img lazyload placeholder" src="https://api.ixiaowai.cn/mcapi/mcapi.php" class="lazyload placeholder" data-srcset="https://api.ixiaowai.cn/mcapi/mcapi.php" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="随机生成呆萌酱" style="width:400px;"/></div><span class="image-caption">随机生成呆萌酱</span></div>
+<h3 id="上述事例代码-3"><a href="#上述事例代码-3" class="headerlink" title="上述事例代码"></a>上述事例代码</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">&#123;</span>% image  https://api.ixiaowai.cn/mcapi/mcapi.php, <span class="token assign-left variable">width</span><span class="token operator">=</span>400px, <span class="token assign-left variable">bg</span><span class="token operator">=</span><span class="token comment">#1D0C04, alt=随机生成呆萌酱 %&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
       </div>
       <div class="post-tags-categories">
         
@@ -805,7 +882,7 @@
     </li>
     <li class="post-copyright-link">
     <strong>文章链接:  </strong>
-    <a href="/post/inlineimage/" target="_blank" title="文章设置topImg">http://yuang01.github.io/post/inlineimage/</a>
+    <a href="/post/inlineimage/" target="_blank" title="lineImage标签">http://yuang01.github.io/post/inlineimage/</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明:   </strong>
@@ -827,16 +904,21 @@
   <div class="post-nav-prev post-nav-item">
     <div class="post-nav-img" style="background-size: cover; 
       background-position: center center;">
-      <img class="lazyload lazyload placeholder" src="/medias/1.jpg" class="lazyload placeholder" data-srcset="/medias/1.jpg" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="">
+      <img class="lazyload lazyload placeholder" src="https://pic3.zhimg.com/80/v2-b7c7899676492453229763b26835f6dc_1440w.jpg?source=1940ef5c" class="lazyload placeholder" data-srcset="https://pic3.zhimg.com/80/v2-b7c7899676492453229763b26835f6dc_1440w.jpg?source=1940ef5c" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="">
     </div>
-    <a href="/post/imgtop/" class="post-nav-link">
+    <a href="/post/ghcard/" class="post-nav-link">
       <div class="title">
         <i class="fas fa-angle-left"></i> 上一篇:
-        <div class="title-text"></div>
+        <div class="title-text">Github卡片</div>
       </div>
       
       <!-- <div class="content">
-        
+        Github用户卡片
+
+上述示例代码&#123;% ghcard yuang01 %&#125;
+表格中加入用户卡片
+
+
       </div> -->
     </a>
   </div>
@@ -847,20 +929,19 @@
   <div class="post-nav-next post-nav-item">
     <div class="post-nav-img" style="background-size: cover; 
       background-position: center center;">
-      <img class="lazyload lazyload placeholder" src="https://pica.zhimg.com/80/v2-a71e05c37fb4970d8e5640eab6833805_1440w.jpg?source=1940ef5c" class="lazyload placeholder" data-srcset="https://pica.zhimg.com/80/v2-a71e05c37fb4970d8e5640eab6833805_1440w.jpg?source=1940ef5c" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" src="" alt="">
+      <img class="lazyload lazyload placeholder" src="https://pic2.zhimg.com/80/v2-19975cec2eaae0083992a79315bd232b_1440w.jpg?source=1940ef5c" class="lazyload placeholder" data-srcset="https://pic2.zhimg.com/80/v2-19975cec2eaae0083992a79315bd232b_1440w.jpg?source=1940ef5c" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" src="" alt="">
     </div>
-    <a href="/post/mermaid/index/" class="post-nav-link">
+    <a href="/post/link/" class="post-nav-link">
       <div class="title">
         下一篇: <i class="fas fa-angle-right"></i>
-        <div class="title-text">新增mermaid</div>
+        <div class="title-text">link标签</div>
       </div>
       <!-- <div class="content">
-        
-支持2.6.5+
+        超链接标签
 
-事例：pie
-    title Key elements in Product X
-    &q
+点击跳转到百度http://www.baidu.com
+
+点击跳转到百度http://www.baidu.
       </div> -->
     </a>
   </div>
