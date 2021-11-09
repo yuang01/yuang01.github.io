@@ -362,14 +362,25 @@
           
             <li class="drawer-box-content_item" style="position: relative;">
               
-                <a href="javascript:;" class="drawer-menu-item-link has-children" @click="openOrCloseMenu(7)">
+                <a href="/messageBoard" class="drawer-menu-item-link">
+                  
+                    <i class="fas fa-comment-dots" aria-hidden="true"></i>
+                  
+                  <span class="name">留言板</span>
+                </a>
+              
+            </li>
+          
+            <li class="drawer-box-content_item" style="position: relative;">
+              
+                <a href="javascript:;" class="drawer-menu-item-link has-children" @click="openOrCloseMenu(8)">
                   <span>
                     
                     <span class="name">🐱更多</span>
                   </span>
-                  <i class="fas fa-chevron-left arrow " :class="{'icon-rotate': isOpen(7)}" aria-hidden="true"></i>
+                  <i class="fas fa-chevron-left arrow " :class="{'icon-rotate': isOpen(8)}" aria-hidden="true"></i>
                 </a>
-                <ul class="drawer-sub-menu" v-if="isOpen(7)">
+                <ul class="drawer-sub-menu" v-if="isOpen(8)">
                   
                   <li>
                     <a href="/gallery">
@@ -596,6 +607,17 @@
           
             <li class="menu-item" style="position: relative;">
               
+                <a href="/messageBoard" class="menu-item-link" title="留言板">
+                  
+                    <i class="fas fa-comment-dots" aria-hidden="true"></i>
+                  
+                  <span class="name">留言板</span>
+                </a>
+              
+            </li>
+          
+            <li class="menu-item" style="position: relative;">
+              
                 <a href="javascript:;" class="menu-item-link" title="🐱更多">
                   
                   <span class="name">🐱更多</span>
@@ -799,14 +821,6 @@
                 </a>
                 
                 
-                <a href="/tags/mathjax/" title="mathjax: 1">
-                    <span class="tag-content"
-                        title="mathjax" style="background-color: #FEF9E7;">mathjax
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
                 <a href="/tags/Hexo/" title="Hexo: 7">
                     <span class="tag-content"
                         title="Hexo" style="background-color: #E8F8F5;">Hexo
@@ -819,6 +833,14 @@
                     <span class="tag-content"
                         title="hexo-theme-bamboo" style="background-color: #F8F9F9;">hexo-theme-bamboo
                         <span class="tag-length">6</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/mathjax/" title="mathjax: 1">
+                    <span class="tag-content"
+                        title="mathjax" style="background-color: #FEF9E7;">mathjax
+                        <span class="tag-length">1</span>
                     </span>
                 </a>
                 

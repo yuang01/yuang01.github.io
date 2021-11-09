@@ -362,14 +362,25 @@
           
             <li class="drawer-box-content_item" style="position: relative;">
               
-                <a href="javascript:;" class="drawer-menu-item-link has-children" @click="openOrCloseMenu(7)">
+                <a href="/messageBoard" class="drawer-menu-item-link">
+                  
+                    <i class="fas fa-comment-dots" aria-hidden="true"></i>
+                  
+                  <span class="name">留言板</span>
+                </a>
+              
+            </li>
+          
+            <li class="drawer-box-content_item" style="position: relative;">
+              
+                <a href="javascript:;" class="drawer-menu-item-link has-children" @click="openOrCloseMenu(8)">
                   <span>
                     
                     <span class="name">🐱更多</span>
                   </span>
-                  <i class="fas fa-chevron-left arrow " :class="{'icon-rotate': isOpen(7)}" aria-hidden="true"></i>
+                  <i class="fas fa-chevron-left arrow " :class="{'icon-rotate': isOpen(8)}" aria-hidden="true"></i>
                 </a>
-                <ul class="drawer-sub-menu" v-if="isOpen(7)">
+                <ul class="drawer-sub-menu" v-if="isOpen(8)">
                   
                   <li>
                     <a href="/gallery">
@@ -590,6 +601,17 @@
                 <a href="/friends" class="menu-item-link" title="友情链接">
                   
                   <span class="name">友情链接</span>
+                </a>
+              
+            </li>
+          
+            <li class="menu-item" style="position: relative;">
+              
+                <a href="/messageBoard" class="menu-item-link" title="留言板">
+                  
+                    <i class="fas fa-comment-dots" aria-hidden="true"></i>
+                  
+                  <span class="name">留言板</span>
                 </a>
               
             </li>
@@ -2799,7 +2821,7 @@ Your browser does not support the audio tag.
         <div class="webinfo-item">
           <div>最后活动时间：</div>
           
-            <div id="last-update" style="display: none;">Tue Nov 09 2021 15:51:24 GMT+0800 (GMT+08:00)</div>
+            <div id="last-update" style="display: none;">Tue Nov 09 2021 18:03:04 GMT+0800 (GMT+08:00)</div>
             <div id="last-update-show">2021-11-09 日</div>
           
         </div>
