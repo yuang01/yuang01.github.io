@@ -5,9 +5,9 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yuang01.github.io/"/>
+  <link href="http://yuang01.gitee.io/"/>
   <updated>2021-11-08T05:55:46.661Z</updated>
-  <id>http://yuang01.github.io/</id>
+  <id>http://yuang01.gitee.io/</id>
   
   <author>
     <name>YuAng</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>文章设置topImg</title>
-    <link href="http://yuang01.github.io/post/imgtop/"/>
-    <id>http://yuang01.github.io/post/imgtop/</id>
+    <link href="http://yuang01.gitee.io/post/imgtop/"/>
+    <id>http://yuang01.gitee.io/post/imgtop/</id>
     <published>2021-11-08T03:35:00.000Z</published>
     <updated>2021-11-08T05:55:46.661Z</updated>
     
@@ -39,17 +39,17 @@
     </summary>
     
     
-      <category term="前端" scheme="http://yuang01.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="http://yuang01.gitee.io/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="tag" scheme="http://yuang01.github.io/tags/tag/"/>
+      <category term="tag" scheme="http://yuang01.gitee.io/tags/tag/"/>
     
   </entry>
   
   <entry>
     <title>新增mermaid</title>
-    <link href="http://yuang01.github.io/post/mermaid/index/"/>
-    <id>http://yuang01.github.io/post/mermaid/index/</id>
+    <link href="http://yuang01.gitee.io/post/mermaid/index/"/>
+    <id>http://yuang01.gitee.io/post/mermaid/index/</id>
     <published>2021-10-09T06:03:20.000Z</published>
     <updated>2021-10-09T07:41:23.588Z</updated>
     
@@ -70,17 +70,17 @@
     </summary>
     
     
-      <category term="mermaid" scheme="http://yuang01.github.io/categories/mermaid/"/>
+      <category term="mermaid" scheme="http://yuang01.gitee.io/categories/mermaid/"/>
     
     
-      <category term="mermaid" scheme="http://yuang01.github.io/tags/mermaid/"/>
+      <category term="mermaid" scheme="http://yuang01.gitee.io/tags/mermaid/"/>
     
   </entry>
   
   <entry>
     <title>新增mathjax</title>
-    <link href="http://yuang01.github.io/post/mathjax/index/"/>
-    <id>http://yuang01.github.io/post/mathjax/index/</id>
+    <link href="http://yuang01.gitee.io/post/mathjax/index/"/>
+    <id>http://yuang01.gitee.io/post/mathjax/index/</id>
     <published>2021-10-08T06:03:20.000Z</published>
     <updated>2021-10-08T08:10:48.200Z</updated>
     
@@ -101,17 +101,17 @@
     </summary>
     
     
-      <category term="mathjax" scheme="http://yuang01.github.io/categories/mathjax/"/>
+      <category term="mathjax" scheme="http://yuang01.gitee.io/categories/mathjax/"/>
     
     
-      <category term="mathjax" scheme="http://yuang01.github.io/tags/mathjax/"/>
+      <category term="mathjax" scheme="http://yuang01.gitee.io/tags/mathjax/"/>
     
   </entry>
   
   <entry>
     <title>Bamboo主题-首页新增侧边栏</title>
-    <link href="http://yuang01.github.io/post/hexo-theme-bamboo/sidebar/"/>
-    <id>http://yuang01.github.io/post/hexo-theme-bamboo/sidebar/</id>
+    <link href="http://yuang01.gitee.io/post/hexo-theme-bamboo/sidebar/"/>
+    <id>http://yuang01.gitee.io/post/hexo-theme-bamboo/sidebar/</id>
     <published>2021-09-28T03:11:00.000Z</published>
     <updated>2021-09-28T09:42:37.963Z</updated>
     
@@ -122,19 +122,19 @@
     </summary>
     
     
-      <category term="前端" scheme="http://yuang01.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="http://yuang01.gitee.io/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="Hexo" scheme="http://yuang01.github.io/tags/Hexo/"/>
+      <category term="Hexo" scheme="http://yuang01.gitee.io/tags/Hexo/"/>
     
-      <category term="sidebar" scheme="http://yuang01.github.io/tags/sidebar/"/>
+      <category term="sidebar" scheme="http://yuang01.gitee.io/tags/sidebar/"/>
     
   </entry>
   
   <entry>
     <title>getFiles文件获取</title>
-    <link href="http://yuang01.github.io/post/getfiles/"/>
-    <id>http://yuang01.github.io/post/getfiles/</id>
+    <link href="http://yuang01.gitee.io/post/getfiles/"/>
+    <id>http://yuang01.gitee.io/post/getfiles/</id>
     <published>2021-08-10T03:35:00.000Z</published>
     <updated>2021-08-12T03:12:13.768Z</updated>
     
@@ -145,17 +145,17 @@
     </summary>
     
     
-      <category term="前端" scheme="http://yuang01.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="http://yuang01.gitee.io/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="tag" scheme="http://yuang01.github.io/tags/tag/"/>
+      <category term="tag" scheme="http://yuang01.gitee.io/tags/tag/"/>
     
   </entry>
   
   <entry>
     <title>Bamboo主题-基本配置（一）</title>
-    <link href="http://yuang01.github.io/post/hexo-theme-bamboo-new/"/>
-    <id>http://yuang01.github.io/post/hexo-theme-bamboo-new/</id>
+    <link href="http://yuang01.gitee.io/post/hexo-theme-bamboo-new/"/>
+    <id>http://yuang01.gitee.io/post/hexo-theme-bamboo-new/</id>
     <published>2021-07-05T03:12:00.000Z</published>
     <updated>2021-11-11T01:05:50.420Z</updated>
     
@@ -166,19 +166,19 @@
     </summary>
     
     
-      <category term="前端" scheme="http://yuang01.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="http://yuang01.gitee.io/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="Hexo" scheme="http://yuang01.github.io/tags/Hexo/"/>
+      <category term="Hexo" scheme="http://yuang01.gitee.io/tags/Hexo/"/>
     
-      <category term="hexo-theme-bamboo" scheme="http://yuang01.github.io/tags/hexo-theme-bamboo/"/>
+      <category term="hexo-theme-bamboo" scheme="http://yuang01.gitee.io/tags/hexo-theme-bamboo/"/>
     
   </entry>
   
   <entry>
     <title>Bamboo主题-页面功能配置（二）</title>
-    <link href="http://yuang01.github.io/post/hexo-theme-bamboo/page/"/>
-    <id>http://yuang01.github.io/post/hexo-theme-bamboo/page/</id>
+    <link href="http://yuang01.gitee.io/post/hexo-theme-bamboo/page/"/>
+    <id>http://yuang01.gitee.io/post/hexo-theme-bamboo/page/</id>
     <published>2021-07-05T03:11:00.000Z</published>
     <updated>2021-10-08T07:32:46.223Z</updated>
     
@@ -189,19 +189,19 @@
     </summary>
     
     
-      <category term="前端" scheme="http://yuang01.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="http://yuang01.gitee.io/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="Hexo" scheme="http://yuang01.github.io/tags/Hexo/"/>
+      <category term="Hexo" scheme="http://yuang01.gitee.io/tags/Hexo/"/>
     
-      <category term="hexo-theme-bamboo" scheme="http://yuang01.github.io/tags/hexo-theme-bamboo/"/>
+      <category term="hexo-theme-bamboo" scheme="http://yuang01.gitee.io/tags/hexo-theme-bamboo/"/>
     
   </entry>
   
   <entry>
     <title>Bamboo主题-主题更改（三）</title>
-    <link href="http://yuang01.github.io/post/hexo-theme-bamboo/theme/"/>
-    <id>http://yuang01.github.io/post/hexo-theme-bamboo/theme/</id>
+    <link href="http://yuang01.gitee.io/post/hexo-theme-bamboo/theme/"/>
+    <id>http://yuang01.gitee.io/post/hexo-theme-bamboo/theme/</id>
     <published>2021-07-05T03:10:00.000Z</published>
     <updated>2021-07-18T09:40:48.979Z</updated>
     
@@ -212,19 +212,19 @@
     </summary>
     
     
-      <category term="前端" scheme="http://yuang01.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="http://yuang01.gitee.io/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="Hexo" scheme="http://yuang01.github.io/tags/Hexo/"/>
+      <category term="Hexo" scheme="http://yuang01.gitee.io/tags/Hexo/"/>
     
-      <category term="hexo-theme-bamboo" scheme="http://yuang01.github.io/tags/hexo-theme-bamboo/"/>
+      <category term="hexo-theme-bamboo" scheme="http://yuang01.gitee.io/tags/hexo-theme-bamboo/"/>
     
   </entry>
   
   <entry>
     <title>Bamboo主题-Front-matter介绍（四）</title>
-    <link href="http://yuang01.github.io/post/hexo-theme-bamboo/front-matter/"/>
-    <id>http://yuang01.github.io/post/hexo-theme-bamboo/front-matter/</id>
+    <link href="http://yuang01.gitee.io/post/hexo-theme-bamboo/front-matter/"/>
+    <id>http://yuang01.gitee.io/post/hexo-theme-bamboo/front-matter/</id>
     <published>2021-07-05T03:09:00.000Z</published>
     <updated>2021-11-08T05:45:47.246Z</updated>
     
@@ -235,19 +235,19 @@
     </summary>
     
     
-      <category term="前端" scheme="http://yuang01.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="http://yuang01.gitee.io/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="Hexo" scheme="http://yuang01.github.io/tags/Hexo/"/>
+      <category term="Hexo" scheme="http://yuang01.gitee.io/tags/Hexo/"/>
     
-      <category term="hexo-theme-bamboo" scheme="http://yuang01.github.io/tags/hexo-theme-bamboo/"/>
+      <category term="hexo-theme-bamboo" scheme="http://yuang01.gitee.io/tags/hexo-theme-bamboo/"/>
     
   </entry>
   
   <entry>
     <title>Bamboo主题-内置标签（五）</title>
-    <link href="http://yuang01.github.io/post/hexo-theme-bamboo/tags/"/>
-    <id>http://yuang01.github.io/post/hexo-theme-bamboo/tags/</id>
+    <link href="http://yuang01.gitee.io/post/hexo-theme-bamboo/tags/"/>
+    <id>http://yuang01.gitee.io/post/hexo-theme-bamboo/tags/</id>
     <published>2021-07-05T03:08:00.000Z</published>
     <updated>2021-11-10T07:54:08.923Z</updated>
     
@@ -258,19 +258,19 @@
     </summary>
     
     
-      <category term="前端" scheme="http://yuang01.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="http://yuang01.gitee.io/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="Hexo" scheme="http://yuang01.github.io/tags/Hexo/"/>
+      <category term="Hexo" scheme="http://yuang01.gitee.io/tags/Hexo/"/>
     
-      <category term="hexo-theme-bamboo" scheme="http://yuang01.github.io/tags/hexo-theme-bamboo/"/>
+      <category term="hexo-theme-bamboo" scheme="http://yuang01.gitee.io/tags/hexo-theme-bamboo/"/>
     
   </entry>
   
   <entry>
     <title>Bamboo主题-建议（六）</title>
-    <link href="http://yuang01.github.io/post/hexo-theme-bamboo/suggest/"/>
-    <id>http://yuang01.github.io/post/hexo-theme-bamboo/suggest/</id>
+    <link href="http://yuang01.gitee.io/post/hexo-theme-bamboo/suggest/"/>
+    <id>http://yuang01.gitee.io/post/hexo-theme-bamboo/suggest/</id>
     <published>2021-07-05T03:07:00.000Z</published>
     <updated>2021-07-18T09:40:33.625Z</updated>
     
@@ -281,19 +281,19 @@
     </summary>
     
     
-      <category term="前端" scheme="http://yuang01.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="http://yuang01.gitee.io/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="Hexo" scheme="http://yuang01.github.io/tags/Hexo/"/>
+      <category term="Hexo" scheme="http://yuang01.gitee.io/tags/Hexo/"/>
     
-      <category term="hexo-theme-bamboo" scheme="http://yuang01.github.io/tags/hexo-theme-bamboo/"/>
+      <category term="hexo-theme-bamboo" scheme="http://yuang01.gitee.io/tags/hexo-theme-bamboo/"/>
     
   </entry>
   
   <entry>
     <title>issues-sites标签</title>
-    <link href="http://yuang01.github.io/post/issuessites/"/>
-    <id>http://yuang01.github.io/post/issuessites/</id>
+    <link href="http://yuang01.gitee.io/post/issuessites/"/>
+    <id>http://yuang01.gitee.io/post/issuessites/</id>
     <published>2021-06-16T03:35:00.000Z</published>
     <updated>2021-07-18T07:19:12.684Z</updated>
     
@@ -310,17 +310,17 @@
     </summary>
     
     
-      <category term="前端" scheme="http://yuang01.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="http://yuang01.gitee.io/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="tag" scheme="http://yuang01.github.io/tags/tag/"/>
+      <category term="tag" scheme="http://yuang01.gitee.io/tags/tag/"/>
     
   </entry>
   
   <entry>
     <title>issues-timeline标签</title>
-    <link href="http://yuang01.github.io/post/issuestimeline/"/>
-    <id>http://yuang01.github.io/post/issuestimeline/</id>
+    <link href="http://yuang01.gitee.io/post/issuestimeline/"/>
+    <id>http://yuang01.gitee.io/post/issuestimeline/</id>
     <published>2021-06-16T03:35:00.000Z</published>
     <updated>2021-06-17T02:11:43.946Z</updated>
     
@@ -338,17 +338,17 @@
     </summary>
     
     
-      <category term="前端" scheme="http://yuang01.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="http://yuang01.gitee.io/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="tag" scheme="http://yuang01.github.io/tags/tag/"/>
+      <category term="tag" scheme="http://yuang01.gitee.io/tags/tag/"/>
     
   </entry>
   
   <entry>
     <title>galleryGroup图片</title>
-    <link href="http://yuang01.github.io/post/gallerygroup/"/>
-    <id>http://yuang01.github.io/post/gallerygroup/</id>
+    <link href="http://yuang01.gitee.io/post/gallerygroup/"/>
+    <id>http://yuang01.gitee.io/post/gallerygroup/</id>
     <published>2021-05-10T16:00:00.000Z</published>
     <updated>2021-05-13T03:51:21.007Z</updated>
     
@@ -365,17 +365,17 @@
     </summary>
     
     
-      <category term="前端" scheme="http://yuang01.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="http://yuang01.gitee.io/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="tag" scheme="http://yuang01.github.io/tags/tag/"/>
+      <category term="tag" scheme="http://yuang01.gitee.io/tags/tag/"/>
     
   </entry>
   
   <entry>
     <title>进度条</title>
-    <link href="http://yuang01.github.io/post/progress/"/>
-    <id>http://yuang01.github.io/post/progress/</id>
+    <link href="http://yuang01.gitee.io/post/progress/"/>
+    <id>http://yuang01.gitee.io/post/progress/</id>
     <published>2021-02-22T03:35:00.000Z</published>
     <updated>2021-06-03T06:57:35.637Z</updated>
     
@@ -386,17 +386,17 @@
     </summary>
     
     
-      <category term="前端" scheme="http://yuang01.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="http://yuang01.gitee.io/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="tag" scheme="http://yuang01.github.io/tags/tag/"/>
+      <category term="tag" scheme="http://yuang01.gitee.io/tags/tag/"/>
     
   </entry>
   
   <entry>
     <title>按钮</title>
-    <link href="http://yuang01.github.io/post/btn/"/>
-    <id>http://yuang01.github.io/post/btn/</id>
+    <link href="http://yuang01.gitee.io/post/btn/"/>
+    <id>http://yuang01.gitee.io/post/btn/</id>
     <published>2021-02-08T03:36:00.000Z</published>
     <updated>2021-05-12T02:16:08.590Z</updated>
     
@@ -414,17 +414,17 @@
     </summary>
     
     
-      <category term="前端" scheme="http://yuang01.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="http://yuang01.gitee.io/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="tag" scheme="http://yuang01.github.io/tags/tag/"/>
+      <category term="tag" scheme="http://yuang01.gitee.io/tags/tag/"/>
     
   </entry>
   
   <entry>
     <title>audio音频</title>
-    <link href="http://yuang01.github.io/post/audio/"/>
-    <id>http://yuang01.github.io/post/audio/</id>
+    <link href="http://yuang01.gitee.io/post/audio/"/>
+    <id>http://yuang01.gitee.io/post/audio/</id>
     <published>2021-02-08T03:35:00.000Z</published>
     <updated>2021-05-11T01:44:42.600Z</updated>
     
@@ -443,17 +443,17 @@
     </summary>
     
     
-      <category term="前端" scheme="http://yuang01.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="http://yuang01.gitee.io/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="tag" scheme="http://yuang01.github.io/tags/tag/"/>
+      <category term="tag" scheme="http://yuang01.gitee.io/tags/tag/"/>
     
   </entry>
   
   <entry>
     <title>checkbox</title>
-    <link href="http://yuang01.github.io/post/checkbox/"/>
-    <id>http://yuang01.github.io/post/checkbox/</id>
+    <link href="http://yuang01.gitee.io/post/checkbox/"/>
+    <id>http://yuang01.gitee.io/post/checkbox/</id>
     <published>2021-02-08T03:35:00.000Z</published>
     <updated>2021-05-11T01:45:08.369Z</updated>
     
@@ -474,17 +474,17 @@
     </summary>
     
     
-      <category term="前端" scheme="http://yuang01.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="http://yuang01.gitee.io/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="tag" scheme="http://yuang01.github.io/tags/tag/"/>
+      <category term="tag" scheme="http://yuang01.gitee.io/tags/tag/"/>
     
   </entry>
   
   <entry>
     <title>folding折叠</title>
-    <link href="http://yuang01.github.io/post/folding/"/>
-    <id>http://yuang01.github.io/post/folding/</id>
+    <link href="http://yuang01.gitee.io/post/folding/"/>
+    <id>http://yuang01.gitee.io/post/folding/</id>
     <published>2021-02-08T03:35:00.000Z</published>
     <updated>2021-05-11T01:45:36.721Z</updated>
     
@@ -502,17 +502,17 @@
     </summary>
     
     
-      <category term="前端" scheme="http://yuang01.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="http://yuang01.gitee.io/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="tag" scheme="http://yuang01.github.io/tags/tag/"/>
+      <category term="tag" scheme="http://yuang01.gitee.io/tags/tag/"/>
     
   </entry>
   
   <entry>
     <title>gallery图片</title>
-    <link href="http://yuang01.github.io/post/gallery/"/>
-    <id>http://yuang01.github.io/post/gallery/</id>
+    <link href="http://yuang01.gitee.io/post/gallery/"/>
+    <id>http://yuang01.gitee.io/post/gallery/</id>
     <published>2021-02-08T03:35:00.000Z</published>
     <updated>2021-05-11T01:46:04.190Z</updated>
     
@@ -529,10 +529,10 @@
     </summary>
     
     
-      <category term="前端" scheme="http://yuang01.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="http://yuang01.gitee.io/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="tag" scheme="http://yuang01.github.io/tags/tag/"/>
+      <category term="tag" scheme="http://yuang01.gitee.io/tags/tag/"/>
     
   </entry>
   
