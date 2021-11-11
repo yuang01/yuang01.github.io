@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://yuang01.gitee.io/post/hexo-theme-bamboo-new/</loc>
+    <loc>http://yuang01.gitee.io/post/hexo-theme-bamboo/theme/</loc>
     
     <lastmod>2021-11-11</lastmod>
     
@@ -11,7 +11,42 @@
   <url>
     <loc>http://yuang01.gitee.io/post/hexo-theme-bamboo/tags/</loc>
     
-    <lastmod>2021-11-10</lastmod>
+    <lastmod>2021-11-11</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yuang01.gitee.io/post/hexo-theme-bamboo/suggest/</loc>
+    
+    <lastmod>2021-11-11</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yuang01.gitee.io/post/hexo-theme-bamboo/sidebar/</loc>
+    
+    <lastmod>2021-11-11</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yuang01.gitee.io/post/hexo-theme-bamboo/page/</loc>
+    
+    <lastmod>2021-11-11</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yuang01.gitee.io/post/hexo-theme-bamboo/front-matter/</loc>
+    
+    <lastmod>2021-11-11</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yuang01.gitee.io/post/hexo-theme-bamboo-new/</loc>
+    
+    <lastmod>2021-11-11</lastmod>
     
   </url>
   
@@ -51,13 +86,6 @@
   </url>
   
   <url>
-    <loc>http://yuang01.gitee.io/post/hexo-theme-bamboo/front-matter/</loc>
-    
-    <lastmod>2021-11-08</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://yuang01.gitee.io/post/link/</loc>
     
     <lastmod>2021-10-18</lastmod>
@@ -75,20 +103,6 @@
     <loc>http://yuang01.gitee.io/post/mathjax/index/</loc>
     
     <lastmod>2021-10-08</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yuang01.gitee.io/post/hexo-theme-bamboo/page/</loc>
-    
-    <lastmod>2021-10-08</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yuang01.gitee.io/post/hexo-theme-bamboo/sidebar/</loc>
-    
-    <lastmod>2021-09-28</lastmod>
     
   </url>
   
@@ -117,20 +131,6 @@
     <loc>http://yuang01.gitee.io/post/pbg/</loc>
     
     <lastmod>2021-08-12</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yuang01.gitee.io/post/hexo-theme-bamboo/theme/</loc>
-    
-    <lastmod>2021-07-18</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yuang01.gitee.io/post/hexo-theme-bamboo/suggest/</loc>
-    
-    <lastmod>2021-07-18</lastmod>
     
   </url>
   
@@ -403,13 +403,6 @@
   </url>
   
   <url>
-    <loc>http://yuang01.gitee.io/tags/mathjax/</loc>
-    <lastmod>2021-11-11</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://yuang01.gitee.io/tags/Hexo/</loc>
     <lastmod>2021-11-11</lastmod>
     <changefreq>daily</changefreq>
@@ -425,6 +418,13 @@
   
   <url>
     <loc>http://yuang01.gitee.io/tags/mermaid/</loc>
+    <lastmod>2021-11-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yuang01.gitee.io/tags/mathjax/</loc>
     <lastmod>2021-11-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -447,14 +447,14 @@
   </url>
   
   <url>
-    <loc>http://yuang01.gitee.io/categories/mathjax/</loc>
+    <loc>http://yuang01.gitee.io/categories/mermaid/</loc>
     <lastmod>2021-11-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://yuang01.gitee.io/categories/mermaid/</loc>
+    <loc>http://yuang01.gitee.io/categories/mathjax/</loc>
     <lastmod>2021-11-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
