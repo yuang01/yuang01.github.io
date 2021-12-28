@@ -2,7 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>http://yuang01.gitee.io/post/testimg/</loc>
-    <lastmod>2021-12-10</lastmod>
+    <lastmod>2021-12-28</lastmod>
+  </url>
+  <url>
+    <loc>http://yuang01.gitee.io/post/hexo-theme-bamboo-new/</loc>
+    <lastmod>2021-12-14</lastmod>
   </url>
   <url>
     <loc>http://yuang01.gitee.io/post/hexo-theme-bamboo/theme/</loc>
@@ -26,10 +30,6 @@
   </url>
   <url>
     <loc>http://yuang01.gitee.io/post/hexo-theme-bamboo/front-matter/</loc>
-    <lastmod>2021-12-02</lastmod>
-  </url>
-  <url>
-    <loc>http://yuang01.gitee.io/post/hexo-theme-bamboo-new/</loc>
     <lastmod>2021-12-02</lastmod>
   </url>
   <url>
