@@ -1216,8 +1216,20 @@
     </div>
   
   <canvas id="header_canvas"style="position:absolute;bottom:0;width:100%;pointer-events:none;"></canvas>
+  <svg class="hans-container" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none"><defs><path id="hans-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path></defs><g class="hans-parallax"><use xlink:href="#hans-wave" x="50" y="0" fill="rgba(224,233,239,.5)"></use><use xlink:href="#hans-wave" x="50" y="3" fill="rgba(224,233,239,.5)"></use><use xlink:href="#hans-wave" x="50" y="6" fill="rgba(224,233,239,.5)"></use></g></svg>
 </div>
-
+<style>.hans-parallax>use{animation:hans-wave-move 12s linear infinite}.hans-parallax>use:nth-child(1){animation-delay:-2s}.hans-parallax>use:nth-child(2){animation-delay:-2s;animation-duration:5s}.hans-parallax>use:nth-child(3){animation-delay:-4s;animation-duration:3s}@keyframes hans-wave-move{0%{transform:translate(-90px,0)}100%{transform:translate(85px,0)}}</style>
+<style>
+  .hans-container {
+    position: absolute!important;
+    bottom: 0;
+    width: 100%;
+    height: 120px;
+    z-index: 100;
+    pointer-events:none;
+  }
+</style>
+<!-- <script src="https://api.vvhan.com/api/bolang"></script> -->
 <script>
   var autoplay = JSON.parse('false');
   var delay = '5000';
@@ -2034,66 +2046,6 @@
             <span class="post-time">2021-02-08</span>
           </div>
           <div class="post-title">
-            <a class="post-title-link" href="/post/video/">video视频</a>
-          </div>
-          <div class="post-meta">
-            <div class="post-tags">
-              <!-- 文章详情页的标签 -->
-
-    <i class="iconfont icontag"></i>
-    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tag/" rel="tag">tag</a></li></ul>
-
-            </div>
-            <div class="post-categories">
-              <!-- 文章详情页的分类 -->
-
-<div class="article-category">
-  <i class="iconfont iconbookmark1"></i>
-  <a class="article-category-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a>
-</div>
-
-
-            </div>
-          </div>
-          <div class="post-img-mobile">
-            <a href="/post/video/" style="background-size: cover; 
-              background-position: center center;">
-              <img class="lazyload lazyload placeholder" src="https://pic3.zhimg.com/v2-806666b346e90aa0506069930e453b2a_b.jpg" class="lazyload placeholder" data-srcset="https://pic3.zhimg.com/v2-806666b346e90aa0506069930e453b2a_b.jpg" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="">
-            </a>
-          </div>
-          <div class="post-content">
-            video演示
-100%宽度
-Your browser does not support the video tag.
-
-50%宽度
-Your browser does not support the video tag.
-Your bro
-          </div>
-        </div>
-        <div class="post-more">
-          <a href="/post/video/">
-            <i class="iconfont iconmore" pointer style="  " title="阅读更多"></i>
-          </a>
-        </div>
-      </div>
-      <div class="post-img">
-        <a href="/post/video/" style="background-size: cover; 
-          background-position: center center;">
-          <img class="lazyload lazyload placeholder" src="https://pic3.zhimg.com/v2-806666b346e90aa0506069930e453b2a_b.jpg" class="lazyload placeholder" data-srcset="https://pic3.zhimg.com/v2-806666b346e90aa0506069930e453b2a_b.jpg" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="">
-        </a>
-      </div>
-    </article>
-  
-    
-    <article class="post reveal" style="flex-direction: row-reverse;   ">
-      <div class="post-main">
-        <div class="post-info">
-          <div class="post-time">
-            <i class="fas fa-clock" aria-hidden="true"></i>
-            <span class="post-time">2021-02-08</span>
-          </div>
-          <div class="post-title">
             <a class="post-title-link" href="/post/title/">title</a>
           </div>
           <div class="post-meta">
@@ -2142,7 +2094,7 @@ Your bro
         </div>
         <div class="post-more">
           <a href="/post/title/">
-            <i class="iconfont iconmore" pointer style="float: right;  " title="阅读更多"></i>
+            <i class="iconfont iconmore" pointer style="  " title="阅读更多"></i>
           </a>
         </div>
       </div>
@@ -2150,6 +2102,66 @@ Your bro
         <a href="/post/title/" style="background-size: cover; 
           background-position: center center;">
           <img class="lazyload lazyload placeholder" src="https://pic1.zhimg.com/v2-cdf0dd8357e2cf573f32d0d65cff6404_b.jpg" class="lazyload placeholder" data-srcset="https://pic1.zhimg.com/v2-cdf0dd8357e2cf573f32d0d65cff6404_b.jpg" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="">
+        </a>
+      </div>
+    </article>
+  
+    
+    <article class="post reveal" style="flex-direction: row-reverse;   ">
+      <div class="post-main">
+        <div class="post-info">
+          <div class="post-time">
+            <i class="fas fa-clock" aria-hidden="true"></i>
+            <span class="post-time">2021-02-08</span>
+          </div>
+          <div class="post-title">
+            <a class="post-title-link" href="/post/video/">video视频</a>
+          </div>
+          <div class="post-meta">
+            <div class="post-tags">
+              <!-- 文章详情页的标签 -->
+
+    <i class="iconfont icontag"></i>
+    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tag/" rel="tag">tag</a></li></ul>
+
+            </div>
+            <div class="post-categories">
+              <!-- 文章详情页的分类 -->
+
+<div class="article-category">
+  <i class="iconfont iconbookmark1"></i>
+  <a class="article-category-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a>
+</div>
+
+
+            </div>
+          </div>
+          <div class="post-img-mobile">
+            <a href="/post/video/" style="background-size: cover; 
+              background-position: center center;">
+              <img class="lazyload lazyload placeholder" src="https://pic3.zhimg.com/v2-806666b346e90aa0506069930e453b2a_b.jpg" class="lazyload placeholder" data-srcset="https://pic3.zhimg.com/v2-806666b346e90aa0506069930e453b2a_b.jpg" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="">
+            </a>
+          </div>
+          <div class="post-content">
+            video演示
+100%宽度
+Your browser does not support the video tag.
+
+50%宽度
+Your browser does not support the video tag.
+Your bro
+          </div>
+        </div>
+        <div class="post-more">
+          <a href="/post/video/">
+            <i class="iconfont iconmore" pointer style="float: right;  " title="阅读更多"></i>
+          </a>
+        </div>
+      </div>
+      <div class="post-img">
+        <a href="/post/video/" style="background-size: cover; 
+          background-position: center center;">
+          <img class="lazyload lazyload placeholder" src="https://pic3.zhimg.com/v2-806666b346e90aa0506069930e453b2a_b.jpg" class="lazyload placeholder" data-srcset="https://pic3.zhimg.com/v2-806666b346e90aa0506069930e453b2a_b.jpg" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="">
         </a>
       </div>
     </article>
@@ -2640,7 +2652,7 @@ asa
         <div class="webinfo-item">
           <div>最后活动时间：</div>
           
-            <div id="last-update" style="display: none;">Thu May 19 2022 12:59:30 GMT+0800 (GMT+08:00)</div>
+            <div id="last-update" style="display: none;">Thu May 19 2022 14:41:45 GMT+0800 (GMT+08:00)</div>
             <div id="last-update-show">2022-05-19 日</div>
           
         </div>
