@@ -5,12 +5,33 @@ new Vue({
   data: function () {
     return {
       content: [],
-      listData: [1, 2, 3, 4, 5, 6],
+      listData: [],
       classOption: {
         limitMoveNum: 2,
         direction: 3,
       },
+      bliWidth: '720px'
     };
   },
-  methods: {},
+  created() {
+    this.getList();
+  },
+  methods: {
+    // 请求开源api, 获取历史上的今天数据
+    getList() {
+      fetch("https://api.vvhan.com/api/douban", {
+        method: "GET", // *GET, POST, PUT, DELETE, etc.
+      })
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        this.listData = data.data;
+        this.bliWidth = Number(data.data.length) * 120 + 'px';
+      })
+      .catch((err) => {
+        console.log("err", err);
+      });
+    },
+  },
 });

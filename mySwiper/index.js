@@ -32,12 +32,16 @@ new Vue({
         // or data-swiper-parallax="-100"
         // 上面是文字动画效果，注释则取消文字动画，动画效果参见 https://www.swiper.com.cn/usage/animate/index.html
       },
+      listData: [{url: '', pic: '', title: '', desc: ''}],
     };
   },
   computed: {
     swiper() {
       return this.$refs.myswiper.$swiper;
     },
+  },
+  created() {
+    this.getList();
   },
   methods: {
     // 鼠标移入停止轮播
@@ -47,6 +51,21 @@ new Vue({
     // 鼠标移出开始轮播
     startAutoPlay() {
       this.swiperOption.autoplay && this.swiper.autoplay.start();
+    },
+     // 请求开源api, 获取历史上的今天数据
+     getList() {
+      fetch("https://api.vvhan.com/api/hotlist?type=bili", {
+        method: "GET", // *GET, POST, PUT, DELETE, etc.
+      })
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        this.listData = data.data;
+      })
+      .catch((err) => {
+        console.log("err", err);
+      });
     },
   },
 });

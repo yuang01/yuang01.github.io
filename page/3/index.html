@@ -9,6 +9,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   <meta name="baidu-site-verification" content="code-F6V1FSKLvX" />
+  <meta name="referrer" content="no-referrer" />
   <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
@@ -16,24 +17,9 @@
 
   <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico">
   <link rel="stylesheet" href="https://at.alicdn.com/t/font_1911880_c1nvbyezg17.css">
-  <link href="https://cdn.jsdelivr.net/gh/inkss/fontawesome@5.15.3/css/all.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
   <link href="/js/swiper/swiper@5.4.1.min.css" rel="stylesheet">
   
-  
-    <script>
-        var themeModelId = '2';
-        if (themeModelId) {
-            localStorage.setItem('modelId', themeModelId);
-        }
-    </script>
-    
-    <script src="https://cdn.jsdelivr.net/gh/yuang01/live2d-widget@latest/autoload.js"></script>
-    <script>
-        var live2dOpen = eval('true') || false;
-        if (!live2dOpen) {
-            localStorage.setItem('waifu-display', 1609323474481);
-        }
-    </script>
   
   
   
@@ -76,7 +62,7 @@
     <!-- import script -->
     
         
-            
+            <script src="https://api.vvhan.com/api/meihua"></script>
         
             
         
@@ -89,13 +75,13 @@
   <!-- 依赖于jquery和vue -->
   
     
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="https://unpkg.com/jquery@3.5.1/dist/jquery.min.js"></script>
 
   
 
   
     
-<script src="https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.min.js"></script>
+<script src="https://unpkg.com/vue@2.6.11/dist/vue.min.js"></script>
 
   
   
@@ -206,7 +192,7 @@
 <script src="/js/vue-seamless-scroll/index.js"></script>
 
 <!-- 打字机效果js -->
-<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+<script src="https://unpkg.com/typed.js@2.0.11"></script>
 
 
     <div id="safearea">
@@ -1792,18 +1778,18 @@
     <div class="widget welcome" id="welcome" style="order: -1;background: #fff">
       <header>
         
-          <a style="color: blue" target="_blank" rel="noopener" href='http://baidu.com'><i class="fas fa-envelope fa-fw" aria-hidden="true"></i><span class='name'>欢迎</span></a>
+          <a style="color: red" target="_blank" rel="noopener" href='http://baidu.com'><i class="fa-solid fa-door-open fa-fw" aria-hidden="true"></i><span class='name'>欢迎光临</span></a>
         
       </header>
       <div class="content">
-        <img src="https://api.amogu.cn/api/ipimg/" class="lazyload placeholder" data-srcset="https://api.amogu.cn/api/ipimg/" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" style="width:100%">
+        <img class="no-lazy" src="https://api.dzzui.com/api/ip" style="width:100%">
       </div>
   </div>
   
     <div class="widget my_github_container" id="my_github_container" style="order: -1;background: #fff">
       <header>
         
-          <a style="color: blue" target="_blank" rel="noopener" href='http://baidu.com'><i class="fas fa-envelope fa-fw" aria-hidden="true"></i><span class='name'>测试日历</span></a>
+          <a style="color: #42b983" target="_blank" rel="noopener" href='http://baidu.com'><i class="fa-solid fa-calendar-days fa-fw" aria-hidden="true"></i><span class='name'>测试日历</span></a>
         
       </header>
       <div class="content">
@@ -1814,17 +1800,12 @@
     <div class="widget test2" id="test2" style="order: -1;background: #fff">
       <header>
         
-          <a style="color: blue" target="_blank" rel="noopener" href='http://baidu.com'><i class="fas fa-envelope fa-fw" aria-hidden="true"></i><span class='name'>测试轮播图</span></a>
+          <a style="color: #00AEEC" target="_blank" rel="noopener" href='http://baidu.com'><i class="fa-brands fa-bilibili fa-fw" aria-hidden="true"></i><span class='name'>bilibili热榜</span></a>
         
       </header>
       <div class="content">
          <div id="mySwiper" @mouseenter="stopAutoPlay()" @mouseleave="startAutoPlay()"> <swiper class="myswiper" ref="myswiper" style="height:350px;" :options="swiperOption">
-<swiper-slide> <a target="_blank" rel="noopener" href="http://baidu.com" class="toPath"> <img class="no-lazy" src="/mySwiper/img/2.jpg" style="width:100%;height:100%;object-fit: cover;"> <h2 class="ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">我是标题</h2> <p class="ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">我是描述哦</p> </a> </swiper-slide>
-<swiper-slide> <a target="_blank" rel="noopener" href="http://baidu.com" class="toPath"> <img class="no-lazy" src="/mySwiper/img/3.jpg" style="width:100%;height:100%;object-fit: cover;"> <h2 class="ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">我是标题2</h2> <p class="ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">我是描述2</p> </a> </swiper-slide>
-<swiper-slide> <a target="_blank" rel="noopener" href="http://baidu.com" class="toPath"> <img class="no-lazy" src="/mySwiper/img/4.jpg" style="width:100%;height:100%;object-fit: cover;"> <h2 class="ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">我是标题3</h2> <p class="ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">我是描述3</p> </a> </swiper-slide>
-<swiper-slide> <a target="_blank" rel="noopener" href="http://baidu.com" class="toPath"> <img class="no-lazy" src="/mySwiper/img/5.jpg" style="width:100%;height:100%;object-fit: cover;"> <h2 class="ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">我是标题4</h2> <p class="ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">我是描述4</p> </a> </swiper-slide>
-<swiper-slide> <a target="_blank" rel="noopener" href="http://baidu.com" class="toPath"> <img class="no-lazy" src="https://api.dujin.org/pic/ghibli/" style="width:100%;height:100%;object-fit: cover;"> <h2 class="ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">我是标题5</h2> <p class="ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">我是描述5</p> </a> </swiper-slide>
-<swiper-slide> <a target="_blank" rel="noopener" href="http://baidu.com" class="toPath"> <img class="no-lazy" src="/mySwiper/img/7.jpg" style="width:100%;height:100%;object-fit: cover;"> <h2 class="ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">我是标题6</h2> <p class="ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">我是描述6</p> </a> </swiper-slide>
+<swiper-slide v-for="(item, index) in listData" :key="index"> <a :href="item.url" class="toPath" target="_blank"> <img class="no-lazy" :src="item.pic" style="width:100%;height:100%;object-fit: cover;"> <h2 class="ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">{{item.title}}</h2> <p class="ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">{{item.desc}}</p> </a> </swiper-slide>
 <!-- 如果你想继续增加轮播图，继续在下面写<swiper-slide>我是内容</swiper-slide>就行了 --> <div class="swiper-pagination" slot="pagination"></div>
 </swiper> </div>
 <script src="/mySwiper/index.js"></script> <link href="/mySwiper/index.css" rel="stylesheet"> 
@@ -1834,17 +1815,12 @@
     <div class="widget mybilibili" id="mybilibili" style="order: -1;background: #fff">
       <header>
         
-          <a style="color: blue" target="_blank" rel="noopener" href='http://baidu.com'><i class="fas fa-envelope fa-fw" aria-hidden="true"></i><span class='name'>测试bli</span></a>
+          <a style="color: #41ac52" target="_blank" rel="noopener" href='http://baidu.com'><i class="fas fa-envelope fa-fw" aria-hidden="true"></i><span class='name'>豆瓣电影排行</span></a>
         
       </header>
       <div class="content">
-         <div id="myBli"> <vue-seamless-scroll :data="listData" :class-option="classOption" class="warp" > <ul class="ul-item" style="width:720px;"> <!-- 在这里改, 手动修改a连接的href值和img的src值, 如果你会进阶，你可以使用v-for, 或者数据使用动态数据-->
-<li class="li-item"> <a target="_blank" rel="noopener" href="http://baidu.com"> <img class="no-lazy" src="https://pic4.zhimg.com/80/v2-f549722dac8f777693c090a92498de0f_1440w.jpg"> </a> </li>
-<li class="li-item"> <a target="_blank" rel="noopener" href="http://baidu.com"> <img class="no-lazy" src="https://pic4.zhimg.com/80/v2-f549722dac8f777693c090a92498de0f_1440w.jpg"> </a> </li>
-<li class="li-item"> <a target="_blank" rel="noopener" href="http://baidu.com"> <img class="no-lazy" src="https://pic4.zhimg.com/80/v2-f549722dac8f777693c090a92498de0f_1440w.jpg"> </a> </li>
-<li class="li-item"> <a target="_blank" rel="noopener" href="http://baidu.com"> <img class="no-lazy" src="https://pic4.zhimg.com/80/v2-f549722dac8f777693c090a92498de0f_1440w.jpg"> </a> </li>
-<li class="li-item"> <a target="_blank" rel="noopener" href="http://baidu.com"> <img class="no-lazy" src="https://pic4.zhimg.com/80/v2-f549722dac8f777693c090a92498de0f_1440w.jpg"> </a> </li>
-<li class="li-item"> <a target="_blank" rel="noopener" href="http://baidu.com"> <img class="no-lazy" src="https://pic4.zhimg.com/80/v2-f549722dac8f777693c090a92498de0f_1440w.jpg"> </a> </li> <!-- 在这里结束 --> </ul> </vue-seamless-scroll> </div>
+         <div id="myBli"> <vue-seamless-scroll :data="listData" :class-option="classOption" class="warp" > <ul class="ul-item" :style="{width: bliWidth}"> <!-- 在这里改, 手动修改a连接的href值和img的src值, 如果你会进阶，你可以使用v-for, 或者数据使用动态数据-->
+<li class="li-item" v-for="(item, index) in listData" :key="index"> <a :href="item.info.url" target="_blank"> <img class="no-lazy" :src="item.info.imgurl"> </a> </li> <!-- 在这里结束 --> </ul> </vue-seamless-scroll> </div>
 <script src="/bli/index.js"></script> <link href="/bli/index.css" rel="stylesheet"> 
       </div>
   </div>
@@ -2071,73 +2047,6 @@
             <span class="post-time">2021-02-08</span>
           </div>
           <div class="post-title">
-            <a class="post-title-link" href="/post/note/">Note标签</a>
-          </div>
-          <div class="post-meta">
-            <div class="post-tags">
-              <!-- 文章详情页的标签 -->
-
-    <i class="iconfont icontag"></i>
-    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tag/" rel="tag">tag</a></li></ul>
-
-            </div>
-            <div class="post-categories">
-              <!-- 文章详情页的分类 -->
-
-<div class="article-category">
-  <i class="iconfont iconbookmark1"></i>
-  <a class="article-category-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a>
-</div>
-
-
-            </div>
-          </div>
-          <div class="post-img-mobile">
-            <a href="/post/note/" style="background-size: cover; 
-              background-position: center center;">
-              <img class="lazyload lazyload placeholder" src="https://pic2.zhimg.com/80/v2-faf73fcede052da243fef1b36604b8f9_1440w.jpg?source=1940ef5c" class="lazyload placeholder" data-srcset="https://pic2.zhimg.com/80/v2-faf73fcede052da243fef1b36604b8f9_1440w.jpg?source=1940ef5c" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="">
-            </a>
-          </div>
-          <div class="post-content">
-            note演示效果
-
-markdown默认写法，左边框颜色，随着主题色改变
-
-我有一只小毛驴，我从来都不骑。
-适合引用一段话
-这是一个警告
-这是一个错误
-这是一个成功
-这是一个信息
-
-
-
-上述事例源码> markdown默认写法，左边框颜色，
-          </div>
-        </div>
-        <div class="post-more">
-          <a href="/post/note/">
-            <i class="iconfont iconmore" pointer style="  " title="阅读更多"></i>
-          </a>
-        </div>
-      </div>
-      <div class="post-img">
-        <a href="/post/note/" style="background-size: cover; 
-          background-position: center center;">
-          <img class="lazyload lazyload placeholder" src="https://pic2.zhimg.com/80/v2-faf73fcede052da243fef1b36604b8f9_1440w.jpg?source=1940ef5c" class="lazyload placeholder" data-srcset="https://pic2.zhimg.com/80/v2-faf73fcede052da243fef1b36604b8f9_1440w.jpg?source=1940ef5c" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="">
-        </a>
-      </div>
-    </article>
-  
-    
-    <article class="post reveal" style="flex-direction: row-reverse;   ">
-      <div class="post-main">
-        <div class="post-info">
-          <div class="post-time">
-            <i class="fas fa-clock" aria-hidden="true"></i>
-            <span class="post-time">2021-02-08</span>
-          </div>
-          <div class="post-title">
             <a class="post-title-link" href="/post/noteblock/">NoteBlock</a>
           </div>
           <div class="post-meta">
@@ -2185,7 +2094,7 @@ markdown默认写法，左边框颜色，随着主题色改变
         </div>
         <div class="post-more">
           <a href="/post/noteblock/">
-            <i class="iconfont iconmore" pointer style="float: right;  " title="阅读更多"></i>
+            <i class="iconfont iconmore" pointer style="  " title="阅读更多"></i>
           </a>
         </div>
       </div>
@@ -2198,7 +2107,128 @@ markdown默认写法，左边框颜色，随着主题色改变
     </article>
   
     
+    <article class="post reveal" style="flex-direction: row-reverse;   ">
+      <div class="post-main">
+        <div class="post-info">
+          <div class="post-time">
+            <i class="fas fa-clock" aria-hidden="true"></i>
+            <span class="post-time">2021-02-08</span>
+          </div>
+          <div class="post-title">
+            <a class="post-title-link" href="/post/note/">Note标签</a>
+          </div>
+          <div class="post-meta">
+            <div class="post-tags">
+              <!-- 文章详情页的标签 -->
+
+    <i class="iconfont icontag"></i>
+    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tag/" rel="tag">tag</a></li></ul>
+
+            </div>
+            <div class="post-categories">
+              <!-- 文章详情页的分类 -->
+
+<div class="article-category">
+  <i class="iconfont iconbookmark1"></i>
+  <a class="article-category-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a>
+</div>
+
+
+            </div>
+          </div>
+          <div class="post-img-mobile">
+            <a href="/post/note/" style="background-size: cover; 
+              background-position: center center;">
+              <img class="lazyload lazyload placeholder" src="https://pic2.zhimg.com/80/v2-faf73fcede052da243fef1b36604b8f9_1440w.jpg?source=1940ef5c" class="lazyload placeholder" data-srcset="https://pic2.zhimg.com/80/v2-faf73fcede052da243fef1b36604b8f9_1440w.jpg?source=1940ef5c" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="">
+            </a>
+          </div>
+          <div class="post-content">
+            note演示效果
+
+markdown默认写法，左边框颜色，随着主题色改变
+
+我有一只小毛驴，我从来都不骑。
+适合引用一段话
+这是一个警告
+这是一个错误
+这是一个成功
+这是一个信息
+
+
+
+上述事例源码> markdown默认写法，左边框颜色，
+          </div>
+        </div>
+        <div class="post-more">
+          <a href="/post/note/">
+            <i class="iconfont iconmore" pointer style="float: right;  " title="阅读更多"></i>
+          </a>
+        </div>
+      </div>
+      <div class="post-img">
+        <a href="/post/note/" style="background-size: cover; 
+          background-position: center center;">
+          <img class="lazyload lazyload placeholder" src="https://pic2.zhimg.com/80/v2-faf73fcede052da243fef1b36604b8f9_1440w.jpg?source=1940ef5c" class="lazyload placeholder" data-srcset="https://pic2.zhimg.com/80/v2-faf73fcede052da243fef1b36604b8f9_1440w.jpg?source=1940ef5c" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="">
+        </a>
+      </div>
+    </article>
+  
+    
     <article class="post reveal" style="   ">
+      <div class="post-main">
+        <div class="post-info">
+          <div class="post-time">
+            <i class="fas fa-clock" aria-hidden="true"></i>
+            <span class="post-time">2021-02-08</span>
+          </div>
+          <div class="post-title">
+            <a class="post-title-link" href="/post/pbg/">文本高亮</a>
+          </div>
+          <div class="post-meta">
+            <div class="post-tags">
+              <!-- 文章详情页的标签 -->
+
+    <i class="iconfont icontag"></i>
+    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tag/" rel="tag">tag</a></li></ul>
+
+            </div>
+            <div class="post-categories">
+              <!-- 文章详情页的分类 -->
+
+<div class="article-category">
+  <i class="iconfont iconbookmark1"></i>
+  <a class="article-category-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a>
+</div>
+
+
+            </div>
+          </div>
+          <div class="post-img-mobile">
+            <a href="/post/pbg/" style="background-size: cover; 
+              background-position: center center;">
+              <img class="lazyload lazyload placeholder" src="https://pic1.zhimg.com/80/v2-c274041256201850e4a51998c5c48b77_1440w.jpg?source=1940ef5c" class="lazyload placeholder" data-srcset="https://pic1.zhimg.com/80/v2-c274041256201850e4a51998c5c48b77_1440w.jpg?source=1940ef5c" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="">
+            </a>
+          </div>
+          <div class="post-content">
+            文本高亮标签
+          </div>
+        </div>
+        <div class="post-more">
+          <a href="/post/pbg/">
+            <i class="iconfont iconmore" pointer style="  " title="阅读更多"></i>
+          </a>
+        </div>
+      </div>
+      <div class="post-img">
+        <a href="/post/pbg/" style="background-size: cover; 
+          background-position: center center;">
+          <img class="lazyload lazyload placeholder" src="https://pic1.zhimg.com/80/v2-c274041256201850e4a51998c5c48b77_1440w.jpg?source=1940ef5c" class="lazyload placeholder" data-srcset="https://pic1.zhimg.com/80/v2-c274041256201850e4a51998c5c48b77_1440w.jpg?source=1940ef5c" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="">
+        </a>
+      </div>
+    </article>
+  
+    
+    <article class="post reveal" style="flex-direction: row-reverse;   ">
       <div class="post-main">
         <div class="post-info">
           <div class="post-time">
@@ -2243,7 +2273,7 @@ markdown默认写法，左边框颜色，随着主题色改变
         </div>
         <div class="post-more">
           <a href="/post/p/">
-            <i class="iconfont iconmore" pointer style="  " title="阅读更多"></i>
+            <i class="iconfont iconmore" pointer style="float: right;  " title="阅读更多"></i>
           </a>
         </div>
       </div>
@@ -2251,60 +2281,6 @@ markdown默认写法，左边框颜色，随着主题色改变
         <a href="/post/p/" style="background-size: cover; 
           background-position: center center;">
           <img class="lazyload lazyload placeholder" src="https://pic4.zhimg.com/80/v2-513fd25e66ae237fca305e8ebf4de594_1440w.jpg?source=1940ef5c" class="lazyload placeholder" data-srcset="https://pic4.zhimg.com/80/v2-513fd25e66ae237fca305e8ebf4de594_1440w.jpg?source=1940ef5c" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="">
-        </a>
-      </div>
-    </article>
-  
-    
-    <article class="post reveal" style="flex-direction: row-reverse;   ">
-      <div class="post-main">
-        <div class="post-info">
-          <div class="post-time">
-            <i class="fas fa-clock" aria-hidden="true"></i>
-            <span class="post-time">2021-02-08</span>
-          </div>
-          <div class="post-title">
-            <a class="post-title-link" href="/post/pbg/">文本高亮</a>
-          </div>
-          <div class="post-meta">
-            <div class="post-tags">
-              <!-- 文章详情页的标签 -->
-
-    <i class="iconfont icontag"></i>
-    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tag/" rel="tag">tag</a></li></ul>
-
-            </div>
-            <div class="post-categories">
-              <!-- 文章详情页的分类 -->
-
-<div class="article-category">
-  <i class="iconfont iconbookmark1"></i>
-  <a class="article-category-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a>
-</div>
-
-
-            </div>
-          </div>
-          <div class="post-img-mobile">
-            <a href="/post/pbg/" style="background-size: cover; 
-              background-position: center center;">
-              <img class="lazyload lazyload placeholder" src="https://pic1.zhimg.com/80/v2-c274041256201850e4a51998c5c48b77_1440w.jpg?source=1940ef5c" class="lazyload placeholder" data-srcset="https://pic1.zhimg.com/80/v2-c274041256201850e4a51998c5c48b77_1440w.jpg?source=1940ef5c" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="">
-            </a>
-          </div>
-          <div class="post-content">
-            文本高亮标签
-          </div>
-        </div>
-        <div class="post-more">
-          <a href="/post/pbg/">
-            <i class="iconfont iconmore" pointer style="float: right;  " title="阅读更多"></i>
-          </a>
-        </div>
-      </div>
-      <div class="post-img">
-        <a href="/post/pbg/" style="background-size: cover; 
-          background-position: center center;">
-          <img class="lazyload lazyload placeholder" src="https://pic1.zhimg.com/80/v2-c274041256201850e4a51998c5c48b77_1440w.jpg?source=1940ef5c" class="lazyload placeholder" data-srcset="https://pic1.zhimg.com/80/v2-c274041256201850e4a51998c5c48b77_1440w.jpg?source=1940ef5c" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="">
         </a>
       </div>
     </article>
@@ -2595,6 +2571,17 @@ yuang01这是描述哦
   
   
     
+      <div class="widget moyu" id="moyu" style="order: 0;background: #e9e5d1">
+        <header>
+          
+            <a style="color: #d63130" target="_blank" rel="noopener" href='http://baidu.com'><i class="fa-solid fa-fish fa-fw" aria-hidden="true"></i><span class='name'>开始摸鱼</span></a>
+          
+        </header>
+        <div class="content">
+          <img class="no-lazy" src="https://api.vvhan.com/api/moyu" style="width:100%">
+        </div>
+    </div>
+    
   
 
   <div class="layout_sticky">
@@ -2844,8 +2831,8 @@ yuang01这是描述哦
         <div class="webinfo-item">
           <div>最后活动时间：</div>
           
-            <div id="last-update" style="display: none;">Mon Feb 14 2022 11:36:24 GMT+0800 (GMT+08:00)</div>
-            <div id="last-update-show">2022-02-14 日</div>
+            <div id="last-update" style="display: none;">Thu May 19 2022 11:44:39 GMT+0800 (GMT+08:00)</div>
+            <div id="last-update-show">2022-05-19 日</div>
           
         </div>
         
@@ -2895,7 +2882,7 @@ yuang01这是描述哦
           try {
             document.getElementById('last-update-show').innerHTML = timeago(new Date(lastUpDate));
           } catch (error) {
-            document.getElementById('last-update-show').innerHTML = '2022-02-14 日';
+            document.getElementById('last-update-show').innerHTML = '2022-05-19 日';
           }
         </script>
         
@@ -2914,7 +2901,7 @@ yuang01这是描述哦
       <div class="content">
          <div id="myWeibo">
 <!-- 如果不要滚动，则去掉 vue-seamless-scroll标签就行了，这个插件使用cdn向左向右滚动好像有问题 -->
-<vue-seamless-scroll :data="content" :class-option="classOption" class="warp" > <div class="weibo-container" v-for="(item, index) in content" :key="index"> <div class="left"> <div class="order" :class="{ red: index<=2 }">{{index + 1}}</div> <div class="name"><a :href="item.url" target="_blank">{{item.name}}</a></div> </div> <div class="hot">{{item.hot}}</div> </div> </vue-seamless-scroll> </div>
+<vue-seamless-scroll :data="content" :class-option="classOption" class="warp" > <div class="weibo-container" v-for="(item, index) in content" :key="index"> <div class="left"> <div class="order" :class="{ red: index<=2 }">{{index + 1}}</div> <div class="name"><a :href="item.url" target="_blank">{{item.title}}</a></div> </div> <div class="hot">{{item.hot}}</div> </div> </vue-seamless-scroll> </div>
 <script src="/weibo/index.js"></script> <link href="/weibo/index.css" rel="stylesheet"> 
       </div>
   </div>
@@ -2926,7 +2913,7 @@ yuang01这是描述哦
         
       </header>
       <div class="content">
-         <div id="myHistorySwiper" @mouseenter="stopAutoPlay()" @mouseleave="startAutoPlay()"> <swiper class="myhistoryswiper" ref="myhistoryswiper" style="height:80px;" :options="swiperOption"> <swiper-slide v-for="(item, index) in content" :key="index"> {{item}} </swiper-slide> </swiper> </div> <script src="/historyToday/index.js"></script> 
+         <div id="myHistorySwiper" @mouseenter="stopAutoPlay()" @mouseleave="startAutoPlay()"> <swiper class="myhistoryswiper" ref="myhistoryswiper" style="height:80px;" :options="swiperOption"> <swiper-slide v-for="(item, index) in content" :key="index"> {{item.title}} </swiper-slide> </swiper> </div> <script src="/historyToday/index.js"></script> 
       </div>
   </div>
   
@@ -3109,7 +3096,7 @@ yuang01这是描述哦
   class=""
   server="tencent"
   type="song"
-  id="000oHw1p2k1wK6"
+  id="003WBP9C34tr7x"
   fixed='true'
   autoplay='true'
   theme='#42b983'
@@ -3128,8 +3115,8 @@ yuang01这是描述哦
     bottom: 300px;
   }
 </style> -->
-<script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+<script src="https://unpkg.com/aplayer@1.10.1/dist/APlayer.min.js"></script>
+<script src="https://unpkg.com/meting@2/dist/Meting.min.js"></script>
     
 
     <!-- 图片放大 -->
@@ -3377,8 +3364,8 @@ yuang01这是描述哦
 
 <!-- markdown代码一键复制功能 -->
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/v-plugs-ayu/lib/ayu.css">
-  <script src="https://cdn.jsdelivr.net/npm/v-plugs-ayu/lib/ayu.umd.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/v-plugs-ayu/lib/ayu.css">
+  <script src="https://unpkg.com/v-plugs-ayu/lib/ayu.umd.min.js"></script>
   <script src="/js/clipboard/clipboard.min.js"></script>
   <div id="appCopy">
   </div>
@@ -3432,7 +3419,7 @@ yuang01这是描述哦
   
 
 <!-- 图片懒加载 -->
-<script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.0/dist/lazyload.min.js"></script>
+<script defer src="https://unpkg.com/vanilla-lazyload@17.1.0/dist/lazyload.min.js"></script>
 <script>
   // https://www.npmjs.com/package/vanilla-lazyload
   // Set the options globally

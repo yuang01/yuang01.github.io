@@ -14,14 +14,14 @@ new Vue({
   methods: {
     // 请求开源api, 获取历史上的今天数据
     getWeiboList() {
-      fetch("https://tenapi.cn/resou/", {
+      fetch("https://api.vvhan.com/api/wbhot", {
         method: "GET", // *GET, POST, PUT, DELETE, etc.
       })
         .then((res) => {
           return res.json();
         })
         .then((data) => {
-          this.content = data.list;
+          this.content = data.data;
         })
         .catch((err) => {
           console.log("err", err);

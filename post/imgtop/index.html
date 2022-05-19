@@ -9,6 +9,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   <meta name="baidu-site-verification" content="code-F6V1FSKLvX" />
+  <meta name="referrer" content="no-referrer" />
   <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
@@ -16,24 +17,9 @@
 
   <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico">
   <link rel="stylesheet" href="https://at.alicdn.com/t/font_1911880_c1nvbyezg17.css">
-  <link href="https://cdn.jsdelivr.net/gh/inkss/fontawesome@5.15.3/css/all.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
   <link href="/js/swiper/swiper@5.4.1.min.css" rel="stylesheet">
   
-  
-    <script>
-        var themeModelId = '2';
-        if (themeModelId) {
-            localStorage.setItem('modelId', themeModelId);
-        }
-    </script>
-    
-    <script src="https://cdn.jsdelivr.net/gh/yuang01/live2d-widget@latest/autoload.js"></script>
-    <script>
-        var live2dOpen = eval('true') || false;
-        if (!live2dOpen) {
-            localStorage.setItem('waifu-display', 1609323474481);
-        }
-    </script>
   
   
   
@@ -76,7 +62,7 @@
     <!-- import script -->
     
         
-            
+            <script src="https://api.vvhan.com/api/meihua"></script>
         
             
         
@@ -89,13 +75,13 @@
   <!-- 依赖于jquery和vue -->
   
     
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="https://unpkg.com/jquery@3.5.1/dist/jquery.min.js"></script>
 
   
 
   
     
-<script src="https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.min.js"></script>
+<script src="https://unpkg.com/vue@2.6.11/dist/vue.min.js"></script>
 
   
   
@@ -206,7 +192,7 @@
 <script src="/js/vue-seamless-scroll/index.js"></script>
 
 <!-- 打字机效果js -->
-<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+<script src="https://unpkg.com/typed.js@2.0.11"></script>
 
 
     <div id="safearea">
@@ -1194,7 +1180,7 @@
     if (document.getElementsByClassName('mermaid').length) {
       if (window.mermaidJsLoad) mermaid.init()
       else {
-        loadScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js').then(() => {
+        loadScript('https://unpkg.com/mermaid/dist/mermaid.min.js').then(() => {
           window.mermaidJsLoad = true
           mermaid.initialize({
             theme: 'default',
@@ -1370,7 +1356,7 @@
   class=""
   server="tencent"
   type="song"
-  id="000oHw1p2k1wK6"
+  id="003WBP9C34tr7x"
   fixed='true'
   autoplay='true'
   theme='#42b983'
@@ -1389,8 +1375,8 @@
     bottom: 300px;
   }
 </style> -->
-<script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+<script src="https://unpkg.com/aplayer@1.10.1/dist/APlayer.min.js"></script>
+<script src="https://unpkg.com/meting@2/dist/Meting.min.js"></script>
     
 
     <!-- 图片放大 -->
@@ -1638,8 +1624,8 @@
 
 <!-- markdown代码一键复制功能 -->
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/v-plugs-ayu/lib/ayu.css">
-  <script src="https://cdn.jsdelivr.net/npm/v-plugs-ayu/lib/ayu.umd.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/v-plugs-ayu/lib/ayu.css">
+  <script src="https://unpkg.com/v-plugs-ayu/lib/ayu.umd.min.js"></script>
   <script src="/js/clipboard/clipboard.min.js"></script>
   <div id="appCopy">
   </div>
@@ -1693,7 +1679,7 @@
   
 
 <!-- 图片懒加载 -->
-<script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.0/dist/lazyload.min.js"></script>
+<script defer src="https://unpkg.com/vanilla-lazyload@17.1.0/dist/lazyload.min.js"></script>
 <script>
   // https://www.npmjs.com/package/vanilla-lazyload
   // Set the options globally

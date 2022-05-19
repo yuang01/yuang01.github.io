@@ -1591,7 +1591,7 @@ pre:hover::-webkit-scrollbar-thumb:hover,
   text-align: center;
   line-height: 20px;
   font-weight: bold;
-  font-family: 'Font Awesome 5 Pro';
+  font-family: 'Font Awesome 6 Free';
   font-weight: 600;
   font-size: 14px;
 }
@@ -3677,8 +3677,34 @@ pre:hover::-webkit-scrollbar-thumb:hover,
   padding: 1em;
   margin: 10px 0;
 }
-.darkModel #gitment-container {
+#waline-box {
+  padding: 1em;
+  margin: 15px auto;
+  background: rgba(255,255,255,0.8);
+  --waline-theme-color: #42b983 !important;
+}
+#waline-box .v[data-class=v] .vbtn.primary {
+  border-color: #42b983;
+  background: #42b983;
+  color: #fff;
+}
+#waline-box .v[data-class=v] .vbtn.primary:hover,
+#waline-box .v[data-class=v] .vbtn.primary:active {
+  color: #fff !important;
+}
+.darkModel #gitment-container,
+.darkModel #waline-box {
   background-color: #2d3032;
+}
+.darkModel #waline-comment .v[data-class=v] .vpanel,
+.darkModel .v[data-class=v] .veditor:focus,
+.darkModel .v[data-class=v] .vinput:focus {
+  background-color: #2d3032;
+}
+.darkModel #waline-comment .v[data-class=v] .vheader label,
+.darkModel #waline-comment .v[data-class=v] .vaction,
+.darkModel #waline-comment .vcount {
+  color: #fff;
 }
 .search {
   color: #fff;
@@ -4725,7 +4751,7 @@ pre:hover::-webkit-scrollbar-thumb:hover,
   position: relative;
 }
 .note::before {
-  font-family: "Font Awesome 5 Pro";
+  font-family: "Font Awesome 6 Free";
   font-weight: 600;
 }
 .note.warning {
