@@ -200,7 +200,9 @@ var github_canlendar = (git_user, git_color) => {
         console.log(error)
     });
       window.addEventListener('resize', function () {
-        responsiveChart()
+          if (document.getElementById('gitcanvas')) {
+            responsiveChart()
+          }
     })
     window.addEventListener('scroll', function () {
       if (document.querySelector('.gitmessage')) {
