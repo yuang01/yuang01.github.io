@@ -167,11 +167,11 @@ pre:hover::-webkit-scrollbar-thumb:hover,
   }
 }
 ::-moz-selection {
-  background: rgba(66,185,131,0.8);
+  background: rgba(66,185,133,0.8);
   color: #fff;
 }
 ::selection {
-  background: rgba(66,185,131,0.8);
+  background: rgba(66,185,133,0.8);
   color: #fff;
 }
 .bg-floor {
@@ -665,7 +665,7 @@ pre:hover::-webkit-scrollbar-thumb:hover,
 .header-bg-color,
 .no-img-top,
 .no-swiper {
-  background: rgba(66,185,131,0.8);
+  background: rgba(66,185,133,0.8);
   transition: all 0.3s;
 }
 .header {
@@ -768,7 +768,7 @@ pre:hover::-webkit-scrollbar-thumb:hover,
   opacity: 0;
 }
 .header .header-content .navbar .menu .menu-item .sub-menu li {
-  background: rgba(66,185,131,0.8);
+  background: rgba(66,185,133,0.8);
   width: 140px;
   text-align: center;
   line-height: 45px;
@@ -1727,7 +1727,7 @@ pre:hover::-webkit-scrollbar-thumb:hover,
   justify-content: center;
   align-items: center;
   color: #fff;
-  background: rgba(66,185,131,0.8);
+  background: rgba(66,185,133,0.8);
 }
 .footer .footer-main {
   text-align: center;
