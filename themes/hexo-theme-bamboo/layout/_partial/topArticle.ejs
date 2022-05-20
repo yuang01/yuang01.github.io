@@ -14,8 +14,8 @@
 %>
 
 <% if (page.current === 1 && theme.topArticle.on === true) { %>
-<div class="topArticle" data-aos="<%= theme.aos.animate || 'fade-up' %>">
-	<h3><i class="fa fa-thumbs-o-up" aria-hidden="true"></i><%= __('recommendedArticles') %></h3>
+<div class="topArticle reveal">
+	<h3><i class="fas fa-thumbs-o-up" aria-hidden="true"></i><%= __('recommendedArticles') %></h3>
 	<div class="articles">
 		<% site.posts.sort('-date').each(function (post, i) { %>
 			<% if(post.top) { %>
@@ -28,8 +28,9 @@
 						}
 						img = imgs[Math.abs(hashCode(post.title) % imgs.length)]
 					%>
-					<div class="article lazyload" data-original="<%- url_for(post.img  || post.swiperImg || img) %>" style="background-size: cover; 
+					<div class="article" style="background-size: cover; 
 						background-position: center center;">
+						<img class="lazyload" src="<%- url_for(post.img  || post.swiperImg || img) %>" alt="">
 					</div>
 					<div class="text">
 						<div class="text-main">
@@ -39,7 +40,7 @@
 							</div>
 						</div>
 						<a href="<%- url_for(post.path) %>" class="more">
-							<i class="fa fa-eye" aria-hidden="true"></i><%= __('readMore') %>
+							<i class="fas fa-eye" aria-hidden="true"></i><%= __('readMore') %>
 						</a>
 					</div>
 				</div>

@@ -1,22 +1,13 @@
 <div class="bg-dark-floor" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -2;"></div>
-<div class="lazyload archive-header" data-original="<%- url_for(theme.archive.img) %>" >
+<div class="bg-light-floor-archive" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -3;"></div>
+<div class="archive-header" style="background-image:url('<%- url_for(theme.archive.img) %>')">
   <div class="archive-header-title">
     <%= theme.archive.title %>
   </div>
   <div class="archive-header-desc">
   <% if (theme.typed.on === true) { %>
   <span class="title" id="archive-header-desc"></span>
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
-      <script>
-      var typed = new Typed("#archive-header-desc", {
-          strings: ['<%= theme.archive.desc %>'],
-          startDelay: <%= theme.typed.startDelay %>,
-          typeSpeed: <%= theme.typed.typeSpeed %>,
-          loop: true,
-          backSpeed: <%= theme.typed.backSpeed %>,
-          showCursor: true
-      });
-      </script>
+  <%- partial('_partial/scripts/typed', { el: '#archive-header-desc', type: 'archive' }) %>
   <% } else {  %>
       <span class="title">
       <%= theme.archive.desc %>
@@ -35,18 +26,8 @@
   </div>
   <div class="video-header-desc">
   <% if (theme.typed.on === true) { %>
-      <span class="title" id="video-header-desc"></span>
-      <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
-          <script>
-          var typed = new Typed("#video-header-desc", {
-              strings: ['<%= theme.archive.desc %>'],
-              startDelay: <%= theme.typed.startDelay %>,
-              typeSpeed: <%= theme.typed.typeSpeed %>,
-              loop: true,
-              backSpeed: <%= theme.typed.backSpeed %>,
-              showCursor: true
-          });
-          </script>
+      <span class="title" id="archive-video-header-desc"></span>
+      <%- partial('_partial/scripts/typed', { el: '#archive-video-header-desc', type: 'archive' }) %>
       <% } else {  %>
           <span class="title">
           <%= theme.archive.desc %>
@@ -55,6 +36,22 @@
   </div>
   <div class="mask-box"></div>
 </div>
+
+<!-- hash算法 -->
+<%
+  var hashCode = function (str) {
+      if (!str && str.length === 0) {
+          return 0;
+      }
+
+      var hash = 0;
+      for (var i = 0, len = str.length; i < len; i++) {
+          hash = ((hash << 5) - hash) + str.charCodeAt(i);
+          hash |= 0;
+      }
+      return hash;
+  };
+%>
 
 <div class="archive-main">
   <section class="archive">
@@ -70,12 +67,32 @@
             </div>
           <% } %>
           <li class="post-item" data-aos="fade-left">
-            <span class="post-date"><%= date(post.date, "MM-DD") %></span>
-            <a class="post-title" href="<%- url_for(post.path) %>"><%= post.title %></a>
+            <%
+              var img = 'https://ssyerv1.oss-cn-hangzhou.aliyuncs.com/picture/ada660a8c596431983dddd411a12f2b3.jpg!sswm';
+              var imgs = theme.imgs;
+              if (!imgs || imgs.length === 0) {
+                  return img;
+              }
+              img = imgs[Math.abs(hashCode(post.title) % imgs.length)]
+            %>
+            <div class="post-img-box">
+              <a href="<%- url_for(post.path) %>" class="post-img " style="background-size: cover; 
+                background-position: center center;">
+                <img class="lazyload" src="<%- url_for(post.img || post.swiperImg || img) %>" alt="">
+              </a>
+            </div>
+            <div class="post-date-title">
+              <div>
+                <span class="post-date"><%= date(post.date, "MM-DD") %></span>
+              </div>
+              <a class="post-title" href="<%- url_for(post.path) %>"><%= post.title %></a>
+            </div>
           </li>
         <% }) %>
       </ul>
     </div>
   </section>
-  <%- partial('_partial/paginator') %>
+  <div class="w-70">
+    <%- partial('_partial/paginator') %>
+  </div>
 </div>

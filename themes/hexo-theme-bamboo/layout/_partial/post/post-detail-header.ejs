@@ -1,0 +1,80 @@
+<!-- 文章详情页顶部图片和标题 -->
+<%
+    var hashCode = function (str) {
+        if (!str && str.length === 0) {
+            return 0;
+        }
+
+        var hash = 0;
+        for (var i = 0, len = str.length; i < len; i++) {
+            hash = ((hash << 5) - hash) + str.charCodeAt(i);
+            hash |= 0;
+        }
+        return hash;
+    };
+%>
+
+<%
+  var img = 'https://ssyerv1.oss-cn-hangzhou.aliyuncs.com/picture/ada660a8c596431983dddd411a12f2b3.jpg!sswm';
+  var imgs = theme.imgs;
+  if (!imgs || imgs.length === 0) {
+      return img;
+  }
+  img = imgs[Math.abs(hashCode(post.title) % imgs.length)]
+%>
+
+<div class="post-detail-header" id="thumbnail_canvas" style="background-repeat: no-repeat; background-size: cover; 
+  background-position: center center;position: relative;background-image:url('<%- url_for(post.img || post.swiperImg || img) %>')">
+  <div class="post-detail-header-mask"></div>
+  <canvas id="header_canvas"style="position:absolute;bottom:0;pointer-events:none;"></canvas>
+  
+  <div class="post-detail-header_info-box">
+    <div class="title-box">
+      <span class="title">
+        <%= post.title %>
+      </span>
+    </div>
+    
+    <% if (post.onlyTitle != true) { %>
+      <% if (post.date) { %>
+        <span class="post-detail-header_date">
+          <i class="fas fa-calendar"></i> <%= __('publishedIn') %>：<%- date(post.date, "YYYY-MM-DD") %> |
+        </span>
+      <% } %>
+
+      <% if (post.categories && post.categories.length > 0) { %>
+        <span class="post-detail-header_categories">
+          <i class="iconfont iconbookmark1"></i> <%= __('category') %>：
+          <% post.categories.map(function(category) { %>
+            <a href="<%- url_for(category.path) %>" class="post-detail-header_category">
+              <%- category.name %>
+            </a>
+          <% }) %>
+        </span>
+      <% } %>
+
+      <% if (theme.wordcount.on) { %>
+        <div class="post-detail-header_wordcount">
+          <span class="totalcount">
+            <i class="fas fa-file-text-o"></i> <%- __('wordcount')%>: <%- wordcount(post.content)%> |
+          </span>
+  
+          <span class="min2read">
+            <i class="fas fa-clock"></i> <%- __('min2read')%>: <%- min2read(post.content)%><%- __('min')%> |
+          </span>
+  
+          <% if(theme.busuanzi.on === true ) { %>
+            <span class="reading">
+              <i class="fas fa-eye"></i> <%= __('reading') %>：<span id="busuanzi_value_page_pv"></span>
+            </span>
+          <% } %>
+        </div>
+      <% } %>
+    <% } %>
+  </div>
+  
+  <% if (theme.bubble.on === true) { %>
+    <script src="<%- url_for('/js/bubble/bubble.js') %>"></script>
+  <% } %>
+</div>
+

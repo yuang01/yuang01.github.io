@@ -1,0 +1,31 @@
+#myBli .warp {
+  width: 100%;
+  height: 120px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+#myBli .warp ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+}
+#myBli .warp ul.ul-item {
+  display: flex;
+}
+#myBli .warp ul.ul-item .li-item {
+  width: 120px;
+  display: block;
+  height: 120px;
+  margin-right: 10px;
+  line-height: 120px;
+  background-color: #999;
+  color: #fff;
+  text-align: center;
+  font-size: 30px;
+}
+
+#myBli .warp ul.ul-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

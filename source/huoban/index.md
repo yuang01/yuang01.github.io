@@ -2,10 +2,10 @@
 title: 友情链接
 date: 2021-05-10 15:39:04
 toc: false
-img: https://pic3.zhimg.com/80/v2-d1e9d3d4df04769b1d9c63cdb99b76cf_1440w.jpg?source=1940ef5c
+img: https://pic1.zhimg.com/80/v2-a0debb6ed3dfcad3d32b04a659bd64e3_1440w.jpg
+onlyTitle: true
 ---
-## 根据md文件写的友情链接
-
+## 友情链接
 {% btns circle grid4 %}
   {% cell QQ头像, https://baidu.com, http://q1.qlogo.cn/g?b=qq&nk=1730241541&s=640 %}
   {% cell 随机动漫头像, https://baidu.com, http://api.btstu.cn/sjtx/api.php?lx=c1&format=images %}
@@ -20,3 +20,13 @@ img: https://pic3.zhimg.com/80/v2-d1e9d3d4df04769b1d9c63cdb99b76cf_1440w.jpg?sou
   {% cell 随机动漫女头像, https://baidu.com, http://api.btstu.cn/sjtx/api.php?lx=c2&format=images %}
   {% cell 随机动漫男头像, https://baidu.com, http://api.btstu.cn/sjtx/api.php?lx=c3&format=images %}
 {% endbtns %}
+
+## 来自Github的小伙伴们
+{% issues sites | api=https://api.github.com/repos/yuang01/friends/issues?sort=updated&state=open&page=1&per_page=100&labels=active %}
+
+
+## 来自Gitee的小伙伴们
+{% issues sites | api=https://gitee.com/api/v5/repos/yuang01/friends/issues?sort=updated&state=open&page=1&per_page=100&labels=active %}
+
+
+> 请前往[https://github.com/yuang01/friends/issues](https://github.com/yuang01/friends/issues)仓库提交issue，申请友情链接

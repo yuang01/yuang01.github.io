@@ -1,0 +1,172 @@
+widget_library:
+  - class_name: moyu
+    id_name: moyu
+    order: 0
+    name: 开始摸鱼
+    icon: fa-solid fa-fish
+    icon_color: '#d63130'
+    url: http://baidu.com
+    background: '#e9e5d1'
+    html: '<img class="no-lazy" src="https://api.vvhan.com/api/moyu" style="width:100%">'
+
+widget_library_sticky:
+  - class_name: testWidget
+    id_name: testWidget
+    order: -1
+    name: 微博热搜
+    icon: fab fa-weibo
+    icon_color: '#d63130'
+    url: http://baidu.com
+    background: '#fff'
+    html: '
+      <div id="myWeibo">
+
+      <!-- 如果不要滚动，则去掉 vue-seamless-scroll标签就行了，这个插件使用cdn向左向右滚动好像有问题 -->
+
+        <vue-seamless-scroll
+          :data="content"
+          :class-option="classOption"
+          class="warp"
+        >
+          <div class="weibo-container" v-for="(item, index) in content" :key="index">
+            <div class="left">
+              <div class="order" :class="{ red: index<=2 }">{{index + 1}}</div>
+              <div class="name"><a :href="item.url" target="_blank">{{item.title}}</a></div>
+            </div>
+            <div class="hot">{{item.hot}}</div>
+          </div>
+        </vue-seamless-scroll>
+      </div>
+
+      <script src="/weibo/index.js"></script>
+      <link href="/weibo/index.css" rel="stylesheet">
+    '
+  - class_name: historyToday
+    id_name: historyToday
+    order: -1
+    name: 历史上的今天
+    icon: fas fa-calendar-week
+    icon_color: '#d63130'
+    url: http://baidu.com
+    background: '#fff'
+    html: '
+      <div id="myHistorySwiper" @mouseenter="stopAutoPlay()" @mouseleave="startAutoPlay()">
+        <swiper class="myhistoryswiper" ref="myhistoryswiper" style="height:80px;" :options="swiperOption">
+          <swiper-slide v-for="(item, index) in content" :key="index">
+            {{item.title}}
+          </swiper-slide>
+        </swiper>
+      </div>
+      <script src="/historyToday/index.js"></script>
+    '
+  - class_name: testLove
+    id_name: testLove
+    order: -1
+    name: 恋爱墙
+    icon: fas fa-heart
+    icon_color: '#d63130'
+    url: http://baidu.com
+    background: '#fff'
+    html: '
+    
+      <div style="text-align: center;">
+        <img src="https://pica.zhimg.com/80/v2-377cbc612b5e1d8decc3a70f142176a1_1440w.jpg?source=1940ef5c"
+          style="width: 50px;height: 50px;vertical-align: -20px;border-radius: 50%;margin-right: 5px;margin-bottom: 5px;-webkit-box-shadow: 1px 1px 1px rgba(0,0,0,.1), 1px 1px 1px rgba(0,0,0,0.1), 1px 1px 1px rgba(0,0,0,0.1);box-shadow: 1px 1px 1px rgba(0,0,0,.1), 1px 1px 1px rgba(0,0,0,0.1), 1px 1px 1px rgba(0,0,0,0.1);border: 2px solid #fff;" />
+        <svg viewbox="0 0 1024 1024" style="margin-left: 5px;margin-right: 5px;" version="1.0" width="15" height="15"
+          class="my-face">
+          <path
+            d="M863.597631 513.574282l-271.33965-140.213484L729.783667 81.926656c3.583731-7.87141 7.167462-15.742819 7.167462-25.214109C736.887134 25.226908 708.345275 0.012799 672.635953 0.012799a63.611229 63.611229 0 0 0-39.293053 12.607055c-1.791866 1.59988-3.519736 3.19976-5.311602 3.19976L147.87531 418.925381a55.547834 55.547834 0 0 0-19.646527 47.356448c1.791866 17.278704 14.27093 33.021523 32.125591 42.492813l271.33965 141.749369L292.504463 945.221908c-12.479064 25.214109-1.791866 53.563983 23.166262 69.306802 10.751194 6.335525 23.230258 9.47129 35.709322 9.47129 16.062795 0 32.125591-4.735645 44.604655-15.742819l480.091993-403.297753a55.547834 55.547834 0 0 0 19.646526-47.228458 61.243407 61.243407 0 0 0-32.12559-44.156688z"
+            fill="#515151" />
+        </svg>
+        <img src="https://pic1.zhimg.com/80/v2-eaf816fed4b7e81cd935afed2a986086_1440w.jpg?source=1940ef5c"
+          style="width: 50px;height: 50px;vertical-align: -20px;border-radius: 50%;margin-left: 5px;margin-bottom: 5px;-webkit-box-shadow: 1px 1px 1px rgba(0,0,0,.1), 1px 1px 1px rgba(0,0,0,0.1), 1px 1px 1px rgba(0,0,0,0.1);box-shadow: 1px 1px 1px rgba(0,0,0,.1), 1px 1px 1px rgba(0,0,0,0.1), 1px 1px 1px rgba(0,0,0,0.1);border: 2px solid #fff;" /><br />
+        <span id="htmer_time"></span>
+      </div>
+
+      <script data-pjax src="/love/index.js"></script>
+    '
+
+home_widget:
+  - class_name: welcome
+    id_name: welcome
+    order: -1
+    name: 欢迎光临
+    icon: fa-solid fa-door-open
+    icon_color: red
+    url: http://baidu.com
+    background: '#fff'
+    html: '<img class="no-lazy" src="https://api.dzzui.com/api/ip" style="width:100%">'
+  - class_name: my_github_container
+    id_name: my_github_container
+    order: -1
+    name: Github日历
+    icon: fa-solid fa-calendar-days
+    icon_color: '#42b983'
+    url: http://baidu.com
+    background: '#fff'
+    html: '
+      <div id="github_container"></div>
+      <script data-pjax src="/githubcalendar/index.js"></script>
+    '
+  - class_name: test2
+    id_name: test2
+    order: -1
+    name: bilibili热榜
+    icon: fa-brands fa-bilibili
+    icon_color: '#00AEEC'
+    url: https://www.bilibili.com/v/popular/rank/all
+    background: '#fff'
+    html: '
+    <div id="mySwiper" @mouseenter="stopAutoPlay()" @mouseleave="startAutoPlay()">
+      <swiper class="myswiper" ref="myswiper" style="height:350px;" :options="swiperOption">
+
+        <swiper-slide v-for="(item, index) in listData" :key="index">
+          <a :href="item.url" class="toPath" target="_blank">
+            <img class="no-lazy" :src="item.pic" style="width:100%;height:100%;object-fit: cover;">
+            <div class="mySwiper-text">
+              <h2 class="ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">{{item.title}}</h2>
+              <p class="ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">{{item.desc}}</p>
+            </div>
+          </a>
+        </swiper-slide>
+
+        <!-- 如果你想继续增加轮播图，继续在下面写<swiper-slide>我是内容</swiper-slide>就行了 -->
+        <div class="swiper-pagination" slot="pagination"></div>
+
+      </swiper>
+    </div>
+
+    <script src="/mySwiper/index.js"></script>
+    <link href="/mySwiper/index.css" rel="stylesheet">
+    '
+  - class_name: mybilibili
+    id_name: mybilibili
+    order: -1
+    name: 豆瓣电影排行
+    icon: fa-solid fa-film
+    icon_color: '#41ac52'
+    url: https://movie.douban.com/chart
+    background: '#fff'
+    html: '
+      <div id="myBli">
+        <vue-seamless-scroll
+          :data="listData"
+          :class-option="classOption"
+          class="warp"
+        >
+          <ul class="ul-item" :style="{width: bliWidth}">
+            <!-- 在这里改, 手动修改a连接的href值和img的src值, 如果你会进阶，你可以使用v-for, 或者数据使用动态数据-->
+            
+            <li class="li-item" v-for="(item, index) in listData" :key="index">
+              <a :href="item.info.url" target="_blank">
+                <img class="no-lazy" :src="item.info.imgurl">
+              </a>
+            </li>
+            <!-- 在这里结束 -->
+          </ul>
+        </vue-seamless-scroll>
+      </div>
+
+      <script src="/bli/index.js"></script>
+      <link href="/bli/index.css" rel="stylesheet">
+    '

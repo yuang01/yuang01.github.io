@@ -6,7 +6,7 @@ categories: 前端
 typora-root-url: ./testimg
 ---
 ![Image text](/img/1.jpg)
-![Image 22222](2.jpg)
+![](2.jpg)
 asda
 
 -- haha --
@@ -48,3 +48,13 @@ asdad
 qwewqewq
 
 #### 我是老四
+
+|  |IP地址范围 |子网掩码|网关|
+|--|--|--|--|
+| PC01 |  202.196.8.162-202.196.8.190（不要和其他主机冲突即可）|255.255.255.224|202.196.8.161|
+| PC012|202.196.8.162-202.196.8.190（不要和其他主机冲突即可）|255.255.255.224|202.196.8.161|
+
+
+<embed src="/pdf/test.pdf" type="application/pdf" width=100% height=500>
+
+{% pdf  /pdf/test.pdf %}

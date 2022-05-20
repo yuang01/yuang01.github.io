@@ -9,19 +9,19 @@ img: https://pic3.zhimg.com/80/v2-0cd97ad46cb2a18343565aa60adeab0e_1440w.jpg
 ---
 {% title h2, site-card演示 %}
 {% sitegroup %}
-{% site WDZ, url=http://jackwdz.cn/, screenshot=https://ae03.alicdn.com/kf/H76c7b00a3256475ea5836dbc7aa5d1858.jpg, avatar=https://s3.ax1x.com/2021/01/18/scuMVO.jpg, description=这是一个喜爱二次元的小伙伴博客 %}
-{% site yuang01, url=https://yuang01.gitee.io/, screenshot=https://ae03.alicdn.com/kf/H2f17ecc91fe949c2b00c6192587b6076N.jpg, avatar=http://q1.qlogo.cn/g?b=qq&nk=1730241541&s=640, description=这是我的博客 %}
-{% site WDZ, url=http://jackwdz.cn/, screenshot=https://ae03.alicdn.com/kf/H76c7b00a3256475ea5836dbc7aa5d1858.jpg, avatar=https://s3.ax1x.com/2021/01/18/scuMVO.jpg, description=这是一个喜爱二次元的小伙伴博客 %}
-{% site yuang01, url=https://yuang01.gitee.io/, screenshot=https://ae03.alicdn.com/kf/H2f17ecc91fe949c2b00c6192587b6076N.jpg, avatar=http://q1.qlogo.cn/g?b=qq&nk=1730241541&s=640, description=这是我的博客 %}
-{% site WDZ, url=http://jackwdz.cn/, screenshot=https://ae03.alicdn.com/kf/H76c7b00a3256475ea5836dbc7aa5d1858.jpg, avatar=https://s3.ax1x.com/2021/01/18/scuMVO.jpg, description=这是一个喜爱二次元的小伙伴博客 %}
+    {% site 木兮, url=http://www.baidu.com, screenshot=https://pic4.zhimg.com/v2-7fcb0d73e1d90788ccf136e22ba7b1bd_r.jpg, avatar=https://pic4.zhimg.com/80/v2-45eb5749949e7f90a5c788f9bc5721ef_1440w.jpg, description=这是描述 %}
+    {% site yuang01, url=https://yuang01.gitee.io/, screenshot=https://pic4.zhimg.com/80/v2-f549722dac8f777693c090a92498de0f_1440w.jpg, avatar=https://pic3.zhimg.com/80/v2-8bb491487280587026cd576b224ca91e_1440w.jpg, description=这是描述哦 %}
+    {% site 木兮, url=http://www.baidu.com, screenshot=https://pic4.zhimg.com/v2-7fcb0d73e1d90788ccf136e22ba7b1bd_r.jpg, avatar=https://pic4.zhimg.com/80/v2-45eb5749949e7f90a5c788f9bc5721ef_1440w.jpg, description=这是描述 %}
+    {% site yuang01, url=https://yuang01.gitee.io/, screenshot=https://pic4.zhimg.com/80/v2-f549722dac8f777693c090a92498de0f_1440w.jpg, avatar=https://pic3.zhimg.com/80/v2-8bb491487280587026cd576b224ca91e_1440w.jpg, description=这是描述哦 %}
+    {% site 木兮, url=http://www.baidu.com, screenshot=https://pic4.zhimg.com/v2-7fcb0d73e1d90788ccf136e22ba7b1bd_r.jpg, avatar=https://pic4.zhimg.com/80/v2-45eb5749949e7f90a5c788f9bc5721ef_1440w.jpg, description=这是描述 %}
 {% endsitegroup %}
 ### 上述事例代码
 ```bash
 {% sitegroup %}
-{% site WDZ, url=http://jackwdz.cn/, screenshot=https://ae03.alicdn.com/kf/H76c7b00a3256475ea5836dbc7aa5d1858.jpg, avatar=https://s3.ax1x.com/2021/01/18/scuMVO.jpg, description=这是一个喜爱二次元的小伙伴博客 %}
-{% site yuang01, url=https://yuang01.gitee.io/, screenshot=https://ae03.alicdn.com/kf/H2f17ecc91fe949c2b00c6192587b6076N.jpg, avatar=http://q1.qlogo.cn/g?b=qq&nk=1730241541&s=640, description=这是我的博客 %}
-{% site WDZ, url=http://jackwdz.cn/, screenshot=https://ae03.alicdn.com/kf/H76c7b00a3256475ea5836dbc7aa5d1858.jpg, avatar=https://s3.ax1x.com/2021/01/18/scuMVO.jpg, description=这是一个喜爱二次元的小伙伴博客 %}
-{% site yuang01, url=https://yuang01.gitee.io/, screenshot=https://ae03.alicdn.com/kf/H2f17ecc91fe949c2b00c6192587b6076N.jpg, avatar=http://q1.qlogo.cn/g?b=qq&nk=1730241541&s=640, description=这是我的博客 %}
-{% site WDZ, url=http://jackwdz.cn/, screenshot=https://ae03.alicdn.com/kf/H76c7b00a3256475ea5836dbc7aa5d1858.jpg, avatar=https://s3.ax1x.com/2021/01/18/scuMVO.jpg, description=这是一个喜爱二次元的小伙伴博客 %}
+    {% site 木兮, url=http://www.baidu.com, screenshot=https://pic4.zhimg.com/v2-7fcb0d73e1d90788ccf136e22ba7b1bd_r.jpg, avatar=https://pic4.zhimg.com/80/v2-45eb5749949e7f90a5c788f9bc5721ef_1440w.jpg, description=这是描述 %}
+    {% site yuang01, url=https://yuang01.gitee.io/, screenshot=https://pic4.zhimg.com/80/v2-f549722dac8f777693c090a92498de0f_1440w.jpg, avatar=https://pic3.zhimg.com/80/v2-8bb491487280587026cd576b224ca91e_1440w.jpg, description=这是描述哦 %}
+    {% site 木兮, url=http://www.baidu.com, screenshot=https://pic4.zhimg.com/v2-7fcb0d73e1d90788ccf136e22ba7b1bd_r.jpg, avatar=https://pic4.zhimg.com/80/v2-45eb5749949e7f90a5c788f9bc5721ef_1440w.jpg, description=这是描述 %}
+    {% site yuang01, url=https://yuang01.gitee.io/, screenshot=https://pic4.zhimg.com/80/v2-f549722dac8f777693c090a92498de0f_1440w.jpg, avatar=https://pic3.zhimg.com/80/v2-8bb491487280587026cd576b224ca91e_1440w.jpg, description=这是描述哦 %}
+    {% site 木兮, url=http://www.baidu.com, screenshot=https://pic4.zhimg.com/v2-7fcb0d73e1d90788ccf136e22ba7b1bd_r.jpg, avatar=https://pic4.zhimg.com/80/v2-45eb5749949e7f90a5c788f9bc5721ef_1440w.jpg, description=这是描述 %}
 {% endsitegroup %}
 ```

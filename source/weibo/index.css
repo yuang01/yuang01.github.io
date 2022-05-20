@@ -1,0 +1,37 @@
+.weibo-container {
+    width: 100%;
+    line-height: 30px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    height: 30px;
+}
+.weibo-container .left {
+    display: flex;
+}
+.weibo-container .name {
+    margin-left: 5px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+}
+#myWeibo .warp {
+    height: 300px;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.weibo-container .order {
+    color: #fe962e;
+}
+.weibo-container .name a{
+    color: black;
+}
+.weibo-container .name a:hover {
+    text-decoration: underline;
+    color: red;
+}
+.weibo-container .red {
+    color: red;
+}

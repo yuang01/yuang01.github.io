@@ -20,24 +20,16 @@ var i = 0;
     var color = colorArr[Math.abs(hashCode(page.tag) % colorCount)];
 %>
 <div class="bg-dark-floor" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -2;"></div>
-<div class="lazyload tag-header" data-original="<%- url_for(theme.tagDetail.img) %>">
+<div class="bg-light-floor-tagDetail" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -3;"></div>
+
+<div class="tag-header" style="background-image: url('<%- url_for(theme.tagDetail.img) %>');">
   <div class="tag-header-title">
     <%= theme.tagDetail.title %>
   </div>
   <div class="tag-header-desc">
   <% if (theme.typed.on === true) { %>
     <span class="title" id="tag-header-desc"></span>
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
-        <script>
-        var typed = new Typed("#tag-header-desc", {
-            strings: ['<%= theme.tagDetail.desc %>'],
-            startDelay: <%= theme.typed.startDelay %>,
-            typeSpeed: <%= theme.typed.typeSpeed %>,
-            loop: true,
-            backSpeed: <%= theme.typed.backSpeed %>,
-            showCursor: true
-        });
-        </script>
+    <%- partial('_partial/scripts/typed', { el: '#tag-header-desc', type: 'tagDetail' }) %>
     <% } else {  %>
         <span class="title">
         <%= theme.tagDetail.desc %>
@@ -47,6 +39,7 @@ var i = 0;
   <div class="mask-box"></div>
 </div>
 
+<% if (theme.tagDetail.video) { %>
 <div class="tag-video">
   <video class="full-video" autoplay loop muted>
       <source style="width: 100%;height: 100vh;" src="<%- url_for(theme.tagDetail.video) %>">
@@ -56,18 +49,8 @@ var i = 0;
   </div>
   <div class="video-header-desc">
   <% if (theme.typed.on === true) { %>
-      <span class="title" id="video-header-desc"></span>
-      <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
-          <script>
-          var typed = new Typed("#video-header-desc", {
-              strings: ['<%= theme.tagDetail.desc %>'],
-              startDelay: <%= theme.typed.startDelay %>,
-              typeSpeed: <%= theme.typed.typeSpeed %>,
-              loop: true,
-              backSpeed: <%= theme.typed.backSpeed %>,
-              showCursor: true
-          });
-          </script>
+      <span class="title" id="tagDetail-video-header-desc"></span>
+      <%- partial('_partial/scripts/typed', { el: '#tagDetail-video-header-desc', type: 'tagDetail' }) %>
       <% } else {  %>
           <span class="title">
           <%= theme.tagDetail.desc %>
@@ -76,74 +59,16 @@ var i = 0;
   </div>
   <div class="mask-box"></div>
 </div>
+<% } %>
 
 <div class="tag">
   <div class="tag-name">
     <div class="name" style="background-color: <%- color %>;"><%= page.tag %> <%= __('category') %></div>
   </div>
-  <section class="posts">
-    <% page.posts.each(function (post, i) { %>
-    <article class="post" data-aos="<%= theme.aos.animate || 'fade-up' %>"
-      style="<% if(i % 2 == 0) { %>flex-direction: row-reverse;<% } %>">
-      <div class="post-main">
-        <div class="post-info">
-          <div class="post-time">
-            <i class="fa fa-clock-o" aria-hidden="true"></i>
-            <span class="post-time"><%- date(post.date, "YYYY-MM-DD") %></span>
-          </div>
-          <div class="post-title">
-            <a class="post-title-link" href="<%- url_for(post.path) %>"><%= post.title %></a>
-          </div>
-          <div class="post-meta">
-            <div class="post-tags">
-              <%- partial('_partial/post/tags', {post: post}) %>
-            </div>
-            <div class="post-categories">
-              <%- partial('_partial/post/categories', {post: post}) %>
-            </div>
-          </div>
-          <div class="post-img-mobile">
-            <% if (post.img || post.swiperImg) { %>
-              <a href="<%- url_for(post.path) %>" class="lazyload" data-original="<%- url_for(post.img || post.swiperImg) %>" style="background-size: cover; 
-                background-position: center center;">
-              </a>
-            <% } else { %>
-              <%
-                var img = 'https://ssyerv1.oss-cn-hangzhou.aliyuncs.com/picture/ada660a8c596431983dddd411a12f2b3.jpg!sswm';
-                var imgs = theme.imgs;
-                if (!imgs || imgs.length === 0) {
-                    return img;
-                }
-                img = imgs[Math.abs(hashCode(post.title) % imgs.length)]
-              %>
-              <a href="<%- url_for(post.path) %>" class="lazyload" data-original="<%- url_for(img)%>" style="background-size: cover; 
-                background-position: center center;">
-              </a>
-            <% } %>
-          </div>
-          <div class="post-content">
-            <%- post.excerpt || strip_html(post.content).substring(0, 120) %>
-          </div>
-        </div>
-        <div class="post-more">
-          <a href="<%- url_for(post.path) %>">
-            <i class="iconfont iconmore" style="<% if(i % 2 == 0) { %>float: right;<% } %>" title="阅读更多"></i>
-          </a>
-        </div>
-      </div>
-      <div class="post-img">
-        <% if (post.img || post.swiperImg) { %>
-          <a href="<%- url_for(post.path) %>" class="lazyload" data-original="<%- url_for(post.img || post.swiperImg) %>" style="background-size: cover; 
-            background-position: center center;">
-          </a>
-        <% } else { %>
-          <a href="<%- url_for(post.path) %>" class="lazyload" data-original="<%- url_for(img) %>" style="background-size: cover; 
-            background-position: center center;">
-          </a>
-        <% } %>
-      </div>
-    </article>
-    <% }) %>
-  </section>
+  <!-- 每一篇文章卡片 -->
+  <%- partial('_partial/card/post') %>
 </div>
-<%- partial('_partial/paginator') %>
+
+<div class="w-70">
+  <%- partial('_partial/paginator') %>
+</div>

@@ -1,0 +1,44 @@
+<div id="mySwiper" @mouseenter="stopAutoPlay()" @mouseleave="startAutoPlay()">
+    <swiper class="myswiper" ref="myswiper" style="height:350px;" :options="swiperOption">
+
+      <swiper-slide>
+        <img src="/mySwiper/img/2.jpg" style="width:100%;object-fit: cover;">
+        <h2 class="ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">我是标题</h2>
+        <p class="ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">我是描述哦</p>
+      </swiper-slide>
+
+      <swiper-slide>
+        <img src="/mySwiper/img/3.jpg" style="width:100%;object-fit: cover;">
+        <h2 class="ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">我是标题2</h2>
+        <p class="ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">我是描述2</p>
+      </swiper-slide>
+
+      <swiper-slide>
+        <img src="/mySwiper/img/4.jpg" style="width:100%;object-fit: cover;">
+        <h2 class="ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">我是标题3</h2>
+        <p class="ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">我是描述3</p>
+      </swiper-slide>
+
+      <swiper-slide>
+        <img src="/mySwiper/img/5.jpg" style="width:100%;object-fit: cover;">
+        <h2 class="ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">我是标题4</h2>
+        <p class="ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">我是描述4</p>
+      </swiper-slide>
+
+      <swiper-slide>
+        <img src="/mySwiper/img/6.jpg" style="width:100%;object-fit: cover;">
+        <h2 class="ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">我是标题5</h2>
+        <p class="ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">我是描述5</p>
+      </swiper-slide>
+
+      <swiper-slide>
+        <img src="/mySwiper/img/7.jpg" style="width:100%;object-fit: cover;">
+        <h2 class="ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">我是标题6</h2>
+        <p class="ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">我是描述6</p>
+      </swiper-slide>
+
+      <!-- 如果你想继续增加轮播图，继续在下面写<swiper-slide>我是内容</swiper-slide>就行了 -->
+      <div class="swiper-pagination" slot="pagination"></div>
+
+    </swiper>
+  </div>

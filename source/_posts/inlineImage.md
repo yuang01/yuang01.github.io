@@ -27,22 +27,20 @@ img: https://pic2.zhimg.com/80/v2-1678d94c8b4e6be640584c2dabef1586_1440w.jpg?sou
 ```
 {% title h2, 自定义图片并添加描述 %}
 
-{% image https://pic2.zhimg.com/80/v2-cc93c338d57783702bea4506aee7007d_1440w.jpg?source=1940ef5c, alt=自定义图片 %}
+{% image https://pic1.zhimg.com/80/v2-5fe6be356ddda4afe6063b0682edfead_1440w.jpg?source=1940ef5c, alt=自定义图片 %}
 ### 上述事例代码
 ```bash
-{% image https://pic2.zhimg.com/80/v2-cc93c338d57783702bea4506aee7007d_1440w.jpg?source=1940ef5c, alt=自定义图片 %}
+{% image https://pic1.zhimg.com/80/v2-5fe6be356ddda4afe6063b0682edfead_1440w.jpg?source=1940ef5c, alt=自定义图片 %}
 ```
 {% title h2, 指定宽度 %}
-{% image https://api.ixiaowai.cn/gqapi/gqapi.php, width=400px, alt=随机生成风景（alt描述可有可无） %}
-{% image https://api.ixiaowai.cn/api/api.php, width=400px, alt=随机生成二次元壁纸 %}
+{% image https://pic3.zhimg.com/80/v2-08d7fdf0201e560c22a2e9d9c2c040f6_1440w.jpg?source=1940ef5c, width=400px, alt=指定宽度 %}
 ### 上述事例代码
 ```bash
-{% image https://api.ixiaowai.cn/gqapi/gqapi.php, width=400px, alt=随机生成风景（alt描述可有可无） %}
-{% image https://api.ixiaowai.cn/api/api.php, width=400px, alt=随机生成二次元壁纸 %}
+{% image https://pic3.zhimg.com/80/v2-08d7fdf0201e560c22a2e9d9c2c040f6_1440w.jpg?source=1940ef5c, width=400px, alt=指定宽度 %}
 ```
 {% title h2, 设置占位背景色 %}
-{% image  https://api.ixiaowai.cn/mcapi/mcapi.php, width=400px, bg=#1D0C04, alt=随机生成呆萌酱 %}
+{% image  https://pic3.zhimg.com/80/v2-c18a3b0f2e82533d6c47e72e085aca0b_1440w.jpg?source=1940ef5c, width=400px, bg=#1D0C04, alt=设置占位背景色 %}
 ### 上述事例代码
 ```bash
-{% image  https://api.ixiaowai.cn/mcapi/mcapi.php, width=400px, bg=#1D0C04, alt=随机生成呆萌酱 %}
+{% image  https://pic3.zhimg.com/80/v2-c18a3b0f2e82533d6c47e72e085aca0b_1440w.jpg?source=1940ef5c, width=400px, bg=#1D0C04, alt=设置占位背景色 %}
 ```

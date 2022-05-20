@@ -1,15 +1,41 @@
 .post-detail-header {
   width: 100%;
-  overflow hidden;
-  height: 50vh;
-  if hexo-config('color_scheme.common.headerMenuTransparent') {
-    height: 60vh;
+  overflow: hidden;
+  height: 400px;
+
+  if (hexo-config('color_scheme.common.headerMenuTransparent')) {
+    height: 450px;
   }
+
+  position: relative;
   background-color: $color-primary;
-  background-size: cover; 
+  background-size: cover;
   background-position: center center;
-  display: flex;
-  align-items: center;
+  color: $color-post-header-title;
+  font-weight: $color-post-header-title-font-weight;
+  font-family: '楷体';
+  // css动画效果，需要的话就加上
+  // animation: header-effect 1s;
+  // animation-duration: 1s;
+  // animation-timing-function: ease;
+  // animation-delay: 0s;
+  // animation-iteration-count: 1;
+  // animation-direction: normal;
+  // animation-fill-mode: none;
+  // animation-play-state: running;
+  // animation-name: header-effect;
+
+  @keyframes header-effect {
+    0% {
+      opacity: 0
+      transform: translateY(-50px)
+    }  
+    100% {
+      opacity: 1
+      transform: translateY(0)
+    }
+  }
+
   .post-detail-header-mask {
     position: absolute;
     left: 0;
@@ -17,40 +43,91 @@
     width: 100%;
     height: 100%;
     background-color: #000;
-    opacity: 0.3;
+    opacity: 0.4;
     z-index: 1;
     transition: all 0.2s;
   }
+
   .title-box {
-    width: 100%;
-    text-align: center;
+    display: block;
     z-index: 2;
+    // margin-bottom: 5px;
   }
+
   .title {
-    font-family: '楷体';
-    font-size: 2.0rem;
-    line-height: 1.3;
-    color: $color-post-header-title;
+    font-size: 2rem;
+    line-height: 1.5;
     width: 100%;
-    text-align: center;
-    font-weight: $color-post-header-title-font-weight;
   }
+
   .typed-cursor {
-    font-size: 2.0rem;
+    font-size: 2rem;
     color: $color-post-header-title;
+  }
+
+  .post-detail-header_info-box {
+    text-align: center;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    width: 85%;
+    transform: translate(-50%, 50%);
+    z-index: 2;
+
+    .post-detail-header_categories {
+      a {
+        color: $color-post-header-title;
+      }
+
+      a:hover {
+        text-decoration: underline;
+        color: $color-link;
+      }
+
+      .post-detail-header_category {
+      }
+    }
+  }
+
+  .post-detail-header_wordcount {
+    z-index: 2;
+    margin-top: 10px;
+    flex-wrap: wrap;
+
+    .totalcount, .min2read, .reading {
+    }
   }
 }
+
 @media (max-width: 992px) {
   .post-detail-header {
     .title {
     }
   }
 }
+
 @media (max-width: 551px) {
   .post-detail-header {
-    height: 30vh;
+    height: 360px;
+    text-align: left;
+    line-height: 2;
+
     .title {
-      font-size: 1.5rem;
+      font-size: 2rem;
+    }
+
+    .post-detail-header_info-box {
+      left: 0;
+      bottom: 2rem;
+      width: 100%;
+      transform: none;
+      text-align: left;
+      padding: 0 1.1rem;
+      box-sizing: border-box;
+    }
+
+    .post-detail-header_wordcount, .post-detail-header_categories {
+      display: inline !important;
     }
   }
 }
