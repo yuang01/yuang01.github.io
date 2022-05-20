@@ -13,7 +13,7 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-  <title>checkbox | Bamboo</title>
+  <title>右上角梅花 | Bamboo</title>
 
   <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico">
   <link rel="stylesheet" href="https://at.alicdn.com/t/font_1911880_c1nvbyezg17.css">
@@ -787,21 +787,21 @@
 
 
 <div class="post-detail-header" id="thumbnail_canvas" style="background-repeat: no-repeat; background-size: cover; 
-  background-position: center center;position: relative;background-image:url('https://pic1.zhimg.com/80/v2-b45cff10c7ebebe5c68fba3b134d81f4_1440w.jpg?source=1940ef5c')">
+  background-position: center center;position: relative;background-image:url('https://pic3.zhimg.com/50/v2-2eda8421a841216b7f309e52c5f64e3b_720w.jpg?source=1940ef5c')">
   <div class="post-detail-header-mask"></div>
   <canvas id="header_canvas"style="position:absolute;bottom:0;pointer-events:none;"></canvas>
   
   <div class="post-detail-header_info-box">
     <div class="title-box">
       <span class="title">
-        checkbox
+        右上角梅花
       </span>
     </div>
     
     
       
         <span class="post-detail-header_date">
-          <i class="fas fa-calendar"></i> 发表于：2021-02-08 |
+          <i class="fas fa-calendar"></i> 发表于：2022-05-20 |
         </span>
       
 
@@ -809,8 +809,8 @@
         <span class="post-detail-header_categories">
           <i class="iconfont iconbookmark1"></i> 分类：
           
-            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-detail-header_category">
-              前端
+            <a href="/categories/%E6%A2%85%E8%8A%B1/" class="post-detail-header_category">
+              梅花
             </a>
           
         </span>
@@ -819,11 +819,11 @@
       
         <div class="post-detail-header_wordcount">
           <span class="totalcount">
-            <i class="fas fa-file-text-o"></i> 字数统计: 165 |
+            <i class="fas fa-file-text-o"></i> 字数统计: 693 |
           </span>
   
           <span class="min2read">
-            <i class="fas fa-clock"></i> 阅读时长: 1分钟 |
+            <i class="fas fa-clock"></i> 阅读时长: 3分钟 |
           </span>
   
           
@@ -850,56 +850,217 @@
   <div class="main-content">
     <article class="post post-detail">
       <div class="post-content">
-        <h2 class="bamboo-h " id="进度条示例">进度条示例</h2><br/>
+        <p>页脚游动的鱼，轮播图底部的波浪 在主题<code>v2.7.5</code>版本已经加到主题里去了</p>
+<p>右上角的梅花特效，首先在<code>source</code>文件夹下创建<code>meihua/index.js</code>文件，文件内容如下</p>
+<details ><summary pointer> 梅花js </summary>
+              <div class='content'>
+              <pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">var</span> encode_version <span class="token operator">=</span> <span class="token string">"sojson.v5"</span><span class="token punctuation">,</span>
+  qafcw <span class="token operator">=</span> <span class="token string">"__0x6b909"</span><span class="token punctuation">,</span>
+  __0x6b909 <span class="token operator">=</span> <span class="token punctuation">[</span>
+    <span class="token string">"w6kSRg=="</span><span class="token punctuation">,</span>
+    <span class="token string">"ED7ChT3DsQ=="</span><span class="token punctuation">,</span>
+    <span class="token string">"woTDjsOuVQ=="</span><span class="token punctuation">,</span>
+    <span class="token string">"OhnDmsKLERY9wr7Du8OKfg=="</span><span class="token punctuation">,</span>
+    <span class="token string">"w6DDssOowrw+wqfCsQ/DocOEU8OK"</span><span class="token punctuation">,</span>
+    <span class="token string">"woDCl8Klw54="</span><span class="token punctuation">,</span>
+    <span class="token string">"woJEaWPDmwc="</span><span class="token punctuation">,</span>
+    <span class="token string">"dQMQCh7CmRkZGTRXw44="</span><span class="token punctuation">,</span>
+    <span class="token string">"Hx7Dukle"</span><span class="token punctuation">,</span>
+    <span class="token string">"wovDrMKweRU="</span><span class="token punctuation">,</span>
+    <span class="token string">"OQrDscKQwqk="</span><span class="token punctuation">,</span>
+    <span class="token string">"wrXDgsKNUTY="</span><span class="token punctuation">,</span>
+    <span class="token string">"HcKSw4Id"</span><span class="token punctuation">,</span>
+    <span class="token string">"wpTCv2rDgsKfH2fDsSc="</span><span class="token punctuation">,</span>
+    <span class="token string">"NEjDmcOndA=="</span><span class="token punctuation">,</span>
+    <span class="token string">"OgoNJQHDjRkVF3wEw5gywqIsw7t8w7TCu196ScKidcOQRSI8wpfCicOpw60Sw4LDn8KcwrbCpCowwqdfw7kGwrlnAcKuJMOiwq1Cw7oSwo11EMOcw6fDvcKvEUTCkcKTwp3DhX9Xw6FYwosKwp7DqMOiwrRDw4EJw4Q+XEjDn8OLUXpXQ28pwrrDrcOwwrPDjwlJw53CscK6ScKFwoheO3IpJi46wog="</span><span class="token punctuation">,</span>
+    <span class="token string">"wqwEwp4o"</span><span class="token punctuation">,</span>
+    <span class="token string">"C8KYw54QcsKzwp/CkCnCuMOvGsOzBCQ="</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">_0xff0fac<span class="token punctuation">,</span> _0x54e69d</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">var</span> <span class="token function-variable function">_0x3d8b6b</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">_0x5b6f58</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token operator">--</span>_0x5b6f58<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+      _0xff0fac<span class="token punctuation">[</span><span class="token string">"push"</span><span class="token punctuation">]</span><span class="token punctuation">(</span>_0xff0fac<span class="token punctuation">[</span><span class="token string">"shift"</span><span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+  <span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+  <span class="token function">_0x3d8b6b</span><span class="token punctuation">(</span><span class="token operator">++</span>_0x54e69d<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">(</span>__0x6b909<span class="token punctuation">,</span> <span class="token number">0xb1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> <span class="token function-variable function">_0x44c1</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">_0x2f061c<span class="token punctuation">,</span> _0xeeaff2</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  _0x2f061c <span class="token operator">=</span> _0x2f061c <span class="token operator">-</span> <span class="token number">0x0</span><span class="token punctuation">;</span>
+  <span class="token keyword">var</span> _0x189570 <span class="token operator">=</span> __0x6b909<span class="token punctuation">[</span>_0x2f061c<span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>_0x44c1<span class="token punctuation">[</span><span class="token string">"initialized"</span><span class="token punctuation">]</span> <span class="token operator">===</span> <span class="token keyword">undefined</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+      <span class="token keyword">var</span> _0x4bb824 <span class="token operator">=</span>
+        <span class="token keyword">typeof</span> window <span class="token operator">!==</span> <span class="token string">"undefined"</span>
+          <span class="token operator">?</span> window
+          <span class="token operator">:</span> <span class="token keyword">typeof</span> process <span class="token operator">===</span> <span class="token string">"object"</span> <span class="token operator">&amp;&amp;</span>
+            <span class="token keyword">typeof</span> require <span class="token operator">===</span> <span class="token string">"function"</span> <span class="token operator">&amp;&amp;</span>
+            <span class="token keyword">typeof</span> global <span class="token operator">===</span> <span class="token string">"object"</span>
+          <span class="token operator">?</span> global
+          <span class="token operator">:</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+      <span class="token keyword">var</span> _0x140280 <span class="token operator">=</span>
+        <span class="token string">"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/="</span><span class="token punctuation">;</span>
+      _0x4bb824<span class="token punctuation">[</span><span class="token string">"atob"</span><span class="token punctuation">]</span> <span class="token operator">||</span>
+        <span class="token punctuation">(</span>_0x4bb824<span class="token punctuation">[</span><span class="token string">"atob"</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">_0xee5aa8</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+          <span class="token keyword">var</span> _0x1cd39d <span class="token operator">=</span> <span class="token function">String</span><span class="token punctuation">(</span>_0xee5aa8<span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token string">"replace"</span><span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token regex">/=+$/</span><span class="token punctuation">,</span> <span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token keyword">for</span> <span class="token punctuation">(</span>
+            <span class="token keyword">var</span> _0x4bc64f <span class="token operator">=</span> <span class="token number">0x0</span><span class="token punctuation">,</span>
+              _0x4c6ea3<span class="token punctuation">,</span>
+              _0x7c5afe<span class="token punctuation">,</span>
+              _0x585a23 <span class="token operator">=</span> <span class="token number">0x0</span><span class="token punctuation">,</span>
+              _0x43ee63 <span class="token operator">=</span> <span class="token string">""</span><span class="token punctuation">;</span>
+            <span class="token punctuation">(</span>_0x7c5afe <span class="token operator">=</span> _0x1cd39d<span class="token punctuation">[</span><span class="token string">"charAt"</span><span class="token punctuation">]</span><span class="token punctuation">(</span>_0x585a23<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token operator">~</span>_0x7c5afe <span class="token operator">&amp;&amp;</span>
+            <span class="token punctuation">(</span><span class="token punctuation">(</span>_0x4c6ea3 <span class="token operator">=</span>
+              _0x4bc64f <span class="token operator">%</span> <span class="token number">0x4</span> <span class="token operator">?</span> _0x4c6ea3 <span class="token operator">*</span> <span class="token number">0x40</span> <span class="token operator">+</span> _0x7c5afe <span class="token operator">:</span> _0x7c5afe<span class="token punctuation">)</span><span class="token punctuation">,</span>
+            _0x4bc64f<span class="token operator">++</span> <span class="token operator">%</span> <span class="token number">0x4</span><span class="token punctuation">)</span>
+              <span class="token operator">?</span> <span class="token punctuation">(</span>_0x43ee63 <span class="token operator">+=</span> String<span class="token punctuation">[</span><span class="token string">"fromCharCode"</span><span class="token punctuation">]</span><span class="token punctuation">(</span>
+                  <span class="token number">0xff</span> <span class="token operator">&amp;</span> <span class="token punctuation">(</span>_0x4c6ea3 <span class="token operator">>></span> <span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">0x2</span> <span class="token operator">*</span> _0x4bc64f<span class="token punctuation">)</span> <span class="token operator">&amp;</span> <span class="token number">0x6</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+                <span class="token punctuation">)</span><span class="token punctuation">)</span>
+              <span class="token operator">:</span> <span class="token number">0x0</span>
+          <span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+            _0x7c5afe <span class="token operator">=</span> _0x140280<span class="token punctuation">[</span><span class="token string">"indexOf"</span><span class="token punctuation">]</span><span class="token punctuation">(</span>_0x7c5afe<span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token punctuation">&#125;</span>
+          <span class="token keyword">return</span> _0x43ee63<span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">var</span> <span class="token function-variable function">_0x4fb300</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">_0x5cd1f6<span class="token punctuation">,</span> _0x413d9c</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+      <span class="token keyword">var</span> _0x74de7b <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        _0x4b6e1e <span class="token operator">=</span> <span class="token number">0x0</span><span class="token punctuation">,</span>
+        _0x3cb8f2<span class="token punctuation">,</span>
+        _0x3556c3 <span class="token operator">=</span> <span class="token string">""</span><span class="token punctuation">,</span>
+        _0x23f0ee <span class="token operator">=</span> <span class="token string">""</span><span class="token punctuation">;</span>
+      _0x5cd1f6 <span class="token operator">=</span> <span class="token function">atob</span><span class="token punctuation">(</span>_0x5cd1f6<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">for</span> <span class="token punctuation">(</span>
+        <span class="token keyword">var</span> _0x3ee9ae <span class="token operator">=</span> <span class="token number">0x0</span><span class="token punctuation">,</span> _0x3cf54e <span class="token operator">=</span> _0x5cd1f6<span class="token punctuation">[</span><span class="token string">"length"</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        _0x3ee9ae <span class="token operator">&lt;</span> _0x3cf54e<span class="token punctuation">;</span>
+        _0x3ee9ae<span class="token operator">++</span>
+      <span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        _0x23f0ee <span class="token operator">+=</span>
+          <span class="token string">"%"</span> <span class="token operator">+</span>
+          <span class="token punctuation">(</span><span class="token string">"00"</span> <span class="token operator">+</span> _0x5cd1f6<span class="token punctuation">[</span><span class="token string">"charCodeAt"</span><span class="token punctuation">]</span><span class="token punctuation">(</span>_0x3ee9ae<span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token string">"toString"</span><span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token number">0x10</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">[</span>
+            <span class="token string">"slice"</span>
+          <span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">0x2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">&#125;</span>
+      _0x5cd1f6 <span class="token operator">=</span> <span class="token function">decodeURIComponent</span><span class="token punctuation">(</span>_0x23f0ee<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> _0x3cd09c <span class="token operator">=</span> <span class="token number">0x0</span><span class="token punctuation">;</span> _0x3cd09c <span class="token operator">&lt;</span> <span class="token number">0x100</span><span class="token punctuation">;</span> _0x3cd09c<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        _0x74de7b<span class="token punctuation">[</span>_0x3cd09c<span class="token punctuation">]</span> <span class="token operator">=</span> _0x3cd09c<span class="token punctuation">;</span>
+      <span class="token punctuation">&#125;</span>
+      <span class="token keyword">for</span> <span class="token punctuation">(</span>_0x3cd09c <span class="token operator">=</span> <span class="token number">0x0</span><span class="token punctuation">;</span> _0x3cd09c <span class="token operator">&lt;</span> <span class="token number">0x100</span><span class="token punctuation">;</span> _0x3cd09c<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        _0x4b6e1e <span class="token operator">=</span>
+          <span class="token punctuation">(</span>_0x4b6e1e <span class="token operator">+</span>
+            _0x74de7b<span class="token punctuation">[</span>_0x3cd09c<span class="token punctuation">]</span> <span class="token operator">+</span>
+            _0x413d9c<span class="token punctuation">[</span><span class="token string">"charCodeAt"</span><span class="token punctuation">]</span><span class="token punctuation">(</span>_0x3cd09c <span class="token operator">%</span> _0x413d9c<span class="token punctuation">[</span><span class="token string">"length"</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">%</span>
+          <span class="token number">0x100</span><span class="token punctuation">;</span>
+        _0x3cb8f2 <span class="token operator">=</span> _0x74de7b<span class="token punctuation">[</span>_0x3cd09c<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        _0x74de7b<span class="token punctuation">[</span>_0x3cd09c<span class="token punctuation">]</span> <span class="token operator">=</span> _0x74de7b<span class="token punctuation">[</span>_0x4b6e1e<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        _0x74de7b<span class="token punctuation">[</span>_0x4b6e1e<span class="token punctuation">]</span> <span class="token operator">=</span> _0x3cb8f2<span class="token punctuation">;</span>
+      <span class="token punctuation">&#125;</span>
+      _0x3cd09c <span class="token operator">=</span> <span class="token number">0x0</span><span class="token punctuation">;</span>
+      _0x4b6e1e <span class="token operator">=</span> <span class="token number">0x0</span><span class="token punctuation">;</span>
+      <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> _0x59a51e <span class="token operator">=</span> <span class="token number">0x0</span><span class="token punctuation">;</span> _0x59a51e <span class="token operator">&lt;</span> _0x5cd1f6<span class="token punctuation">[</span><span class="token string">"length"</span><span class="token punctuation">]</span><span class="token punctuation">;</span> _0x59a51e<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        _0x3cd09c <span class="token operator">=</span> <span class="token punctuation">(</span>_0x3cd09c <span class="token operator">+</span> <span class="token number">0x1</span><span class="token punctuation">)</span> <span class="token operator">%</span> <span class="token number">0x100</span><span class="token punctuation">;</span>
+        _0x4b6e1e <span class="token operator">=</span> <span class="token punctuation">(</span>_0x4b6e1e <span class="token operator">+</span> _0x74de7b<span class="token punctuation">[</span>_0x3cd09c<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">%</span> <span class="token number">0x100</span><span class="token punctuation">;</span>
+        _0x3cb8f2 <span class="token operator">=</span> _0x74de7b<span class="token punctuation">[</span>_0x3cd09c<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        _0x74de7b<span class="token punctuation">[</span>_0x3cd09c<span class="token punctuation">]</span> <span class="token operator">=</span> _0x74de7b<span class="token punctuation">[</span>_0x4b6e1e<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        _0x74de7b<span class="token punctuation">[</span>_0x4b6e1e<span class="token punctuation">]</span> <span class="token operator">=</span> _0x3cb8f2<span class="token punctuation">;</span>
+        _0x3556c3 <span class="token operator">+=</span> String<span class="token punctuation">[</span><span class="token string">"fromCharCode"</span><span class="token punctuation">]</span><span class="token punctuation">(</span>
+          _0x5cd1f6<span class="token punctuation">[</span><span class="token string">"charCodeAt"</span><span class="token punctuation">]</span><span class="token punctuation">(</span>_0x59a51e<span class="token punctuation">)</span> <span class="token operator">^</span>
+            _0x74de7b<span class="token punctuation">[</span><span class="token punctuation">(</span>_0x74de7b<span class="token punctuation">[</span>_0x3cd09c<span class="token punctuation">]</span> <span class="token operator">+</span> _0x74de7b<span class="token punctuation">[</span>_0x4b6e1e<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">%</span> <span class="token number">0x100</span><span class="token punctuation">]</span>
+        <span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">&#125;</span>
+      <span class="token keyword">return</span> _0x3556c3<span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+    _0x44c1<span class="token punctuation">[</span><span class="token string">"rc4"</span><span class="token punctuation">]</span> <span class="token operator">=</span> _0x4fb300<span class="token punctuation">;</span>
+    _0x44c1<span class="token punctuation">[</span><span class="token string">"data"</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+    _0x44c1<span class="token punctuation">[</span><span class="token string">"initialized"</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token operator">!</span><span class="token operator">!</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+  <span class="token keyword">var</span> _0x45d974 <span class="token operator">=</span> _0x44c1<span class="token punctuation">[</span><span class="token string">"data"</span><span class="token punctuation">]</span><span class="token punctuation">[</span>_0x2f061c<span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>_0x45d974 <span class="token operator">===</span> <span class="token keyword">undefined</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>_0x44c1<span class="token punctuation">[</span><span class="token string">"once"</span><span class="token punctuation">]</span> <span class="token operator">===</span> <span class="token keyword">undefined</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+      _0x44c1<span class="token punctuation">[</span><span class="token string">"once"</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token operator">!</span><span class="token operator">!</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+    _0x189570 <span class="token operator">=</span> _0x44c1<span class="token punctuation">[</span><span class="token string">"rc4"</span><span class="token punctuation">]</span><span class="token punctuation">(</span>_0x189570<span class="token punctuation">,</span> _0xeeaff2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    _0x44c1<span class="token punctuation">[</span><span class="token string">"data"</span><span class="token punctuation">]</span><span class="token punctuation">[</span>_0x2f061c<span class="token punctuation">]</span> <span class="token operator">=</span> _0x189570<span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span> <span class="token keyword">else</span> <span class="token punctuation">&#123;</span>
+    _0x189570 <span class="token operator">=</span> _0x45d974<span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+  <span class="token keyword">return</span> _0x189570<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+<span class="token keyword">function</span> <span class="token function">hanApiMeihua</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">var</span> _0x37935d <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
+    dzqhN<span class="token operator">:</span> <span class="token string">"div"</span><span class="token punctuation">,</span>
+    HDwlC<span class="token operator">:</span> <span class="token function">_0x44c1</span><span class="token punctuation">(</span><span class="token string">"0x0"</span><span class="token punctuation">,</span> <span class="token string">"*Y1q"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    WRSha<span class="token operator">:</span> <span class="token function">_0x44c1</span><span class="token punctuation">(</span><span class="token string">"0x1"</span><span class="token punctuation">,</span> <span class="token string">"[r8s"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    TkMnm<span class="token operator">:</span> <span class="token function">_0x44c1</span><span class="token punctuation">(</span><span class="token string">"0x2"</span><span class="token punctuation">,</span> <span class="token string">"dF[H"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    BQzkt<span class="token operator">:</span> <span class="token function">_0x44c1</span><span class="token punctuation">(</span><span class="token string">"0x3"</span><span class="token punctuation">,</span> <span class="token string">"p&amp;Zu"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    jEpFN<span class="token operator">:</span> <span class="token string">"https://ohan.gitee.io/HanKu/HanJs/HanMeiHua.js"</span><span class="token punctuation">,</span>
+  <span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+  <span class="token keyword">var</span> _0x3e52ed <span class="token operator">=</span> document<span class="token punctuation">[</span><span class="token string">"createElement"</span><span class="token punctuation">]</span><span class="token punctuation">(</span>_0x37935d<span class="token punctuation">[</span><span class="token string">"dzqhN"</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  _0x3e52ed<span class="token punctuation">[</span><span class="token string">"innerHTML"</span><span class="token punctuation">]</span> <span class="token operator">=</span> _0x37935d<span class="token punctuation">[</span><span class="token function">_0x44c1</span><span class="token punctuation">(</span><span class="token string">"0x4"</span><span class="token punctuation">,</span> <span class="token string">"bwUb"</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+  document<span class="token punctuation">[</span><span class="token function">_0x44c1</span><span class="token punctuation">(</span><span class="token string">"0x5"</span><span class="token punctuation">,</span> <span class="token string">"p]kJ"</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token function">_0x44c1</span><span class="token punctuation">(</span><span class="token string">"0x6"</span><span class="token punctuation">,</span> <span class="token string">"!eqS"</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">(</span>_0x3e52ed<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  document<span class="token punctuation">[</span><span class="token string">"body"</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token function">_0x44c1</span><span class="token punctuation">(</span><span class="token string">"0x7"</span><span class="token punctuation">,</span> <span class="token string">"YKdc"</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">(</span>
+    _0x3e52ed<span class="token punctuation">,</span>
+    document<span class="token punctuation">[</span><span class="token function">_0x44c1</span><span class="token punctuation">(</span><span class="token string">"0x8"</span><span class="token punctuation">,</span> <span class="token string">"5FyT"</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">"firstElementChild"</span><span class="token punctuation">]</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">var</span> _0x59d96e <span class="token operator">=</span> document<span class="token punctuation">[</span><span class="token string">"createElement"</span><span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token function">_0x44c1</span><span class="token punctuation">(</span><span class="token string">"0x9"</span><span class="token punctuation">,</span> <span class="token string">"9DEG"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  _0x59d96e<span class="token punctuation">[</span><span class="token function">_0x44c1</span><span class="token punctuation">(</span><span class="token string">"0xa"</span><span class="token punctuation">,</span> <span class="token string">"*Y1q"</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">(</span>
+    _0x37935d<span class="token punctuation">[</span><span class="token function">_0x44c1</span><span class="token punctuation">(</span><span class="token string">"0xb"</span><span class="token punctuation">,</span> <span class="token string">"fnJ("</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    _0x37935d<span class="token punctuation">[</span><span class="token function">_0x44c1</span><span class="token punctuation">(</span><span class="token string">"0xc"</span><span class="token punctuation">,</span> <span class="token string">"0Od6"</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  _0x59d96e<span class="token punctuation">[</span><span class="token function">_0x44c1</span><span class="token punctuation">(</span><span class="token string">"0xa"</span><span class="token punctuation">,</span> <span class="token string">"*Y1q"</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">(</span>
+    _0x37935d<span class="token punctuation">[</span><span class="token function">_0x44c1</span><span class="token punctuation">(</span><span class="token string">"0xd"</span><span class="token punctuation">,</span> <span class="token string">"1c0b"</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    _0x37935d<span class="token punctuation">[</span><span class="token function">_0x44c1</span><span class="token punctuation">(</span><span class="token string">"0xe"</span><span class="token punctuation">,</span> <span class="token string">"0Od6"</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  document<span class="token punctuation">[</span><span class="token function">_0x44c1</span><span class="token punctuation">(</span><span class="token string">"0xf"</span><span class="token punctuation">,</span> <span class="token string">"dF[H"</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">"appendChild"</span><span class="token punctuation">]</span><span class="token punctuation">(</span>_0x59d96e<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+window<span class="token punctuation">[</span><span class="token string">"onload"</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token function">hanApiMeihua</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+document<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"pjax:send"</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">$</span><span class="token punctuation">(</span><span class="token string">".hansApi-snowfall-flakes"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>length<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">".hansApi-snowfall-flakes"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+document<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"pjax:complete"</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token function">$</span><span class="token punctuation">(</span><span class="token string">".hansApi-snowfall-flakes"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>length<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token function">hanApiMeihua</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span>
+  <span class="token operator">!</span><span class="token punctuation">(</span>
+    <span class="token keyword">typeof</span> encode_version <span class="token operator">!==</span> <span class="token function">_0x44c1</span><span class="token punctuation">(</span><span class="token string">"0x10"</span><span class="token punctuation">,</span> <span class="token string">"YjES"</span><span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span>
+    encode_version <span class="token operator">===</span> <span class="token string">"sojson.v5"</span>
+  <span class="token punctuation">)</span>
+<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  window<span class="token punctuation">[</span><span class="token function">_0x44c1</span><span class="token punctuation">(</span><span class="token string">"0x11"</span><span class="token punctuation">,</span> <span class="token string">"f(0D"</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token string">"不能删除sojson.v5"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+encode_version <span class="token operator">=</span> <span class="token string">"sojson.v5"</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+              </div>
+            </details>
 
-<div class='checkbox'><input type="checkbox" />
-            <p>纯文本测试</p>
-            </div>
-<div class='checkbox checked'><input type="checkbox" checked="checked"/>
-            <p>支持简单的 <a target="_blank" rel="noopener" href="https://guides.github.com/features/mastering-markdown/">markdown</a> 语法</p>
-            </div>
-<div class='checkbox red'><input type="checkbox" />
-            <p>支持自定义颜色</p>
-            </div>
-<div class='checkbox green checked'><input type="checkbox" checked="checked"/>
-            <p>绿色 + 默认选中</p>
-            </div>
-<div class='checkbox yellow checked'><input type="checkbox" checked="checked"/>
-            <p>黄色 + 默认选中</p>
-            </div>
-<div class='checkbox cyan checked'><input type="checkbox" checked="checked"/>
-            <p>青色 + 默认选中</p>
-            </div>
-<div class='checkbox blue checked'><input type="checkbox" checked="checked"/>
-            <p>蓝色 + 默认选中</p>
-            </div>
-<div class='checkbox plus green checked'><input type="checkbox" checked="checked"/>
-            <p>增加</p>
-            </div>
-<div class='checkbox minus yellow checked'><input type="checkbox" checked="checked"/>
-            <p>减少</p>
-            </div>
-<div class='checkbox times red checked'><input type="checkbox" checked="checked"/>
-            <p>叉</p>
-            </div>
+<p>这个js里面有很多混淆转译字符，我也是从别人那扒下来的，扒下来就这样，自己稍微改了一点，适配了主题</p>
+<p>js创建好之后，打开主题配置文件<code>_config.yml</code>，找到<code>import</code>，然后这样写</p>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token comment"># 自己嵌入css或者script</span>
+<span class="token key atrule">import</span><span class="token punctuation">:</span>
+  <span class="token key atrule">link</span><span class="token punctuation">:</span>
+    <span class="token comment"># - &lt;link src"xxx.css">&lt;/link></span>
+    <span class="token punctuation">-</span> 
+    <span class="token punctuation">-</span> 
+  <span class="token key atrule">script</span><span class="token punctuation">:</span> 
+    <span class="token comment"># - &lt;script src="xxx.js">&lt;/script></span>
+    <span class="token punctuation">-</span> &lt;script src="/meihua/index.js"<span class="token punctuation">></span>&lt;/script<span class="token punctuation">></span>
+    <span class="token punctuation">-</span> 
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>这样，梅花js就导进去了，至此，梅花就出现在了页面上的右上角</p>
 
-<h3 id="上述实例代码"><a href="#上述实例代码" class="headerlink" title="上述实例代码"></a>上述实例代码</h3><pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">&#123;% checkbox 纯文本测试 %&#125;
-&#123;% checkbox checked, 支持简单的 <span class="token url">[<span class="token content">markdown</span>](https://guides.github.com/features/mastering-markdown/)</span> 语法 %&#125;
-&#123;% checkbox red, 支持自定义颜色 %&#125;
-&#123;% checkbox green checked, 绿色 + 默认选中 %&#125;
-&#123;% checkbox yellow checked, 黄色 + 默认选中 %&#125;
-&#123;% checkbox cyan checked, 青色 + 默认选中 %&#125;
-&#123;% checkbox blue checked, 蓝色 + 默认选中 %&#125;
-&#123;% checkbox plus green checked, 增加 %&#125;
-&#123;% checkbox minus yellow checked, 减少 %&#125;
-&#123;% checkbox times red checked, 叉 %&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
       </div>
       <div class="post-tags-categories">
         
         <div class="tags">
           
-            <a href="/tags/tag/" class="">
-              tag
+            <a href="/tags/%E6%A2%85%E8%8A%B1/" class="">
+              梅花
             </a>
           
         </div>
@@ -913,7 +1074,7 @@
     </li>
     <li class="post-copyright-link">
     <strong>文章链接:  </strong>
-    <a href="/post/checkbox/" target="_blank" title="checkbox">http://yuang01.gitee.io/post/checkbox/</a>
+    <a href="/post/meihua/index/" target="_blank" title="右上角梅花">http://yuang01.gitee.io/post/meihua/index/</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明:   </strong>
@@ -931,49 +1092,25 @@
 
 
 
-  
-  <div class="post-nav-prev post-nav-item">
-    <div class="post-nav-img" style="background-size: cover; 
-      background-position: center center;">
-      <img class="lazyload lazyload placeholder" src="https://pic2.zhimg.com/80/v2-1ecd92421c8823c396f96d15325e6d42_1440w.jpg?source=1940ef5c" class="lazyload placeholder" data-srcset="https://pic2.zhimg.com/80/v2-1ecd92421c8823c396f96d15325e6d42_1440w.jpg?source=1940ef5c" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="">
-    </div>
-    <a href="/post/gallery/" class="post-nav-link">
-      <div class="title">
-        <i class="fas fa-angle-left"></i> 上一篇:
-        <div class="title-text">gallery图片</div>
-      </div>
-      
-      <!-- <div class="content">
-        提示使用该标签请先将主题下的_config.yml中的fancybox设置为true
-
-一行一个图片
-
-
-       
-      </div> -->
-    </a>
-  </div>
-
 
 
   
   <div class="post-nav-next post-nav-item">
     <div class="post-nav-img" style="background-size: cover; 
       background-position: center center;">
-      <img class="lazyload lazyload placeholder" src="https://pic3.zhimg.com/80/v2-b7c7899676492453229763b26835f6dc_1440w.jpg?source=1940ef5c" class="lazyload placeholder" data-srcset="https://pic3.zhimg.com/80/v2-b7c7899676492453229763b26835f6dc_1440w.jpg?source=1940ef5c" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" src="" alt="">
+      <img class="lazyload lazyload placeholder" src="https://pic2.zhimg.com/80/v2-9f747d69587d0a40825a2366f70339d4_1440w.jpg?source=1940ef5c" class="lazyload placeholder" data-srcset="https://pic2.zhimg.com/80/v2-9f747d69587d0a40825a2366f70339d4_1440w.jpg?source=1940ef5c" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" src="" alt="">
     </div>
-    <a href="/post/ghcard/" class="post-nav-link">
+    <a href="/post/imgtop/" class="post-nav-link">
       <div class="title">
         下一篇: <i class="fas fa-angle-right"></i>
-        <div class="title-text">Github卡片</div>
+        <div class="title-text">文章设置topImg</div>
       </div>
       <!-- <div class="content">
-        Github用户卡片
+        
+支持版本为v2.7.0+
 
-上述示例代码&#123;% ghcard yuang01 %&#125;
-表格中加入用户卡片
-
-
+在文章中设置imgTop: false，则不显示顶部图片
+如果首页轮播图不想要的话，则在主
       </div> -->
     </a>
   </div>

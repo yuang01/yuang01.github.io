@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yuang01.gitee.io/"/>
-  <updated>2021-11-08T05:55:46.661Z</updated>
+  <updated>2022-05-20T06:26:46.645Z</updated>
   <id>http://yuang01.gitee.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>右上角梅花</title>
+    <link href="http://yuang01.gitee.io/post/meihua/index/"/>
+    <id>http://yuang01.gitee.io/post/meihua/index/</id>
+    <published>2022-05-20T06:03:20.000Z</published>
+    <updated>2022-05-20T06:26:46.645Z</updated>
+    
+    <summary type="html">
+    
+      右上角梅花，页脚游动的鱼，轮播图底部的波浪
+    
+    </summary>
+    
+    
+      <category term="梅花" scheme="http://yuang01.gitee.io/categories/%E6%A2%85%E8%8A%B1/"/>
+    
+    
+      <category term="梅花" scheme="http://yuang01.gitee.io/tags/%E6%A2%85%E8%8A%B1/"/>
+    
+  </entry>
   
   <entry>
     <title>文章设置topImg</title>
@@ -291,33 +312,6 @@
   </entry>
   
   <entry>
-    <title>issues-sites标签</title>
-    <link href="http://yuang01.gitee.io/post/issuessites/"/>
-    <id>http://yuang01.gitee.io/post/issuessites/</id>
-    <published>2021-06-16T03:35:00.000Z</published>
-    <updated>2021-07-18T07:19:12.684Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;该标签会去拿到某个repo仓库的issue内容，用&lt;code&gt;sites标签&lt;/code&gt;的形式显示出来，可以用做网站的&lt;code&gt;友链&lt;/code&gt;功能&lt;br&gt;该标签和&lt;code&gt;issues-timeline&lt;/code&gt;标签都适用于&lt;code&gt;github&lt;/code
-        
-      
-    
-    </summary>
-    
-    
-      <category term="前端" scheme="http://yuang01.gitee.io/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="tag" scheme="http://yuang01.gitee.io/tags/tag/"/>
-    
-  </entry>
-  
-  <entry>
     <title>issues-timeline标签</title>
     <link href="http://yuang01.gitee.io/post/issuestimeline/"/>
     <id>http://yuang01.gitee.io/post/issuestimeline/</id>
@@ -332,6 +326,33 @@
         
           &lt;p&gt;该标签会去拿到某个repo仓库的issue内容，用&lt;code&gt;timeline标签&lt;/code&gt;的形式显示出来&lt;/p&gt;
 &lt;h2 id=&quot;写法&quot;&gt;&lt;a href=&quot;#写法&quot; class=&quot;headerlink&quot; title=&quot;写法&quot;&gt;&lt;/a&gt;写法&lt;/h2&gt;&lt;h3
+        
+      
+    
+    </summary>
+    
+    
+      <category term="前端" scheme="http://yuang01.gitee.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="tag" scheme="http://yuang01.gitee.io/tags/tag/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>issues-sites标签</title>
+    <link href="http://yuang01.gitee.io/post/issuessites/"/>
+    <id>http://yuang01.gitee.io/post/issuessites/</id>
+    <published>2021-06-16T03:35:00.000Z</published>
+    <updated>2021-07-18T07:19:12.684Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;该标签会去拿到某个repo仓库的issue内容，用&lt;code&gt;sites标签&lt;/code&gt;的形式显示出来，可以用做网站的&lt;code&gt;友链&lt;/code&gt;功能&lt;br&gt;该标签和&lt;code&gt;issues-timeline&lt;/code&gt;标签都适用于&lt;code&gt;github&lt;/code
         
       
     
@@ -437,37 +458,6 @@
           &lt;h2 class=&quot;bamboo-h &quot; id=&quot;事例&quot;&gt;事例&lt;/h2&gt;&lt;br/&gt;
 
 &lt;div class=&quot;audio&quot;&gt;&lt;audio controls preload&gt;&lt;source
-        
-      
-    
-    </summary>
-    
-    
-      <category term="前端" scheme="http://yuang01.gitee.io/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="tag" scheme="http://yuang01.gitee.io/tags/tag/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>checkbox</title>
-    <link href="http://yuang01.gitee.io/post/checkbox/"/>
-    <id>http://yuang01.gitee.io/post/checkbox/</id>
-    <published>2021-02-08T03:35:00.000Z</published>
-    <updated>2021-05-11T01:45:08.369Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 class=&quot;bamboo-h &quot; id=&quot;进度条示例&quot;&gt;进度条示例&lt;/h2&gt;&lt;br/&gt;
-
-&lt;div class=&#39;checkbox&#39;&gt;&lt;input type=&quot;checkbox&quot; /&gt;
-            &lt;p&gt;纯文本测试&lt;/p&gt;
-           
         
       
     
