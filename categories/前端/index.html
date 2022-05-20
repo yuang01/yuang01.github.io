@@ -1301,7 +1301,7 @@
             <span class="post-time">2021-06-16</span>
           </div>
           <div class="post-title">
-            <a class="post-title-link" href="/post/issuestimeline/">issues-timeline标签</a>
+            <a class="post-title-link" href="/post/issuessites/">issues-sites标签</a>
           </div>
           <div class="post-meta">
             <div class="post-tags">
@@ -1323,26 +1323,28 @@
             </div>
           </div>
           <div class="post-img-mobile">
-            <a href="/post/issuestimeline/" style="background-size: cover; 
+            <a href="/post/issuessites/" style="background-size: cover; 
               background-position: center center;">
-              <img class="lazyload lazyload placeholder" src="https://w.wallhaven.cc/full/e7/wallhaven-e78jpo.jpg" class="lazyload placeholder" data-srcset="https://w.wallhaven.cc/full/e7/wallhaven-e78jpo.jpg" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="">
+              <img class="lazyload lazyload placeholder" src="https://img11.360buyimg.com/ddimg/jfs/t1/173445/21/15206/1609537/60caebaaE18d21c8d/757aea972636a1b8.png" class="lazyload placeholder" data-srcset="https://img11.360buyimg.com/ddimg/jfs/t1/173445/21/15206/1609537/60caebaaE18d21c8d/757aea972636a1b8.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="">
             </a>
           </div>
           <div class="post-content">
-            该标签会去拿到某个repo仓库的issue内容，用timeline标签的形式显示出来
-写法github&#123;% issues timeline | api=https://api.github.com/repos/yuang01/he
+            该标签会去拿到某个repo仓库的issue内容，用sites标签的形式显示出来，可以用做网站的友链功能该标签和issues-timeline标签都适用于github和gitee
+使用方法issue里面需要有JSON代码块：
+&#123;
+ 
           </div>
         </div>
         <div class="post-more">
-          <a href="/post/issuestimeline/">
+          <a href="/post/issuessites/">
             <i class="iconfont iconmore" pointer style="  " title="阅读更多"></i>
           </a>
         </div>
       </div>
       <div class="post-img">
-        <a href="/post/issuestimeline/" style="background-size: cover; 
+        <a href="/post/issuessites/" style="background-size: cover; 
           background-position: center center;">
-          <img class="lazyload lazyload placeholder" src="https://w.wallhaven.cc/full/e7/wallhaven-e78jpo.jpg" class="lazyload placeholder" data-srcset="https://w.wallhaven.cc/full/e7/wallhaven-e78jpo.jpg" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="">
+          <img class="lazyload lazyload placeholder" src="https://img11.360buyimg.com/ddimg/jfs/t1/173445/21/15206/1609537/60caebaaE18d21c8d/757aea972636a1b8.png" class="lazyload placeholder" data-srcset="https://img11.360buyimg.com/ddimg/jfs/t1/173445/21/15206/1609537/60caebaaE18d21c8d/757aea972636a1b8.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="">
         </a>
       </div>
     </article>
@@ -2151,7 +2153,7 @@
       elements: 'a[href]:not([href^="#"]):not([href="javascript:void(0)"]):not([no-pjax])',   // 拦截正常带链接的 a 标签
       selectors: ["#pjax-container","title"],                                   // 根据实际需要确认重载区域
       cacheBust: false,   // url 地址追加时间戳，用以避免浏览器缓存
-      timeout: 5000
+      timeout: 8000
     });
 
     document.addEventListener('pjax:send', function (e) {

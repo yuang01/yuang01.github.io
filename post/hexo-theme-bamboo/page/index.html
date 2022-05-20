@@ -2472,7 +2472,7 @@ onlyTitle: true
       elements: 'a[href]:not([href^="#"]):not([href="javascript:void(0)"]):not([no-pjax])',   // 拦截正常带链接的 a 标签
       selectors: ["#pjax-container","title"],                                   // 根据实际需要确认重载区域
       cacheBust: false,   // url 地址追加时间戳，用以避免浏览器缓存
-      timeout: 5000
+      timeout: 8000
     });
 
     document.addEventListener('pjax:send', function (e) {

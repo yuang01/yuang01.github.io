@@ -954,21 +954,21 @@ hahaha <span class="token operator">&lt;</span>span<span class="token operator">
   <div class="post-nav-prev post-nav-item">
     <div class="post-nav-img" style="background-size: cover; 
       background-position: center center;">
-      <img class="lazyload lazyload placeholder" src="https://pic2.zhimg.com/80/v2-035165460d504f2b072ee777d1d40ab6_1440w.jpg?source=1940ef5c" class="lazyload placeholder" data-srcset="https://pic2.zhimg.com/80/v2-035165460d504f2b072ee777d1d40ab6_1440w.jpg?source=1940ef5c" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="">
+      <img class="lazyload lazyload placeholder" src="https://pic2.zhimg.com/80/v2-1ecd92421c8823c396f96d15325e6d42_1440w.jpg?source=1940ef5c" class="lazyload placeholder" data-srcset="https://pic2.zhimg.com/80/v2-1ecd92421c8823c396f96d15325e6d42_1440w.jpg?source=1940ef5c" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="">
     </div>
-    <a href="/post/audio/" class="post-nav-link">
+    <a href="/post/gallery/" class="post-nav-link">
       <div class="title">
         <i class="fas fa-angle-left"></i> 上一篇:
-        <div class="title-text">audio音频</div>
+        <div class="title-text">gallery图片</div>
       </div>
       
       <!-- <div class="content">
-        事例
+        提示使用该标签请先将主题下的_config.yml中的fancybox设置为true
 
-Your browser does not support the audio tag.
+一行一个图片
 
-写法
-&#123;%
+
+       
       </div> -->
     </a>
   </div>
@@ -979,20 +979,20 @@ Your browser does not support the audio tag.
   <div class="post-nav-next post-nav-item">
     <div class="post-nav-img" style="background-size: cover; 
       background-position: center center;">
-      <img class="lazyload lazyload placeholder" src="https://pic2.zhimg.com/80/v2-1ecd92421c8823c396f96d15325e6d42_1440w.jpg?source=1940ef5c" class="lazyload placeholder" data-srcset="https://pic2.zhimg.com/80/v2-1ecd92421c8823c396f96d15325e6d42_1440w.jpg?source=1940ef5c" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" src="" alt="">
+      <img class="lazyload lazyload placeholder" src="https://pic3.zhimg.com/80/v2-b7c7899676492453229763b26835f6dc_1440w.jpg?source=1940ef5c" class="lazyload placeholder" data-srcset="https://pic3.zhimg.com/80/v2-b7c7899676492453229763b26835f6dc_1440w.jpg?source=1940ef5c" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" src="" alt="">
     </div>
-    <a href="/post/gallery/" class="post-nav-link">
+    <a href="/post/ghcard/" class="post-nav-link">
       <div class="title">
         下一篇: <i class="fas fa-angle-right"></i>
-        <div class="title-text">gallery图片</div>
+        <div class="title-text">Github卡片</div>
       </div>
       <!-- <div class="content">
-        提示使用该标签请先将主题下的_config.yml中的fancybox设置为true
+        Github用户卡片
 
-一行一个图片
+上述示例代码&#123;% ghcard yuang01 %&#125;
+表格中加入用户卡片
 
 
-       
       </div> -->
     </a>
   </div>
@@ -2107,7 +2107,7 @@ Your browser does not support the audio tag.
       elements: 'a[href]:not([href^="#"]):not([href="javascript:void(0)"]):not([no-pjax])',   // 拦截正常带链接的 a 标签
       selectors: ["#pjax-container","title"],                                   // 根据实际需要确认重载区域
       cacheBust: false,   // url 地址追加时间戳，用以避免浏览器缓存
-      timeout: 5000
+      timeout: 8000
     });
 
     document.addEventListener('pjax:send', function (e) {
