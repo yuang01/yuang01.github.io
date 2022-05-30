@@ -54,7 +54,7 @@ new Vue({
     },
      // 请求开源api, 获取历史上的今天数据
      getList() {
-      fetch("https://api.vvhan.com/api/hotlist?type=bili", {
+      fetch("https://api.vvhan.com/api/hotlist?type=zhihuHot", {
         method: "GET", // *GET, POST, PUT, DELETE, etc.
       })
       .then((res) => {
