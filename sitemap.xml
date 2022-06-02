@@ -424,13 +424,6 @@
   </url>
   
   <url>
-    <loc>http://yuang01.gitee.io/tags/mathjax/</loc>
-    <lastmod>2022-06-02</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://yuang01.gitee.io/tags/%E6%A2%85%E8%8A%B1/</loc>
     <lastmod>2022-06-02</lastmod>
     <changefreq>daily</changefreq>
@@ -439,6 +432,13 @@
   
   <url>
     <loc>http://yuang01.gitee.io/tags/mermaid/</loc>
+    <lastmod>2022-06-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yuang01.gitee.io/tags/mathjax/</loc>
     <lastmod>2022-06-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -461,13 +461,6 @@
   </url>
   
   <url>
-    <loc>http://yuang01.gitee.io/categories/mathjax/</loc>
-    <lastmod>2022-06-02</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://yuang01.gitee.io/categories/%E6%A2%85%E8%8A%B1/</loc>
     <lastmod>2022-06-02</lastmod>
     <changefreq>daily</changefreq>
@@ -476,6 +469,13 @@
   
   <url>
     <loc>http://yuang01.gitee.io/categories/mermaid/</loc>
+    <lastmod>2022-06-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yuang01.gitee.io/categories/mathjax/</loc>
     <lastmod>2022-06-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
