@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yuang01.gitee.io/"/>
-  <updated>2022-05-20T06:26:46.645Z</updated>
+  <updated>2022-06-08T09:49:13.036Z</updated>
   <id>http://yuang01.gitee.io/</id>
   
   <author>
@@ -17,11 +17,42 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>右上角梅花</title>
+    <title>给bamboo添加动态背景</title>
+    <link href="http://yuang01.gitee.io/post/bubbly-bg/index/"/>
+    <id>http://yuang01.gitee.io/post/bubbly-bg/index/</id>
+    <published>2022-06-08T08:58:20.000Z</published>
+    <updated>2022-06-08T09:49:13.036Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;首先说一下，这个和添加右上角梅花那篇文章一样，是没有放到主题配置项里让自己配置的，而是通过我接下来的步骤，自己动手实现，只需两步，两分钟就能实现。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;首先打开主题下的配置文件&lt;code&gt;_conf
+        
+      
+    
+    </summary>
+    
+    
+      <category term="动态背景" scheme="http://yuang01.gitee.io/categories/%E5%8A%A8%E6%80%81%E8%83%8C%E6%99%AF/"/>
+    
+    
+      <category term="动态背景" scheme="http://yuang01.gitee.io/tags/%E5%8A%A8%E6%80%81%E8%83%8C%E6%99%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>给bamboo添加右上角梅花</title>
     <link href="http://yuang01.gitee.io/post/meihua/index/"/>
     <id>http://yuang01.gitee.io/post/meihua/index/</id>
     <published>2022-05-20T06:03:20.000Z</published>
-    <updated>2022-05-20T06:26:46.645Z</updated>
+    <updated>2022-06-08T09:51:18.508Z</updated>
     
     <summary type="html">
     
@@ -489,34 +520,6 @@
 &lt;div class=&#39;checkbox&#39;&gt;&lt;input type=&quot;checkbox&quot; /&gt;
             &lt;p&gt;纯文本测试&lt;/p&gt;
            
-        
-      
-    
-    </summary>
-    
-    
-      <category term="前端" scheme="http://yuang01.gitee.io/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="tag" scheme="http://yuang01.gitee.io/tags/tag/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>folding折叠</title>
-    <link href="http://yuang01.gitee.io/post/folding/"/>
-    <id>http://yuang01.gitee.io/post/folding/</id>
-    <published>2021-02-08T03:35:00.000Z</published>
-    <updated>2021-05-11T01:45:36.721Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;&lt;span&gt;&lt;img src=&#39;https://cdn.jsdelivr.net/gh/deepkolos/wechat-emoji/emoji/不屑.png&#39; style=&#39;height:24px&#39;&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;h2 class=&quot;bamboo-h &quot;
         
       
     
