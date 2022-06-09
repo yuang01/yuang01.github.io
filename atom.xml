@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yuang01.gitee.io/"/>
-  <updated>2022-06-09T12:40:42.302Z</updated>
+  <updated>2022-06-09T13:20:09.073Z</updated>
   <id>http://yuang01.gitee.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>自定义css之导航和页脚高斯模糊</title>
+    <link href="http://yuang01.gitee.io/post/custom/menu/"/>
+    <id>http://yuang01.gitee.io/post/custom/menu/</id>
+    <published>2022-06-09T12:54:18.000Z</published>
+    <updated>2022-06-09T13:20:09.073Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;我看到挺多人导航都是默认的那种颜色，没有透明度，我自己感觉导航和页脚背景有一定的透明好看点，我先说一下透明度怎么搞，因为背景模糊效果的前提是先背景透明。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;头部导航透明:&lt;br&gt;打开主题配置文件&lt;code&gt;_config.yml&lt;/code&gt;,
+        
+      
+    
+    </summary>
+    
+    
+      <category term="自定义css" scheme="http://yuang01.gitee.io/categories/%E8%87%AA%E5%AE%9A%E4%B9%89css/"/>
+    
+    
+      <category term="自定义css" scheme="http://yuang01.gitee.io/tags/%E8%87%AA%E5%AE%9A%E4%B9%89css/"/>
+    
+  </entry>
   
   <entry>
     <title>自定义css之头部图片透明</title>
@@ -487,35 +516,6 @@
         
           &lt;h2 class=&quot;bamboo-h &quot; id=&quot;融入段落中按钮&quot;&gt;融入段落中按钮&lt;/h2&gt;&lt;br/&gt;
 &lt;p&gt;不设置任何参数的 &lt;span class=&#39;btn&#39;&gt;&lt;a class=&quot;button&quot; href=&#39;/&#39; title=&#39;按钮&#39;&gt;按钮&lt;/a&gt;&lt;/span&gt;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="前端" scheme="http://yuang01.gitee.io/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="tag" scheme="http://yuang01.gitee.io/tags/tag/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>audio音频</title>
-    <link href="http://yuang01.gitee.io/post/audio/"/>
-    <id>http://yuang01.gitee.io/post/audio/</id>
-    <published>2021-02-08T03:35:00.000Z</published>
-    <updated>2021-05-11T01:44:42.600Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 class=&quot;bamboo-h &quot; id=&quot;事例&quot;&gt;事例&lt;/h2&gt;&lt;br/&gt;
-
-&lt;div class=&quot;audio&quot;&gt;&lt;audio controls preload&gt;&lt;source
         
       
     

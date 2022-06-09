@@ -1,0 +1,5 @@
+#navHeader,
+#j-fish-skip,
+.footer {
+    backdrop-filter: saturate(120%) blur(5px);
+}
