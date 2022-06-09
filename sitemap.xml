@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yuang01.gitee.io/post/custom/index/</loc>
+    
+    <lastmod>2022-06-09</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yuang01.gitee.io/post/hexo-theme-bamboo-new/</loc>
     
     <lastmod>2022-06-09</lastmod>
@@ -10,13 +17,6 @@
   
   <url>
     <loc>http://yuang01.gitee.io/post/hexo-theme-bamboo/sidebar/</loc>
-    
-    <lastmod>2022-06-09</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yuang01.gitee.io/post/custom/index/</loc>
     
     <lastmod>2022-06-09</lastmod>
     
