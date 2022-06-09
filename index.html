@@ -54,9 +54,7 @@
     <!-- import link -->
     
         
-            
-        
-            
+            <link href="/custom/index.css" rel="stylesheet">
         
     
     <!-- import script -->
@@ -763,7 +761,7 @@
 
 
 
-<div class="swiper-length" style="display: none;">11</div>
+<div class="swiper-length" style="display: none;">12</div>
 <div id="appSwiper"
   class=""
   @mouseenter="stopAutoPlay()" 
@@ -818,6 +816,38 @@
         
           
           <swiper-slide>
+            <div class="item swiper-lazy" data-background="https://pic1.zhimg.com/80/v2-6d0cbd4380b4959542d3f5da31c7f20c_1440w.jpg" style=" background-size: 300000px; 
+            background-position: left center;" style="position: relative;">
+              <div class="swiper-bgmask" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;"></div>
+              <div class="flag" style="z-index: 2;">
+                <div class="img-mask swiper-lazy" data-background="https://pic1.zhimg.com/80/v2-6d0cbd4380b4959542d3f5da31c7f20c_1440w.jpg" style="height: 100%; background-size: cover; 
+                  background-position: center center;">
+                  <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>  
+                </div>
+                <div class="flag-text">
+                  <div class="flag-text-content">
+                    <div class="title ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">
+                      <a href="/post/custom/index/">
+                        自定义css之头部图片透明
+                      </a>
+                    </div>
+                    <div class="excerpt ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">其实我们是可以自定义css的，例如我把文章详情页上面文章名称后面的背景变透明，也是可以办到的。如图所示：
+步骤如下：
+
+首先我们在source文件夹下创建custom/index.css, 内容如下:.post-detail-header </div>
+                  </div>
+                  <div class="bottom-one-btn ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s"><a href="/post/custom/index/" class="read-more swiper-btn-color" style="display: inline-block; z-index:1;">阅读更多</a></div>
+                </div>
+              </div>
+            </div>
+
+          </swiper-slide>
+        
+      
+        
+        
+          
+          <swiper-slide>
             <div class="item swiper-lazy" data-background="https://pic.jitudisk.com/public/2022/06/08/8493c140937aa.png" style=" background-size: 300000px; 
             background-position: left center;" style="position: relative;">
               <div class="swiper-bgmask" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;"></div>
@@ -834,10 +864,11 @@
                       </a>
                     </div>
                     <div class="excerpt ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">
-首先说一下，这个和添加右上角梅花那篇文章一样，是没有放到主题配置项里让自己配置的，而是通过我接下来的步骤，自己动手实现，只需两步，两分钟就能实现。
+首先说一下，这个和添加右上角梅花那篇文章一样，是没有放到主题配置项里让自己配置的，而是通过我接下来的步骤，自己动手实现，两分钟就能实现。
 
 
-首先打开主题下的配置文件_config.yml，找到import，并引入js:impo</div>
+首先打开主题下的配置文件_config.yml，找到import，并引入js:import:
+ </div>
                   </div>
                   <div class="bottom-one-btn ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s"><a href="/post/bubbly-bg/index/" class="read-more swiper-btn-color" style="display: inline-block; z-index:1;">阅读更多</a></div>
                 </div>
@@ -2094,6 +2125,8 @@
 			
 		
 			
+		
+			
 				<div class="article-link">
 					
 					<div class="article" style="background-size: cover; 
@@ -2232,6 +2265,63 @@
         <div class="post-info">
           <div class="post-time">
             <i class="fas fa-clock" aria-hidden="true"></i>
+            <span class="post-time">2022-06-09</span>
+          </div>
+          <div class="post-title">
+            <a class="post-title-link" href="/post/custom/index/">自定义css之头部图片透明</a>
+          </div>
+          <div class="post-meta">
+            <div class="post-tags">
+              <!-- 文章详情页的标签 -->
+
+    <i class="iconfont icontag"></i>
+    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%87%AA%E5%AE%9A%E4%B9%89css/" rel="tag">自定义css</a></li></ul>
+
+            </div>
+            <div class="post-categories">
+              <!-- 文章详情页的分类 -->
+
+<div class="article-category">
+  <i class="iconfont iconbookmark1"></i>
+  <a class="article-category-link" href="/categories/%E8%87%AA%E5%AE%9A%E4%B9%89css/">自定义css</a>
+</div>
+
+
+            </div>
+          </div>
+          <div class="post-img-mobile">
+            <a href="/post/custom/index/" style="background-size: cover; 
+              background-position: center center;">
+              <img class="lazyload lazyload placeholder" src="https://pic1.zhimg.com/80/v2-6d0cbd4380b4959542d3f5da31c7f20c_1440w.jpg" class="lazyload placeholder" data-srcset="https://pic1.zhimg.com/80/v2-6d0cbd4380b4959542d3f5da31c7f20c_1440w.jpg" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="">
+            </a>
+          </div>
+          <div class="post-content">
+            其实我们是可以自定义css的，例如我把文章详情页上面文章名称后面的背景变透明，也是可以办到的。如图所示：
+步骤如下：
+
+首先我们在source文件夹下创建custom/index.css, 内容如下:.post-detail-header 
+          </div>
+        </div>
+        <div class="post-more">
+          <a href="/post/custom/index/">
+            <i class="iconfont iconmore" pointer style="float: right;  " title="阅读更多"></i>
+          </a>
+        </div>
+      </div>
+      <div class="post-img">
+        <a href="/post/custom/index/" style="background-size: cover; 
+          background-position: center center;">
+          <img class="lazyload lazyload placeholder" src="https://pic1.zhimg.com/80/v2-6d0cbd4380b4959542d3f5da31c7f20c_1440w.jpg" class="lazyload placeholder" data-srcset="https://pic1.zhimg.com/80/v2-6d0cbd4380b4959542d3f5da31c7f20c_1440w.jpg" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="">
+        </a>
+      </div>
+    </article>
+  
+    
+    <article class="post reveal" style="   ">
+      <div class="post-main">
+        <div class="post-info">
+          <div class="post-time">
+            <i class="fas fa-clock" aria-hidden="true"></i>
             <span class="post-time">2022-06-08</span>
           </div>
           <div class="post-title">
@@ -2264,15 +2354,16 @@
           </div>
           <div class="post-content">
             
-首先说一下，这个和添加右上角梅花那篇文章一样，是没有放到主题配置项里让自己配置的，而是通过我接下来的步骤，自己动手实现，只需两步，两分钟就能实现。
+首先说一下，这个和添加右上角梅花那篇文章一样，是没有放到主题配置项里让自己配置的，而是通过我接下来的步骤，自己动手实现，两分钟就能实现。
 
 
-首先打开主题下的配置文件_config.yml，找到import，并引入js:impo
+首先打开主题下的配置文件_config.yml，找到import，并引入js:import:
+ 
           </div>
         </div>
         <div class="post-more">
           <a href="/post/bubbly-bg/index/">
-            <i class="iconfont iconmore" pointer style="float: right;  " title="阅读更多"></i>
+            <i class="iconfont iconmore" pointer style="  " title="阅读更多"></i>
           </a>
         </div>
       </div>
@@ -2285,7 +2376,7 @@
     </article>
   
     
-    <article class="post reveal" style="   ">
+    <article class="post reveal" style="flex-direction: row-reverse;   ">
       <div class="post-main">
         <div class="post-info">
           <div class="post-time">
@@ -2326,7 +2417,7 @@
         </div>
         <div class="post-more">
           <a href="/post/meihua/index/">
-            <i class="iconfont iconmore" pointer style="  " title="阅读更多"></i>
+            <i class="iconfont iconmore" pointer style="float: right;  " title="阅读更多"></i>
           </a>
         </div>
       </div>
@@ -2339,7 +2430,7 @@
     </article>
   
     
-    <article class="post reveal" style="flex-direction: row-reverse;   ">
+    <article class="post reveal" style="   ">
       <div class="post-main">
         <div class="post-info">
           <div class="post-time">
@@ -2385,7 +2476,7 @@
         </div>
         <div class="post-more">
           <a href="/post/imgtop/">
-            <i class="iconfont iconmore" pointer style="float: right;  " title="阅读更多"></i>
+            <i class="iconfont iconmore" pointer style="  " title="阅读更多"></i>
           </a>
         </div>
       </div>
@@ -2398,7 +2489,7 @@
     </article>
   
     
-    <article class="post reveal" style="   ">
+    <article class="post reveal" style="flex-direction: row-reverse;   ">
       <div class="post-main">
         <div class="post-info">
           <div class="post-time">
@@ -2446,7 +2537,7 @@
         </div>
         <div class="post-more">
           <a href="/post/mermaid/index/">
-            <i class="iconfont iconmore" pointer style="  " title="阅读更多"></i>
+            <i class="iconfont iconmore" pointer style="float: right;  " title="阅读更多"></i>
           </a>
         </div>
       </div>
@@ -2459,7 +2550,7 @@
     </article>
   
     
-    <article class="post reveal" style="flex-direction: row-reverse;   ">
+    <article class="post reveal" style="   ">
       <div class="post-main">
         <div class="post-info">
           <div class="post-time">
@@ -2505,7 +2596,7 @@
         </div>
         <div class="post-more">
           <a href="/post/mathjax/index/">
-            <i class="iconfont iconmore" pointer style="float: right;  " title="阅读更多"></i>
+            <i class="iconfont iconmore" pointer style="  " title="阅读更多"></i>
           </a>
         </div>
       </div>
@@ -2518,7 +2609,7 @@
     </article>
   
     
-    <article class="post reveal" style="   ">
+    <article class="post reveal" style="flex-direction: row-reverse;   ">
       <div class="post-main">
         <div class="post-info">
           <div class="post-time">
@@ -2559,7 +2650,7 @@
         </div>
         <div class="post-more">
           <a href="/post/hexo-theme-bamboo/sidebar/">
-            <i class="iconfont iconmore" pointer style="  " title="阅读更多"></i>
+            <i class="iconfont iconmore" pointer style="float: right;  " title="阅读更多"></i>
           </a>
         </div>
       </div>
@@ -2572,7 +2663,7 @@
     </article>
   
     
-    <article class="post reveal" style="flex-direction: row-reverse;   ">
+    <article class="post reveal" style="   ">
       <div class="post-main">
         <div class="post-info">
           <div class="post-time">
@@ -2613,7 +2704,7 @@
         </div>
         <div class="post-more">
           <a href="/post/getfiles/">
-            <i class="iconfont iconmore" pointer style="float: right;  " title="阅读更多"></i>
+            <i class="iconfont iconmore" pointer style="  " title="阅读更多"></i>
           </a>
         </div>
       </div>
@@ -2626,7 +2717,7 @@
     </article>
   
     
-    <article class="post reveal" style="   ">
+    <article class="post reveal" style="flex-direction: row-reverse;   ">
       <div class="post-main">
         <div class="post-info">
           <div class="post-time">
@@ -2667,7 +2758,7 @@
         </div>
         <div class="post-more">
           <a href="/post/hexo-theme-bamboo-new/">
-            <i class="iconfont iconmore" pointer style="  " title="阅读更多"></i>
+            <i class="iconfont iconmore" pointer style="float: right;  " title="阅读更多"></i>
           </a>
         </div>
       </div>
@@ -2680,7 +2771,7 @@
     </article>
   
     
-    <article class="post reveal" style="flex-direction: row-reverse;   ">
+    <article class="post reveal" style="   ">
       <div class="post-main">
         <div class="post-info">
           <div class="post-time">
@@ -2721,7 +2812,7 @@
         </div>
         <div class="post-more">
           <a href="/post/hexo-theme-bamboo/page/">
-            <i class="iconfont iconmore" pointer style="float: right;  " title="阅读更多"></i>
+            <i class="iconfont iconmore" pointer style="  " title="阅读更多"></i>
           </a>
         </div>
       </div>
@@ -2729,60 +2820,6 @@
         <a href="/post/hexo-theme-bamboo/page/" style="background-size: cover; 
           background-position: center center;">
           <img class="lazyload lazyload placeholder" src="https://pica.zhimg.com/80/v2-4dc929a46e9fb56c13911592af0be9dc_1440w.jpg?source=1940ef5c" class="lazyload placeholder" data-srcset="https://pica.zhimg.com/80/v2-4dc929a46e9fb56c13911592af0be9dc_1440w.jpg?source=1940ef5c" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="">
-        </a>
-      </div>
-    </article>
-  
-    
-    <article class="post reveal" style="   ">
-      <div class="post-main">
-        <div class="post-info">
-          <div class="post-time">
-            <i class="fas fa-clock" aria-hidden="true"></i>
-            <span class="post-time">2021-07-05</span>
-          </div>
-          <div class="post-title">
-            <a class="post-title-link" href="/post/hexo-theme-bamboo/theme/">Bamboo主题-主题更改（三）</a>
-          </div>
-          <div class="post-meta">
-            <div class="post-tags">
-              <!-- 文章详情页的标签 -->
-
-    <i class="iconfont icontag"></i>
-    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo-theme-bamboo/" rel="tag">hexo-theme-bamboo</a></li></ul>
-
-            </div>
-            <div class="post-categories">
-              <!-- 文章详情页的分类 -->
-
-<div class="article-category">
-  <i class="iconfont iconbookmark1"></i>
-  <a class="article-category-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a>
-</div>
-
-
-            </div>
-          </div>
-          <div class="post-img-mobile">
-            <a href="/post/hexo-theme-bamboo/theme/" style="background-size: cover; 
-              background-position: center center;">
-              <img class="lazyload lazyload placeholder" src="https://w.wallhaven.cc/full/48/wallhaven-48yppo.jpg" class="lazyload placeholder" data-srcset="https://w.wallhaven.cc/full/48/wallhaven-48yppo.jpg" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="">
-            </a>
-          </div>
-          <div class="post-content">
-            主题更改（三）
-          </div>
-        </div>
-        <div class="post-more">
-          <a href="/post/hexo-theme-bamboo/theme/">
-            <i class="iconfont iconmore" pointer style="  " title="阅读更多"></i>
-          </a>
-        </div>
-      </div>
-      <div class="post-img">
-        <a href="/post/hexo-theme-bamboo/theme/" style="background-size: cover; 
-          background-position: center center;">
-          <img class="lazyload lazyload placeholder" src="https://w.wallhaven.cc/full/48/wallhaven-48yppo.jpg" class="lazyload placeholder" data-srcset="https://w.wallhaven.cc/full/48/wallhaven-48yppo.jpg" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="">
         </a>
       </div>
     </article>
@@ -2940,6 +2977,11 @@
               id="categoriesE6A285E88AB1"
               ><div class='name'>梅花</div><div class='badge'>(1)</div></a></li>
           
+            <li><a class="flat-box"
+              title="/categories/%E8%87%AA%E5%AE%9A%E4%B9%89css/" href="/categories/%E8%87%AA%E5%AE%9A%E4%B9%89css/"
+              id="categoriesE887AAE5AE9AE4B989css"
+              ><div class='name'>自定义css</div><div class='badge'>(1)</div></a></li>
+          
         </ul>
       </div>
     </section>
@@ -2958,7 +3000,7 @@
 
 
     <div class='content'>
-    <a href="/tags/Hexo/" style="font-size: 20.67px; color: #6c6c6c">Hexo</a> <a href="/tags/hexo-theme-bamboo/" style="font-size: 17.33px; color: #828282">hexo-theme-bamboo</a> <a href="/tags/mathjax/" style="font-size: 14px; color: #999">mathjax</a> <a href="/tags/mermaid/" style="font-size: 14px; color: #999">mermaid</a> <a href="/tags/sidebar/" style="font-size: 14px; color: #999">sidebar</a> <a href="/tags/tag/" style="font-size: 24px; color: #555">tag</a> <a href="/tags/%E5%8A%A8%E6%80%81%E8%83%8C%E6%99%AF/" style="font-size: 14px; color: #999">动态背景</a> <a href="/tags/%E6%A2%85%E8%8A%B1/" style="font-size: 14px; color: #999">梅花</a>
+    <a href="/tags/Hexo/" style="font-size: 20.67px; color: #6c6c6c">Hexo</a> <a href="/tags/hexo-theme-bamboo/" style="font-size: 17.33px; color: #828282">hexo-theme-bamboo</a> <a href="/tags/mathjax/" style="font-size: 14px; color: #999">mathjax</a> <a href="/tags/mermaid/" style="font-size: 14px; color: #999">mermaid</a> <a href="/tags/sidebar/" style="font-size: 14px; color: #999">sidebar</a> <a href="/tags/tag/" style="font-size: 24px; color: #555">tag</a> <a href="/tags/%E5%8A%A8%E6%80%81%E8%83%8C%E6%99%AF/" style="font-size: 14px; color: #999">动态背景</a> <a href="/tags/%E6%A2%85%E8%8A%B1/" style="font-size: 14px; color: #999">梅花</a> <a href="/tags/%E8%87%AA%E5%AE%9A%E4%B9%89css/" style="font-size: 14px; color: #999">自定义css</a>
     </div>
 </section>
 
@@ -2979,6 +3021,27 @@
       <!-- hash算法 -->
       
       <div class="aside-list">
+        
+          <div class="aside-list-item">
+            
+            
+            
+
+            <div class="post-img-box">
+              <a href="/post/custom/index/" class="post-img " style="background-size: cover; 
+                background-position: center center;">
+                <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="https://pic1.zhimg.com/80/v2-6d0cbd4380b4959542d3f5da31c7f20c_1440w.jpg" class="lazyload placeholder" data-srcset="https://pic1.zhimg.com/80/v2-6d0cbd4380b4959542d3f5da31c7f20c_1440w.jpg" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="">
+              </a>
+            </div>
+            <div class="post-date-title">
+              <div>
+                
+                  <span class="post-date">06-09</span>
+                
+              </div>
+              <a class="post-title" href="/post/custom/index/">自定义css之头部图片透明</a>
+            </div>
+          </div>
         
           <div class="aside-list-item">
             
@@ -3064,27 +3127,6 @@
             </div>
           </div>
         
-          <div class="aside-list-item">
-            
-            
-            
-
-            <div class="post-img-box">
-              <a href="/post/mathjax/index/" class="post-img " style="background-size: cover; 
-                background-position: center center;">
-                <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="https://pic1.zhimg.com/80/v2-78d724c077f0af2f991e18ea1d5516c3_1440w.jpg?source=1940ef5c" class="lazyload placeholder" data-srcset="https://pic1.zhimg.com/80/v2-78d724c077f0af2f991e18ea1d5516c3_1440w.jpg?source=1940ef5c" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="">
-              </a>
-            </div>
-            <div class="post-date-title">
-              <div>
-                
-                  <span class="post-date">10-08</span>
-                
-              </div>
-              <a class="post-title" href="/post/mathjax/index/">新增mathjax</a>
-            </div>
-          </div>
-        
       </div>
     </div>
   </section>
@@ -3092,7 +3134,7 @@
     
   <section class="widget side_archives">
     
-    <header><a style="color: red" href='/archives/'><i class="fas fa-archive fa-fw" aria-hidden="true"></i><span class='name'>归档</span></a></header><div class="content"><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/06/"><span class="card-archive-list-date">六月 2022</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/05/"><span class="card-archive-list-date">五月 2022</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/11/"><span class="card-archive-list-date">十一月 2021</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/10/"><span class="card-archive-list-date">十月 2021</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/09/"><span class="card-archive-list-date">九月 2021</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/08/"><span class="card-archive-list-date">八月 2021</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/07/"><span class="card-archive-list-date">七月 2021</span><span class="card-archive-list-count">6</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/06/"><span class="card-archive-list-date">六月 2021</span><span class="card-archive-list-count">2</span></a></li></ul></div>
+    <header><a style="color: red" href='/archives/'><i class="fas fa-archive fa-fw" aria-hidden="true"></i><span class='name'>归档</span></a></header><div class="content"><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/06/"><span class="card-archive-list-date">六月 2022</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/05/"><span class="card-archive-list-date">五月 2022</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/11/"><span class="card-archive-list-date">十一月 2021</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/10/"><span class="card-archive-list-date">十月 2021</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/09/"><span class="card-archive-list-date">九月 2021</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/08/"><span class="card-archive-list-date">八月 2021</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/07/"><span class="card-archive-list-date">七月 2021</span><span class="card-archive-list-count">6</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/06/"><span class="card-archive-list-date">六月 2021</span><span class="card-archive-list-count">2</span></a></li></ul></div>
   </section>
 
     <section class="widget side_webinfo">
@@ -3109,7 +3151,7 @@
       
         <div class="webinfo-item">
           <div>文章数目：</div>
-          <div>39 篇</div>
+          <div>40 篇</div>
         </div>
       
 
@@ -3131,7 +3173,7 @@
       
         <div class="webinfo-item">
           <div>本站总字数：</div>
-          <div>29.9k 字</div>
+          <div>30.6k 字</div>
         </div>
       
 
@@ -3157,8 +3199,8 @@
         <div class="webinfo-item">
           <div>最后活动时间：</div>
           
-            <div id="last-update" style="display: none;">Wed Jun 08 2022 18:41:11 GMT+0800 (GMT+08:00)</div>
-            <div id="last-update-show">2022-06-08 日</div>
+            <div id="last-update" style="display: none;">Thu Jun 09 2022 19:28:30 GMT+0800 (GMT+08:00)</div>
+            <div id="last-update-show">2022-06-09 日</div>
           
         </div>
         
@@ -3208,7 +3250,7 @@
           try {
             document.getElementById('last-update-show').innerHTML = timeago(new Date(lastUpDate));
           } catch (error) {
-            document.getElementById('last-update-show').innerHTML = '2022-06-08 日';
+            document.getElementById('last-update-show').innerHTML = '2022-06-09 日';
           }
         </script>
         

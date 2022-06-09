@@ -54,9 +54,7 @@
     <!-- import link -->
     
         
-            
-        
-            
+            <link href="/custom/index.css" rel="stylesheet">
         
     
     <!-- import script -->
@@ -813,11 +811,11 @@
       
         <div class="post-detail-header_wordcount">
           <span class="totalcount">
-            <i class="fas fa-file-text-o"></i> 字数统计: 331 |
+            <i class="fas fa-file-text-o"></i> 字数统计: 712 |
           </span>
   
           <span class="min2read">
-            <i class="fas fa-clock"></i> 阅读时长: 1分钟 |
+            <i class="fas fa-clock"></i> 阅读时长: 3分钟 |
           </span>
   
           
@@ -845,18 +843,105 @@
     <article class="post post-detail">
       <div class="post-content">
         <blockquote>
-<p>首先说一下，这个和添加右上角梅花那篇文章一样，是没有放到主题配置项里让自己配置的，而是通过我接下来的步骤，自己动手实现，只需两步，两分钟就能实现。</p>
+<p>首先说一下，这个和添加右上角梅花那篇文章一样，是没有放到主题配置项里让自己配置的，而是通过我接下来的步骤，自己动手实现，两分钟就能实现。</p>
 </blockquote>
 <ol>
 <li>首先打开主题下的配置文件<code>_config.yml</code>，找到<code>import</code>，并引入js:<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">import</span><span class="token operator">:</span>
   link<span class="token operator">:</span>
-    # <span class="token operator">-</span> <span class="token operator">&lt;</span>link src<span class="token string">"xxx.css"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>link<span class="token operator">></span>
-    <span class="token operator">-</span> 
-    <span class="token operator">-</span> 
+    <span class="token operator">-</span> <span class="token operator">&lt;</span>link href<span class="token operator">=</span><span class="token string">"/bubbly-bg/bubbly.css"</span> rel<span class="token operator">=</span><span class="token string">"stylesheet"</span><span class="token operator">></span>
   script<span class="token operator">:</span> 
-    <span class="token operator">-</span> <span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"https://unpkg.com/bubbly-bg@1.0.0/dist/bubbly-bg.js"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
-    <span class="token operator">-</span> <span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"/bubbly-bg/index.js"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
-<li>接着在<code>source</code>文件夹下创建<code>bubbly-bg/index.js</code>文件: 内容如下:<pre class="line-numbers language-js" data-language="js"><code class="language-js">window<span class="token punctuation">.</span><span class="token function-variable function">onload</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span> <span class="token comment">// window.onload一定要带上，表示在html渲染完成后执行 </span>
+    <span class="token operator">-</span> <span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"/bubbly-bg/bubbly.js"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
+    <span class="token operator">-</span> <span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"/bubbly-bg/index.js"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+<li>接着在<code>source</code>文件夹下创建<code>bubbly-bg/bubbly.js</code>文件: 内容如下:<details ><summary pointer> bubbly.js </summary>
+              <div class='content'>
+              <pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token string">"use strict"</span><span class="token punctuation">;</span>
+window<span class="token punctuation">.</span><span class="token function-variable function">bubbly</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">t</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">var</span> n <span class="token operator">=</span> t <span class="token operator">||</span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+    <span class="token function-variable function">o</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+      <span class="token keyword">return</span> Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+    r <span class="token operator">=</span> n<span class="token punctuation">.</span>canvas <span class="token operator">||</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">"canvas"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    e <span class="token operator">=</span> r<span class="token punctuation">.</span>width<span class="token punctuation">,</span>
+    a <span class="token operator">=</span> r<span class="token punctuation">.</span>height<span class="token punctuation">;</span>
+    r<span class="token punctuation">.</span>className <span class="token operator">=</span> <span class="token string">'bubbly-bg-canvas'</span><span class="token punctuation">;</span>
+  <span class="token keyword">null</span> <span class="token operator">===</span> r<span class="token punctuation">.</span>parentNode <span class="token operator">&amp;&amp;</span>
+    <span class="token punctuation">(</span>r<span class="token punctuation">.</span><span class="token function">setAttribute</span><span class="token punctuation">(</span>
+      <span class="token string">"style"</span><span class="token punctuation">,</span>
+      <span class="token string">"position:fixed;z-index:-1;left:0;top:0;min-width:100vw;min-height:100vh;"</span>
+    <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span>e <span class="token operator">=</span> r<span class="token punctuation">.</span>width <span class="token operator">=</span> window<span class="token punctuation">.</span>innerWidth<span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span>a <span class="token operator">=</span> r<span class="token punctuation">.</span>height <span class="token operator">=</span> window<span class="token punctuation">.</span>innerHeight<span class="token punctuation">)</span><span class="token punctuation">,</span>
+    document<span class="token punctuation">.</span>body<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>r<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">var</span> i <span class="token operator">=</span> r<span class="token punctuation">.</span><span class="token function">getContext</span><span class="token punctuation">(</span><span class="token string">"2d"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">(</span>i<span class="token punctuation">.</span>shadowColor <span class="token operator">=</span> n<span class="token punctuation">.</span>shadowColor <span class="token operator">||</span> <span class="token string">"#fff"</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>i<span class="token punctuation">.</span>shadowBlur <span class="token operator">=</span> n<span class="token punctuation">.</span>blur <span class="token operator">||</span> <span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">var</span> l <span class="token operator">=</span> i<span class="token punctuation">.</span><span class="token function">createLinearGradient</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> e<span class="token punctuation">,</span> a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  l<span class="token punctuation">.</span><span class="token function">addColorStop</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> n<span class="token punctuation">.</span>colorStart <span class="token operator">||</span> <span class="token string">"#2AE"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    l<span class="token punctuation">.</span><span class="token function">addColorStop</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> n<span class="token punctuation">.</span>colorStop <span class="token operator">||</span> <span class="token string">"#17B"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span>
+    <span class="token keyword">var</span> c <span class="token operator">=</span> n<span class="token punctuation">.</span>bubbles <span class="token operator">||</span> Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span><span class="token number">0.02</span> <span class="token operator">*</span> <span class="token punctuation">(</span>e <span class="token operator">+</span> a<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span> u <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span> d <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    d <span class="token operator">&lt;</span> c<span class="token punctuation">;</span>
+    d<span class="token operator">++</span>
+  <span class="token punctuation">)</span>
+    u<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
+      f<span class="token operator">:</span> <span class="token punctuation">(</span>
+        n<span class="token punctuation">.</span>bubbleFunc <span class="token operator">||</span>
+        <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+          <span class="token keyword">return</span> <span class="token string">"hsla(0, 0%, 100%, "</span> <span class="token operator">+</span> <span class="token number">0.1</span> <span class="token operator">*</span> <span class="token function">o</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">")"</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+      <span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      x<span class="token operator">:</span> <span class="token function">o</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">*</span> e<span class="token punctuation">,</span>
+      y<span class="token operator">:</span> <span class="token function">o</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">*</span> a<span class="token punctuation">,</span>
+      r<span class="token operator">:</span> <span class="token punctuation">(</span>
+        n<span class="token punctuation">.</span>radiusFunc <span class="token operator">||</span>
+        <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+          <span class="token keyword">return</span> <span class="token number">4</span> <span class="token operator">+</span> <span class="token punctuation">(</span><span class="token function">o</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">*</span> e<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">25</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+      <span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      a<span class="token operator">:</span> <span class="token punctuation">(</span>
+        n<span class="token punctuation">.</span>angleFunc <span class="token operator">||</span>
+        <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+          <span class="token keyword">return</span> <span class="token function">o</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">*</span> Math<span class="token punctuation">.</span><span class="token constant">PI</span> <span class="token operator">*</span> <span class="token number">2</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+      <span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      v<span class="token operator">:</span> <span class="token punctuation">(</span>
+        n<span class="token punctuation">.</span>velocityFunc <span class="token operator">||</span>
+        <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+          <span class="token keyword">return</span> <span class="token number">0.1</span> <span class="token operator">+</span> <span class="token number">0.5</span> <span class="token operator">*</span> <span class="token function">o</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+      <span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token operator">!</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token function">t</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">null</span> <span class="token operator">===</span> r<span class="token punctuation">.</span>parentNode<span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token function">cancelAnimationFrame</span><span class="token punctuation">(</span>t<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token operator">!</span><span class="token number">1</span> <span class="token operator">!==</span> n<span class="token punctuation">.</span>animate <span class="token operator">&amp;&amp;</span> <span class="token function">requestAnimationFrame</span><span class="token punctuation">(</span>t<span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token punctuation">(</span>i<span class="token punctuation">.</span>globalCompositeOperation <span class="token operator">=</span> <span class="token string">"source-over"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token punctuation">(</span>i<span class="token punctuation">.</span>fillStyle <span class="token operator">=</span> l<span class="token punctuation">)</span><span class="token punctuation">,</span>
+      i<span class="token punctuation">.</span><span class="token function">fillRect</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> e<span class="token punctuation">,</span> a<span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token punctuation">(</span>i<span class="token punctuation">.</span>globalCompositeOperation <span class="token operator">=</span> n<span class="token punctuation">.</span>compose <span class="token operator">||</span> <span class="token string">"lighter"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      u<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">t</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        i<span class="token punctuation">.</span><span class="token function">beginPath</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+          i<span class="token punctuation">.</span><span class="token function">arc</span><span class="token punctuation">(</span>t<span class="token punctuation">.</span>x<span class="token punctuation">,</span> t<span class="token punctuation">.</span>y<span class="token punctuation">,</span> t<span class="token punctuation">.</span>r<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">2</span> <span class="token operator">*</span> Math<span class="token punctuation">.</span><span class="token constant">PI</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+          <span class="token punctuation">(</span>i<span class="token punctuation">.</span>fillStyle <span class="token operator">=</span> t<span class="token punctuation">.</span>f<span class="token punctuation">)</span><span class="token punctuation">,</span>
+          i<span class="token punctuation">.</span><span class="token function">fill</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+          <span class="token punctuation">(</span>t<span class="token punctuation">.</span>x <span class="token operator">+=</span> Math<span class="token punctuation">.</span><span class="token function">cos</span><span class="token punctuation">(</span>t<span class="token punctuation">.</span>a<span class="token punctuation">)</span> <span class="token operator">*</span> t<span class="token punctuation">.</span>v<span class="token punctuation">)</span><span class="token punctuation">,</span>
+          <span class="token punctuation">(</span>t<span class="token punctuation">.</span>y <span class="token operator">+=</span> Math<span class="token punctuation">.</span><span class="token function">sin</span><span class="token punctuation">(</span>t<span class="token punctuation">.</span>a<span class="token punctuation">)</span> <span class="token operator">*</span> t<span class="token punctuation">.</span>v<span class="token punctuation">)</span><span class="token punctuation">,</span>
+          t<span class="token punctuation">.</span>x <span class="token operator">-</span> t<span class="token punctuation">.</span>r <span class="token operator">></span> e <span class="token operator">&amp;&amp;</span> <span class="token punctuation">(</span>t<span class="token punctuation">.</span>x <span class="token operator">=</span> <span class="token operator">-</span>t<span class="token punctuation">.</span>r<span class="token punctuation">)</span><span class="token punctuation">,</span>
+          t<span class="token punctuation">.</span>x <span class="token operator">+</span> t<span class="token punctuation">.</span>r <span class="token operator">&lt;</span> <span class="token number">0</span> <span class="token operator">&amp;&amp;</span> <span class="token punctuation">(</span>t<span class="token punctuation">.</span>x <span class="token operator">=</span> e <span class="token operator">+</span> t<span class="token punctuation">.</span>r<span class="token punctuation">)</span><span class="token punctuation">,</span>
+          t<span class="token punctuation">.</span>y <span class="token operator">-</span> t<span class="token punctuation">.</span>r <span class="token operator">></span> a <span class="token operator">&amp;&amp;</span> <span class="token punctuation">(</span>t<span class="token punctuation">.</span>y <span class="token operator">=</span> <span class="token operator">-</span>t<span class="token punctuation">.</span>r<span class="token punctuation">)</span><span class="token punctuation">,</span>
+          t<span class="token punctuation">.</span>y <span class="token operator">+</span> t<span class="token punctuation">.</span>r <span class="token operator">&lt;</span> <span class="token number">0</span> <span class="token operator">&amp;&amp;</span> <span class="token punctuation">(</span>t<span class="token punctuation">.</span>y <span class="token operator">=</span> a <span class="token operator">+</span> t<span class="token punctuation">.</span>r<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+              </div>
+            </details>
+
+
+
+
+</li>
+</ol>
+<ol start="3">
+<li>接着在<code>source</code>文件夹下创建<code>bubbly-bg/index.js</code>文件: 内容如下:<pre class="line-numbers language-js" data-language="js"><code class="language-js">document<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"DOMContentLoaded"</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span> <span class="token comment">// 这个表示在html加载完成后执行</span>
     <span class="token function">bubbly</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
         colorStart<span class="token operator">:</span> <span class="token string">'#fff4e6'</span><span class="token punctuation">,</span>
         colorStop<span class="token operator">:</span> <span class="token string">'#ffe9e4'</span><span class="token punctuation">,</span>
@@ -864,10 +949,15 @@
         compose<span class="token operator">:</span> <span class="token string">'source-over'</span><span class="token punctuation">,</span>
         <span class="token function-variable function">bubbleFunc</span><span class="token operator">:</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">hsla(</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">$&#123;</span>Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token number">50</span><span class="token interpolation-punctuation punctuation">&#125;</span></span><span class="token string">, 100%, 50%, .3)</span><span class="token template-punctuation string">`</span></span>
       <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+<li>接着在<code>source</code>文件夹下创建<code>bubbly-bg/bubbly.css</code>文件: 内容如下:<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token comment">/* 动态背景--变暗   1最亮，数值越小越暗*/</span>
+<span class="token selector">.bubbly-bg-canvas</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">filter</span><span class="token punctuation">:</span> <span class="token function">brightness</span><span class="token punctuation">(</span>0.8<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-最后重启服务<code>hexo clean</code> &amp;&amp; <code>hexo s</code></li>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+加css的目的是让这个动态背景变暗</li>
 </ol>
+<p>最后重启服务<code>hexo clean</code> &amp;&amp; <code>hexo s</code></p>
 <p>这样动态背景就完成啦，是不是很简单呢。</p>
 <p>当然你还可以更改第二步自己创建的js代码参数，实现不同的动态背景, 具体参数请阅读：</p>
 <div class="tagLink"><a class="link-card" title="动态背景bubbly" target="_blank" rel="noopener" href="https://github.com/tipsy/bubbly-bg"><span class="link-card-backdrop" style="background-image: url(https://pic.jitudisk.com/public/2022/06/08/192e8237510b6.png)"></span><div class="left"><img src="https://pic.jitudisk.com/public/2022/06/08/192e8237510b6.png" class="lazyload placeholder" data-srcset="https://pic.jitudisk.com/public/2022/06/08/192e8237510b6.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg"/></div><div class="right"><p class="text">动态背景bubbly</p><p class="url">https://github.com/tipsy/bubbly-bg</p></div></a></div>
@@ -876,13 +966,13 @@
 <div class="tagLink"><a class="link-card" title="demo" target="_blank" rel="noopener" href="https://tipsy.github.io/bubbly-bg/"><span class="link-card-backdrop" style="background-image: url(https://pic.jitudisk.com/public/2022/06/08/192e8237510b6.png)"></span><div class="left"><img src="https://pic.jitudisk.com/public/2022/06/08/192e8237510b6.png" class="lazyload placeholder" data-srcset="https://pic.jitudisk.com/public/2022/06/08/192e8237510b6.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg"/></div><div class="right"><p class="text">demo</p><p class="url">https://tipsy.github.io/bubbly-bg/</p></div></a></div>
 
 <p>效果如图所示：<br><img src="https://pic.jitudisk.com/public/2022/06/08/ada69866ddf1b.png" class="lazyload placeholder" data-srcset="https://pic.jitudisk.com/public/2022/06/08/ada69866ddf1b.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="动态背景"><br><img src="https://pic.jitudisk.com/public/2022/06/08/11e018b14476d.png" class="lazyload placeholder" data-srcset="https://pic.jitudisk.com/public/2022/06/08/11e018b14476d.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="动态背景"><br><img src="https://pic.jitudisk.com/public/2022/06/08/a05af83eb29e3.png" class="lazyload placeholder" data-srcset="https://pic.jitudisk.com/public/2022/06/08/a05af83eb29e3.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="动态背景"><br><img src="https://pic.jitudisk.com/public/2022/06/08/b21ab53e08fa6.png" class="lazyload placeholder" data-srcset="https://pic.jitudisk.com/public/2022/06/08/b21ab53e08fa6.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="动态背景"><br><img src="https://pic.jitudisk.com/public/2022/06/08/da7089880f2b0.png" class="lazyload placeholder" data-srcset="https://pic.jitudisk.com/public/2022/06/08/da7089880f2b0.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="动态背景"></p>
-<p>假如我把第二步自己创建的js的参数更改如下：</p>
-<pre class="line-numbers language-js" data-language="js"><code class="language-js">window<span class="token punctuation">.</span><span class="token function-variable function">onload</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+<p>假如我把第三步自己创建的js的参数更改如下：</p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js">document<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"DOMContentLoaded"</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
     <span class="token function">bubbly</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <p>则显示效果如下图所示:<br><img src="https://pic.jitudisk.com/public/2022/06/08/192e8237510b6.png" class="lazyload placeholder" data-srcset="https://pic.jitudisk.com/public/2022/06/08/192e8237510b6.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="动态背景"></p>
-<p>如果喜欢，可以动手试试哦，只需两步即可.</p>
+<p>如果喜欢，可以动手试试哦，不需要改源码.</p>
 
       </div>
       <div class="post-tags-categories">
@@ -921,6 +1011,27 @@
 <div class="post-nav">
 
 
+
+  
+  <div class="post-nav-prev post-nav-item">
+    <div class="post-nav-img" style="background-size: cover; 
+      background-position: center center;">
+      <img class="lazyload lazyload placeholder" src="https://pic1.zhimg.com/80/v2-6d0cbd4380b4959542d3f5da31c7f20c_1440w.jpg" class="lazyload placeholder" data-srcset="https://pic1.zhimg.com/80/v2-6d0cbd4380b4959542d3f5da31c7f20c_1440w.jpg" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="">
+    </div>
+    <a href="/post/custom/index/" class="post-nav-link">
+      <div class="title">
+        <i class="fas fa-angle-left"></i> 上一篇:
+        <div class="title-text">自定义css之头部图片透明</div>
+      </div>
+      
+      <!-- <div class="content">
+        其实我们是可以自定义css的，例如我把文章详情页上面文章名称后面的背景变透明，也是可以办到的。如图所示：
+步骤如下：
+
+
+      </div> -->
+    </a>
+  </div>
 
 
 
@@ -1128,7 +1239,7 @@
 			clearInterval(this.time);
 		},
 		mounted() {
-			let prop = '' || 'https://pica.zhimg.com/80/v2-292e6340491bd97f9d014d6be3371c04_1440w.jpg,https://pica.zhimg.com/80/v2-9659f2305acb80f25ced33aa980092c1_1440w.jpg,https://api.btstu.cn/sjbz/api.php';
+			let prop = 'https://pic.jitudisk.com/public/2022/06/08/8493c140937aa.png' || 'https://pica.zhimg.com/80/v2-292e6340491bd97f9d014d6be3371c04_1440w.jpg,https://pica.zhimg.com/80/v2-9659f2305acb80f25ced33aa980092c1_1440w.jpg,https://api.btstu.cn/sjbz/api.php';
 			let isImg = prop.includes('.bmp') || prop.includes('.jpg') || prop.includes('.png') || prop.includes('.tif') || prop.includes('.gif') || prop.includes('.pcx') || prop.includes('.tga') || prop.includes('.exif') || prop.includes('.fpx') || prop.includes('.psd') || prop.includes('.cdr') || prop.includes('.pcd') || prop.includes('.dxf') || prop.includes('.ufo') || prop.includes('.eps') || prop.includes('.ai') || prop.includes('.raw') || prop.includes('.WMF') || prop.includes('.webp') || prop.includes('.jpeg') || prop.includes('http://') || prop.includes('https://')
 			if (isImg) {
 				let img = prop.split(',');

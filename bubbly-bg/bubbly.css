@@ -1,0 +1,4 @@
+/* 动态背景--变暗 */
+.bubbly-bg-canvas {
+    filter: brightness(0.8);
+}

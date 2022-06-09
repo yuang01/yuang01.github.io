@@ -1,4 +1,4 @@
-window.onload = function () {
+document.addEventListener("DOMContentLoaded", function () {
     bubbly({
         colorStart: '#fff4e6',
         colorStop: '#ffe9e4',
@@ -6,4 +6,4 @@ window.onload = function () {
         compose: 'source-over',
         bubbleFunc:() => `hsla(${Math.random() * 50}, 100%, 50%, .3)`
       });
-}
+})
