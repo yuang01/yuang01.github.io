@@ -2851,6 +2851,7 @@ pre:hover::-webkit-scrollbar-thumb:hover,
 .tag .tag-name {
   display: flex;
   justify-content: center;
+  margin-bottom: 15px;
 }
 .tag .tag-name .name {
   display: inline-block;
@@ -2974,6 +2975,7 @@ pre:hover::-webkit-scrollbar-thumb:hover,
 .category .category-name {
   display: flex;
   justify-content: center;
+  margin-bottom: 10px;
 }
 .category .category-name .name {
   display: inline-block;
