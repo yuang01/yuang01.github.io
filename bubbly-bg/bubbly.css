@@ -2,3 +2,6 @@
 .bubbly-bg-canvas {
     filter: brightness(0.8);
 }
+.darkModel .bubbly-bg-canvas {
+    filter: brightness(0.3);
+}
