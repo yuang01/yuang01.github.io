@@ -966,23 +966,6 @@
           <li class="post-item" data-aos="fade-left">
             
             <div class="post-img-box">
-              <a href="/post/gallery/" class="post-img " style="background-size: cover; 
-                background-position: center center;">
-                <img class="lazyload lazyload placeholder" src="https://pic2.zhimg.com/80/v2-1ecd92421c8823c396f96d15325e6d42_1440w.jpg?source=1940ef5c" class="lazyload placeholder" data-srcset="https://pic2.zhimg.com/80/v2-1ecd92421c8823c396f96d15325e6d42_1440w.jpg?source=1940ef5c" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="">
-              </a>
-            </div>
-            <div class="post-date-title">
-              <div>
-                <span class="post-date">02-08</span>
-              </div>
-              <a class="post-title" href="/post/gallery/">gallery图片</a>
-            </div>
-          </li>
-        
-          
-          <li class="post-item" data-aos="fade-left">
-            
-            <div class="post-img-box">
               <a href="/post/folding/" class="post-img " style="background-size: cover; 
                 background-position: center center;">
                 <img class="lazyload lazyload placeholder" src="https://pic4.zhimg.com/80/v2-3b4ca49ff4fc567faa76ce6f02cffac9_1440w.jpg?source=1940ef5c" class="lazyload placeholder" data-srcset="https://pic4.zhimg.com/80/v2-3b4ca49ff4fc567faa76ce6f02cffac9_1440w.jpg?source=1940ef5c" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="">
@@ -993,6 +976,23 @@
                 <span class="post-date">02-08</span>
               </div>
               <a class="post-title" href="/post/folding/">folding折叠</a>
+            </div>
+          </li>
+        
+          
+          <li class="post-item" data-aos="fade-left">
+            
+            <div class="post-img-box">
+              <a href="/post/gallery/" class="post-img " style="background-size: cover; 
+                background-position: center center;">
+                <img class="lazyload lazyload placeholder" src="https://pic2.zhimg.com/80/v2-1ecd92421c8823c396f96d15325e6d42_1440w.jpg?source=1940ef5c" class="lazyload placeholder" data-srcset="https://pic2.zhimg.com/80/v2-1ecd92421c8823c396f96d15325e6d42_1440w.jpg?source=1940ef5c" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="">
+              </a>
+            </div>
+            <div class="post-date-title">
+              <div>
+                <span class="post-date">02-08</span>
+              </div>
+              <a class="post-title" href="/post/gallery/">gallery图片</a>
             </div>
           </li>
         
@@ -1779,13 +1779,14 @@
 
 <div class="pjax-animate">
   
-    <div class="loading-circle"><div id="loader-circle"></div></div>
+    <script src="https://unpkg.com/nprogress@0.2.0/nprogress.js"></script>
+    <div id="loading-bar-wrapper"><script>NProgress.configure({parent:"#loading-bar-wrapper",trickleSpeed: 100})</script></div>
     <script>
       window.ShowLoading = function() {
-        $(".loading-circle").css("display", "block");
+        NProgress.start();
       };
       window.HideLoading = function() {
-        $(".loading-circle").css("display", "none");
+        NProgress.done();
       }
     </script>
   

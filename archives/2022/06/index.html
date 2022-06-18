@@ -1639,13 +1639,14 @@
 
 <div class="pjax-animate">
   
-    <div class="loading-circle"><div id="loader-circle"></div></div>
+    <script src="https://unpkg.com/nprogress@0.2.0/nprogress.js"></script>
+    <div id="loading-bar-wrapper"><script>NProgress.configure({parent:"#loading-bar-wrapper",trickleSpeed: 100})</script></div>
     <script>
       window.ShowLoading = function() {
-        $(".loading-circle").css("display", "block");
+        NProgress.start();
       };
       window.HideLoading = function() {
-        $(".loading-circle").css("display", "none");
+        NProgress.done();
       }
     </script>
   

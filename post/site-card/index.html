@@ -897,17 +897,21 @@
   <div class="post-nav-prev post-nav-item">
     <div class="post-nav-img" style="background-size: cover; 
       background-position: center center;">
-      <img class="lazyload lazyload placeholder" src="https://pic4.zhimg.com/80/v2-37134f732bbe21779fdb2fc8dca410c7_1440w.jpg" class="lazyload placeholder" data-srcset="https://pic4.zhimg.com/80/v2-37134f732bbe21779fdb2fc8dca410c7_1440w.jpg" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="">
+      <img class="lazyload lazyload placeholder" src="https://pic3.zhimg.com/80/v2-1d9e8203f167bb1c51d6899df5c626ca_1440w.jpg" class="lazyload placeholder" data-srcset="https://pic3.zhimg.com/80/v2-1d9e8203f167bb1c51d6899df5c626ca_1440w.jpg" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="">
     </div>
-    <a href="/post/span/" class="post-nav-link">
+    <a href="/post/radio/" class="post-nav-link">
       <div class="title">
         <i class="fas fa-angle-left"></i> 上一篇:
-        <div class="title-text">文字颜色</div>
+        <div class="title-text">radio</div>
       </div>
       
       <!-- <div class="content">
-        文字颜色演示效果
-这是一个简单的文字我是一个文字高亮，唱着我们心肠的曲折这是一个简单的文字我是一个文字高亮，唱着我们心肠
+        radio
+
+            纯文本测试
+            
+
+            支持简单的 mar
       </div> -->
     </a>
   </div>
@@ -918,19 +922,16 @@
   <div class="post-nav-next post-nav-item">
     <div class="post-nav-img" style="background-size: cover; 
       background-position: center center;">
-      <img class="lazyload lazyload placeholder" src="https://pic4.zhimg.com/80/v2-5a575bb8ac734707f1ec05d6de6a0e0b_1440w.jpg" class="lazyload placeholder" data-srcset="https://pic4.zhimg.com/80/v2-5a575bb8ac734707f1ec05d6de6a0e0b_1440w.jpg" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" src="" alt="">
+      <img class="lazyload lazyload placeholder" src="https://pic4.zhimg.com/80/v2-37134f732bbe21779fdb2fc8dca410c7_1440w.jpg" class="lazyload placeholder" data-srcset="https://pic4.zhimg.com/80/v2-37134f732bbe21779fdb2fc8dca410c7_1440w.jpg" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" src="" alt="">
     </div>
-    <a href="/post/tab/" class="post-nav-link">
+    <a href="/post/span/" class="post-nav-link">
       <div class="title">
         下一篇: <i class="fas fa-angle-right"></i>
-        <div class="title-text">tab</div>
+        <div class="title-text">文字颜色</div>
       </div>
       <!-- <div class="content">
-        tab事例
-栏目1栏目2。。。！！！
-上述事例代码&#123;% tabs tab-id %&#125;
-
-&lt;!-
+        文字颜色演示效果
+这是一个简单的文字我是一个文字高亮，唱着我们心肠的曲折这是一个简单的文字我是一个文字高亮，唱着我们心肠
       </div> -->
     </a>
   </div>
@@ -1953,13 +1954,14 @@
 
 <div class="pjax-animate">
   
-    <div class="loading-circle"><div id="loader-circle"></div></div>
+    <script src="https://unpkg.com/nprogress@0.2.0/nprogress.js"></script>
+    <div id="loading-bar-wrapper"><script>NProgress.configure({parent:"#loading-bar-wrapper",trickleSpeed: 100})</script></div>
     <script>
       window.ShowLoading = function() {
-        $(".loading-circle").css("display", "block");
+        NProgress.start();
       };
       window.HideLoading = function() {
-        $(".loading-circle").css("display", "none");
+        NProgress.done();
       }
     </script>
   

@@ -2881,8 +2881,8 @@ galleryGroup图片示例
         <div class="webinfo-item">
           <div>最后活动时间：</div>
           
-            <div id="last-update" style="display: none;">Fri Jun 17 2022 10:10:00 GMT+0800 (GMT+08:00)</div>
-            <div id="last-update-show">2022-06-17 日</div>
+            <div id="last-update" style="display: none;">Sat Jun 18 2022 22:13:41 GMT+0800 (GMT+08:00)</div>
+            <div id="last-update-show">2022-06-18 日</div>
           
         </div>
         
@@ -2932,7 +2932,7 @@ galleryGroup图片示例
           try {
             document.getElementById('last-update-show').innerHTML = timeago(new Date(lastUpDate));
           } catch (error) {
-            document.getElementById('last-update-show').innerHTML = '2022-06-17 日';
+            document.getElementById('last-update-show').innerHTML = '2022-06-18 日';
           }
         </script>
         
@@ -3747,13 +3747,14 @@ galleryGroup图片示例
 
 <div class="pjax-animate">
   
-    <div class="loading-circle"><div id="loader-circle"></div></div>
+    <script src="https://unpkg.com/nprogress@0.2.0/nprogress.js"></script>
+    <div id="loading-bar-wrapper"><script>NProgress.configure({parent:"#loading-bar-wrapper",trickleSpeed: 100})</script></div>
     <script>
       window.ShowLoading = function() {
-        $(".loading-circle").css("display", "block");
+        NProgress.start();
       };
       window.HideLoading = function() {
-        $(".loading-circle").css("display", "none");
+        NProgress.done();
       }
     </script>
   
