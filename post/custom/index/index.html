@@ -811,11 +811,11 @@
       
         <div class="post-detail-header_wordcount">
           <span class="totalcount">
-            <i class="fas fa-file-text-o"></i> 字数统计: 485 |
+            <i class="fas fa-file-text-o"></i> 字数统计: 442 |
           </span>
   
           <span class="min2read">
-            <i class="fas fa-clock"></i> 阅读时长: 2分钟 |
+            <i class="fas fa-clock"></i> 阅读时长: 1分钟 |
           </span>
   
           
@@ -860,31 +860,31 @@
 这里的<code>!important</code>就是权重值更高的意思。</li>
 </ol>
 <p>2.引入我们创建好的css<br>打开主题配置文件<code>_config.yml</code>, 找到<code>import</code>, 引入css</p>
-<pre class="line-numbers language-yml" data-language="yml"><code class="language-yml"># 自己嵌入css或者script
-import:
-  link:
-    - &lt;link href&#x3D;&quot;&#x2F;custom&#x2F;index.css&quot; rel&#x3D;&quot;stylesheet&quot;&gt;
-    - 
-  script: 
-    # - &lt;script src&#x3D;&quot;xxx.js&quot;&gt;&lt;&#x2F;script&gt;
-    - 
-    - <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-yml" data-language="yml"><code class="language-yml"><span class="token comment"># 自己嵌入css或者script</span>
+<span class="token key atrule">import</span><span class="token punctuation">:</span>
+  <span class="token key atrule">link</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> &lt;link href="/custom/index.css" rel="stylesheet"<span class="token punctuation">></span>
+    <span class="token punctuation">-</span> 
+  <span class="token key atrule">script</span><span class="token punctuation">:</span> 
+    <span class="token comment"># - &lt;script src="xxx.js">&lt;/script></span>
+    <span class="token punctuation">-</span> 
+    <span class="token punctuation">-</span> <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>背景图片则使用参数<code>bgImg</code>指定, 例如:</p>
-<pre class="line-numbers language-yml" data-language="yml"><code class="language-yml">---
-title: 自定义css之头部图片透明
-date: 2022-06-09 18:56:20
-tags: [&#39;自定义css&#39;]
-categories: [自定义css]
-swiper: true
-img: https:&#x2F;&#x2F;pic1.zhimg.com&#x2F;80&#x2F;v2-6d0cbd4380b4959542d3f5da31c7f20c_1440w.jpg
-bgImg: https:&#x2F;&#x2F;pic1.zhimg.com&#x2F;80&#x2F;v2-6d0cbd4380b4959542d3f5da31c7f20c_1440w.jpg
----<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-yml" data-language="yml"><code class="language-yml"><span class="token punctuation">---</span>
+<span class="token key atrule">title</span><span class="token punctuation">:</span> 自定义css之头部图片透明
+<span class="token key atrule">date</span><span class="token punctuation">:</span> <span class="token datetime number">2022-06-09 18:56:20</span>
+<span class="token key atrule">tags</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">'自定义css'</span><span class="token punctuation">]</span>
+<span class="token key atrule">categories</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>自定义css<span class="token punctuation">]</span>
+<span class="token key atrule">swiper</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+<span class="token key atrule">img</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//pic1.zhimg.com/80/v2<span class="token punctuation">-</span>6d0cbd4380b4959542d3f5da31c7f20c_1440w.jpg
+<span class="token key atrule">bgImg</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//pic1.zhimg.com/80/v2<span class="token punctuation">-</span>6d0cbd4380b4959542d3f5da31c7f20c_1440w.jpg
+<span class="token punctuation">---</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><code>bgImg</code>还可以是数组哦，数组的话额背景图片轮播显示, 例如:</p>
-<pre class="line-numbers language-yml" data-language="yml"><code class="language-yml">bgImg: [
-    &#39;https:&#x2F;&#x2F;pica.zhimg.com&#x2F;80&#x2F;v2-292e6340491bd97f9d014d6be3371c04_1440w.jpg&#39;,
-    &#39;https:&#x2F;&#x2F;pica.zhimg.com&#x2F;80&#x2F;v2-9659f2305acb80f25ced33aa980092c1_1440w.jpg&#39;,
-    &#39;https:&#x2F;&#x2F;api.btstu.cn&#x2F;sjbz&#x2F;api.php&#39;,
-]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-yml" data-language="yml"><code class="language-yml"><span class="token key atrule">bgImg</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>
+    <span class="token string">'https://pica.zhimg.com/80/v2-292e6340491bd97f9d014d6be3371c04_1440w.jpg'</span><span class="token punctuation">,</span>
+    <span class="token string">'https://pica.zhimg.com/80/v2-9659f2305acb80f25ced33aa980092c1_1440w.jpg'</span><span class="token punctuation">,</span>
+    <span class="token string">'https://api.btstu.cn/sjbz/api.php'</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><code>bgImg</code>不仅可以在文章里面单独配，还可以在主题配置文件里面<code>全局</code>指定。</p>
 <pre class="line-numbers language-none"><code class="language-none">bgImgTransition: &#39;fade&#39; # fade, scale, translate-fade,<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p><code>bgImgTransition</code>表示背景图片切换特效, 可以在单独文章页面使用，也可以在主题配置文件里面<code>全局</code>指定。</p>
