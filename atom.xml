@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yuang01.github.io/"/>
-  <updated>2022-06-09T13:33:17.890Z</updated>
+  <updated>2022-07-10T07:17:04.089Z</updated>
   <id>http://yuang01.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>自定义live2d</title>
+    <link href="http://yuang01.github.io/post/custom/live2d/"/>
+    <id>http://yuang01.github.io/post/custom/live2d/</id>
+    <published>2022-07-10T06:38:20.000Z</published>
+    <updated>2022-07-10T07:17:04.089Z</updated>
+    
+    <summary type="html">
+    
+      自定义live2d
+    
+    </summary>
+    
+    
+      <category term="自定义" scheme="http://yuang01.github.io/categories/%E8%87%AA%E5%AE%9A%E4%B9%89/"/>
+    
+    
+      <category term="自定义" scheme="http://yuang01.github.io/tags/%E8%87%AA%E5%AE%9A%E4%B9%89/"/>
+    
+  </entry>
   
   <entry>
     <title>自定义css之导航和页脚高斯模糊</title>
@@ -490,34 +511,6 @@
     <summary type="html">
     
       进度条标签
-    
-    </summary>
-    
-    
-      <category term="前端" scheme="http://yuang01.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="tag" scheme="http://yuang01.github.io/tags/tag/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>按钮</title>
-    <link href="http://yuang01.github.io/post/btn/"/>
-    <id>http://yuang01.github.io/post/btn/</id>
-    <published>2021-02-08T03:36:00.000Z</published>
-    <updated>2022-06-09T14:03:19.625Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 class=&quot;bamboo-h &quot; id=&quot;融入段落中按钮&quot;&gt;融入段落中按钮&lt;/h2&gt;&lt;br/&gt;
-&lt;p&gt;不设置任何参数的 &lt;span class=&#39;btn&#39;&gt;&lt;a class=&quot;button&quot; href=&#39;/&#39; title=&#39;按钮&#39;&gt;按钮&lt;/a&gt;&lt;/span&gt;
-        
-      
     
     </summary>
     
