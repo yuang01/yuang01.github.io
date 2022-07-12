@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yuang01.github.io/post/custom/resume-404/</loc>
+    
+    <lastmod>2022-07-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yuang01.github.io/404.html</loc>
+    
+    <lastmod>2022-07-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yuang01.github.io/resume/index.html</loc>
+    
+    <lastmod>2022-07-12</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yuang01.github.io/post/custom/live2d/</loc>
     
     <lastmod>2022-07-10</lastmod>
@@ -317,13 +338,6 @@
   </url>
   
   <url>
-    <loc>http://yuang01.github.io/404.html</loc>
-    
-    <lastmod>2021-08-18</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://yuang01.github.io/me/index.html</loc>
     
     <lastmod>2021-07-18</lastmod>
@@ -424,7 +438,7 @@
 
   <url>
     <loc>http://yuang01.github.io/</loc>
-    <lastmod>2022-07-10</lastmod>
+    <lastmod>2022-07-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -432,70 +446,84 @@
   
   <url>
     <loc>http://yuang01.github.io/tags/tag/</loc>
-    <lastmod>2022-07-10</lastmod>
+    <lastmod>2022-07-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://yuang01.github.io/tags/Hexo/</loc>
-    <lastmod>2022-07-10</lastmod>
+    <lastmod>2022-07-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://yuang01.github.io/tags/hexo-theme-bamboo/</loc>
-    <lastmod>2022-07-10</lastmod>
+    <lastmod>2022-07-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://yuang01.github.io/tags/%E5%8A%A8%E6%80%81%E8%83%8C%E6%99%AF/</loc>
-    <lastmod>2022-07-10</lastmod>
+    <lastmod>2022-07-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://yuang01.github.io/tags/%E8%87%AA%E5%AE%9A%E4%B9%89css/</loc>
-    <lastmod>2022-07-10</lastmod>
+    <lastmod>2022-07-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://yuang01.github.io/tags/%E8%87%AA%E5%AE%9A%E4%B9%89/</loc>
-    <lastmod>2022-07-10</lastmod>
+    <lastmod>2022-07-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://yuang01.github.io/tags/sidebar/</loc>
-    <lastmod>2022-07-10</lastmod>
+    <loc>http://yuang01.github.io/tags/%E7%AE%80%E5%8E%86/</loc>
+    <lastmod>2022-07-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yuang01.github.io/tags/404/</loc>
+    <lastmod>2022-07-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://yuang01.github.io/tags/mathjax/</loc>
-    <lastmod>2022-07-10</lastmod>
+    <lastmod>2022-07-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://yuang01.github.io/tags/mermaid/</loc>
-    <lastmod>2022-07-10</lastmod>
+    <loc>http://yuang01.github.io/tags/sidebar/</loc>
+    <lastmod>2022-07-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://yuang01.github.io/tags/%E6%A2%85%E8%8A%B1/</loc>
-    <lastmod>2022-07-10</lastmod>
+    <lastmod>2022-07-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yuang01.github.io/tags/mermaid/</loc>
+    <lastmod>2022-07-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -504,49 +532,63 @@
   
   <url>
     <loc>http://yuang01.github.io/categories/%E5%89%8D%E7%AB%AF/</loc>
-    <lastmod>2022-07-10</lastmod>
+    <lastmod>2022-07-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://yuang01.github.io/categories/%E5%8A%A8%E6%80%81%E8%83%8C%E6%99%AF/</loc>
-    <lastmod>2022-07-10</lastmod>
+    <lastmod>2022-07-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://yuang01.github.io/categories/%E8%87%AA%E5%AE%9A%E4%B9%89css/</loc>
-    <lastmod>2022-07-10</lastmod>
+    <lastmod>2022-07-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://yuang01.github.io/categories/%E8%87%AA%E5%AE%9A%E4%B9%89/</loc>
-    <lastmod>2022-07-10</lastmod>
+    <lastmod>2022-07-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yuang01.github.io/categories/%E7%AE%80%E5%8E%86/</loc>
+    <lastmod>2022-07-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://yuang01.github.io/categories/mathjax/</loc>
-    <lastmod>2022-07-10</lastmod>
+    <lastmod>2022-07-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://yuang01.github.io/categories/mermaid/</loc>
-    <lastmod>2022-07-10</lastmod>
+    <loc>http://yuang01.github.io/categories/%E7%AE%80%E5%8E%86/404/</loc>
+    <lastmod>2022-07-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://yuang01.github.io/categories/%E6%A2%85%E8%8A%B1/</loc>
-    <lastmod>2022-07-10</lastmod>
+    <lastmod>2022-07-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yuang01.github.io/categories/mermaid/</loc>
+    <lastmod>2022-07-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>

@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>制作简历（关于我）和404页面</title>
+      <link href="/post/custom/resume-404/"/>
+      <url>/post/custom/resume-404/</url>
+      
+        <content type="html"><![CDATA[<h2 id="简历（或者叫关于我页面）"><a href="#简历（或者叫关于我页面）" class="headerlink" title="简历（或者叫关于我页面）"></a>简历（或者叫关于我页面）</h2><p>首先在<code>source</code>(根目录下的source)文件夹下创建<code>resume/index.md</code>文件，然后如下页面写法:</p><div class="tagLink"><a class="link-card" title="简历页面" href="/resume"><span class="link-card-backdrop" style="background-image: url(https://s3-us-west-1.amazonaws.com/files.delesign/assets/condo.svg)"></span><div class="left"><img src="https://s3-us-west-1.amazonaws.com/files.delesign/assets/condo.svg" class="lazyload placeholder" data-srcset="https://s3-us-west-1.amazonaws.com/files.delesign/assets/condo.svg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp"/></div><div class="right"><p class="text">简历页面</p><p class="url">/resume</p></div></a></div><p>最底下有源码</p><h2 id="配置404页面"><a href="#配置404页面" class="headerlink" title="配置404页面"></a>配置404页面</h2><p>首先在<code>source</code>(根目录下的source)文件夹下创建<code>404.md</code>文件, 然后写入：</p><pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token punctuation">---</span><span class="token key atrule">title</span><span class="token punctuation">:</span> <span class="token string">'页面未找到'</span><span class="token key atrule">date</span><span class="token punctuation">:</span> <span class="token datetime number">2019-11-23 21:10:10</span><span class="token key atrule">onlyTitle</span><span class="token punctuation">:</span> <span class="token boolean important">true</span><span class="token key atrule">toc</span><span class="token punctuation">:</span> <span class="token boolean important">false</span><span class="token key atrule">donate</span><span class="token punctuation">:</span> <span class="token boolean important">false</span><span class="token key atrule">share</span><span class="token punctuation">:</span> <span class="token boolean important">false</span><span class="token key atrule">copyright</span><span class="token punctuation">:</span> <span class="token boolean important">false</span><span class="token key atrule">img</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//pic3.zhimg.com/80/378da4d6e6ac67c5bcd1d63d76f65d81_1440w.jpg<span class="token punctuation">?</span>source=1940ef5c<span class="token key atrule">topImg</span><span class="token punctuation">:</span> <span class="token boolean important">false</span><span class="token punctuation">---</span><span class="token punctuation">&#123;</span>% p center large<span class="token punctuation">,</span> 404 %<span class="token punctuation">&#125;</span><span class="token punctuation">&#123;</span>% p center large<span class="token punctuation">,</span> 很抱歉，您访问的页面不存在 %<span class="token punctuation">&#125;</span><span class="token punctuation">&#123;</span>% p center small<span class="token punctuation">,</span> 可能是输入地址有误或该地址已被删除 %<span class="token punctuation">&#125;</span><span class="token punctuation">&#123;</span>% btn center large<span class="token punctuation">,</span> 返回首页<span class="token punctuation">,</span> /<span class="token punctuation">,</span> fa fa<span class="token punctuation">-</span>home %<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>本地测试访问：<a href="http://localhost:4000/404.html">http://localhost:4000/404.html</a></p><p>效果（example）：</p><div class="tagLink"><a class="link-card" title="简历页面" href="https://yuang01.github.io/12"><span class="link-card-backdrop" style="background-image: url(https://s3-us-west-1.amazonaws.com/files.delesign/assets/condo.svg)"></span><div class="left"><img src="https://s3-us-west-1.amazonaws.com/files.delesign/assets/condo.svg" class="lazyload placeholder" data-srcset="https://s3-us-west-1.amazonaws.com/files.delesign/assets/condo.svg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp"/></div><div class="right"><p class="text">简历页面</p><p class="url">https://yuang01.github.io/12</p></div></a></div>]]></content>
+      
+      
+      <categories>
+          
+          <category> 简历 </category>
+          
+          <category> 404 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 简历 </tag>
+            
+            <tag> 404 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>自定义live2d</title>
       <link href="/post/custom/live2d/"/>
       <url>/post/custom/live2d/</url>
@@ -718,11 +747,11 @@
     
     
     <entry>
-      <title>NoteBlock</title>
-      <link href="/post/noteblock/"/>
-      <url>/post/noteblock/</url>
+      <title>Note标签</title>
+      <link href="/post/note/"/>
+      <url>/post/note/</url>
       
-        <content type="html"><![CDATA[<h2 class="bamboo-h " id="noteblock演示效果">noteblock演示效果</h2><br/><div class="note base"><p><strong>标题（可选）</strong></p><p>asdsd</p></div><div class="note quote"><p><strong>标题（可选）</strong></p><p>asdsd</p></div><div class="note warning"><p><strong>标题（可选）</strong></p><p>asdsd</p></div><div class="note success"><p><strong>标题（可选）</strong></p><p>asdsd</p></div><div class="note danger"><p><strong>标题（可选）</strong></p><p>asdsd</p></div><div class="note info"><p><strong>标题（可选）</strong></p><p>asdsd</p></div><h3 id="上述事例代码"><a href="#上述事例代码" class="headerlink" title="上述事例代码"></a>上述事例代码</h3><pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">&#123;% noteblock base, 标题（可选） %&#125;    asdsd&#123;% endnoteblock %&#125;&#123;% noteblock quote, 标题（可选） %&#125;    asdsd&#123;% endnoteblock %&#125;&#123;% noteblock warning, 标题（可选） %&#125;    asdsd&#123;% endnoteblock %&#125;&#123;% noteblock success, 标题（可选） %&#125;    asdsd&#123;% endnoteblock %&#125;&#123;% noteblock danger, 标题（可选） %&#125;    asdsd&#123;% endnoteblock %&#125;&#123;% noteblock info, 标题（可选） %&#125;    asdsd&#123;% endnoteblock %&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+        <content type="html"><![CDATA[<h2 class="bamboo-h " id="note演示效果">note演示效果</h2><br/><blockquote><p>markdown默认写法，左边框颜色，随着主题色改变</p></blockquote><div class="note "><p>我有一只小毛驴，我从来都不骑。</p></div><div class="note quote"><p>适合引用一段话</p></div><div class="note warning"><p>这是一个警告</p></div><div class="note danger"><p>这是一个错误</p></div><div class="note success"><p>这是一个成功</p></div><div class="note info"><p>这是一个信息</p></div><h3 id="上述事例源码"><a href="#上述事例源码" class="headerlink" title="上述事例源码"></a>上述事例源码</h3><pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token blockquote punctuation">></span> markdown默认写法，左边框颜色，随着主题色改变&#123;% note, 我有一只小毛驴，我从来都不骑。 %&#125;&#123;% note quote, 适合引用一段话 %&#125;&#123;% note warning, 这是一个警告 %&#125;&#123;% note danger, 这是一个错误 %&#125;&#123;% note success, 这是一个成功 %&#125;&#123;% note info, 这是一个信息 %&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
       
       
       <categories>
@@ -743,11 +772,11 @@
     
     
     <entry>
-      <title>Note标签</title>
-      <link href="/post/note/"/>
-      <url>/post/note/</url>
+      <title>NoteBlock</title>
+      <link href="/post/noteblock/"/>
+      <url>/post/noteblock/</url>
       
-        <content type="html"><![CDATA[<h2 class="bamboo-h " id="note演示效果">note演示效果</h2><br/><blockquote><p>markdown默认写法，左边框颜色，随着主题色改变</p></blockquote><div class="note "><p>我有一只小毛驴，我从来都不骑。</p></div><div class="note quote"><p>适合引用一段话</p></div><div class="note warning"><p>这是一个警告</p></div><div class="note danger"><p>这是一个错误</p></div><div class="note success"><p>这是一个成功</p></div><div class="note info"><p>这是一个信息</p></div><h3 id="上述事例源码"><a href="#上述事例源码" class="headerlink" title="上述事例源码"></a>上述事例源码</h3><pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token blockquote punctuation">></span> markdown默认写法，左边框颜色，随着主题色改变&#123;% note, 我有一只小毛驴，我从来都不骑。 %&#125;&#123;% note quote, 适合引用一段话 %&#125;&#123;% note warning, 这是一个警告 %&#125;&#123;% note danger, 这是一个错误 %&#125;&#123;% note success, 这是一个成功 %&#125;&#123;% note info, 这是一个信息 %&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+        <content type="html"><![CDATA[<h2 class="bamboo-h " id="noteblock演示效果">noteblock演示效果</h2><br/><div class="note base"><p><strong>标题（可选）</strong></p><p>asdsd</p></div><div class="note quote"><p><strong>标题（可选）</strong></p><p>asdsd</p></div><div class="note warning"><p><strong>标题（可选）</strong></p><p>asdsd</p></div><div class="note success"><p><strong>标题（可选）</strong></p><p>asdsd</p></div><div class="note danger"><p><strong>标题（可选）</strong></p><p>asdsd</p></div><div class="note info"><p><strong>标题（可选）</strong></p><p>asdsd</p></div><h3 id="上述事例代码"><a href="#上述事例代码" class="headerlink" title="上述事例代码"></a>上述事例代码</h3><pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">&#123;% noteblock base, 标题（可选） %&#125;    asdsd&#123;% endnoteblock %&#125;&#123;% noteblock quote, 标题（可选） %&#125;    asdsd&#123;% endnoteblock %&#125;&#123;% noteblock warning, 标题（可选） %&#125;    asdsd&#123;% endnoteblock %&#125;&#123;% noteblock success, 标题（可选） %&#125;    asdsd&#123;% endnoteblock %&#125;&#123;% noteblock danger, 标题（可选） %&#125;    asdsd&#123;% endnoteblock %&#125;&#123;% noteblock info, 标题（可选） %&#125;    asdsd&#123;% endnoteblock %&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
       
       
       <categories>

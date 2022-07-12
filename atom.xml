@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yuang01.github.io/"/>
-  <updated>2022-07-10T07:17:04.089Z</updated>
+  <updated>2022-07-12T06:19:34.147Z</updated>
   <id>http://yuang01.github.io/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>制作简历（关于我）和404页面</title>
+    <link href="http://yuang01.github.io/post/custom/resume-404/"/>
+    <id>http://yuang01.github.io/post/custom/resume-404/</id>
+    <published>2022-07-12T06:08:18.000Z</published>
+    <updated>2022-07-12T06:19:34.147Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;简历（或者叫关于我页面）&quot;&gt;&lt;a href=&quot;#简历（或者叫关于我页面）&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="简历" scheme="http://yuang01.github.io/categories/%E7%AE%80%E5%8E%86/"/>
+    
+      <category term="404" scheme="http://yuang01.github.io/categories/%E7%AE%80%E5%8E%86/404/"/>
+    
+    
+      <category term="简历" scheme="http://yuang01.github.io/tags/%E7%AE%80%E5%8E%86/"/>
+    
+      <category term="404" scheme="http://yuang01.github.io/tags/404/"/>
+    
+  </entry>
   
   <entry>
     <title>自定义live2d</title>
@@ -490,27 +521,6 @@
           &lt;div class=&quot;note
         
       
-    
-    </summary>
-    
-    
-      <category term="前端" scheme="http://yuang01.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="tag" scheme="http://yuang01.github.io/tags/tag/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>进度条</title>
-    <link href="http://yuang01.github.io/post/progress/"/>
-    <id>http://yuang01.github.io/post/progress/</id>
-    <published>2021-02-22T03:35:00.000Z</published>
-    <updated>2022-06-09T14:02:45.341Z</updated>
-    
-    <summary type="html">
-    
-      进度条标签
     
     </summary>
     
