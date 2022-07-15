@@ -809,7 +809,7 @@
                 </div>
                 <div class="flag-text">
                   <div class="flag-text-content">
-                    <div class="title ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">竹</div>
+                    <div class="title ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">这是标题</div>
                     
                       <div  class="ani animated default-excerpt" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">
                         <vue-typed-js :strings="defaultDesc" :loop="defaultDescTypedLoop" :type-speed="100" :back-speed="50">
@@ -1948,6 +1948,17 @@
     <!-- 自定义的内容 -->
     
   
+    <div class="widget mymusic" id="mymusic" style="order: -1;background: #fff">
+      <header>
+        
+          <a style="color: #00AEEC" target="_blank" rel="noopener" href='https://www.bilibili.com/video/BV1Da411n793?vd_source=79ce7c1b6f96c8b5a7ae552cc9be5225'><i class="fa-solid fa-music fa-fw" aria-hidden="true"></i><span class='name'>超好听的好吗😙</span></a>
+        
+      </header>
+      <div class="content">
+        <iframe src="//player.bilibili.com/player.html?aid=215901212&bvid=BV1Da411n793&cid=772894060&page=1" scrolling="no" border="0" width="100%" height="476" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+      </div>
+  </div>
+  
     <div class="widget welcome" id="welcome" style="order: -1;background: #fff">
       <header>
         
@@ -2946,7 +2957,7 @@ galleryGroup图片示例
       
         <div class="webinfo-item">
           <div>本站总字数：</div>
-          <div>31.8k 字</div>
+          <div>31.9k 字</div>
         </div>
       
 
@@ -2972,8 +2983,8 @@ galleryGroup图片示例
         <div class="webinfo-item">
           <div>最后活动时间：</div>
           
-            <div id="last-update" style="display: none;">Tue Jul 12 2022 17:55:30 GMT+0800 (中国标准时间)</div>
-            <div id="last-update-show">2022-07-12 日</div>
+            <div id="last-update" style="display: none;">Fri Jul 15 2022 16:49:10 GMT+0800 (中国标准时间)</div>
+            <div id="last-update-show">2022-07-15 日</div>
           
         </div>
         
@@ -3023,7 +3034,7 @@ galleryGroup图片示例
           try {
             document.getElementById('last-update-show').innerHTML = timeago(new Date(lastUpDate));
           } catch (error) {
-            document.getElementById('last-update-show').innerHTML = '2022-07-12 日';
+            document.getElementById('last-update-show').innerHTML = '2022-07-15 日';
           }
         </script>
         
@@ -3398,7 +3409,7 @@ galleryGroup图片示例
   type="song"
   id="0020dKPG3mp0GT"
   fixed='true'
-  autoplay='true'
+  autoplay='false'
   theme='#42b983'
   loop='all'
   order='random'

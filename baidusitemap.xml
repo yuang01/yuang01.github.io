@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://yuang01.github.io/post/link/</loc>
+    <lastmod>2022-07-14</lastmod>
+  </url>
+  <url>
     <loc>http://yuang01.github.io/post/hexo-theme-bamboo-new/</loc>
+    <lastmod>2022-07-14</lastmod>
+  </url>
+  <url>
+    <loc>http://yuang01.github.io/post/hexo-theme-bamboo/page/</loc>
     <lastmod>2022-07-12</lastmod>
   </url>
   <url>
@@ -74,10 +82,6 @@
   </url>
   <url>
     <loc>http://yuang01.github.io/post/noteblock/</loc>
-    <lastmod>2022-06-09</lastmod>
-  </url>
-  <url>
-    <loc>http://yuang01.github.io/post/link/</loc>
     <lastmod>2022-06-09</lastmod>
   </url>
   <url>
@@ -154,10 +158,6 @@
   </url>
   <url>
     <loc>http://yuang01.github.io/post/hexo-theme-bamboo/theme/</loc>
-    <lastmod>2022-06-09</lastmod>
-  </url>
-  <url>
-    <loc>http://yuang01.github.io/post/hexo-theme-bamboo/page/</loc>
     <lastmod>2022-06-09</lastmod>
   </url>
   <url>
