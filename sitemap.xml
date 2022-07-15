@@ -487,13 +487,6 @@
   </url>
   
   <url>
-    <loc>http://yuang01.github.io/tags/mathjax/</loc>
-    <lastmod>2022-07-15</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://yuang01.github.io/tags/%E7%AE%80%E5%8E%86/</loc>
     <lastmod>2022-07-15</lastmod>
     <changefreq>daily</changefreq>
@@ -509,6 +502,13 @@
   
   <url>
     <loc>http://yuang01.github.io/tags/sidebar/</loc>
+    <lastmod>2022-07-15</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yuang01.github.io/tags/mathjax/</loc>
     <lastmod>2022-07-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -559,13 +559,6 @@
   </url>
   
   <url>
-    <loc>http://yuang01.github.io/categories/mathjax/</loc>
-    <lastmod>2022-07-15</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://yuang01.github.io/categories/%E7%AE%80%E5%8E%86/</loc>
     <lastmod>2022-07-15</lastmod>
     <changefreq>daily</changefreq>
@@ -574,6 +567,13 @@
   
   <url>
     <loc>http://yuang01.github.io/categories/%E7%AE%80%E5%8E%86/404/</loc>
+    <lastmod>2022-07-15</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yuang01.github.io/categories/mathjax/</loc>
     <lastmod>2022-07-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
