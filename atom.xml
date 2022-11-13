@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yuang01.github.io/"/>
-  <updated>2022-11-13T09:50:00.319Z</updated>
+  <updated>2022-11-13T12:33:48.771Z</updated>
   <id>http://yuang01.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://yuang01.github.io/post/swiper/"/>
     <id>http://yuang01.github.io/post/swiper/</id>
     <published>2022-11-13T00:35:00.000Z</published>
-    <updated>2022-11-13T09:50:00.319Z</updated>
+    <updated>2022-11-13T12:33:48.771Z</updated>
     
     <summary type="html">
     
@@ -29,8 +29,7 @@
       
         
         
-          &lt;blockquote&gt;
-&lt;p&gt;这次新增了一个文章轮播图插件和beaudar评论，beaudar评论在配置文件里将&lt;code&gt;beaudar.on&lt;/code&gt;设为true，然后将仓库设置为自己的github仓库即可。&lt;br&gt;beaudar：&lt;a
+          &lt;h1 id=&quot;测试&quot;&gt;&lt;a href=&quot;#测试&quot; class=&quot;headerlink&quot;
         
       
     
