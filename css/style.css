@@ -6726,6 +6726,7 @@ div.tabs .tab-content .tab-pane > .note:last-child {
   font-size: 24px;
   color: #fff;
   font-weight: 400;
+  z-index: 2;
 }
 @media (max-width: 551px) {
   .post-swiper-container .swiper-slide-href_tag .swiper-slide-desc_tag {
