@@ -29,3 +29,26 @@
   height: 100%;
   object-fit: cover;
 }
+
+#myBli .warp ul.ul-item .li-item{
+  position: relative;
+}
+#myBli .warp ul.ul-item .bli-content {
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  color: #fff;
+  z-index: 999999;
+  line-height: 18px;
+  text-align: left;
+}
+#myBli .warp ul.ul-item .bli-content .title {
+  font-size: 16px;
+}
+
+#myBli .warp ul.ul-item .bli-content .desc {
+  font-size: 12px;
+}
+#myBli .warp ul.ul-item img {
+  filter: brightness(0.6);
+}

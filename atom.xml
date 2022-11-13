@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yuang01.github.io/"/>
-  <updated>2022-07-16T06:28:28.533Z</updated>
+  <updated>2022-11-13T09:50:00.319Z</updated>
   <id>http://yuang01.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>轮播-swiper</title>
+    <link href="http://yuang01.github.io/post/swiper/"/>
+    <id>http://yuang01.github.io/post/swiper/</id>
+    <published>2022-11-13T00:35:00.000Z</published>
+    <updated>2022-11-13T09:50:00.319Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;这次新增了一个文章轮播图插件和beaudar评论，beaudar评论在配置文件里将&lt;code&gt;beaudar.on&lt;/code&gt;设为true，然后将仓库设置为自己的github仓库即可。&lt;br&gt;beaudar：&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="前端" scheme="http://yuang01.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="tag" scheme="http://yuang01.github.io/tags/tag/"/>
+    
+  </entry>
   
   <entry>
     <title>Bamboo主题-主题config配置项简介（二）</title>
@@ -493,34 +521,6 @@
         
         
           &lt;p&gt;该标签会去拿到某个repo仓库的issue内容，用&lt;code&gt;sites标签&lt;/code&gt;的形式显示出来，可以用做网站的&lt;code&gt;友链&lt;/code&gt;功能&lt;br&gt;该标签和&lt;code&gt;issues-timeline&lt;/code&gt;标签都适用于&lt;code&gt;github&lt;/code
-        
-      
-    
-    </summary>
-    
-    
-      <category term="前端" scheme="http://yuang01.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="tag" scheme="http://yuang01.github.io/tags/tag/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>issues-timeline标签</title>
-    <link href="http://yuang01.github.io/post/issuestimeline/"/>
-    <id>http://yuang01.github.io/post/issuestimeline/</id>
-    <published>2021-06-16T03:35:00.000Z</published>
-    <updated>2022-06-09T14:00:39.266Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;该标签会去拿到某个repo仓库的issue内容，用&lt;code&gt;timeline标签&lt;/code&gt;的形式显示出来&lt;/p&gt;
-&lt;h2 id=&quot;写法&quot;&gt;&lt;a href=&quot;#写法&quot; class=&quot;headerlink&quot; title=&quot;写法&quot;&gt;&lt;/a&gt;写法&lt;/h2&gt;&lt;h3
         
       
     

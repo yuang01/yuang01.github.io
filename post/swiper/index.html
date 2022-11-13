@@ -13,7 +13,7 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-  <title>tab | 竹</title>
+  <title>轮播-swiper | 竹</title>
 
   <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico">
   <link rel="stylesheet" href="https://at.alicdn.com/t/font_1911880_c1nvbyezg17.css">
@@ -799,21 +799,21 @@
 
 
 <div class="post-detail-header" id="thumbnail_canvas" style="background-repeat: no-repeat; background-size: cover; 
-  background-position: center center;position: relative;background-image:url('https://pic4.zhimg.com/80/v2-5a575bb8ac734707f1ec05d6de6a0e0b_1440w.jpg')">
+  background-position: center center;position: relative;background-image:url('https://pic1.zhimg.com/80/v2-6d0cbd4380b4959542d3f5da31c7f20c_1440w.jpg')">
   <div class="post-detail-header-mask"></div>
   <canvas id="header_canvas"style="position:absolute;bottom:0;pointer-events:none;"></canvas>
   
   <div class="post-detail-header_info-box">
     <div class="title-box">
       <span class="title">
-        tab
+        轮播-swiper
       </span>
     </div>
     
     
       
         <span class="post-detail-header_date">
-          <i class="fas fa-calendar"></i> 发表于：2021-02-08 |
+          <i class="fas fa-calendar"></i> 发表于：2022-11-13 |
         </span>
       
 
@@ -831,11 +831,11 @@
       
         <div class="post-detail-header_wordcount">
           <span class="totalcount">
-            <i class="fas fa-file-text-o"></i> 字数统计: 36 |
+            <i class="fas fa-file-text-o"></i> 字数统计: 646 |
           </span>
   
           <span class="min2read">
-            <i class="fas fa-clock"></i> 阅读时长: 1分钟 |
+            <i class="fas fa-clock"></i> 阅读时长: 3分钟 |
           </span>
   
           
@@ -862,23 +862,72 @@
   <div class="main-content">
     <article class="post post-detail">
       <div class="post-content">
-        <h2 class="bamboo-h " id="tab事例">tab事例</h2><br/>
-<div class="tabs" id="tab-id"><ul class="nav-tabs"><li class="tab active"><a class="#tab-id-1">栏目1</a></li><li class="tab"><a class="#tab-id-2">栏目2</a></li></ul><div class="tab-content"><div class="tab-pane active" id="tab-id-1"><p>。。。</p></div><div class="tab-pane" id="tab-id-2"><p>！！！</p></div></div></div>
-<h3 id="上述事例代码"><a href="#上述事例代码" class="headerlink" title="上述事例代码"></a>上述事例代码</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">&#123;</span>% tabs tab-id %<span class="token punctuation">&#125;</span>
+        <blockquote>
+<p>这次新增了一个文章轮播图插件和beaudar评论，beaudar评论在配置文件里将<code>beaudar.on</code>设为true，然后将仓库设置为自己的github仓库即可。<br>beaudar：<a target="_blank" rel="noopener" href="https://beaudar.lipk.org/">https://beaudar.lipk.org/</a></p>
+</blockquote>
+<p>言归正传:</p>
+<h2 class="bamboo-h " id="轮播事例">轮播事例</h2><br/>
+<h3 class="bamboo-h-b" id="展示多个，宽度最小" style="color:#ffa502!important">展示多个，宽度最小</h3><div></div>
 
-<span class="token operator">&lt;</span><span class="token operator">!</span>-- tab 栏目1 --<span class="token operator">></span>
+<div class="tag-plugin post-swiper-container" width="multiple"><div class="swiper-wrapper"><div class="swiper-slide"><a class="swiper-slide-href_tag" href="javascript:;"><p class="ani animated swiper-slide-desc_tag" swiper-animate-effect="fadeInDown">图片描述111</p><img no-lazy class="swiper-slide-img" src="https://pic2.zhimg.com/80/v2-b72c5a1840b763674a5a1744cb49f08b_1440w.jpg"></a></div><div class="swiper-slide"><a class="swiper-slide-href_tag" href="javascript:;"><p class="ani animated swiper-slide-desc_tag" swiper-animate-effect="fadeInDown">图片描述22222</p><img no-lazy class="swiper-slide-img" src="https://pic1.zhimg.com/80/v2-9a1f1ad66d08747642c1b66727fea9f6_1440w.jpg"></a></div><div class="swiper-slide"><a class="swiper-slide-href_tag" href="javascript:;"><p class="ani animated swiper-slide-desc_tag" swiper-animate-effect="fadeInDown">图片描述33333</p><img no-lazy class="swiper-slide-img" src="https://pic1.zhimg.com/80/v2-e012e11ff2cd3270df046e3cd4fb9fbe_1440w.jpg"></a></div><div class="swiper-slide"><a class="swiper-slide-href_tag" href="javascript:;"><p class="ani animated swiper-slide-desc_tag" swiper-animate-effect="fadeInDown">图片描述44444</p><img no-lazy class="swiper-slide-img" src="https://pic1.zhimg.com/80/v2-6d0cbd4380b4959542d3f5da31c7f20c_1440w.jpg"></a></div><div class="swiper-slide"><a class="swiper-slide-href_tag" href="javascript:;"><p class="ani animated swiper-slide-desc_tag" swiper-animate-effect="fadeInDown">图片描述55555</p><img no-lazy class="swiper-slide-img" src="https://pica.zhimg.com/80/v2-dff5af5b4e0331e3b9c22ef1004d88c8_1440w.jpg"></a></div></div><div class="swiper-pagination"></div><div class="swiper-button-prev blur"></div><div class="swiper-button-next blur"></div></div>
+<h3 class="bamboo-h-b" id="事例代码" style="color:#ff6348!important">事例代码</h3><div></div>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">&#123;% swiper width:multiple %&#125;
+<span class="token url">![<span class="token content">图片描述111</span>](https://pic2.zhimg.com/80/v2-b72c5a1840b763674a5a1744cb49f08b_1440w.jpg)</span>
+<span class="token url">![<span class="token content">图片描述22222</span>](https://pic1.zhimg.com/80/v2-9a1f1ad66d08747642c1b66727fea9f6_1440w.jpg)</span>
+<span class="token url">![<span class="token content">图片描述33333</span>](https://pic1.zhimg.com/80/v2-e012e11ff2cd3270df046e3cd4fb9fbe_1440w.jpg)</span>
+<span class="token url">![<span class="token content">图片描述44444</span>](https://pic1.zhimg.com/80/v2-6d0cbd4380b4959542d3f5da31c7f20c_1440w.jpg)</span>
+<span class="token url">![<span class="token content">图片描述55555</span>](https://pica.zhimg.com/80/v2-dff5af5b4e0331e3b9c22ef1004d88c8_1440w.jpg)</span>
+&#123;% endswiper %&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 class="bamboo-h-b" id="默认" style="color:#ffa502!important">默认</h3><div></div>
+<div class="tag-plugin post-swiper-container"><div class="swiper-wrapper"><div class="swiper-slide"><a class="swiper-slide-href_tag" href="javascript:;"><p class="ani animated swiper-slide-desc_tag" swiper-animate-effect="fadeInDown">图片描述</p><img no-lazy class="swiper-slide-img" src="https://pic2.zhimg.com/80/v2-b72c5a1840b763674a5a1744cb49f08b_1440w.jpg"></a></div><div class="swiper-slide"><a class="swiper-slide-href_tag" href="javascript:;"><p class="ani animated swiper-slide-desc_tag" swiper-animate-effect="fadeInDown">图片描述</p><img no-lazy class="swiper-slide-img" src="https://pic1.zhimg.com/80/v2-9a1f1ad66d08747642c1b66727fea9f6_1440w.jpg"></a></div><div class="swiper-slide"><a class="swiper-slide-href_tag" href="javascript:;"><p class="ani animated swiper-slide-desc_tag" swiper-animate-effect="fadeInDown">图片描述</p><img no-lazy class="swiper-slide-img" src="https://pic1.zhimg.com/80/v2-e012e11ff2cd3270df046e3cd4fb9fbe_1440w.jpg"></a></div></div><div class="swiper-pagination"></div><div class="swiper-button-prev blur"></div><div class="swiper-button-next blur"></div></div>
+<h3 class="bamboo-h-b" id="事例代码" style="color:#ff6348!important">事例代码</h3><div></div>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">&#123;% swiper %&#125;
+<span class="token url">![<span class="token content">图片描述</span>](https://pic2.zhimg.com/80/v2-b72c5a1840b763674a5a1744cb49f08b_1440w.jpg)</span>
+<span class="token url">![<span class="token content">图片描述</span>](https://pic1.zhimg.com/80/v2-9a1f1ad66d08747642c1b66727fea9f6_1440w.jpg)</span>
+<span class="token url">![<span class="token content">图片描述</span>](https://pic1.zhimg.com/80/v2-e012e11ff2cd3270df046e3cd4fb9fbe_1440w.jpg)</span>
+&#123;% endswiper %&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-。。。
+<h3 class="bamboo-h-b" id="展示一个，填充整个容器" style="color:#ffa502!important">展示一个，填充整个容器</h3><div></div>
+<div class="tag-plugin post-swiper-container" width="fill"><div class="swiper-wrapper"><div class="swiper-slide"><a class="swiper-slide-href_tag" href="javascript:;"><p class="ani animated swiper-slide-desc_tag" swiper-animate-effect="fadeInDown">图片描述</p><img no-lazy class="swiper-slide-img" src="https://pic2.zhimg.com/80/v2-b72c5a1840b763674a5a1744cb49f08b_1440w.jpg"></a></div><div class="swiper-slide"><a class="swiper-slide-href_tag" href="javascript:;"><p class="ani animated swiper-slide-desc_tag" swiper-animate-effect="fadeInDown">图片描述</p><img no-lazy class="swiper-slide-img" src="https://pic1.zhimg.com/80/v2-9a1f1ad66d08747642c1b66727fea9f6_1440w.jpg"></a></div><div class="swiper-slide"><a class="swiper-slide-href_tag" href="javascript:;"><p class="ani animated swiper-slide-desc_tag" swiper-animate-effect="fadeInDown">图片描述</p><img no-lazy class="swiper-slide-img" src="https://pic1.zhimg.com/80/v2-e012e11ff2cd3270df046e3cd4fb9fbe_1440w.jpg"></a></div></div><div class="swiper-pagination"></div><div class="swiper-button-prev blur"></div><div class="swiper-button-next blur"></div></div>
+<h3 class="bamboo-h-b" id="事例代码" style="color:#ff6348!important">事例代码</h3><div></div>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">&#123;% swiper width:fill %&#125;
+<span class="token url">![<span class="token content">图片描述</span>](https://pic2.zhimg.com/80/v2-b72c5a1840b763674a5a1744cb49f08b_1440w.jpg)</span>
+<span class="token url">![<span class="token content">图片描述</span>](https://pic1.zhimg.com/80/v2-9a1f1ad66d08747642c1b66727fea9f6_1440w.jpg)</span>
+<span class="token url">![<span class="token content">图片描述</span>](https://pic1.zhimg.com/80/v2-e012e11ff2cd3270df046e3cd4fb9fbe_1440w.jpg)</span>
+&#123;% endswiper %&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 class="bamboo-h-b" id="无描述文字" style="color:#ffa502!important">无描述文字</h3><div></div>
+<div class="tag-plugin post-swiper-container" width="multiple"><div class="swiper-wrapper"><div class="swiper-slide"><a class="swiper-slide-href_tag" href="javascript:;"><p class="ani animated swiper-slide-desc_tag" swiper-animate-effect="fadeInDown"></p><img no-lazy class="swiper-slide-img" src="https://pic2.zhimg.com/80/v2-b72c5a1840b763674a5a1744cb49f08b_1440w.jpg"></a></div><div class="swiper-slide"><a class="swiper-slide-href_tag" href="javascript:;"><p class="ani animated swiper-slide-desc_tag" swiper-animate-effect="fadeInDown"></p><img no-lazy class="swiper-slide-img" src="https://pic1.zhimg.com/80/v2-9a1f1ad66d08747642c1b66727fea9f6_1440w.jpg"></a></div><div class="swiper-slide"><a class="swiper-slide-href_tag" href="javascript:;"><p class="ani animated swiper-slide-desc_tag" swiper-animate-effect="fadeInDown"></p><img no-lazy class="swiper-slide-img" src="https://pic1.zhimg.com/80/v2-e012e11ff2cd3270df046e3cd4fb9fbe_1440w.jpg"></a></div><div class="swiper-slide"><a class="swiper-slide-href_tag" href="javascript:;"><p class="ani animated swiper-slide-desc_tag" swiper-animate-effect="fadeInDown"></p><img no-lazy class="swiper-slide-img" src="https://pic1.zhimg.com/80/v2-6d0cbd4380b4959542d3f5da31c7f20c_1440w.jpg"></a></div><div class="swiper-slide"><a class="swiper-slide-href_tag" href="javascript:;"><p class="ani animated swiper-slide-desc_tag" swiper-animate-effect="fadeInDown"></p><img no-lazy class="swiper-slide-img" src="https://pica.zhimg.com/80/v2-dff5af5b4e0331e3b9c22ef1004d88c8_1440w.jpg"></a></div></div><div class="swiper-pagination"></div><div class="swiper-button-prev blur"></div><div class="swiper-button-next blur"></div></div>
+<h3 class="bamboo-h-b" id="事例代码" style="color:#ff6348!important">事例代码</h3><div></div>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token punctuation">&#123;</span>% swiper width<span class="token punctuation">:</span>multiple %<span class="token punctuation">&#125;</span>
+<span class="token tag">!</span><span class="token punctuation">[</span><span class="token punctuation">]</span>(https<span class="token punctuation">:</span>//pic2.zhimg.com/80/v2<span class="token punctuation">-</span>b72c5a1840b763674a5a1744cb49f08b_1440w.jpg)
+<span class="token tag">!</span><span class="token punctuation">[</span><span class="token punctuation">]</span>(https<span class="token punctuation">:</span>//pic1.zhimg.com/80/v2<span class="token punctuation">-</span>9a1f1ad66d08747642c1b66727fea9f6_1440w.jpg)
+<span class="token tag">!</span><span class="token punctuation">[</span><span class="token punctuation">]</span>(https<span class="token punctuation">:</span>//pic1.zhimg.com/80/v2<span class="token punctuation">-</span>e012e11ff2cd3270df046e3cd4fb9fbe_1440w.jpg)
+<span class="token tag">!</span><span class="token punctuation">[</span><span class="token punctuation">]</span>(https<span class="token punctuation">:</span>//pic1.zhimg.com/80/v2<span class="token punctuation">-</span>6d0cbd4380b4959542d3f5da31c7f20c_1440w.jpg)
+<span class="token tag">!</span><span class="token punctuation">[</span><span class="token punctuation">]</span>(https<span class="token punctuation">:</span>//pica.zhimg.com/80/v2<span class="token punctuation">-</span>dff5af5b4e0331e3b9c22ef1004d88c8_1440w.jpg)
+<span class="token punctuation">&#123;</span>% endswiper %<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<span class="token operator">&lt;</span><span class="token operator">!</span>-- endtab --<span class="token operator">></span>
 
-<span class="token operator">&lt;</span><span class="token operator">!</span>-- tab 栏目2 --<span class="token operator">></span>
+<h3 class="bamboo-h-b" id="跳转链接" style="color:#ffa502!important">跳转链接</h3><div></div>
+<blockquote>
+<p>使用原生img标签，加上href属性即可，例如点击图片跳转到百度，则加上href=”<a target="_blank" rel="noopener" href="https://baidu.com&quot;">https://baidu.com&quot;</a> 属性</p>
+</blockquote>
+<div class="tag-plugin post-swiper-container" width="fill"><div class="swiper-wrapper"><div class="swiper-slide"><a class="swiper-slide-href_tag" target="_blank" rel="noopener" href="https://baidu.com"><p class="ani animated swiper-slide-desc_tag" swiper-animate-effect="fadeInDown">跳转百度</p><img no-lazy class="swiper-slide-img" src="https://pic2.zhimg.com/80/v2-b72c5a1840b763674a5a1744cb49f08b_1440w.jpg"></a></div><div class="swiper-slide"><a class="swiper-slide-href_tag" target="_blank" rel="noopener" href="https://github.com/yuang01/hexo-theme-bamboo"><p class="ani animated swiper-slide-desc_tag" swiper-animate-effect="fadeInDown">点击跳转github</p><img no-lazy class="swiper-slide-img" src="https://pic1.zhimg.com/80/v2-9a1f1ad66d08747642c1b66727fea9f6_1440w.jpg"></a></div><div class="swiper-slide"><a class="swiper-slide-href_tag" target="_blank" rel="noopener" href="https://juejin.cn/"><p class="ani animated swiper-slide-desc_tag" swiper-animate-effect="fadeInDown">点击跳转到掘金社区</p><img no-lazy class="swiper-slide-img" src="https://pic1.zhimg.com/80/v2-e012e11ff2cd3270df046e3cd4fb9fbe_1440w.jpg"></a></div><div class="swiper-slide"><a class="swiper-slide-href_tag" href="/"><p class="ani animated swiper-slide-desc_tag" swiper-animate-effect="fadeInDown">点击跳转到首页</p><img no-lazy class="swiper-slide-img" src="https://pic1.zhimg.com/80/v2-e012e11ff2cd3270df046e3cd4fb9fbe_1440w.jpg"></a></div></div><div class="swiper-pagination"></div><div class="swiper-button-prev blur"></div><div class="swiper-button-next blur"></div></div>
+<div class="tag-plugin post-swiper-container"><div class="swiper-wrapper"><div class="swiper-slide"><a class="swiper-slide-href_tag" target="_blank" rel="noopener" href="https://baidu.com"><p class="ani animated swiper-slide-desc_tag" swiper-animate-effect="fadeInDown">点击跳转百度</p><img no-lazy class="swiper-slide-img" src="https://pic2.zhimg.com/80/v2-b72c5a1840b763674a5a1744cb49f08b_1440w.jpg"></a></div><div class="swiper-slide"><a class="swiper-slide-href_tag" target="_blank" rel="noopener" href="https://github.com/yuang01/hexo-theme-bamboo"><p class="ani animated swiper-slide-desc_tag" swiper-animate-effect="fadeInDown">点击跳转github</p><img no-lazy class="swiper-slide-img" src="https://pic1.zhimg.com/80/v2-9a1f1ad66d08747642c1b66727fea9f6_1440w.jpg"></a></div><div class="swiper-slide"><a class="swiper-slide-href_tag" target="_blank" rel="noopener" href="https://juejin.cn/"><p class="ani animated swiper-slide-desc_tag" swiper-animate-effect="fadeInDown">点击跳转到掘金社区</p><img no-lazy class="swiper-slide-img" src="https://pic1.zhimg.com/80/v2-e012e11ff2cd3270df046e3cd4fb9fbe_1440w.jpg"></a></div><div class="swiper-slide"><a class="swiper-slide-href_tag" href="/"><p class="ani animated swiper-slide-desc_tag" swiper-animate-effect="fadeInDown">点击跳转到首页</p><img no-lazy class="swiper-slide-img" src="https://pic1.zhimg.com/80/v2-e012e11ff2cd3270df046e3cd4fb9fbe_1440w.jpg"></a></div></div><div class="swiper-pagination"></div><div class="swiper-button-prev blur"></div><div class="swiper-button-next blur"></div></div>
+<h3 class="bamboo-h-b" id="事例代码" style="color:#ff6348!important">事例代码</h3><div></div>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">&#123;% swiper width:fill %&#125;
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://pic2.zhimg.com/80/v2-b72c5a1840b763674a5a1744cb49f08b_1440w.jpg<span class="token punctuation">"</span></span>  <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://baidu.com<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>点击跳转百度<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://pic1.zhimg.com/80/v2-9a1f1ad66d08747642c1b66727fea9f6_1440w.jpg<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://github.com/yuang01/hexo-theme-bamboo<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>点击跳转github<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://pic1.zhimg.com/80/v2-e012e11ff2cd3270df046e3cd4fb9fbe_1440w.jpg<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://juejin.cn/<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>点击跳转到掘金社区<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://pic1.zhimg.com/80/v2-e012e11ff2cd3270df046e3cd4fb9fbe_1440w.jpg<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>/<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>点击跳转到首页<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+&#123;% endswiper %&#125;
 
-！！！
 
-<span class="token operator">&lt;</span><span class="token operator">!</span>-- endtab --<span class="token operator">></span>
-
-<span class="token punctuation">&#123;</span>% endtabs %<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+&#123;% swiper %&#125;
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://pic2.zhimg.com/80/v2-b72c5a1840b763674a5a1744cb49f08b_1440w.jpg<span class="token punctuation">"</span></span>  <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://baidu.com<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>点击跳转百度<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://pic1.zhimg.com/80/v2-9a1f1ad66d08747642c1b66727fea9f6_1440w.jpg<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://github.com/yuang01/hexo-theme-bamboo<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>点击跳转github<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://pic1.zhimg.com/80/v2-e012e11ff2cd3270df046e3cd4fb9fbe_1440w.jpg<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://juejin.cn/<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>点击跳转到掘金社区<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://pic1.zhimg.com/80/v2-e012e11ff2cd3270df046e3cd4fb9fbe_1440w.jpg<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>/<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>点击跳转到首页<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+&#123;% endswiper %&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
       </div>
       <div class="post-tags-categories">
         
@@ -899,7 +948,7 @@
     </li>
     <li class="post-copyright-link">
     <strong>文章链接:  </strong>
-    <a href="/post/tab/" target="_blank" title="tab">http://yuang01.github.io/post/tab/</a>
+    <a href="/post/swiper/" target="_blank" title="轮播-swiper">http://yuang01.github.io/post/swiper/</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明:   </strong>
@@ -917,46 +966,30 @@
 
 
 
-  
-  <div class="post-nav-prev post-nav-item">
-    <div class="post-nav-img" style="background-size: cover; 
-      background-position: center center;">
-      <img class="lazyload lazyload placeholder" src="https://pic4.zhimg.com/80/v2-37134f732bbe21779fdb2fc8dca410c7_1440w.jpg" class="lazyload placeholder" data-srcset="https://pic4.zhimg.com/80/v2-37134f732bbe21779fdb2fc8dca410c7_1440w.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
-    </div>
-    <a href="/post/span/" class="post-nav-link">
-      <div class="title">
-        <i class="fas fa-angle-left"></i> 上一篇:
-        <div class="title-text">文字颜色</div>
-      </div>
-      
-      <!-- <div class="content">
-        文字颜色演示效果
-这是一个简单的文字我是一个文字高亮，唱着我们心肠的曲折这是一个简单的文字我是一个文字高亮，唱着我们心肠
-      </div> -->
-    </a>
-  </div>
-
 
 
   
   <div class="post-nav-next post-nav-item">
     <div class="post-nav-img" style="background-size: cover; 
       background-position: center center;">
-      <img class="lazyload lazyload placeholder" src="https://pic4.zhimg.com/v2-8ad0cffeaa7dec5dd1930eebc6ff863f_b.jpg" class="lazyload placeholder" data-srcset="https://pic4.zhimg.com/v2-8ad0cffeaa7dec5dd1930eebc6ff863f_b.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" src="" alt="">
+      <img class="lazyload lazyload placeholder" src="https://pica.zhimg.com/80/v2-dff5af5b4e0331e3b9c22ef1004d88c8_1440w.jpg" class="lazyload placeholder" data-srcset="https://pica.zhimg.com/80/v2-dff5af5b4e0331e3b9c22ef1004d88c8_1440w.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" src="" alt="">
     </div>
-    <a href="/post/text/" class="post-nav-link">
+    <a href="/post/hexo-theme-bamboo/page/" class="post-nav-link">
       <div class="title">
         下一篇: <i class="fas fa-angle-right"></i>
-        <div class="title-text">Text文本样式标签</div>
+        <div class="title-text">Bamboo主题-主题config配置项简介（二）</div>
       </div>
       <!-- <div class="content">
-        Text文本样式标签演示
+        欢迎star
 
-带 下划线 的文本
-带 着重号 的文本
-带 波浪线 的文本
-带 删除线 的文本
-键盘样式的文
+有问题去留言板留言
+
+
+
+
+
+主题字体图标使用的是
+Font Awesomehttps://fontaw
       </div> -->
     </a>
   </div>
@@ -1147,7 +1180,7 @@
 			clearInterval(this.time);
 		},
 		mounted() {
-			let prop = 'https://pic4.zhimg.com/80/v2-5a575bb8ac734707f1ec05d6de6a0e0b_1440w.jpg' || 'https://pica.zhimg.com/80/v2-292e6340491bd97f9d014d6be3371c04_1440w.jpg,https://pica.zhimg.com/80/v2-9659f2305acb80f25ced33aa980092c1_1440w.jpg,https://api.btstu.cn/sjbz/api.php';
+			let prop = 'https://pic1.zhimg.com/80/v2-6d0cbd4380b4959542d3f5da31c7f20c_1440w.jpg' || 'https://pica.zhimg.com/80/v2-292e6340491bd97f9d014d6be3371c04_1440w.jpg,https://pica.zhimg.com/80/v2-9659f2305acb80f25ced33aa980092c1_1440w.jpg,https://api.btstu.cn/sjbz/api.php';
 			let isImg = prop.includes('.bmp') || prop.includes('.jpg') || prop.includes('.png') || prop.includes('.tif') || prop.includes('.gif') || prop.includes('.pcx') || prop.includes('.tga') || prop.includes('.exif') || prop.includes('.fpx') || prop.includes('.psd') || prop.includes('.cdr') || prop.includes('.pcd') || prop.includes('.dxf') || prop.includes('.ufo') || prop.includes('.eps') || prop.includes('.ai') || prop.includes('.raw') || prop.includes('.WMF') || prop.includes('.webp') || prop.includes('.jpeg') || prop.includes('http://') || prop.includes('https://')
 			if (isImg) {
 				let img = prop.split(',');
