@@ -949,18 +949,26 @@
   <div class="post-nav-next post-nav-item">
     <div class="post-nav-img" style="background-size: cover; 
       background-position: center center;">
-      <img class="lazyload lazyload placeholder" src="https://pic4.zhimg.com/v2-672bbb43fda6c749b16e2b8c8d69e15f_b.jpg" class="lazyload placeholder" data-srcset="https://pic4.zhimg.com/v2-672bbb43fda6c749b16e2b8c8d69e15f_b.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" src="" alt="">
+      <img class="lazyload lazyload placeholder" src="https://pic1.zhimg.com/v2-cdf0dd8357e2cf573f32d0d65cff6404_b.jpg" class="lazyload placeholder" data-srcset="https://pic1.zhimg.com/v2-cdf0dd8357e2cf573f32d0d65cff6404_b.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" src="" alt="">
     </div>
-    <a href="/post/timeline/" class="post-nav-link">
+    <a href="/post/title/" class="post-nav-link">
       <div class="title">
         下一篇: <i class="fas fa-angle-right"></i>
-        <div class="title-text">timeline时间线</div>
+        <div class="title-text">title</div>
       </div>
       <!-- <div class="content">
-        timeline时间线演示
+        title演示
 
-2021-01-01 1.0.3 -&gt; 1.0.3
-我是一个测试文字ghghgh。我
+我是标题
+
+你好啊，未来越来越好哦
+我是标题
+
+你好啊，加油哦
+我是标题
+
+我是标题
+上述事例代码&#
       </div> -->
     </a>
   </div>
@@ -1044,7 +1052,7 @@
   }
   function openBtnClickFn () {
     let openOrCloseBtn = $('.toc-aside .toc-aside-title .toc-open-close');
-    let open = eval('' || 'false');
+    let open = eval('' || 'true');
     openOrCloseBtn.click(function() {
       if (open) {
         closeToc();
@@ -1060,7 +1068,7 @@
 
   function initCloseTocWidth(init) {
     if (window.innerWidth >= 992) {
-      let isClose = true;
+      let isClose = false;
       isClose && closeToc(init)
     }
   }

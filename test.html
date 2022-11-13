@@ -975,7 +975,7 @@
   }
   function openBtnClickFn () {
     let openOrCloseBtn = $('.toc-aside .toc-aside-title .toc-open-close');
-    let open = eval('' || 'false');
+    let open = eval('' || 'true');
     openOrCloseBtn.click(function() {
       if (open) {
         closeToc();
@@ -991,7 +991,7 @@
 
   function initCloseTocWidth(init) {
     if (window.innerWidth >= 992) {
-      let isClose = true;
+      let isClose = false;
       isClose && closeToc(init)
     }
   }

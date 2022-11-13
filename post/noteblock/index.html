@@ -1061,7 +1061,7 @@ markdown默认写法，左边框颜色，随着主题色改变
   }
   function openBtnClickFn () {
     let openOrCloseBtn = $('.toc-aside .toc-aside-title .toc-open-close');
-    let open = eval('' || 'false');
+    let open = eval('' || 'true');
     openOrCloseBtn.click(function() {
       if (open) {
         closeToc();
@@ -1077,7 +1077,7 @@ markdown默认写法，左边框颜色，随着主题色改变
 
   function initCloseTocWidth(init) {
     if (window.innerWidth >= 992) {
-      let isClose = true;
+      let isClose = false;
       isClose && closeToc(init)
     }
   }

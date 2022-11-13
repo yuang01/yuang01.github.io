@@ -1320,7 +1320,7 @@ books   <span class="token comment">#书籍</span><span aria-hidden="true" class
   }
   function openBtnClickFn () {
     let openOrCloseBtn = $('.toc-aside .toc-aside-title .toc-open-close');
-    let open = eval('' || 'false');
+    let open = eval('' || 'true');
     openOrCloseBtn.click(function() {
       if (open) {
         closeToc();
@@ -1336,7 +1336,7 @@ books   <span class="token comment">#书籍</span><span aria-hidden="true" class
 
   function initCloseTocWidth(init) {
     if (window.innerWidth >= 992) {
-      let isClose = true;
+      let isClose = false;
       isClose && closeToc(init)
     }
   }

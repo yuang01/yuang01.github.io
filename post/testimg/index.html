@@ -1084,7 +1084,7 @@ Your browser does not support the video tag.
   }
   function openBtnClickFn () {
     let openOrCloseBtn = $('.toc-aside .toc-aside-title .toc-open-close');
-    let open = eval('' || 'false');
+    let open = eval('' || 'true');
     openOrCloseBtn.click(function() {
       if (open) {
         closeToc();
@@ -1100,7 +1100,7 @@ Your browser does not support the video tag.
 
   function initCloseTocWidth(init) {
     if (window.innerWidth >= 992) {
-      let isClose = true;
+      let isClose = false;
       isClose && closeToc(init)
     }
   }
