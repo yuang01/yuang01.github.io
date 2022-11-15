@@ -6679,7 +6679,6 @@ div.tabs .tab-content .tab-pane > .note:last-child {
 .post-swiper-container div.swiper-slide img {
   border-radius: 4px;
   width: 100%;
-  max-height: 500px;
   object-fit: cover;
 }
 .post-swiper-container[width='max'] div.swiper-slide,
