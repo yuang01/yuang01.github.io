@@ -773,21 +773,6 @@
         
  <!-- prismjs 代码高亮 -->
  
-    
-    <link href="/js/prism/prism-line-numbers.css" rel="stylesheet">
-    
-        <link href="/js/prism/prism.min.css" rel="stylesheet">
-    
-
-    <style>
-        pre[class*="language-"] {
-            overflow-y: hidden;
-        }
-        .line-numbers .line-numbers-rows {
-            border: none;
-        }
-    </style>
-  
 
 
 <div class="bg-dark-floor" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -1;"></div>
@@ -857,17 +842,17 @@
 
 
 
-<div class="post-detail-content row justify-position" 
+<div class="post-detail-content post-row" 
   style="padding-top: 0px;">
   <div class="main-content">
     <article class="post post-detail">
       <div class="post-content">
         <p>该标签会去拿到某个repo仓库的issue内容，用<code>timeline标签</code>的形式显示出来</p>
-<h2 id="写法"><a href="#写法" class="headerlink" title="写法"></a>写法</h2><h3 id="github"><a href="#github" class="headerlink" title="github"></a>github</h3><pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">&#123;% issues timeline | api=https://api.github.com/repos/yuang01/hexo-theme-bamboo/issues?sort=updated&amp;state=closed&amp;page=1&amp;per_page=100 %&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h2 id="写法"><a href="#写法" class="headerlink" title="写法"></a>写法</h2><h3 id="github"><a href="#github" class="headerlink" title="github"></a>github</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% issues timeline | api=https://api.github.com/repos/yuang01/hexo-theme-bamboo/issues?sort=updated&amp;state=closed&amp;page=1&amp;per<span class="emphasis">_page=100 %&#125;</span></span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>api=xxx:<br><code>yuang01</code>是我的github<code>用户名</code>，<code>hexo-theme-bamboo</code>是我的<code>仓库名</code>，<code>state=closed</code>，表示拿到状态为<code>close</code>的issue，根据自己实际情况更改</p>
 </blockquote>
-<h3 id="Gitee"><a href="#Gitee" class="headerlink" title="Gitee"></a>Gitee</h3><pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">&#123;% issues timeline | api=https://gitee.com/api/v5/repos/yuang01/yuang01/issues %&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="Gitee"><a href="#Gitee" class="headerlink" title="Gitee"></a>Gitee</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% issues timeline | api=https://gitee.com/api/v5/repos/yuang01/yuang01/issues %&#125;</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>api=xxx:<br><code>yuang01</code>是我的gitee<code>用户名</code>，<code>yuang01</code>是我gitee的<code>仓库名</code>，其他参数请见文档</p>
 </blockquote>
@@ -991,8 +976,7 @@ galleryGroup图片示例
 
   <div id="myComment">
     
-      <div id="gitment-container"></div>
-
+      <div id="beaudar_container"></div>
     
   </div>
 
@@ -1002,72 +986,253 @@ galleryGroup图片示例
   </div>
 
   <!-- 目录 -->
-  <!-- 文章详情页右侧目录 -->
-
-  <div class="toc-aside">
-    <div class="toc-main">
-      <div class="toc-aside-title">
-        <i class="fas fa-list-ul" aria-hidden="true"></i><span>本文目录</span>
+  
+<aside id='l_side'>
+  
+    
+      
+        <section class="widget side_blogger">
+  <div class='content'>
+    
+      
+        <a class='avatar flat-box rectangle' href='/about/'>
+          <img src='/img/avatar.jpg'/>
+        </a>
+      
+    
+    
+      <div class='text'>
         
-          <div class="toc-open-close">本文目录</div>
+          <h2>青墨书晚风</h2>
+        
+        
+          <p>我是副标题</p>
+
+        
+        
+          <p><span id="jinrishici-sentence">竹</span></p>
+          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
         
       </div>
+    
+    
+      <div class="social-wrapper">
+        
+          
+            <a href="/atom.xml"
+              class="social fas fa-rss flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+              
+            </a>
+          
+        
+          
+            <a href="mailto:me@xxx.com"
+              class="social fas fa-envelope flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+              
+            </a>
+          
+        
+          
+            <a href="https://github.com/yuang01/hexo-theme-bamboo"
+              class="social fab fa-github flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+              
+            </a>
+          
+        
+          
+            <a href="tencent://AddContact/?fromId=50&amp;fromSubId=1&amp;subcmd=all&amp;uin=你的qq号码"
+              class="social fab fa-qq flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+              
+            </a>
+          
+        
+      </div>
+    
+  </div>
+</section>
+
+      
+    
+  
+  
+  
+    
+      <div class="widget moyu" id="moyu" style="order: 0;background: #e9e5d1">
+        <header>
+          
+            <a style="color: #d63130" target="_blank" rel="noopener" href='http://baidu.com'><i class="fa-solid fa-fish fa-fw" aria-hidden="true"></i><span class='name'>开始摸鱼</span></a>
+          
+        </header>
+        <div class="content">
+          <img class="no-lazy" src="https://api.vvhan.com/api/moyu" style="width:100%">
+        </div>
+    </div>
+    
+  
+
+  <div class="layout_sticky">    
+    
+      
+<section class="widget side_toc">
+  
+  <header>
+    
+      <i style="color: " class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+  <div class='content'>
+    <div class="toc-main">
       <div class="toc-content">
+        <!-- <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%86%99%E6%B3%95"><span class="toc-text">写法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#github"><span class="toc-text">github</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Gitee"><span class="toc-text">Gitee</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#issue-api"><span class="toc-text">issue api</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#repo%E4%BB%93%E5%BA%93"><span class="toc-text">repo仓库</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Github%E6%95%88%E6%9E%9C-example"><span class="toc-text">Github效果(example)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Gitee%E6%95%88%E6%9E%9C-example"><span class="toc-text">Gitee效果(example)</span></a></li></ol> -->
         <div class="toc"></div>
       </div>
     </div>
   </div>
+</section>
+<!-- 手机端目录按钮 -->
+<div id="toc-mobile-btn">
+  <i class="fas fa-list-ul" aria-hidden="true"></i>
+</div>
 
-  <!-- 手机端目录按钮 -->
-  <div id="toc-mobile-btn">
-    <i class="fas fa-list-ul" aria-hidden="true"></i>
+      
+  <section class="widget side_recent_post">
+    
+  <header>
+    
+      <a style="color: " href='/tags/'><i class="fas fa-book fa-fw" aria-hidden="true"></i><span class='name'>最新文章</span></a>
+    
+  </header>
+
+
+    <div class='content'>
+      
+      <!-- hash算法 -->
+      
+      <div class="aside-list">
+        
+          <div class="aside-list-item">
+            
+            
+            
+
+            <div class="post-img-box">
+              <a href="/post/swiper/" class="post-img " style="background-size: cover; 
+                background-position: center center;">
+                <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="https://pic1.zhimg.com/80/v2-6d0cbd4380b4959542d3f5da31c7f20c_1440w.jpg" class="lazyload placeholder" data-srcset="https://pic1.zhimg.com/80/v2-6d0cbd4380b4959542d3f5da31c7f20c_1440w.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+              </a>
+            </div>
+            <div class="post-date-title">
+              <div>
+                
+                  <span class="post-date">11-13</span>
+                
+              </div>
+              <a class="post-title" href="/post/swiper/">轮播-swiper</a>
+            </div>
+          </div>
+        
+          <div class="aside-list-item">
+            
+            
+            
+
+            <div class="post-img-box">
+              <a href="/post/hexo-theme-bamboo/page/" class="post-img " style="background-size: cover; 
+                background-position: center center;">
+                <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="https://pica.zhimg.com/80/v2-dff5af5b4e0331e3b9c22ef1004d88c8_1440w.jpg" class="lazyload placeholder" data-srcset="https://pica.zhimg.com/80/v2-dff5af5b4e0331e3b9c22ef1004d88c8_1440w.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+              </a>
+            </div>
+            <div class="post-date-title">
+              <div>
+                
+                  <span class="post-date">07-16</span>
+                
+              </div>
+              <a class="post-title" href="/post/hexo-theme-bamboo/page/">Bamboo主题-主题config配置项简介（二）</a>
+            </div>
+          </div>
+        
+          <div class="aside-list-item">
+            
+            
+            
+
+            <div class="post-img-box">
+              <a href="/post/danmu/index/" class="post-img " style="background-size: cover; 
+                background-position: center center;">
+                <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="https://pic1.zhimg.com/80/v2-e012e11ff2cd3270df046e3cd4fb9fbe_1440w.jpg" class="lazyload placeholder" data-srcset="https://pic1.zhimg.com/80/v2-e012e11ff2cd3270df046e3cd4fb9fbe_1440w.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+              </a>
+            </div>
+            <div class="post-date-title">
+              <div>
+                
+                  <span class="post-date">07-15</span>
+                
+              </div>
+              <a class="post-title" href="/post/danmu/index/">首页添加弹幕</a>
+            </div>
+          </div>
+        
+          <div class="aside-list-item">
+            
+            
+            
+
+            <div class="post-img-box">
+              <a href="/post/custom/resume-404/" class="post-img " style="background-size: cover; 
+                background-position: center center;">
+                <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="https://pic2.zhimg.com/80/v2-b72c5a1840b763674a5a1744cb49f08b_1440w.jpg" class="lazyload placeholder" data-srcset="https://pic2.zhimg.com/80/v2-b72c5a1840b763674a5a1744cb49f08b_1440w.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+              </a>
+            </div>
+            <div class="post-date-title">
+              <div>
+                
+                  <span class="post-date">07-12</span>
+                
+              </div>
+              <a class="post-title" href="/post/custom/resume-404/">制作简历（关于我）和404页面</a>
+            </div>
+          </div>
+        
+          <div class="aside-list-item">
+            
+            
+            
+
+            <div class="post-img-box">
+              <a href="/post/custom/live2d/" class="post-img " style="background-size: cover; 
+                background-position: center center;">
+                <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="https://pic1.zhimg.com/80/v2-9a1f1ad66d08747642c1b66727fea9f6_1440w.jpg" class="lazyload placeholder" data-srcset="https://pic1.zhimg.com/80/v2-9a1f1ad66d08747642c1b66727fea9f6_1440w.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+              </a>
+            </div>
+            <div class="post-date-title">
+              <div>
+                
+                  <span class="post-date">07-10</span>
+                
+              </div>
+              <a class="post-title" href="/post/custom/live2d/">自定义live2d</a>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+  </section>
+
+    
   </div>
+</aside>
 
-
-<script>
-  function closeToc(init) {
-    $(".toc-aside").css({'width': 0, 'padding': 0, 'transition': init ?  'noe' : 'width 0.3s' });
-    $(".toc-content").css({'width': 0});
-    $(".toc-aside-title span, .toc-aside-title i").css({'display': 'none'});
-    $(".main-content").css({'width': '75%', 'margin-left': 'auto', 'margin-right': 'auto',});
-  };
-  function openToc() {
-    $(".main-content").css({'width': '65%', 'margin-right': '10px', 'margin-left': 'calc(35% - 350px)'});
-    $(".toc-aside").css({'width': '300px', 'padding': '0 10px', 'transition': 'width 0.3s'});
-    $(".toc-content").css({'width': '300px'});
-    $(".toc-aside-title span, .toc-aside-title i").css({'display': 'inline-block'});
-  }
-  function openBtnClickFn () {
-    let openOrCloseBtn = $('.toc-aside .toc-aside-title .toc-open-close');
-    let open = eval('false' || 'true');
-    openOrCloseBtn.click(function() {
-      if (open) {
-        closeToc();
-        open = false;
-      } else {
-        openToc();
-        open = true;
-      }
-    });
-  };
-  openBtnClickFn();
-  initCloseTocWidth(true);
-
-  function initCloseTocWidth(init) {
-    if (window.innerWidth >= 992) {
-      let isClose = true;
-      isClose && closeToc(init)
-    }
-  }
-
-  document.addEventListener('pjax:complete', function () {
-    $(".toc-aside").css({'transition': 'no'});
-  })
-  document.addEventListener('pjax:complete', function () {
-    openBtnClickFn();
-  })
-  
-</script>
 
   <!-- 图片放大 Wrap images with fancybox support -->
   <script src="/js/wrapImage.js"></script>
@@ -1591,8 +1756,13 @@ galleryGroup图片示例
     <script src="/js/app.js"></script>
     
     <!-- 文章目录所需js -->
-<link href="/js/tocbot/tocbot.css" rel="stylesheet">
-<script src="/js/tocbot/tocbot.min.js"></script>
+<!-- <link href="/js/tocbot/tocbot.css" rel="stylesheet">
+<script src="/js/tocbot/tocbot.min.js"></script> -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.18.2/tocbot.min.js"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.18.2/tocbot.css">
 
 <script>
   var headerEl = 'h2, h3, h4',  //headers 
@@ -1607,12 +1777,16 @@ galleryGroup图片示例
     // Which headings to grab inside of the contentSelector element.
     headingSelector: headerEl,
     scrollSmooth: true,
-    scrollSmoothOffset: -80,
-    headingsOffset: -($(window).height() * 0.4 - 45),
-    positionFixedSelector: '.toc-main',
-    positionFixedClass: 'is-position-fixed',
+    scrollSmoothOffset: -70,
+    headingsOffset: -300,
+    // headingsOffset: -($(window).height() * 0.4 - 45),
+    headingsOffset: -($(window).height() * 0.6 - 45),
+    // positionFixedSelector: '.toc-main',
+    // positionFixedClass: 'is-position-fixed',
     fixedSidebarOffset: 'auto',
     activeLinkClass: 'is-active-link',
+    orderedList: true,
+    collapseDepth: 20,
     // onClick: function (e) {},
   }
   if ($('.toc').length > 0) {
@@ -1665,7 +1839,7 @@ galleryGroup图片示例
     if (activePosition > (document.documentElement.clientHeight - 100)) {
       $cardToc.scrollTop = sidebarScrollTop + 150
     }
-    if (activePosition < 100) {
+    if (activePosition < 150) {
       $cardToc.scrollTop = sidebarScrollTop - 150
     }
   }
@@ -1685,7 +1859,7 @@ galleryGroup图片示例
   
   // 手机端toc按钮点击出现目录
   const mobileTocClick = function () {
-    const $cardTocLayout = document.getElementsByClassName('toc-aside')[0];
+    const $cardTocLayout = document.getElementsByClassName('side_toc')[0];
     const $cardToc = $cardTocLayout.getElementsByClassName('toc-content')[0];
     let right = '45px';
     if (window.innerWidth >= 551 && window.innerWidth <= 992) {
@@ -1717,7 +1891,7 @@ galleryGroup图片示例
 </script>
 
 <style>
-  .is-position-fixed {
+  /* .is-position-fixed {
     position: sticky !important;
     top: 74px;
   }
@@ -1732,8 +1906,9 @@ galleryGroup图片示例
     position: absolute;
     left: 12px;
     top: 0;
-  }
-</style> 
+  } */
+</style>
+ 
 
 <!-- 设置导航背景 -->
 <script>
@@ -1893,64 +2068,78 @@ galleryGroup图片示例
 
   
     <script type="text/javascript">
-  var utteranceCommon = {};
+  var beaudarCommon = {};
 
-  function check_utterance() {
+  function check_beaudar() {
     let isDark = JSON.parse(localStorage.getItem('dark')) || JSON.parse('false');
     if (isDark) {
-      utteranceCommon.Theme = 'github-dark';
+      beaudarCommon.Theme = 'github-dark';
     } else {
-      utteranceCommon.Theme = 'github-light';
+      beaudarCommon.Theme = 'github-light';
     }
 
-    return document.getElementById("gitment-container");
+    return document.getElementById("beaudar_container");
   }
-  comment_el = '#gitment-container';
-  load_utterance = function () {
+  comment_el = '#beaudar_container';
+  load_beaudar = function () {
     if ($(comment_el).length) {
       // 匿名函数，防止污染全局变量
-      const HEAD = check_utterance();
+      const HEAD = check_beaudar();
 
-      var utterances = document.createElement('script');
-      utterances.type = 'text/javascript';
-      utterances.async = true;
-      utterances.setAttribute('issue-term', 'pathname')
-      utterances.setAttribute('theme', utteranceCommon.Theme)
-      utterances.setAttribute('repo', 'yuang01/yuang01.github.io')
-      utterances.crossorigin = 'anonymous';
-      utterances.src = 'https://utteranc.es/client.js';
+      const script = document.createElement('script');
+      let issuenumber = "";
+      if (issuenumber) {
+        script.setAttribute('issue-number', issuenumber);
+      } else {
+        script.setAttribute('issue-term', "pathname");
+      }
+      script.setAttribute('src', 'https://beaudar.lipk.org/client.js');
+      script.setAttribute('repo', 'yuang01/yuang01.github.io');
+      script.setAttribute('input-position', 'top');
+      script.setAttribute('branch', 'main');
+      script.setAttribute('comment-order', 'desc');
+      script.setAttribute('label', '✨💬✨');
+      script.setAttribute('theme', beaudarCommon.Theme);
+      script.setAttribute('crossorigin', "anonymous");
       // content 是要插入评论的地方
-      document.getElementById('gitment-container').appendChild(utterances);
-
+      document.getElementById('beaudar_container').appendChild(script);
     }
   }
 
-  function dark_utterance() {
-    const HEAD = check_utterance();
+  function dark_beaudar() {
+    const HEAD = check_beaudar();
     if (!HEAD) return;
     const message = {
       type: 'set-theme',
-      theme: utteranceCommon.Theme
+      theme: beaudarCommon.Theme
     };
-    const utteranceIframe = document.querySelector('iframe');
-    utteranceIframe.contentWindow.postMessage(message, 'https://utteranc.es');
+    const beaudarIframe = document.querySelector('iframe');
+    beaudarIframe.contentWindow.postMessage(message, 'https://beaudar.lipk.org');
   }
 
-  $(document).ready(load_utterance);
+  function check_beaudar_style() {
+    // Beaudar 会往 HEAD 的首节点追加样式元素，而这个追加没有添加判断
+    // 所以 Pjax 下会多次添加样式文件，略微麻烦。
+    const checkStyle = document.querySelector('head').firstElementChild;
+    if (checkStyle.innerText.includes('beaudar')) checkStyle.remove();
+  }
+
+  $(document).ready(load_beaudar);
   document.addEventListener('pjax:complete', function () {
-    load_utterance();
+    check_beaudar_style();
+    load_beaudar();
   });
 
   $('.dark').click(function () {
     setTimeout(() => {
-      dark_utterance();
+      dark_beaudar();
     });
   })
 
 </script>
 
 <style>
-  .utterances {
+  .beaudars {
     max-width: inherit !important;
   }
 </style>

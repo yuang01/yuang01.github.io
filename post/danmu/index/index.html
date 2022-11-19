@@ -773,21 +773,6 @@
         
  <!-- prismjs 代码高亮 -->
  
-    
-    <link href="/js/prism/prism-line-numbers.css" rel="stylesheet">
-    
-        <link href="/js/prism/prism.min.css" rel="stylesheet">
-    
-
-    <style>
-        pre[class*="language-"] {
-            overflow-y: hidden;
-        }
-        .line-numbers .line-numbers-rows {
-            border: none;
-        }
-    </style>
-  
 
 
 <div class="bg-dark-floor" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -1;"></div>
@@ -831,11 +816,11 @@
       
         <div class="post-detail-header_wordcount">
           <span class="totalcount">
-            <i class="fas fa-file-text-o"></i> 字数统计: 819 |
+            <i class="fas fa-file-text-o"></i> 字数统计: 910 |
           </span>
   
           <span class="min2read">
-            <i class="fas fa-clock"></i> 阅读时长: 3分钟 |
+            <i class="fas fa-clock"></i> 阅读时长: 4分钟 |
           </span>
   
           
@@ -857,122 +842,21 @@
 
 
 
-<div class="post-detail-content row justify-position" 
+<div class="post-detail-content post-row" 
   style="padding-top: 0px;">
   <div class="main-content">
     <article class="post post-detail">
       <div class="post-content">
         <p>首页添加弹幕</p>
 <ol>
-<li>首先引入弹幕插件css和js，再导入自己编写的js，弹幕插件主题已经有了，所以引入就行，但是引入主题已经有的js和css只能在侧边栏模块里面引入；<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">home_widget</span><span class="token punctuation">:</span>
-  <span class="token punctuation">-</span> <span class="token key atrule">class_name</span><span class="token punctuation">:</span> mymusic
-    <span class="token key atrule">id_name</span><span class="token punctuation">:</span> mymusic
-    <span class="token key atrule">order</span><span class="token punctuation">:</span> <span class="token number">-1</span>
-    <span class="token key atrule">name</span><span class="token punctuation">:</span> 超好听的好吗😙
-    <span class="token key atrule">icon</span><span class="token punctuation">:</span> fa<span class="token punctuation">-</span>solid fa<span class="token punctuation">-</span>music
-    <span class="token key atrule">icon_color</span><span class="token punctuation">:</span> <span class="token string">'#00AEEC'</span>
-    <span class="token key atrule">url</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//www.bilibili.com/video/BV1Da411n793<span class="token punctuation">?</span>vd_source=79ce7c1b6f96c8b5a7ae552cc9be5225
-    <span class="token key atrule">background</span><span class="token punctuation">:</span> <span class="token string">'#fff'</span>
-    <span class="token key atrule">html</span><span class="token punctuation">:</span> '
-    &lt;iframe src="//player.bilibili.com/player.html<span class="token punctuation">?</span>aid=215901212<span class="token important">&amp;bvid=BV1Da411n793&amp;cid=772894060&amp;page=1"</span> scrolling="no" border="0" width="100%" height="476" frameborder="no" framespacing="0" allowfullscreen="true"<span class="token punctuation">></span> &lt;/iframe<span class="token punctuation">></span>
-    &lt;link href="/js/danmu/barrager.css" rel="stylesheet"<span class="token punctuation">></span>
-    &lt;script src="/js/danmu/jquery.barrager.js"<span class="token punctuation">></span>&lt;/script<span class="token punctuation">></span>
-    &lt;script src="/danmu/index.js"<span class="token punctuation">></span>&lt;/script<span class="token punctuation">></span>
-    '<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-主要引入上面的这三个文件:<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml">&lt;link href="/js/danmu/barrager.css" rel="stylesheet"<span class="token punctuation">></span>
-&lt;script src="/js/danmu/jquery.barrager.js"<span class="token punctuation">></span>&lt;/script<span class="token punctuation">></span>
-&lt;script src="/danmu/index.js"<span class="token punctuation">></span>&lt;/script<span class="token punctuation">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<li>首先引入弹幕插件css和js，再导入自己编写的js，弹幕插件主题已经有了，所以引入就行，但是引入主题已经有的js和css只能在侧边栏模块里面引入；<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">home_widget:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="attr">class_name:</span> <span class="string">mymusic</span></span><br><span class="line">    <span class="attr">id_name:</span> <span class="string">mymusic</span></span><br><span class="line">    <span class="attr">order:</span> <span class="number">-1</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">超好听的好吗😙</span></span><br><span class="line">    <span class="attr">icon:</span> <span class="string">fa-solid</span> <span class="string">fa-music</span></span><br><span class="line">    <span class="attr">icon_color:</span> <span class="string">&#x27;#00AEEC&#x27;</span></span><br><span class="line">    <span class="attr">url:</span> <span class="string">https://www.bilibili.com/video/BV1Da411n793?vd_source=79ce7c1b6f96c8b5a7ae552cc9be5225</span></span><br><span class="line">    <span class="attr">background:</span> <span class="string">&#x27;#fff&#x27;</span></span><br><span class="line">    <span class="attr">html:</span> <span class="string">&#x27;</span></span><br><span class="line"><span class="string">    &lt;iframe src=&quot;//player.bilibili.com/player.html?aid=215901212&amp;bvid=BV1Da411n793&amp;cid=772894060&amp;page=1&quot; scrolling=&quot;no&quot; border=&quot;0&quot; width=&quot;100%&quot; height=&quot;476&quot; frameborder=&quot;no&quot; framespacing=&quot;0&quot; allowfullscreen=&quot;true&quot;&gt; &lt;/iframe&gt;</span></span><br><span class="line"><span class="string">    &lt;link href=&quot;/js/danmu/barrager.css&quot; rel=&quot;stylesheet&quot;&gt;</span></span><br><span class="line"><span class="string">    &lt;script src=&quot;/js/danmu/jquery.barrager.js&quot;&gt;&lt;/script&gt;</span></span><br><span class="line"><span class="string">    &lt;script src=&quot;/danmu/index.js&quot;&gt;&lt;/script&gt;</span></span><br><span class="line"><span class="string">    &#x27;</span></span><br></pre></td></tr></table></figure>
+主要引入上面的这三个文件:<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&lt;link</span> <span class="string">href=&quot;/js/danmu/barrager.css&quot;</span> <span class="string">rel=&quot;stylesheet&quot;&gt;</span></span><br><span class="line"><span class="string">&lt;script</span> <span class="string">src=&quot;/js/danmu/jquery.barrager.js&quot;&gt;&lt;/script&gt;</span></span><br><span class="line"><span class="string">&lt;script</span> <span class="string">src=&quot;/danmu/index.js&quot;&gt;&lt;/script&gt;</span></span><br></pre></td></tr></table></figure>
 不懂侧边栏的，可以去侧边栏文章看看，如何新建首页侧边栏</li>
 </ol>
 <div class="tagLink"><a class="link-card" title="侧边栏" href="/post/hexo-theme-bamboo/sidebar/"><span class="link-card-backdrop" style="background-image: url(https://pic1.zhimg.com/80/v2-e012e11ff2cd3270df046e3cd4fb9fbe_1440w.jpg)"></span><div class="left"><img src="https://pic1.zhimg.com/80/v2-e012e11ff2cd3270df046e3cd4fb9fbe_1440w.jpg" class="lazyload placeholder" data-srcset="https://pic1.zhimg.com/80/v2-e012e11ff2cd3270df046e3cd4fb9fbe_1440w.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp"/></div><div class="right"><p class="text">侧边栏</p><p class="url">/post/hexo-theme-bamboo/sidebar/</p></div></a></div>
 
 <p>上面引入的三个文件中, 有一个叫做<code>/danmu/index.js</code>的文件需要我们自己编写和创建的：<br>在根目录的<code>source</code>文件夹下创建<code>danmu/index.js</code>文件:</p>
-<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token comment">// 真是闲的蛋疼 0.0....</span>
-
-<span class="token keyword">function</span> <span class="token function">renderData</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-  <span class="token keyword">let</span> homeDanmuArr <span class="token operator">=</span> <span class="token punctuation">[</span>
-    <span class="token punctuation">&#123;</span>
-      img<span class="token operator">:</span> <span class="token string">"http://120.48.121.186/medias/logo.png"</span><span class="token punctuation">,</span> <span class="token comment">//图片</span>
-      info<span class="token operator">:</span> <span class="token string">"欢迎访问bamboo主题"</span><span class="token punctuation">,</span> <span class="token comment">//文字</span>
-      href<span class="token operator">:</span> <span class="token string">"https://yuang01.github.io/"</span><span class="token punctuation">,</span> <span class="token comment">//链接</span>
-      close<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token comment">//显示关闭按钮</span>
-      speed<span class="token operator">:</span> <span class="token number">15</span><span class="token punctuation">,</span> <span class="token comment">//延迟,单位秒,默认6</span>
-      color<span class="token operator">:</span> <span class="token string">"#42b983"</span><span class="token punctuation">,</span> <span class="token comment">//颜色,默认白色</span>
-      old_ie_color<span class="token operator">:</span> <span class="token string">"#000000"</span><span class="token punctuation">,</span> <span class="token comment">//ie低版兼容色,不能与网页背景相同,默认黑色</span>
-    <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
-    <span class="token punctuation">&#123;</span>
-      img<span class="token operator">:</span> <span class="token string">"http://120.48.121.186/medias/logo.png"</span><span class="token punctuation">,</span> <span class="token comment">//图片</span>
-      info<span class="token operator">:</span> <span class="token string">"国内可以访问http://120.48.121.186"</span><span class="token punctuation">,</span> <span class="token comment">//文字</span>
-      href<span class="token operator">:</span> <span class="token string">"http://120.48.121.186"</span><span class="token punctuation">,</span> <span class="token comment">//链接</span>
-      close<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token comment">//显示关闭按钮</span>
-      speed<span class="token operator">:</span> <span class="token number">15</span><span class="token punctuation">,</span> <span class="token comment">//延迟,单位秒,默认6</span>
-      color<span class="token operator">:</span> <span class="token string">"blue"</span><span class="token punctuation">,</span> <span class="token comment">//颜色,默认白色</span>
-      old_ie_color<span class="token operator">:</span> <span class="token string">"#000000"</span><span class="token punctuation">,</span> <span class="token comment">//ie低版兼容色,不能与网页背景相同,默认黑色</span>
-    <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
-    <span class="token punctuation">&#123;</span>
-      img<span class="token operator">:</span> <span class="token string">"http://120.48.121.186/medias/logo.png"</span><span class="token punctuation">,</span> <span class="token comment">//图片</span>
-      info<span class="token operator">:</span> <span class="token string">"国内可以访问http://120.48.121.186"</span><span class="token punctuation">,</span> <span class="token comment">//文字</span>
-      href<span class="token operator">:</span> <span class="token string">"http://120.48.121.186"</span><span class="token punctuation">,</span> <span class="token comment">//链接</span>
-      close<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token comment">//显示关闭按钮</span>
-      speed<span class="token operator">:</span> <span class="token number">12</span><span class="token punctuation">,</span> <span class="token comment">//延迟,单位秒,默认6</span>
-      color<span class="token operator">:</span> <span class="token string">"red"</span><span class="token punctuation">,</span> <span class="token comment">//颜色,默认白色</span>
-      old_ie_color<span class="token operator">:</span> <span class="token string">"#000000"</span><span class="token punctuation">,</span> <span class="token comment">//ie低版兼容色,不能与网页背景相同,默认黑色</span>
-    <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
-  <span class="token punctuation">]</span><span class="token punctuation">;</span>
-  
-  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">20</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span> <span class="token comment">// 生成 20 个 &#123;&#125;, 前三个已经写好，后面17个，通过请求api赋值</span>
-    homeDanmuArr<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> homeDanmuArr<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">?</span> homeDanmuArr<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">:</span> <span class="token punctuation">&#123;</span>speed<span class="token operator">:</span> <span class="token number">12</span><span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
-  <span class="token punctuation">&#125;</span>
-  <span class="token keyword">return</span> homeDanmuArr<span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span>
-<span class="token keyword">function</span> <span class="token function">homeDanmuFn</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-  <span class="token keyword">let</span> data <span class="token operator">=</span> <span class="token function">renderData</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token comment">//每条弹幕发送间隔</span>
-  <span class="token keyword">let</span> homelooper_time <span class="token operator">=</span> <span class="token number">3</span> <span class="token operator">*</span> <span class="token number">1000</span><span class="token punctuation">;</span>
-  <span class="token keyword">let</span> items <span class="token operator">=</span> data<span class="token punctuation">;</span>
-  <span class="token comment">//弹幕总数</span>
-  <span class="token keyword">let</span> total <span class="token operator">=</span> data<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
-  <span class="token comment">//是否首次执行</span>
-  <span class="token keyword">let</span> run_once <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
-  <span class="token comment">//弹幕索引</span>
-  <span class="token keyword">let</span> index <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
-  <span class="token comment">//先执行一次</span>
-  <span class="token function">barrager</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">barrager</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span>run_once<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-      <span class="token comment">//如果是首次执行,则设置一个定时器,并且把首次执行置为false</span>
-      homelooper <span class="token operator">=</span> <span class="token function">setInterval</span><span class="token punctuation">(</span>barrager<span class="token punctuation">,</span> homelooper_time<span class="token punctuation">)</span><span class="token punctuation">;</span>
-      run_once <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
-    <span class="token comment">//发布一个弹幕</span>
-    <span class="token keyword">const</span> responseImg <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token string">'https://api.btstu.cn/sjtx/api.php?lx=c1&amp;format=json'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">const</span> imgJson <span class="token operator">=</span> <span class="token keyword">await</span> responseImg<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">const</span> responseInfo <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token string">'https://api.vvhan.com/api/ian?type=json'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">const</span> infoJson <span class="token operator">=</span> <span class="token keyword">await</span> responseInfo<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token comment">// 随机头像api</span>
-    items<span class="token punctuation">[</span>index<span class="token punctuation">]</span><span class="token punctuation">.</span>img <span class="token operator">=</span> imgJson<span class="token punctuation">.</span>imgurl<span class="token punctuation">;</span>
-    <span class="token comment">// 随机一言</span>
-    index <span class="token operator">></span> <span class="token number">2</span> <span class="token operator">&amp;&amp;</span> <span class="token punctuation">(</span>items<span class="token punctuation">[</span>index<span class="token punctuation">]</span><span class="token punctuation">.</span>info <span class="token operator">=</span> infoJson<span class="token punctuation">.</span>ishan<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"body"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">barrager</span><span class="token punctuation">(</span>items<span class="token punctuation">[</span>index<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token comment">//索引自增</span>
-    index<span class="token operator">++</span><span class="token punctuation">;</span>
-    <span class="token comment">//所有弹幕发布完毕，清除计时器。</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span>index <span class="token operator">==</span> total<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-      <span class="token function">clearInterval</span><span class="token punctuation">(</span>homelooper<span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
-  <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span>
-<span class="token function">homeDanmuFn</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-document<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'pjax:send'</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-  <span class="token keyword">if</span> <span class="token punctuation">(</span>homelooper<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-    <span class="token function">clearInterval</span><span class="token punctuation">(</span>homelooper<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    $<span class="token punctuation">.</span>fn<span class="token punctuation">.</span>barrager<span class="token punctuation">.</span><span class="token function">removeAll</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
-
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 真是闲的蛋疼 0.0....</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">renderData</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> homeDanmuArr = [</span><br><span class="line">    &#123;</span><br><span class="line">      img: <span class="string">&quot;http://120.48.121.186/medias/logo.png&quot;</span>, <span class="comment">//图片</span></span><br><span class="line">      info: <span class="string">&quot;欢迎访问bamboo主题&quot;</span>, <span class="comment">//文字</span></span><br><span class="line">      href: <span class="string">&quot;https://yuang01.github.io/&quot;</span>, <span class="comment">//链接</span></span><br><span class="line">      close: <span class="literal">true</span>, <span class="comment">//显示关闭按钮</span></span><br><span class="line">      speed: <span class="number">15</span>, <span class="comment">//延迟,单位秒,默认6</span></span><br><span class="line">      color: <span class="string">&quot;#42b983&quot;</span>, <span class="comment">//颜色,默认白色</span></span><br><span class="line">      old_ie_color: <span class="string">&quot;#000000&quot;</span>, <span class="comment">//ie低版兼容色,不能与网页背景相同,默认黑色</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      img: <span class="string">&quot;http://120.48.121.186/medias/logo.png&quot;</span>, <span class="comment">//图片</span></span><br><span class="line">      info: <span class="string">&quot;国内可以访问http://120.48.121.186&quot;</span>, <span class="comment">//文字</span></span><br><span class="line">      href: <span class="string">&quot;http://120.48.121.186&quot;</span>, <span class="comment">//链接</span></span><br><span class="line">      close: <span class="literal">true</span>, <span class="comment">//显示关闭按钮</span></span><br><span class="line">      speed: <span class="number">15</span>, <span class="comment">//延迟,单位秒,默认6</span></span><br><span class="line">      color: <span class="string">&quot;blue&quot;</span>, <span class="comment">//颜色,默认白色</span></span><br><span class="line">      old_ie_color: <span class="string">&quot;#000000&quot;</span>, <span class="comment">//ie低版兼容色,不能与网页背景相同,默认黑色</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      img: <span class="string">&quot;http://120.48.121.186/medias/logo.png&quot;</span>, <span class="comment">//图片</span></span><br><span class="line">      info: <span class="string">&quot;国内可以访问http://120.48.121.186&quot;</span>, <span class="comment">//文字</span></span><br><span class="line">      href: <span class="string">&quot;http://120.48.121.186&quot;</span>, <span class="comment">//链接</span></span><br><span class="line">      close: <span class="literal">true</span>, <span class="comment">//显示关闭按钮</span></span><br><span class="line">      speed: <span class="number">12</span>, <span class="comment">//延迟,单位秒,默认6</span></span><br><span class="line">      color: <span class="string">&quot;red&quot;</span>, <span class="comment">//颜色,默认白色</span></span><br><span class="line">      old_ie_color: <span class="string">&quot;#000000&quot;</span>, <span class="comment">//ie低版兼容色,不能与网页背景相同,默认黑色</span></span><br><span class="line">    &#125;,</span><br><span class="line">  ];</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">20</span>; i++) &#123; <span class="comment">// 生成 20 个 &#123;&#125;, 前三个已经写好，后面17个，通过请求api赋值</span></span><br><span class="line">    homeDanmuArr[i] = homeDanmuArr[i] ? homeDanmuArr[i] : &#123;<span class="attr">speed</span>: <span class="number">12</span>&#125;;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> homeDanmuArr;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">homeDanmuFn</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> data = renderData();</span><br><span class="line">  <span class="comment">//每条弹幕发送间隔</span></span><br><span class="line">  <span class="keyword">let</span> homelooper_time = <span class="number">3</span> * <span class="number">1000</span>;</span><br><span class="line">  <span class="keyword">let</span> items = data;</span><br><span class="line">  <span class="comment">//弹幕总数</span></span><br><span class="line">  <span class="keyword">let</span> total = data.length;</span><br><span class="line">  <span class="comment">//是否首次执行</span></span><br><span class="line">  <span class="keyword">let</span> run_once = <span class="literal">true</span>;</span><br><span class="line">  <span class="comment">//弹幕索引</span></span><br><span class="line">  <span class="keyword">let</span> index = <span class="number">0</span>;</span><br><span class="line">  <span class="comment">//先执行一次</span></span><br><span class="line">  barrager();</span><br><span class="line">  <span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">barrager</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (run_once) &#123;</span><br><span class="line">      <span class="comment">//如果是首次执行,则设置一个定时器,并且把首次执行置为false</span></span><br><span class="line">      homelooper = <span class="built_in">setInterval</span>(barrager, homelooper_time);</span><br><span class="line">      run_once = <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//发布一个弹幕</span></span><br><span class="line">    <span class="keyword">const</span> responseImg = <span class="keyword">await</span> fetch(<span class="string">&#x27;https://api.btstu.cn/sjtx/api.php?lx=c1&amp;format=json&#x27;</span>);</span><br><span class="line">    <span class="keyword">const</span> imgJson = <span class="keyword">await</span> responseImg.json();</span><br><span class="line">    <span class="keyword">const</span> responseInfo = <span class="keyword">await</span> fetch(<span class="string">&#x27;https://api.vvhan.com/api/ian?type=json&#x27;</span>);</span><br><span class="line">    <span class="keyword">const</span> infoJson = <span class="keyword">await</span> responseInfo.json();</span><br><span class="line">    <span class="comment">// 随机头像api</span></span><br><span class="line">    items[index].img = imgJson.imgurl;</span><br><span class="line">    <span class="comment">// 随机一言</span></span><br><span class="line">    index &gt; <span class="number">2</span> &amp;&amp; (items[index].info = infoJson.ishan);</span><br><span class="line">    $(<span class="string">&quot;body&quot;</span>).barrager(items[index]);</span><br><span class="line">    <span class="comment">//索引自增</span></span><br><span class="line">    index++;</span><br><span class="line">    <span class="comment">//所有弹幕发布完毕，清除计时器。</span></span><br><span class="line">    <span class="keyword">if</span> (index == total) &#123;</span><br><span class="line">      <span class="built_in">clearInterval</span>(homelooper);</span><br><span class="line">      <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">homeDanmuFn();</span><br><span class="line"></span><br><span class="line"><span class="built_in">document</span>.addEventListener(<span class="string">&#x27;pjax:send&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (homelooper) &#123;</span><br><span class="line">    <span class="built_in">clearInterval</span>(homelooper);</span><br><span class="line">    $.fn.barrager.removeAll();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p>然后大功告成，弹幕内容请求的随机一言api</p>
 <p>最后预览地址：<a target="_blank" rel="noopener" href="http://120.48.121.186/">http://120.48.121.186/</a></p>
 
@@ -1091,8 +975,7 @@ Font Awesomehttps://fontaw
 
   <div id="myComment">
     
-      <div id="gitment-container"></div>
-
+      <div id="beaudar_container"></div>
     
   </div>
 
@@ -1102,72 +985,253 @@ Font Awesomehttps://fontaw
   </div>
 
   <!-- 目录 -->
-  <!-- 文章详情页右侧目录 -->
-
-  <div class="toc-aside">
-    <div class="toc-main">
-      <div class="toc-aside-title">
-        <i class="fas fa-list-ul" aria-hidden="true"></i><span>本文目录</span>
+  
+<aside id='l_side'>
+  
+    
+      
+        <section class="widget side_blogger">
+  <div class='content'>
+    
+      
+        <a class='avatar flat-box rectangle' href='/about/'>
+          <img src='/img/avatar.jpg'/>
+        </a>
+      
+    
+    
+      <div class='text'>
         
-          <div class="toc-open-close">本文目录</div>
+          <h2>青墨书晚风</h2>
+        
+        
+          <p>我是副标题</p>
+
+        
+        
+          <p><span id="jinrishici-sentence">竹</span></p>
+          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
         
       </div>
+    
+    
+      <div class="social-wrapper">
+        
+          
+            <a href="/atom.xml"
+              class="social fas fa-rss flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+              
+            </a>
+          
+        
+          
+            <a href="mailto:me@xxx.com"
+              class="social fas fa-envelope flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+              
+            </a>
+          
+        
+          
+            <a href="https://github.com/yuang01/hexo-theme-bamboo"
+              class="social fab fa-github flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+              
+            </a>
+          
+        
+          
+            <a href="tencent://AddContact/?fromId=50&amp;fromSubId=1&amp;subcmd=all&amp;uin=你的qq号码"
+              class="social fab fa-qq flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+              
+            </a>
+          
+        
+      </div>
+    
+  </div>
+</section>
+
+      
+    
+  
+  
+  
+    
+      <div class="widget moyu" id="moyu" style="order: 0;background: #e9e5d1">
+        <header>
+          
+            <a style="color: #d63130" target="_blank" rel="noopener" href='http://baidu.com'><i class="fa-solid fa-fish fa-fw" aria-hidden="true"></i><span class='name'>开始摸鱼</span></a>
+          
+        </header>
+        <div class="content">
+          <img class="no-lazy" src="https://api.vvhan.com/api/moyu" style="width:100%">
+        </div>
+    </div>
+    
+  
+
+  <div class="layout_sticky">    
+    
+      
+<section class="widget side_toc">
+  
+  <header>
+    
+      <i style="color: " class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+  <div class='content'>
+    <div class="toc-main">
       <div class="toc-content">
+        <!--  -->
         <div class="toc"></div>
       </div>
     </div>
   </div>
+</section>
+<!-- 手机端目录按钮 -->
+<div id="toc-mobile-btn">
+  <i class="fas fa-list-ul" aria-hidden="true"></i>
+</div>
 
-  <!-- 手机端目录按钮 -->
-  <div id="toc-mobile-btn">
-    <i class="fas fa-list-ul" aria-hidden="true"></i>
+      
+  <section class="widget side_recent_post">
+    
+  <header>
+    
+      <a style="color: " href='/tags/'><i class="fas fa-book fa-fw" aria-hidden="true"></i><span class='name'>最新文章</span></a>
+    
+  </header>
+
+
+    <div class='content'>
+      
+      <!-- hash算法 -->
+      
+      <div class="aside-list">
+        
+          <div class="aside-list-item">
+            
+            
+            
+
+            <div class="post-img-box">
+              <a href="/post/swiper/" class="post-img " style="background-size: cover; 
+                background-position: center center;">
+                <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="https://pic1.zhimg.com/80/v2-6d0cbd4380b4959542d3f5da31c7f20c_1440w.jpg" class="lazyload placeholder" data-srcset="https://pic1.zhimg.com/80/v2-6d0cbd4380b4959542d3f5da31c7f20c_1440w.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+              </a>
+            </div>
+            <div class="post-date-title">
+              <div>
+                
+                  <span class="post-date">11-13</span>
+                
+              </div>
+              <a class="post-title" href="/post/swiper/">轮播-swiper</a>
+            </div>
+          </div>
+        
+          <div class="aside-list-item">
+            
+            
+            
+
+            <div class="post-img-box">
+              <a href="/post/hexo-theme-bamboo/page/" class="post-img " style="background-size: cover; 
+                background-position: center center;">
+                <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="https://pica.zhimg.com/80/v2-dff5af5b4e0331e3b9c22ef1004d88c8_1440w.jpg" class="lazyload placeholder" data-srcset="https://pica.zhimg.com/80/v2-dff5af5b4e0331e3b9c22ef1004d88c8_1440w.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+              </a>
+            </div>
+            <div class="post-date-title">
+              <div>
+                
+                  <span class="post-date">07-16</span>
+                
+              </div>
+              <a class="post-title" href="/post/hexo-theme-bamboo/page/">Bamboo主题-主题config配置项简介（二）</a>
+            </div>
+          </div>
+        
+          <div class="aside-list-item">
+            
+            
+            
+
+            <div class="post-img-box">
+              <a href="/post/danmu/index/" class="post-img " style="background-size: cover; 
+                background-position: center center;">
+                <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="https://pic1.zhimg.com/80/v2-e012e11ff2cd3270df046e3cd4fb9fbe_1440w.jpg" class="lazyload placeholder" data-srcset="https://pic1.zhimg.com/80/v2-e012e11ff2cd3270df046e3cd4fb9fbe_1440w.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+              </a>
+            </div>
+            <div class="post-date-title">
+              <div>
+                
+                  <span class="post-date">07-15</span>
+                
+              </div>
+              <a class="post-title" href="/post/danmu/index/">首页添加弹幕</a>
+            </div>
+          </div>
+        
+          <div class="aside-list-item">
+            
+            
+            
+
+            <div class="post-img-box">
+              <a href="/post/custom/resume-404/" class="post-img " style="background-size: cover; 
+                background-position: center center;">
+                <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="https://pic2.zhimg.com/80/v2-b72c5a1840b763674a5a1744cb49f08b_1440w.jpg" class="lazyload placeholder" data-srcset="https://pic2.zhimg.com/80/v2-b72c5a1840b763674a5a1744cb49f08b_1440w.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+              </a>
+            </div>
+            <div class="post-date-title">
+              <div>
+                
+                  <span class="post-date">07-12</span>
+                
+              </div>
+              <a class="post-title" href="/post/custom/resume-404/">制作简历（关于我）和404页面</a>
+            </div>
+          </div>
+        
+          <div class="aside-list-item">
+            
+            
+            
+
+            <div class="post-img-box">
+              <a href="/post/custom/live2d/" class="post-img " style="background-size: cover; 
+                background-position: center center;">
+                <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="https://pic1.zhimg.com/80/v2-9a1f1ad66d08747642c1b66727fea9f6_1440w.jpg" class="lazyload placeholder" data-srcset="https://pic1.zhimg.com/80/v2-9a1f1ad66d08747642c1b66727fea9f6_1440w.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+              </a>
+            </div>
+            <div class="post-date-title">
+              <div>
+                
+                  <span class="post-date">07-10</span>
+                
+              </div>
+              <a class="post-title" href="/post/custom/live2d/">自定义live2d</a>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+  </section>
+
+    
   </div>
+</aside>
 
-
-<script>
-  function closeToc(init) {
-    $(".toc-aside").css({'width': 0, 'padding': 0, 'transition': init ?  'noe' : 'width 0.3s' });
-    $(".toc-content").css({'width': 0});
-    $(".toc-aside-title span, .toc-aside-title i").css({'display': 'none'});
-    $(".main-content").css({'width': '75%', 'margin-left': 'auto', 'margin-right': 'auto',});
-  };
-  function openToc() {
-    $(".main-content").css({'width': '65%', 'margin-right': '10px', 'margin-left': 'calc(35% - 350px)'});
-    $(".toc-aside").css({'width': '300px', 'padding': '0 10px', 'transition': 'width 0.3s'});
-    $(".toc-content").css({'width': '300px'});
-    $(".toc-aside-title span, .toc-aside-title i").css({'display': 'inline-block'});
-  }
-  function openBtnClickFn () {
-    let openOrCloseBtn = $('.toc-aside .toc-aside-title .toc-open-close');
-    let open = eval('' || 'true');
-    openOrCloseBtn.click(function() {
-      if (open) {
-        closeToc();
-        open = false;
-      } else {
-        openToc();
-        open = true;
-      }
-    });
-  };
-  openBtnClickFn();
-  initCloseTocWidth(true);
-
-  function initCloseTocWidth(init) {
-    if (window.innerWidth >= 992) {
-      let isClose = false;
-      isClose && closeToc(init)
-    }
-  }
-
-  document.addEventListener('pjax:complete', function () {
-    $(".toc-aside").css({'transition': 'no'});
-  })
-  document.addEventListener('pjax:complete', function () {
-    openBtnClickFn();
-  })
-  
-</script>
 
   <!-- 图片放大 Wrap images with fancybox support -->
   <script src="/js/wrapImage.js"></script>
@@ -1691,8 +1755,13 @@ Font Awesomehttps://fontaw
     <script src="/js/app.js"></script>
     
     <!-- 文章目录所需js -->
-<link href="/js/tocbot/tocbot.css" rel="stylesheet">
-<script src="/js/tocbot/tocbot.min.js"></script>
+<!-- <link href="/js/tocbot/tocbot.css" rel="stylesheet">
+<script src="/js/tocbot/tocbot.min.js"></script> -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.18.2/tocbot.min.js"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.18.2/tocbot.css">
 
 <script>
   var headerEl = 'h2, h3, h4',  //headers 
@@ -1707,12 +1776,16 @@ Font Awesomehttps://fontaw
     // Which headings to grab inside of the contentSelector element.
     headingSelector: headerEl,
     scrollSmooth: true,
-    scrollSmoothOffset: -80,
-    headingsOffset: -($(window).height() * 0.4 - 45),
-    positionFixedSelector: '.toc-main',
-    positionFixedClass: 'is-position-fixed',
+    scrollSmoothOffset: -70,
+    headingsOffset: -300,
+    // headingsOffset: -($(window).height() * 0.4 - 45),
+    headingsOffset: -($(window).height() * 0.6 - 45),
+    // positionFixedSelector: '.toc-main',
+    // positionFixedClass: 'is-position-fixed',
     fixedSidebarOffset: 'auto',
     activeLinkClass: 'is-active-link',
+    orderedList: true,
+    collapseDepth: 20,
     // onClick: function (e) {},
   }
   if ($('.toc').length > 0) {
@@ -1765,7 +1838,7 @@ Font Awesomehttps://fontaw
     if (activePosition > (document.documentElement.clientHeight - 100)) {
       $cardToc.scrollTop = sidebarScrollTop + 150
     }
-    if (activePosition < 100) {
+    if (activePosition < 150) {
       $cardToc.scrollTop = sidebarScrollTop - 150
     }
   }
@@ -1785,7 +1858,7 @@ Font Awesomehttps://fontaw
   
   // 手机端toc按钮点击出现目录
   const mobileTocClick = function () {
-    const $cardTocLayout = document.getElementsByClassName('toc-aside')[0];
+    const $cardTocLayout = document.getElementsByClassName('side_toc')[0];
     const $cardToc = $cardTocLayout.getElementsByClassName('toc-content')[0];
     let right = '45px';
     if (window.innerWidth >= 551 && window.innerWidth <= 992) {
@@ -1817,7 +1890,7 @@ Font Awesomehttps://fontaw
 </script>
 
 <style>
-  .is-position-fixed {
+  /* .is-position-fixed {
     position: sticky !important;
     top: 74px;
   }
@@ -1832,8 +1905,9 @@ Font Awesomehttps://fontaw
     position: absolute;
     left: 12px;
     top: 0;
-  }
-</style> 
+  } */
+</style>
+ 
 
 <!-- 设置导航背景 -->
 <script>
@@ -1993,64 +2067,78 @@ Font Awesomehttps://fontaw
 
   
     <script type="text/javascript">
-  var utteranceCommon = {};
+  var beaudarCommon = {};
 
-  function check_utterance() {
+  function check_beaudar() {
     let isDark = JSON.parse(localStorage.getItem('dark')) || JSON.parse('false');
     if (isDark) {
-      utteranceCommon.Theme = 'github-dark';
+      beaudarCommon.Theme = 'github-dark';
     } else {
-      utteranceCommon.Theme = 'github-light';
+      beaudarCommon.Theme = 'github-light';
     }
 
-    return document.getElementById("gitment-container");
+    return document.getElementById("beaudar_container");
   }
-  comment_el = '#gitment-container';
-  load_utterance = function () {
+  comment_el = '#beaudar_container';
+  load_beaudar = function () {
     if ($(comment_el).length) {
       // 匿名函数，防止污染全局变量
-      const HEAD = check_utterance();
+      const HEAD = check_beaudar();
 
-      var utterances = document.createElement('script');
-      utterances.type = 'text/javascript';
-      utterances.async = true;
-      utterances.setAttribute('issue-term', 'pathname')
-      utterances.setAttribute('theme', utteranceCommon.Theme)
-      utterances.setAttribute('repo', 'yuang01/yuang01.github.io')
-      utterances.crossorigin = 'anonymous';
-      utterances.src = 'https://utteranc.es/client.js';
+      const script = document.createElement('script');
+      let issuenumber = "";
+      if (issuenumber) {
+        script.setAttribute('issue-number', issuenumber);
+      } else {
+        script.setAttribute('issue-term', "pathname");
+      }
+      script.setAttribute('src', 'https://beaudar.lipk.org/client.js');
+      script.setAttribute('repo', 'yuang01/yuang01.github.io');
+      script.setAttribute('input-position', 'top');
+      script.setAttribute('branch', 'main');
+      script.setAttribute('comment-order', 'desc');
+      script.setAttribute('label', '✨💬✨');
+      script.setAttribute('theme', beaudarCommon.Theme);
+      script.setAttribute('crossorigin', "anonymous");
       // content 是要插入评论的地方
-      document.getElementById('gitment-container').appendChild(utterances);
-
+      document.getElementById('beaudar_container').appendChild(script);
     }
   }
 
-  function dark_utterance() {
-    const HEAD = check_utterance();
+  function dark_beaudar() {
+    const HEAD = check_beaudar();
     if (!HEAD) return;
     const message = {
       type: 'set-theme',
-      theme: utteranceCommon.Theme
+      theme: beaudarCommon.Theme
     };
-    const utteranceIframe = document.querySelector('iframe');
-    utteranceIframe.contentWindow.postMessage(message, 'https://utteranc.es');
+    const beaudarIframe = document.querySelector('iframe');
+    beaudarIframe.contentWindow.postMessage(message, 'https://beaudar.lipk.org');
   }
 
-  $(document).ready(load_utterance);
+  function check_beaudar_style() {
+    // Beaudar 会往 HEAD 的首节点追加样式元素，而这个追加没有添加判断
+    // 所以 Pjax 下会多次添加样式文件，略微麻烦。
+    const checkStyle = document.querySelector('head').firstElementChild;
+    if (checkStyle.innerText.includes('beaudar')) checkStyle.remove();
+  }
+
+  $(document).ready(load_beaudar);
   document.addEventListener('pjax:complete', function () {
-    load_utterance();
+    check_beaudar_style();
+    load_beaudar();
   });
 
   $('.dark').click(function () {
     setTimeout(() => {
-      dark_utterance();
+      dark_beaudar();
     });
   })
 
 </script>
 
 <style>
-  .utterances {
+  .beaudars {
     max-width: inherit !important;
   }
 </style>

@@ -773,21 +773,6 @@
         
  <!-- prismjs 代码高亮 -->
  
-    
-    <link href="/js/prism/prism-line-numbers.css" rel="stylesheet">
-    
-        <link href="/js/prism/prism.min.css" rel="stylesheet">
-    
-
-    <style>
-        pre[class*="language-"] {
-            overflow-y: hidden;
-        }
-        .line-numbers .line-numbers-rows {
-            border: none;
-        }
-    </style>
-  
 
 
 <div class="bg-dark-floor" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -1;"></div>
@@ -831,11 +816,11 @@
       
         <div class="post-detail-header_wordcount">
           <span class="totalcount">
-            <i class="fas fa-file-text-o"></i> 字数统计: 1.8k |
+            <i class="fas fa-file-text-o"></i> 字数统计: 2k |
           </span>
   
           <span class="min2read">
-            <i class="fas fa-clock"></i> 阅读时长: 7分钟 |
+            <i class="fas fa-clock"></i> 阅读时长: 8分钟 |
           </span>
   
           
@@ -857,7 +842,7 @@
 
 
 
-<div class="post-detail-content row justify-position" 
+<div class="post-detail-content post-row" 
   style="padding-top: 0px;">
   <div class="main-content">
     <article class="post post-detail">
@@ -868,155 +853,11 @@
 <!-- 使用主题之前请先去github点个<span class='p large red'>star</span>。 -->
 <a class="ghcard" rel="external nofollow noopener noreferrer noopener" target="_blank" href="https://github.com/yuang01/hexo-theme-bamboo"><img src="https://github-readme-stats.vercel.app/api/pin/?username=yuang01&repo=hexo-theme-bamboo&theme=vue&show_owner=true" class="lazyload placeholder" data-srcset="https://github-readme-stats.vercel.app/api/pin/?username=yuang01&repo=hexo-theme-bamboo&theme=vue&show_owner=true" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp"/></a>
 
-<h2 class="bamboo-h " id="主题更改9520d0jity0">主题更改</h2><br/>
+<h2 class="bamboo-h " id="主题更改s5ubuu5ij1">主题更改</h2><br/>
 <h3 id="归档、标签、分类、关于我、友情链接页面图片自定义"><a href="#归档、标签、分类、关于我、友情链接页面图片自定义" class="headerlink" title="归档、标签、分类、关于我、友情链接页面图片自定义"></a>归档、标签、分类、关于我、友情链接页面图片自定义</h3><p>通过主题文件夹下的<code>_config.yml</code>文件中的相应属性进行设置，属性如下：</p>
-<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token comment"># 归档页面图片、描述、视频，全屏 or 'http://xxx'</span>
-<span class="token key atrule">archive</span><span class="token punctuation">:</span>
-  <span class="token key atrule">title</span><span class="token punctuation">:</span> <span class="token string">'archive'</span>
-  <span class="token key atrule">img</span><span class="token punctuation">:</span> <span class="token string">'https://pic1.zhimg.com/80/v2-1414b3a4b205e19060db18a20d08723a_1440w.jpg?source=1940ef5c'</span>
-  <span class="token key atrule">desc</span><span class="token punctuation">:</span> <span class="token string">'愿你如风，被人温柔以待'</span>
-  <span class="token key atrule">full</span><span class="token punctuation">:</span> <span class="token boolean important">true</span> <span class="token comment"># 设置为true，则图片全屏显示</span>
-  <span class="token key atrule">video</span><span class="token punctuation">:</span> <span class="token string">''</span> <span class="token comment"># 如果有值，则在屏幕大于920px的时候，全屏显示视频，为空则显示图片(img)</span>
-  <span class="token key atrule">background</span><span class="token punctuation">:</span> <span class="token string">''</span> <span class="token comment"># red or rgba(255,255,255,0.8) or other color or url("http:xxx.png")</span>
-  <span class="token key atrule">yearColor</span><span class="token punctuation">:</span> <span class="token string">''</span> <span class="token comment"># 年份字体颜色</span>
-  <span class="token key atrule">monthColor</span><span class="token punctuation">:</span> <span class="token string">''</span> <span class="token comment"># 月份字体颜色</span>
-  <span class="token key atrule">titleColor</span><span class="token punctuation">:</span> <span class="token string">''</span> <span class="token comment"># 标题字体颜色</span>
-
-<span class="token comment"># 标签页面，配置同上</span>
-<span class="token key atrule">tag</span><span class="token punctuation">:</span>
-  <span class="token key atrule">title</span><span class="token punctuation">:</span> <span class="token string">'tags'</span>
-  <span class="token key atrule">img</span><span class="token punctuation">:</span> <span class="token string">'https://pic2.zhimg.com/80/v2-bf6c555e7c61a57ba4a1fd95a9a32975_1440w.jpg'</span> <span class="token comment"># 标签页上面的图片</span>
-  <span class="token key atrule">desc</span><span class="token punctuation">:</span> <span class="token string">'愿你如风，被人温柔以待'</span>
-  <span class="token key atrule">full</span><span class="token punctuation">:</span> <span class="token boolean important">false</span> <span class="token comment"># 标签页上面的图片是否全屏显示</span>
-  <span class="token key atrule">video</span><span class="token punctuation">:</span> <span class="token string">''</span> <span class="token comment"># 如果有值，则在屏幕大于920px的时候，全屏显示视频</span>
-  <span class="token key atrule">background</span><span class="token punctuation">:</span> <span class="token string">''</span> <span class="token comment"># red or rgba(255,255,255,0.8) or other color or url("http:xxx.png")</span>
-  <span class="token key atrule">titleColor</span><span class="token punctuation">:</span> <span class="token string">''</span> <span class="token comment"># 标题字体颜色</span>
-
-<span class="token comment"># 标签详情页面，配置同上</span>
-<span class="token key atrule">tagDetail</span><span class="token punctuation">:</span>
-  <span class="token key atrule">title</span><span class="token punctuation">:</span> <span class="token string">'tag'</span>
-  <span class="token key atrule">img</span><span class="token punctuation">:</span> <span class="token string">'https://pic1.zhimg.com/80/v2-604a15cef201cf177943af2d915eb2e7_1440w.jpg?source=1940ef5c'</span>
-  <span class="token key atrule">desc</span><span class="token punctuation">:</span> <span class="token string">'愿你如风，被人温柔以待'</span> <span class="token comment"># 标签页详情上上面的图片上的文字</span>
-  <span class="token key atrule">full</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
-  <span class="token key atrule">video</span><span class="token punctuation">:</span> <span class="token string">''</span>
-  <span class="token key atrule">background</span><span class="token punctuation">:</span> <span class="token string">''</span> <span class="token comment"># red or rgba(255,255,255,0.8) or other color or url("http:xxx.png")</span>
-
-<span class="token comment"># 分类页面，配置同上</span>
-<span class="token key atrule">categories</span><span class="token punctuation">:</span>
-  <span class="token key atrule">title</span><span class="token punctuation">:</span> <span class="token string">'categories'</span>
-  <span class="token key atrule">img</span><span class="token punctuation">:</span> <span class="token string">'https://pic2.zhimg.com/80/v2-7c496c95897fb15768593cc5170c8b1a_1440w.jpg?source=1940ef5c'</span>
-  <span class="token key atrule">desc</span><span class="token punctuation">:</span> <span class="token string">'愿你如风，被人温柔以待'</span>
-  <span class="token key atrule">full</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
-  <span class="token key atrule">video</span><span class="token punctuation">:</span> <span class="token string">''</span>
-  <span class="token key atrule">background</span><span class="token punctuation">:</span> <span class="token string">''</span> <span class="token comment"># red or rgba(255,255,255,0.8) or other color or url("http:xxx.png")</span>
-  <span class="token key atrule">titleColor</span><span class="token punctuation">:</span> <span class="token string">''</span> <span class="token comment"># 标题字体颜色</span>
-
-<span class="token comment">#分类详情页面，配置同上</span>
-<span class="token key atrule">categoryDetail</span><span class="token punctuation">:</span>
-  <span class="token key atrule">title</span><span class="token punctuation">:</span> <span class="token string">'category'</span>
-  <span class="token key atrule">img</span><span class="token punctuation">:</span> <span class="token string">'https://pic3.zhimg.com/80/v2-98dcd81cb0d1fee52a807c13cedb8338_1440w.jpg?source=1940ef5c'</span>
-  <span class="token key atrule">desc</span><span class="token punctuation">:</span> <span class="token string">'愿你如风，被人温柔以待'</span>
-  <span class="token key atrule">full</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
-  <span class="token key atrule">video</span><span class="token punctuation">:</span> <span class="token string">''</span>
-  <span class="token key atrule">background</span><span class="token punctuation">:</span> <span class="token string">''</span> <span class="token comment"># red or rgba(255,255,255,0.8) or other color or url("http:xxx.png")</span>
-
-<span class="token comment"># 关于我页面，配置同上</span>
-<span class="token key atrule">about</span><span class="token punctuation">:</span>
-  <span class="token key atrule">title</span><span class="token punctuation">:</span> <span class="token string">'about'</span>
-  <span class="token key atrule">img</span><span class="token punctuation">:</span> <span class="token string">'https://pic4.zhimg.com/80/v2-d12b0c9802720897793993a5a199720f_1440w.jpg'</span>
-  <span class="token key atrule">desc</span><span class="token punctuation">:</span> <span class="token string">'愿你如风，被人温柔以待'</span>
-  <span class="token key atrule">full</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
-  <span class="token key atrule">video</span><span class="token punctuation">:</span> <span class="token string">''</span>
-  <span class="token key atrule">background</span><span class="token punctuation">:</span> <span class="token string">''</span> <span class="token comment"># red or rgba(255,255,255,0.8) or other color or url("http:xxx.png")</span>
-  <span class="token key atrule">titleColor</span><span class="token punctuation">:</span> <span class="token string">''</span> <span class="token comment"># 标题字体颜色</span>
-
-<span class="token comment"># 友情链接页面，配置同上</span>
-<span class="token key atrule">friends</span><span class="token punctuation">:</span>
-  <span class="token key atrule">title</span><span class="token punctuation">:</span> <span class="token string">'friends'</span>
-  <span class="token key atrule">img</span><span class="token punctuation">:</span> <span class="token string">'https://pic2.zhimg.com/80/v2-2407599a217ba89f9499c282f129d44d_1440w.jpg?source=1940ef5c'</span>
-  <span class="token key atrule">desc</span><span class="token punctuation">:</span> <span class="token string">'愿你如风，被人温柔以待'</span>
-  <span class="token key atrule">full</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
-  <span class="token key atrule">video</span><span class="token punctuation">:</span> <span class="token string">''</span>
-  <span class="token key atrule">background</span><span class="token punctuation">:</span> <span class="token string">''</span> <span class="token comment"># red or rgba(255,255,255,0.8) or other color or url("http:xxx.png")</span>
-  <span class="token key atrule">titleColor</span><span class="token punctuation">:</span> <span class="token string">''</span> <span class="token comment"># 标题字体颜色</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 归档页面图片、描述、视频，全屏 or &#x27;http://xxx&#x27;</span></span><br><span class="line"><span class="attr">archive:</span></span><br><span class="line">  <span class="attr">title:</span> <span class="string">&#x27;archive&#x27;</span></span><br><span class="line">  <span class="attr">img:</span> <span class="string">&#x27;https://pic1.zhimg.com/80/v2-1414b3a4b205e19060db18a20d08723a_1440w.jpg?source=1940ef5c&#x27;</span></span><br><span class="line">  <span class="attr">desc:</span> <span class="string">&#x27;愿你如风，被人温柔以待&#x27;</span></span><br><span class="line">  <span class="attr">full:</span> <span class="literal">true</span> <span class="comment"># 设置为true，则图片全屏显示</span></span><br><span class="line">  <span class="attr">video:</span> <span class="string">&#x27;&#x27;</span> <span class="comment"># 如果有值，则在屏幕大于920px的时候，全屏显示视频，为空则显示图片(img)</span></span><br><span class="line">  <span class="attr">background:</span> <span class="string">&#x27;&#x27;</span> <span class="comment"># red or rgba(255,255,255,0.8) or other color or url(&quot;http:xxx.png&quot;)</span></span><br><span class="line">  <span class="attr">yearColor:</span> <span class="string">&#x27;&#x27;</span> <span class="comment"># 年份字体颜色</span></span><br><span class="line">  <span class="attr">monthColor:</span> <span class="string">&#x27;&#x27;</span> <span class="comment"># 月份字体颜色</span></span><br><span class="line">  <span class="attr">titleColor:</span> <span class="string">&#x27;&#x27;</span> <span class="comment"># 标题字体颜色</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 标签页面，配置同上</span></span><br><span class="line"><span class="attr">tag:</span></span><br><span class="line">  <span class="attr">title:</span> <span class="string">&#x27;tags&#x27;</span></span><br><span class="line">  <span class="attr">img:</span> <span class="string">&#x27;https://pic2.zhimg.com/80/v2-bf6c555e7c61a57ba4a1fd95a9a32975_1440w.jpg&#x27;</span> <span class="comment"># 标签页上面的图片</span></span><br><span class="line">  <span class="attr">desc:</span> <span class="string">&#x27;愿你如风，被人温柔以待&#x27;</span></span><br><span class="line">  <span class="attr">full:</span> <span class="literal">false</span> <span class="comment"># 标签页上面的图片是否全屏显示</span></span><br><span class="line">  <span class="attr">video:</span> <span class="string">&#x27;&#x27;</span> <span class="comment"># 如果有值，则在屏幕大于920px的时候，全屏显示视频</span></span><br><span class="line">  <span class="attr">background:</span> <span class="string">&#x27;&#x27;</span> <span class="comment"># red or rgba(255,255,255,0.8) or other color or url(&quot;http:xxx.png&quot;)</span></span><br><span class="line">  <span class="attr">titleColor:</span> <span class="string">&#x27;&#x27;</span> <span class="comment"># 标题字体颜色</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 标签详情页面，配置同上</span></span><br><span class="line"><span class="attr">tagDetail:</span></span><br><span class="line">  <span class="attr">title:</span> <span class="string">&#x27;tag&#x27;</span></span><br><span class="line">  <span class="attr">img:</span> <span class="string">&#x27;https://pic1.zhimg.com/80/v2-604a15cef201cf177943af2d915eb2e7_1440w.jpg?source=1940ef5c&#x27;</span></span><br><span class="line">  <span class="attr">desc:</span> <span class="string">&#x27;愿你如风，被人温柔以待&#x27;</span> <span class="comment"># 标签页详情上上面的图片上的文字</span></span><br><span class="line">  <span class="attr">full:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">video:</span> <span class="string">&#x27;&#x27;</span></span><br><span class="line">  <span class="attr">background:</span> <span class="string">&#x27;&#x27;</span> <span class="comment"># red or rgba(255,255,255,0.8) or other color or url(&quot;http:xxx.png&quot;)</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 分类页面，配置同上</span></span><br><span class="line"><span class="attr">categories:</span></span><br><span class="line">  <span class="attr">title:</span> <span class="string">&#x27;categories&#x27;</span></span><br><span class="line">  <span class="attr">img:</span> <span class="string">&#x27;https://pic2.zhimg.com/80/v2-7c496c95897fb15768593cc5170c8b1a_1440w.jpg?source=1940ef5c&#x27;</span></span><br><span class="line">  <span class="attr">desc:</span> <span class="string">&#x27;愿你如风，被人温柔以待&#x27;</span></span><br><span class="line">  <span class="attr">full:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">video:</span> <span class="string">&#x27;&#x27;</span></span><br><span class="line">  <span class="attr">background:</span> <span class="string">&#x27;&#x27;</span> <span class="comment"># red or rgba(255,255,255,0.8) or other color or url(&quot;http:xxx.png&quot;)</span></span><br><span class="line">  <span class="attr">titleColor:</span> <span class="string">&#x27;&#x27;</span> <span class="comment"># 标题字体颜色</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#分类详情页面，配置同上</span></span><br><span class="line"><span class="attr">categoryDetail:</span></span><br><span class="line">  <span class="attr">title:</span> <span class="string">&#x27;category&#x27;</span></span><br><span class="line">  <span class="attr">img:</span> <span class="string">&#x27;https://pic3.zhimg.com/80/v2-98dcd81cb0d1fee52a807c13cedb8338_1440w.jpg?source=1940ef5c&#x27;</span></span><br><span class="line">  <span class="attr">desc:</span> <span class="string">&#x27;愿你如风，被人温柔以待&#x27;</span></span><br><span class="line">  <span class="attr">full:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">video:</span> <span class="string">&#x27;&#x27;</span></span><br><span class="line">  <span class="attr">background:</span> <span class="string">&#x27;&#x27;</span> <span class="comment"># red or rgba(255,255,255,0.8) or other color or url(&quot;http:xxx.png&quot;)</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 关于我页面，配置同上</span></span><br><span class="line"><span class="attr">about:</span></span><br><span class="line">  <span class="attr">title:</span> <span class="string">&#x27;about&#x27;</span></span><br><span class="line">  <span class="attr">img:</span> <span class="string">&#x27;https://pic4.zhimg.com/80/v2-d12b0c9802720897793993a5a199720f_1440w.jpg&#x27;</span></span><br><span class="line">  <span class="attr">desc:</span> <span class="string">&#x27;愿你如风，被人温柔以待&#x27;</span></span><br><span class="line">  <span class="attr">full:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">video:</span> <span class="string">&#x27;&#x27;</span></span><br><span class="line">  <span class="attr">background:</span> <span class="string">&#x27;&#x27;</span> <span class="comment"># red or rgba(255,255,255,0.8) or other color or url(&quot;http:xxx.png&quot;)</span></span><br><span class="line">  <span class="attr">titleColor:</span> <span class="string">&#x27;&#x27;</span> <span class="comment"># 标题字体颜色</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 友情链接页面，配置同上</span></span><br><span class="line"><span class="attr">friends:</span></span><br><span class="line">  <span class="attr">title:</span> <span class="string">&#x27;friends&#x27;</span></span><br><span class="line">  <span class="attr">img:</span> <span class="string">&#x27;https://pic2.zhimg.com/80/v2-2407599a217ba89f9499c282f129d44d_1440w.jpg?source=1940ef5c&#x27;</span></span><br><span class="line">  <span class="attr">desc:</span> <span class="string">&#x27;愿你如风，被人温柔以待&#x27;</span></span><br><span class="line">  <span class="attr">full:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">video:</span> <span class="string">&#x27;&#x27;</span></span><br><span class="line">  <span class="attr">background:</span> <span class="string">&#x27;&#x27;</span> <span class="comment"># red or rgba(255,255,255,0.8) or other color or url(&quot;http:xxx.png&quot;)</span></span><br><span class="line">  <span class="attr">titleColor:</span> <span class="string">&#x27;&#x27;</span> <span class="comment"># 标题字体颜色</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <h3 id="自定义主题"><a href="#自定义主题" class="headerlink" title="自定义主题"></a>自定义主题</h3><p>默认主题颜色是绿色<code>#42b983</code>，可以通过设置主题文件夹下的<code>_config.yml</code>文件中的<code>color_scheme</code>属性，进行配置，参数如下:</p>
-<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token comment"># 主题颜色</span>
-<span class="token key atrule">color_scheme</span><span class="token punctuation">:</span>
-  <span class="token comment"># ------------</span>
-  <span class="token comment"># 通用颜色</span>
-  <span class="token key atrule">common</span><span class="token punctuation">:</span>
-    <span class="token comment"># 主题色</span>
-    <span class="token key atrule">theme</span><span class="token punctuation">:</span> <span class="token string">'#42b983'</span>
-    <span class="token comment"># 主题色块内部的文字颜色</span>
-    <span class="token key atrule">inner</span><span class="token punctuation">:</span> <span class="token string">'#fff'</span>
-    <span class="token comment"># 链接色 a标签</span>
-    <span class="token key atrule">link</span><span class="token punctuation">:</span> <span class="token string">'#42b983'</span>
-    <span class="token comment"># border颜色，目前轮播图的 阅读更多按钮 和 回到顶部按钮 有用到该border，可自行配置该颜色</span>
-    <span class="token key atrule">border</span><span class="token punctuation">:</span> <span class="token string">'2px solid #42b983'</span>
-    <span class="token comment"># 选中区域文字的背景颜色, 后面的小数代表透明度</span>
-    <span class="token key atrule">selection</span><span class="token punctuation">:</span> <span class="token string">'alpha(#42b983, 0.8)'</span>
-    <span class="token comment"># 顶部页面加载进度条颜色</span>
-    <span class="token key atrule">pace</span><span class="token punctuation">:</span> <span class="token string">'#f6a427'</span>
-    <span class="token comment"># 滚动条颜色, 空字符串则滚动条使用 主题色，否则强制使用该颜色</span>
-    <span class="token key atrule">scroll</span><span class="token punctuation">:</span> <span class="token string">'#42b983'</span>
-    <span class="token comment"># 首页文章列表的背景颜色, url("http://xxx.png") or red or #000 or rgba() ..</span>
-    <span class="token key atrule">postListBackground</span><span class="token punctuation">:</span> <span class="token string">'rgba(255,255,255,1)'</span>
-    <span class="token comment"># 首页页面的底部背景颜色，空字符串透明('transparent')，可以是白色('#fff')等颜色, 也可以是图片，例如  'url("https://img11.360buyimg.com/ddimg/jfs/t1/169624/29/16/4603017/5fec2c79Eecbd536a/308b28b82a013cd2.png")'</span>
-    <span class="token key atrule">bgFloor</span><span class="token punctuation">:</span> <span class="token string">'url("https://pic1.zhimg.com/80/v2-b4b71405d08bc1952025ba1bd5db54f3_1440w.jpg?source=1940ef5c")'</span> <span class="token comment"># 如果是图片地址，url里面请用双引号</span>
-    <span class="token comment"># 头部导航是否背景透明，滚动条在对顶端的时候,头部导航背景透明</span>
-    <span class="token key atrule">headerMenuTransparent</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
-    <span class="token key atrule">headerMenuBackgroundColor</span><span class="token punctuation">:</span> <span class="token string">''</span> 
-    <span class="token comment"># headerMenuBackgroundColor:头部导航背景颜色, 为空则使用theme主题色, </span>
-    <span class="token comment"># 写法: alpha(#42b983, 0.8) or rgba(268, 264, 269, 0.8) or #42b983 or red or 也可以是渐变颜色 linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%)  or 也可以是url("图片地址")</span>
-  <span class="token comment"># 文章详情页 颜色属性</span>
-  <span class="token key atrule">post</span><span class="token punctuation">:</span>
-    <span class="token comment"># 文章详情页面-->标题在图片上时候的颜色</span>
-    <span class="token key atrule">headerTitle</span><span class="token punctuation">:</span> <span class="token string">'#fff'</span>
-    <span class="token comment"># 文章详情页面-->标题在图片上时候字体粗细</span>
-    <span class="token key atrule">headerTitleFontWeight</span><span class="token punctuation">:</span> <span class="token string">'normal'</span> <span class="token comment"># 100-900 or bold, normal, bolder, lighter</span>
-    <span class="token comment">#文章详情页面--> copy按钮背景色, 空字符串则copy按钮背景为 主题颜色，否则强制使用该颜色</span>
-    <span class="token key atrule">copyBackground</span><span class="token punctuation">:</span> <span class="token string">''</span>
-    <span class="token comment">#文章详情页面--> copy按钮文字颜色, 空字符串则copy按钮字体颜色为 主题色块内部的文字颜色，否则强制使用该颜色</span>
-    <span class="token key atrule">copyColor</span><span class="token punctuation">:</span> <span class="token string">''</span>
-    <span class="token comment"># 代码高亮部分的背景色, 空字符串则使用-代码高亮配置-的背景颜色，否则强制使用该颜色作为代码高亮背景色</span>
-    <span class="token key atrule">codeBackground</span><span class="token punctuation">:</span> <span class="token string">''</span>
-    <span class="token comment"># 文章详情页面--> p标签使用 ``符号 突出的文字颜色</span>
-    <span class="token key atrule">pLight</span><span class="token punctuation">:</span> <span class="token string">'#d63200'</span>
-    <span class="token comment"># 文章详情-页面-> p标签颜色</span>
-    <span class="token key atrule">p</span><span class="token punctuation">:</span> <span class="token string">'#273849'</span>
-    <span class="token comment"># 文章详情页面--> title颜色， h1, h2, h3..</span>
-    <span class="token key atrule">title</span><span class="token punctuation">:</span> <span class="token string">'#273849'</span>
-    <span class="token comment"># 文章详情页面 -->右侧目录文字颜色</span>
-    <span class="token key atrule">toc</span><span class="token punctuation">:</span> <span class="token string">'#273849'</span>
-    <span class="token comment"># 文章详情页面 --> font-family</span>
-    <span class="token key atrule">fontFamily</span><span class="token punctuation">:</span> <span class="token string">'-apple-system,BlinkMacSystemFont,PingFang SC,Segoe UI,Microsoft YaHei,Hiragino Sans GB,Helvetica Neue,Helvetica,Arial,sans-serif'</span>
-    <span class="token comment"># 文章详情页面 --> 透明度, 左侧文章内容背景颜色的透明度</span>
-    <span class="token key atrule">contentOpacity</span><span class="token punctuation">:</span> <span class="token string">'1'</span>
-    <span class="token comment"># 文章详情页面 --> 透明度, 右侧文章目录背景颜色的透明度</span>
-    <span class="token key atrule">tocOpacity</span><span class="token punctuation">:</span> <span class="token string">'0.8'</span>
-    <span class="token comment"># bgImg -- 文章详情页背景图, 针对所有的文章详情页背景</span>
-    <span class="token comment"># 可以是数组（数组里面是图片地址，多个图片地址会采用 幻灯片 循环显示），</span>
-    <span class="token comment"># 如果背景只想要一个图片：可以使用 ['http://xxxxxx'] 或者 'http://xxxxxxx'，这样的写法, 图片地址也可以是本地路径('/img/xxx.png' or '/medias/xxx.png')</span>
-    <span class="token comment"># 也可以是颜色字符串（例如'#C7EDCC', 或者rgba(0 ,0 ,0, 0.8) 那么会使用该颜色作为背景）</span>
-    <span class="token comment"># 空字符串则背景颜色为透明</span>
-    <span class="token key atrule">bgImg</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>
-      <span class="token string">'https://pic4.zhimg.com/80/v2-5030587bac1b856d09e0a119ff6d7c04_1440w.jpg'</span><span class="token punctuation">,</span>
-      <span class="token string">'https://api.btstu.cn/sjbz/api.php'</span>
-    <span class="token punctuation">]</span>
-    <span class="token comment"># 背景图幻灯片模式--延迟时间</span>
-    <span class="token comment"># 如果bgImg设置为数组，数组里面是多个图片地址,则 bgImgDelay表示背景图幻灯片的 延迟间隔时间</span>
-    <span class="token key atrule">bgImgDelay</span><span class="token punctuation">:</span> <span class="token number">180000</span> <span class="token comment"># 默认三分钟，切换一张图片</span>
-    <span class="token comment"># 如果bgImg设置为数组，数组里面是多个图片地址,则 bgImgTransition表示背景图幻灯片的 动画效果</span>
-    <span class="token key atrule">bgImgTransition</span><span class="token punctuation">:</span> <span class="token string">'fade'</span> <span class="token comment"># fade, scale, translate-fade,</span>
-    <span class="token comment">## bgImg，bgImgDelay，bgImgTransition三个属性除了可以在这里全局配置，还可以在单独的文章里配置</span>
-    <span class="token comment">## 单独的文章里配置，则这bgImg，bgImgDelay，bgImgTransition三个属性优先使用单独的文章里配置的</span>
-  <span class="token key atrule">footer</span><span class="token punctuation">:</span>
-    <span class="token comment"># 为空则使用 theme主题色， 写法: alpha(#42b983, 0.8) or rgba(268, 264, 269, 0.8) or #42b983 or red or 也可以是渐变颜色 linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%) or 也可以是url("图片地址")</span>
-    <span class="token key atrule">background</span><span class="token punctuation">:</span> <span class="token string">''</span> 
-    <span class="token comment"># 页脚里面的a标签鼠标移入时候的颜色 red or #000 or other color</span>
-    <span class="token key atrule">aHover</span><span class="token punctuation">:</span> <span class="token string">'orangered'</span> 
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 主题颜色</span></span><br><span class="line"><span class="attr">color_scheme:</span></span><br><span class="line">  <span class="comment"># ------------</span></span><br><span class="line">  <span class="comment"># 通用颜色</span></span><br><span class="line">  <span class="attr">common:</span></span><br><span class="line">    <span class="comment"># 主题色</span></span><br><span class="line">    <span class="attr">theme:</span> <span class="string">&#x27;#42b983&#x27;</span></span><br><span class="line">    <span class="comment"># 主题色块内部的文字颜色</span></span><br><span class="line">    <span class="attr">inner:</span> <span class="string">&#x27;#fff&#x27;</span></span><br><span class="line">    <span class="comment"># 链接色 a标签</span></span><br><span class="line">    <span class="attr">link:</span> <span class="string">&#x27;#42b983&#x27;</span></span><br><span class="line">    <span class="comment"># border颜色，目前轮播图的 阅读更多按钮 和 回到顶部按钮 有用到该border，可自行配置该颜色</span></span><br><span class="line">    <span class="attr">border:</span> <span class="string">&#x27;2px solid #42b983&#x27;</span></span><br><span class="line">    <span class="comment"># 选中区域文字的背景颜色, 后面的小数代表透明度</span></span><br><span class="line">    <span class="attr">selection:</span> <span class="string">&#x27;alpha(#42b983, 0.8)&#x27;</span></span><br><span class="line">    <span class="comment"># 顶部页面加载进度条颜色</span></span><br><span class="line">    <span class="attr">pace:</span> <span class="string">&#x27;#f6a427&#x27;</span></span><br><span class="line">    <span class="comment"># 滚动条颜色, 空字符串则滚动条使用 主题色，否则强制使用该颜色</span></span><br><span class="line">    <span class="attr">scroll:</span> <span class="string">&#x27;#42b983&#x27;</span></span><br><span class="line">    <span class="comment"># 首页文章列表的背景颜色, url(&quot;http://xxx.png&quot;) or red or #000 or rgba() ..</span></span><br><span class="line">    <span class="attr">postListBackground:</span> <span class="string">&#x27;rgba(255,255,255,1)&#x27;</span></span><br><span class="line">    <span class="comment"># 首页页面的底部背景颜色，空字符串透明(&#x27;transparent&#x27;)，可以是白色(&#x27;#fff&#x27;)等颜色, 也可以是图片，例如  &#x27;url(&quot;https://img11.360buyimg.com/ddimg/jfs/t1/169624/29/16/4603017/5fec2c79Eecbd536a/308b28b82a013cd2.png&quot;)&#x27;</span></span><br><span class="line">    <span class="attr">bgFloor:</span> <span class="string">&#x27;url(&quot;https://pic1.zhimg.com/80/v2-b4b71405d08bc1952025ba1bd5db54f3_1440w.jpg?source=1940ef5c&quot;)&#x27;</span> <span class="comment"># 如果是图片地址，url里面请用双引号</span></span><br><span class="line">    <span class="comment"># 头部导航是否背景透明，滚动条在对顶端的时候,头部导航背景透明</span></span><br><span class="line">    <span class="attr">headerMenuTransparent:</span> <span class="literal">true</span></span><br><span class="line">    <span class="attr">headerMenuBackgroundColor:</span> <span class="string">&#x27;&#x27;</span> </span><br><span class="line">    <span class="comment"># headerMenuBackgroundColor:头部导航背景颜色, 为空则使用theme主题色, </span></span><br><span class="line">    <span class="comment"># 写法: alpha(#42b983, 0.8) or rgba(268, 264, 269, 0.8) or #42b983 or red or 也可以是渐变颜色 linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%)  or 也可以是url(&quot;图片地址&quot;)</span></span><br><span class="line">  <span class="comment"># 文章详情页 颜色属性</span></span><br><span class="line">  <span class="attr">post:</span></span><br><span class="line">    <span class="comment"># 文章详情页面--&gt;标题在图片上时候的颜色</span></span><br><span class="line">    <span class="attr">headerTitle:</span> <span class="string">&#x27;#fff&#x27;</span></span><br><span class="line">    <span class="comment"># 文章详情页面--&gt;标题在图片上时候字体粗细</span></span><br><span class="line">    <span class="attr">headerTitleFontWeight:</span> <span class="string">&#x27;normal&#x27;</span> <span class="comment"># 100-900 or bold, normal, bolder, lighter</span></span><br><span class="line">    <span class="comment">#文章详情页面--&gt; copy按钮背景色, 空字符串则copy按钮背景为 主题颜色，否则强制使用该颜色</span></span><br><span class="line">    <span class="attr">copyBackground:</span> <span class="string">&#x27;&#x27;</span></span><br><span class="line">    <span class="comment">#文章详情页面--&gt; copy按钮文字颜色, 空字符串则copy按钮字体颜色为 主题色块内部的文字颜色，否则强制使用该颜色</span></span><br><span class="line">    <span class="attr">copyColor:</span> <span class="string">&#x27;&#x27;</span></span><br><span class="line">    <span class="comment"># 代码高亮部分的背景色, 空字符串则使用-代码高亮配置-的背景颜色，否则强制使用该颜色作为代码高亮背景色</span></span><br><span class="line">    <span class="attr">codeBackground:</span> <span class="string">&#x27;&#x27;</span></span><br><span class="line">    <span class="comment"># 文章详情页面--&gt; p标签使用 ``符号 突出的文字颜色</span></span><br><span class="line">    <span class="attr">pLight:</span> <span class="string">&#x27;#d63200&#x27;</span></span><br><span class="line">    <span class="comment"># 文章详情-页面-&gt; p标签颜色</span></span><br><span class="line">    <span class="attr">p:</span> <span class="string">&#x27;#273849&#x27;</span></span><br><span class="line">    <span class="comment"># 文章详情页面--&gt; title颜色， h1, h2, h3..</span></span><br><span class="line">    <span class="attr">title:</span> <span class="string">&#x27;#273849&#x27;</span></span><br><span class="line">    <span class="comment"># 文章详情页面 --&gt;右侧目录文字颜色</span></span><br><span class="line">    <span class="attr">toc:</span> <span class="string">&#x27;#273849&#x27;</span></span><br><span class="line">    <span class="comment"># 文章详情页面 --&gt; font-family</span></span><br><span class="line">    <span class="attr">fontFamily:</span> <span class="string">&#x27;-apple-system,BlinkMacSystemFont,PingFang SC,Segoe UI,Microsoft YaHei,Hiragino Sans GB,Helvetica Neue,Helvetica,Arial,sans-serif&#x27;</span></span><br><span class="line">    <span class="comment"># 文章详情页面 --&gt; 透明度, 左侧文章内容背景颜色的透明度</span></span><br><span class="line">    <span class="attr">contentOpacity:</span> <span class="string">&#x27;1&#x27;</span></span><br><span class="line">    <span class="comment"># 文章详情页面 --&gt; 透明度, 右侧文章目录背景颜色的透明度</span></span><br><span class="line">    <span class="attr">tocOpacity:</span> <span class="string">&#x27;0.8&#x27;</span></span><br><span class="line">    <span class="comment"># bgImg -- 文章详情页背景图, 针对所有的文章详情页背景</span></span><br><span class="line">    <span class="comment"># 可以是数组（数组里面是图片地址，多个图片地址会采用 幻灯片 循环显示），</span></span><br><span class="line">    <span class="comment"># 如果背景只想要一个图片：可以使用 [&#x27;http://xxxxxx&#x27;] 或者 &#x27;http://xxxxxxx&#x27;，这样的写法, 图片地址也可以是本地路径(&#x27;/img/xxx.png&#x27; or &#x27;/medias/xxx.png&#x27;)</span></span><br><span class="line">    <span class="comment"># 也可以是颜色字符串（例如&#x27;#C7EDCC&#x27;, 或者rgba(0 ,0 ,0, 0.8) 那么会使用该颜色作为背景）</span></span><br><span class="line">    <span class="comment"># 空字符串则背景颜色为透明</span></span><br><span class="line">    <span class="attr">bgImg:</span> [</span><br><span class="line">      <span class="string">&#x27;https://pic4.zhimg.com/80/v2-5030587bac1b856d09e0a119ff6d7c04_1440w.jpg&#x27;</span>,</span><br><span class="line">      <span class="string">&#x27;https://api.btstu.cn/sjbz/api.php&#x27;</span></span><br><span class="line">    ]</span><br><span class="line">    <span class="comment"># 背景图幻灯片模式--延迟时间</span></span><br><span class="line">    <span class="comment"># 如果bgImg设置为数组，数组里面是多个图片地址,则 bgImgDelay表示背景图幻灯片的 延迟间隔时间</span></span><br><span class="line">    <span class="attr">bgImgDelay:</span> <span class="number">180000</span> <span class="comment"># 默认三分钟，切换一张图片</span></span><br><span class="line">    <span class="comment"># 如果bgImg设置为数组，数组里面是多个图片地址,则 bgImgTransition表示背景图幻灯片的 动画效果</span></span><br><span class="line">    <span class="attr">bgImgTransition:</span> <span class="string">&#x27;fade&#x27;</span> <span class="comment"># fade, scale, translate-fade,</span></span><br><span class="line">    <span class="comment">## bgImg，bgImgDelay，bgImgTransition三个属性除了可以在这里全局配置，还可以在单独的文章里配置</span></span><br><span class="line">    <span class="comment">## 单独的文章里配置，则这bgImg，bgImgDelay，bgImgTransition三个属性优先使用单独的文章里配置的</span></span><br><span class="line">  <span class="attr">footer:</span></span><br><span class="line">    <span class="comment"># 为空则使用 theme主题色， 写法: alpha(#42b983, 0.8) or rgba(268, 264, 269, 0.8) or #42b983 or red or 也可以是渐变颜色 linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%) or 也可以是url(&quot;图片地址&quot;)</span></span><br><span class="line">    <span class="attr">background:</span> <span class="string">&#x27;&#x27;</span> </span><br><span class="line">    <span class="comment"># 页脚里面的a标签鼠标移入时候的颜色 red or #000 or other color</span></span><br><span class="line">    <span class="attr">aHover:</span> <span class="string">&#x27;orangered&#x27;</span> </span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p>这里重点说几个参数，<code>theme</code>是主题色参数, <code>bgFloor</code>是<code>首页</code>背景颜色或者背景图片参数, <code>bgImg</code>是<code>文章详情页面</code>的背景图片或者背景颜色参数, <code>contentOpacity</code>是文章详情页面的左侧文章内容背景颜色的透明度，<code>tocOpacity</code>是文章详情页面的右侧文章目录背景颜色的透明度，其余参数上面有注释哈</p>
 
       </div>
@@ -1143,8 +984,7 @@
 
   <div id="myComment">
     
-      <div id="gitment-container"></div>
-
+      <div id="beaudar_container"></div>
     
   </div>
 
@@ -1154,72 +994,253 @@
   </div>
 
   <!-- 目录 -->
-  <!-- 文章详情页右侧目录 -->
-
-  <div class="toc-aside">
-    <div class="toc-main">
-      <div class="toc-aside-title">
-        <i class="fas fa-list-ul" aria-hidden="true"></i><span>本文目录</span>
+  
+<aside id='l_side'>
+  
+    
+      
+        <section class="widget side_blogger">
+  <div class='content'>
+    
+      
+        <a class='avatar flat-box rectangle' href='/about/'>
+          <img src='/img/avatar.jpg'/>
+        </a>
+      
+    
+    
+      <div class='text'>
         
-          <div class="toc-open-close">本文目录</div>
+          <h2>青墨书晚风</h2>
+        
+        
+          <p>我是副标题</p>
+
+        
+        
+          <p><span id="jinrishici-sentence">竹</span></p>
+          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
         
       </div>
+    
+    
+      <div class="social-wrapper">
+        
+          
+            <a href="/atom.xml"
+              class="social fas fa-rss flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+              
+            </a>
+          
+        
+          
+            <a href="mailto:me@xxx.com"
+              class="social fas fa-envelope flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+              
+            </a>
+          
+        
+          
+            <a href="https://github.com/yuang01/hexo-theme-bamboo"
+              class="social fab fa-github flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+              
+            </a>
+          
+        
+          
+            <a href="tencent://AddContact/?fromId=50&amp;fromSubId=1&amp;subcmd=all&amp;uin=你的qq号码"
+              class="social fab fa-qq flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+              
+            </a>
+          
+        
+      </div>
+    
+  </div>
+</section>
+
+      
+    
+  
+  
+  
+    
+      <div class="widget moyu" id="moyu" style="order: 0;background: #e9e5d1">
+        <header>
+          
+            <a style="color: #d63130" target="_blank" rel="noopener" href='http://baidu.com'><i class="fa-solid fa-fish fa-fw" aria-hidden="true"></i><span class='name'>开始摸鱼</span></a>
+          
+        </header>
+        <div class="content">
+          <img class="no-lazy" src="https://api.vvhan.com/api/moyu" style="width:100%">
+        </div>
+    </div>
+    
+  
+
+  <div class="layout_sticky">    
+    
+      
+<section class="widget side_toc">
+  
+  <header>
+    
+      <i style="color: " class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+  <div class='content'>
+    <div class="toc-main">
       <div class="toc-content">
+        <!-- <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%BB%E9%A2%98%E6%9B%B4%E6%94%B9s5ubuu5ij1"><span class="toc-text">主题更改</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BD%92%E6%A1%A3%E3%80%81%E6%A0%87%E7%AD%BE%E3%80%81%E5%88%86%E7%B1%BB%E3%80%81%E5%85%B3%E4%BA%8E%E6%88%91%E3%80%81%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5%E9%A1%B5%E9%9D%A2%E5%9B%BE%E7%89%87%E8%87%AA%E5%AE%9A%E4%B9%89"><span class="toc-text">归档、标签、分类、关于我、友情链接页面图片自定义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E4%B8%BB%E9%A2%98"><span class="toc-text">自定义主题</span></a></li></ol></li></ol> -->
         <div class="toc"></div>
       </div>
     </div>
   </div>
+</section>
+<!-- 手机端目录按钮 -->
+<div id="toc-mobile-btn">
+  <i class="fas fa-list-ul" aria-hidden="true"></i>
+</div>
 
-  <!-- 手机端目录按钮 -->
-  <div id="toc-mobile-btn">
-    <i class="fas fa-list-ul" aria-hidden="true"></i>
+      
+  <section class="widget side_recent_post">
+    
+  <header>
+    
+      <a style="color: " href='/tags/'><i class="fas fa-book fa-fw" aria-hidden="true"></i><span class='name'>最新文章</span></a>
+    
+  </header>
+
+
+    <div class='content'>
+      
+      <!-- hash算法 -->
+      
+      <div class="aside-list">
+        
+          <div class="aside-list-item">
+            
+            
+            
+
+            <div class="post-img-box">
+              <a href="/post/swiper/" class="post-img " style="background-size: cover; 
+                background-position: center center;">
+                <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="https://pic1.zhimg.com/80/v2-6d0cbd4380b4959542d3f5da31c7f20c_1440w.jpg" class="lazyload placeholder" data-srcset="https://pic1.zhimg.com/80/v2-6d0cbd4380b4959542d3f5da31c7f20c_1440w.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+              </a>
+            </div>
+            <div class="post-date-title">
+              <div>
+                
+                  <span class="post-date">11-13</span>
+                
+              </div>
+              <a class="post-title" href="/post/swiper/">轮播-swiper</a>
+            </div>
+          </div>
+        
+          <div class="aside-list-item">
+            
+            
+            
+
+            <div class="post-img-box">
+              <a href="/post/hexo-theme-bamboo/page/" class="post-img " style="background-size: cover; 
+                background-position: center center;">
+                <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="https://pica.zhimg.com/80/v2-dff5af5b4e0331e3b9c22ef1004d88c8_1440w.jpg" class="lazyload placeholder" data-srcset="https://pica.zhimg.com/80/v2-dff5af5b4e0331e3b9c22ef1004d88c8_1440w.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+              </a>
+            </div>
+            <div class="post-date-title">
+              <div>
+                
+                  <span class="post-date">07-16</span>
+                
+              </div>
+              <a class="post-title" href="/post/hexo-theme-bamboo/page/">Bamboo主题-主题config配置项简介（二）</a>
+            </div>
+          </div>
+        
+          <div class="aside-list-item">
+            
+            
+            
+
+            <div class="post-img-box">
+              <a href="/post/danmu/index/" class="post-img " style="background-size: cover; 
+                background-position: center center;">
+                <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="https://pic1.zhimg.com/80/v2-e012e11ff2cd3270df046e3cd4fb9fbe_1440w.jpg" class="lazyload placeholder" data-srcset="https://pic1.zhimg.com/80/v2-e012e11ff2cd3270df046e3cd4fb9fbe_1440w.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+              </a>
+            </div>
+            <div class="post-date-title">
+              <div>
+                
+                  <span class="post-date">07-15</span>
+                
+              </div>
+              <a class="post-title" href="/post/danmu/index/">首页添加弹幕</a>
+            </div>
+          </div>
+        
+          <div class="aside-list-item">
+            
+            
+            
+
+            <div class="post-img-box">
+              <a href="/post/custom/resume-404/" class="post-img " style="background-size: cover; 
+                background-position: center center;">
+                <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="https://pic2.zhimg.com/80/v2-b72c5a1840b763674a5a1744cb49f08b_1440w.jpg" class="lazyload placeholder" data-srcset="https://pic2.zhimg.com/80/v2-b72c5a1840b763674a5a1744cb49f08b_1440w.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+              </a>
+            </div>
+            <div class="post-date-title">
+              <div>
+                
+                  <span class="post-date">07-12</span>
+                
+              </div>
+              <a class="post-title" href="/post/custom/resume-404/">制作简历（关于我）和404页面</a>
+            </div>
+          </div>
+        
+          <div class="aside-list-item">
+            
+            
+            
+
+            <div class="post-img-box">
+              <a href="/post/custom/live2d/" class="post-img " style="background-size: cover; 
+                background-position: center center;">
+                <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="https://pic1.zhimg.com/80/v2-9a1f1ad66d08747642c1b66727fea9f6_1440w.jpg" class="lazyload placeholder" data-srcset="https://pic1.zhimg.com/80/v2-9a1f1ad66d08747642c1b66727fea9f6_1440w.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+              </a>
+            </div>
+            <div class="post-date-title">
+              <div>
+                
+                  <span class="post-date">07-10</span>
+                
+              </div>
+              <a class="post-title" href="/post/custom/live2d/">自定义live2d</a>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+  </section>
+
+    
   </div>
+</aside>
 
-
-<script>
-  function closeToc(init) {
-    $(".toc-aside").css({'width': 0, 'padding': 0, 'transition': init ?  'noe' : 'width 0.3s' });
-    $(".toc-content").css({'width': 0});
-    $(".toc-aside-title span, .toc-aside-title i").css({'display': 'none'});
-    $(".main-content").css({'width': '75%', 'margin-left': 'auto', 'margin-right': 'auto',});
-  };
-  function openToc() {
-    $(".main-content").css({'width': '65%', 'margin-right': '10px', 'margin-left': 'calc(35% - 350px)'});
-    $(".toc-aside").css({'width': '300px', 'padding': '0 10px', 'transition': 'width 0.3s'});
-    $(".toc-content").css({'width': '300px'});
-    $(".toc-aside-title span, .toc-aside-title i").css({'display': 'inline-block'});
-  }
-  function openBtnClickFn () {
-    let openOrCloseBtn = $('.toc-aside .toc-aside-title .toc-open-close');
-    let open = eval('' || 'true');
-    openOrCloseBtn.click(function() {
-      if (open) {
-        closeToc();
-        open = false;
-      } else {
-        openToc();
-        open = true;
-      }
-    });
-  };
-  openBtnClickFn();
-  initCloseTocWidth(true);
-
-  function initCloseTocWidth(init) {
-    if (window.innerWidth >= 992) {
-      let isClose = false;
-      isClose && closeToc(init)
-    }
-  }
-
-  document.addEventListener('pjax:complete', function () {
-    $(".toc-aside").css({'transition': 'no'});
-  })
-  document.addEventListener('pjax:complete', function () {
-    openBtnClickFn();
-  })
-  
-</script>
 
   <!-- 图片放大 Wrap images with fancybox support -->
   <script src="/js/wrapImage.js"></script>
@@ -1743,8 +1764,13 @@
     <script src="/js/app.js"></script>
     
     <!-- 文章目录所需js -->
-<link href="/js/tocbot/tocbot.css" rel="stylesheet">
-<script src="/js/tocbot/tocbot.min.js"></script>
+<!-- <link href="/js/tocbot/tocbot.css" rel="stylesheet">
+<script src="/js/tocbot/tocbot.min.js"></script> -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.18.2/tocbot.min.js"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.18.2/tocbot.css">
 
 <script>
   var headerEl = 'h2, h3, h4',  //headers 
@@ -1759,12 +1785,16 @@
     // Which headings to grab inside of the contentSelector element.
     headingSelector: headerEl,
     scrollSmooth: true,
-    scrollSmoothOffset: -80,
-    headingsOffset: -($(window).height() * 0.4 - 45),
-    positionFixedSelector: '.toc-main',
-    positionFixedClass: 'is-position-fixed',
+    scrollSmoothOffset: -70,
+    headingsOffset: -300,
+    // headingsOffset: -($(window).height() * 0.4 - 45),
+    headingsOffset: -($(window).height() * 0.6 - 45),
+    // positionFixedSelector: '.toc-main',
+    // positionFixedClass: 'is-position-fixed',
     fixedSidebarOffset: 'auto',
     activeLinkClass: 'is-active-link',
+    orderedList: true,
+    collapseDepth: 20,
     // onClick: function (e) {},
   }
   if ($('.toc').length > 0) {
@@ -1817,7 +1847,7 @@
     if (activePosition > (document.documentElement.clientHeight - 100)) {
       $cardToc.scrollTop = sidebarScrollTop + 150
     }
-    if (activePosition < 100) {
+    if (activePosition < 150) {
       $cardToc.scrollTop = sidebarScrollTop - 150
     }
   }
@@ -1837,7 +1867,7 @@
   
   // 手机端toc按钮点击出现目录
   const mobileTocClick = function () {
-    const $cardTocLayout = document.getElementsByClassName('toc-aside')[0];
+    const $cardTocLayout = document.getElementsByClassName('side_toc')[0];
     const $cardToc = $cardTocLayout.getElementsByClassName('toc-content')[0];
     let right = '45px';
     if (window.innerWidth >= 551 && window.innerWidth <= 992) {
@@ -1869,7 +1899,7 @@
 </script>
 
 <style>
-  .is-position-fixed {
+  /* .is-position-fixed {
     position: sticky !important;
     top: 74px;
   }
@@ -1884,8 +1914,9 @@
     position: absolute;
     left: 12px;
     top: 0;
-  }
-</style> 
+  } */
+</style>
+ 
 
 <!-- 设置导航背景 -->
 <script>
@@ -2045,64 +2076,78 @@
 
   
     <script type="text/javascript">
-  var utteranceCommon = {};
+  var beaudarCommon = {};
 
-  function check_utterance() {
+  function check_beaudar() {
     let isDark = JSON.parse(localStorage.getItem('dark')) || JSON.parse('false');
     if (isDark) {
-      utteranceCommon.Theme = 'github-dark';
+      beaudarCommon.Theme = 'github-dark';
     } else {
-      utteranceCommon.Theme = 'github-light';
+      beaudarCommon.Theme = 'github-light';
     }
 
-    return document.getElementById("gitment-container");
+    return document.getElementById("beaudar_container");
   }
-  comment_el = '#gitment-container';
-  load_utterance = function () {
+  comment_el = '#beaudar_container';
+  load_beaudar = function () {
     if ($(comment_el).length) {
       // 匿名函数，防止污染全局变量
-      const HEAD = check_utterance();
+      const HEAD = check_beaudar();
 
-      var utterances = document.createElement('script');
-      utterances.type = 'text/javascript';
-      utterances.async = true;
-      utterances.setAttribute('issue-term', 'pathname')
-      utterances.setAttribute('theme', utteranceCommon.Theme)
-      utterances.setAttribute('repo', 'yuang01/yuang01.github.io')
-      utterances.crossorigin = 'anonymous';
-      utterances.src = 'https://utteranc.es/client.js';
+      const script = document.createElement('script');
+      let issuenumber = "";
+      if (issuenumber) {
+        script.setAttribute('issue-number', issuenumber);
+      } else {
+        script.setAttribute('issue-term', "pathname");
+      }
+      script.setAttribute('src', 'https://beaudar.lipk.org/client.js');
+      script.setAttribute('repo', 'yuang01/yuang01.github.io');
+      script.setAttribute('input-position', 'top');
+      script.setAttribute('branch', 'main');
+      script.setAttribute('comment-order', 'desc');
+      script.setAttribute('label', '✨💬✨');
+      script.setAttribute('theme', beaudarCommon.Theme);
+      script.setAttribute('crossorigin', "anonymous");
       // content 是要插入评论的地方
-      document.getElementById('gitment-container').appendChild(utterances);
-
+      document.getElementById('beaudar_container').appendChild(script);
     }
   }
 
-  function dark_utterance() {
-    const HEAD = check_utterance();
+  function dark_beaudar() {
+    const HEAD = check_beaudar();
     if (!HEAD) return;
     const message = {
       type: 'set-theme',
-      theme: utteranceCommon.Theme
+      theme: beaudarCommon.Theme
     };
-    const utteranceIframe = document.querySelector('iframe');
-    utteranceIframe.contentWindow.postMessage(message, 'https://utteranc.es');
+    const beaudarIframe = document.querySelector('iframe');
+    beaudarIframe.contentWindow.postMessage(message, 'https://beaudar.lipk.org');
   }
 
-  $(document).ready(load_utterance);
+  function check_beaudar_style() {
+    // Beaudar 会往 HEAD 的首节点追加样式元素，而这个追加没有添加判断
+    // 所以 Pjax 下会多次添加样式文件，略微麻烦。
+    const checkStyle = document.querySelector('head').firstElementChild;
+    if (checkStyle.innerText.includes('beaudar')) checkStyle.remove();
+  }
+
+  $(document).ready(load_beaudar);
   document.addEventListener('pjax:complete', function () {
-    load_utterance();
+    check_beaudar_style();
+    load_beaudar();
   });
 
   $('.dark').click(function () {
     setTimeout(() => {
-      dark_utterance();
+      dark_beaudar();
     });
   })
 
 </script>
 
 <style>
-  .utterances {
+  .beaudars {
     max-width: inherit !important;
   }
 </style>

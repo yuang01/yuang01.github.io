@@ -1023,8 +1023,7 @@
           <div class="post-content">
             该标签会去拿到某个repo仓库的issue内容，用sites标签的形式显示出来，可以用做网站的友链功能该标签和issues-timeline标签都适用于github和gitee
 使用方法issue里面需要有JSON代码块：
-&#123;
- 
+1234567&
           </div>
         </div>
         <div class="post-more">
@@ -1079,7 +1078,7 @@
           </div>
           <div class="post-content">
             该标签会去拿到某个repo仓库的issue内容，用timeline标签的形式显示出来
-写法github&#123;% issues timeline | api=https://api.github.com/repos/yuang01/he
+写法github1&#123;% issues timeline | api=https://api.github.com/repos/yuang01/h
           </div>
         </div>
         <div class="post-more">
@@ -1266,7 +1265,7 @@ galleryGroup图片示例
 不设置任何参数的 按钮 适合融入段落中。
 不设置任何参数的 按钮 适合融入段落中。
 不设置任何参数的 按钮 适合融入段落中。
-上述实例源码不
+上述实例源码1
           </div>
         </div>
         <div class="post-more">
@@ -1325,7 +1324,7 @@ galleryGroup图片示例
 Your browser does not support the audio tag.
 
 写法
-&#123;% audio http://qiniu.cunzhuang.top/%E5%85%AD%E5%93%B2%20-%20%
+1&#123;% audio http://qiniu.cunzhuang.top/%E5%85%AD%E5%93%B2%20-%20
           </div>
         </div>
         <div class="post-more">
@@ -1798,8 +1797,13 @@ Your browser does not support the audio tag.
     <script src="/js/app.js"></script>
     
     <!-- 文章目录所需js -->
-<link href="/js/tocbot/tocbot.css" rel="stylesheet">
-<script src="/js/tocbot/tocbot.min.js"></script>
+<!-- <link href="/js/tocbot/tocbot.css" rel="stylesheet">
+<script src="/js/tocbot/tocbot.min.js"></script> -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.18.2/tocbot.min.js"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.18.2/tocbot.css">
 
 <script>
   var headerEl = 'h2, h3, h4',  //headers 
@@ -1814,12 +1818,16 @@ Your browser does not support the audio tag.
     // Which headings to grab inside of the contentSelector element.
     headingSelector: headerEl,
     scrollSmooth: true,
-    scrollSmoothOffset: -80,
-    headingsOffset: -($(window).height() * 0.4 - 45),
-    positionFixedSelector: '.toc-main',
-    positionFixedClass: 'is-position-fixed',
+    scrollSmoothOffset: -70,
+    headingsOffset: -300,
+    // headingsOffset: -($(window).height() * 0.4 - 45),
+    headingsOffset: -($(window).height() * 0.6 - 45),
+    // positionFixedSelector: '.toc-main',
+    // positionFixedClass: 'is-position-fixed',
     fixedSidebarOffset: 'auto',
     activeLinkClass: 'is-active-link',
+    orderedList: true,
+    collapseDepth: 20,
     // onClick: function (e) {},
   }
   if ($('.toc').length > 0) {
@@ -1872,7 +1880,7 @@ Your browser does not support the audio tag.
     if (activePosition > (document.documentElement.clientHeight - 100)) {
       $cardToc.scrollTop = sidebarScrollTop + 150
     }
-    if (activePosition < 100) {
+    if (activePosition < 150) {
       $cardToc.scrollTop = sidebarScrollTop - 150
     }
   }
@@ -1892,7 +1900,7 @@ Your browser does not support the audio tag.
   
   // 手机端toc按钮点击出现目录
   const mobileTocClick = function () {
-    const $cardTocLayout = document.getElementsByClassName('toc-aside')[0];
+    const $cardTocLayout = document.getElementsByClassName('side_toc')[0];
     const $cardToc = $cardTocLayout.getElementsByClassName('toc-content')[0];
     let right = '45px';
     if (window.innerWidth >= 551 && window.innerWidth <= 992) {
@@ -1924,7 +1932,7 @@ Your browser does not support the audio tag.
 </script>
 
 <style>
-  .is-position-fixed {
+  /* .is-position-fixed {
     position: sticky !important;
     top: 74px;
   }
@@ -1939,8 +1947,9 @@ Your browser does not support the audio tag.
     position: absolute;
     left: 12px;
     top: 0;
-  }
-</style> 
+  } */
+</style>
+ 
 
 <!-- 设置导航背景 -->
 <script>
@@ -2100,64 +2109,78 @@ Your browser does not support the audio tag.
 
   
     <script type="text/javascript">
-  var utteranceCommon = {};
+  var beaudarCommon = {};
 
-  function check_utterance() {
+  function check_beaudar() {
     let isDark = JSON.parse(localStorage.getItem('dark')) || JSON.parse('false');
     if (isDark) {
-      utteranceCommon.Theme = 'github-dark';
+      beaudarCommon.Theme = 'github-dark';
     } else {
-      utteranceCommon.Theme = 'github-light';
+      beaudarCommon.Theme = 'github-light';
     }
 
-    return document.getElementById("gitment-container");
+    return document.getElementById("beaudar_container");
   }
-  comment_el = '#gitment-container';
-  load_utterance = function () {
+  comment_el = '#beaudar_container';
+  load_beaudar = function () {
     if ($(comment_el).length) {
       // 匿名函数，防止污染全局变量
-      const HEAD = check_utterance();
+      const HEAD = check_beaudar();
 
-      var utterances = document.createElement('script');
-      utterances.type = 'text/javascript';
-      utterances.async = true;
-      utterances.setAttribute('issue-term', 'pathname')
-      utterances.setAttribute('theme', utteranceCommon.Theme)
-      utterances.setAttribute('repo', 'yuang01/yuang01.github.io')
-      utterances.crossorigin = 'anonymous';
-      utterances.src = 'https://utteranc.es/client.js';
+      const script = document.createElement('script');
+      let issuenumber = "";
+      if (issuenumber) {
+        script.setAttribute('issue-number', issuenumber);
+      } else {
+        script.setAttribute('issue-term', "pathname");
+      }
+      script.setAttribute('src', 'https://beaudar.lipk.org/client.js');
+      script.setAttribute('repo', 'yuang01/yuang01.github.io');
+      script.setAttribute('input-position', 'top');
+      script.setAttribute('branch', 'main');
+      script.setAttribute('comment-order', 'desc');
+      script.setAttribute('label', '✨💬✨');
+      script.setAttribute('theme', beaudarCommon.Theme);
+      script.setAttribute('crossorigin', "anonymous");
       // content 是要插入评论的地方
-      document.getElementById('gitment-container').appendChild(utterances);
-
+      document.getElementById('beaudar_container').appendChild(script);
     }
   }
 
-  function dark_utterance() {
-    const HEAD = check_utterance();
+  function dark_beaudar() {
+    const HEAD = check_beaudar();
     if (!HEAD) return;
     const message = {
       type: 'set-theme',
-      theme: utteranceCommon.Theme
+      theme: beaudarCommon.Theme
     };
-    const utteranceIframe = document.querySelector('iframe');
-    utteranceIframe.contentWindow.postMessage(message, 'https://utteranc.es');
+    const beaudarIframe = document.querySelector('iframe');
+    beaudarIframe.contentWindow.postMessage(message, 'https://beaudar.lipk.org');
   }
 
-  $(document).ready(load_utterance);
+  function check_beaudar_style() {
+    // Beaudar 会往 HEAD 的首节点追加样式元素，而这个追加没有添加判断
+    // 所以 Pjax 下会多次添加样式文件，略微麻烦。
+    const checkStyle = document.querySelector('head').firstElementChild;
+    if (checkStyle.innerText.includes('beaudar')) checkStyle.remove();
+  }
+
+  $(document).ready(load_beaudar);
   document.addEventListener('pjax:complete', function () {
-    load_utterance();
+    check_beaudar_style();
+    load_beaudar();
   });
 
   $('.dark').click(function () {
     setTimeout(() => {
-      dark_utterance();
+      dark_beaudar();
     });
   })
 
 </script>
 
 <style>
-  .utterances {
+  .beaudars {
     max-width: inherit !important;
   }
 </style>

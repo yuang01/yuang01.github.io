@@ -81,7 +81,7 @@
         
           &lt;p&gt;首页添加弹幕&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;首先引入弹幕插件css和js，再导入自己编写的js，弹幕插件主题已经有了，所以引入就行，但是引入主题已经有的js和css只能在侧边栏模块里面引入；&lt;pre class=&quot;line-numbers language-yaml&quot;
+&lt;li&gt;首先引入弹幕插件css和js，再导入自己编写的js，弹幕插件主题已经有了，所以引入就行，但是引入主题已经有的js和css只能在侧边栏模块里面引入；&lt;figure class=&quot;highlight
         
       
     
@@ -396,7 +396,7 @@
     <link href="http://yuang01.github.io/post/hexo-theme-bamboo-new/"/>
     <id>http://yuang01.github.io/post/hexo-theme-bamboo-new/</id>
     <published>2021-07-05T03:12:00.000Z</published>
-    <updated>2022-07-14T14:42:18.927Z</updated>
+    <updated>2022-11-19T23:30:04.242Z</updated>
     
     <summary type="html">
     
