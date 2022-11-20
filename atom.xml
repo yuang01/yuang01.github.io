@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yuang01.github.io/"/>
-  <updated>2022-11-13T12:33:48.771Z</updated>
+  <updated>2022-11-20T00:36:20.258Z</updated>
   <id>http://yuang01.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://yuang01.github.io/post/swiper/"/>
     <id>http://yuang01.github.io/post/swiper/</id>
     <published>2022-11-13T00:35:00.000Z</published>
-    <updated>2022-11-13T12:33:48.771Z</updated>
+    <updated>2022-11-20T00:36:20.258Z</updated>
     
     <summary type="html">
     
@@ -29,7 +29,7 @@
       
         
         
-          &lt;h1 id=&quot;测试&quot;&gt;&lt;a href=&quot;#测试&quot; class=&quot;headerlink&quot;
+          &lt;h2 id=&quot;文章轮播图&quot;&gt;&lt;a href=&quot;#文章轮播图&quot; class=&quot;headerlink&quot;
         
       
     
@@ -131,7 +131,7 @@
     <link href="http://yuang01.github.io/post/custom/live2d/"/>
     <id>http://yuang01.github.io/post/custom/live2d/</id>
     <published>2022-07-10T06:38:20.000Z</published>
-    <updated>2022-07-10T07:17:04.089Z</updated>
+    <updated>2022-11-20T00:34:50.805Z</updated>
     
     <summary type="html">
     
@@ -152,7 +152,7 @@
     <link href="http://yuang01.github.io/post/custom/menu/"/>
     <id>http://yuang01.github.io/post/custom/menu/</id>
     <published>2022-06-09T12:54:18.000Z</published>
-    <updated>2022-06-09T13:33:17.890Z</updated>
+    <updated>2022-11-20T00:32:13.040Z</updated>
     
     <summary type="html">
     
@@ -181,7 +181,7 @@
     <link href="http://yuang01.github.io/post/custom/index/"/>
     <id>http://yuang01.github.io/post/custom/index/</id>
     <published>2022-06-09T10:56:20.000Z</published>
-    <updated>2022-06-09T14:52:06.548Z</updated>
+    <updated>2022-11-20T00:29:10.683Z</updated>
     
     <summary type="html">
     
@@ -189,7 +189,7 @@
       
         
         
-          &lt;p&gt;其实我们是可以自定义css的，例如我把文章详情页上面文章名称后面的背景变透明，也是可以办到的。&lt;br&gt;如图所示：&lt;br&gt;&lt;img src=&quot;https://pic.jitudisk.com/public/2022/06/09/b147be2b24a04.png&quot;
+          &lt;p&gt;其实我们是可以自定义css的，例如我把文章详情页上面文章名称后面的背景变透明，也是可以办到的。&lt;br&gt;如图所示：&lt;br&gt;&lt;img src=&quot;/img/1654773163161.png&quot; class=&quot;lazyload placeholder&quot;
         
       
     
@@ -208,7 +208,7 @@
     <link href="http://yuang01.github.io/post/bubbly-bg/index/"/>
     <id>http://yuang01.github.io/post/bubbly-bg/index/</id>
     <published>2022-06-08T08:58:20.000Z</published>
-    <updated>2022-06-17T02:09:45.725Z</updated>
+    <updated>2022-11-20T00:26:05.804Z</updated>
     
     <summary type="html">
     
@@ -216,11 +216,7 @@
       
         
         
-          &lt;blockquote&gt;
-&lt;p&gt;首先说一下，这个和添加右上角梅花那篇文章一样，是没有放到主题配置项里让自己配置的，而是通过我接下来的步骤，自己动手实现，两分钟就能实现。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ol&gt;
-&lt;li&gt;首先打开主题下的配置文件&lt;code&gt;_config.ym
+          &lt;h2 id=&quot;给bamboo添加动态背景&quot;&gt;&lt;a href=&quot;#给bamboo添加动态背景&quot; class=&quot;headerlink&quot;
         
       
     
@@ -396,7 +392,7 @@
     <link href="http://yuang01.github.io/post/hexo-theme-bamboo-new/"/>
     <id>http://yuang01.github.io/post/hexo-theme-bamboo-new/</id>
     <published>2021-07-05T03:12:00.000Z</published>
-    <updated>2022-11-19T23:30:04.242Z</updated>
+    <updated>2022-11-20T00:43:05.185Z</updated>
     
     <summary type="html">
     
