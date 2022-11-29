@@ -194,7 +194,7 @@ pre:hover::-webkit-scrollbar-thumb:hover,
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  padding: 20px 0;
+  padding-top: 15px;
   box-sizing: border-box;
 }
 #l_main .l_content header {
@@ -247,7 +247,6 @@ pre:hover::-webkit-scrollbar-thumb:hover,
 }
 #l_side {
   width: 240px;
-  margin: 20px 0;
   border-radius: 10px;
   box-sizing: border-box;
   display: flex;
@@ -257,7 +256,7 @@ pre:hover::-webkit-scrollbar-thumb:hover,
 }
 #l_side .layout_sticky {
   position: sticky;
-  top: 70px;
+  top: 60px;
   display: flex;
   flex-direction: column;
   order: 10000000;
@@ -282,7 +281,7 @@ pre:hover::-webkit-scrollbar-thumb:hover,
   margin-left: 8px;
 }
 #l_side .widget {
-  margin-bottom: 16px;
+  margin-top: 15px;
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 1px 20px -6px rgba(0,0,0,0.5);
@@ -399,7 +398,7 @@ pre:hover::-webkit-scrollbar-thumb:hover,
 }
 #l_side .side_toc .content .toc-main .toc-content {
   font-size: 0.875rem;
-  max-height: calc(100vh - 130px);
+  max-height: calc(100vh - 140px);
   overflow: auto;
 }
 #l_side .side_toc .content .toc-main .toc-content ol {
@@ -1355,7 +1354,7 @@ pre:hover::-webkit-scrollbar-thumb:hover,
 }
 .main-content {
   width: calc(100% - 255px);
-  margin-top: 20px;
+  margin-top: 15px;
   transition: width 0.3s;
 }
 #waifu #live2d {
@@ -1772,6 +1771,9 @@ pre:hover::-webkit-scrollbar-thumb:hover,
 .footer .footer-main .footer-custom a:hover {
   color: #ff4500;
 }
+#j-fish-skip {
+  margin-top: 15px;
+}
 .post-tags {
   float: left;
   color: #8a8a8a;
@@ -2084,7 +2086,6 @@ pre:hover::-webkit-scrollbar-thumb:hover,
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 16px;
 }
 .page-nav .page-nav-pre,
 .page-nav .page-nav-next {
