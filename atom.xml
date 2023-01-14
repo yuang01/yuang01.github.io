@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yuang01.github.io/"/>
-  <updated>2022-11-20T00:36:20.258Z</updated>
+  <updated>2023-01-14T15:56:33.727Z</updated>
   <id>http://yuang01.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>首页github日历</title>
+    <link href="http://yuang01.github.io/post/side/githubcalendar/"/>
+    <id>http://yuang01.github.io/post/side/githubcalendar/</id>
+    <published>2023-01-14T15:20:00.000Z</published>
+    <updated>2023-01-14T15:56:33.727Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 class=&quot;bamboo-h &quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="侧边栏" scheme="http://yuang01.github.io/categories/%E4%BE%A7%E8%BE%B9%E6%A0%8F/"/>
+    
+    
+      <category term="side" scheme="http://yuang01.github.io/tags/side/"/>
+    
+  </entry>
   
   <entry>
     <title>轮播-swiper</title>
@@ -499,33 +526,6 @@
       <category term="Hexo" scheme="http://yuang01.github.io/tags/Hexo/"/>
     
       <category term="hexo-theme-bamboo" scheme="http://yuang01.github.io/tags/hexo-theme-bamboo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>issues-sites标签</title>
-    <link href="http://yuang01.github.io/post/issuessites/"/>
-    <id>http://yuang01.github.io/post/issuessites/</id>
-    <published>2021-06-16T03:35:00.000Z</published>
-    <updated>2022-06-09T14:00:04.897Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;该标签会去拿到某个repo仓库的issue内容，用&lt;code&gt;sites标签&lt;/code&gt;的形式显示出来，可以用做网站的&lt;code&gt;友链&lt;/code&gt;功能&lt;br&gt;该标签和&lt;code&gt;issues-timeline&lt;/code&gt;标签都适用于&lt;code&gt;github&lt;/code
-        
-      
-    
-    </summary>
-    
-    
-      <category term="前端" scheme="http://yuang01.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="tag" scheme="http://yuang01.github.io/tags/tag/"/>
     
   </entry>
   
