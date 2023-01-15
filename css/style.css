@@ -6531,10 +6531,6 @@ div.tabs .tab-content .tab-pane > .highlight:last-child,
 div.tabs .tab-content .tab-pane > .note:last-child {
   margin-bottom: 0;
 }
-.ghcard img {
-  margin: 0 50%;
-  transform: translateX(-50%);
-}
 .progress {
   display: flex;
   height: 1rem;
