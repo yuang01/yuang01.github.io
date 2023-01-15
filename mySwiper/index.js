@@ -61,7 +61,10 @@ new Vue({
         return res.json();
       })
       .then((data) => {
-        this.listData = data.data;
+        let arr = data.data.filter(el => {
+          return el.pic;
+        })
+        this.listData = arr;
       })
       .catch((err) => {
         console.log("err", err);
