@@ -2035,7 +2035,7 @@
       </header>
       <div class="content">
          <div id="myBli"> <vue-seamless-scroll :data="listData" :class-option="classOption" class="warp" > <ul class="ul-item" :style="{width: bliWidth}"> <!-- 在这里改, 手动修改a连接的href值和img的src值, 如果你会进阶，你可以使用v-for, 或者数据使用动态数据-->
-<li class="li-item" v-for="(item, index) in listData" :key="index"> <a :href="item.info.url" target="_blank"> <img class="no-lazy" :src="item.info.imgurl"> <div class="bli-content"> <p class="title">我是标题</p> <p class="desc">我是描述</p> </div> </a> </li> <!-- 在这里结束 --> </ul> </vue-seamless-scroll> </div>
+<li class="li-item" v-for="(item, index) in listData" :key="index"> <a :href="item.info.url" target="_blank"> <img class="no-lazy" :src="item.info.imgurl"> <div class="bli-content"> <p class="title">评分:{{item.info.pingfen}}</p> <p class="desc">{{item.info.pingjia}}</p> </div> </a> </li> <!-- 在这里结束 --> </ul> </vue-seamless-scroll> </div>
 <script src="/bli/index.js"></script> <link href="/bli/index.css" rel="stylesheet"> 
       </div>
   </div>
@@ -2363,7 +2363,7 @@ galleryGroup图片示例
             <span class="post-time">2021-02-08</span>
           </div>
           <div class="post-title">
-            <a class="post-title-link" href="/post/audio/">audio音频</a>
+            <a class="post-title-link" href="/post/folding/">folding折叠</a>
           </div>
           <div class="post-meta">
             <div class="post-tags">
@@ -2385,30 +2385,32 @@ galleryGroup图片示例
             </div>
           </div>
           <div class="post-img-mobile">
-            <a href="/post/audio/" style="background-size: cover; 
+            <a href="/post/folding/" style="background-size: cover; 
               background-position: center center;">
-              <img class="lazyload lazyload placeholder" src="https://pic2.zhimg.com/80/v2-035165460d504f2b072ee777d1d40ab6_1440w.jpg?source=1940ef5c" class="lazyload placeholder" data-srcset="https://pic2.zhimg.com/80/v2-035165460d504f2b072ee777d1d40ab6_1440w.jpg?source=1940ef5c" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+              <img class="lazyload lazyload placeholder" src="https://pic4.zhimg.com/80/v2-3b4ca49ff4fc567faa76ce6f02cffac9_1440w.jpg?source=1940ef5c" class="lazyload placeholder" data-srcset="https://pic4.zhimg.com/80/v2-3b4ca49ff4fc567faa76ce6f02cffac9_1440w.jpg?source=1940ef5c" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
             </a>
           </div>
           <div class="post-content">
-            事例
+            基本
 
-Your browser does not support the audio tag.
-
-写法
-1&#123;% audio http://qiniu.cunzhuang.top/%E5%85%AD%E5%93%B2%20-%20
+ 查看图片测试 
+              
+              
+              
+            
+上述事例代码123&#123;% folding 查看图片测试 %&#125;  ![](http
           </div>
         </div>
         <div class="post-more">
-          <a href="/post/audio/">
+          <a href="/post/folding/">
             <i class="iconfont iconmore" pointer style="  " title="阅读更多"></i>
           </a>
         </div>
       </div>
       <div class="post-img">
-        <a href="/post/audio/" style="background-size: cover; 
+        <a href="/post/folding/" style="background-size: cover; 
           background-position: center center;">
-          <img class="lazyload lazyload placeholder" src="https://pic2.zhimg.com/80/v2-035165460d504f2b072ee777d1d40ab6_1440w.jpg?source=1940ef5c" class="lazyload placeholder" data-srcset="https://pic2.zhimg.com/80/v2-035165460d504f2b072ee777d1d40ab6_1440w.jpg?source=1940ef5c" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+          <img class="lazyload lazyload placeholder" src="https://pic4.zhimg.com/80/v2-3b4ca49ff4fc567faa76ce6f02cffac9_1440w.jpg?source=1940ef5c" class="lazyload placeholder" data-srcset="https://pic4.zhimg.com/80/v2-3b4ca49ff4fc567faa76ce6f02cffac9_1440w.jpg?source=1940ef5c" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
         </a>
       </div>
     </article>
@@ -2488,67 +2490,6 @@ Your browser does not support the audio tag.
             <span class="post-time">2021-02-08</span>
           </div>
           <div class="post-title">
-            <a class="post-title-link" href="/post/folding/">folding折叠</a>
-          </div>
-          <div class="post-meta">
-            <div class="post-tags">
-              <!-- 文章详情页的标签 -->
-
-    <i class="iconfont icontag"></i>
-    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tag/" rel="tag">tag</a></li></ul>
-
-            </div>
-            <div class="post-categories">
-              <!-- 文章详情页的分类 -->
-
-<div class="article-category">
-  <i class="iconfont iconbookmark1"></i>
-  <a class="article-category-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a>
-</div>
-
-
-            </div>
-          </div>
-          <div class="post-img-mobile">
-            <a href="/post/folding/" style="background-size: cover; 
-              background-position: center center;">
-              <img class="lazyload lazyload placeholder" src="https://pic4.zhimg.com/80/v2-3b4ca49ff4fc567faa76ce6f02cffac9_1440w.jpg?source=1940ef5c" class="lazyload placeholder" data-srcset="https://pic4.zhimg.com/80/v2-3b4ca49ff4fc567faa76ce6f02cffac9_1440w.jpg?source=1940ef5c" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
-            </a>
-          </div>
-          <div class="post-content">
-            基本
-
- 查看图片测试 
-              
-              
-              
-            
-上述事例代码123&#123;% folding 查看图片测试 %&#125;  ![](http
-          </div>
-        </div>
-        <div class="post-more">
-          <a href="/post/folding/">
-            <i class="iconfont iconmore" pointer style="  " title="阅读更多"></i>
-          </a>
-        </div>
-      </div>
-      <div class="post-img">
-        <a href="/post/folding/" style="background-size: cover; 
-          background-position: center center;">
-          <img class="lazyload lazyload placeholder" src="https://pic4.zhimg.com/80/v2-3b4ca49ff4fc567faa76ce6f02cffac9_1440w.jpg?source=1940ef5c" class="lazyload placeholder" data-srcset="https://pic4.zhimg.com/80/v2-3b4ca49ff4fc567faa76ce6f02cffac9_1440w.jpg?source=1940ef5c" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
-        </a>
-      </div>
-    </article>
-  
-    
-    <article class="post reveal" style="flex-direction: row-reverse;   ">
-      <div class="post-main">
-        <div class="post-info">
-          <div class="post-time">
-            <i class="fas fa-clock" aria-hidden="true"></i>
-            <span class="post-time">2021-02-08</span>
-          </div>
-          <div class="post-title">
             <a class="post-title-link" href="/post/gallery/">gallery图片</a>
           </div>
           <div class="post-meta">
@@ -2589,7 +2530,7 @@ Your browser does not support the audio tag.
         </div>
         <div class="post-more">
           <a href="/post/gallery/">
-            <i class="iconfont iconmore" pointer style="float: right;  " title="阅读更多"></i>
+            <i class="iconfont iconmore" pointer style="  " title="阅读更多"></i>
           </a>
         </div>
       </div>
@@ -2602,7 +2543,7 @@ Your browser does not support the audio tag.
     </article>
   
     
-    <article class="post reveal" style="   ">
+    <article class="post reveal" style="flex-direction: row-reverse;   ">
       <div class="post-main">
         <div class="post-info">
           <div class="post-time">
@@ -2668,7 +2609,7 @@ Your browser does not support the audio tag.
         </div>
         <div class="post-more">
           <a href="/post/ghcard/">
-            <i class="iconfont iconmore" pointer style="  " title="阅读更多"></i>
+            <i class="iconfont iconmore" pointer style="float: right;  " title="阅读更多"></i>
           </a>
         </div>
       </div>
@@ -2676,6 +2617,65 @@ Your browser does not support the audio tag.
         <a href="/post/ghcard/" style="background-size: cover; 
           background-position: center center;">
           <img class="lazyload lazyload placeholder" src="https://pic3.zhimg.com/80/v2-b7c7899676492453229763b26835f6dc_1440w.jpg?source=1940ef5c" class="lazyload placeholder" data-srcset="https://pic3.zhimg.com/80/v2-b7c7899676492453229763b26835f6dc_1440w.jpg?source=1940ef5c" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+        </a>
+      </div>
+    </article>
+  
+    
+    <article class="post reveal" style="   ">
+      <div class="post-main">
+        <div class="post-info">
+          <div class="post-time">
+            <i class="fas fa-clock" aria-hidden="true"></i>
+            <span class="post-time">2021-02-08</span>
+          </div>
+          <div class="post-title">
+            <a class="post-title-link" href="/post/audio/">audio音频</a>
+          </div>
+          <div class="post-meta">
+            <div class="post-tags">
+              <!-- 文章详情页的标签 -->
+
+    <i class="iconfont icontag"></i>
+    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tag/" rel="tag">tag</a></li></ul>
+
+            </div>
+            <div class="post-categories">
+              <!-- 文章详情页的分类 -->
+
+<div class="article-category">
+  <i class="iconfont iconbookmark1"></i>
+  <a class="article-category-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a>
+</div>
+
+
+            </div>
+          </div>
+          <div class="post-img-mobile">
+            <a href="/post/audio/" style="background-size: cover; 
+              background-position: center center;">
+              <img class="lazyload lazyload placeholder" src="https://pic2.zhimg.com/80/v2-035165460d504f2b072ee777d1d40ab6_1440w.jpg?source=1940ef5c" class="lazyload placeholder" data-srcset="https://pic2.zhimg.com/80/v2-035165460d504f2b072ee777d1d40ab6_1440w.jpg?source=1940ef5c" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+            </a>
+          </div>
+          <div class="post-content">
+            事例
+
+Your browser does not support the audio tag.
+
+写法
+1&#123;% audio http://qiniu.cunzhuang.top/%E5%85%AD%E5%93%B2%20-%20
+          </div>
+        </div>
+        <div class="post-more">
+          <a href="/post/audio/">
+            <i class="iconfont iconmore" pointer style="  " title="阅读更多"></i>
+          </a>
+        </div>
+      </div>
+      <div class="post-img">
+        <a href="/post/audio/" style="background-size: cover; 
+          background-position: center center;">
+          <img class="lazyload lazyload placeholder" src="https://pic2.zhimg.com/80/v2-035165460d504f2b072ee777d1d40ab6_1440w.jpg?source=1940ef5c" class="lazyload placeholder" data-srcset="https://pic2.zhimg.com/80/v2-035165460d504f2b072ee777d1d40ab6_1440w.jpg?source=1940ef5c" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
         </a>
       </div>
     </article>
@@ -3086,7 +3086,7 @@ Your browser does not support the audio tag.
         <div class="webinfo-item">
           <div>最后活动时间：</div>
           
-            <div id="last-update" style="display: none;">Sun Jan 15 2023 11:53:28 GMT+0800 (中国标准时间)</div>
+            <div id="last-update" style="display: none;">Sun Jan 15 2023 12:00:24 GMT+0800 (中国标准时间)</div>
             <div id="last-update-show">2023-01-15 日</div>
           
         </div>
