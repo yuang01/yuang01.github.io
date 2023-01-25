@@ -77,35 +77,24 @@
 
   
   
-  <body>
-    <!-- 预加载动画 -->
-    <!-- 页面预加载动画 -->
+  <!-- 预加载动画 -->
+  <!-- 页面预加载动画 -->
 
-<div id='loader'>
-  <link rel="stylesheet" href="/js/loaded/index.css" >
-  <div class="loading-left-bg"></div>
-  <div class="loading-right-bg"></div>
-  <div class="spinner-box">
-    <div class="configure-border-1">
-      <div class="configure-core"></div>
-    </div>
-    <div class="configure-border-2">
-      <div class="configure-core"></div>
-    </div>
-    <div class="loading-word">加载中...</div>
-  </div>
+  
+    <div class="preloader_2" id="loader">
+  <div class="loader"></div>
 </div>
 
+  
 <script>
   var endLoading = function () {
     document.body.style.overflow = 'auto';
     document.getElementById('loader').classList.add("loading");
   }
   window.addEventListener('DOMContentLoaded',endLoading);
-  
 </script>
 
-    
+  <body>
     <!-- 判断是否为暗黑风格 -->
     <!-- 判断是否为黑夜模式 -->
 <script>
@@ -838,10 +827,10 @@
             <div class="category-chips">
                 
                 
-                <a href="/categories/%E5%89%8D%E7%AB%AF/" title="前端: 35">
+                <a href="/categories/%E5%89%8D%E7%AB%AF/" title="前端: 36">
                     <span class="category-content"
                         title="前端" style="background-color: #FEF9E7;">前端
-                        <span class="category-length">35</span>
+                        <span class="category-length">36</span>
                     </span>
                 </a>
                 
@@ -894,14 +883,6 @@
                 </a>
                 
                 
-                <a href="/categories/mathjax/" title="mathjax: 1">
-                    <span class="category-content"
-                        title="mathjax" style="background-color: #FEF9E7;">mathjax
-                        <span class="category-length">1</span>
-                    </span>
-                </a>
-                
-                
                 <a href="/categories/mermaid/" title="mermaid: 1">
                     <span class="category-content"
                         title="mermaid" style="background-color: #F9EBEA;">mermaid
@@ -910,17 +891,25 @@
                 </a>
                 
                 
-                <a href="/categories/%E4%BE%A7%E8%BE%B9%E6%A0%8F/" title="侧边栏: 1">
+                <a href="/categories/%E6%A2%85%E8%8A%B1/" title="梅花: 1">
                     <span class="category-content"
-                        title="侧边栏" style="background-color: #F8C471;">侧边栏
+                        title="梅花" style="background-color: #F8C471;">梅花
                         <span class="category-length">1</span>
                     </span>
                 </a>
                 
                 
-                <a href="/categories/%E6%A2%85%E8%8A%B1/" title="梅花: 1">
+                <a href="/categories/mathjax/" title="mathjax: 1">
                     <span class="category-content"
-                        title="梅花" style="background-color: #F8C471;">梅花
+                        title="mathjax" style="background-color: #FEF9E7;">mathjax
+                        <span class="category-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/categories/%E4%BE%A7%E8%BE%B9%E6%A0%8F/" title="侧边栏: 1">
+                    <span class="category-content"
+                        title="侧边栏" style="background-color: #F8C471;">侧边栏
                         <span class="category-length">1</span>
                     </span>
                 </a>
@@ -1320,7 +1309,7 @@
     scrollSmooth: true,
     scrollSmoothOffset: -70,
     // headingsOffset: -($(window).height() * 0.4 - 45),
-    headingsOffset: -($(window).height() * 0.6 - 70),
+    headingsOffset: -($(window).height() * 0.4 - 70),
     // positionFixedSelector: '.toc-main',
     // positionFixedClass: 'is-position-fixed',
     fixedSidebarOffset: 'auto',

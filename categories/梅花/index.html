@@ -77,35 +77,24 @@
 
   
   
-  <body>
-    <!-- 预加载动画 -->
-    <!-- 页面预加载动画 -->
+  <!-- 预加载动画 -->
+  <!-- 页面预加载动画 -->
 
-<div id='loader'>
-  <link rel="stylesheet" href="/js/loaded/index.css" >
-  <div class="loading-left-bg"></div>
-  <div class="loading-right-bg"></div>
-  <div class="spinner-box">
-    <div class="configure-border-1">
-      <div class="configure-core"></div>
-    </div>
-    <div class="configure-border-2">
-      <div class="configure-core"></div>
-    </div>
-    <div class="loading-word">加载中...</div>
-  </div>
+  
+    <div class="preloader_2" id="loader">
+  <div class="loader"></div>
 </div>
 
+  
 <script>
   var endLoading = function () {
     document.body.style.overflow = 'auto';
     document.getElementById('loader').classList.add("loading");
   }
   window.addEventListener('DOMContentLoaded',endLoading);
-  
 </script>
 
-    
+  <body>
     <!-- 判断是否为暗黑风格 -->
     <!-- 判断是否为黑夜模式 -->
 <script>
@@ -1257,7 +1246,7 @@
     scrollSmooth: true,
     scrollSmoothOffset: -70,
     // headingsOffset: -($(window).height() * 0.4 - 45),
-    headingsOffset: -($(window).height() * 0.6 - 70),
+    headingsOffset: -($(window).height() * 0.4 - 70),
     // positionFixedSelector: '.toc-main',
     // positionFixedClass: 'is-position-fixed',
     fixedSidebarOffset: 'auto',

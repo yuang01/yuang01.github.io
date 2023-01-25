@@ -13,7 +13,7 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-  <title>归档: 2021/10 | 竹</title>
+  <title>新增酷炫按钮和预加载动画 | 竹</title>
 
   <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico">
   <link rel="stylesheet" href="https://at.alicdn.com/t/font_1911880_c1nvbyezg17.css">
@@ -753,123 +753,632 @@
     
 </header>
         <!-- 内容区域 -->
-        <div class="bg-dark-floor" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -2;"></div>
-<div class="bg-light-floor-archive" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -3;"></div>
-<div class="archive-header" style="background-image:url('https://pic2.zhimg.com/80/v2-b561c5b432183290eff81f2035501e88_1440w.jpg')">
-  <div class="archive-header-title">
-    archive
-  </div>
-  <div class="archive-header-desc">
+        
+ <!-- prismjs 代码高亮 -->
+ 
+
+
+<div class="bg-dark-floor" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -1;"></div>
+
+
+  <!-- 文章详情页顶部图片和标题 -->
+
+
+
+
+<div class="post-detail-header" id="thumbnail_canvas" style="background-repeat: no-repeat; background-size: cover; 
+  background-position: center center;position: relative;background-image:url('https://pic4.zhimg.com/80/v2-37134f732bbe21779fdb2fc8dca410c7_1440w.jpg')">
+  <div class="post-detail-header-mask"></div>
+  <canvas id="header_canvas"style="position:absolute;bottom:0;pointer-events:none;"></canvas>
   
-  <span class="title" id="archive-header-desc"></span>
-  <script>
-  function typedFn() {
-    const el = '#archive-header-desc';
-    const type = 'archive';
-    let desc = '愿你如风，被人温柔以待'
-    var typed = new Typed(el, {
-      strings: [desc],
-      startDelay: 100,
-      typeSpeed: 100,
-      loop: true,
-      backSpeed: 50,
-      showCursor: true
-    });
-  }
-  typedFn();
-</script>
-  
-  </div>
-  <div class="mask-box"></div>
-</div>
-
-<div class="archive-video">
-  <video class="full-video" autoplay loop muted>
-      <source style="width: 100%;height: 100vh;" src="/">
-  </video>
-  <div class="video-header-title">
-    archive
-  </div>
-  <div class="video-header-desc">
-  
-      <span class="title" id="archive-video-header-desc"></span>
-      <script>
-  function typedFn() {
-    const el = '#archive-video-header-desc';
-    const type = 'archive';
-    let desc = '愿你如风，被人温柔以待'
-    var typed = new Typed(el, {
-      strings: [desc],
-      startDelay: 100,
-      typeSpeed: 100,
-      loop: true,
-      backSpeed: 50,
-      showCursor: true
-    });
-  }
-  typedFn();
-</script>
-      
-  </div>
-  <div class="mask-box"></div>
-</div>
-
-<!-- hash算法 -->
-
-
-<div class="archive-main">
-  <section class="archive">
-    <div class="archive-content">
-      <ul class="post-archive">
-        
-        
-          
-            
-            <div class="year" data-aos="zoom-in-up">
-                <div class="bullet"></div>
-                <a href="/archives/2021">2021</a>
-            </div>
-          
-          <li class="post-item" data-aos="fade-left">
-            
-            <div class="post-img-box">
-              <a href="/post/mermaid/index/" class="post-img " style="background-size: cover; 
-                background-position: center center;">
-                <img class="lazyload lazyload placeholder" src="https://pica.zhimg.com/80/v2-a71e05c37fb4970d8e5640eab6833805_1440w.jpg?source=1940ef5c" class="lazyload placeholder" data-srcset="https://pica.zhimg.com/80/v2-a71e05c37fb4970d8e5640eab6833805_1440w.jpg?source=1940ef5c" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
-              </a>
-            </div>
-            <div class="post-date-title">
-              <div>
-                <span class="post-date">10-09</span>
-              </div>
-              <a class="post-title" href="/post/mermaid/index/">新增mermaid</a>
-            </div>
-          </li>
-        
-          
-          <li class="post-item" data-aos="fade-left">
-            
-            <div class="post-img-box">
-              <a href="/post/mathjax/index/" class="post-img " style="background-size: cover; 
-                background-position: center center;">
-                <img class="lazyload lazyload placeholder" src="https://pic1.zhimg.com/80/v2-78d724c077f0af2f991e18ea1d5516c3_1440w.jpg?source=1940ef5c" class="lazyload placeholder" data-srcset="https://pic1.zhimg.com/80/v2-78d724c077f0af2f991e18ea1d5516c3_1440w.jpg?source=1940ef5c" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
-              </a>
-            </div>
-            <div class="post-date-title">
-              <div>
-                <span class="post-date">10-08</span>
-              </div>
-              <a class="post-title" href="/post/mathjax/index/">新增mathjax</a>
-            </div>
-          </li>
-        
-      </ul>
+  <div class="post-detail-header_info-box">
+    <div class="title-box">
+      <span class="title">
+        新增酷炫按钮和预加载动画
+      </span>
     </div>
-  </section>
-  <div class="w-70">
+    
+    
+      
+        <span class="post-detail-header_date">
+          <i class="fas fa-calendar"></i> 发表于：2023-01-25 |
+        </span>
+      
+
+      
+        <span class="post-detail-header_categories">
+          <i class="iconfont iconbookmark1"></i> 分类：
+          
+            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-detail-header_category">
+              前端
+            </a>
+          
+        </span>
+      
+
+      
+        <div class="post-detail-header_wordcount">
+          <span class="totalcount">
+            <i class="fas fa-file-text-o"></i> 字数统计: 431 |
+          </span>
+  
+          <span class="min2read">
+            <i class="fas fa-clock"></i> 阅读时长: 2分钟 |
+          </span>
+  
+          
+            <span class="reading">
+              <i class="fas fa-eye"></i> 阅读量：<span id="busuanzi_value_page_pv"></span>
+            </span>
+          
+        </div>
+      
     
   </div>
+  
+  
+    <script src="/js/bubble/bubble.js"></script>
+  
 </div>
+
+
+
+
+
+<div class="post-detail-content post-row" 
+  style="padding-top: 0px;">
+  <div class="main-content">
+    <article class="post post-detail">
+      <div class="post-content">
+        <h2 class="bamboo-h " id="按钮事例2e90im5eacl">按钮事例</h2><br/>
+
+<span class='btn center cool-1'><a class="button" target="_blank" rel="noopener" href='https://baidu.com' title='开始使用'><i class='fa fa-download'></i>开始使用</a></span>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% btn center cool-1, 开始使用, https:&#x2F;&#x2F;baidu.com, fa fa-download %&#125;</span><br></pre></td></tr></table></figure>
+<span class='btn center cool-2'><a class="button" target="_blank" rel="noopener" href='https://baidu.com' title='开始使用'><i class='fa fa-download'></i>开始使用</a></span>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% btn center cool-2, 开始使用, https:&#x2F;&#x2F;baidu.com, fa fa-download %&#125;</span><br></pre></td></tr></table></figure>
+<span class='btn center cool-3'><a class="button" target="_blank" rel="noopener" href='https://baidu.com' title='开始使用'><i class='fa fa-download'></i>开始使用</a></span>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% btn center cool-3, 开始使用, https:&#x2F;&#x2F;baidu.com, fa fa-download %&#125;</span><br></pre></td></tr></table></figure>
+<span class='btn center cool-4'><a class="button" target="_blank" rel="noopener" href='https://baidu.com' title='开始使用'><i class='fa fa-download'></i>开始使用</a></span>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% btn center cool-4, 开始使用, https:&#x2F;&#x2F;baidu.com, fa fa-download %&#125;</span><br></pre></td></tr></table></figure>
+<span class='btn center cool-5'><a class="button" target="_blank" rel="noopener" href='https://baidu.com' title='开始使用'><i class='fa fa-download'></i>开始使用</a></span>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% btn center cool-5, 开始使用, https:&#x2F;&#x2F;baidu.com, fa fa-download %&#125;</span><br></pre></td></tr></table></figure>
+<span class='btn center cool-6'><a class="button" target="_blank" rel="noopener" href='https://baidu.com' title='开始使用'><i class='fa fa-download'></i>开始使用</a></span>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% btn center cool-6, 开始使用, https:&#x2F;&#x2F;baidu.com, fa fa-download %&#125;</span><br></pre></td></tr></table></figure>
+<span class='btn center cool-7'><a class="button" target="_blank" rel="noopener" href='https://baidu.com' title='开始使用'><i class='fa fa-download'></i>开始使用</a></span>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% btn center cool-7, 开始使用, https:&#x2F;&#x2F;baidu.com, fa fa-download %&#125;</span><br></pre></td></tr></table></figure>
+<span class='btn center cool-8'><a class="button" target="_blank" rel="noopener" href='https://baidu.com' title='开始使用'><i class='fa fa-download'></i>开始使用</a></span>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% btn center cool-8, 开始使用, https:&#x2F;&#x2F;baidu.com, fa fa-download %&#125;</span><br></pre></td></tr></table></figure>
+<span class='btn center cool-9'><a class="button" target="_blank" rel="noopener" href='https://baidu.com' title='开始使用'><i class='fa fa-download'></i>开始使用</a></span>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% btn center cool-9, 开始使用, https:&#x2F;&#x2F;baidu.com, fa fa-download %&#125;</span><br></pre></td></tr></table></figure>
+<span class='btn center cool-10'><a class="button" target="_blank" rel="noopener" href='https://baidu.com' title='开始使用'><i class='fa fa-download'></i>开始使用</a></span>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% btn center cool-10, 开始使用, https:&#x2F;&#x2F;baidu.com, fa fa-download %&#125;</span><br></pre></td></tr></table></figure>
+<span class='btn center cool-11'><a class="button" target="_blank" rel="noopener" href='https://baidu.com' title='开始使用'><i class='fa fa-download'></i>开始使用</a></span>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% btn center cool-11, 开始使用, https:&#x2F;&#x2F;baidu.com, fa fa-download %&#125;</span><br></pre></td></tr></table></figure>
+<span class='btn center cool-12'><a class="button" target="_blank" rel="noopener" href='https://baidu.com' title='开始使用'><i class='fa fa-download'></i>开始使用</a></span>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% btn center cool-12, 开始使用, https:&#x2F;&#x2F;baidu.com, fa fa-download %&#125;</span><br></pre></td></tr></table></figure>
+<span class='btn center cool-13'><a class="button" target="_blank" rel="noopener" href='https://baidu.com' title='开始使用'><i class='fa fa-download'></i>开始使用</a></span>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% btn center cool-13, 开始使用, https:&#x2F;&#x2F;baidu.com, fa fa-download %&#125;</span><br></pre></td></tr></table></figure>
+<span class='btn center cool-14'><a class="button" target="_blank" rel="noopener" href='https://baidu.com' title='开始使用'><i class='fa fa-download'></i>开始使用</a></span>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% btn center cool-14, 开始使用, https:&#x2F;&#x2F;baidu.com, fa fa-download %&#125;</span><br></pre></td></tr></table></figure>
+<span class='btn center cool-15'><a class="button" target="_blank" rel="noopener" href='https://baidu.com' title='开始使用'><i class='fa fa-download'></i>开始使用</a></span>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% btn center cool-15, 开始使用, https:&#x2F;&#x2F;baidu.com, fa fa-download %&#125;</span><br></pre></td></tr></table></figure>
+<h2 class="bamboo-h " id="预加载动画事例2lk62avspi4">预加载动画事例</h2><br/>
+<h3 id="预加载1"><a href="#预加载1" class="headerlink" title="预加载1"></a>预加载1</h3><p><img src="https://pic4.zhimg.com/80/v2-dad20599c5d9aac009d224817ad2d3f7_1440w.webp" class="lazyload placeholder" data-srcset="https://pic4.zhimg.com/80/v2-dad20599c5d9aac009d224817ad2d3f7_1440w.webp" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="预加载1"></p>
+<h3 id="预加载2"><a href="#预加载2" class="headerlink" title="预加载2"></a>预加载2</h3><p><img src="https://pic1.zhimg.com/80/v2-929a308b7edd0c3717ce0c149dadee1a_1440w.png" class="lazyload placeholder" data-srcset="https://pic1.zhimg.com/80/v2-929a308b7edd0c3717ce0c149dadee1a_1440w.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="预加载2"></p>
+<h3 id="预加载3"><a href="#预加载3" class="headerlink" title="预加载3"></a>预加载3</h3><p><img src="https://pic1.zhimg.com/80/v2-22457e493abcafa8fcc62e09b85a13fb_1440w.png?source=d16d100b" class="lazyload placeholder" data-srcset="https://pic1.zhimg.com/80/v2-22457e493abcafa8fcc62e09b85a13fb_1440w.png?source=d16d100b" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="预加载3"></p>
+<h3 id="预加载4"><a href="#预加载4" class="headerlink" title="预加载4"></a>预加载4</h3><p><img src="https://pic1.zhimg.com/80/v2-adab5e1f2cce70ffbec035806c051876_1440w.png" class="lazyload placeholder" data-srcset="https://pic1.zhimg.com/80/v2-adab5e1f2cce70ffbec035806c051876_1440w.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="预加载4"></p>
+<h3 id="预加载5"><a href="#预加载5" class="headerlink" title="预加载5"></a>预加载5</h3><p><img src="https://picx.zhimg.com/80/v2-e28bb5daa0be09cf0a8ba14f1af108ed_1440w.png" class="lazyload placeholder" data-srcset="https://picx.zhimg.com/80/v2-e28bb5daa0be09cf0a8ba14f1af108ed_1440w.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="预加载5"></p>
+<h3 id="预加载6"><a href="#预加载6" class="headerlink" title="预加载6"></a>预加载6</h3><p><img src="https://picx.zhimg.com/80/v2-6590a47d9e553c19e19ba17da20dffe9_1440w.png" class="lazyload placeholder" data-srcset="https://picx.zhimg.com/80/v2-6590a47d9e553c19e19ba17da20dffe9_1440w.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="预加载6"></p>
+<h3 id="预加载7"><a href="#预加载7" class="headerlink" title="预加载7"></a>预加载7</h3><p><img src="https://pic1.zhimg.com/80/v2-3376436eb071cc51dea8f665425f9ae8_1440w.png" class="lazyload placeholder" data-srcset="https://pic1.zhimg.com/80/v2-3376436eb071cc51dea8f665425f9ae8_1440w.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="预加载7"></p>
+<h3 id="预加载8"><a href="#预加载8" class="headerlink" title="预加载8"></a>预加载8</h3><p><img src="https://pic1.zhimg.com/80/v2-da152216cf0d5e95f67df5e482ed12e5_1440w.png" class="lazyload placeholder" data-srcset="https://pic1.zhimg.com/80/v2-da152216cf0d5e95f67df5e482ed12e5_1440w.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="预加载8"></p>
+<h3 id="预加载9"><a href="#预加载9" class="headerlink" title="预加载9"></a>预加载9</h3><p><img src="https://picx.zhimg.com/80/v2-c3b21779ba22a3f9cb8d71e635fac3d3_1440w.png" class="lazyload placeholder" data-srcset="https://picx.zhimg.com/80/v2-c3b21779ba22a3f9cb8d71e635fac3d3_1440w.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="预加载9"></p>
+<p>在主题<code>_config.yml</code>中设置<code>type</code>属性即可，1到9</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 页面刷新时预加载动画</span></span><br><span class="line"><span class="attr">preloader:</span></span><br><span class="line">  <span class="attr">on:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">type:</span> <span class="number">9</span> <span class="comment"># 1/2/3/4/5/6/7/8/9</span></span><br></pre></td></tr></table></figure>
+      </div>
+      <div class="post-tags-categories">
+        
+        <div class="tags">
+          
+            <a href="/tags/%E6%8C%89%E9%92%AE/" class="">
+              按钮
+            </a>
+          
+            <a href="/tags/%E9%A2%84%E5%8A%A0%E8%BD%BD/" class="">
+              预加载
+            </a>
+          
+        </div>
+        
+      </div>
+      
+        <div class="copyright">
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+    <strong>作者:  </strong>YuAng</a>
+    </li>
+    <li class="post-copyright-link">
+    <strong>文章链接:  </strong>
+    <a href="/post/btn-preloader/" target="_blank" title="新增酷炫按钮和预加载动画">http://yuang01.github.io/post/btn-preloader/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>版权声明:   </strong>
+      本网站所有文章除特别声明外,均采用 <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">CC BY-NC-ND 4.0</a>
+      许可协议。转载请注明出处!
+    </li>
+  </ul>
+<div>
+      
+    </article>
+    <!-- 上一篇文章和下一篇文章 -->
+    
+      <!-- 文章详情页的上一页和下一页 -->
+<div class="post-nav">
+
+
+
+
+
+  
+  <div class="post-nav-next post-nav-item">
+    <div class="post-nav-img" style="background-size: cover; 
+      background-position: center center;">
+      <img class="lazyload lazyload placeholder" src="https://pic4.zhimg.com/v2-0745cf85004a8d53e6b189b3f4a04b7b_b.jpg" class="lazyload placeholder" data-srcset="https://pic4.zhimg.com/v2-0745cf85004a8d53e6b189b3f4a04b7b_b.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" src="" alt="">
+    </div>
+    <a href="/post/side/githubcalendar/" class="post-nav-link">
+      <div class="title">
+        下一篇: <i class="fas fa-angle-right"></i>
+        <div class="title-text">首页github日历</div>
+      </div>
+      <!-- <div class="content">
+        更改首页github日历
+侧边栏那篇文章中有写怎么添加首页github日历，但是那个方法的api挂了。。。又找到一个方法
+      </div> -->
+    </a>
+  </div>
+
+</div>
+
+    
+    
+
+    <!-- 打赏 -->
+    
+
+    <!-- 分享 -->
+    
+      <!-- https://github.com/overtrue/share.js -->
+<!-- 文章详情页的分享 -->
+<div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+
+<script src="/js/shareJs/social-share.min.js"></script>
+</script>
+
+<style>
+  .social-share {
+    margin: 20px 0;
+  }
+</style>
+
+
+    
+    
+    <!-- 评论 -->
+    <!-- 评论 -->
+
+  <div id="myComment">
+    
+      <div id="beaudar_container"></div>
+    
+  </div>
+
+<!-- comment script in themes\hexo-theme-bamboo\layout\_partial\scripts\index.ejs -->
+
+
+  </div>
+
+  <!-- 目录 -->
+  
+<aside id='l_side'>
+  
+    
+      
+        <section class="widget side_blogger">
+  <div class='content'>
+    
+      
+        <a class='avatar flat-box rectangle' href='/about/'>
+          <img src='/img/avatar.jpg'/>
+        </a>
+      
+    
+    
+      <div class='text'>
+        
+          <h2>青墨书晚风</h2>
+        
+        
+          <p>我是副标题</p>
+
+        
+        
+          <p><span id="jinrishici-sentence">竹</span></p>
+          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+        
+      </div>
+    
+    
+      <div class="social-wrapper">
+        
+          
+            <a href="/atom.xml"
+              class="social fas fa-rss flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+              
+            </a>
+          
+        
+          
+            <a href="mailto:me@xxx.com"
+              class="social fas fa-envelope flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+              
+            </a>
+          
+        
+          
+            <a href="https://github.com/yuang01/hexo-theme-bamboo"
+              class="social fab fa-github flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+              
+            </a>
+          
+        
+          
+            <a href="tencent://AddContact/?fromId=50&amp;fromSubId=1&amp;subcmd=all&amp;uin=你的qq号码"
+              class="social fab fa-qq flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+              
+            </a>
+          
+        
+      </div>
+    
+  </div>
+</section>
+
+      
+    
+  
+  
+  
+    
+      <div class="widget moyu" id="moyu" style="order: 0;background: #e9e5d1">
+        <header>
+          
+            <a style="color: #d63130" target="_blank" rel="noopener" href='http://baidu.com'><i class="fa-solid fa-fish fa-fw" aria-hidden="true"></i><span class='name'>开始摸鱼</span></a>
+          
+        </header>
+        <div class="content">
+          <img class="no-lazy" src="https://api.vvhan.com/api/moyu" style="width:100%">
+        </div>
+    </div>
+    
+  
+
+  <div class="layout_sticky">    
+    
+      
+<section class="widget side_toc">
+  
+  <header>
+    
+      <i style="color: " class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+  <div class='content'>
+    <div class="toc-main">
+      <div class="toc-content">
+        <!-- <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8C%89%E9%92%AE%E4%BA%8B%E4%BE%8B2e90im5eacl"><span class="toc-text">按钮事例</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%84%E5%8A%A0%E8%BD%BD%E5%8A%A8%E7%94%BB%E4%BA%8B%E4%BE%8B2lk62avspi4"><span class="toc-text">预加载动画事例</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%84%E5%8A%A0%E8%BD%BD1"><span class="toc-text">预加载1</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%84%E5%8A%A0%E8%BD%BD2"><span class="toc-text">预加载2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%84%E5%8A%A0%E8%BD%BD3"><span class="toc-text">预加载3</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%84%E5%8A%A0%E8%BD%BD4"><span class="toc-text">预加载4</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%84%E5%8A%A0%E8%BD%BD5"><span class="toc-text">预加载5</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%84%E5%8A%A0%E8%BD%BD6"><span class="toc-text">预加载6</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%84%E5%8A%A0%E8%BD%BD7"><span class="toc-text">预加载7</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%84%E5%8A%A0%E8%BD%BD8"><span class="toc-text">预加载8</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%84%E5%8A%A0%E8%BD%BD9"><span class="toc-text">预加载9</span></a></li></ol></li></ol> -->
+        <div class="toc"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- 手机端目录按钮 -->
+<div id="toc-mobile-btn">
+  <i class="fas fa-list-ul" aria-hidden="true"></i>
+</div>
+
+      
+  <section class="widget side_recent_post">
+    
+  <header>
+    
+      <a style="color: " href='/tags/'><i class="fas fa-book fa-fw" aria-hidden="true"></i><span class='name'>最新文章</span></a>
+    
+  </header>
+
+
+    <div class='content'>
+      
+      <!-- hash算法 -->
+      
+      <div class="aside-list">
+        
+          <div class="aside-list-item">
+            
+            
+            
+
+            <div class="post-img-box">
+              <a href="/post/btn-preloader/" class="post-img " style="background-size: cover; 
+                background-position: center center;">
+                <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="https://pic4.zhimg.com/80/v2-37134f732bbe21779fdb2fc8dca410c7_1440w.jpg" class="lazyload placeholder" data-srcset="https://pic4.zhimg.com/80/v2-37134f732bbe21779fdb2fc8dca410c7_1440w.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+              </a>
+            </div>
+            <div class="post-date-title">
+              <div>
+                
+                  <span class="post-date">01-25</span>
+                
+              </div>
+              <a class="post-title" href="/post/btn-preloader/">新增酷炫按钮和预加载动画</a>
+            </div>
+          </div>
+        
+          <div class="aside-list-item">
+            
+            
+            
+
+            <div class="post-img-box">
+              <a href="/post/side/githubcalendar/" class="post-img " style="background-size: cover; 
+                background-position: center center;">
+                <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="https://pic4.zhimg.com/v2-0745cf85004a8d53e6b189b3f4a04b7b_b.jpg" class="lazyload placeholder" data-srcset="https://pic4.zhimg.com/v2-0745cf85004a8d53e6b189b3f4a04b7b_b.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+              </a>
+            </div>
+            <div class="post-date-title">
+              <div>
+                
+                  <span class="post-date">01-14</span>
+                
+              </div>
+              <a class="post-title" href="/post/side/githubcalendar/">首页github日历</a>
+            </div>
+          </div>
+        
+          <div class="aside-list-item">
+            
+            
+            
+
+            <div class="post-img-box">
+              <a href="/post/swiper/" class="post-img " style="background-size: cover; 
+                background-position: center center;">
+                <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="https://pic1.zhimg.com/80/v2-6d0cbd4380b4959542d3f5da31c7f20c_1440w.jpg" class="lazyload placeholder" data-srcset="https://pic1.zhimg.com/80/v2-6d0cbd4380b4959542d3f5da31c7f20c_1440w.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+              </a>
+            </div>
+            <div class="post-date-title">
+              <div>
+                
+                  <span class="post-date">11-13</span>
+                
+              </div>
+              <a class="post-title" href="/post/swiper/">轮播-swiper</a>
+            </div>
+          </div>
+        
+          <div class="aside-list-item">
+            
+            
+            
+
+            <div class="post-img-box">
+              <a href="/post/hexo-theme-bamboo/page/" class="post-img " style="background-size: cover; 
+                background-position: center center;">
+                <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="https://pica.zhimg.com/80/v2-dff5af5b4e0331e3b9c22ef1004d88c8_1440w.jpg" class="lazyload placeholder" data-srcset="https://pica.zhimg.com/80/v2-dff5af5b4e0331e3b9c22ef1004d88c8_1440w.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+              </a>
+            </div>
+            <div class="post-date-title">
+              <div>
+                
+                  <span class="post-date">07-16</span>
+                
+              </div>
+              <a class="post-title" href="/post/hexo-theme-bamboo/page/">Bamboo主题-主题config配置项简介（二）</a>
+            </div>
+          </div>
+        
+          <div class="aside-list-item">
+            
+            
+            
+
+            <div class="post-img-box">
+              <a href="/post/danmu/index/" class="post-img " style="background-size: cover; 
+                background-position: center center;">
+                <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="https://pic1.zhimg.com/80/v2-e012e11ff2cd3270df046e3cd4fb9fbe_1440w.jpg" class="lazyload placeholder" data-srcset="https://pic1.zhimg.com/80/v2-e012e11ff2cd3270df046e3cd4fb9fbe_1440w.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+              </a>
+            </div>
+            <div class="post-date-title">
+              <div>
+                
+                  <span class="post-date">07-15</span>
+                
+              </div>
+              <a class="post-title" href="/post/danmu/index/">首页添加弹幕</a>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+  </section>
+
+    
+  </div>
+</aside>
+
+
+  <!-- 图片放大 Wrap images with fancybox support -->
+  <script src="/js/wrapImage.js"></script>
+</div>
+
+<!-- 文章详情页背景图 -->
+<div id="appBgSwiper" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -2;"
+	:style="{'background-color': bgColor ? bgColor : 'transparent'}">
+	<transition-group tag="ul" :name="names">
+		<li v-for='(image,index) in img' :key='index' v-show="index === mark" class="bg-swiper-box">
+			<img :src="image" class="bg-swiper-img no-lazy">
+		</li>
+	</transition-group>
+</div>
+<script>
+	var vm = new Vue({
+		el: '#appBgSwiper',
+		data: {
+			names: '' || 'fade' || 'fade', // translate-fade fade
+			mark: 0,
+			img: [],
+			bgColor: '',
+			time: null
+		},
+		methods: {   //添加方法
+			change(i, m) {
+				if (i > m) {
+					// this.names = 'fade';
+				} else if (i < m) {
+					// this.names = 'fade';
+				} else {
+					return;
+				}
+				this.mark = i;
+			},
+			prev() {
+				// this.names = 'fade';
+				this.mark--;
+				if (this.mark === -1) {
+					this.mark = 3;
+					return
+				}
+			},
+			next() {
+				// this.names = 'fade';
+				this.mark++;
+				if (this.mark === this.img.length) {
+					this.mark = 0;
+					return
+				}
+			},
+			autoPlay() {
+				// this.names = 'fade';
+				this.mark++;
+				if (this.mark === this.img.length) {
+					this.mark = 0;
+					return
+				}
+			},
+			play() {
+				let bgImgDelay = '' || '180000'
+				let delay = parseInt(bgImgDelay) || 180000;
+				this.time = setInterval(this.autoPlay, delay);
+			},
+			enter() {
+				clearInterval(this.time);
+			},
+			leave() {
+				this.play();
+			}
+		},
+		created() {
+			this.play()
+		},
+		beforeDestroy() {
+			clearInterval(this.time);
+		},
+		mounted() {
+			let prop = 'https://pic4.zhimg.com/v2-7e40abd6bebb53fc13faa98cafe5d55b_b.jpg' || 'https://pica.zhimg.com/80/v2-292e6340491bd97f9d014d6be3371c04_1440w.jpg,https://pica.zhimg.com/80/v2-9659f2305acb80f25ced33aa980092c1_1440w.jpg,https://api.btstu.cn/sjbz/api.php';
+			let isImg = prop.includes('.bmp') || prop.includes('.jpg') || prop.includes('.png') || prop.includes('.tif') || prop.includes('.gif') || prop.includes('.pcx') || prop.includes('.tga') || prop.includes('.exif') || prop.includes('.fpx') || prop.includes('.psd') || prop.includes('.cdr') || prop.includes('.pcd') || prop.includes('.dxf') || prop.includes('.ufo') || prop.includes('.eps') || prop.includes('.ai') || prop.includes('.raw') || prop.includes('.WMF') || prop.includes('.webp') || prop.includes('.jpeg') || prop.includes('http://') || prop.includes('https://')
+			if (isImg) {
+				let img = prop.split(',');
+				let configRoot = '/'
+				let arrImg = [];
+				img.forEach(el => {
+					var Expression = /http(s)?:\/\/([\w-]+\.)+[\w-]+(\/[\w- .\/?%&=]*)?/;
+					var objExp = new RegExp(Expression);
+
+					if (objExp.test(el)) {
+						// http or https
+						arrImg.push(el);
+					} else {
+						// 非http or https开头
+						// 本地文件
+						let firstStr = el.charAt(0);
+						if (firstStr == '/') {
+							el = el.substr(1); // 删除第一个字符 '/',因为 configRoot最后一个字符为 /
+						}
+						el = configRoot + el;
+						arrImg.push(el);
+					}
+				})
+				this.img = arrImg;
+			} else {
+				this.bgColor = prop;
+			}
+		}
+	})
+</script>
+
+<style>
+	.bg-swiper-box {
+		position: absolute;
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+
+	.bg-swiper-img {
+		object-fit: cover;
+		width: 100%;
+		height: 100%;
+	}
+</style>
+
+
+
+
+  <script>
+  function loadMermaid() {
+    if (document.getElementsByClassName('mermaid').length) {
+      if (window.mermaidJsLoad) mermaid.init()
+      else {
+        loadScript('https://unpkg.com/mermaid/dist/mermaid.min.js').then(() => {
+          window.mermaidJsLoad = true
+          mermaid.initialize({
+            theme: 'default',
+          })
+          if ('true') {
+            mermaid.init();
+          }
+        })
+      }
+    }
+  };
+  document.addEventListener("DOMContentLoaded", function () {
+    loadMermaid();
+  })
+
+  document.addEventListener('pjax:complete', function () {
+    loadMermaid();
+  })
+  
+</script>
+
 
       </main>
     </div>

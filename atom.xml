@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yuang01.github.io/"/>
-  <updated>2023-01-14T15:56:33.727Z</updated>
+  <updated>2023-01-25T13:17:24.504Z</updated>
   <id>http://yuang01.github.io/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>新增酷炫按钮和预加载动画</title>
+    <link href="http://yuang01.github.io/post/btn-preloader/"/>
+    <id>http://yuang01.github.io/post/btn-preloader/</id>
+    <published>2023-01-25T12:42:00.000Z</published>
+    <updated>2023-01-25T13:17:24.504Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 class=&quot;bamboo-h &quot; id=&quot;按钮事例2e90im5eacl&quot;&gt;按钮事例&lt;/h2&gt;&lt;br/&gt;
+
+&lt;span class=&#39;btn center cool-1&#39;&gt;&lt;a class=&quot;button&quot; href=&#39;https://baidu.com&#39;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="前端" scheme="http://yuang01.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="按钮" scheme="http://yuang01.github.io/tags/%E6%8C%89%E9%92%AE/"/>
+    
+      <category term="预加载" scheme="http://yuang01.github.io/tags/%E9%A2%84%E5%8A%A0%E8%BD%BD/"/>
+    
+  </entry>
   
   <entry>
     <title>首页github日历</title>
@@ -493,29 +524,6 @@
     <summary type="html">
     
       内置标签（五）
-    
-    </summary>
-    
-    
-      <category term="前端" scheme="http://yuang01.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="Hexo" scheme="http://yuang01.github.io/tags/Hexo/"/>
-    
-      <category term="hexo-theme-bamboo" scheme="http://yuang01.github.io/tags/hexo-theme-bamboo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Bamboo主题-建议（六）</title>
-    <link href="http://yuang01.github.io/post/hexo-theme-bamboo/suggest/"/>
-    <id>http://yuang01.github.io/post/hexo-theme-bamboo/suggest/</id>
-    <published>2021-07-05T03:07:00.000Z</published>
-    <updated>2022-06-09T11:46:46.516Z</updated>
-    
-    <summary type="html">
-    
-      建议（六）
     
     </summary>
     

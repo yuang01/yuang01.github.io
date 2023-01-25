@@ -77,35 +77,24 @@
 
   
   
-  <body>
-    <!-- 预加载动画 -->
-    <!-- 页面预加载动画 -->
+  <!-- 预加载动画 -->
+  <!-- 页面预加载动画 -->
 
-<div id='loader'>
-  <link rel="stylesheet" href="/js/loaded/index.css" >
-  <div class="loading-left-bg"></div>
-  <div class="loading-right-bg"></div>
-  <div class="spinner-box">
-    <div class="configure-border-1">
-      <div class="configure-core"></div>
-    </div>
-    <div class="configure-border-2">
-      <div class="configure-core"></div>
-    </div>
-    <div class="loading-word">加载中...</div>
-  </div>
+  
+    <div class="preloader_2" id="loader">
+  <div class="loader"></div>
 </div>
 
+  
 <script>
   var endLoading = function () {
     document.body.style.overflow = 'auto';
     document.getElementById('loader').classList.add("loading");
   }
   window.addEventListener('DOMContentLoaded',endLoading);
-  
 </script>
 
-    
+  <body>
     <!-- 判断是否为暗黑风格 -->
     <!-- 判断是否为黑夜模式 -->
 <script>
@@ -841,45 +830,45 @@
   <div class="main-content">
     <article class="post post-detail">
       <div class="post-content">
-        <h2 class="bamboo-h " id="融入段落中按钮65no5j29la">融入段落中按钮</h2><br/>
+        <h2 class="bamboo-h " id="融入段落中按钮22iwssy9rgp">融入段落中按钮</h2><br/>
 <p>不设置任何参数的 <span class='btn'><a class="button" href='/' title='按钮'>按钮</a></span> 适合融入段落中。</p>
 <p>不设置任何参数的 <span class='btn warning'><a class="button" href='/' title='按钮'>按钮</a></span> 适合融入段落中。</p>
 <p>不设置任何参数的 <span class='btn info'><a class="button" href='/' title='按钮'>按钮</a></span> 适合融入段落中。</p>
 <p>不设置任何参数的 <span class='btn success'><a class="button" href='/' title='按钮'>按钮</a></span> 适合融入段落中。</p>
 <p>不设置任何参数的 <span class='btn danger'><a class="button" href='/' title='按钮'>按钮</a></span> 适合融入段落中。</p>
 <h2 id="上述实例源码"><a href="#上述实例源码" class="headerlink" title="上述实例源码"></a>上述实例源码</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">不设置任何参数的 &#123;% btn 按钮, / %&#125; 适合融入段落中。</span><br><span class="line"></span><br><span class="line">不设置任何参数的 &#123;% btn warning, 按钮, / %&#125; 适合融入段落中。</span><br><span class="line"></span><br><span class="line">不设置任何参数的 &#123;% btn info, 按钮, / %&#125; 适合融入段落中。</span><br><span class="line"></span><br><span class="line">不设置任何参数的 &#123;% btn success, 按钮, / %&#125; 适合融入段落中。</span><br><span class="line"></span><br><span class="line">不设置任何参数的 &#123;% btn danger, 按钮, / %&#125; 适合融入段落中。</span><br></pre></td></tr></table></figure>
-<h2 class="bamboo-h " id="空心和实心按钮wg347nwdh9">空心和实心按钮</h2><br/>
+<h2 class="bamboo-h " id="空心和实心按钮1drq85lk8ic">空心和实心按钮</h2><br/>
 <span class='btn hollow'><a class="button" target="_blank" rel="noopener" href='https://baidu.com' title='示例博客'><i class='fa fa-qq'></i>示例博客</a></span>
 <span class='btn solid'><a class="button" target="_blank" rel="noopener" href='https://baidu.com' title='示例博客'><i class='fa fa-weixin'></i>示例博客</a></span>
 
 <h2 id="上述实例源码-1"><a href="#上述实例源码-1" class="headerlink" title="上述实例源码"></a>上述实例源码</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#123;% btn hollow, 示例博客, https://baidu.com, fa fa-qq %&#125;</span><br><span class="line">&#123;% btn solid, 示例博客, https://baidu.com, fa fa-weixin %&#125;</span><br></pre></td></tr></table></figure>
-<h2 class="bamboo-h " id="大点的按钮和样式67yx918pjo0">大点的按钮和样式</h2><br/>
+<h2 class="bamboo-h " id="大点的按钮和样式2jkt1t19cao">大点的按钮和样式</h2><br/>
 <span class='btn center large'><a class="button" target="_blank" rel="noopener" href='https://baidu.com' title='开始使用'><i class='fa fa-download'></i>开始使用</a></span>
 
 <h2 id="上述实例源码-2"><a href="#上述实例源码-2" class="headerlink" title="上述实例源码"></a>上述实例源码</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% btn center large, 开始使用, https://baidu.com, fa fa-download %&#125;</span><br></pre></td></tr></table></figure>
-<h2 class="bamboo-h " id="环形按钮6ab6bmwv8i8">环形按钮</h2><br/>
+<h2 class="bamboo-h " id="环形按钮2ohavzqwf68">环形按钮</h2><br/>
 <span class='btn center large round solid'><a class="button" target="_blank" rel="noopener" href='https://baidu.com' title='开始使用'><i class='fa fa-download'></i>开始使用</a></span>
 <h2 id="上述实例源码-3"><a href="#上述实例源码-3" class="headerlink" title="上述实例源码"></a>上述实例源码</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% btn center large round solid, 开始使用, https://baidu.com, fa fa-download %&#125;</span><br></pre></td></tr></table></figure>
-<h2 class="bamboo-h " id="warning等颜色按钮1t8mgxemdzn">warning等颜色按钮</h2><br/>
+<h2 class="bamboo-h " id="warning等颜色按钮1daaga6c8rx">warning等颜色按钮</h2><br/>
 <span class='btn large round solid warning'><a class="button" target="_blank" rel="noopener" href='https://baidu.com' title='开始使用'><i class='fa fa-download'></i>开始使用</a></span>
 <span class='btn large round solid info'><a class="button" target="_blank" rel="noopener" href='https://baidu.com' title='开始使用'><i class='fa fa-download'></i>开始使用</a></span>
 <span class='btn large round solid success'><a class="button" target="_blank" rel="noopener" href='https://baidu.com' title='开始使用'><i class='fa fa-download'></i>开始使用</a></span>
 <span class='btn large round solid danger'><a class="button" target="_blank" rel="noopener" href='https://baidu.com' title='开始使用'><i class='fa fa-download'></i>开始使用</a></span>
 <span class='btn large solid success'><a class="button" target="_blank" rel="noopener" href='https://baidu.com' title='开始使用'><i class='fa fa-download'></i>开始使用</a></span>
 <h2 id="上述实例源码-4"><a href="#上述实例源码-4" class="headerlink" title="上述实例源码"></a>上述实例源码</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;% btn large round solid warning, 开始使用, https://baidu.com, fa fa-download %&#125;</span><br><span class="line">&#123;% btn large round solid info, 开始使用, https://baidu.com, fa fa-download %&#125;</span><br><span class="line">&#123;% btn large round solid success, 开始使用, https://baidu.com, fa fa-download %&#125;</span><br><span class="line">&#123;% btn large round solid danger, 开始使用, https://baidu.com, fa fa-download %&#125;</span><br><span class="line">&#123;% btn large solid success, 开始使用, https://baidu.com, fa fa-download %&#125;</span><br></pre></td></tr></table></figure>
-<h2 class="bamboo-h " id="warning等颜色空心按钮11ihadr3hlj">warning等颜色空心按钮</h2><br/>
+<h2 class="bamboo-h " id="warning等颜色空心按钮2hnfxb7zb0w">warning等颜色空心按钮</h2><br/>
 <span class='btn large warning hollow'><a class="button" target="_blank" rel="noopener" href='https://baidu.com' title='开始使用'><i class='fa fa-download'></i>开始使用</a></span>
 <span class='btn large info hollow'><a class="button" target="_blank" rel="noopener" href='https://baidu.com' title='开始使用'><i class='fa fa-download'></i>开始使用</a></span>
 <span class='btn large success hollow'><a class="button" target="_blank" rel="noopener" href='https://baidu.com' title='开始使用'><i class='fa fa-download'></i>开始使用</a></span>
 <span class='btn large danger hollow'><a class="button" target="_blank" rel="noopener" href='https://baidu.com' title='开始使用'><i class='fa fa-download'></i>开始使用</a></span>
 <span class='btn success hollow'><a class="button" target="_blank" rel="noopener" href='https://baidu.com' title='开始使用'><i class='fa fa-download'></i>开始使用</a></span>
 <h2 id="上述实例源码-5"><a href="#上述实例源码-5" class="headerlink" title="上述实例源码"></a>上述实例源码</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;% btn large warning hollow, 开始使用, https://baidu.com, fa fa-download %&#125;</span><br><span class="line">&#123;% btn large info hollow, 开始使用, https://baidu.com, fa fa-download %&#125;</span><br><span class="line">&#123;% btn large success hollow, 开始使用, https://baidu.com, fa fa-download %&#125;</span><br><span class="line">&#123;% btn large danger hollow, 开始使用, https://baidu.com, fa fa-download %&#125;</span><br><span class="line">&#123;% btn success hollow, 开始使用, https://baidu.com, fa fa-download %&#125;</span><br></pre></td></tr></table></figure>
-<h2 class="bamboo-h " id="warning等颜色空心环形居中按钮d7frwhpjh48">warning等颜色空心环形居中按钮</h2><br/>
+<h2 class="bamboo-h " id="warning等颜色空心环形居中按钮6sbyt3vaygg">warning等颜色空心环形居中按钮</h2><br/>
 <span class='btn large danger hollow center round'><a class="button" target="_blank" rel="noopener" href='https://baidu.com' title='开始使用'><i class='fa fa-download'></i>开始使用</a></span>
 <span class='btn danger hollow center round'><a class="button" target="_blank" rel="noopener" href='https://baidu.com' title='开始使用'><i class='fa fa-download'></i>开始使用</a></span>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#123;% btn large danger hollow center round, 开始使用, https://baidu.com, fa fa-download %&#125;</span><br><span class="line">&#123;% btn danger hollow center round, 开始使用, https://baidu.com, fa fa-download %&#125;</span><br></pre></td></tr></table></figure>
-<h2 class="bamboo-h " id="带有头像和名称的按钮83o550rkxsg">带有头像和名称的按钮</h2><br/>
-<h3 class="bamboo-h-b" id="一行两个cp6hysk8quo" style="color:!important">一行两个</h3><div></div>
+<h2 class="bamboo-h " id="带有头像和名称的按钮o7zlrp1gol">带有头像和名称的按钮</h2><br/>
+<h3 class="bamboo-h-b" id="一行两个27phhfg3a8s" style="color:!important">一行两个</h3><div></div>
 <div class="btns circle grid2">
             <a class="button" target="_blank" rel="noopener" href='https://baidu.com' title='草帽海贼团'><img src='https://img2.woyaogexing.com/2021/01/30/007e3777e7e64c4aae95ae812708a7bf!400x400.jpeg'>草帽海贼团</a>
 <a class="button" target="_blank" rel="noopener" href='https://baidu.com' title='小绵羊'><img src='https://img2.woyaogexing.com/2021/01/30/4c59f9dd4aae421fae21344aec8c7b60!400x400.jpeg'>小绵羊</a>
@@ -889,7 +878,7 @@
 <a class="button" target="_blank" rel="noopener" href='https://baidu.com' title='韩信'><img src='https://p.qqan.com/up/2021-1/16118869704182020.jpg'>韩信</a>
           </div>
 <h3 id="上述实例源码-6"><a href="#上述实例源码-6" class="headerlink" title="上述实例源码"></a>上述实例源码</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;% btns circle grid2 %&#125;</span><br><span class="line">  &#123;% cell 草帽海贼团, https://baidu.com, https://img2.woyaogexing.com/2021/01/30/007e3777e7e64c4aae95ae812708a7bf!400x400.jpeg %&#125;</span><br><span class="line">  &#123;% cell 小绵羊, https://baidu.com, https://img2.woyaogexing.com/2021/01/30/4c59f9dd4aae421fae21344aec8c7b60!400x400.jpeg %&#125;</span><br><span class="line">  &#123;% cell 沫兮, https://baidu.com, https://img2.woyaogexing.com/2021/01/30/1b2aec116f0b49c682badc5befd43905!400x400.jpeg %&#125;</span><br><span class="line">  &#123;% cell 凯爹, https://baidu.com, https://p.qqan.com/up/2021-1/16112058848478910.jpg %&#125;</span><br><span class="line">  &#123;% cell 阿离, https://baidu.com, https://p.qqan.com/up/2021-1/16118869719896010.jpg %&#125;</span><br><span class="line">  &#123;% cell 韩信, https://baidu.com, https://p.qqan.com/up/2021-1/16118869704182020.jpg %&#125;</span><br><span class="line">&#123;% endbtns %&#125;</span><br></pre></td></tr></table></figure>
-<h3 class="bamboo-h-b" id="一行三个93qhmiqjoz0" style="color:!important">一行三个</h3><div></div>
+<h3 class="bamboo-h-b" id="一行三个6tu6efsqva8" style="color:!important">一行三个</h3><div></div>
 <div class="btns circle grid3">
             <a class="button" target="_blank" rel="noopener" href='https://baidu.com' title='QQ头像'><img src='http://q1.qlogo.cn/g?b=qq&nk=1730241541&s=640'>QQ头像</a>
 <a class="button" target="_blank" rel="noopener" href='https://baidu.com' title='随机动漫头像'><img src='http://api.btstu.cn/sjtx/api.php?lx=c1&format=images'>随机动漫头像</a>
@@ -899,7 +888,7 @@
 <a class="button" target="_blank" rel="noopener" href='https://baidu.com' title='随机动漫男头像'><img src='http://api.btstu.cn/sjtx/api.php?lx=c3&format=images'>随机动漫男头像</a>
           </div>
 <h3 id="上述实例源码-7"><a href="#上述实例源码-7" class="headerlink" title="上述实例源码"></a>上述实例源码</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;% btns circle grid3 %&#125;</span><br><span class="line">  &#123;% cell QQ头像, https://baidu.com, http://q1.qlogo.cn/g?b=qq&amp;nk=1730241541&amp;s=640 %&#125;</span><br><span class="line">  &#123;% cell 随机动漫头像, https://baidu.com, http://api.btstu.cn/sjtx/api.php?lx=c1&amp;format=images %&#125;</span><br><span class="line">  &#123;% cell 随机男生头像, https://baidu.com, http://api.btstu.cn/sjtx/api.php?lx=a1&amp;format=images %&#125;</span><br><span class="line">  &#123;% cell 随机女生头像, https://baidu.com, http://api.btstu.cn/sjtx/api.php?lx=b1&amp;format=images %&#125;</span><br><span class="line">  &#123;% cell 随机动漫女头像, https://baidu.com, http://api.btstu.cn/sjtx/api.php?lx=c2&amp;format=images %&#125;</span><br><span class="line">  &#123;% cell 随机动漫男头像, https://baidu.com, http://api.btstu.cn/sjtx/api.php?lx=c3&amp;format=images %&#125;</span><br><span class="line">&#123;% endbtns %&#125;</span><br></pre></td></tr></table></figure>
-<h3 class="bamboo-h-b" id="一行四个zemcfo7ztj" style="color:!important">一行四个</h3><div></div>
+<h3 class="bamboo-h-b" id="一行四个117ebktpxn1" style="color:!important">一行四个</h3><div></div>
 <div class="btns circle grid4">
             <a class="button" target="_blank" rel="noopener" href='https://baidu.com' title='随机Github头像'><img src='https://api.prodless.com/avatar.png'>随机Github头像</a>
 <a class="button" target="_blank" rel="noopener" href='https://baidu.com' title='随机Github头像'><img src='https://api.prodless.com/avatar.png'>随机Github头像</a>
@@ -908,7 +897,7 @@
 <a class="button" target="_blank" rel="noopener" href='https://baidu.com' title='随机Github头像'><img src='https://api.prodless.com/avatar.png'>随机Github头像</a>
           </div>
 <h3 id="上述实例源码-8"><a href="#上述实例源码-8" class="headerlink" title="上述实例源码"></a>上述实例源码</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;% btns circle grid4 %&#125;</span><br><span class="line">  &#123;% cell 随机Github头像, https://baidu.com, https://api.prodless.com/avatar.png %&#125;</span><br><span class="line">  &#123;% cell 随机Github头像, https://baidu.com, https://api.prodless.com/avatar.png %&#125;</span><br><span class="line">  &#123;% cell 随机Github头像, https://baidu.com, https://api.prodless.com/avatar.png %&#125;</span><br><span class="line">  &#123;% cell 随机Github头像, https://baidu.com, https://api.prodless.com/avatar.png %&#125;</span><br><span class="line">  &#123;% cell 随机Github头像, https://baidu.com, https://api.prodless.com/avatar.png %&#125;</span><br><span class="line">&#123;% endbtns %&#125;</span><br></pre></td></tr></table></figure>
-<h3 class="bamboo-h-b" id="一行五个1nx5t9wad8i" style="color:!important">一行五个</h3><div></div>
+<h3 class="bamboo-h-b" id="一行五个17eh5xllvtw" style="color:!important">一行五个</h3><div></div>
 <div class="btns circle grid5">
             <a class="button" target="_blank" rel="noopener" href='https://baidu.com' title='随机头像'><img src='https://picsum.photos/200'>随机头像</a>
 <a class="button" target="_blank" rel="noopener" href='https://baidu.com' title='随机头像id'><img src='https://picsum.photos/id/1/200'>随机头像id</a>
@@ -925,26 +914,26 @@
 <a class="button" target="_blank" rel="noopener" href='https://baidu.com' title='随机风景'><img src='https://api.ixiaowai.cn/gqapi/gqapi.php'>随机风景</a>
           </div>
 <h3 id="上述实例源码-9"><a href="#上述实例源码-9" class="headerlink" title="上述实例源码"></a>上述实例源码</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&#123;% btns circle grid5 %&#125;</span><br><span class="line">  &#123;% cell 随机头像, https://baidu.com, https://picsum.photos/200 %&#125;</span><br><span class="line">  &#123;% cell 随机头像id, https://baidu.com, https://picsum.photos/id/1/200 %&#125;</span><br><span class="line">  &#123;% cell 随机头像id, https://baidu.com, https://picsum.photos/id/2/200 %&#125;</span><br><span class="line">  &#123;% cell 随机头像id, https://baidu.com, https://picsum.photos/id/3/200 %&#125;</span><br><span class="line">  &#123;% cell 随机头像id, https://baidu.com, https://picsum.photos/id/4/200 %&#125;</span><br><span class="line">&#123;% endbtns %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% btns circle grid5 %&#125;</span><br><span class="line">  &#123;% cell 随机风景, https://baidu.com,   https://api.ixiaowai.cn/gqapi/gqapi.php %&#125;</span><br><span class="line">  &#123;% cell 随机风景, https://baidu.com,   https://api.ixiaowai.cn/gqapi/gqapi.php %&#125;</span><br><span class="line">  &#123;% cell 随机风景, https://baidu.com,   https://api.ixiaowai.cn/gqapi/gqapi.php %&#125;</span><br><span class="line">  &#123;% cell 随机风景, https://baidu.com,   https://api.ixiaowai.cn/gqapi/gqapi.php %&#125;</span><br><span class="line">  &#123;% cell 随机风景, https://baidu.com,   https://api.ixiaowai.cn/gqapi/gqapi.php %&#125;</span><br><span class="line">&#123;% endbtns %&#125;</span><br></pre></td></tr></table></figure>
-<h2 class="bamboo-h-b" id="环形图标按钮29nslqri4ea" style="color:!important">环形图标按钮</h2><div></div>
+<h2 class="bamboo-h-b" id="环形图标按钮1i9nou63v48" style="color:!important">环形图标按钮</h2><div></div>
 <div class="btns rounded grid5">
             <a class="button" href='/' title='下载源码'><i class='fa fa-download'></i>下载源码</a>
 <a class="button" href='/' title='查看文档'><i class='fa fa-book'></i>查看文档</a>
           </div>
 <h3 id="上述事例代码"><a href="#上述事例代码" class="headerlink" title="上述事例代码"></a>上述事例代码</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;% btns rounded grid5 %&#125;</span><br><span class="line">  &#123;% cell 下载源码, &#x2F;, fa fa-download %&#125;</span><br><span class="line">  &#123;% cell 查看文档, &#x2F;, fa fa-book %&#125;</span><br><span class="line">&#123;% endbtns %&#125;</span><br></pre></td></tr></table></figure>
-<h2 class="bamboo-h-b" id="环形图标居中按钮1qkapsul5s1" style="color:!important">环形图标居中按钮</h2><div></div>
+<h2 class="bamboo-h-b" id="环形图标居中按钮665criy54uo" style="color:!important">环形图标居中按钮</h2><div></div>
 <div class="btns rounded grid5 center">
             <a class="button" href='/' title='下载源码'><i class='fa fa-download'></i>下载源码</a>
 <a class="button" href='/' title='查看文档'><i class='fa fa-book'></i>查看文档</a>
           </div>
 <h3 id="上述事例代码-1"><a href="#上述事例代码-1" class="headerlink" title="上述事例代码"></a>上述事例代码</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;% btns rounded grid5 center %&#125;</span><br><span class="line">  &#123;% cell 下载源码, /, fa fa-download %&#125;</span><br><span class="line">  &#123;% cell 查看文档, /, fa fa-book %&#125;</span><br><span class="line">&#123;% endbtns %&#125;</span><br></pre></td></tr></table></figure>
-<h2 class="bamboo-h-b" id="环形图标填充按钮4xaakitrffk" style="color:!important">环形图标填充按钮</h2><div></div>
+<h2 class="bamboo-h-b" id="环形图标填充按钮16qb8wzgmru" style="color:!important">环形图标填充按钮</h2><div></div>
 
 <div class="btns rounded grid5 fill">
             <a class="button" href='/' title='下载源码'><i class='fa fa-download'></i>下载源码</a>
 <a class="button" href='/' title='查看文档'><i class='fa fa-book'></i>查看文档</a>
           </div>
 <h3 id="上述事例代码-2"><a href="#上述事例代码-2" class="headerlink" title="上述事例代码"></a>上述事例代码</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;% btns rounded grid5 fill %&#125;</span><br><span class="line">  &#123;% cell 下载源码, /, fa fa-download %&#125;</span><br><span class="line">  &#123;% cell 查看文档, /, fa fa-book %&#125;</span><br><span class="line">&#123;% endbtns %&#125;</span><br></pre></td></tr></table></figure>
-<h2 class="bamboo-h-b" id="圆形图标按钮d988jwyusyw" style="color:!important">圆形图标按钮</h2><div></div>
+<h2 class="bamboo-h-b" id="圆形图标按钮20eljtpl7wh" style="color:!important">圆形图标按钮</h2><div></div>
 <div class="btns circle center grid5">
             <a target="_blank" rel="noopener" href='https://apps.apple.com/cn/app/heart-mate-pro-hrm-utility/id1463348922?ls=1'>
   <i class='fa fa-apple'></i>
@@ -1195,7 +1184,7 @@ Your browser does not support the audio tag.
   <div class='content'>
     <div class="toc-main">
       <div class="toc-content">
-        <!-- <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%9E%8D%E5%85%A5%E6%AE%B5%E8%90%BD%E4%B8%AD%E6%8C%89%E9%92%AE65no5j29la"><span class="toc-text">融入段落中按钮</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8A%E8%BF%B0%E5%AE%9E%E4%BE%8B%E6%BA%90%E7%A0%81"><span class="toc-text">上述实例源码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A9%BA%E5%BF%83%E5%92%8C%E5%AE%9E%E5%BF%83%E6%8C%89%E9%92%AEwg347nwdh9"><span class="toc-text">空心和实心按钮</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8A%E8%BF%B0%E5%AE%9E%E4%BE%8B%E6%BA%90%E7%A0%81-1"><span class="toc-text">上述实例源码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%A7%E7%82%B9%E7%9A%84%E6%8C%89%E9%92%AE%E5%92%8C%E6%A0%B7%E5%BC%8F67yx918pjo0"><span class="toc-text">大点的按钮和样式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8A%E8%BF%B0%E5%AE%9E%E4%BE%8B%E6%BA%90%E7%A0%81-2"><span class="toc-text">上述实例源码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%8E%AF%E5%BD%A2%E6%8C%89%E9%92%AE6ab6bmwv8i8"><span class="toc-text">环形按钮</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8A%E8%BF%B0%E5%AE%9E%E4%BE%8B%E6%BA%90%E7%A0%81-3"><span class="toc-text">上述实例源码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#warning%E7%AD%89%E9%A2%9C%E8%89%B2%E6%8C%89%E9%92%AE1t8mgxemdzn"><span class="toc-text">warning等颜色按钮</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8A%E8%BF%B0%E5%AE%9E%E4%BE%8B%E6%BA%90%E7%A0%81-4"><span class="toc-text">上述实例源码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#warning%E7%AD%89%E9%A2%9C%E8%89%B2%E7%A9%BA%E5%BF%83%E6%8C%89%E9%92%AE11ihadr3hlj"><span class="toc-text">warning等颜色空心按钮</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8A%E8%BF%B0%E5%AE%9E%E4%BE%8B%E6%BA%90%E7%A0%81-5"><span class="toc-text">上述实例源码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#warning%E7%AD%89%E9%A2%9C%E8%89%B2%E7%A9%BA%E5%BF%83%E7%8E%AF%E5%BD%A2%E5%B1%85%E4%B8%AD%E6%8C%89%E9%92%AEd7frwhpjh48"><span class="toc-text">warning等颜色空心环形居中按钮</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%A6%E6%9C%89%E5%A4%B4%E5%83%8F%E5%92%8C%E5%90%8D%E7%A7%B0%E7%9A%84%E6%8C%89%E9%92%AE83o550rkxsg"><span class="toc-text">带有头像和名称的按钮</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E8%A1%8C%E4%B8%A4%E4%B8%AAcp6hysk8quo"><span class="toc-text">一行两个</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8A%E8%BF%B0%E5%AE%9E%E4%BE%8B%E6%BA%90%E7%A0%81-6"><span class="toc-text">上述实例源码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E8%A1%8C%E4%B8%89%E4%B8%AA93qhmiqjoz0"><span class="toc-text">一行三个</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8A%E8%BF%B0%E5%AE%9E%E4%BE%8B%E6%BA%90%E7%A0%81-7"><span class="toc-text">上述实例源码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E8%A1%8C%E5%9B%9B%E4%B8%AAzemcfo7ztj"><span class="toc-text">一行四个</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8A%E8%BF%B0%E5%AE%9E%E4%BE%8B%E6%BA%90%E7%A0%81-8"><span class="toc-text">上述实例源码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E8%A1%8C%E4%BA%94%E4%B8%AA1nx5t9wad8i"><span class="toc-text">一行五个</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8A%E8%BF%B0%E5%AE%9E%E4%BE%8B%E6%BA%90%E7%A0%81-9"><span class="toc-text">上述实例源码</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%8E%AF%E5%BD%A2%E5%9B%BE%E6%A0%87%E6%8C%89%E9%92%AE29nslqri4ea"><span class="toc-text">环形图标按钮</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8A%E8%BF%B0%E4%BA%8B%E4%BE%8B%E4%BB%A3%E7%A0%81"><span class="toc-text">上述事例代码</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%8E%AF%E5%BD%A2%E5%9B%BE%E6%A0%87%E5%B1%85%E4%B8%AD%E6%8C%89%E9%92%AE1qkapsul5s1"><span class="toc-text">环形图标居中按钮</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8A%E8%BF%B0%E4%BA%8B%E4%BE%8B%E4%BB%A3%E7%A0%81-1"><span class="toc-text">上述事例代码</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%8E%AF%E5%BD%A2%E5%9B%BE%E6%A0%87%E5%A1%AB%E5%85%85%E6%8C%89%E9%92%AE4xaakitrffk"><span class="toc-text">环形图标填充按钮</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8A%E8%BF%B0%E4%BA%8B%E4%BE%8B%E4%BB%A3%E7%A0%81-2"><span class="toc-text">上述事例代码</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9C%86%E5%BD%A2%E5%9B%BE%E6%A0%87%E6%8C%89%E9%92%AEd988jwyusyw"><span class="toc-text">圆形图标按钮</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8A%E8%BF%B0%E7%A4%BA%E4%BE%8B%E4%BB%A3%E7%A0%81"><span class="toc-text">上述示例代码</span></a></li></ol></li></ol> -->
+        <!-- <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%9E%8D%E5%85%A5%E6%AE%B5%E8%90%BD%E4%B8%AD%E6%8C%89%E9%92%AE22iwssy9rgp"><span class="toc-text">融入段落中按钮</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8A%E8%BF%B0%E5%AE%9E%E4%BE%8B%E6%BA%90%E7%A0%81"><span class="toc-text">上述实例源码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A9%BA%E5%BF%83%E5%92%8C%E5%AE%9E%E5%BF%83%E6%8C%89%E9%92%AE1drq85lk8ic"><span class="toc-text">空心和实心按钮</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8A%E8%BF%B0%E5%AE%9E%E4%BE%8B%E6%BA%90%E7%A0%81-1"><span class="toc-text">上述实例源码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%A7%E7%82%B9%E7%9A%84%E6%8C%89%E9%92%AE%E5%92%8C%E6%A0%B7%E5%BC%8F2jkt1t19cao"><span class="toc-text">大点的按钮和样式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8A%E8%BF%B0%E5%AE%9E%E4%BE%8B%E6%BA%90%E7%A0%81-2"><span class="toc-text">上述实例源码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%8E%AF%E5%BD%A2%E6%8C%89%E9%92%AE2ohavzqwf68"><span class="toc-text">环形按钮</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8A%E8%BF%B0%E5%AE%9E%E4%BE%8B%E6%BA%90%E7%A0%81-3"><span class="toc-text">上述实例源码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#warning%E7%AD%89%E9%A2%9C%E8%89%B2%E6%8C%89%E9%92%AE1daaga6c8rx"><span class="toc-text">warning等颜色按钮</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8A%E8%BF%B0%E5%AE%9E%E4%BE%8B%E6%BA%90%E7%A0%81-4"><span class="toc-text">上述实例源码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#warning%E7%AD%89%E9%A2%9C%E8%89%B2%E7%A9%BA%E5%BF%83%E6%8C%89%E9%92%AE2hnfxb7zb0w"><span class="toc-text">warning等颜色空心按钮</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8A%E8%BF%B0%E5%AE%9E%E4%BE%8B%E6%BA%90%E7%A0%81-5"><span class="toc-text">上述实例源码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#warning%E7%AD%89%E9%A2%9C%E8%89%B2%E7%A9%BA%E5%BF%83%E7%8E%AF%E5%BD%A2%E5%B1%85%E4%B8%AD%E6%8C%89%E9%92%AE6sbyt3vaygg"><span class="toc-text">warning等颜色空心环形居中按钮</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%A6%E6%9C%89%E5%A4%B4%E5%83%8F%E5%92%8C%E5%90%8D%E7%A7%B0%E7%9A%84%E6%8C%89%E9%92%AEo7zlrp1gol"><span class="toc-text">带有头像和名称的按钮</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E8%A1%8C%E4%B8%A4%E4%B8%AA27phhfg3a8s"><span class="toc-text">一行两个</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8A%E8%BF%B0%E5%AE%9E%E4%BE%8B%E6%BA%90%E7%A0%81-6"><span class="toc-text">上述实例源码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E8%A1%8C%E4%B8%89%E4%B8%AA6tu6efsqva8"><span class="toc-text">一行三个</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8A%E8%BF%B0%E5%AE%9E%E4%BE%8B%E6%BA%90%E7%A0%81-7"><span class="toc-text">上述实例源码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E8%A1%8C%E5%9B%9B%E4%B8%AA117ebktpxn1"><span class="toc-text">一行四个</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8A%E8%BF%B0%E5%AE%9E%E4%BE%8B%E6%BA%90%E7%A0%81-8"><span class="toc-text">上述实例源码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E8%A1%8C%E4%BA%94%E4%B8%AA17eh5xllvtw"><span class="toc-text">一行五个</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8A%E8%BF%B0%E5%AE%9E%E4%BE%8B%E6%BA%90%E7%A0%81-9"><span class="toc-text">上述实例源码</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%8E%AF%E5%BD%A2%E5%9B%BE%E6%A0%87%E6%8C%89%E9%92%AE1i9nou63v48"><span class="toc-text">环形图标按钮</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8A%E8%BF%B0%E4%BA%8B%E4%BE%8B%E4%BB%A3%E7%A0%81"><span class="toc-text">上述事例代码</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%8E%AF%E5%BD%A2%E5%9B%BE%E6%A0%87%E5%B1%85%E4%B8%AD%E6%8C%89%E9%92%AE665criy54uo"><span class="toc-text">环形图标居中按钮</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8A%E8%BF%B0%E4%BA%8B%E4%BE%8B%E4%BB%A3%E7%A0%81-1"><span class="toc-text">上述事例代码</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%8E%AF%E5%BD%A2%E5%9B%BE%E6%A0%87%E5%A1%AB%E5%85%85%E6%8C%89%E9%92%AE16qb8wzgmru"><span class="toc-text">环形图标填充按钮</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8A%E8%BF%B0%E4%BA%8B%E4%BE%8B%E4%BB%A3%E7%A0%81-2"><span class="toc-text">上述事例代码</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9C%86%E5%BD%A2%E5%9B%BE%E6%A0%87%E6%8C%89%E9%92%AE20eljtpl7wh"><span class="toc-text">圆形图标按钮</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8A%E8%BF%B0%E7%A4%BA%E4%BE%8B%E4%BB%A3%E7%A0%81"><span class="toc-text">上述示例代码</span></a></li></ol></li></ol> -->
         <div class="toc"></div>
       </div>
     </div>
@@ -1221,6 +1210,27 @@ Your browser does not support the audio tag.
       <!-- hash算法 -->
       
       <div class="aside-list">
+        
+          <div class="aside-list-item">
+            
+            
+            
+
+            <div class="post-img-box">
+              <a href="/post/btn-preloader/" class="post-img " style="background-size: cover; 
+                background-position: center center;">
+                <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="https://pic4.zhimg.com/80/v2-37134f732bbe21779fdb2fc8dca410c7_1440w.jpg" class="lazyload placeholder" data-srcset="https://pic4.zhimg.com/80/v2-37134f732bbe21779fdb2fc8dca410c7_1440w.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+              </a>
+            </div>
+            <div class="post-date-title">
+              <div>
+                
+                  <span class="post-date">01-25</span>
+                
+              </div>
+              <a class="post-title" href="/post/btn-preloader/">新增酷炫按钮和预加载动画</a>
+            </div>
+          </div>
         
           <div class="aside-list-item">
             
@@ -1303,27 +1313,6 @@ Your browser does not support the audio tag.
                 
               </div>
               <a class="post-title" href="/post/danmu/index/">首页添加弹幕</a>
-            </div>
-          </div>
-        
-          <div class="aside-list-item">
-            
-            
-            
-
-            <div class="post-img-box">
-              <a href="/post/custom/resume-404/" class="post-img " style="background-size: cover; 
-                background-position: center center;">
-                <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="https://pic2.zhimg.com/80/v2-b72c5a1840b763674a5a1744cb49f08b_1440w.jpg" class="lazyload placeholder" data-srcset="https://pic2.zhimg.com/80/v2-b72c5a1840b763674a5a1744cb49f08b_1440w.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
-              </a>
-            </div>
-            <div class="post-date-title">
-              <div>
-                
-                  <span class="post-date">07-12</span>
-                
-              </div>
-              <a class="post-title" href="/post/custom/resume-404/">制作简历（关于我）和404页面</a>
             </div>
           </div>
         
@@ -1881,7 +1870,7 @@ Your browser does not support the audio tag.
     scrollSmooth: true,
     scrollSmoothOffset: -70,
     // headingsOffset: -($(window).height() * 0.4 - 45),
-    headingsOffset: -($(window).height() * 0.6 - 70),
+    headingsOffset: -($(window).height() * 0.4 - 70),
     // positionFixedSelector: '.toc-main',
     // positionFixedClass: 'is-position-fixed',
     fixedSidebarOffset: 'auto',

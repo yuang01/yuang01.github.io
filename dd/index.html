@@ -77,35 +77,24 @@
 
   
   
-  <body>
-    <!-- 预加载动画 -->
-    <!-- 页面预加载动画 -->
+  <!-- 预加载动画 -->
+  <!-- 页面预加载动画 -->
 
-<div id='loader'>
-  <link rel="stylesheet" href="/js/loaded/index.css" >
-  <div class="loading-left-bg"></div>
-  <div class="loading-right-bg"></div>
-  <div class="spinner-box">
-    <div class="configure-border-1">
-      <div class="configure-core"></div>
-    </div>
-    <div class="configure-border-2">
-      <div class="configure-core"></div>
-    </div>
-    <div class="loading-word">加载中...</div>
-  </div>
+  
+    <div class="preloader_2" id="loader">
+  <div class="loader"></div>
 </div>
 
+  
 <script>
   var endLoading = function () {
     document.body.style.overflow = 'auto';
     document.getElementById('loader').classList.add("loading");
   }
   window.addEventListener('DOMContentLoaded',endLoading);
-  
 </script>
 
-    
+  <body>
     <!-- 判断是否为暗黑风格 -->
     <!-- 判断是否为黑夜模式 -->
 <script>
@@ -1046,7 +1035,7 @@
             <li><a class="flat-box"
               title="/categories/%E5%89%8D%E7%AB%AF/" href="/categories/%E5%89%8D%E7%AB%AF/"
               id="categoriesE5898DE7ABAF"
-              ><div class='name'>前端</div><div class='badge'>(35)</div></a></li>
+              ><div class='name'>前端</div><div class='badge'>(36)</div></a></li>
           
             <li><a class="flat-box"
               title="/categories/%E5%8A%A8%E6%80%81%E8%83%8C%E6%99%AF/" href="/categories/%E5%8A%A8%E6%80%81%E8%83%8C%E6%99%AF/"
@@ -1101,7 +1090,7 @@
 
 
     <div class='content'>
-    <a href="/tags/404/" style="font-size: 14px; color: #999">404</a> <a href="/tags/Hexo/" style="font-size: 21.5px; color: #666">Hexo</a> <a href="/tags/hexo-theme-bamboo/" style="font-size: 19px; color: #777">hexo-theme-bamboo</a> <a href="/tags/mathjax/" style="font-size: 14px; color: #999">mathjax</a> <a href="/tags/mermaid/" style="font-size: 14px; color: #999">mermaid</a> <a href="/tags/side/" style="font-size: 14px; color: #999">side</a> <a href="/tags/sidebar/" style="font-size: 14px; color: #999">sidebar</a> <a href="/tags/tag/" style="font-size: 24px; color: #555">tag</a> <a href="/tags/%E5%8A%A8%E6%80%81%E8%83%8C%E6%99%AF/" style="font-size: 14px; color: #999">动态背景</a> <a href="/tags/%E6%A2%85%E8%8A%B1/" style="font-size: 14px; color: #999">梅花</a> <a href="/tags/%E7%AE%80%E5%8E%86/" style="font-size: 14px; color: #999">简历</a> <a href="/tags/%E8%87%AA%E5%AE%9A%E4%B9%89/" style="font-size: 14px; color: #999">自定义</a> <a href="/tags/%E8%87%AA%E5%AE%9A%E4%B9%89css/" style="font-size: 16.5px; color: #888">自定义css</a> <a href="/tags/%E9%A6%96%E9%A1%B5%E6%B7%BB%E5%8A%A0%E5%BC%B9%E5%B9%95/" style="font-size: 14px; color: #999">首页添加弹幕</a>
+    <a href="/tags/404/" style="font-size: 14px; color: #999">404</a> <a href="/tags/Hexo/" style="font-size: 21.5px; color: #666">Hexo</a> <a href="/tags/hexo-theme-bamboo/" style="font-size: 19px; color: #777">hexo-theme-bamboo</a> <a href="/tags/mathjax/" style="font-size: 14px; color: #999">mathjax</a> <a href="/tags/mermaid/" style="font-size: 14px; color: #999">mermaid</a> <a href="/tags/side/" style="font-size: 14px; color: #999">side</a> <a href="/tags/sidebar/" style="font-size: 14px; color: #999">sidebar</a> <a href="/tags/tag/" style="font-size: 24px; color: #555">tag</a> <a href="/tags/%E5%8A%A8%E6%80%81%E8%83%8C%E6%99%AF/" style="font-size: 14px; color: #999">动态背景</a> <a href="/tags/%E6%8C%89%E9%92%AE/" style="font-size: 14px; color: #999">按钮</a> <a href="/tags/%E6%A2%85%E8%8A%B1/" style="font-size: 14px; color: #999">梅花</a> <a href="/tags/%E7%AE%80%E5%8E%86/" style="font-size: 14px; color: #999">简历</a> <a href="/tags/%E8%87%AA%E5%AE%9A%E4%B9%89/" style="font-size: 14px; color: #999">自定义</a> <a href="/tags/%E8%87%AA%E5%AE%9A%E4%B9%89css/" style="font-size: 16.5px; color: #888">自定义css</a> <a href="/tags/%E9%A2%84%E5%8A%A0%E8%BD%BD/" style="font-size: 14px; color: #999">预加载</a> <a href="/tags/%E9%A6%96%E9%A1%B5%E6%B7%BB%E5%8A%A0%E5%BC%B9%E5%B9%95/" style="font-size: 14px; color: #999">首页添加弹幕</a>
     </div>
 </section>
 
@@ -1122,6 +1111,27 @@
       <!-- hash算法 -->
       
       <div class="aside-list">
+        
+          <div class="aside-list-item">
+            
+            
+            
+
+            <div class="post-img-box">
+              <a href="/post/btn-preloader/" class="post-img " style="background-size: cover; 
+                background-position: center center;">
+                <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="https://pic4.zhimg.com/80/v2-37134f732bbe21779fdb2fc8dca410c7_1440w.jpg" class="lazyload placeholder" data-srcset="https://pic4.zhimg.com/80/v2-37134f732bbe21779fdb2fc8dca410c7_1440w.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+              </a>
+            </div>
+            <div class="post-date-title">
+              <div>
+                
+                  <span class="post-date">01-25</span>
+                
+              </div>
+              <a class="post-title" href="/post/btn-preloader/">新增酷炫按钮和预加载动画</a>
+            </div>
+          </div>
         
           <div class="aside-list-item">
             
@@ -1207,27 +1217,6 @@
             </div>
           </div>
         
-          <div class="aside-list-item">
-            
-            
-            
-
-            <div class="post-img-box">
-              <a href="/post/custom/resume-404/" class="post-img " style="background-size: cover; 
-                background-position: center center;">
-                <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="https://pic2.zhimg.com/80/v2-b72c5a1840b763674a5a1744cb49f08b_1440w.jpg" class="lazyload placeholder" data-srcset="https://pic2.zhimg.com/80/v2-b72c5a1840b763674a5a1744cb49f08b_1440w.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
-              </a>
-            </div>
-            <div class="post-date-title">
-              <div>
-                
-                  <span class="post-date">07-12</span>
-                
-              </div>
-              <a class="post-title" href="/post/custom/resume-404/">制作简历（关于我）和404页面</a>
-            </div>
-          </div>
-        
       </div>
     </div>
   </section>
@@ -1235,7 +1224,7 @@
       
   <section class="widget side_archives">
     
-    <header><a style="color: red" href='/archives/'><i class="fas fa-archive fa-fw" aria-hidden="true"></i><span class='name'>归档</span></a></header><div class="content"><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/01/"><span class="card-archive-list-date">一月 2023</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/11/"><span class="card-archive-list-date">十一月 2022</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/07/"><span class="card-archive-list-date">七月 2022</span><span class="card-archive-list-count">4</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/06/"><span class="card-archive-list-date">六月 2022</span><span class="card-archive-list-count">3</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/05/"><span class="card-archive-list-date">五月 2022</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/11/"><span class="card-archive-list-date">十一月 2021</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/10/"><span class="card-archive-list-date">十月 2021</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/09/"><span class="card-archive-list-date">九月 2021</span><span class="card-archive-list-count">1</span></a></li></ul></div>
+    <header><a style="color: red" href='/archives/'><i class="fas fa-archive fa-fw" aria-hidden="true"></i><span class='name'>归档</span></a></header><div class="content"><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/01/"><span class="card-archive-list-date">一月 2023</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/11/"><span class="card-archive-list-date">十一月 2022</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/07/"><span class="card-archive-list-date">七月 2022</span><span class="card-archive-list-count">4</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/06/"><span class="card-archive-list-date">六月 2022</span><span class="card-archive-list-count">3</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/05/"><span class="card-archive-list-date">五月 2022</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/11/"><span class="card-archive-list-date">十一月 2021</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/10/"><span class="card-archive-list-date">十月 2021</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/09/"><span class="card-archive-list-date">九月 2021</span><span class="card-archive-list-count">1</span></a></li></ul></div>
   </section>
 
       <section class="widget side_webinfo">
@@ -1252,7 +1241,7 @@
       
         <div class="webinfo-item">
           <div>文章数目：</div>
-          <div>46 篇</div>
+          <div>47 篇</div>
         </div>
       
 
@@ -1274,7 +1263,7 @@
       
         <div class="webinfo-item">
           <div>本站总字数：</div>
-          <div>33.3k 字</div>
+          <div>33.7k 字</div>
         </div>
       
 
@@ -1300,8 +1289,8 @@
         <div class="webinfo-item">
           <div>最后活动时间：</div>
           
-            <div id="last-update" style="display: none;">Sun Jan 15 2023 17:46:14 GMT+0800 (中国标准时间)</div>
-            <div id="last-update-show">2023-01-15 日</div>
+            <div id="last-update" style="display: none;">Wed Jan 25 2023 21:40:28 GMT+0800 (中国标准时间)</div>
+            <div id="last-update-show">2023-01-25 日</div>
           
         </div>
         
@@ -1351,7 +1340,7 @@
           try {
             document.getElementById('last-update-show').innerHTML = timeago(new Date(lastUpDate));
           } catch (error) {
-            document.getElementById('last-update-show').innerHTML = '2023-01-15 日';
+            document.getElementById('last-update-show').innerHTML = '2023-01-25 日';
           }
         </script>
         
@@ -1950,7 +1939,7 @@
     scrollSmooth: true,
     scrollSmoothOffset: -70,
     // headingsOffset: -($(window).height() * 0.4 - 45),
-    headingsOffset: -($(window).height() * 0.6 - 70),
+    headingsOffset: -($(window).height() * 0.4 - 70),
     // positionFixedSelector: '.toc-main',
     // positionFixedClass: 'is-position-fixed',
     fixedSidebarOffset: 'auto',

@@ -77,35 +77,24 @@
 
   
   
-  <body>
-    <!-- 预加载动画 -->
-    <!-- 页面预加载动画 -->
+  <!-- 预加载动画 -->
+  <!-- 页面预加载动画 -->
 
-<div id='loader'>
-  <link rel="stylesheet" href="/js/loaded/index.css" >
-  <div class="loading-left-bg"></div>
-  <div class="loading-right-bg"></div>
-  <div class="spinner-box">
-    <div class="configure-border-1">
-      <div class="configure-core"></div>
-    </div>
-    <div class="configure-border-2">
-      <div class="configure-core"></div>
-    </div>
-    <div class="loading-word">加载中...</div>
-  </div>
+  
+    <div class="preloader_2" id="loader">
+  <div class="loader"></div>
 </div>
 
+  
 <script>
   var endLoading = function () {
     document.body.style.overflow = 'auto';
     document.getElementById('loader').classList.add("loading");
   }
   window.addEventListener('DOMContentLoaded',endLoading);
-  
 </script>
 
-    
+  <body>
     <!-- 判断是否为暗黑风格 -->
     <!-- 判断是否为黑夜模式 -->
 <script>
@@ -841,23 +830,23 @@
   <div class="main-content">
     <article class="post post-detail">
       <div class="post-content">
-        <h2 class="bamboo-h " id="title演示39szaz31a84">title演示</h2><br/>
+        <h2 class="bamboo-h " id="title演示w2ef7uw73w">title演示</h2><br/>
 
-<h1 class="bamboo-h " id="我是标题1ya6gq9faic">我是标题</h1><br/>
+<h1 class="bamboo-h " id="我是标题1meniuigq5k">我是标题</h1><br/>
 
 <p>你好啊，未来越来越好哦</p>
-<h2 class="bamboo-h " id="我是标题2it1pgw7s0q">我是标题</h2><br/>
+<h2 class="bamboo-h " id="我是标题25mz7ezrgy2">我是标题</h2><br/>
 
 <p>你好啊，加油哦</p>
-<h2 class="bamboo-h warning" id="我是标题obsxlb832">我是标题</h2><br/>
+<h2 class="bamboo-h warning" id="我是标题1ogv5a2mj0r">我是标题</h2><br/>
 
-<h2 class="bamboo-h red" id="我是标题148ribvtd7p">我是标题</h2><br/>
+<h2 class="bamboo-h red" id="我是标题8pzaci5vuu">我是标题</h2><br/>
 <h3 id="上述事例代码"><a href="#上述事例代码" class="headerlink" title="上述事例代码"></a>上述事例代码</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&#123;% title h1, 我是标题 %&#125;</span><br><span class="line"></span><br><span class="line">你好啊，未来越来越好哦</span><br><span class="line"></span><br><span class="line">&#123;% title h2, 我是标题 %&#125;</span><br><span class="line"></span><br><span class="line">你好啊，加油哦</span><br><span class="line"></span><br><span class="line">&#123;% title h2, 我是标题, warning %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% title h2, 我是标题, red %&#125;</span><br></pre></td></tr></table></figure>
-<h2 class="bamboo-h " id="titleB演示blrrwsl35fs">titleB演示</h2><br/>
+<h2 class="bamboo-h " id="titleB演示1bvc22f5n42">titleB演示</h2><br/>
 
-<h2 class="bamboo-h-b" id="我是标题bbbluzum5hk2e" style="color:!important">我是标题bbb</h2><div></div>
-<h2 class="bamboo-h-b" id="我是标题bbb7t2i7ff6vtc" style="color:#895546!important">我是标题bbb</h2><div></div>
-<h2 class="bamboo-h-b" id="我是标题bbb1qre4h6zb3i" style="color:red!important">我是标题bbb</h2><div></div>
+<h2 class="bamboo-h-b" id="我是标题bbb1dssisnnvrg" style="color:!important">我是标题bbb</h2><div></div>
+<h2 class="bamboo-h-b" id="我是标题bbb4f8nzw01l3" style="color:#895546!important">我是标题bbb</h2><div></div>
+<h2 class="bamboo-h-b" id="我是标题bbb2igff7gftdg" style="color:red!important">我是标题bbb</h2><div></div>
 <h3 id="上述事例代码-1"><a href="#上述事例代码-1" class="headerlink" title="上述事例代码"></a>上述事例代码</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% titleB h2, 我是标题bbb %&#125;</span><br><span class="line">&#123;% titleB h2, 我是标题bbb, <span class="comment">#895546 %&#125;</span></span><br><span class="line">&#123;% titleB h2, 我是标题bbb, red %&#125;</span><br></pre></td></tr></table></figure>
       </div>
       <div class="post-tags-categories">
@@ -924,18 +913,21 @@
   <div class="post-nav-next post-nav-item">
     <div class="post-nav-img" style="background-size: cover; 
       background-position: center center;">
-      <img class="lazyload lazyload placeholder" src="https://pic3.zhimg.com/v2-806666b346e90aa0506069930e453b2a_b.jpg" class="lazyload placeholder" data-srcset="https://pic3.zhimg.com/v2-806666b346e90aa0506069930e453b2a_b.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" src="" alt="">
+      <img class="lazyload lazyload placeholder" src="https://pic4.zhimg.com/v2-8ad0cffeaa7dec5dd1930eebc6ff863f_b.jpg" class="lazyload placeholder" data-srcset="https://pic4.zhimg.com/v2-8ad0cffeaa7dec5dd1930eebc6ff863f_b.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" src="" alt="">
     </div>
-    <a href="/post/video/" class="post-nav-link">
+    <a href="/post/text/" class="post-nav-link">
       <div class="title">
         下一篇: <i class="fas fa-angle-right"></i>
-        <div class="title-text">video视频</div>
+        <div class="title-text">Text文本样式标签</div>
       </div>
       <!-- <div class="content">
-        video演示
-100%宽度
-Your browser does not support the video tag.
+        Text文本样式标签演示
 
+带 下划线 的文本
+带 着重号 的文本
+带 波浪线 的文本
+带 删除线 的文本
+键盘样式的文
       </div> -->
     </a>
   </div>
@@ -1088,7 +1080,7 @@ Your browser does not support the video tag.
   <div class='content'>
     <div class="toc-main">
       <div class="toc-content">
-        <!-- <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#title%E6%BC%94%E7%A4%BA39szaz31a84"><span class="toc-text">title演示</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%88%91%E6%98%AF%E6%A0%87%E9%A2%981ya6gq9faic"><span class="toc-text">我是标题</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%88%91%E6%98%AF%E6%A0%87%E9%A2%982it1pgw7s0q"><span class="toc-text">我是标题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%88%91%E6%98%AF%E6%A0%87%E9%A2%98obsxlb832"><span class="toc-text">我是标题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%88%91%E6%98%AF%E6%A0%87%E9%A2%98148ribvtd7p"><span class="toc-text">我是标题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8A%E8%BF%B0%E4%BA%8B%E4%BE%8B%E4%BB%A3%E7%A0%81"><span class="toc-text">上述事例代码</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#titleB%E6%BC%94%E7%A4%BAblrrwsl35fs"><span class="toc-text">titleB演示</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%88%91%E6%98%AF%E6%A0%87%E9%A2%98bbbluzum5hk2e"><span class="toc-text">我是标题bbb</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%88%91%E6%98%AF%E6%A0%87%E9%A2%98bbb7t2i7ff6vtc"><span class="toc-text">我是标题bbb</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%88%91%E6%98%AF%E6%A0%87%E9%A2%98bbb1qre4h6zb3i"><span class="toc-text">我是标题bbb</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8A%E8%BF%B0%E4%BA%8B%E4%BE%8B%E4%BB%A3%E7%A0%81-1"><span class="toc-text">上述事例代码</span></a></li></ol></li></ol> -->
+        <!-- <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#title%E6%BC%94%E7%A4%BAw2ef7uw73w"><span class="toc-text">title演示</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%88%91%E6%98%AF%E6%A0%87%E9%A2%981meniuigq5k"><span class="toc-text">我是标题</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%88%91%E6%98%AF%E6%A0%87%E9%A2%9825mz7ezrgy2"><span class="toc-text">我是标题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%88%91%E6%98%AF%E6%A0%87%E9%A2%981ogv5a2mj0r"><span class="toc-text">我是标题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%88%91%E6%98%AF%E6%A0%87%E9%A2%988pzaci5vuu"><span class="toc-text">我是标题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8A%E8%BF%B0%E4%BA%8B%E4%BE%8B%E4%BB%A3%E7%A0%81"><span class="toc-text">上述事例代码</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#titleB%E6%BC%94%E7%A4%BA1bvc22f5n42"><span class="toc-text">titleB演示</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%88%91%E6%98%AF%E6%A0%87%E9%A2%98bbb1dssisnnvrg"><span class="toc-text">我是标题bbb</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%88%91%E6%98%AF%E6%A0%87%E9%A2%98bbb4f8nzw01l3"><span class="toc-text">我是标题bbb</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%88%91%E6%98%AF%E6%A0%87%E9%A2%98bbb2igff7gftdg"><span class="toc-text">我是标题bbb</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8A%E8%BF%B0%E4%BA%8B%E4%BE%8B%E4%BB%A3%E7%A0%81-1"><span class="toc-text">上述事例代码</span></a></li></ol></li></ol> -->
         <div class="toc"></div>
       </div>
     </div>
@@ -1114,6 +1106,27 @@ Your browser does not support the video tag.
       <!-- hash算法 -->
       
       <div class="aside-list">
+        
+          <div class="aside-list-item">
+            
+            
+            
+
+            <div class="post-img-box">
+              <a href="/post/btn-preloader/" class="post-img " style="background-size: cover; 
+                background-position: center center;">
+                <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="https://pic4.zhimg.com/80/v2-37134f732bbe21779fdb2fc8dca410c7_1440w.jpg" class="lazyload placeholder" data-srcset="https://pic4.zhimg.com/80/v2-37134f732bbe21779fdb2fc8dca410c7_1440w.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+              </a>
+            </div>
+            <div class="post-date-title">
+              <div>
+                
+                  <span class="post-date">01-25</span>
+                
+              </div>
+              <a class="post-title" href="/post/btn-preloader/">新增酷炫按钮和预加载动画</a>
+            </div>
+          </div>
         
           <div class="aside-list-item">
             
@@ -1196,27 +1209,6 @@ Your browser does not support the video tag.
                 
               </div>
               <a class="post-title" href="/post/danmu/index/">首页添加弹幕</a>
-            </div>
-          </div>
-        
-          <div class="aside-list-item">
-            
-            
-            
-
-            <div class="post-img-box">
-              <a href="/post/custom/resume-404/" class="post-img " style="background-size: cover; 
-                background-position: center center;">
-                <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="https://pic2.zhimg.com/80/v2-b72c5a1840b763674a5a1744cb49f08b_1440w.jpg" class="lazyload placeholder" data-srcset="https://pic2.zhimg.com/80/v2-b72c5a1840b763674a5a1744cb49f08b_1440w.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
-              </a>
-            </div>
-            <div class="post-date-title">
-              <div>
-                
-                  <span class="post-date">07-12</span>
-                
-              </div>
-              <a class="post-title" href="/post/custom/resume-404/">制作简历（关于我）和404页面</a>
             </div>
           </div>
         
@@ -1774,7 +1766,7 @@ Your browser does not support the video tag.
     scrollSmooth: true,
     scrollSmoothOffset: -70,
     // headingsOffset: -($(window).height() * 0.4 - 45),
-    headingsOffset: -($(window).height() * 0.6 - 70),
+    headingsOffset: -($(window).height() * 0.4 - 70),
     // positionFixedSelector: '.toc-main',
     // positionFixedClass: 'is-position-fixed',
     fixedSidebarOffset: 'auto',
