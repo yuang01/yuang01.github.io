@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yuang01.github.io/"/>
-  <updated>2023-01-25T13:17:24.504Z</updated>
+  <updated>2023-02-04T01:52:31.977Z</updated>
   <id>http://yuang01.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>音乐播放器失效问题</title>
+    <link href="http://yuang01.github.io/post/music/index/"/>
+    <id>http://yuang01.github.io/post/music/index/</id>
+    <published>2023-02-24T01:16:00.000Z</published>
+    <updated>2023-02-04T01:52:31.977Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 class=&quot;bamboo-h &quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="前端" scheme="http://yuang01.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="音乐" scheme="http://yuang01.github.io/tags/%E9%9F%B3%E4%B9%90/"/>
+    
+      <category term="博客" scheme="http://yuang01.github.io/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+  </entry>
   
   <entry>
     <title>新增酷炫按钮和预加载动画</title>
@@ -29,7 +58,7 @@
       
         
         
-          &lt;h2 class=&quot;bamboo-h &quot; id=&quot;按钮事例2e90im5eacl&quot;&gt;按钮事例&lt;/h2&gt;&lt;br/&gt;
+          &lt;h2 class=&quot;bamboo-h &quot; id=&quot;按钮事例1lugxjrknup&quot;&gt;按钮事例&lt;/h2&gt;&lt;br/&gt;
 
 &lt;span class=&#39;btn center cool-1&#39;&gt;&lt;a class=&quot;button&quot; href=&#39;https://baidu.com&#39;
         
@@ -501,29 +530,6 @@
     <summary type="html">
     
       Front-matter介绍（四）
-    
-    </summary>
-    
-    
-      <category term="前端" scheme="http://yuang01.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="Hexo" scheme="http://yuang01.github.io/tags/Hexo/"/>
-    
-      <category term="hexo-theme-bamboo" scheme="http://yuang01.github.io/tags/hexo-theme-bamboo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Bamboo主题-内置标签（五）</title>
-    <link href="http://yuang01.github.io/post/hexo-theme-bamboo/tags/"/>
-    <id>http://yuang01.github.io/post/hexo-theme-bamboo/tags/</id>
-    <published>2021-07-05T03:08:00.000Z</published>
-    <updated>2022-11-13T10:04:23.538Z</updated>
-    
-    <summary type="html">
-    
-      内置标签（五）
     
     </summary>
     
