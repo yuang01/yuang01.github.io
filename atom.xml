@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yuang01.github.io/"/>
-  <updated>2023-02-04T02:46:33.546Z</updated>
+  <updated>2023-02-12T15:23:41.985Z</updated>
   <id>http://yuang01.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>博客搭建教程15 - Markdown常用语法</title>
+    <link href="http://yuang01.github.io/post/markdown/index/"/>
+    <id>http://yuang01.github.io/post/markdown/index/</id>
+    <published>2023-02-11T10:03:20.000Z</published>
+    <updated>2023-02-12T15:23:41.985Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;这是标题这是标题&quot;&gt;&lt;a href=&quot;#这是标题这是标题&quot; class=&quot;headerlink&quot; title=&quot;这是标题这是标题&quot;&gt;&lt;/a&gt;这是标题这是标题&lt;/h1&gt;&lt;h2 id=&quot;这是标题&quot;&gt;&lt;a href=&quot;#这是标题&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="markdown" scheme="http://yuang01.github.io/categories/markdown/"/>
+    
+    
+      <category term="markdown" scheme="http://yuang01.github.io/tags/markdown/"/>
+    
+  </entry>
   
   <entry>
     <title>音乐播放器失效问题</title>
@@ -58,7 +85,7 @@
       
         
         
-          &lt;h2 class=&quot;bamboo-h &quot; id=&quot;按钮事例2ctughetgz7&quot;&gt;按钮事例&lt;/h2&gt;&lt;br/&gt;
+          &lt;h2 class=&quot;bamboo-h &quot; id=&quot;按钮事例1lhvw7zxuav&quot;&gt;按钮事例&lt;/h2&gt;&lt;br/&gt;
 
 &lt;span class=&#39;btn center cool-1&#39;&gt;&lt;a class=&quot;button&quot; href=&#39;https://baidu.com&#39;
         
@@ -479,7 +506,7 @@
     <link href="http://yuang01.github.io/post/hexo-theme-bamboo-new/"/>
     <id>http://yuang01.github.io/post/hexo-theme-bamboo-new/</id>
     <published>2021-07-05T03:12:00.000Z</published>
-    <updated>2022-11-20T00:43:05.185Z</updated>
+    <updated>2023-02-12T15:19:27.348Z</updated>
     
     <summary type="html">
     
@@ -507,29 +534,6 @@
     <summary type="html">
     
       主题更改（三）
-    
-    </summary>
-    
-    
-      <category term="前端" scheme="http://yuang01.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="Hexo" scheme="http://yuang01.github.io/tags/Hexo/"/>
-    
-      <category term="hexo-theme-bamboo" scheme="http://yuang01.github.io/tags/hexo-theme-bamboo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Bamboo主题-Front-matter介绍（四）</title>
-    <link href="http://yuang01.github.io/post/hexo-theme-bamboo/front-matter/"/>
-    <id>http://yuang01.github.io/post/hexo-theme-bamboo/front-matter/</id>
-    <published>2021-07-05T03:09:00.000Z</published>
-    <updated>2022-06-09T11:43:44.243Z</updated>
-    
-    <summary type="html">
-    
-      Front-matter介绍（四）
     
     </summary>
     

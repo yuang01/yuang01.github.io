@@ -184,7 +184,7 @@
       <main class="main" id="pjax-container">
         <!-- 头部导航 -->
         
-<header class="header   " 
+<header class="header  " 
   id="navHeader"
   style="position: fixed;
   left: 0; top: 0; z-index: 10;width: 100%;"
@@ -369,16 +369,9 @@
                   </li>
                   
                   <li>
-                    <a href="/me">
+                    <a href="/about">
                       
                       <span>🧒🏻关于我</span>
-                    </a>
-                  </li>
-                  
-                  <li>
-                    <a href="/resume">
-                      
-                      <span>🧒🏻简历</span>
                     </a>
                   </li>
                   
@@ -619,16 +612,9 @@
                   </li>
                   
                   <li>
-                    <a href="/me">
+                    <a href="/about">
                       
                       <span>🧒🏻关于我</span>
-                    </a>
-                  </li>
-                  
-                  <li>
-                    <a href="/resume">
-                      
-                      <span>🧒🏻简历</span>
                     </a>
                   </li>
                   
@@ -834,20 +820,20 @@
   <div class="main-content">
     <article class="post post-detail">
       <div class="post-content">
-        <h2 class="bamboo-h " id="更改首页github日历22cs0vta4ii">更改首页github日历</h2><br/>
+        <h2 class="bamboo-h " id="更改首页github日历1wodnzjd0xo">更改首页github日历</h2><br/>
 <p>侧边栏那篇文章中有写怎么添加首页github日历，但是那个方法的api挂了。。。又找到一个方法，比较简单。<br>但是没有之前的强大，还可以。<br>来自于这个项目：</p>
 <div class="tagLink"><a class="link-card" title="github日历图片" target="_blank" rel="noopener" href="https://github.com/2016rshah/githubchart-api"><span class="link-card-backdrop" style="background-image: url(https://pic1.zhimg.com/v2-8c7a66c107ee925238b5e0ecb4cf1b58_b.jpg)"></span><div class="left"><img src="https://pic1.zhimg.com/v2-8c7a66c107ee925238b5e0ecb4cf1b58_b.jpg" class="lazyload placeholder" data-srcset="https://pic1.zhimg.com/v2-8c7a66c107ee925238b5e0ecb4cf1b58_b.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp"/></div><div class="right"><p class="text">github日历图片</p><p class="url">https://github.com/2016rshah/githubchart-api</p></div></a></div>
 
 <p>直接一行代码搞定</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">no-lazy</span> <span class="attr">width</span>=<span class="string">&quot;100%&quot;</span> <span class="attr">hright</span>=<span class="string">&quot;300px&quot;</span> <span class="attr">src</span>=<span class="string">&quot;https://ghchart.rshah.org/42b983/yuang01&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;yuang01 github&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
 <p><code>https://ghchart.rshah.org/42b983/yuang01</code>: 42b983代表颜色，yuang01是自己的github名称</p>
-<h2 class="bamboo-h-b" id="展示效果2rssi32oim2" style="color:!important">展示效果</h2><div></div>
+<h2 class="bamboo-h-b" id="展示效果1h7zh8a1hvx" style="color:!important">展示效果</h2><div></div>
 <img no-lazy width="100%" hright="300px" src="https://ghchart.rshah.org/42b983/yuang01" alt="yuang01 github" />
 
 
 <p>首页侧边栏这样写就能将github日历加进去了</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">home_widget:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="attr">class_name:</span> <span class="string">my_github_container</span></span><br><span class="line">    <span class="attr">id_name:</span> <span class="string">my_github_container</span></span><br><span class="line">    <span class="attr">order:</span> <span class="number">-1</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">Github日历</span></span><br><span class="line">    <span class="attr">icon:</span> <span class="string">fa-solid</span> <span class="string">fa-calendar-days</span></span><br><span class="line">    <span class="attr">icon_color:</span> <span class="string">&#x27;#42b983&#x27;</span></span><br><span class="line">    <span class="attr">url:</span> <span class="string">https://github.com/yuang01</span></span><br><span class="line">    <span class="attr">background:</span> <span class="string">&#x27;#fff&#x27;</span></span><br><span class="line">    <span class="attr">html:</span> <span class="string">&#x27;</span></span><br><span class="line"><span class="string">      &lt;img no-lazy width=&quot;100%&quot; hright=&quot;300px&quot; src=&quot;https://ghchart.rshah.org/42b983/yuang01&quot; alt=&quot;yuang01 github&quot; /&gt;</span></span><br><span class="line"><span class="string">    &#x27;</span></span><br></pre></td></tr></table></figure>
-<h2 class="bamboo-h " id="其他1x92y467xdu">其他</h2><br/>
+<h2 class="bamboo-h " id="其他1pam75ttei7">其他</h2><br/>
 <p>顺便说一下，我的首页的微博热搜和历史记录用的也是网上的免费api，可以bing或者谷歌搜索随机免费api等关键字搜索，例如这个网站：</p>
 <div class="tagLink"><a class="link-card" title="随机免费api" target="_blank" rel="noopener" href="https://api.vvhan.com/"><span class="link-card-backdrop" style="background-image: url(https://pic2.zhimg.com/v2-13656a105aaa2116cb33a8a70be0b1e9_b.jpg)"></span><div class="left"><img src="https://pic2.zhimg.com/v2-13656a105aaa2116cb33a8a70be0b1e9_b.jpg" class="lazyload placeholder" data-srcset="https://pic2.zhimg.com/v2-13656a105aaa2116cb33a8a70be0b1e9_b.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp"/></div><div class="right"><p class="text">随机免费api</p><p class="url">https://api.vvhan.com/</p></div></a></div>
       </div>
@@ -1077,7 +1063,7 @@
   <div class='content'>
     <div class="toc-main">
       <div class="toc-content">
-        <!-- <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9B%B4%E6%94%B9%E9%A6%96%E9%A1%B5github%E6%97%A5%E5%8E%8622cs0vta4ii"><span class="toc-text">更改首页github日历</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B1%95%E7%A4%BA%E6%95%88%E6%9E%9C2rssi32oim2"><span class="toc-text">展示效果</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B6%E4%BB%961x92y467xdu"><span class="toc-text">其他</span></a></li></ol> -->
+        <!-- <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9B%B4%E6%94%B9%E9%A6%96%E9%A1%B5github%E6%97%A5%E5%8E%861wodnzjd0xo"><span class="toc-text">更改首页github日历</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B1%95%E7%A4%BA%E6%95%88%E6%9E%9C1h7zh8a1hvx"><span class="toc-text">展示效果</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B6%E4%BB%961pam75ttei7"><span class="toc-text">其他</span></a></li></ol> -->
         <div class="toc"></div>
       </div>
     </div>
@@ -1103,6 +1089,27 @@
       <!-- hash算法 -->
       
       <div class="aside-list">
+        
+          <div class="aside-list-item">
+            
+            
+            
+
+            <div class="post-img-box">
+              <a href="/post/markdown/index/" class="post-img " style="background-size: cover; 
+                background-position: center center;">
+                <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="https://pic2.zhimg.com/80/v2-e22aaad20d20634f506f57fff0fcbc17_1440w.webp" class="lazyload placeholder" data-srcset="https://pic2.zhimg.com/80/v2-e22aaad20d20634f506f57fff0fcbc17_1440w.webp" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+              </a>
+            </div>
+            <div class="post-date-title">
+              <div>
+                
+                  <span class="post-date">02-11</span>
+                
+              </div>
+              <a class="post-title" href="/post/markdown/index/">博客搭建教程15 - Markdown常用语法</a>
+            </div>
+          </div>
         
           <div class="aside-list-item">
             
@@ -1185,27 +1192,6 @@
                 
               </div>
               <a class="post-title" href="/post/swiper/">轮播-swiper</a>
-            </div>
-          </div>
-        
-          <div class="aside-list-item">
-            
-            
-            
-
-            <div class="post-img-box">
-              <a href="/post/hexo-theme-bamboo/page/" class="post-img " style="background-size: cover; 
-                background-position: center center;">
-                <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="https://pica.zhimg.com/80/v2-dff5af5b4e0331e3b9c22ef1004d88c8_1440w.jpg" class="lazyload placeholder" data-srcset="https://pica.zhimg.com/80/v2-dff5af5b4e0331e3b9c22ef1004d88c8_1440w.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
-              </a>
-            </div>
-            <div class="post-date-title">
-              <div>
-                
-                  <span class="post-date">07-16</span>
-                
-              </div>
-              <a class="post-title" href="/post/hexo-theme-bamboo/page/">Bamboo主题-主题config配置项简介（二）</a>
             </div>
           </div>
         
@@ -1398,7 +1384,7 @@
       if (isDark) {
         this.FISH_COLOR = '#222'; // 暗黑色，有时间把这整成一个变量
       } else {
-        this.FISH_COLOR = 'rgba(66, 185, 133, 0.8)' || '#42b983';
+        this.FISH_COLOR = 'rgba(66, 185, 133, 0.8)' || 'rgba(66, 185, 133, 0.8)';
       }
     },
     setParameters: function () {
@@ -1896,8 +1882,6 @@
 <!-- 设置导航背景 -->
 <script>
   let setHeaderClass = () => {
-    const headerMenuTransparent = true;
-    if (!headerMenuTransparent) { return; }
     const nav = $('#navHeader');
     const navTop = nav.outerHeight();
     const winTop = $(window).scrollTop();

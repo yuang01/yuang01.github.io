@@ -184,7 +184,7 @@
       <main class="main" id="pjax-container">
         <!-- 头部导航 -->
         
-<header class="header   " 
+<header class="header  " 
   id="navHeader"
   style="position: fixed;
   left: 0; top: 0; z-index: 10;width: 100%;"
@@ -369,16 +369,9 @@
                   </li>
                   
                   <li>
-                    <a href="/me">
+                    <a href="/about">
                       
                       <span>🧒🏻关于我</span>
-                    </a>
-                  </li>
-                  
-                  <li>
-                    <a href="/resume">
-                      
-                      <span>🧒🏻简历</span>
                     </a>
                   </li>
                   
@@ -619,16 +612,9 @@
                   </li>
                   
                   <li>
-                    <a href="/me">
+                    <a href="/about">
                       
                       <span>🧒🏻关于我</span>
-                    </a>
-                  </li>
-                  
-                  <li>
-                    <a href="/resume">
-                      
-                      <span>🧒🏻简历</span>
                     </a>
                   </li>
                   
@@ -837,6 +823,23 @@
           <li class="post-item" data-aos="fade-left">
             
             <div class="post-img-box">
+              <a href="/post/custom/index/" class="post-img " style="background-size: cover; 
+                background-position: center center;">
+                <img class="lazyload lazyload placeholder" src="https://pic1.zhimg.com/80/v2-6d0cbd4380b4959542d3f5da31c7f20c_1440w.jpg" class="lazyload placeholder" data-srcset="https://pic1.zhimg.com/80/v2-6d0cbd4380b4959542d3f5da31c7f20c_1440w.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+              </a>
+            </div>
+            <div class="post-date-title">
+              <div>
+                <span class="post-date">06-09</span>
+              </div>
+              <a class="post-title" href="/post/custom/index/">自定义css之头部图片透明</a>
+            </div>
+          </li>
+        
+          
+          <li class="post-item" data-aos="fade-left">
+            
+            <div class="post-img-box">
               <a href="/post/bubbly-bg/index/" class="post-img " style="background-size: cover; 
                 background-position: center center;">
                 <img class="lazyload lazyload placeholder" src="https://pica.zhimg.com/80/v2-7d9c472a38a85853ba695788bf5efabe_1440w.jpg" class="lazyload placeholder" data-srcset="https://pica.zhimg.com/80/v2-7d9c472a38a85853ba695788bf5efabe_1440w.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
@@ -992,23 +995,6 @@
             </div>
           </li>
         
-          
-          <li class="post-item" data-aos="fade-left">
-            
-            <div class="post-img-box">
-              <a href="/post/hexo-theme-bamboo/front-matter/" class="post-img " style="background-size: cover; 
-                background-position: center center;">
-                <img class="lazyload lazyload placeholder" src="https://pic3.zhimg.com/80/v2-5c159c149e01a6edfe215c8707b60a9d_1440w.jpg?source=1940ef5c" class="lazyload placeholder" data-srcset="https://pic3.zhimg.com/80/v2-5c159c149e01a6edfe215c8707b60a9d_1440w.jpg?source=1940ef5c" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
-              </a>
-            </div>
-            <div class="post-date-title">
-              <div>
-                <span class="post-date">07-05</span>
-              </div>
-              <a class="post-title" href="/post/hexo-theme-bamboo/front-matter/">Bamboo主题-Front-matter介绍（四）</a>
-            </div>
-          </li>
-        
       </ul>
     </div>
   </section>
@@ -1063,7 +1049,7 @@
       if (isDark) {
         this.FISH_COLOR = '#222'; // 暗黑色，有时间把这整成一个变量
       } else {
-        this.FISH_COLOR = 'rgba(66, 185, 133, 0.8)' || '#42b983';
+        this.FISH_COLOR = 'rgba(66, 185, 133, 0.8)' || 'rgba(66, 185, 133, 0.8)';
       }
     },
     setParameters: function () {
@@ -1561,8 +1547,6 @@
 <!-- 设置导航背景 -->
 <script>
   let setHeaderClass = () => {
-    const headerMenuTransparent = true;
-    if (!headerMenuTransparent) { return; }
     const nav = $('#navHeader');
     const navTop = nav.outerHeight();
     const winTop = $(window).scrollTop();

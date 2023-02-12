@@ -184,7 +184,7 @@
       <main class="main" id="pjax-container">
         <!-- 头部导航 -->
         
-<header class="header   " 
+<header class="header  " 
   id="navHeader"
   style="position: fixed;
   left: 0; top: 0; z-index: 10;width: 100%;"
@@ -369,16 +369,9 @@
                   </li>
                   
                   <li>
-                    <a href="/me">
+                    <a href="/about">
                       
                       <span>🧒🏻关于我</span>
-                    </a>
-                  </li>
-                  
-                  <li>
-                    <a href="/resume">
-                      
-                      <span>🧒🏻简历</span>
                     </a>
                   </li>
                   
@@ -619,16 +612,9 @@
                   </li>
                   
                   <li>
-                    <a href="/me">
+                    <a href="/about">
                       
                       <span>🧒🏻关于我</span>
-                    </a>
-                  </li>
-                  
-                  <li>
-                    <a href="/resume">
-                      
-                      <span>🧒🏻简历</span>
                     </a>
                   </li>
                   
@@ -891,7 +877,7 @@
       if (isDark) {
         this.FISH_COLOR = '#222'; // 暗黑色，有时间把这整成一个变量
       } else {
-        this.FISH_COLOR = 'rgba(66, 185, 133, 0.8)' || '#42b983';
+        this.FISH_COLOR = 'rgba(66, 185, 133, 0.8)' || 'rgba(66, 185, 133, 0.8)';
       }
     },
     setParameters: function () {
@@ -1389,8 +1375,6 @@
 <!-- 设置导航背景 -->
 <script>
   let setHeaderClass = () => {
-    const headerMenuTransparent = true;
-    if (!headerMenuTransparent) { return; }
     const nav = $('#navHeader');
     const navTop = nav.outerHeight();
     const winTop = $(window).scrollTop();

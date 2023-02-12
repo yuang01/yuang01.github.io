@@ -184,7 +184,7 @@
       <main class="main" id="pjax-container">
         <!-- 头部导航 -->
         
-<header class="header   " 
+<header class="header  " 
   id="navHeader"
   style="position: fixed;
   left: 0; top: 0; z-index: 10;width: 100%;"
@@ -369,16 +369,9 @@
                   </li>
                   
                   <li>
-                    <a href="/me">
+                    <a href="/about">
                       
                       <span>🧒🏻关于我</span>
-                    </a>
-                  </li>
-                  
-                  <li>
-                    <a href="/resume">
-                      
-                      <span>🧒🏻简历</span>
                     </a>
                   </li>
                   
@@ -619,16 +612,9 @@
                   </li>
                   
                   <li>
-                    <a href="/me">
+                    <a href="/about">
                       
                       <span>🧒🏻关于我</span>
-                    </a>
-                  </li>
-                  
-                  <li>
-                    <a href="/resume">
-                      
-                      <span>🧒🏻简历</span>
                     </a>
                   </li>
                   
@@ -800,7 +786,7 @@
                     
                       <div  class="ani animated default-excerpt" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">
                         <vue-typed-js :strings="defaultDesc" :loop="defaultDescTypedLoop" :type-speed="100" :back-speed="50">
-                          <h1 class="typing" style="font-family: '楷体';font-size:35px"></h1>
+                          <h1 class="typing"></h1>
                         </vue-typed-js>
                       </div>
                       
@@ -818,6 +804,9 @@
           </div>
         </swiper-slide>
       
+      
+        
+        
       
         
         
@@ -1559,11 +1548,12 @@ MetingJsh</div>
   position: relative;
   user-select: none;
   overflow: hidden;
+  font-family: Titillium Web,'PingFang SC','Hiragino Sans GB','Microsoft JhengHei','Microsoft YaHei',sans-serif;
 }
 .default-excerpt {
-  font-size: 1.6rem;
-  margin-top: 1rem;
-  font-family: Titillium Web,'PingFang SC','Hiragino Sans GB','Microsoft JhengHei','Microsoft YaHei',sans-serif;
+  font-size: 1.6em;
+  margin-top: 1em;
+  color: #eee;
 }
 .bottom-one-btn {
   margin-top: 15px;
@@ -1612,19 +1602,17 @@ MetingJsh</div>
   z-index: 9999;
 }
 .flag-text .title {
-  font-size: 1.8rem;
-  font-family: Long Cang,cursive;
+  font-size: 1.8em;
 }
 .flag-text .title a {
   color: #fff;
   transition: color 0.3s;
 }
 .flag-text .title a:hover {
-  color: #42b983;
+  color: rgba(66, 185, 133, 0.8);
 }
 .flag-text .excerpt {
   color: #eee;
-  font-family: Ubuntu,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
   width: 70%;
   line-height: 30px;
   height: 150px;
@@ -1652,7 +1640,7 @@ MetingJsh</div>
   bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 2.5rem;
+  font-size: 2.5em;
   color: #fff;
   cursor: pointer;
   z-index: 2;
@@ -1682,14 +1670,12 @@ MetingJsh</div>
   animation: rightan 1.5s infinite;
 }
 /* 当头部导航设置为背景透明的时候 */
-
-  .swiper-slide {
-    height: 400px;
-  }
-  .flag-text {
-    top: 80px;
-  }
-
+.swiper-slide {
+  height: 400px;
+}
+.flag-text {
+  top: 80px;
+}
 
 @media (min-width: 992px) {
   .swiper-button-prev {
@@ -1728,7 +1714,7 @@ MetingJsh</div>
     width: 100%;
   }
   .flag-text .title {
-    font-size: 1.5rem;
+    font-size: 1.5em;
     margin-top: 50px;
     display: -webkit-box;
     -webkit-box-orient: vertical;
@@ -1776,7 +1762,7 @@ MetingJsh</div>
     margin-top: 20px;
   }
   .flag-text .excerpt {
-    font-size: 1rem;
+    font-size: 1em;
     line-height: 20px;
     height: 80px;
     display: -webkit-box;
@@ -1802,7 +1788,6 @@ MetingJsh</div>
   }
 }
 /* 当头部导航设置为背景透明的时候 */
-
   @media (max-width: 992px) {
     .flag-text {
       top: 60px;
@@ -1814,7 +1799,6 @@ MetingJsh</div>
       height: 310px;
     }
   }
-
 
 /* 文字或者按钮居中显示 */
 
@@ -1840,8 +1824,7 @@ MetingJsh</div>
   .default-excerpt {
     display: flex;
     justify-content: center;
-    font-size: 1.6rem;
-    font-family: Titillium Web,'PingFang SC','Hiragino Sans GB','Microsoft JhengHei','Microsoft YaHei',sans-serif;
+    font-size: 1.6em;
   }
   .flag-text-btns {
     justify-content: center;
@@ -1871,10 +1854,7 @@ MetingJsh</div>
     width: 100%;
   }
   .swiper-slide {
-    height: calc(100vh - 60px);
-    
-      height: 100vh;
-    
+    height: 100vh;
   }
   .flag-text {
     top: 50%;
@@ -1884,13 +1864,12 @@ MetingJsh</div>
     height: auto;
   }
   .flag-text .title {
-    font-size: 2.8rem;
+    font-size: 2.8em;
     line-height: 1.5em;
     max-height: none;
-    /* overflow: visible; */
   }
   .flag-text .excerpt {
-    font-size: 1.25rem;
+    font-size: 1.25em;
     height: 150px;
   }
   .flag-text .read-more {
@@ -1907,8 +1886,8 @@ MetingJsh</div>
   }
   .swiper-btn-color:hover,
   .swiper-btn-color2:hover {
-    background-color: #42b983;
-    border: 1px solid #42b983!important;
+    background-color: rgba(66, 185, 133, 0.8);
+    border: 1px solid rgba(66, 185, 133, 0.8)!important;
   }
   .flag-text-btns {
     justify-content: center;
@@ -1930,7 +1909,7 @@ MetingJsh</div>
     height: 50px;
   }
   .swiper-button-next:after, .swiper-button-prev:after {
-    font-size: 1.2rem;
+    font-size: 1.2em;
   }
   @media (min-width: 992px) {
     .flag-text .excerpt {
@@ -1951,7 +1930,7 @@ MetingJsh</div>
       top: 55%;
     }
     .flag-text .title {
-      font-size: 2.4rem;
+      font-size: 2.4em;
       margin-top: 0;
       display: -webkit-box;
       -webkit-box-orient: vertical;
@@ -1971,7 +1950,7 @@ MetingJsh</div>
       height: 60%;
     }
     .flag-text .title {
-      font-size: 2.2rem;
+      font-size: 2.2em;
     }
     .flag-text .excerpt {
       line-height: 30px;
@@ -1987,7 +1966,7 @@ MetingJsh</div>
       margin-right: 0;
     }
     .default-excerpt {
-      margin-top: 1rem;
+      margin-top: 1em;
     }
   }
 
@@ -2124,6 +2103,128 @@ MetingJsh</div>
             <span class="post-time">2021-02-08</span>
           </div>
           <div class="post-title">
+            <a class="post-title-link" href="/post/folding/">folding折叠</a>
+          </div>
+          <div class="post-meta">
+            <div class="post-tags">
+              <!-- 文章详情页的标签 -->
+
+    <i class="iconfont icontag"></i>
+    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tag/" rel="tag">tag</a></li></ul>
+
+            </div>
+            <div class="post-categories">
+              <!-- 文章详情页的分类 -->
+
+<div class="article-category">
+  <i class="iconfont iconbookmark1"></i>
+  <a class="article-category-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a>
+</div>
+
+
+            </div>
+          </div>
+          <div class="post-img-mobile">
+            <a href="/post/folding/" style="background-size: cover; 
+              background-position: center center;">
+              <img class="lazyload lazyload placeholder" src="https://pic4.zhimg.com/80/v2-3b4ca49ff4fc567faa76ce6f02cffac9_1440w.jpg?source=1940ef5c" class="lazyload placeholder" data-srcset="https://pic4.zhimg.com/80/v2-3b4ca49ff4fc567faa76ce6f02cffac9_1440w.jpg?source=1940ef5c" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+            </a>
+          </div>
+          <div class="post-content">
+            基本
+
+ 查看图片测试 
+              
+              
+              
+            
+上述事例代码123&#123;% folding 查看图片测试 %&#125;  ![](http
+          </div>
+        </div>
+        <div class="post-more">
+          <a href="/post/folding/">
+            <i class="iconfont iconmore" pointer style="float: right;  " title="阅读更多"></i>
+          </a>
+        </div>
+      </div>
+      <div class="post-img">
+        <a href="/post/folding/" style="background-size: cover; 
+          background-position: center center;">
+          <img class="lazyload lazyload placeholder" src="https://pic4.zhimg.com/80/v2-3b4ca49ff4fc567faa76ce6f02cffac9_1440w.jpg?source=1940ef5c" class="lazyload placeholder" data-srcset="https://pic4.zhimg.com/80/v2-3b4ca49ff4fc567faa76ce6f02cffac9_1440w.jpg?source=1940ef5c" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+        </a>
+      </div>
+    </article>
+  
+    
+    <article class="post reveal" style="   ">
+      <div class="post-main">
+        <div class="post-info">
+          <div class="post-time">
+            <i class="fas fa-clock" aria-hidden="true"></i>
+            <span class="post-time">2021-02-08</span>
+          </div>
+          <div class="post-title">
+            <a class="post-title-link" href="/post/gallery/">gallery图片</a>
+          </div>
+          <div class="post-meta">
+            <div class="post-tags">
+              <!-- 文章详情页的标签 -->
+
+    <i class="iconfont icontag"></i>
+    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tag/" rel="tag">tag</a></li></ul>
+
+            </div>
+            <div class="post-categories">
+              <!-- 文章详情页的分类 -->
+
+<div class="article-category">
+  <i class="iconfont iconbookmark1"></i>
+  <a class="article-category-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a>
+</div>
+
+
+            </div>
+          </div>
+          <div class="post-img-mobile">
+            <a href="/post/gallery/" style="background-size: cover; 
+              background-position: center center;">
+              <img class="lazyload lazyload placeholder" src="https://pic2.zhimg.com/80/v2-1ecd92421c8823c396f96d15325e6d42_1440w.jpg?source=1940ef5c" class="lazyload placeholder" data-srcset="https://pic2.zhimg.com/80/v2-1ecd92421c8823c396f96d15325e6d42_1440w.jpg?source=1940ef5c" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+            </a>
+          </div>
+          <div class="post-content">
+            提示使用该标签请先将主题下的_config.yml中的fancybox设置为true
+
+一行一个图片
+
+
+              
+            
+上述事例代码123&#123;% gallery %&#125;![图片描述]
+          </div>
+        </div>
+        <div class="post-more">
+          <a href="/post/gallery/">
+            <i class="iconfont iconmore" pointer style="  " title="阅读更多"></i>
+          </a>
+        </div>
+      </div>
+      <div class="post-img">
+        <a href="/post/gallery/" style="background-size: cover; 
+          background-position: center center;">
+          <img class="lazyload lazyload placeholder" src="https://pic2.zhimg.com/80/v2-1ecd92421c8823c396f96d15325e6d42_1440w.jpg?source=1940ef5c" class="lazyload placeholder" data-srcset="https://pic2.zhimg.com/80/v2-1ecd92421c8823c396f96d15325e6d42_1440w.jpg?source=1940ef5c" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+        </a>
+      </div>
+    </article>
+  
+    
+    <article class="post reveal" style="flex-direction: row-reverse;   ">
+      <div class="post-main">
+        <div class="post-info">
+          <div class="post-time">
+            <i class="fas fa-clock" aria-hidden="true"></i>
+            <span class="post-time">2021-02-08</span>
+          </div>
+          <div class="post-title">
             <a class="post-title-link" href="/post/ghcard/">Github卡片</a>
           </div>
           <div class="post-meta">
@@ -2203,67 +2304,6 @@ MetingJsh</div>
             <span class="post-time">2021-02-08</span>
           </div>
           <div class="post-title">
-            <a class="post-title-link" href="/post/gallery/">gallery图片</a>
-          </div>
-          <div class="post-meta">
-            <div class="post-tags">
-              <!-- 文章详情页的标签 -->
-
-    <i class="iconfont icontag"></i>
-    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tag/" rel="tag">tag</a></li></ul>
-
-            </div>
-            <div class="post-categories">
-              <!-- 文章详情页的分类 -->
-
-<div class="article-category">
-  <i class="iconfont iconbookmark1"></i>
-  <a class="article-category-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a>
-</div>
-
-
-            </div>
-          </div>
-          <div class="post-img-mobile">
-            <a href="/post/gallery/" style="background-size: cover; 
-              background-position: center center;">
-              <img class="lazyload lazyload placeholder" src="https://pic2.zhimg.com/80/v2-1ecd92421c8823c396f96d15325e6d42_1440w.jpg?source=1940ef5c" class="lazyload placeholder" data-srcset="https://pic2.zhimg.com/80/v2-1ecd92421c8823c396f96d15325e6d42_1440w.jpg?source=1940ef5c" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
-            </a>
-          </div>
-          <div class="post-content">
-            提示使用该标签请先将主题下的_config.yml中的fancybox设置为true
-
-一行一个图片
-
-
-              
-            
-上述事例代码123&#123;% gallery %&#125;![图片描述]
-          </div>
-        </div>
-        <div class="post-more">
-          <a href="/post/gallery/">
-            <i class="iconfont iconmore" pointer style="  " title="阅读更多"></i>
-          </a>
-        </div>
-      </div>
-      <div class="post-img">
-        <a href="/post/gallery/" style="background-size: cover; 
-          background-position: center center;">
-          <img class="lazyload lazyload placeholder" src="https://pic2.zhimg.com/80/v2-1ecd92421c8823c396f96d15325e6d42_1440w.jpg?source=1940ef5c" class="lazyload placeholder" data-srcset="https://pic2.zhimg.com/80/v2-1ecd92421c8823c396f96d15325e6d42_1440w.jpg?source=1940ef5c" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
-        </a>
-      </div>
-    </article>
-  
-    
-    <article class="post reveal" style="flex-direction: row-reverse;   ">
-      <div class="post-main">
-        <div class="post-info">
-          <div class="post-time">
-            <i class="fas fa-clock" aria-hidden="true"></i>
-            <span class="post-time">2021-02-08</span>
-          </div>
-          <div class="post-title">
             <a class="post-title-link" href="/post/inlineimage/">lineImage标签</a>
           </div>
           <div class="post-meta">
@@ -2301,7 +2341,7 @@ MetingJsh</div>
         </div>
         <div class="post-more">
           <a href="/post/inlineimage/">
-            <i class="iconfont iconmore" pointer style="float: right;  " title="阅读更多"></i>
+            <i class="iconfont iconmore" pointer style="  " title="阅读更多"></i>
           </a>
         </div>
       </div>
@@ -2314,7 +2354,7 @@ MetingJsh</div>
     </article>
   
     
-    <article class="post reveal" style="   ">
+    <article class="post reveal" style="flex-direction: row-reverse;   ">
       <div class="post-main">
         <div class="post-info">
           <div class="post-time">
@@ -2360,7 +2400,7 @@ MetingJsh</div>
         </div>
         <div class="post-more">
           <a href="/post/link/">
-            <i class="iconfont iconmore" pointer style="  " title="阅读更多"></i>
+            <i class="iconfont iconmore" pointer style="float: right;  " title="阅读更多"></i>
           </a>
         </div>
       </div>
@@ -2373,7 +2413,7 @@ MetingJsh</div>
     </article>
   
     
-    <article class="post reveal" style="flex-direction: row-reverse;   ">
+    <article class="post reveal" style="   ">
       <div class="post-main">
         <div class="post-info">
           <div class="post-time">
@@ -2427,7 +2467,7 @@ markdown默认写法，左边框颜色，随着主题色改变
         </div>
         <div class="post-more">
           <a href="/post/note/">
-            <i class="iconfont iconmore" pointer style="float: right;  " title="阅读更多"></i>
+            <i class="iconfont iconmore" pointer style="  " title="阅读更多"></i>
           </a>
         </div>
       </div>
@@ -2440,7 +2480,7 @@ markdown默认写法，左边框颜色，随着主题色改变
     </article>
   
     
-    <article class="post reveal" style="   ">
+    <article class="post reveal" style="flex-direction: row-reverse;   ">
       <div class="post-main">
         <div class="post-info">
           <div class="post-time">
@@ -2495,7 +2535,7 @@ markdown默认写法，左边框颜色，随着主题色改变
         </div>
         <div class="post-more">
           <a href="/post/noteblock/">
-            <i class="iconfont iconmore" pointer style="  " title="阅读更多"></i>
+            <i class="iconfont iconmore" pointer style="float: right;  " title="阅读更多"></i>
           </a>
         </div>
       </div>
@@ -2503,64 +2543,6 @@ markdown默认写法，左边框颜色，随着主题色改变
         <a href="/post/noteblock/" style="background-size: cover; 
           background-position: center center;">
           <img class="lazyload lazyload placeholder" src="https://pic1.zhimg.com/80/v2-90914c5403377b128b78dd9ce5e1079e_1440w.jpg?source=1940ef5c" class="lazyload placeholder" data-srcset="https://pic1.zhimg.com/80/v2-90914c5403377b128b78dd9ce5e1079e_1440w.jpg?source=1940ef5c" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
-        </a>
-      </div>
-    </article>
-  
-    
-    <article class="post reveal" style="flex-direction: row-reverse;   ">
-      <div class="post-main">
-        <div class="post-info">
-          <div class="post-time">
-            <i class="fas fa-clock" aria-hidden="true"></i>
-            <span class="post-time">2021-02-08</span>
-          </div>
-          <div class="post-title">
-            <a class="post-title-link" href="/post/p/">段落文本</a>
-          </div>
-          <div class="post-meta">
-            <div class="post-tags">
-              <!-- 文章详情页的标签 -->
-
-    <i class="iconfont icontag"></i>
-    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tag/" rel="tag">tag</a></li></ul>
-
-            </div>
-            <div class="post-categories">
-              <!-- 文章详情页的分类 -->
-
-<div class="article-category">
-  <i class="iconfont iconbookmark1"></i>
-  <a class="article-category-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a>
-</div>
-
-
-            </div>
-          </div>
-          <div class="post-img-mobile">
-            <a href="/post/p/" style="background-size: cover; 
-              background-position: center center;">
-              <img class="lazyload lazyload placeholder" src="https://pic4.zhimg.com/80/v2-513fd25e66ae237fca305e8ebf4de594_1440w.jpg?source=1940ef5c" class="lazyload placeholder" data-srcset="https://pic4.zhimg.com/80/v2-513fd25e66ae237fca305e8ebf4de594_1440w.jpg?source=1940ef5c" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
-            </a>
-          </div>
-          <div class="post-content">
-            段落文本演示
-我是一个文本高亮大萨达所多撒多撒多撒大多多撒多撒多撒大所多撒大多
-我是一个文本高亮大萨达所多撒多撒多撒大多多撒多撒多撒大所多撒大多
-我是一个文本高亮大萨达所多撒多撒多撒大多多撒多撒多撒大所多撒大多
-我是一个文本高亮大萨达所多撒
-          </div>
-        </div>
-        <div class="post-more">
-          <a href="/post/p/">
-            <i class="iconfont iconmore" pointer style="float: right;  " title="阅读更多"></i>
-          </a>
-        </div>
-      </div>
-      <div class="post-img">
-        <a href="/post/p/" style="background-size: cover; 
-          background-position: center center;">
-          <img class="lazyload lazyload placeholder" src="https://pic4.zhimg.com/80/v2-513fd25e66ae237fca305e8ebf4de594_1440w.jpg?source=1940ef5c" class="lazyload placeholder" data-srcset="https://pic4.zhimg.com/80/v2-513fd25e66ae237fca305e8ebf4de594_1440w.jpg?source=1940ef5c" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
         </a>
       </div>
     </article>
@@ -2628,7 +2610,7 @@ markdown默认写法，左边框颜色，随着主题色改变
             <span class="post-time">2021-02-08</span>
           </div>
           <div class="post-title">
-            <a class="post-title-link" href="/post/radio/">radio</a>
+            <a class="post-title-link" href="/post/p/">段落文本</a>
           </div>
           <div class="post-meta">
             <div class="post-tags">
@@ -2650,36 +2632,29 @@ markdown默认写法，左边框颜色，随着主题色改变
             </div>
           </div>
           <div class="post-img-mobile">
-            <a href="/post/radio/" style="background-size: cover; 
+            <a href="/post/p/" style="background-size: cover; 
               background-position: center center;">
-              <img class="lazyload lazyload placeholder" src="https://pic3.zhimg.com/80/v2-1d9e8203f167bb1c51d6899df5c626ca_1440w.jpg" class="lazyload placeholder" data-srcset="https://pic3.zhimg.com/80/v2-1d9e8203f167bb1c51d6899df5c626ca_1440w.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+              <img class="lazyload lazyload placeholder" src="https://pic4.zhimg.com/80/v2-513fd25e66ae237fca305e8ebf4de594_1440w.jpg?source=1940ef5c" class="lazyload placeholder" data-srcset="https://pic4.zhimg.com/80/v2-513fd25e66ae237fca305e8ebf4de594_1440w.jpg?source=1940ef5c" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
             </a>
           </div>
           <div class="post-content">
-            radio
-
-            纯文本测试
-            
-
-            支持简单的 markdown 语法
-            
-
-            支持自定义颜色
-            
-
-   
+            段落文本演示
+我是一个文本高亮大萨达所多撒多撒多撒大多多撒多撒多撒大所多撒大多
+我是一个文本高亮大萨达所多撒多撒多撒大多多撒多撒多撒大所多撒大多
+我是一个文本高亮大萨达所多撒多撒多撒大多多撒多撒多撒大所多撒大多
+我是一个文本高亮大萨达所多撒
           </div>
         </div>
         <div class="post-more">
-          <a href="/post/radio/">
+          <a href="/post/p/">
             <i class="iconfont iconmore" pointer style="float: right;  " title="阅读更多"></i>
           </a>
         </div>
       </div>
       <div class="post-img">
-        <a href="/post/radio/" style="background-size: cover; 
+        <a href="/post/p/" style="background-size: cover; 
           background-position: center center;">
-          <img class="lazyload lazyload placeholder" src="https://pic3.zhimg.com/80/v2-1d9e8203f167bb1c51d6899df5c626ca_1440w.jpg" class="lazyload placeholder" data-srcset="https://pic3.zhimg.com/80/v2-1d9e8203f167bb1c51d6899df5c626ca_1440w.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+          <img class="lazyload lazyload placeholder" src="https://pic4.zhimg.com/80/v2-513fd25e66ae237fca305e8ebf4de594_1440w.jpg?source=1940ef5c" class="lazyload placeholder" data-srcset="https://pic4.zhimg.com/80/v2-513fd25e66ae237fca305e8ebf4de594_1440w.jpg?source=1940ef5c" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
         </a>
       </div>
     </article>
@@ -2879,6 +2854,11 @@ yuang01这是描述哦
         <ul class="entry navigation">
           
             <li><a class="flat-box"
+              title="/categories/markdown/" href="/categories/markdown/"
+              id="categoriesmarkdown"
+              ><div class='name'>markdown</div><div class='badge'>(1)</div></a></li>
+          
+            <li><a class="flat-box"
               title="/categories/mathjax/" href="/categories/mathjax/"
               id="categoriesmathjax"
               ><div class='name'>mathjax</div><div class='badge'>(1)</div></a></li>
@@ -2951,7 +2931,7 @@ yuang01这是描述哦
 
 
     <div class='content'>
-    <a href="/tags/404/" style="font-size: 14px; color: #999">404</a> <a href="/tags/Hexo/" style="font-size: 21.5px; color: #666">Hexo</a> <a href="/tags/hexo-theme-bamboo/" style="font-size: 19px; color: #777">hexo-theme-bamboo</a> <a href="/tags/mathjax/" style="font-size: 14px; color: #999">mathjax</a> <a href="/tags/mermaid/" style="font-size: 14px; color: #999">mermaid</a> <a href="/tags/side/" style="font-size: 14px; color: #999">side</a> <a href="/tags/sidebar/" style="font-size: 14px; color: #999">sidebar</a> <a href="/tags/tag/" style="font-size: 24px; color: #555">tag</a> <a href="/tags/%E5%8A%A8%E6%80%81%E8%83%8C%E6%99%AF/" style="font-size: 14px; color: #999">动态背景</a> <a href="/tags/%E5%8D%9A%E5%AE%A2/" style="font-size: 14px; color: #999">博客</a> <a href="/tags/%E6%8C%89%E9%92%AE/" style="font-size: 14px; color: #999">按钮</a> <a href="/tags/%E6%A2%85%E8%8A%B1/" style="font-size: 14px; color: #999">梅花</a> <a href="/tags/%E7%AE%80%E5%8E%86/" style="font-size: 14px; color: #999">简历</a> <a href="/tags/%E8%87%AA%E5%AE%9A%E4%B9%89/" style="font-size: 14px; color: #999">自定义</a> <a href="/tags/%E8%87%AA%E5%AE%9A%E4%B9%89css/" style="font-size: 16.5px; color: #888">自定义css</a> <a href="/tags/%E9%9F%B3%E4%B9%90/" style="font-size: 14px; color: #999">音乐</a> <a href="/tags/%E9%A2%84%E5%8A%A0%E8%BD%BD/" style="font-size: 14px; color: #999">预加载</a> <a href="/tags/%E9%A6%96%E9%A1%B5%E6%B7%BB%E5%8A%A0%E5%BC%B9%E5%B9%95/" style="font-size: 14px; color: #999">首页添加弹幕</a>
+    <a href="/tags/404/" style="font-size: 14px; color: #999">404</a> <a href="/tags/Hexo/" style="font-size: 21.5px; color: #666">Hexo</a> <a href="/tags/hexo-theme-bamboo/" style="font-size: 19px; color: #777">hexo-theme-bamboo</a> <a href="/tags/markdown/" style="font-size: 14px; color: #999">markdown</a> <a href="/tags/mathjax/" style="font-size: 14px; color: #999">mathjax</a> <a href="/tags/mermaid/" style="font-size: 14px; color: #999">mermaid</a> <a href="/tags/side/" style="font-size: 14px; color: #999">side</a> <a href="/tags/sidebar/" style="font-size: 14px; color: #999">sidebar</a> <a href="/tags/tag/" style="font-size: 24px; color: #555">tag</a> <a href="/tags/%E5%8A%A8%E6%80%81%E8%83%8C%E6%99%AF/" style="font-size: 14px; color: #999">动态背景</a> <a href="/tags/%E5%8D%9A%E5%AE%A2/" style="font-size: 14px; color: #999">博客</a> <a href="/tags/%E6%8C%89%E9%92%AE/" style="font-size: 14px; color: #999">按钮</a> <a href="/tags/%E6%A2%85%E8%8A%B1/" style="font-size: 14px; color: #999">梅花</a> <a href="/tags/%E7%AE%80%E5%8E%86/" style="font-size: 14px; color: #999">简历</a> <a href="/tags/%E8%87%AA%E5%AE%9A%E4%B9%89/" style="font-size: 14px; color: #999">自定义</a> <a href="/tags/%E8%87%AA%E5%AE%9A%E4%B9%89css/" style="font-size: 16.5px; color: #888">自定义css</a> <a href="/tags/%E9%9F%B3%E4%B9%90/" style="font-size: 14px; color: #999">音乐</a> <a href="/tags/%E9%A2%84%E5%8A%A0%E8%BD%BD/" style="font-size: 14px; color: #999">预加载</a> <a href="/tags/%E9%A6%96%E9%A1%B5%E6%B7%BB%E5%8A%A0%E5%BC%B9%E5%B9%95/" style="font-size: 14px; color: #999">首页添加弹幕</a>
     </div>
 </section>
 
@@ -2972,6 +2952,27 @@ yuang01这是描述哦
       <!-- hash算法 -->
       
       <div class="aside-list">
+        
+          <div class="aside-list-item">
+            
+            
+            
+
+            <div class="post-img-box">
+              <a href="/post/markdown/index/" class="post-img " style="background-size: cover; 
+                background-position: center center;">
+                <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="https://pic2.zhimg.com/80/v2-e22aaad20d20634f506f57fff0fcbc17_1440w.webp" class="lazyload placeholder" data-srcset="https://pic2.zhimg.com/80/v2-e22aaad20d20634f506f57fff0fcbc17_1440w.webp" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+              </a>
+            </div>
+            <div class="post-date-title">
+              <div>
+                
+                  <span class="post-date">02-11</span>
+                
+              </div>
+              <a class="post-title" href="/post/markdown/index/">博客搭建教程15 - Markdown常用语法</a>
+            </div>
+          </div>
         
           <div class="aside-list-item">
             
@@ -3057,27 +3058,6 @@ yuang01这是描述哦
             </div>
           </div>
         
-          <div class="aside-list-item">
-            
-            
-            
-
-            <div class="post-img-box">
-              <a href="/post/hexo-theme-bamboo/page/" class="post-img " style="background-size: cover; 
-                background-position: center center;">
-                <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="https://pica.zhimg.com/80/v2-dff5af5b4e0331e3b9c22ef1004d88c8_1440w.jpg" class="lazyload placeholder" data-srcset="https://pica.zhimg.com/80/v2-dff5af5b4e0331e3b9c22ef1004d88c8_1440w.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
-              </a>
-            </div>
-            <div class="post-date-title">
-              <div>
-                
-                  <span class="post-date">07-16</span>
-                
-              </div>
-              <a class="post-title" href="/post/hexo-theme-bamboo/page/">Bamboo主题-主题config配置项简介（二）</a>
-            </div>
-          </div>
-        
       </div>
     </div>
   </section>
@@ -3085,7 +3065,7 @@ yuang01这是描述哦
       
   <section class="widget side_archives">
     
-    <header><a style="color: red" href='/archives/'><i class="fas fa-archive fa-fw" aria-hidden="true"></i><span class='name'>归档</span></a></header><div class="content"><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/02/"><span class="card-archive-list-date">二月 2023</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/01/"><span class="card-archive-list-date">一月 2023</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/11/"><span class="card-archive-list-date">十一月 2022</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/07/"><span class="card-archive-list-date">七月 2022</span><span class="card-archive-list-count">4</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/06/"><span class="card-archive-list-date">六月 2022</span><span class="card-archive-list-count">3</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/05/"><span class="card-archive-list-date">五月 2022</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/11/"><span class="card-archive-list-date">十一月 2021</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/10/"><span class="card-archive-list-date">十月 2021</span><span class="card-archive-list-count">2</span></a></li></ul></div>
+    <header><a style="color: red" href='/archives/'><i class="fas fa-archive fa-fw" aria-hidden="true"></i><span class='name'>归档</span></a></header><div class="content"><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/02/"><span class="card-archive-list-date">二月 2023</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/01/"><span class="card-archive-list-date">一月 2023</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/11/"><span class="card-archive-list-date">十一月 2022</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/07/"><span class="card-archive-list-date">七月 2022</span><span class="card-archive-list-count">4</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/06/"><span class="card-archive-list-date">六月 2022</span><span class="card-archive-list-count">3</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/05/"><span class="card-archive-list-date">五月 2022</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/11/"><span class="card-archive-list-date">十一月 2021</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/10/"><span class="card-archive-list-date">十月 2021</span><span class="card-archive-list-count">2</span></a></li></ul></div>
   </section>
 
       <section class="widget side_webinfo">
@@ -3102,7 +3082,7 @@ yuang01这是描述哦
       
         <div class="webinfo-item">
           <div>文章数目：</div>
-          <div>48 篇</div>
+          <div>49 篇</div>
         </div>
       
 
@@ -3124,7 +3104,7 @@ yuang01这是描述哦
       
         <div class="webinfo-item">
           <div>本站总字数：</div>
-          <div>34.1k 字</div>
+          <div>33.7k 字</div>
         </div>
       
 
@@ -3150,8 +3130,8 @@ yuang01这是描述哦
         <div class="webinfo-item">
           <div>最后活动时间：</div>
           
-            <div id="last-update" style="display: none;">Sat Feb 04 2023 10:46:45 GMT+0800 (中国标准时间)</div>
-            <div id="last-update-show">2023-02-04 日</div>
+            <div id="last-update" style="display: none;">Sun Feb 12 2023 23:24:52 GMT+0800 (中国标准时间)</div>
+            <div id="last-update-show">2023-02-12 日</div>
           
         </div>
         
@@ -3201,7 +3181,7 @@ yuang01这是描述哦
           try {
             document.getElementById('last-update-show').innerHTML = timeago(new Date(lastUpDate));
           } catch (error) {
-            document.getElementById('last-update-show').innerHTML = '2023-02-04 日';
+            document.getElementById('last-update-show').innerHTML = '2023-02-12 日';
           }
         </script>
         
@@ -3288,7 +3268,7 @@ yuang01这是描述哦
       if (isDark) {
         this.FISH_COLOR = '#222'; // 暗黑色，有时间把这整成一个变量
       } else {
-        this.FISH_COLOR = 'rgba(66, 185, 133, 0.8)' || '#42b983';
+        this.FISH_COLOR = 'rgba(66, 185, 133, 0.8)' || 'rgba(66, 185, 133, 0.8)';
       }
     },
     setParameters: function () {
@@ -3786,8 +3766,6 @@ yuang01这是描述哦
 <!-- 设置导航背景 -->
 <script>
   let setHeaderClass = () => {
-    const headerMenuTransparent = true;
-    if (!headerMenuTransparent) { return; }
     const nav = $('#navHeader');
     const navTop = nav.outerHeight();
     const winTop = $(window).scrollTop();
