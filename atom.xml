@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yuang01.github.io/"/>
-  <updated>2023-02-12T15:23:41.985Z</updated>
+  <updated>2023-02-12T15:33:44.506Z</updated>
   <id>http://yuang01.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>博客搭建教程15 - Markdown常用语法</title>
+    <title>markdown样式优化</title>
     <link href="http://yuang01.github.io/post/markdown/index/"/>
     <id>http://yuang01.github.io/post/markdown/index/</id>
     <published>2023-02-11T10:03:20.000Z</published>
-    <updated>2023-02-12T15:23:41.985Z</updated>
+    <updated>2023-02-12T15:33:44.506Z</updated>
     
     <summary type="html">
     
@@ -85,7 +85,7 @@
       
         
         
-          &lt;h2 class=&quot;bamboo-h &quot; id=&quot;按钮事例1cd5quvy4wi&quot;&gt;按钮事例&lt;/h2&gt;&lt;br/&gt;
+          &lt;h2 class=&quot;bamboo-h &quot; id=&quot;按钮事例kjt5k4cdjn&quot;&gt;按钮事例&lt;/h2&gt;&lt;br/&gt;
 
 &lt;span class=&#39;btn center cool-1&#39;&gt;&lt;a class=&quot;button&quot; href=&#39;https://baidu.com&#39;
         
