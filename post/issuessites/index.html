@@ -883,24 +883,17 @@
   <div class="post-nav-prev post-nav-item">
     <div class="post-nav-img" style="background-size: cover; 
       background-position: center center;">
-      <img class="lazyload lazyload placeholder" src="https://pic3.zhimg.com/80/v2-6262f763cbd2decf3b71740ffaaf7df2_1440w.jpg?source=1940ef5c" class="lazyload placeholder" data-srcset="https://pic3.zhimg.com/80/v2-6262f763cbd2decf3b71740ffaaf7df2_1440w.jpg?source=1940ef5c" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+      <img class="lazyload lazyload placeholder" src="https://w.wallhaven.cc/full/e7/wallhaven-e78jpo.jpg" class="lazyload placeholder" data-srcset="https://w.wallhaven.cc/full/e7/wallhaven-e78jpo.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
     </div>
-    <a href="/post/hexo-theme-bamboo/suggest/" class="post-nav-link">
+    <a href="/post/issuestimeline/" class="post-nav-link">
       <div class="title">
         <i class="fas fa-angle-left"></i> 上一篇:
-        <div class="title-text">Bamboo主题-建议（六）</div>
+        <div class="title-text">issues-timeline标签</div>
       </div>
       
       <!-- <div class="content">
-        
-有问题去留言板留言
-
-
-
-
-建议
-
-图片都可以用http图片地址哦，不仅方便，图片加载速度也快些，但是一些百度图片或者
+        该标签会去拿到某个repo仓库的issue内容，用timeline标签的形式显示出来
+写法github1&#123;% 
       </div> -->
     </a>
   </div>
@@ -911,16 +904,17 @@
   <div class="post-nav-next post-nav-item">
     <div class="post-nav-img" style="background-size: cover; 
       background-position: center center;">
-      <img class="lazyload lazyload placeholder" src="https://w.wallhaven.cc/full/e7/wallhaven-e78jpo.jpg" class="lazyload placeholder" data-srcset="https://w.wallhaven.cc/full/e7/wallhaven-e78jpo.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" src="" alt="">
+      <img class="lazyload lazyload placeholder" src="https://pic1.zhimg.com/80/v2-0937a04a47457f2b6b22756adbc5b188_1440w.jpg" class="lazyload placeholder" data-srcset="https://pic1.zhimg.com/80/v2-0937a04a47457f2b6b22756adbc5b188_1440w.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" src="" alt="">
     </div>
-    <a href="/post/issuestimeline/" class="post-nav-link">
+    <a href="/post/gallerygroup/" class="post-nav-link">
       <div class="title">
         下一篇: <i class="fas fa-angle-right"></i>
-        <div class="title-text">issues-timeline标签</div>
+        <div class="title-text">galleryGroup图片</div>
       </div>
       <!-- <div class="content">
-        该标签会去拿到某个repo仓库的issue内容，用timeline标签的形式显示出来
-写法github1&#123;% 
+        提示使用该标签请先将主题下的_config.yml中的fancybox设置为true
+
+galleryGroup图片示例
       </div> -->
     </a>
   </div>
@@ -956,7 +950,8 @@
 
   <div id="myComment">
     
-      <div id="beaudar_container"></div>
+      <div id="gitment-container"></div>
+
     
   </div>
 
@@ -2045,78 +2040,64 @@
 
   
     <script type="text/javascript">
-  var beaudarCommon = {};
+  var utteranceCommon = {};
 
-  function check_beaudar() {
+  function check_utterance() {
     let isDark = JSON.parse(localStorage.getItem('dark')) || JSON.parse('false');
     if (isDark) {
-      beaudarCommon.Theme = 'github-dark';
+      utteranceCommon.Theme = 'github-dark';
     } else {
-      beaudarCommon.Theme = 'github-light';
+      utteranceCommon.Theme = 'github-light';
     }
 
-    return document.getElementById("beaudar_container");
+    return document.getElementById("gitment-container");
   }
-  comment_el = '#beaudar_container';
-  load_beaudar = function () {
+  comment_el = '#gitment-container';
+  load_utterance = function () {
     if ($(comment_el).length) {
       // 匿名函数，防止污染全局变量
-      const HEAD = check_beaudar();
+      const HEAD = check_utterance();
 
-      const script = document.createElement('script');
-      let issuenumber = "";
-      if (issuenumber) {
-        script.setAttribute('issue-number', issuenumber);
-      } else {
-        script.setAttribute('issue-term', "pathname");
-      }
-      script.setAttribute('src', 'https://beaudar.lipk.org/client.js');
-      script.setAttribute('repo', 'yuang01/yuang01.github.io');
-      script.setAttribute('input-position', 'top');
-      script.setAttribute('branch', 'main');
-      script.setAttribute('comment-order', 'desc');
-      script.setAttribute('label', '✨💬✨');
-      script.setAttribute('theme', beaudarCommon.Theme);
-      script.setAttribute('crossorigin', "anonymous");
+      var utterances = document.createElement('script');
+      utterances.type = 'text/javascript';
+      utterances.async = true;
+      utterances.setAttribute('issue-term', 'pathname')
+      utterances.setAttribute('theme', utteranceCommon.Theme)
+      utterances.setAttribute('repo', 'yuang01/yuang01.github.io')
+      utterances.crossorigin = 'anonymous';
+      utterances.src = 'https://utteranc.es/client.js';
       // content 是要插入评论的地方
-      document.getElementById('beaudar_container').appendChild(script);
+      document.getElementById('gitment-container').appendChild(utterances);
+
     }
   }
 
-  function dark_beaudar() {
-    const HEAD = check_beaudar();
+  function dark_utterance() {
+    const HEAD = check_utterance();
     if (!HEAD) return;
     const message = {
       type: 'set-theme',
-      theme: beaudarCommon.Theme
+      theme: utteranceCommon.Theme
     };
-    const beaudarIframe = document.querySelector('iframe');
-    beaudarIframe.contentWindow.postMessage(message, 'https://beaudar.lipk.org');
+    const utteranceIframe = document.querySelector('iframe');
+    utteranceIframe.contentWindow.postMessage(message, 'https://utteranc.es');
   }
 
-  function check_beaudar_style() {
-    // Beaudar 会往 HEAD 的首节点追加样式元素，而这个追加没有添加判断
-    // 所以 Pjax 下会多次添加样式文件，略微麻烦。
-    const checkStyle = document.querySelector('head').firstElementChild;
-    if (checkStyle.innerText.includes('beaudar')) checkStyle.remove();
-  }
-
-  $(document).ready(load_beaudar);
+  $(document).ready(load_utterance);
   document.addEventListener('pjax:complete', function () {
-    check_beaudar_style();
-    load_beaudar();
+    load_utterance();
   });
 
   $('.dark').click(function () {
     setTimeout(() => {
-      dark_beaudar();
+      dark_utterance();
     });
   })
 
 </script>
 
 <style>
-  .beaudars {
+  .utterances {
     max-width: inherit !important;
   }
 </style>

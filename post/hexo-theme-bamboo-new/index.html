@@ -828,7 +828,7 @@
 <a class="ghcard" rel="external nofollow noopener noreferrer noopener" target="_blank" href="https://github.com/yuang01/hexo-theme-bamboo"><img src="https://github-readme-stats.vercel.app/api/pin/?username=yuang01&repo=hexo-theme-bamboo&theme=vue&show_owner=true" class="lazyload placeholder" data-srcset="https://github-readme-stats.vercel.app/api/pin/?username=yuang01&repo=hexo-theme-bamboo&theme=vue&show_owner=true" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp"/></a>
 
 <p>国内访问：<a target="_blank" rel="noopener" href="http://120.48.121.186/">http://120.48.121.186/</a>   （github比较慢的话，可以访问这个地址预览）</p>
-<h2 class="bamboo-h " id="下载54jndq5nhsg">下载</h2><br/>
+<h2 class="bamboo-h " id="下载1qflriw28k6">下载</h2><br/>
 <p>首先你需要有一个<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/">Hexo</a>，按照官网的方法，很容易的就能创建一个hexo博客。</p>
 <div class="tagLink"><a class="link-card" title="Hexo" target="_blank" rel="noopener" href="https://hexo.io/zh-cn/"><span class="link-card-backdrop" style="background-image: url(https://d33wubrfki0l68.cloudfront.net/6657ba50e702d84afb32fe846bed54fba1a77add/827ae/logo.svg)"></span><div class="left"><img src="https://d33wubrfki0l68.cloudfront.net/6657ba50e702d84afb32fe846bed54fba1a77add/827ae/logo.svg" class="lazyload placeholder" data-srcset="https://d33wubrfki0l68.cloudfront.net/6657ba50e702d84afb32fe846bed54fba1a77add/827ae/logo.svg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp"/></div><div class="right"><p class="text">Hexo</p><p class="url">https://hexo.io/zh-cn/</p></div></a></div>
 <div class="tabs" id="tab-id"><ul class="nav-tabs"><li class="tab active"><a class="#tab-id-1">Github安装</a></li><li class="tab"><a class="#tab-id-2">Gitee安装</a></li><li class="tab"><a class="#tab-id-3">npm安装</a></li></ul><div class="tab-content"><div class="tab-pane active" id="tab-id-1"><p>当你有了hexo博客之后，进入<code>themes</code>文件夹下使用 <code>Git clone</code> 命令来下载:</p>
@@ -846,9 +846,9 @@
 
 <h4 id="应用主题"><a href="#应用主题" class="headerlink" title="应用主题"></a>应用主题</h4><p>修改hexo根目录下的站点配置文件<code>_config.yml</code>，把主题改为<code>bamboo</code></p>
 <p>接着在hexo根目录下新建文件<code>_config.bamboo.yml</code>,从<code>node_modules</code>文件夹下找到<code>hexo-theme-bamboo</code>文件夹下的<code>_config.yml</code>，将里面的内容复制到<code>_config.bamboo.yml</code>文件中即可，在<code>_config.bamboo.yml</code>文件中对主题进行配置</p></div></div></div>
-<h2 class="bamboo-h " id="基本配置20wpfjpsufz">基本配置</h2><br/>
+<h2 class="bamboo-h " id="基本配置1t6ndrsoxpw">基本配置</h2><br/>
 <h3 id="切换主题"><a href="#切换主题" class="headerlink" title="切换主题"></a>切换主题</h3><p>修改 Hexo 根目录下的 <code>_config.yml</code> 的  <code>theme</code> 的值：<code>theme: hexo-theme-bamboo</code></p>
-<h4 class="bamboo-h-b" id="`_config.yml` 文件的其它修改建议:2i0ey1qnj7c" style="color:!important">`_config.yml` 文件的其它修改建议:</h4><div></div>
+<h4 class="bamboo-h-b" id="`_config.yml` 文件的其它修改建议:26p1t2qrylh" style="color:!important">`_config.yml` 文件的其它修改建议:</h4><div></div>
 
 <ul>
 <li>请修改 <code>_config.yml</code> 的 <code>url</code> 的值为你的网站主 <code>URL</code>（如：<code>http://xxx.github.io</code>）。<code>author</code>值改为你的名称（如：yuang），<code>description</code>值随便写一段描述（如：千磨万击还坚劲，任尔东西南北风）</li>
@@ -904,7 +904,7 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-feed --save</span><br></pre></td></tr></table></figure>
 <p>在 Hexo 根目录下的 <code>_config.yml</code> 文件中，新增以下的配置项：</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">feed:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">atom</span></span><br><span class="line">  <span class="attr">path:</span> <span class="string">atom.xml</span></span><br><span class="line">  <span class="attr">limit:</span> <span class="number">20</span></span><br><span class="line">  <span class="attr">hub:</span></span><br><span class="line">  <span class="attr">content:</span></span><br><span class="line">  <span class="attr">content_limit:</span> <span class="number">140</span></span><br><span class="line">  <span class="attr">content_limit_delim:</span> <span class="string">&#x27; &#x27;</span></span><br><span class="line">  <span class="attr">order_by:</span> <span class="string">-date</span></span><br></pre></td></tr></table></figure>
-<h2 class="bamboo-h " id="Pjax2kqhcrxf5la">Pjax</h2><br/>
+<h2 class="bamboo-h " id="Pjaxszsdjved1v">Pjax</h2><br/>
 <p>页面不刷新跳转，音乐可以不间断播放。关闭则跳转页面时候刷新页面</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">pjax:</span></span><br><span class="line">  <span class="attr">on:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">animation:</span> <span class="string">circle</span> <span class="comment"># false, nprogress, circle</span></span><br><span class="line">  <span class="attr">animationColor:</span> <span class="string">&#x27;orangered&#x27;</span> <span class="comment"># animation为 nprogress时候的动画颜色, red or #000 ...</span></span><br><span class="line">  <span class="attr">cacheBust:</span> <span class="literal">false</span> <span class="comment"># url 地址追加时间戳，用以避免浏览器缓存</span></span><br><span class="line">  <span class="attr">timeout:</span> <span class="number">5000</span>    <span class="comment"># The timeout in milliseconds for the XHR requests. Set to 0 to disable the timeout.</span></span><br><span class="line">  <span class="attr">banUrl:</span>          <span class="comment"># 被屏蔽的 url 地址将不启用 pjax 跳转，可以在控制台下使用 window.location.pathname 获取</span></span><br><span class="line">      <span class="comment"># - &#x27;/xxx&#x27;     </span></span><br><span class="line">      <span class="comment"># - &#x27;/xxx&#x27; </span></span><br></pre></td></tr></table></figure>
       </div>
@@ -1024,7 +1024,8 @@
 
   <div id="myComment">
     
-      <div id="beaudar_container"></div>
+      <div id="gitment-container"></div>
+
     
   </div>
 
@@ -1141,7 +1142,7 @@
   <div class='content'>
     <div class="toc-main">
       <div class="toc-content">
-        <!-- <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BD54jndq5nhsg"><span class="toc-text">下载</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BA%94%E7%94%A8%E4%B8%BB%E9%A2%98"><span class="toc-text">应用主题</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE20wpfjpsufz"><span class="toc-text">基本配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%87%E6%8D%A2%E4%B8%BB%E9%A2%98"><span class="toc-text">切换主题</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%60_config.yml%60%20%E6%96%87%E4%BB%B6%E7%9A%84%E5%85%B6%E5%AE%83%E4%BF%AE%E6%94%B9%E5%BB%BA%E8%AE%AE:2i0ey1qnj7c"><span class="toc-text">&#96;_config.yml&#96; 文件的其它修改建议:</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE"><span class="toc-text">代码高亮</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%90%9C%E7%B4%A2"><span class="toc-text">搜索</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B0%E5%BB%BA%E5%88%86%E7%B1%BB-categories-%E9%A1%B5"><span class="toc-text">新建分类 categories 页</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B0%E5%BB%BA%E6%A0%87%E7%AD%BE-tags-%E9%A1%B5"><span class="toc-text">新建标签 tags 页</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B0%E5%BB%BA%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5-friends-%E9%A1%B5"><span class="toc-text">新建友情链接 friends 页</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%AD%E6%96%87%E9%93%BE%E6%8E%A5%E8%BD%AC%E6%8B%BC%E9%9F%B3%EF%BC%88%E5%8F%AF%E9%80%89%E7%9A%84%EF%BC%89"><span class="toc-text">中文链接转拼音（可选的）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0-RSS-%E8%AE%A2%E9%98%85%E6%94%AF%E6%8C%81%EF%BC%88%E5%8F%AF%E9%80%89%E7%9A%84%EF%BC%89"><span class="toc-text">添加 RSS 订阅支持（可选的）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Pjax2kqhcrxf5la"><span class="toc-text">Pjax</span></a></li></ol> -->
+        <!-- <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BD1qflriw28k6"><span class="toc-text">下载</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BA%94%E7%94%A8%E4%B8%BB%E9%A2%98"><span class="toc-text">应用主题</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE1t6ndrsoxpw"><span class="toc-text">基本配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%87%E6%8D%A2%E4%B8%BB%E9%A2%98"><span class="toc-text">切换主题</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%60_config.yml%60%20%E6%96%87%E4%BB%B6%E7%9A%84%E5%85%B6%E5%AE%83%E4%BF%AE%E6%94%B9%E5%BB%BA%E8%AE%AE:26p1t2qrylh"><span class="toc-text">&#96;_config.yml&#96; 文件的其它修改建议:</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE"><span class="toc-text">代码高亮</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%90%9C%E7%B4%A2"><span class="toc-text">搜索</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B0%E5%BB%BA%E5%88%86%E7%B1%BB-categories-%E9%A1%B5"><span class="toc-text">新建分类 categories 页</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B0%E5%BB%BA%E6%A0%87%E7%AD%BE-tags-%E9%A1%B5"><span class="toc-text">新建标签 tags 页</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B0%E5%BB%BA%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5-friends-%E9%A1%B5"><span class="toc-text">新建友情链接 friends 页</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%AD%E6%96%87%E9%93%BE%E6%8E%A5%E8%BD%AC%E6%8B%BC%E9%9F%B3%EF%BC%88%E5%8F%AF%E9%80%89%E7%9A%84%EF%BC%89"><span class="toc-text">中文链接转拼音（可选的）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0-RSS-%E8%AE%A2%E9%98%85%E6%94%AF%E6%8C%81%EF%BC%88%E5%8F%AF%E9%80%89%E7%9A%84%EF%BC%89"><span class="toc-text">添加 RSS 订阅支持（可选的）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Pjaxszsdjved1v"><span class="toc-text">Pjax</span></a></li></ol> -->
         <div class="toc"></div>
       </div>
     </div>
@@ -2113,78 +2114,64 @@
 
   
     <script type="text/javascript">
-  var beaudarCommon = {};
+  var utteranceCommon = {};
 
-  function check_beaudar() {
+  function check_utterance() {
     let isDark = JSON.parse(localStorage.getItem('dark')) || JSON.parse('false');
     if (isDark) {
-      beaudarCommon.Theme = 'github-dark';
+      utteranceCommon.Theme = 'github-dark';
     } else {
-      beaudarCommon.Theme = 'github-light';
+      utteranceCommon.Theme = 'github-light';
     }
 
-    return document.getElementById("beaudar_container");
+    return document.getElementById("gitment-container");
   }
-  comment_el = '#beaudar_container';
-  load_beaudar = function () {
+  comment_el = '#gitment-container';
+  load_utterance = function () {
     if ($(comment_el).length) {
       // 匿名函数，防止污染全局变量
-      const HEAD = check_beaudar();
+      const HEAD = check_utterance();
 
-      const script = document.createElement('script');
-      let issuenumber = "";
-      if (issuenumber) {
-        script.setAttribute('issue-number', issuenumber);
-      } else {
-        script.setAttribute('issue-term', "pathname");
-      }
-      script.setAttribute('src', 'https://beaudar.lipk.org/client.js');
-      script.setAttribute('repo', 'yuang01/yuang01.github.io');
-      script.setAttribute('input-position', 'top');
-      script.setAttribute('branch', 'main');
-      script.setAttribute('comment-order', 'desc');
-      script.setAttribute('label', '✨💬✨');
-      script.setAttribute('theme', beaudarCommon.Theme);
-      script.setAttribute('crossorigin', "anonymous");
+      var utterances = document.createElement('script');
+      utterances.type = 'text/javascript';
+      utterances.async = true;
+      utterances.setAttribute('issue-term', 'pathname')
+      utterances.setAttribute('theme', utteranceCommon.Theme)
+      utterances.setAttribute('repo', 'yuang01/yuang01.github.io')
+      utterances.crossorigin = 'anonymous';
+      utterances.src = 'https://utteranc.es/client.js';
       // content 是要插入评论的地方
-      document.getElementById('beaudar_container').appendChild(script);
+      document.getElementById('gitment-container').appendChild(utterances);
+
     }
   }
 
-  function dark_beaudar() {
-    const HEAD = check_beaudar();
+  function dark_utterance() {
+    const HEAD = check_utterance();
     if (!HEAD) return;
     const message = {
       type: 'set-theme',
-      theme: beaudarCommon.Theme
+      theme: utteranceCommon.Theme
     };
-    const beaudarIframe = document.querySelector('iframe');
-    beaudarIframe.contentWindow.postMessage(message, 'https://beaudar.lipk.org');
+    const utteranceIframe = document.querySelector('iframe');
+    utteranceIframe.contentWindow.postMessage(message, 'https://utteranc.es');
   }
 
-  function check_beaudar_style() {
-    // Beaudar 会往 HEAD 的首节点追加样式元素，而这个追加没有添加判断
-    // 所以 Pjax 下会多次添加样式文件，略微麻烦。
-    const checkStyle = document.querySelector('head').firstElementChild;
-    if (checkStyle.innerText.includes('beaudar')) checkStyle.remove();
-  }
-
-  $(document).ready(load_beaudar);
+  $(document).ready(load_utterance);
   document.addEventListener('pjax:complete', function () {
-    check_beaudar_style();
-    load_beaudar();
+    load_utterance();
   });
 
   $('.dark').click(function () {
     setTimeout(() => {
-      dark_beaudar();
+      dark_utterance();
     });
   })
 
 </script>
 
 <style>
-  .beaudars {
+  .utterances {
     max-width: inherit !important;
   }
 </style>

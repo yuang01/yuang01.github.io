@@ -826,7 +826,7 @@
 <!-- 使用主题之前请先去github点个<span class='p large red'>star</span>。 -->
 <a class="ghcard" rel="external nofollow noopener noreferrer noopener" target="_blank" href="https://github.com/yuang01/hexo-theme-bamboo"><img src="https://github-readme-stats.vercel.app/api/pin/?username=yuang01&repo=hexo-theme-bamboo&theme=vue&show_owner=true" class="lazyload placeholder" data-srcset="https://github-readme-stats.vercel.app/api/pin/?username=yuang01&repo=hexo-theme-bamboo&theme=vue&show_owner=true" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp"/></a>
 
-<h2 class="bamboo-h " id="文章 Front-matter 介绍2avzdn3m49">文章 Front-matter 介绍</h2><br/>
+<h2 class="bamboo-h " id="文章 Front-matter 介绍c2uu4er8fiw">文章 Front-matter 介绍</h2><br/>
 <p>这个指的是你在你的文章页面里面写的参数，针对的是这一篇文章，例如</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">Hexo主题--Bamboo介绍</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2020-09-14 </span><span class="number">14</span><span class="string">:06</span></span><br><span class="line"><span class="attr">swiper:</span> <span class="literal">true</span> <span class="comment"># 将改文章放入轮播图中</span></span><br><span class="line"><span class="attr">swiperImg:</span> <span class="string">&#x27;/medias/1.jpg&#x27;</span> <span class="comment"># 该文章在轮播图中的图片，可以是本地目录下图片也可以是http://xxx图片</span></span><br><span class="line"><span class="attr">img:</span> <span class="string">&#x27;/medias/1.jpg&#x27;</span> <span class="comment"># 该文章图片，可以是本地目录下图片也可以是http://xxx图片</span></span><br><span class="line"><span class="attr">categories:</span> <span class="string">前端</span></span><br><span class="line"><span class="attr">tags:</span> [<span class="string">Hexo</span>, <span class="string">hexo-theme-bamboo</span>]</span><br><span class="line"><span class="attr">top:</span> <span class="literal">true</span></span><br><span class="line"></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
 <p><code>Front-matter</code> 选项中的所有内容均为<strong>非必填</strong>的。但我仍然建议至少填写 <code>title</code> 和 <code>date</code> 的值。</p>
@@ -1079,7 +1079,8 @@
 
   <div id="myComment">
     
-      <div id="beaudar_container"></div>
+      <div id="gitment-container"></div>
+
     
   </div>
 
@@ -1196,7 +1197,7 @@
   <div class='content'>
     <div class="toc-main">
       <div class="toc-content">
-        <!-- <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E7%AB%A0%20Front-matter%20%E4%BB%8B%E7%BB%8D2avzdn3m49"><span class="toc-text">文章 Front-matter 介绍</span></a></li></ol> -->
+        <!-- <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E7%AB%A0%20Front-matter%20%E4%BB%8B%E7%BB%8Dc2uu4er8fiw"><span class="toc-text">文章 Front-matter 介绍</span></a></li></ol> -->
         <div class="toc"></div>
       </div>
     </div>
@@ -2168,78 +2169,64 @@
 
   
     <script type="text/javascript">
-  var beaudarCommon = {};
+  var utteranceCommon = {};
 
-  function check_beaudar() {
+  function check_utterance() {
     let isDark = JSON.parse(localStorage.getItem('dark')) || JSON.parse('false');
     if (isDark) {
-      beaudarCommon.Theme = 'github-dark';
+      utteranceCommon.Theme = 'github-dark';
     } else {
-      beaudarCommon.Theme = 'github-light';
+      utteranceCommon.Theme = 'github-light';
     }
 
-    return document.getElementById("beaudar_container");
+    return document.getElementById("gitment-container");
   }
-  comment_el = '#beaudar_container';
-  load_beaudar = function () {
+  comment_el = '#gitment-container';
+  load_utterance = function () {
     if ($(comment_el).length) {
       // 匿名函数，防止污染全局变量
-      const HEAD = check_beaudar();
+      const HEAD = check_utterance();
 
-      const script = document.createElement('script');
-      let issuenumber = "";
-      if (issuenumber) {
-        script.setAttribute('issue-number', issuenumber);
-      } else {
-        script.setAttribute('issue-term', "pathname");
-      }
-      script.setAttribute('src', 'https://beaudar.lipk.org/client.js');
-      script.setAttribute('repo', 'yuang01/yuang01.github.io');
-      script.setAttribute('input-position', 'top');
-      script.setAttribute('branch', 'main');
-      script.setAttribute('comment-order', 'desc');
-      script.setAttribute('label', '✨💬✨');
-      script.setAttribute('theme', beaudarCommon.Theme);
-      script.setAttribute('crossorigin', "anonymous");
+      var utterances = document.createElement('script');
+      utterances.type = 'text/javascript';
+      utterances.async = true;
+      utterances.setAttribute('issue-term', 'pathname')
+      utterances.setAttribute('theme', utteranceCommon.Theme)
+      utterances.setAttribute('repo', 'yuang01/yuang01.github.io')
+      utterances.crossorigin = 'anonymous';
+      utterances.src = 'https://utteranc.es/client.js';
       // content 是要插入评论的地方
-      document.getElementById('beaudar_container').appendChild(script);
+      document.getElementById('gitment-container').appendChild(utterances);
+
     }
   }
 
-  function dark_beaudar() {
-    const HEAD = check_beaudar();
+  function dark_utterance() {
+    const HEAD = check_utterance();
     if (!HEAD) return;
     const message = {
       type: 'set-theme',
-      theme: beaudarCommon.Theme
+      theme: utteranceCommon.Theme
     };
-    const beaudarIframe = document.querySelector('iframe');
-    beaudarIframe.contentWindow.postMessage(message, 'https://beaudar.lipk.org');
+    const utteranceIframe = document.querySelector('iframe');
+    utteranceIframe.contentWindow.postMessage(message, 'https://utteranc.es');
   }
 
-  function check_beaudar_style() {
-    // Beaudar 会往 HEAD 的首节点追加样式元素，而这个追加没有添加判断
-    // 所以 Pjax 下会多次添加样式文件，略微麻烦。
-    const checkStyle = document.querySelector('head').firstElementChild;
-    if (checkStyle.innerText.includes('beaudar')) checkStyle.remove();
-  }
-
-  $(document).ready(load_beaudar);
+  $(document).ready(load_utterance);
   document.addEventListener('pjax:complete', function () {
-    check_beaudar_style();
-    load_beaudar();
+    load_utterance();
   });
 
   $('.dark').click(function () {
     setTimeout(() => {
-      dark_beaudar();
+      dark_utterance();
     });
   })
 
 </script>
 
 <style>
-  .beaudars {
+  .utterances {
     max-width: inherit !important;
   }
 </style>
