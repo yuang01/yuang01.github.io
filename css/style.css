@@ -1449,8 +1449,8 @@ pre:hover::-webkit-scrollbar-thumb:hover,
   display: inline-block;
   cursor: pointer;
   border-radius: 8px;
-  background-color: transparent;
-  border: 1px solid transparent;
+  background-color: rgba(66,185,133,0.8);
+  border: 1px solid rgba(66,185,133,0.8);
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -1603,6 +1603,8 @@ pre:hover::-webkit-scrollbar-thumb:hover,
 .post-detail h4 {
   font-size: 1.2rem;
   padding-left: 10px;
+}
+.post-detail h4:not(.bamboo-h):not(.bamboo-h-b) {
   border-left: 5px solid rgba(66,185,133,0.8);
 }
 .post-detail h5 {
@@ -1663,11 +1665,12 @@ pre:hover::-webkit-scrollbar-thumb:hover,
 .post-detail ul {
   list-style: none;
 }
-.post-detail ul:not(.post-copyright) li {
+.post-detail ul:not(.post-copyright):not(.nav-tabs) li {
   position: relative;
+  padding: 8px 0;
   padding-left: 25px;
 }
-.post-detail ul:not(.post-copyright) li::before {
+.post-detail ul:not(.post-copyright):not(.nav-tabs) li::before {
   content: '';
   width: 14px;
   height: 14px;
@@ -1682,7 +1685,7 @@ pre:hover::-webkit-scrollbar-thumb:hover,
   position: relative;
   box-sizing: border-box;
 }
-.post-detail ul:not(.post-copyright) li:not(:last-child)::after {
+.post-detail ul:not(.post-copyright):not(.nav-tabs) li:not(:last-child)::after {
   content: '';
   height: 100%;
   width: 2px;
@@ -1691,11 +1694,6 @@ pre:hover::-webkit-scrollbar-thumb:hover,
   left: 6px;
   top: 20px;
   box-sizing: border-box;
-}
-.post-detail ul li {
-  padding: 8px 0;
-  position: relative;
-  line-height: 1rem;
 }
 .post-detail ol {
   list-style-type: none;
@@ -1783,7 +1781,7 @@ pre:hover::-webkit-scrollbar-thumb:hover,
   word-wrap: break-word;
   border: 1px solid rgba(217,241,231,0.8);
 }
-.post-detail table tr:hover {
+.post-detail table:not(.highlight table) tr:hover {
   background-color: rgba(226,245,237,0.8);
 }
 .post-detail table tr th:first-child,
