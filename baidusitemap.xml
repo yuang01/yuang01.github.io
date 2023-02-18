@@ -1,12 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://yuang01.github.io/post/new-about/index/</loc>
+    <loc>http://yuang01.github.io/post/hexo-theme-bamboo/tags/</loc>
+    <lastmod>2023-02-18</lastmod>
+  </url>
+  <url>
+    <loc>http://yuang01.github.io/post/hexo-theme-bamboo/front-matter/</loc>
+    <lastmod>2023-02-18</lastmod>
+  </url>
+  <url>
+    <loc>http://yuang01.github.io/post/hexo-theme-bamboo/page/</loc>
+    <lastmod>2023-02-18</lastmod>
+  </url>
+  <url>
+    <loc>http://yuang01.github.io/post/hexo-theme-bamboo/suggest/</loc>
+    <lastmod>2023-02-18</lastmod>
+  </url>
+  <url>
+    <loc>http://yuang01.github.io/post/hexo-theme-bamboo/sidebar/</loc>
     <lastmod>2023-02-18</lastmod>
   </url>
   <url>
     <loc>http://yuang01.github.io/post/hexo-theme-bamboo-new/</loc>
-    <lastmod>2023-02-13</lastmod>
+    <lastmod>2023-02-18</lastmod>
+  </url>
+  <url>
+    <loc>http://yuang01.github.io/post/new-about/index/</loc>
+    <lastmod>2023-02-18</lastmod>
   </url>
   <url>
     <loc>http://yuang01.github.io/post/markdown/index/</loc>
@@ -43,14 +63,6 @@
   <url>
     <loc>http://yuang01.github.io/post/bubbly-bg/index/</loc>
     <lastmod>2022-11-20</lastmod>
-  </url>
-  <url>
-    <loc>http://yuang01.github.io/post/hexo-theme-bamboo/tags/</loc>
-    <lastmod>2022-11-13</lastmod>
-  </url>
-  <url>
-    <loc>http://yuang01.github.io/post/hexo-theme-bamboo/page/</loc>
-    <lastmod>2022-07-16</lastmod>
   </url>
   <url>
     <loc>http://yuang01.github.io/post/danmu/index/</loc>
@@ -170,22 +182,6 @@
   </url>
   <url>
     <loc>http://yuang01.github.io/post/mermaid/index/</loc>
-    <lastmod>2022-06-09</lastmod>
-  </url>
-  <url>
-    <loc>http://yuang01.github.io/post/hexo-theme-bamboo/sidebar/</loc>
-    <lastmod>2022-06-09</lastmod>
-  </url>
-  <url>
-    <loc>http://yuang01.github.io/post/hexo-theme-bamboo/suggest/</loc>
-    <lastmod>2022-06-09</lastmod>
-  </url>
-  <url>
-    <loc>http://yuang01.github.io/post/hexo-theme-bamboo/front-matter/</loc>
-    <lastmod>2022-06-09</lastmod>
-  </url>
-  <url>
-    <loc>http://yuang01.github.io/post/hexo-theme-bamboo/theme/</loc>
     <lastmod>2022-06-09</lastmod>
   </url>
   <url>
