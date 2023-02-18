@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yuang01.github.io/"/>
-  <updated>2023-02-12T15:33:44.506Z</updated>
+  <updated>2023-02-18T01:37:52.801Z</updated>
   <id>http://yuang01.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>关于我页面写法</title>
+    <link href="http://yuang01.github.io/post/new-about/index/"/>
+    <id>http://yuang01.github.io/post/new-about/index/</id>
+    <published>2023-02-18T01:31:30.000Z</published>
+    <updated>2023-02-18T01:37:52.801Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;关于我页面&quot;&gt;&lt;a href=&quot;#关于我页面&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>markdown样式优化</title>
@@ -85,7 +108,7 @@
       
         
         
-          &lt;h2 class=&quot;bamboo-h &quot; id=&quot;按钮事例1ktizyjnysd&quot;&gt;按钮事例&lt;/h2&gt;&lt;br/&gt;
+          &lt;h2 class=&quot;bamboo-h &quot; id=&quot;按钮事例9kc20nxhxig&quot;&gt;按钮事例&lt;/h2&gt;&lt;br/&gt;
 
 &lt;span class=&#39;btn center cool-1&#39;&gt;&lt;a class=&quot;button&quot; href=&#39;https://baidu.com&#39;
         
@@ -511,29 +534,6 @@
     <summary type="html">
     
       基本配置（一）
-    
-    </summary>
-    
-    
-      <category term="前端" scheme="http://yuang01.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="Hexo" scheme="http://yuang01.github.io/tags/Hexo/"/>
-    
-      <category term="hexo-theme-bamboo" scheme="http://yuang01.github.io/tags/hexo-theme-bamboo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Bamboo主题-主题更改（三）</title>
-    <link href="http://yuang01.github.io/post/hexo-theme-bamboo/theme/"/>
-    <id>http://yuang01.github.io/post/hexo-theme-bamboo/theme/</id>
-    <published>2021-07-05T03:10:00.000Z</published>
-    <updated>2022-06-09T11:39:20.258Z</updated>
-    
-    <summary type="html">
-    
-      主题更改（三）
     
     </summary>
     
