@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yuang01.github.io/"/>
-  <updated>2023-02-18T01:37:52.801Z</updated>
+  <updated>2023-02-25T15:02:48.970Z</updated>
   <id>http://yuang01.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>增加获取图片标签</title>
+    <link href="http://yuang01.github.io/post/getphoto/"/>
+    <id>http://yuang01.github.io/post/getphoto/</id>
+    <published>2023-02-25T14:31:30.000Z</published>
+    <updated>2023-02-25T15:02:48.970Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;code&gt;v3.1.2&lt;/code&gt;新增获取图片标签&lt;br&gt;使用方法如下&lt;br&gt;在根目录下的&lt;code&gt;source&lt;/code&gt;文件夹创建任意存放图片的文件夹，例如创建一个叫做&lt;code&gt;myImg&lt;/code&gt;的文件夹，然后将任意图片放入&lt;code&gt;source/my
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>关于我页面写法</title>
@@ -108,7 +131,7 @@
       
         
         
-          &lt;h2 class=&quot;bamboo-h &quot; id=&quot;按钮事例5nccxj4ilc0&quot;&gt;按钮事例&lt;/h2&gt;&lt;br/&gt;
+          &lt;h2 class=&quot;bamboo-h &quot; id=&quot;按钮事例90mh6i9f5l4&quot;&gt;按钮事例&lt;/h2&gt;&lt;br/&gt;
 
 &lt;span class=&#39;btn center cool-1&#39;&gt;&lt;a class=&quot;button&quot; href=&#39;https://baidu.com&#39;
         
@@ -185,7 +208,7 @@
     <link href="http://yuang01.github.io/post/hexo-theme-bamboo/page/"/>
     <id>http://yuang01.github.io/post/hexo-theme-bamboo/page/</id>
     <published>2022-07-16T04:21:00.000Z</published>
-    <updated>2023-02-18T02:44:05.319Z</updated>
+    <updated>2023-02-25T15:17:44.928Z</updated>
     
     <summary type="html">
     
@@ -521,29 +544,6 @@
     
     
       <category term="tag" scheme="http://yuang01.github.io/tags/tag/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>基本配置（一）</title>
-    <link href="http://yuang01.github.io/post/hexo-theme-bamboo-new/"/>
-    <id>http://yuang01.github.io/post/hexo-theme-bamboo-new/</id>
-    <published>2021-07-05T03:12:00.000Z</published>
-    <updated>2023-02-18T02:36:21.685Z</updated>
-    
-    <summary type="html">
-    
-      基本配置（一）
-    
-    </summary>
-    
-    
-      <category term="前端" scheme="http://yuang01.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="Hexo" scheme="http://yuang01.github.io/tags/Hexo/"/>
-    
-      <category term="hexo-theme-bamboo" scheme="http://yuang01.github.io/tags/hexo-theme-bamboo/"/>
     
   </entry>
   
