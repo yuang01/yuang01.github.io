@@ -7,9 +7,9 @@ tags: [tag]
 # top: true
 img: https://pic4.zhimg.com/80/v2-3b4ca49ff4fc567faa76ce6f02cffac9_1440w.jpg?source=1940ef5c
 toc: false
+bgImg: https://pic3.zhimg.com/80/v2-e5c15010b8ba4608a1974403a02a2da0_1440w.webp
 ---
 
-<span><img src='https://cdn.jsdelivr.net/gh/deepkolos/wechat-emoji/emoji/不屑.png' style='height:24px'></span>
 {% title h2, 基本 %}
 
 {% folding 查看图片测试 %}

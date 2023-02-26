@@ -5,6 +5,7 @@ categories: 前端
 tags: [tag]
 tocOpen: false
 img: https://img11.360buyimg.com/ddimg/jfs/t1/173445/21/15206/1609537/60caebaaE18d21c8d/757aea972636a1b8.png
+bgImg: https://img11.360buyimg.com/ddimg/jfs/t1/173445/21/15206/1609537/60caebaaE18d21c8d/757aea972636a1b8.png
 ---
 
 该标签会去拿到某个repo仓库的issue内容，用`sites标签`的形式显示出来，可以用做网站的`友链`功能

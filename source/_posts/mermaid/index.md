@@ -5,6 +5,7 @@ tags: ['mermaid']
 categories: [mermaid]
 swiper: true
 img: https://pica.zhimg.com/80/v2-a71e05c37fb4970d8e5640eab6833805_1440w.jpg?source=1940ef5c
+bgImg: https://picx.zhimg.com/80/v2-385d547297cede798a3f8391975a03c7_1440w.jpg
 ---
 > 支持2.6.5+
 

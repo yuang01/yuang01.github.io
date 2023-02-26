@@ -6,6 +6,7 @@ categories: 前端
 tags: [tag]
 # top: true
 img: https://pic3.zhimg.com/80/v2-b7c7899676492453229763b26835f6dc_1440w.jpg?source=1940ef5c
+bgImg: https://pic2.zhimg.com/v2-3183c6674f8a03e7538da7471af65889_b.jpg
 ---
 {% title h2, Github用户卡片 %}
 {% ghcard yuang01 %}

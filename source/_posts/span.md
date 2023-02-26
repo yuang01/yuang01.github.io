@@ -6,6 +6,7 @@ categories: 前端
 tags: [tag]
 # top: true
 img: https://pic4.zhimg.com/80/v2-37134f732bbe21779fdb2fc8dca410c7_1440w.jpg
+bgImg: https://pic4.zhimg.com/v2-7e40abd6bebb53fc13faa98cafe5d55b_b.jpg
 ---
 {% title h2, 文字颜色演示效果 %}
 这是一个简单的文字{% span yellow, 我是一个文字高亮 %}，唱着我们心肠的曲折

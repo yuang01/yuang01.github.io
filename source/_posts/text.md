@@ -6,7 +6,7 @@ categories: 前端
 tags: [tag]
 # top: true
 bgImg: [
-    '/img/2.jpg',
+    'https://pic4.zhimg.com/v2-e916ab19cf6f7b5961ec112e39ae3e13_b.jpg',
     'https://pic2.zhimg.com/80/v2-49362b67989353ff4c8133479f808f32_1440w.jpg?source=1940ef5c',
     'https://pic1.zhimg.com/80/v2-75cce0837ce11c61827e38610feeba85_1440w.jpg?source=1940ef5c'
 ]

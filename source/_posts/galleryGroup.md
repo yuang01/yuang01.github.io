@@ -7,6 +7,7 @@ tags: [tag]
 # top: true
 toc: false
 img: https://pic1.zhimg.com/80/v2-0937a04a47457f2b6b22756adbc5b188_1440w.jpg
+bgImg: https://pic1.zhimg.com/80/v2-0937a04a47457f2b6b22756adbc5b188_1440w.jpg
 ---
 {% noteblock info, 提示 %}
     使用该标签请先将主题下的`_config.yml`中的`fancybox`设置为`true`

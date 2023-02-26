@@ -5,6 +5,7 @@ categories: 前端
 tags: [tag]
 tocOpen: false
 img: https://w.wallhaven.cc/full/e7/wallhaven-e78jpo.jpg
+bgImg: https://w.wallhaven.cc/full/e7/wallhaven-e78jpo.jpg
 ---
 该标签会去拿到某个repo仓库的issue内容，用`timeline标签`的形式显示出来
 ## 写法

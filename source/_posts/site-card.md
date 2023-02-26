@@ -6,6 +6,7 @@ categories: 前端
 tags: [tag]
 # top: true
 img: https://pic3.zhimg.com/80/v2-0cd97ad46cb2a18343565aa60adeab0e_1440w.jpg
+bgImg: https://pic3.zhimg.com/v2-3afda695650a99e5c7349b26745090ca_b.jpg
 ---
 {% title h2, site-card演示 %}
 {% sitegroup %}

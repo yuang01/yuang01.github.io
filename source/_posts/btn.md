@@ -6,6 +6,7 @@ categories: 前端
 tags: [tag]
 # top: true
 img: https://pic1.zhimg.com/80/v2-1f5fecc916dcb213570e1a79be2a5d65_1440w.jpg?source=1940ef5c
+bgImg: https://pic2.zhimg.com/80/v2-347bb3e5a15eafca135e80873507ac9b_1440w.jpg
 ---
 {% title h2, 融入段落中按钮 %}
 不设置任何参数的 {% btn 按钮, / %} 适合融入段落中。

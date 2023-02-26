@@ -7,7 +7,7 @@ onlyTitle: true
 ---
 {% p center large danger, 根据md写的关于我页面 %}
 ## Me
-yuang01
+yuang01/本科
 
 一枚前端开发搬运工，面向api开发，百度谷歌搜索一键复制粘贴攻城狮
 

@@ -7,6 +7,7 @@ tags: [tag]
 # top: true
 tocOpen: false
 img: https://pic4.zhimg.com/v2-672bbb43fda6c749b16e2b8c8d69e15f_b.jpg
+bgImg: https://pic3.zhimg.com/v2-eec58d8a27dc049b6627bf699633a642_b.jpg
 ---
 {% title h2, timeline时间线演示 %}
 {% timeline %}

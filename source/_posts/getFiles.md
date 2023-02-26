@@ -5,8 +5,9 @@ date: 2021-08-10 11:35
 categories: 前端
 tags: [tag]
 top: true
-img: https://pic4.zhimg.com/80/v2-5a575bb8ac734707f1ec05d6de6a0e0b_1440w.jpg
+img: https://pic3.zhimg.com/80/v2-7e6795a0b7b4fbe87b0a388b8a052f78_1440w.jpg
 excerpt: '会把某个文件夹下的文件显示在页面上。'
+bgImg: https://pic3.zhimg.com/80/v2-377dba326c917feb32390075784661f4_1440w.jpg
 ---
 ## 会把某个文件夹下的文件显示在页面上。
 例如我在`source`文件夹下，创建了一个叫做`img`的文件夹，把`img`的文件夹下的文件显示在页面上。

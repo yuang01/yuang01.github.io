@@ -6,6 +6,7 @@ categories: 前端
 tags: [tag]
 # top: true
 img: https://pic3.zhimg.com/v2-806666b346e90aa0506069930e453b2a_b.jpg
+bgImg: https://pic1.zhimg.com/v2-5e46726038107ab039365c7f42c84188_b.jpg
 ---
 {% title h2, video演示 %}
 100%宽度

@@ -1,5 +1,5 @@
 ---
-title: Bamboo主题-首页新增侧边栏
+title: 侧边栏
 date: 2021-09-28 11:11
 swiper: true
 swiperImg: https://pic1.zhimg.com/80/v2-70e3aa84f510f98da30f955b5cc22fc5_1440w.jpg?source=1940ef5c
@@ -7,15 +7,9 @@ categories: 前端
 tags: [Hexo, sidebar]
 img: https://pic1.zhimg.com/80/v2-70e3aa84f510f98da30f955b5cc22fc5_1440w.jpg?source=1940ef5c
 swiperDesc: '该侧边栏支持版本2.6.0+'
-excerpt: '首页新增侧边栏'
+excerpt: '侧边栏'
+bgImg: https://pica.zhimg.com/80/v2-3fd8f44c8043c27b945b1d1677c684ac_1440w.jpg
 ---
-
-> 有问题去[留言板](/messageBoard)留言
-<!-- 使用主题之前请先去github点个{% span large red, star %}。 -->
-{% ghcard yuang01/hexo-theme-bamboo, theme=vue %}
-
-> 首页侧边栏支持的版本为 `v2.6.0+`
-
 ## 默认的侧边栏
 在主题的`config.yml`文件中配置
 ```yaml

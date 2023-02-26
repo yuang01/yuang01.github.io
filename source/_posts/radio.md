@@ -6,6 +6,7 @@ categories: 前端
 tags: [tag]
 # top: true
 img: https://pic3.zhimg.com/80/v2-1d9e8203f167bb1c51d6899df5c626ca_1440w.jpg
+bgImg: https://pic2.zhimg.com/v2-0e08c0d233bac03b157698c632529a99_b.jpg
 ---
 
 {% title h2, radio %}

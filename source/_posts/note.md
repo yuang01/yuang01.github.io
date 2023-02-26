@@ -6,6 +6,7 @@ categories: 前端
 tags: [tag]
 # top: true
 img: https://pic2.zhimg.com/80/v2-faf73fcede052da243fef1b36604b8f9_1440w.jpg?source=1940ef5c
+bgImg: https://pic2.zhimg.com/v2-63601c753b6389eb93dcafb93a5457ad_b.jpg
 ---
 {% title h2, note演示效果 %}
 > markdown默认写法，左边框颜色，随着主题色改变

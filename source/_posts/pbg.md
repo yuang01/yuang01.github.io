@@ -7,6 +7,7 @@ tags: [tag]
 # top: true
 img: https://pic1.zhimg.com/80/v2-c274041256201850e4a51998c5c48b77_1440w.jpg?source=1940ef5c
 excerpt: '文本高亮标签'
+bgImg: https://pic4.zhimg.com/v2-da1b000f20baf616257d8a981fcdb053_b.jpg
 ---
 {% title h2, 文本高亮演示效果 %}
 这是一个简单的文字{% pbg yellow, 我是一个文本高亮 %}，唱着我们心肠的曲折

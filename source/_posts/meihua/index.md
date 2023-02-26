@@ -1,10 +1,11 @@
 ---
-title: 右上角梅花
+title: 给bamboo添加右上角梅花
 excerpt: 右上角梅花，页脚游动的鱼，轮播图底部的波浪
 date: 2022-05-20 14:03:20
 tags: ['梅花']
 categories: [梅花]
 img: https://pic3.zhimg.com/50/v2-2eda8421a841216b7f309e52c5f64e3b_720w.jpg?source=1940ef5c
+bgImg: https://pic1.zhimg.com/v2-5e46726038107ab039365c7f42c84188_b.jpg
 ---
 
 页脚游动的鱼，轮播图底部的波浪 在主题`v2.7.5`版本已经加到主题里去了

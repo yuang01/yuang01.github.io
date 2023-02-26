@@ -6,6 +6,7 @@ categories: 前端
 tags: [tag]
 # top: true
 img: https://pic2.zhimg.com/80/v2-035165460d504f2b072ee777d1d40ab6_1440w.jpg?source=1940ef5c
+bgImg: https://pic1.zhimg.com/80/v2-47e4f59780e9fea26d9514af2dc3adb8_1440w.jpg
 ---
 {% title h2, 事例 %}
 

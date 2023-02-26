@@ -5,9 +5,10 @@ date: 2021-02-22 11:35
 categories: 前端
 tags: [tag]
 top: true
-img: https://pic3.zhimg.com/80/v2-e35c656df5d483dc74831129ddb31256_1440w.jpg
+img: https://pica.zhimg.com/80/v2-bb080ef299e131a682b0e34440fbbcc3_1440w.jpg
 prismjs: solarizedlight
 excerpt: '进度条标签'
+bgImg: https://pic4.zhimg.com/80/v2-eaa955c7c5a6d8e1a515ac593f791947_1440w.jpg
 ---
 {% title h2, 进度条示例 %}
 {% note info, 该标签适用版本为`1.8.1`及以上 %}

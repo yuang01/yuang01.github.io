@@ -7,6 +7,8 @@ tags: [tag]
 # top: true
 tocOpen: false
 img: https://pic1.zhimg.com/v2-cdf0dd8357e2cf573f32d0d65cff6404_b.jpg
+bgImg: https://pic2.zhimg.com/v2-7401e3f7b8a27175a1bee7ba37dc68c5_b.jpg
+bgImgTransition: 'scale'
 ---
 {% title h2, title演示 %}
 

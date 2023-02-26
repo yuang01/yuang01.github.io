@@ -7,13 +7,14 @@ onlyTitle: true
 toc: false
 copyright: false
 donate: false
+imgTop: false
 ---
 
 {% p center large, 欢迎大家留言 %}
 
 {% p center , 有朋自远方来，不亦乐乎 %}
 
-{% image https://b.picbed.cn/file/picbed-cn/2021/11/09/20190821321673_WhINKf.png %}
+{% image https://pic3.zhimg.com/v2-d8e1c695f6f11a6ba6e1d9c465a541c6_b.jpg %}
 
 
 <div class="china-lines">

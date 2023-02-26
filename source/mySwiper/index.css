@@ -7,6 +7,10 @@
     z-index: 9999;
     color: #fff;
     margin-top: 10px;
+    display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 4;
+	overflow: hidden;
 }
 .myswiper .swiper-slide .mySwiper-text {
     position: absolute;

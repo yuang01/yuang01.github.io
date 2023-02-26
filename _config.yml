@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Bamboo
+title: 竹
 subtitle: ''
 description: '千磨万击还坚劲，任尔东西南北风'
 keywords:
@@ -13,7 +13,7 @@ timezone: ''
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yuang01.gitee.io
+url: http://yuang01.github.io
 root: /
 permalink: :post/:title/
 permalink_defaults:
@@ -46,14 +46,14 @@ post_asset_folder: true
 relative_link: false
 future: true
 highlight:
-  enable: false
+  enable: true
   line_number: true
   auto_detect: false
   tab_replace: ''
   wrap: true
   hljs: false
 prismjs:
-  enable: true
+  enable: false
   preprocess: true
   line_number: true
   tab_replace: ''
@@ -127,7 +127,7 @@ feed:
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://gitee.com/yuang01/yuang01.git
+  repo: https://github.com/yuang01/yuang01.github.io.git
 
 #  repo: https://github.com/yuang01/yuang01.github.io.git
 # https://gitee.com/yuang01/yuang01.git

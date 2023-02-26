@@ -9,6 +9,7 @@ tags: [tag]
 swiperDesc: '上述事例代码上述事例代码上述事例代码上述事例代码上述事例代码'
 tocOpen: false
 img: https://pic2.zhimg.com/80/v2-1678d94c8b4e6be640584c2dabef1586_1440w.jpg?source=1940ef5c
+bgImg: https://pic1.zhimg.com/80/v2-e8d421b312104a36195565ab606a8be8_1440w.jpg
 ---
 {% title h2, 段落中插入图片 %}
 这是 {% inlineimage http://img.doutula.com/production/uploads/image/2019/08/15/20190815849485_fKMqYD.gif %} 一段话。

@@ -1,5 +1,5 @@
 ---
-title: Bamboo主题-基本配置（一）
+title: 基本配置（一）
 date: 2021-07-05 11:12
 swiper: true
 swiperImg: 'https://img10.360buyimg.com/ddimg/jfs/t1/180344/4/14703/246455/60f3ac57E43fdf363/412adfa574c34196.jpg'
@@ -9,13 +9,16 @@ img: https://img10.360buyimg.com/ddimg/jfs/t1/180344/4/14703/246455/60f3ac57E43f
 swiperDesc: '该文档是版本2.3.0的文档，版本号可以从主题下的`package.json`查看'
 excerpt: '基本配置（一）'
 top: true
+bgImg: https://pic1.zhimg.com/80/v2-6c63fd2701714cff0ce3dc57f0b18ccc_1440w.jpg
+bgImgTransition: 'scale'
 ---
 
 这是一款{% span large red, H %}{% span large green, E %}{% span large blue, X %}{% span large info, O %}主题。
 
 > 有问题去[留言板](/messageBoard)留言
-<!-- 使用主题之前请先去github点个{% span large red, star %}。 -->
-{% ghcard yuang01/hexo-theme-bamboo, theme=vue %}
+
+
+国内访问：http://120.48.121.186/   （github比较慢的话，可以访问这个地址预览）
 
 {% title h2, 下载 %}
 首先你需要有一个[Hexo](https://hexo.io/zh-cn/)，按照官网的方法，很容易的就能创建一个hexo博客。
@@ -69,7 +72,7 @@ npm i hexo-theme-bamboo
 ### 切换主题
 修改 Hexo 根目录下的 `_config.yml` 的  `theme` 的值：`theme: hexo-theme-bamboo`
 
-{% titleB h4, `_config.yml` 文件的其它修改建议: %}
+#### `_config.yml` 文件的其它修改建议
  
 - 请修改 `_config.yml` 的 `url` 的值为你的网站主 `URL`（如：`http://xxx.github.io`）。`author`值改为你的名称（如：yuang），`description`值随便写一段描述（如：千磨万击还坚劲，任尔东西南北风）
 - 如果你是中文用户，则建议修改 `language` 的值为 `zh-CN`。
@@ -100,7 +103,7 @@ highlight:
 
 <!-- endtab -->
 
-<!-- tab prismjs (推荐) -->
+<!-- tab prismjs -->
 请先确保你的`hexo版本为5.0`以上,在根目录下的`package.json`中可以查看hexo的版本。如果不是5.0.以上，请先升级，例如在根目录下使用如下命令，这个下载的版本号是5.3.0版本，你可以指定下载最新的版本
 ``` bash
 npm install hexo@5.3.0
@@ -132,50 +135,6 @@ categories: 前端
 tags: [Hexo, hexo-theme-bamboo]
 top: true
 prismjs: dark # 设置该篇文章的代码高亮主题为dark
-```
-<!-- endtab -->
-
-<!-- tab hexo-prism-plugin -->
-
-如果使用[hexo-prism-plugin](https://github.com/ele828/hexo-prism-plugin)这个Hexo插件来做代码高亮，安装命令如下：
-```bash
-npm i -S hexo-prism-plugin
-```
-
-然后，修改 Hexo {% pbg cyan, 根目录下的_config.yml 文件中的%} `highlight.enable` 的值为 `false`，`prismjs.enable`值为false, 并新增该插件相关的配置，主要配置如下：
-
-```yaml
-highlight:
-  enable: false
-prismjs:
-  enable: false
-  preprocess: true
-  line_number: true
-  tab_replace: ''
-prism_plugin:
-  mode: 'preprocess'    # realtime/preprocess
-  theme: 'tomorrow'    # 这里可以选择不同样式的主题
-  line_number: false    # default false
-  custom_css:
-```
-这个插件目前渲染有点`小问题`，代码高亮如遇到花括号变成了`&#123;&#125;`这样的字符串，以下方式可解决：
-将`node_modules\hexo-prism-plugin\src\index.js`中的map改为如下
-```javascript
-const map = {
-  '&#39;': '\'',
-  '&amp;': '&',
-  '&gt;': '>',
-  '&lt;': '<',
-  '&quot;': '"',
-  '&#123;': '{',
-  '&#125;': '}'
-};
-```
-
-然后重启服务，`hexo clean`  && `hexo s`即可 
-卸载命令如下，如果你安装了此插件，后来想使用前两种高亮，请先卸载此插件
-```bash
-npm un hexo-prism-plugin
 ```
 <!-- endtab -->
 
@@ -227,122 +186,10 @@ layout: "tags"
 ---
 ```
 
-### 新建关于我 about 页
-`about` 页是用来展示**关于我和我的博客**信息的页面，如果在你的博客 `source` 目录下还没有 `about/index.md` 文件，那么你就需要新建一个，命令如下：
-
-```bash
-hexo new page "about"
-```
-编辑你刚刚新建的页面文件 `/source/about/index.md`，**至少需要以下内容**：
-```yaml
----
-title: about
-date: 2020-09-14 15:30:30 # 时间随便写
-type: "about"
-layout: "about"
----
-```
-然后可以在本主题下的`_config.yml`文件下，编辑以下字段进行关于我页面信息的更改
-``` yaml
-baseInfo # 基本信息，包括年龄，性别，坐标，状态
-skills   # 技能
-socialAccounts # 社交账号
-games   # 游戏
-books   #书籍
-```
-写法如下
-{% folding cyan, baseInfo基本信息 %}
-
-`baseInfo`主要包含年龄，性别，坐标，状态，格式如下，**注意空格缩进哦**
-``` yaml
-baseInfo:
-  on: true # 是否显示
-  age: 99 # 年龄
-  sex: '男' # 性别
-  coordinate: '火星' # 坐标
-  status: '划水中' # 状态
-```
-{% endfolding %}
-
-{% folding green, skills 填写我的技能 %}
-`skills` 填写我的技能，格式如下，**注意空格缩进哦**
-``` yaml
-# 关于我 技能
-skills:
-  on: true # 是否显示
-  data: # 这个data不能忘了，下面的字段注意缩进
-    HTML5: # 这里写你的技能名称，如 HTML5或者java
-      background: 'red' # 进度条颜色
-      percent: 90% # 进度条百分比
-    JavaScript:
-      background: 'linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%)'
-      percent: 85%
-    CSS:
-      background: '#000'
-      percent: 70%
-    # 可以在下面继续写哦，例如python，java等，按照上面的格式写
-```
-{% endfolding %}
-
-{% folding yellow, socialAccounts 社交账号 %}
-`socialAccounts`填写我的社交账号，格式如下，**注意空格缩进哦**
-``` yaml
-socialAccounts: 
-  on: true
-  data: # 这个data不能忘了，下面的字段注意缩进
-    QQ: # 社交软件名称
-      icon: fab fa-qq  # 图标，可以为空，前面加上fa，假如图标名称叫fa-quora，就是 fa fa-quora, 
-      name: xxxxxxxxxxxxxx # 账号名称
-      url: 'http://www.baidu.com' # 账号链接地址
-    微信:
-      icon: fab fa-weixin
-      name: xxxxxxxxxxxxxx
-      url: 'http://www.baidu.com'
-    # 可以在下面继续写哦，例如知乎，微博等，按照上面的格式写
-```
-{% endfolding %}
-
-{% note info, 本主题从2.6.0开始使用[Font Awesome v5.15.3版本](https://fontawesome.com/) %}
-
-{% folding red, games 填写我的游戏 %}
-`games` 填写我的游戏，格式如下，**注意空格缩进哦**
-```yaml
-games:
-  on: true # 是否显示
-  data: # 这个data不能忘了，下面的字段注意缩进
-    王者荣耀: # 游戏名称，下面的img是游戏图片
-      img: 'https://pic2.zhimg.com/80/v2-54730a36304842b86a57a237b8b39945_720w.jpg?source=1940ef5c'
-    英雄杀:
-      img: 'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1909008358,1888649581&fm=26&gp=0.jpg'
-    和平精英:
-      img: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1595596612190&di=dbf2030780758c4724ecb1f07f2f4f73&imgtype=0&src=http%3A%2F%2Fimgup04.51wxjz.com%2F51wxjz%2F2019-06%2F05%2F09%2F15596983468928_0.png'
-    英雄联盟:
-      img: 'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3035766587,2822701570&fm=26&gp=0.jpg'
-    # 可以在下面继续写哦，例如开心消消乐等等，按照上面的格式写
-```
-{% endfolding %}
-
-{% folding blue, books 填写我的书籍 %}
-`books` 填写我的书籍，格式如下，**注意空格缩进哦**
-```yaml
-books:
-  on: true # 是否显示
-  data: # 这个data不能忘了，下面的字段注意缩进
-    明朝那些事儿: # 书籍名称，下面的img是书籍图片
-      img: 'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2736238052,2078148140&fm=26&gp=0.jpg'
-    春秋左传:
-      img: 'https://pic2.zhimg.com/50/v2-6f33f60312de25ddcb795fc81ee91b38_720w.jpg?source=54b3c3a5'
-    孙子兵法:
-      img: 'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=710999414,899378807&fm=26&gp=0.jpg'
-    # 可以在下面继续写哦，例如时间简史等等，按照上面的格式写
-```
-{% endfolding %}
-
-
 ### 新建友情链接 friends 页
 {% tabs tab-id %}
 
-<!-- tab markdown文件（推荐） -->
+<!-- tab 通过github issue动态获取 -->
 > 该功能需要主题版本为`2.1.5+`
 
 `friends` 页是用来展示**友情连接**信息的页面，如果在你的博客 `source` 目录下还没有 `friends/index.md` 文件，那么你就需要新建一个，命令如下：
@@ -367,46 +214,28 @@ toc: false # 不显示文章目录
 
 <!-- endtab -->
 
-<!-- tab 新建json文件(不推荐-旧版本用的) -->
+<!-- tab 或者固定的友链地址 -->
+如果你不会用github issue标签当做友链页面，你也可以创建一个.md文件，通过如下标签将友链地址写成固定的也是可以的
 
-`friends` 页是用来展示**友情连接**信息的页面，如果在你的博客 `source` 目录下还没有 `friends/index.md` 文件，那么你就需要新建一个，命令如下：
-
-```bash
-hexo new page "friends"
-```
-
-编辑你刚刚新建的页面文件 `/source/friends/index.md`，**至少需要以下内容**：
-
-```yaml
----
-title: friends
-date: 2020-09-14 15:30:30
-type: "friends"
-layout: "friends"
----
-```
-同时，在你的博客 `source` 目录下新建 `_data` 目录，在 `_data` 目录中新建 `friends.json` 文件，文件内容如下所示：
-```json
-[{
-  "avatar": "https://pic2.zhimg.com/80/v2-d1bd22e7dc847ae62028ae336d55ded9_720w.jpg?source=1940ef5c",
-  "name": "如梦亦如幻",
-  "introduction": "烟雨如江南",
-  "url": "https://github.com/yuang01"
-}, {
-  "avatar": "https://pic1.zhimg.com/80/v2-1a60e33c33810a4d81a80282b8ca7a33_720w.jpg?source=1940ef5c",
-  "name": "青灯暮雨",
-  "introduction": "山水如墨染",
-  "url": "https://github.com/yuang01"
-}, {
-  "avatar": "https://pic2.zhimg.com/80/v2-134122ca13d041f5ec1f2680f2677318_720w.jpg?source=1940ef5c",
-  "name": "寄情山水花草间",
-  "introduction": "宛如丹青未干",
-  "url": "https://github.com/yuang01"
-}]
-```
-
+{% link site-card:: /post/site-card/:: https://pic3.zhimg.com/80/v2-7cfc909ebe8d83683909846edd6b5232_1440w.webp %}
 <!-- endtab -->
 {% endtabs %}
+
+### 新建关于我 about 页
+```bash
+hexo new page "about"
+```
+然后参考：
+{% link site-card:: /post/new-about/index/:: https://pica.zhimg.com/80/v2-573ac3e25de03fad9c32add5a05e5cfc_1440w.webp %}
+
+### 新建图库页面
+跟上面这些页面一样，自己新建md页面，然后使用下面三种标签即可快速生成图库页面
+首先使用分组标签
+{% link gallerygroup标签:: /post/gallerygroup/:: https://pic3.zhimg.com/80/v2-7cfc909ebe8d83683909846edd6b5232_1440w.webp %}
+然后新建图库详情页面，然后使用下面两种标签中的任意一种：
+{% link gallery标签:: /post/gallery/:: https://pic2.zhimg.com/80/v2-29e78b52051ce542adf6d786d61fbd19_1440w.webp %}
+{% link 通过文件夹获取图片标签:: /post/getphoto/:: https://pic3.zhimg.com/80/v2-e5c15010b8ba4608a1974403a02a2da0_1440w.webp %}
+推荐使用`通过文件夹获取图片标签`来创建图库详情页,因为很方便，一行代码搞定
 
 ### 中文链接转拼音（可选的）
 如果你的文章名称是中文的，那么 Hexo 默认生成的永久链接也会有中文，这样不利于 `SEO`，且 `gitment` 评论对中文链接也不支持。我们可以用 [hexo-permalink-pinyin](https://github.com/viko16/hexo-permalink-pinyin) Hexo 插件使在生成文章时生成中文拼音的永久链接。
@@ -456,6 +285,6 @@ pjax:
   cacheBust: false # url 地址追加时间戳，用以避免浏览器缓存
   timeout: 5000    # The timeout in milliseconds for the XHR requests. Set to 0 to disable the timeout.
   banUrl:          # 被屏蔽的 url 地址将不启用 pjax 跳转，可以在控制台下使用 window.location.pathname 获取
-      # - '/xxx/'     
-      # - '/xxx/' 
+      # - '/xxx'     
+      # - '/xxx' 
 ```

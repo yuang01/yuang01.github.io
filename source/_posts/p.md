@@ -6,6 +6,7 @@ categories: 前端
 tags: [tag]
 # top: true
 img: https://pic4.zhimg.com/80/v2-513fd25e66ae237fca305e8ebf4de594_1440w.jpg?source=1940ef5c
+bgImg: https://pic1.zhimg.com/v2-7c5c3aa881fa2ff27ead51c64e09dc70_b.jpg
 ---
 {% title h2, 段落文本演示 %}
 {% p yellow, 我是一个文本高亮大萨达所多撒多撒多撒大多多撒多撒多撒大所多撒大多 %}
