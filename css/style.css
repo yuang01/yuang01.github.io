@@ -408,26 +408,7 @@ pre:hover::-webkit-scrollbar-thumb:hover,
   list-style: none;
 }
 #l_side .side_toc .content .toc-main .toc-content li:before {
-  color: #000;
-  font-family: Times New Roman;
-}
-#l_side .side_toc .content .toc-main .toc-content li {
-  counter-increment: a 1;
-}
-#l_side .side_toc .content .toc-main .toc-content li:before {
-  content: counter(a) ". ";
-}
-#l_side .side_toc .content .toc-main .toc-content li li {
-  counter-increment: b 1;
-}
-#l_side .side_toc .content .toc-main .toc-content li li:before {
-  content: counter(a) "." counter(b) ". ";
-}
-#l_side .side_toc .content .toc-main .toc-content li li li {
-  counter-increment: c 1;
-}
-#l_side .side_toc .content .toc-main .toc-content li li li:before {
-  content: counter(a) "." counter(b) "." counter(c) ". ";
+  content: '💖';
 }
 #l_side .side_toc .content .toc-main .toc-content a:hover {
   color: rgba(66,185,133,0.8);
@@ -1357,7 +1338,8 @@ pre:hover::-webkit-scrollbar-thumb:hover,
   justify-content: space-between;
 }
 .main-content {
-  width: calc(100% - 255px);
+  flex: 1;
+  margin-left: 15px;
   margin-top: 15px;
   transition: width 0.3s;
 }
