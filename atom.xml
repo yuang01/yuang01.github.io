@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yuang01.github.io/"/>
-  <updated>2023-03-05T01:55:04.763Z</updated>
+  <updated>2023-03-05T11:12:32.138Z</updated>
   <id>http://yuang01.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>如何更新主题</title>
+    <link href="http://yuang01.github.io/post/updatetheme/index/"/>
+    <id>http://yuang01.github.io/post/updatetheme/index/</id>
+    <published>2023-03-05T09:43:30.000Z</published>
+    <updated>2023-03-05T11:12:32.138Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;其实学会更新主题还是一个蛮重要的技能的。&lt;br&gt;首先建议下载&lt;a href=&quot;https://code.visualstudio.com/&quot;&gt;vscode&lt;/a&gt;编辑器，这个编辑器确实好用。然后下载&lt;a
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>netlify部署博客</title>
@@ -154,7 +177,7 @@
       
         
         
-          &lt;h2 class=&quot;bamboo-h &quot; id=&quot;按钮事例39e5ikq186k&quot;&gt;按钮事例&lt;/h2&gt;&lt;br/&gt;
+          &lt;h2 class=&quot;bamboo-h &quot; id=&quot;按钮事例6kx5p3pebm&quot;&gt;按钮事例&lt;/h2&gt;&lt;br/&gt;
 
 &lt;span class=&#39;btn center cool-1&#39;&gt;&lt;a class=&quot;button&quot; href=&#39;https://baidu.com&#39;
         
@@ -523,29 +546,6 @@
     
     
       <category term="mathjax" scheme="http://yuang01.github.io/tags/mathjax/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>侧边栏</title>
-    <link href="http://yuang01.github.io/post/hexo-theme-bamboo/sidebar/"/>
-    <id>http://yuang01.github.io/post/hexo-theme-bamboo/sidebar/</id>
-    <published>2021-09-28T03:11:00.000Z</published>
-    <updated>2023-02-18T02:47:40.124Z</updated>
-    
-    <summary type="html">
-    
-      侧边栏
-    
-    </summary>
-    
-    
-      <category term="前端" scheme="http://yuang01.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="Hexo" scheme="http://yuang01.github.io/tags/Hexo/"/>
-    
-      <category term="sidebar" scheme="http://yuang01.github.io/tags/sidebar/"/>
     
   </entry>
   

@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yuang01.github.io/post/updatetheme/index/</loc>
+    
+    <lastmod>2023-03-05</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yuang01.github.io/post/hexo-theme-bamboo-new/</loc>
     
     <lastmod>2023-03-05</lastmod>
@@ -571,14 +578,14 @@
   </url>
   
   <url>
-    <loc>http://yuang01.github.io/tags/markdown/</loc>
+    <loc>http://yuang01.github.io/tags/sidebar/</loc>
     <lastmod>2023-03-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://yuang01.github.io/tags/sidebar/</loc>
+    <loc>http://yuang01.github.io/tags/markdown/</loc>
     <lastmod>2023-03-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -599,13 +606,6 @@
   </url>
   
   <url>
-    <loc>http://yuang01.github.io/tags/mermaid/</loc>
-    <lastmod>2023-03-05</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://yuang01.github.io/tags/%E9%9F%B3%E4%B9%90/</loc>
     <lastmod>2023-03-05</lastmod>
     <changefreq>daily</changefreq>
@@ -614,6 +614,13 @@
   
   <url>
     <loc>http://yuang01.github.io/tags/%E5%8D%9A%E5%AE%A2/</loc>
+    <lastmod>2023-03-05</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yuang01.github.io/tags/mermaid/</loc>
     <lastmod>2023-03-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -685,13 +692,6 @@
   </url>
   
   <url>
-    <loc>http://yuang01.github.io/categories/%E7%AE%80%E5%8E%86/404/</loc>
-    <lastmod>2023-03-05</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://yuang01.github.io/categories/%E6%A2%85%E8%8A%B1/</loc>
     <lastmod>2023-03-05</lastmod>
     <changefreq>daily</changefreq>
@@ -700,6 +700,13 @@
   
   <url>
     <loc>http://yuang01.github.io/categories/mermaid/</loc>
+    <lastmod>2023-03-05</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yuang01.github.io/categories/%E7%AE%80%E5%8E%86/404/</loc>
     <lastmod>2023-03-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
