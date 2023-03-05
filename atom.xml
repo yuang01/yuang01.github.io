@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yuang01.github.io/"/>
-  <updated>2023-02-27T15:00:09.214Z</updated>
+  <updated>2023-03-05T01:23:27.186Z</updated>
   <id>http://yuang01.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>netlify部署博客</title>
+    <link href="http://yuang01.github.io/post/netlify/"/>
+    <id>http://yuang01.github.io/post/netlify/</id>
+    <published>2023-03-05T00:36:30.000Z</published>
+    <updated>2023-03-05T01:23:27.186Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;netlify部署&quot;&gt;&lt;a href=&quot;#netlify部署&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>增加获取图片标签</title>
@@ -131,7 +154,7 @@
       
         
         
-          &lt;h2 class=&quot;bamboo-h &quot; id=&quot;按钮事例c3768r1v8z4&quot;&gt;按钮事例&lt;/h2&gt;&lt;br/&gt;
+          &lt;h2 class=&quot;bamboo-h &quot; id=&quot;按钮事例2qbclswzhgw&quot;&gt;按钮事例&lt;/h2&gt;&lt;br/&gt;
 
 &lt;span class=&#39;btn center cool-1&#39;&gt;&lt;a class=&quot;button&quot; href=&#39;https://baidu.com&#39;
         
@@ -523,27 +546,6 @@
       <category term="Hexo" scheme="http://yuang01.github.io/tags/Hexo/"/>
     
       <category term="sidebar" scheme="http://yuang01.github.io/tags/sidebar/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>getFiles文件获取</title>
-    <link href="http://yuang01.github.io/post/getfiles/"/>
-    <id>http://yuang01.github.io/post/getfiles/</id>
-    <published>2021-08-10T03:35:00.000Z</published>
-    <updated>2022-06-09T13:58:56.647Z</updated>
-    
-    <summary type="html">
-    
-      会把某个文件夹下的文件显示在页面上。
-    
-    </summary>
-    
-    
-      <category term="前端" scheme="http://yuang01.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="tag" scheme="http://yuang01.github.io/tags/tag/"/>
     
   </entry>
   
