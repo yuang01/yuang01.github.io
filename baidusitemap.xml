@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://yuang01.github.io/post/updatetheme/index/</loc>
+    <lastmod>2023-03-11</lastmod>
+  </url>
+  <url>
     <loc>http://yuang01.github.io/post/netlify/</loc>
     <lastmod>2023-03-07</lastmod>
   </url>
   <url>
     <loc>http://yuang01.github.io/post/hexo-theme-bamboo-new/</loc>
     <lastmod>2023-03-06</lastmod>
-  </url>
-  <url>
-    <loc>http://yuang01.github.io/post/updatetheme/index/</loc>
-    <lastmod>2023-03-05</lastmod>
   </url>
   <url>
     <loc>http://yuang01.github.io/post/getphoto/</loc>
