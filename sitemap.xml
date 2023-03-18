@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yuang01.github.io/post/hexo-theme-bamboo-new/</loc>
+    
+    <lastmod>2023-03-18</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yuang01.github.io/post/getjson/photo/</loc>
     
     <lastmod>2023-03-18</lastmod>
@@ -33,13 +40,6 @@
     <loc>http://yuang01.github.io/post/netlify/</loc>
     
     <lastmod>2023-03-07</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yuang01.github.io/post/hexo-theme-bamboo-new/</loc>
-    
-    <lastmod>2023-03-06</lastmod>
     
   </url>
   
@@ -599,13 +599,6 @@
   </url>
   
   <url>
-    <loc>http://yuang01.github.io/tags/mathjax/</loc>
-    <lastmod>2023-03-18</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://yuang01.github.io/tags/sidebar/</loc>
     <lastmod>2023-03-18</lastmod>
     <changefreq>daily</changefreq>
@@ -613,7 +606,14 @@
   </url>
   
   <url>
-    <loc>http://yuang01.github.io/tags/markdown/</loc>
+    <loc>http://yuang01.github.io/tags/mathjax/</loc>
+    <lastmod>2023-03-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yuang01.github.io/tags/mermaid/</loc>
     <lastmod>2023-03-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -627,7 +627,7 @@
   </url>
   
   <url>
-    <loc>http://yuang01.github.io/tags/mermaid/</loc>
+    <loc>http://yuang01.github.io/tags/markdown/</loc>
     <lastmod>2023-03-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -713,7 +713,7 @@
   </url>
   
   <url>
-    <loc>http://yuang01.github.io/categories/markdown/</loc>
+    <loc>http://yuang01.github.io/categories/mermaid/</loc>
     <lastmod>2023-03-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -727,6 +727,13 @@
   </url>
   
   <url>
+    <loc>http://yuang01.github.io/categories/%E6%A0%87%E7%AD%BE/json/</loc>
+    <lastmod>2023-03-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://yuang01.github.io/categories/%E6%A2%85%E8%8A%B1/</loc>
     <lastmod>2023-03-18</lastmod>
     <changefreq>daily</changefreq>
@@ -734,14 +741,7 @@
   </url>
   
   <url>
-    <loc>http://yuang01.github.io/categories/mermaid/</loc>
-    <lastmod>2023-03-18</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://yuang01.github.io/categories/%E6%A0%87%E7%AD%BE/json/</loc>
+    <loc>http://yuang01.github.io/categories/markdown/</loc>
     <lastmod>2023-03-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
