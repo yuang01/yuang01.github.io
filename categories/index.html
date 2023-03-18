@@ -30,9 +30,7 @@
 
   
   
-    
-<link rel="stylesheet" href="/js/fancybox/jquery.fancybox.min.css">
-
+    <link href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" rel="stylesheet">
   
   
     
@@ -46,9 +44,18 @@
             }
         }
     </style>
-    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <script defer src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
     <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
 
+    
+    
+    <!-- 依赖于jquery和vue -->
+    
+        <script src="https://unpkg.com/jquery@3.5.1/dist/jquery.min.js"></script>
+    
+
+    
+        <script src="https://unpkg.com/vue@2.6.11/dist/vue.min.js"></script>
     
 
     <!-- import link -->
@@ -67,19 +74,6 @@
 <meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="竹" type="application/atom+xml">
 </head>
 
-  
-  <!-- 依赖于jquery和vue -->
-  
-    
-<script src="https://unpkg.com/jquery@3.5.1/dist/jquery.min.js"></script>
-
-  
-
-  
-    
-<script src="https://unpkg.com/vue@2.6.11/dist/vue.min.js"></script>
-
-  
   
   <!-- 预加载动画 -->
   <!-- 页面预加载动画 -->
@@ -725,7 +719,7 @@
         }
       }
     </script>
-    <script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script> 
+    <script defer src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script> 
     
 </header>
         <!-- 内容区域 -->
@@ -811,17 +805,17 @@
                 </a>
                 
                 
-                <a href="/categories/%E9%A6%96%E9%A1%B5%E6%B7%BB%E5%8A%A0%E5%BC%B9%E5%B9%95/" title="首页添加弹幕: 1">
+                <a href="/categories/%E5%8A%A8%E6%80%81%E8%83%8C%E6%99%AF/" title="动态背景: 1">
                     <span class="category-content"
-                        title="首页添加弹幕" style="background-color: #A3E4D7;">首页添加弹幕
+                        title="动态背景" style="background-color: #85C1E9;">动态背景
                         <span class="category-length">1</span>
                     </span>
                 </a>
                 
                 
-                <a href="/categories/%E5%8A%A8%E6%80%81%E8%83%8C%E6%99%AF/" title="动态背景: 1">
+                <a href="/categories/%E9%A6%96%E9%A1%B5%E6%B7%BB%E5%8A%A0%E5%BC%B9%E5%B9%95/" title="首页添加弹幕: 1">
                     <span class="category-content"
-                        title="动态背景" style="background-color: #85C1E9;">动态背景
+                        title="首页添加弹幕" style="background-color: #A3E4D7;">首页添加弹幕
                         <span class="category-length">1</span>
                     </span>
                 </a>
@@ -851,6 +845,14 @@
                 </a>
                 
                 
+                <a href="/categories/%E6%A0%87%E7%AD%BE/" title="标签: 1">
+                    <span class="category-content"
+                        title="标签" style="background-color: #D7BDE2;">标签
+                        <span class="category-length">1</span>
+                    </span>
+                </a>
+                
+                
                 <a href="/categories/markdown/" title="markdown: 1">
                     <span class="category-content"
                         title="markdown" style="background-color: #D5F5E3;">markdown
@@ -867,6 +869,14 @@
                 </a>
                 
                 
+                <a href="/categories/%E7%AE%80%E5%8E%86/404/" title="404: 1">
+                    <span class="category-content"
+                        title="404" style="background-color: #82E0AA;">404
+                        <span class="category-length">1</span>
+                    </span>
+                </a>
+                
+                
                 <a href="/categories/%E6%A2%85%E8%8A%B1/" title="梅花: 1">
                     <span class="category-content"
                         title="梅花" style="background-color: #F8C471;">梅花
@@ -875,9 +885,9 @@
                 </a>
                 
                 
-                <a href="/categories/%E7%AE%80%E5%8E%86/404/" title="404: 1">
+                <a href="/categories/%E6%A0%87%E7%AD%BE/json/" title="json: 1">
                     <span class="category-content"
-                        title="404" style="background-color: #82E0AA;">404
+                        title="json" style="background-color: #D7BDE2;">json
                         <span class="category-length">1</span>
                     </span>
                 </a>
@@ -1240,7 +1250,7 @@
 
     <!-- 图片放大 -->
     
-      <script src="/js/fancybox/jquery.fancybox.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
     
 
     <!-- 百度解析 -->
@@ -1475,6 +1485,24 @@
       loadIssuesJS();
     }
   })
+</script>
+
+<!-- 渲染远程json加载的图片标签(getPhotoOnline)里的内容 -->
+<script>
+	function loadPhotoOnlineJS() {
+		if ($(".post-detail").find(".getJsonPhoto-api").length == 0) {
+			return;
+		} 
+		loadScript('/js/getPhotoOnline/index.js');
+	};
+	$(function () {
+		loadPhotoOnlineJS();
+	});
+	document.addEventListener('pjax:complete', function () {
+		if (typeof getPhotoJson == "undefined") {
+			loadPhotoOnlineJS();
+		}
+	})
 </script>
 
 <!-- 输入框打字特效 -->

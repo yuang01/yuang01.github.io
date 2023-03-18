@@ -30,9 +30,7 @@
 
   
   
-    
-<link rel="stylesheet" href="/js/fancybox/jquery.fancybox.min.css">
-
+    <link href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" rel="stylesheet">
   
   
     
@@ -46,9 +44,18 @@
             }
         }
     </style>
-    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <script defer src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
     <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
 
+    
+    
+    <!-- 依赖于jquery和vue -->
+    
+        <script src="https://unpkg.com/jquery@3.5.1/dist/jquery.min.js"></script>
+    
+
+    
+        <script src="https://unpkg.com/vue@2.6.11/dist/vue.min.js"></script>
     
 
     <!-- import link -->
@@ -67,19 +74,6 @@
 <meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="竹" type="application/atom+xml">
 </head>
 
-  
-  <!-- 依赖于jquery和vue -->
-  
-    
-<script src="https://unpkg.com/jquery@3.5.1/dist/jquery.min.js"></script>
-
-  
-
-  
-    
-<script src="https://unpkg.com/vue@2.6.11/dist/vue.min.js"></script>
-
-  
   
   <!-- 预加载动画 -->
   <!-- 页面预加载动画 -->
@@ -725,7 +719,7 @@
         }
       }
     </script>
-    <script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script> 
+    <script defer src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script> 
     
 </header>
         <!-- 内容区域 -->
@@ -1167,7 +1161,7 @@
 
     <!-- 图片放大 -->
     
-      <script src="/js/fancybox/jquery.fancybox.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
     
 
     <!-- 百度解析 -->
@@ -1402,6 +1396,24 @@
       loadIssuesJS();
     }
   })
+</script>
+
+<!-- 渲染远程json加载的图片标签(getPhotoOnline)里的内容 -->
+<script>
+	function loadPhotoOnlineJS() {
+		if ($(".post-detail").find(".getJsonPhoto-api").length == 0) {
+			return;
+		} 
+		loadScript('/js/getPhotoOnline/index.js');
+	};
+	$(function () {
+		loadPhotoOnlineJS();
+	});
+	document.addEventListener('pjax:complete', function () {
+		if (typeof getPhotoJson == "undefined") {
+			loadPhotoOnlineJS();
+		}
+	})
 </script>
 
 <!-- 输入框打字特效 -->

@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://yuang01.github.io/post/hexo-theme-bamboo/sidebar/</loc>
+    <lastmod>2023-03-18</lastmod>
+  </url>
+  <url>
+    <loc>http://yuang01.github.io/post/getjson/photo/</loc>
+    <lastmod>2023-03-18</lastmod>
+  </url>
+  <url>
     <loc>http://yuang01.github.io/post/updatetheme/index/</loc>
     <lastmod>2023-03-11</lastmod>
   </url>
@@ -31,10 +39,6 @@
   <url>
     <loc>http://yuang01.github.io/post/hexo-theme-bamboo/page/</loc>
     <lastmod>2023-02-25</lastmod>
-  </url>
-  <url>
-    <loc>http://yuang01.github.io/post/hexo-theme-bamboo/sidebar/</loc>
-    <lastmod>2023-02-18</lastmod>
   </url>
   <url>
     <loc>http://yuang01.github.io/post/hexo-theme-bamboo/front-matter/</loc>
