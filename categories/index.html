@@ -845,10 +845,10 @@
                 </a>
                 
                 
-                <a href="/categories/%E6%A0%87%E7%AD%BE/" title="标签: 1">
+                <a href="/categories/%E6%A0%87%E7%AD%BE/" title="标签: 2">
                     <span class="category-content"
                         title="标签" style="background-color: #D7BDE2;">标签
-                        <span class="category-length">1</span>
+                        <span class="category-length">2</span>
                     </span>
                 </a>
                 
@@ -856,14 +856,6 @@
                 <a href="/categories/markdown/" title="markdown: 1">
                     <span class="category-content"
                         title="markdown" style="background-color: #D5F5E3;">markdown
-                        <span class="category-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/categories/%E6%A2%85%E8%8A%B1/" title="梅花: 1">
-                    <span class="category-content"
-                        title="梅花" style="background-color: #F8C471;">梅花
                         <span class="category-length">1</span>
                     </span>
                 </a>
@@ -877,6 +869,22 @@
                 </a>
                 
                 
+                <a href="/categories/mathjax/" title="mathjax: 1">
+                    <span class="category-content"
+                        title="mathjax" style="background-color: #FEF9E7;">mathjax
+                        <span class="category-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/categories/%E6%A2%85%E8%8A%B1/" title="梅花: 1">
+                    <span class="category-content"
+                        title="梅花" style="background-color: #F8C471;">梅花
+                        <span class="category-length">1</span>
+                    </span>
+                </a>
+                
+                
                 <a href="/categories/mermaid/" title="mermaid: 1">
                     <span class="category-content"
                         title="mermaid" style="background-color: #F9EBEA;">mermaid
@@ -885,18 +893,10 @@
                 </a>
                 
                 
-                <a href="/categories/%E6%A0%87%E7%AD%BE/json/" title="json: 1">
+                <a href="/categories/%E6%A0%87%E7%AD%BE/json/" title="json: 2">
                     <span class="category-content"
                         title="json" style="background-color: #D7BDE2;">json
-                        <span class="category-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/categories/mathjax/" title="mathjax: 1">
-                    <span class="category-content"
-                        title="mathjax" style="background-color: #FEF9E7;">mathjax
-                        <span class="category-length">1</span>
+                        <span class="category-length">2</span>
                     </span>
                 </a>
                 
@@ -1501,6 +1501,24 @@
   document.addEventListener('pjax:complete', function () {
     if (typeof getPhotoJson == "undefined") {
       loadPhotoOnlineJS();
+    }
+  })
+</script>
+
+<!-- 渲染远程json加载的site-card标签(getSiteOnline)里的内容 -->
+<script>
+  function loadSiteOnlineJS() {
+    if ($(".post-detail").find(".getJsonSite-api").length == 0) {
+      return;
+    } 
+    loadScript('/js/getSiteOnline/index.js');
+  };
+  $(function () {
+    loadSiteOnlineJS();
+  });
+  document.addEventListener('pjax:complete', function () {
+    if (typeof getSiteJson == "undefined") {
+      loadSiteOnlineJS();
     }
   })
 </script>

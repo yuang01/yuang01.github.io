@@ -765,10 +765,10 @@
             <div class="tag-chips">
                 
                 
-                <a href="/tags/tag/" title="tag: 28">
+                <a href="/tags/tag/" title="tag: 29">
                     <span class="tag-content"
                         title="tag" style="background-color: #FEF9E7;">tag
-                        <span class="tag-length">28</span>
+                        <span class="tag-length">29</span>
                     </span>
                 </a>
                 
@@ -853,9 +853,17 @@
                 </a>
                 
                 
-                <a href="/tags/json/" title="json: 1">
+                <a href="/tags/json/" title="json: 2">
                     <span class="tag-content"
                         title="json" style="background-color: #D7BDE2;">json
+                        <span class="tag-length">2</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/markdown/" title="markdown: 1">
+                    <span class="tag-content"
+                        title="markdown" style="background-color: #D5F5E3;">markdown
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -869,9 +877,9 @@
                 </a>
                 
                 
-                <a href="/tags/markdown/" title="markdown: 1">
+                <a href="/tags/mathjax/" title="mathjax: 1">
                     <span class="tag-content"
-                        title="markdown" style="background-color: #D5F5E3;">markdown
+                        title="mathjax" style="background-color: #FEF9E7;">mathjax
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -880,22 +888,6 @@
                 <a href="/tags/%E6%A2%85%E8%8A%B1/" title="梅花: 1">
                     <span class="tag-content"
                         title="梅花" style="background-color: #F8C471;">梅花
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/mermaid/" title="mermaid: 1">
-                    <span class="tag-content"
-                        title="mermaid" style="background-color: #F9EBEA;">mermaid
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/mathjax/" title="mathjax: 1">
-                    <span class="tag-content"
-                        title="mathjax" style="background-color: #FEF9E7;">mathjax
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -912,6 +904,14 @@
                 <a href="/tags/%E5%8D%9A%E5%AE%A2/" title="博客: 1">
                     <span class="tag-content"
                         title="博客" style="background-color: #F8F9F9;">博客
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/mermaid/" title="mermaid: 1">
+                    <span class="tag-content"
+                        title="mermaid" style="background-color: #F9EBEA;">mermaid
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -1517,6 +1517,24 @@
   document.addEventListener('pjax:complete', function () {
     if (typeof getPhotoJson == "undefined") {
       loadPhotoOnlineJS();
+    }
+  })
+</script>
+
+<!-- 渲染远程json加载的site-card标签(getSiteOnline)里的内容 -->
+<script>
+  function loadSiteOnlineJS() {
+    if ($(".post-detail").find(".getJsonSite-api").length == 0) {
+      return;
+    } 
+    loadScript('/js/getSiteOnline/index.js');
+  };
+  $(function () {
+    loadSiteOnlineJS();
+  });
+  document.addEventListener('pjax:complete', function () {
+    if (typeof getSiteJson == "undefined") {
+      loadSiteOnlineJS();
     }
   })
 </script>

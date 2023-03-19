@@ -13,7 +13,7 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-  <title>分类: mathjax | 竹</title>
+  <title>通过json生成site-card | 竹</title>
 
   <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico">
   <link rel="stylesheet" href="https://at.alicdn.com/t/font_1911880_c1nvbyezg17.css">
@@ -724,112 +724,605 @@
 </header>
         <!-- 内容区域 -->
         
+ <!-- prismjs 代码高亮 -->
+ 
 
-<div class="bg-dark-floor" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -2;"></div>
-<div class="bg-light-floor-categoryDetail" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -3;"></div>
 
-<div class="category-header"  style="background-image:url('https://pic3.zhimg.com/80/v2-2f38f8025e0e989f27be354212eb825b_1440w.jpg')">
-  <div class="category-header-title">
-    category
-  </div>
-  <div class="category-header-desc">
+<div class="bg-dark-floor" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -1;"></div>
+
+
+  <!-- 文章详情页顶部图片和标题 -->
+
+
+
+
+<div class="post-detail-header" id="thumbnail_canvas" style="background-repeat: no-repeat; background-size: cover; 
+  background-position: center center;position: relative;background-image:url('https://picx.zhimg.com/80/v2-b44931ea513e5f7b3b06f2703f79653c_1440w.webp')">
+  <div class="post-detail-header-mask"></div>
+  <canvas id="header_canvas"style="position:absolute;bottom:0;pointer-events:none;"></canvas>
+  
+  <div class="post-detail-header_info-box">
+    <div class="title-box">
+      <span class="title">
+        通过json生成site-card
+      </span>
+    </div>
     
-      <span class="title" id="category-header-desc"></span>
-      <script>
-  function typedFn() {
-    const el = '#category-header-desc';
-    const type = 'categoryDetail';
-    let desc = '愿你如风，被人温柔以待'
-    var typed = new Typed(el, {
-      strings: [desc],
-      startDelay: 100,
-      typeSpeed: 100,
-      loop: true,
-      backSpeed: 50,
-      showCursor: true
-    });
-  }
-  typedFn();
-</script>
+    
       
+        <span class="post-detail-header_date">
+          <i class="fas fa-calendar"></i> 发表于：2023-03-19 |
+        </span>
+      
+
+      
+        <span class="post-detail-header_categories">
+          <i class="iconfont iconbookmark1"></i> 分类：
+          
+            <a href="/categories/%E6%A0%87%E7%AD%BE/" class="post-detail-header_category">
+              标签
+            </a>
+          
+            <a href="/categories/%E6%A0%87%E7%AD%BE/json/" class="post-detail-header_category">
+              json
+            </a>
+          
+        </span>
+      
+
+      
+        <div class="post-detail-header_wordcount">
+          <span class="totalcount">
+            <i class="fas fa-file-text-o"></i> 字数统计: 502 |
+          </span>
+  
+          <span class="min2read">
+            <i class="fas fa-clock"></i> 阅读时长: 2分钟 |
+          </span>
+  
+          
+            <span class="reading">
+              <i class="fas fa-eye"></i> 阅读量：<span id="busuanzi_value_page_pv"></span>
+            </span>
+          
+        </div>
+      
+    
   </div>
-  <div class="mask-box"></div>
+  
+  
+    <script src="/js/bubble/bubble.js"></script>
+  
 </div>
 
 
-<div class="category">
-  <div class="category-name">
-    <div class="name" style="background-color: #FEF9E7;">mathjax 分类</div>
-  </div>
-  <!-- 每一篇文章卡片 -->
-  <!-- hash算法 -->
 
-<section class="posts">
+
+
+<div class="post-detail-content post-row" 
+  style="padding-top: 0px;">
+  <div class="main-content">
+    <article class="post post-detail">
+      <div class="post-content">
+        <blockquote>
+<p>支持<code>v3.2.2+</code> 通过本地（source文件夹下）或者远程json文件，生成site-card标签集</p>
+</blockquote>
+<p>json文件格式如下:</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line">[</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="attr">&quot;title&quot;</span>: <span class="string">&quot;yuang01&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;url&quot;</span>: <span class="string">&quot;https://hexo-theme-bamboo.netlify.app/&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;avatar&quot;</span>: <span class="string">&quot;https://hexo-theme-bamboo.netlify.app/img/avatar.jpg&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;screenshot&quot;</span>: <span class="string">&quot;https://picx.zhimg.com/80/v2-d7666d074ec59ca4cf14f15c5f891643_1440w.webp&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;description&quot;</span>: <span class="string">&quot;hexo主题bamboo&quot;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="attr">&quot;title&quot;</span>: <span class="string">&quot;yuang01&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;url&quot;</span>: <span class="string">&quot;https://hexo-theme-bamboo.netlify.app/&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;avatar&quot;</span>: <span class="string">&quot;https://hexo-theme-bamboo.netlify.app/img/avatar.jpg&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;screenshot&quot;</span>: <span class="string">&quot;https://pic1.zhimg.com/80/v2-d27db7c61bbe3ecb8d493d31bf835b28_1440w.webp&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;description&quot;</span>: <span class="string">&quot;hexo主题bamboo&quot;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="attr">&quot;title&quot;</span>: <span class="string">&quot;yuang01&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;url&quot;</span>: <span class="string">&quot;https://hexo-theme-bamboo.netlify.app/&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;avatar&quot;</span>: <span class="string">&quot;https://hexo-theme-bamboo.netlify.app/img/avatar.jpg&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;screenshot&quot;</span>: <span class="string">&quot;https://picx.zhimg.com/80/v2-17001eba7a69aea9477299f8140e12ab_1440w.webp&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;description&quot;</span>: <span class="string">&quot;hexo主题bamboo&quot;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="attr">&quot;title&quot;</span>: <span class="string">&quot;yuang01&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;url&quot;</span>: <span class="string">&quot;https://hexo-theme-bamboo.netlify.app/&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;avatar&quot;</span>: <span class="string">&quot;https://hexo-theme-bamboo.netlify.app/img/avatar.jpg&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;screenshot&quot;</span>: <span class="string">&quot;https://picx.zhimg.com/80/v2-3486dae2687982e8a141c23d922b9936_1440w.webp&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;description&quot;</span>: <span class="string">&quot;hexo主题bamboo&quot;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="attr">&quot;title&quot;</span>: <span class="string">&quot;yuang01&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;url&quot;</span>: <span class="string">&quot;https://hexo-theme-bamboo.netlify.app/&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;avatar&quot;</span>: <span class="string">&quot;https://hexo-theme-bamboo.netlify.app/img/avatar.jpg&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;screenshot&quot;</span>: <span class="string">&quot;https://pic1.zhimg.com/80/v2-034e77303e502886d0ea6130f44127ed_1440w.webp&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;description&quot;</span>: <span class="string">&quot;hexo主题bamboo&quot;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="attr">&quot;title&quot;</span>: <span class="string">&quot;yuang01&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;url&quot;</span>: <span class="string">&quot;https://hexo-theme-bamboo.netlify.app/&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;avatar&quot;</span>: <span class="string">&quot;https://hexo-theme-bamboo.netlify.app/img/avatar.jpg&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;screenshot&quot;</span>: <span class="string">&quot;https://picx.zhimg.com/80/v2-1781005004b2681e722e68aab7bf68c3_1440w.webp&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;description&quot;</span>: <span class="string">&quot;hexo主题bamboo&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+<p><code>url</code> 字段可以替换为<code>href</code>字段，表示要跳转的地址<br><code>title</code> 字段可以替换为<code>name</code>，表示名称<br><code>avatar</code> 字段可以替换为<code>touxiang</code>，表示头像<br><code>screenshot</code> 字段可以替换为<code>cover</code>，表示封面图片<br><code>description</code> 字段可以替换为<code>desc</code>，表示描述</p>
+<p>例如： <a href="https://yuang01.github.io/myjson/site.json">https://yuang01.github.io/myjson/site.json</a></p>
+<h2 id="本地"><a href="#本地" class="headerlink" title="本地"></a>本地</h2><div class="getJsonSite-api" api="/myjson/site.json" isRegular="4"></div>
+<h3 id="写法"><a href="#写法" class="headerlink" title="写法"></a>写法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% getSiteOnline &#x2F;myjson&#x2F;site.json %&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="jsdelivr远程"><a href="#jsdelivr远程" class="headerlink" title="jsdelivr远程"></a>jsdelivr远程</h2><div class="getJsonSite-api" api="https://cdn.jsdelivr.net/gh/yuang01/CDN@main/file/site.json" isRegular="4"></div>
+<h3 id="写法-1"><a href="#写法-1" class="headerlink" title="写法"></a>写法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% getSiteOnline https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;gh&#x2F;yuang01&#x2F;CDN@main&#x2F;file&#x2F;site.json %&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="github远程"><a href="#github远程" class="headerlink" title="github远程"></a>github远程</h2><div class="getJsonSite-api" api="https://yuang01.github.io/myjson/site.json" isRegular="4"></div>
+<h3 id="写法-2"><a href="#写法-2" class="headerlink" title="写法"></a>写法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% getSiteOnline https:&#x2F;&#x2F;yuang01.github.io&#x2F;myjson&#x2F;site.json %&#125;</span><br></pre></td></tr></table></figure>
+      </div>
+      <div class="post-tags-categories">
+        
+        <div class="tags">
+          
+            <a href="/tags/tag/" class="">
+              tag
+            </a>
+          
+            <a href="/tags/json/" class="">
+              json
+            </a>
+          
+        </div>
+        
+      </div>
+      
+        <div class="copyright">
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+    <strong>作者:  </strong>YuAng</a>
+    </li>
+    <li class="post-copyright-link">
+    <strong>文章链接:  </strong>
+    <a href="/post/getjson/site/" target="_blank" title="通过json生成site-card">http://yuang01.github.io/post/getjson/site/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>版权声明:   </strong>
+      本网站所有文章除特别声明外,均采用 <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">CC BY-NC-ND 4.0</a>
+      许可协议。转载请注明出处!
+    </li>
+  </ul>
+<div>
+      
+    </article>
+    <!-- 上一篇文章和下一篇文章 -->
+    
+      <!-- 文章详情页的上一页和下一页 -->
+<div class="post-nav">
+
+
+
+
+
+  
+  <div class="post-nav-next post-nav-item">
+    <div class="post-nav-img" style="background-size: cover; 
+      background-position: center center;">
+      <img class="lazyload lazyload placeholder" src="https://pic2.zhimg.com/80/v2-e22aaad20d20634f506f57fff0fcbc17_1440w.webp" class="lazyload placeholder" data-srcset="https://pic2.zhimg.com/80/v2-e22aaad20d20634f506f57fff0fcbc17_1440w.webp" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" src="" alt="">
+    </div>
+    <a href="/post/getjson/photo/" class="post-nav-link">
+      <div class="title">
+        下一篇: <i class="fas fa-angle-right"></i>
+        <div class="title-text">通过json生成图片集</div>
+      </div>
+      <!-- <div class="content">
+        
+通过本地（source文件夹下）或者远程json文件，生成图片集
+
+json文件格式如下:
+1234567891011
+      </div> -->
+    </a>
+  </div>
+
+</div>
+
+    
+    
+
+    <!-- 打赏 -->
+    
+
+    <!-- 分享 -->
+    
+      <!-- https://github.com/overtrue/share.js -->
+<!-- 文章详情页的分享 -->
+<div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+
+<script src="/js/shareJs/social-share.min.js"></script>
+</script>
+
+<style>
+  .social-share {
+    margin: 20px 0;
+  }
+</style>
+
+
+    
+    
+    <!-- 评论 -->
+    <!-- 评论 -->
+
+  <div id="myComment">
+    
+      <div id="gitment-container"></div>
+
+    
+  </div>
+
+<!-- comment script in themes\hexo-theme-bamboo\layout\_partial\scripts\index.ejs -->
+
+
+  </div>
+
+  <!-- 目录 -->
+  <aside id='l_side'>
   
     
-    <article class="post reveal" style="flex-direction: row-reverse;   ">
-      <div class="post-main">
-        <div class="post-info">
-          <div class="post-time">
-            <i class="fas fa-clock" aria-hidden="true"></i>
-            <span class="post-time">2021-10-08</span>
-          </div>
-          <div class="post-title">
-            <a class="post-title-link" href="/post/mathjax/index/">新增mathjax</a>
-          </div>
-          <div class="post-meta">
-            <div class="post-tags">
-              <!-- 文章详情页的标签 -->
-
-    <i class="iconfont icontag"></i>
-    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mathjax/" rel="tag">mathjax</a></li></ul>
-
-            </div>
-            <div class="post-categories">
-              <!-- 文章详情页的分类 -->
-
-<div class="article-category">
-  <i class="iconfont iconbookmark1"></i>
-  <a class="article-category-link" href="/categories/mathjax/">mathjax</a>
-</div>
-
-
-            </div>
-          </div>
-          <div class="post-img-mobile">
-            <a href="/post/mathjax/index/" style="background-size: cover; 
-              background-position: center center;">
-              <img class="lazyload lazyload placeholder" src="https://pic1.zhimg.com/80/v2-78d724c077f0af2f991e18ea1d5516c3_1440w.jpg?source=1940ef5c" class="lazyload placeholder" data-srcset="https://pic1.zhimg.com/80/v2-78d724c077f0af2f991e18ea1d5516c3_1440w.jpg?source=1940ef5c" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
-            </a>
-          </div>
-          <div class="post-content">
-            在文章中设置mathjax: true即可
-
-需要v2.6.4+版本
-
-事例：$\sum_{i=0}^N\int_{a}^{b}g(t,i)\text{d}t$
-写法:1$\sum_&#123;i&#x3D;0&#125;^N\int_&#
-          </div>
-        </div>
-        <div class="post-more">
-          <a href="/post/mathjax/index/">
-            <i class="iconfont iconmore" pointer style="float: right;  " title="阅读更多"></i>
-          </a>
-        </div>
-      </div>
-      <div class="post-img">
-        <a href="/post/mathjax/index/" style="background-size: cover; 
-          background-position: center center;">
-          <img class="lazyload lazyload placeholder" src="https://pic1.zhimg.com/80/v2-78d724c077f0af2f991e18ea1d5516c3_1440w.jpg?source=1940ef5c" class="lazyload placeholder" data-srcset="https://pic1.zhimg.com/80/v2-78d724c077f0af2f991e18ea1d5516c3_1440w.jpg?source=1940ef5c" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+      <section class="widget side_blogger">
+  <div class='content'>
+    
+      
+        <a class='avatar flat-box rectangle' href='/about/'>
+          <img src='/img/avatar.jpg'/>
         </a>
+      
+    
+    
+      <div class='text'>
+        
+          <h2>青墨书晚风</h2>
+        
+        
+          <p>我是副标题</p>
+
+        
+        
+          <p><span id="jinrishici-sentence">竹</span></p>
+          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+        
       </div>
-    </article>
-  
+    
+    
+      <div class="social-wrapper">
+        
+          
+            <a href="/atom.xml"
+              class="social fas fa-rss flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+              
+            </a>
+          
+        
+          
+            <a href="mailto:me@xxx.com"
+              class="social fas fa-envelope flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+              
+            </a>
+          
+        
+          
+            <a href="https://github.com/yuang01/hexo-theme-bamboo"
+              class="social fab fa-github flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+              
+            </a>
+          
+        
+          
+            <a href="tencent://AddContact/?fromId=50&amp;fromSubId=1&amp;subcmd=all&amp;uin=你的qq号码"
+              class="social fab fa-qq flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+              
+            </a>
+          
+        
+      </div>
+    
+  </div>
 </section>
-</div>
-<div class="w-70">
+
+    
   
+  
+  
+    
+      <div class="widget moyu" id="moyu" style="order: 0;background: #e9e5d1">
+        <header>
+          
+            <a style="color: #d63130" target="_blank" rel="noopener" href='http://baidu.com'><i class="fa-solid fa-fish fa-fw" aria-hidden="true"></i><span class='name'>开始摸鱼</span></a>
+          
+        </header>
+        <div class="content">
+          <img class="no-lazy" src="https://api.vvhan.com/api/moyu" style="width:100%">
+        </div>
+    </div>
+    
+  
+
+  <div class="layout_sticky">    
+    
+      
+<section class="widget side_toc">
+  
+  <header>
+    
+      <i style="color: " class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name' style="color: ">本文目录</span>
+    
+  </header>
+
+
+  <div class='content'>
+    <div class="toc-main">
+      <div class="toc-content">
+        <!-- <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%AC%E5%9C%B0"><span class="toc-text">本地</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%86%99%E6%B3%95"><span class="toc-text">写法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#jsdelivr%E8%BF%9C%E7%A8%8B"><span class="toc-text">jsdelivr远程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%86%99%E6%B3%95-1"><span class="toc-text">写法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#github%E8%BF%9C%E7%A8%8B"><span class="toc-text">github远程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%86%99%E6%B3%95-2"><span class="toc-text">写法</span></a></li></ol></li></ol> -->
+        <div class="toc"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- 手机端目录按钮 -->
+<div id="toc-mobile-btn">
+  <i class="fas fa-list-ul" aria-hidden="true"></i>
 </div>
+
+      
+  <section class="widget side_recent_post">
+    
+  <header>
+    
+      <a style="color: " href='/tags/'><i class="fas fa-book fa-fw" aria-hidden="true"></i><span class='name'>最新文章</span></a>
+    
+  </header>
+
+
+    <div class='content'>
+      
+      <!-- hash算法 -->
+      
+      <div class="aside-list">
+        
+          <div class="aside-list-item">
+            
+            
+            
+
+            <div class="post-img-box">
+              <a href="/post/getjson/site/" class="post-img " style="background-size: cover; 
+                background-position: center center;">
+                <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="https://picx.zhimg.com/80/v2-b44931ea513e5f7b3b06f2703f79653c_1440w.webp" class="lazyload placeholder" data-srcset="https://picx.zhimg.com/80/v2-b44931ea513e5f7b3b06f2703f79653c_1440w.webp" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+              </a>
+            </div>
+            <div class="post-date-title">
+              <div>
+                
+                  <span class="post-date">03-19</span>
+                
+              </div>
+              <a class="post-title" href="/post/getjson/site/">通过json生成site-card</a>
+            </div>
+          </div>
+        
+          <div class="aside-list-item">
+            
+            
+            
+
+            <div class="post-img-box">
+              <a href="/post/getjson/photo/" class="post-img " style="background-size: cover; 
+                background-position: center center;">
+                <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="https://pic2.zhimg.com/80/v2-e22aaad20d20634f506f57fff0fcbc17_1440w.webp" class="lazyload placeholder" data-srcset="https://pic2.zhimg.com/80/v2-e22aaad20d20634f506f57fff0fcbc17_1440w.webp" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+              </a>
+            </div>
+            <div class="post-date-title">
+              <div>
+                
+                  <span class="post-date">03-18</span>
+                
+              </div>
+              <a class="post-title" href="/post/getjson/photo/">通过json生成图片集</a>
+            </div>
+          </div>
+        
+          <div class="aside-list-item">
+            
+            
+            
+
+            <div class="post-img-box">
+              <a href="/post/updatetheme/index/" class="post-img " style="background-size: cover; 
+                background-position: center center;">
+                <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="https://picx.zhimg.com/80/v2-cd85a0fc2ddc17c30b6b840be2988596_1440w.webp?source=1940ef5c" class="lazyload placeholder" data-srcset="https://picx.zhimg.com/80/v2-cd85a0fc2ddc17c30b6b840be2988596_1440w.webp?source=1940ef5c" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+              </a>
+            </div>
+            <div class="post-date-title">
+              <div>
+                
+                  <span class="post-date">03-05</span>
+                
+              </div>
+              <a class="post-title" href="/post/updatetheme/index/">如何更新主题</a>
+            </div>
+          </div>
+        
+          <div class="aside-list-item">
+            
+            
+            
+
+            <div class="post-img-box">
+              <a href="/post/netlify/" class="post-img " style="background-size: cover; 
+                background-position: center center;">
+                <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="https://pic3.zhimg.com/80/v2-5f7cb7e900b9dcf5354c3d4d2c5cc3c2_1440w.webp" class="lazyload placeholder" data-srcset="https://pic3.zhimg.com/80/v2-5f7cb7e900b9dcf5354c3d4d2c5cc3c2_1440w.webp" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+              </a>
+            </div>
+            <div class="post-date-title">
+              <div>
+                
+                  <span class="post-date">03-05</span>
+                
+              </div>
+              <a class="post-title" href="/post/netlify/">netlify部署博客</a>
+            </div>
+          </div>
+        
+          <div class="aside-list-item">
+            
+            
+            
+
+            <div class="post-img-box">
+              <a href="/post/getphoto/" class="post-img " style="background-size: cover; 
+                background-position: center center;">
+                <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="https://pic3.zhimg.com/80/v2-7cfc909ebe8d83683909846edd6b5232_1440w.webp" class="lazyload placeholder" data-srcset="https://pic3.zhimg.com/80/v2-7cfc909ebe8d83683909846edd6b5232_1440w.webp" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+              </a>
+            </div>
+            <div class="post-date-title">
+              <div>
+                
+                  <span class="post-date">02-25</span>
+                
+              </div>
+              <a class="post-title" href="/post/getphoto/">增加获取图片标签</a>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+  </section>
+
+    
+  </div>
+</aside>
+
+  <!-- 图片放大 Wrap images with fancybox support -->
+  <script src="/js/wrapImage.js"></script>
+</div>
+
+<!-- 文章详情页背景图 -->
+<div id="appBgSwiper" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -2;"
+	:style="{'background-color': bgColor ? bgColor : 'transparent'}">
+	<transition-group tag="ul" :name="names">
+		<li v-for='(image,index) in img' :key='index' v-show="index === mark" class="bg-swiper-box">
+			<img :src="image" class="bg-swiper-img no-lazy">
+		</li>
+	</transition-group>
+</div>
+<script>
+	var vm = new Vue({
+		el: '#appBgSwiper',
+		data: {
+			names: '' || 'fade' || 'fade', // translate-fade fade
+			mark: 0,
+			img: [],
+			bgColor: '',
+			time: null
+		},
+		methods: {   //添加方法
+			change(i, m) {
+				if (i > m) {
+					// this.names = 'fade';
+				} else if (i < m) {
+					// this.names = 'fade';
+				} else {
+					return;
+				}
+				this.mark = i;
+			},
+			prev() {
+				// this.names = 'fade';
+				this.mark--;
+				if (this.mark === -1) {
+					this.mark = 3;
+					return
+				}
+			},
+			next() {
+				// this.names = 'fade';
+				this.mark++;
+				if (this.mark === this.img.length) {
+					this.mark = 0;
+					return
+				}
+			},
+			autoPlay() {
+				// this.names = 'fade';
+				this.mark++;
+				if (this.mark === this.img.length) {
+					this.mark = 0;
+					return
+				}
+			},
+			play() {
+				let bgImgDelay = '' || '180000'
+				let delay = parseInt(bgImgDelay) || 180000;
+				this.time = setInterval(this.autoPlay, delay);
+			},
+			enter() {
+				clearInterval(this.time);
+			},
+			leave() {
+				this.play();
+			}
+		},
+		created() {
+			this.play()
+		},
+		beforeDestroy() {
+			clearInterval(this.time);
+		},
+		mounted() {
+			let prop = 'https://picx.zhimg.com/80/v2-3486dae2687982e8a141c23d922b9936_1440w.webp' || 'https://pica.zhimg.com/80/v2-292e6340491bd97f9d014d6be3371c04_1440w.jpg,https://pica.zhimg.com/80/v2-9659f2305acb80f25ced33aa980092c1_1440w.jpg,https://api.btstu.cn/sjbz/api.php';
+			let isImg = prop.includes('.bmp') || prop.includes('.jpg') || prop.includes('.png') || prop.includes('.tif') || prop.includes('.gif') || prop.includes('.pcx') || prop.includes('.tga') || prop.includes('.exif') || prop.includes('.fpx') || prop.includes('.psd') || prop.includes('.cdr') || prop.includes('.pcd') || prop.includes('.dxf') || prop.includes('.ufo') || prop.includes('.eps') || prop.includes('.ai') || prop.includes('.raw') || prop.includes('.WMF') || prop.includes('.webp') || prop.includes('.jpeg') || prop.includes('http://') || prop.includes('https://')
+			if (isImg) {
+				let img = prop.split(',');
+				let configRoot = '/'
+				let arrImg = [];
+				img.forEach(el => {
+					var Expression = /http(s)?:\/\/([\w-]+\.)+[\w-]+(\/[\w- .\/?%&=]*)?/;
+					var objExp = new RegExp(Expression);
+
+					if (objExp.test(el)) {
+						// http or https
+						arrImg.push(el);
+					} else {
+						// 非http or https开头
+						// 本地文件
+						let firstStr = el.charAt(0);
+						if (firstStr == '/') {
+							el = el.substr(1); // 删除第一个字符 '/',因为 configRoot最后一个字符为 /
+						}
+						el = configRoot + el;
+						arrImg.push(el);
+					}
+				})
+				this.img = arrImg;
+			} else {
+				this.bgColor = prop;
+			}
+		}
+	})
+</script>
+
+<style>
+	.bg-swiper-box {
+		position: absolute;
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+
+	.bg-swiper-img {
+		object-fit: cover;
+		width: 100%;
+		height: 100%;
+	}
+</style>
+
+
+
+
+  <script>
+  function loadMermaid() {
+    if (document.getElementsByClassName('mermaid').length) {
+      if (window.mermaidJsLoad) mermaid.init()
+      else {
+        loadScript('https://unpkg.com/mermaid/dist/mermaid.min.js').then(() => {
+          window.mermaidJsLoad = true
+          mermaid.initialize({
+            theme: 'default',
+          })
+          if ('true') {
+            mermaid.init();
+          }
+        })
+      }
+    }
+  };
+  document.addEventListener("DOMContentLoaded", function () {
+    loadMermaid();
+  })
+
+  document.addEventListener('pjax:complete', function () {
+    loadMermaid();
+  })
+  
+</script>
+
 
       </main>
     </div>

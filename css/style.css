@@ -3753,6 +3753,12 @@ pre:hover::-webkit-scrollbar-thumb:hover,
 #beaudar_container .beaudar {
   max-width: none !important;
 }
+#lv-container {
+  background: rgba(255,255,255,0.8);
+  padding: 1em;
+  border-radius: 8px;
+  margin: 0 !important;
+}
 #waline-box {
   padding: 1em;
   margin: 15px auto;
