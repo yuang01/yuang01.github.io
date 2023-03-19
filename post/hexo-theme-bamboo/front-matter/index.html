@@ -985,9 +985,9 @@
       <!-- <div class="content">
         这是一款HEXO主题。
 
-有问题去留言板留言
+有问题去提issues 或者 留言板留言，建议提issues
 
-国内访问：https://hexo-theme-bamboo.netli
+国内访问：https://he
       </div> -->
     </a>
   </div>
@@ -2029,20 +2029,20 @@
 
 <!-- 渲染远程json加载的图片标签(getPhotoOnline)里的内容 -->
 <script>
-	function loadPhotoOnlineJS() {
-		if ($(".post-detail").find(".getJsonPhoto-api").length == 0) {
-			return;
-		} 
-		loadScript('/js/getPhotoOnline/index.js');
-	};
-	$(function () {
-		loadPhotoOnlineJS();
-	});
-	document.addEventListener('pjax:complete', function () {
-		if (typeof getPhotoJson == "undefined") {
-			loadPhotoOnlineJS();
-		}
-	})
+  function loadPhotoOnlineJS() {
+    if ($(".post-detail").find(".getJsonPhoto-api").length == 0) {
+      return;
+    } 
+    loadScript('/js/getPhotoOnline/index.js');
+  };
+  $(function () {
+    loadPhotoOnlineJS();
+  });
+  document.addEventListener('pjax:complete', function () {
+    if (typeof getPhotoJson == "undefined") {
+      loadPhotoOnlineJS();
+    }
+  })
 </script>
 
 <!-- 输入框打字特效 -->

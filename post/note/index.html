@@ -800,7 +800,7 @@
   <div class="main-content">
     <article class="post post-detail">
       <div class="post-content">
-        <h2 class="bamboo-h " id="note演示效果2q204fvirlc">note演示效果</h2><br/>
+        <h2 class="bamboo-h " id="note演示效果dgzf7okm3d">note演示效果</h2><br/>
 <blockquote>
 <p>markdown默认写法，左边框颜色，随着主题色改变</p>
 </blockquote>
@@ -1047,7 +1047,7 @@
   <div class='content'>
     <div class="toc-main">
       <div class="toc-content">
-        <!-- <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#note%E6%BC%94%E7%A4%BA%E6%95%88%E6%9E%9C2q204fvirlc"><span class="toc-text">note演示效果</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8A%E8%BF%B0%E4%BA%8B%E4%BE%8B%E6%BA%90%E7%A0%81"><span class="toc-text">上述事例源码</span></a></li></ol></li></ol> -->
+        <!-- <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#note%E6%BC%94%E7%A4%BA%E6%95%88%E6%9E%9Cdgzf7okm3d"><span class="toc-text">note演示效果</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8A%E8%BF%B0%E4%BA%8B%E4%BE%8B%E6%BA%90%E7%A0%81"><span class="toc-text">上述事例源码</span></a></li></ol></li></ol> -->
         <div class="toc"></div>
       </div>
     </div>
@@ -1918,20 +1918,20 @@
 
 <!-- 渲染远程json加载的图片标签(getPhotoOnline)里的内容 -->
 <script>
-	function loadPhotoOnlineJS() {
-		if ($(".post-detail").find(".getJsonPhoto-api").length == 0) {
-			return;
-		} 
-		loadScript('/js/getPhotoOnline/index.js');
-	};
-	$(function () {
-		loadPhotoOnlineJS();
-	});
-	document.addEventListener('pjax:complete', function () {
-		if (typeof getPhotoJson == "undefined") {
-			loadPhotoOnlineJS();
-		}
-	})
+  function loadPhotoOnlineJS() {
+    if ($(".post-detail").find(".getJsonPhoto-api").length == 0) {
+      return;
+    } 
+    loadScript('/js/getPhotoOnline/index.js');
+  };
+  $(function () {
+    loadPhotoOnlineJS();
+  });
+  document.addEventListener('pjax:complete', function () {
+    if (typeof getPhotoJson == "undefined") {
+      loadPhotoOnlineJS();
+    }
+  })
 </script>
 
 <!-- 输入框打字特效 -->

@@ -800,7 +800,7 @@
   <div class="main-content">
     <article class="post post-detail">
       <div class="post-content">
-        <h2 class="bamboo-h " id="文字颜色演示效果1ye6ay96vqh">文字颜色演示效果</h2><br/>
+        <h2 class="bamboo-h " id="文字颜色演示效果1zrkxinskhq">文字颜色演示效果</h2><br/>
 <p>这是一个简单的文字<span class='p yellow'>我是一个文字高亮</span>，唱着我们心肠的曲折<br>这是一个简单的文字<span class='p '>我是一个文字高亮</span>，唱着我们心肠的曲折<br>这是一个简单的文字<span class='p primary'>我是一个文字高亮</span>，唱着我们心肠的曲折<br>这是一个简单的文字<span class='p info'>我是一个文字高亮</span>，唱着我们心肠的曲折<br>这是一个简单的文字<span class='p warning'>我是一个文字高亮</span>，唱着我们心肠的曲折<br>这是一个简单的文字<span class='p danger'>我是一个文字高亮</span>，唱着我们心肠的曲折<br>这是一个简单的文字<span class='p success'>我是一个文字高亮</span>，唱着我们心肠的曲折<br>这是一个简单的文字<span class='p red'>我是一个文字高亮</span>，唱着我们心肠的曲折<br>这是一个简单的文字<span class='p green'>我是一个文字高亮</span>，唱着我们心肠的曲折<br>这是一个简单的文字<span class='p blue'>我是一个文字高亮</span>，唱着我们心肠的曲折</p>
 <span class='p center green'>我是一个居中文字高亮</span>
 <p>这是一个简单的文字<span class='p large'>我是一个文字高亮</span>，唱着我们心肠的曲折<br>这是一个简单的文字<span class='p small danger'>我是一个文字高亮</span>，唱着我们心肠的曲折</p>
@@ -1034,7 +1034,7 @@ yuang01这是描述哦
   <div class='content'>
     <div class="toc-main">
       <div class="toc-content">
-        <!-- <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E5%AD%97%E9%A2%9C%E8%89%B2%E6%BC%94%E7%A4%BA%E6%95%88%E6%9E%9C1ye6ay96vqh"><span class="toc-text">文字颜色演示效果</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8A%E8%BF%B0%E4%BA%8B%E4%BE%8B%E6%BA%90%E7%A0%81"><span class="toc-text">上述事例源码</span></a></li></ol> -->
+        <!-- <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E5%AD%97%E9%A2%9C%E8%89%B2%E6%BC%94%E7%A4%BA%E6%95%88%E6%9E%9C1zrkxinskhq"><span class="toc-text">文字颜色演示效果</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8A%E8%BF%B0%E4%BA%8B%E4%BE%8B%E6%BA%90%E7%A0%81"><span class="toc-text">上述事例源码</span></a></li></ol> -->
         <div class="toc"></div>
       </div>
     </div>
@@ -1905,20 +1905,20 @@ yuang01这是描述哦
 
 <!-- 渲染远程json加载的图片标签(getPhotoOnline)里的内容 -->
 <script>
-	function loadPhotoOnlineJS() {
-		if ($(".post-detail").find(".getJsonPhoto-api").length == 0) {
-			return;
-		} 
-		loadScript('/js/getPhotoOnline/index.js');
-	};
-	$(function () {
-		loadPhotoOnlineJS();
-	});
-	document.addEventListener('pjax:complete', function () {
-		if (typeof getPhotoJson == "undefined") {
-			loadPhotoOnlineJS();
-		}
-	})
+  function loadPhotoOnlineJS() {
+    if ($(".post-detail").find(".getJsonPhoto-api").length == 0) {
+      return;
+    } 
+    loadScript('/js/getPhotoOnline/index.js');
+  };
+  $(function () {
+    loadPhotoOnlineJS();
+  });
+  document.addEventListener('pjax:complete', function () {
+    if (typeof getPhotoJson == "undefined") {
+      loadPhotoOnlineJS();
+    }
+  })
 </script>
 
 <!-- 输入框打字特效 -->

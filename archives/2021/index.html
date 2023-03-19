@@ -939,23 +939,6 @@
           <li class="post-item" data-aos="fade-left">
             
             <div class="post-img-box">
-              <a href="/post/issuessites/" class="post-img " style="background-size: cover; 
-                background-position: center center;">
-                <img class="lazyload lazyload placeholder" src="https://img11.360buyimg.com/ddimg/jfs/t1/173445/21/15206/1609537/60caebaaE18d21c8d/757aea972636a1b8.png" class="lazyload placeholder" data-srcset="https://img11.360buyimg.com/ddimg/jfs/t1/173445/21/15206/1609537/60caebaaE18d21c8d/757aea972636a1b8.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
-              </a>
-            </div>
-            <div class="post-date-title">
-              <div>
-                <span class="post-date">06-16</span>
-              </div>
-              <a class="post-title" href="/post/issuessites/">issues-sites标签</a>
-            </div>
-          </li>
-        
-          
-          <li class="post-item" data-aos="fade-left">
-            
-            <div class="post-img-box">
               <a href="/post/issuestimeline/" class="post-img " style="background-size: cover; 
                 background-position: center center;">
                 <img class="lazyload lazyload placeholder" src="https://w.wallhaven.cc/full/e7/wallhaven-e78jpo.jpg" class="lazyload placeholder" data-srcset="https://w.wallhaven.cc/full/e7/wallhaven-e78jpo.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
@@ -966,6 +949,23 @@
                 <span class="post-date">06-16</span>
               </div>
               <a class="post-title" href="/post/issuestimeline/">issues-timeline标签</a>
+            </div>
+          </li>
+        
+          
+          <li class="post-item" data-aos="fade-left">
+            
+            <div class="post-img-box">
+              <a href="/post/issuessites/" class="post-img " style="background-size: cover; 
+                background-position: center center;">
+                <img class="lazyload lazyload placeholder" src="https://img11.360buyimg.com/ddimg/jfs/t1/173445/21/15206/1609537/60caebaaE18d21c8d/757aea972636a1b8.png" class="lazyload placeholder" data-srcset="https://img11.360buyimg.com/ddimg/jfs/t1/173445/21/15206/1609537/60caebaaE18d21c8d/757aea972636a1b8.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+              </a>
+            </div>
+            <div class="post-date-title">
+              <div>
+                <span class="post-date">06-16</span>
+              </div>
+              <a class="post-title" href="/post/issuessites/">issues-sites标签</a>
             </div>
           </li>
         
@@ -1569,20 +1569,20 @@
 
 <!-- 渲染远程json加载的图片标签(getPhotoOnline)里的内容 -->
 <script>
-	function loadPhotoOnlineJS() {
-		if ($(".post-detail").find(".getJsonPhoto-api").length == 0) {
-			return;
-		} 
-		loadScript('/js/getPhotoOnline/index.js');
-	};
-	$(function () {
-		loadPhotoOnlineJS();
-	});
-	document.addEventListener('pjax:complete', function () {
-		if (typeof getPhotoJson == "undefined") {
-			loadPhotoOnlineJS();
-		}
-	})
+  function loadPhotoOnlineJS() {
+    if ($(".post-detail").find(".getJsonPhoto-api").length == 0) {
+      return;
+    } 
+    loadScript('/js/getPhotoOnline/index.js');
+  };
+  $(function () {
+    loadPhotoOnlineJS();
+  });
+  document.addEventListener('pjax:complete', function () {
+    if (typeof getPhotoJson == "undefined") {
+      loadPhotoOnlineJS();
+    }
+  })
 </script>
 
 <!-- 输入框打字特效 -->

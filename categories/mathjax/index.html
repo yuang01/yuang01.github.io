@@ -1407,20 +1407,20 @@
 
 <!-- 渲染远程json加载的图片标签(getPhotoOnline)里的内容 -->
 <script>
-	function loadPhotoOnlineJS() {
-		if ($(".post-detail").find(".getJsonPhoto-api").length == 0) {
-			return;
-		} 
-		loadScript('/js/getPhotoOnline/index.js');
-	};
-	$(function () {
-		loadPhotoOnlineJS();
-	});
-	document.addEventListener('pjax:complete', function () {
-		if (typeof getPhotoJson == "undefined") {
-			loadPhotoOnlineJS();
-		}
-	})
+  function loadPhotoOnlineJS() {
+    if ($(".post-detail").find(".getJsonPhoto-api").length == 0) {
+      return;
+    } 
+    loadScript('/js/getPhotoOnline/index.js');
+  };
+  $(function () {
+    loadPhotoOnlineJS();
+  });
+  document.addEventListener('pjax:complete', function () {
+    if (typeof getPhotoJson == "undefined") {
+      loadPhotoOnlineJS();
+    }
+  })
 </script>
 
 <!-- 输入框打字特效 -->
