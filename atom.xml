@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yuang01.github.io/"/>
-  <updated>2023-03-20T14:38:08.800Z</updated>
+  <updated>2023-03-20T14:41:11.724Z</updated>
   <id>http://yuang01.github.io/</id>
   
   <author>
@@ -17,17 +17,37 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
+    <title>通过json生成talk-card</title>
     <link href="http://yuang01.github.io/post/getjson/talk/"/>
     <id>http://yuang01.github.io/post/getjson/talk/</id>
-    <published>2023-03-20T14:32:30.365Z</published>
-    <updated>2023-03-20T14:38:08.800Z</updated>
+    <published>2023-03-20T14:37:00.000Z</published>
+    <updated>2023-03-20T14:41:11.724Z</updated>
     
     <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;支持&lt;code&gt;v3.2.5+&lt;/code&gt; 通过本地（source文件夹下）或者远程json文件，生成talk-card标签集&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;json文件格式如下:&lt;/p&gt;
+&lt;figure
+        
+      
     
     </summary>
     
     
+      <category term="标签" scheme="http://yuang01.github.io/categories/%E6%A0%87%E7%AD%BE/"/>
+    
+      <category term="json" scheme="http://yuang01.github.io/categories/%E6%A0%87%E7%AD%BE/json/"/>
+    
+    
+      <category term="tag" scheme="http://yuang01.github.io/tags/tag/"/>
+    
+      <category term="json" scheme="http://yuang01.github.io/tags/json/"/>
     
   </entry>
   
@@ -262,7 +282,7 @@
       
         
         
-          &lt;h2 class=&quot;bamboo-h &quot; id=&quot;按钮事例73ek9rbu8j&quot;&gt;按钮事例&lt;/h2&gt;&lt;br/&gt;
+          &lt;h2 class=&quot;bamboo-h &quot; id=&quot;按钮事例272o1f7rq55&quot;&gt;按钮事例&lt;/h2&gt;&lt;br/&gt;
 
 &lt;span class=&#39;btn center cool-1&#39;&gt;&lt;a class=&quot;button&quot; href=&#39;https://baidu.com&#39;
         
