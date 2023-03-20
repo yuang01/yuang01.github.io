@@ -809,9 +809,9 @@
                 </a>
                 
                 
-                <a href="/tags/%E8%87%AA%E5%AE%9A%E4%B9%89/" title="自定义: 1">
+                <a href="/tags/%E9%A6%96%E9%A1%B5%E6%B7%BB%E5%8A%A0%E5%BC%B9%E5%B9%95/" title="首页添加弹幕: 1">
                     <span class="tag-content"
-                        title="自定义" style="background-color: #D7BDE2;">自定义
+                        title="首页添加弹幕" style="background-color: #A3E4D7;">首页添加弹幕
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -820,6 +820,22 @@
                 <a href="/tags/%E8%87%AA%E5%AE%9A%E4%B9%89css/" title="自定义css: 2">
                     <span class="tag-content"
                         title="自定义css" style="background-color: #F8F9F9;">自定义css
+                        <span class="tag-length">2</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/%E8%87%AA%E5%AE%9A%E4%B9%89/" title="自定义: 1">
+                    <span class="tag-content"
+                        title="自定义" style="background-color: #D7BDE2;">自定义
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/json/" title="json: 2">
+                    <span class="tag-content"
+                        title="json" style="background-color: #D7BDE2;">json
                         <span class="tag-length">2</span>
                     </span>
                 </a>
@@ -841,30 +857,6 @@
                 </a>
                 
                 
-                <a href="/tags/%E9%A6%96%E9%A1%B5%E6%B7%BB%E5%8A%A0%E5%BC%B9%E5%B9%95/" title="首页添加弹幕: 1">
-                    <span class="tag-content"
-                        title="首页添加弹幕" style="background-color: #A3E4D7;">首页添加弹幕
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/json/" title="json: 2">
-                    <span class="tag-content"
-                        title="json" style="background-color: #D7BDE2;">json
-                        <span class="tag-length">2</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/sidebar/" title="sidebar: 1">
-                    <span class="tag-content"
-                        title="sidebar" style="background-color: #FEF9E7;">sidebar
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
                 <a href="/tags/markdown/" title="markdown: 1">
                     <span class="tag-content"
                         title="markdown" style="background-color: #D5F5E3;">markdown
@@ -876,6 +868,14 @@
                 <a href="/tags/mathjax/" title="mathjax: 1">
                     <span class="tag-content"
                         title="mathjax" style="background-color: #FEF9E7;">mathjax
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/sidebar/" title="sidebar: 1">
+                    <span class="tag-content"
+                        title="sidebar" style="background-color: #FEF9E7;">sidebar
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -1513,6 +1513,25 @@
   document.addEventListener('pjax:complete', function () {
     if (typeof getPhotoJson == "undefined") {
       loadPhotoOnlineJS();
+    }
+  })
+</script>
+
+<!-- 渲染远程json加载的talk标签(getTalkOnline)里的内容 -->
+<script>
+  function loadTalkOnlineJS() {
+    if ($(".post-detail").find(".getJsonTalk-api").length == 0) {
+      return;
+    } 
+    loadScript('https://cdnjs.cloudflare.com/ajax/libs/waterfall.js/1.0.2/waterfall.min.js'); // 瀑布流插件，https://raphamorim.io/waterfall.js/
+    loadScript('/js/getTalkOnline/index.js');
+  };
+  $(function () {
+    loadTalkOnlineJS();
+  });
+  document.addEventListener('pjax:complete', function () {
+    if (typeof getTalkJson == "undefined") {
+      loadTalkOnlineJS();
     }
   })
 </script>
