@@ -8001,6 +8001,7 @@ div.tabs .tab-content .tab-pane > .note:last-child {
   text-align: justify;
 }
 .talk-card .talk-content .img {
+  width: 100%;
   height: 100px;
   margin: auto;
   margin-top: 0.2rem;
@@ -8020,12 +8021,15 @@ div.tabs .tab-content .tab-pane > .note:last-child {
 }
 .talk-card .talk-content .fancybox {
   margin: 0 !important;
+  align-items: flex-start;
 }
 .talk-card .talk-content .fancybox a {
   height: 100%;
 }
-.talk-card .talk-content iframe {
-  margin-left: -10px;
+.talk-card .talk-content .music {
+  height: 100px;
+  display: inline-block;
+  width: 100%;
 }
 .talk-card .talk-bottom {
   display: flex;
