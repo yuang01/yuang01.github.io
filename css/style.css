@@ -8068,6 +8068,18 @@ div.tabs .tab-content .tab-pane > .note:last-child {
   margin-right: 3px;
   font-size: 16px;
 }
+.darkModel .talk-card {
+  background-color: #2d3032;
+}
+.darkModel .talk-card .music {
+  color: #273849;
+}
+.darkModel .talk-card .music .aplayer-lrc-current {
+  color: rgba(66,185,133,0.8) !important;
+}
+.darkModel .talk-card .talk-bottom .date-info .time {
+  color: #f0f6fc;
+}
 #nprogress {
   pointer-events: none;
 }
