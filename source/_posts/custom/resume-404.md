@@ -27,7 +27,7 @@ donate: false
 share: false
 copyright: false
 img: https://pic3.zhimg.com/80/378da4d6e6ac67c5bcd1d63d76f65d81_1440w.jpg?source=1940ef5c
-topImg: false
+imgTop: false
 bgImg: https://pic2.zhimg.com/v2-b19815c3780fe949adcee6693721087d_b.jpg
 ---
 {% p center large, 404 %}

@@ -7,7 +7,7 @@ categories: 前端
 tags: [Hexo, hexo-theme-bamboo]
 img: https://pica.zhimg.com/80/v2-dff5af5b4e0331e3b9c22ef1004d88c8_1440w.jpg
 excerpt: 'Bamboo主题-主题config配置项简介（二）'
-bgImg: https://pica.zhimg.com/80/v2-dff5af5b4e0331e3b9c22ef1004d88c8_1440w.jpg
+bgImg: https://picx.zhimg.com/80/v2-3486dae2687982e8a141c23d922b9936_1440w.webp
 ---
 {% titleB h2, 主题字体图标使用的是, #895546 %}
 {% link Font Awesome:: https://fontawesome.com/:: https://pic3.zhimg.com/80/v2-3662254b76e2cb640449555df2543e44_1440w.jpg %}
@@ -150,7 +150,7 @@ music:
 博主用的评论是`utterance`, https://utteranc.es/ github授权一下就行。很简单。
 
 主题集成了`utterance`, `valine`, `waline`， `livere`, `gitalk`, `gitment`, `beaudar`, `twikoo`, `changyan`这些评论
-需要注意的是`twikoo`, `changyan`我并没有测试哈，因为一个依赖腾讯云(收费)，一个依赖网站备案.....
+需要注意的是`changyan`我并没有测试哈，因为好像要依赖网站备案.....
 
 {% titleB h2, 主题颜色更改, #1e90ff %}
 ``` yaml

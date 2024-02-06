@@ -9,16 +9,17 @@ img: https://img10.360buyimg.com/ddimg/jfs/t1/180344/4/14703/246455/60f3ac57E43f
 swiperDesc: '该文档是版本2.3.0的文档，版本号可以从主题下的`package.json`查看'
 excerpt: '基本配置（一）'
 top: true
-bgImg: https://pic1.zhimg.com/80/v2-6c63fd2701714cff0ce3dc57f0b18ccc_1440w.jpg
+# bgImg: https://pic1.zhimg.com/80/v2-6c63fd2701714cff0ce3dc57f0b18ccc_1440w.jpg
+bgImg: https://pic2.zhimg.com/v2-fb4f1a018af1e161b8d851dc02513419_b.jpg
 bgImgTransition: 'scale'
 ---
 
 这是一款{% span large red, H %}{% span large green, E %}{% span large blue, X %}{% span large info, O %}主题。
 
-> 有问题去[留言板](/messageBoard)留言
+> 有问题去[提issues](https://github.com/yuang01/hexo-theme-bamboo/issues) 或者 [留言板](/messageBoard)留言，建议提issues
 
 
-国内访问：http://120.48.121.186/   （github比较慢的话，可以访问这个地址预览）
+国内访问：https://hexo-theme-bamboo.netlify.app   （github比较慢的话，可以访问这个地址预览）
 
 {% title h2, 下载 %}
 首先你需要有一个[Hexo](https://hexo.io/zh-cn/)，按照官网的方法，很容易的就能创建一个hexo博客。
@@ -30,7 +31,7 @@ bgImgTransition: 'scale'
 ``` bash
 git clone https://github.com/yuang01/hexo-theme-bamboo.git
 ```
-{% link hexo-theme-bamboo, https://github.com/yuang01/hexo-theme-bamboo, https://ewr1.vultrobjects.com/imgspice3/000/010/433/253_f8c_a65.jpg %}
+{% link hexo-theme-bamboo, https://github.com/yuang01/hexo-theme-bamboo, https://pic2.zhimg.com/v2-fb4f1a018af1e161b8d851dc02513419_b.jpg %}
 
 或者点击下载zip包，解压放入`themes`文件夹下
 {% btn center large, 开始下载, https://github.com/yuang01/hexo-theme-bamboo/archive/dev.zip, fa fa-download %}
@@ -187,27 +188,22 @@ layout: "tags"
 ```
 
 ### 新建友情链接 friends 页
-{% tabs tab-id %}
-
-<!-- tab 通过github issue动态获取 -->
-> 该功能需要主题版本为`2.1.5+`
-
 `friends` 页是用来展示**友情连接**信息的页面，如果在你的博客 `source` 目录下还没有 `friends/index.md` 文件，那么你就需要新建一个，命令如下：
 ```bash
 hexo new page "friends"
 ```
 编辑你刚刚新建的页面文件 `/source/friends/index.md`
 
-```yaml
----
-title: friends
-date: 2021-06-17 15:30:30
-onlyTitle: true # 只显示title
-toc: false # 不显示文章目录
-# type: "friends" # 这个不要了
-# layout: "friends" # 这个不要了
----
-```
+{% tabs tab-id %}
+<!-- tab 通过json文件生成 -->
+> 该功能需要主题版本为`3.2.2+`
+{% link 通过json生成site-card标签:: /post/getjson/site/:: https://picx.zhimg.com/80/v2-3486dae2687982e8a141c23d922b9936_1440w.webp %}
+
+<!-- endtab -->
+
+<!-- tab 通过github issue动态获取 -->
+> 该功能需要主题版本为`2.1.5+`
+
 这时候会生成`source/friends/index.md`文件，在md文件里自定义写友链就行了。然后你可以阅读下面这篇文章，使用`github`或者`gitee`来生成友链
 
 {% link issues-sites标签, /post/issuessites/, https://cdn.pixabay.com/photo/2018/12/05/13/41/panda-3857754__340.jpg %}
@@ -215,7 +211,7 @@ toc: false # 不显示文章目录
 <!-- endtab -->
 
 <!-- tab 或者固定的友链地址 -->
-如果你不会用github issue标签当做友链页面，你也可以创建一个.md文件，通过如下标签将友链地址写成固定的也是可以的
+如果你不会用json生成site-card标签或者使用github issue标签当做友链页面，你也可以创建一个.md文件，通过如下标签将友链地址写成固定的也是可以的
 
 {% link site-card:: /post/site-card/:: https://pic3.zhimg.com/80/v2-7cfc909ebe8d83683909846edd6b5232_1440w.webp %}
 <!-- endtab -->
@@ -235,7 +231,7 @@ hexo new page "about"
 然后新建图库详情页面，然后使用下面两种标签中的任意一种：
 {% link gallery标签:: /post/gallery/:: https://pic2.zhimg.com/80/v2-29e78b52051ce542adf6d786d61fbd19_1440w.webp %}
 {% link 通过文件夹获取图片标签:: /post/getphoto/:: https://pic3.zhimg.com/80/v2-e5c15010b8ba4608a1974403a02a2da0_1440w.webp %}
-推荐使用`通过文件夹获取图片标签`来创建图库详情页,因为很方便，一行代码搞定
+{% link 通过json获取图片集:: /post/getjson/photo/:: https://pic1.zhimg.com/80/v2-5312b20fe7fd3fbc62218e1027865551_1440w.webp %}
 
 ### 中文链接转拼音（可选的）
 如果你的文章名称是中文的，那么 Hexo 默认生成的永久链接也会有中文，这样不利于 `SEO`，且 `gitment` 评论对中文链接也不支持。我们可以用 [hexo-permalink-pinyin](https://github.com/viko16/hexo-permalink-pinyin) Hexo 插件使在生成文章时生成中文拼音的永久链接。

@@ -38,7 +38,7 @@ widget_library_sticky:
         </vue-seamless-scroll>
       </div>
 
-      <script src="/weibo/index.js"></script>
+      <script defer src="/weibo/index.js"></script>
       <link href="/weibo/index.css" rel="stylesheet">
     '
   - class_name: historyToday
@@ -57,48 +57,56 @@ widget_library_sticky:
           </swiper-slide>
         </swiper>
       </div>
-      <script src="/historyToday/index.js"></script>
+      <script defer src="/historyToday/index.js"></script>
     '
-  # - class_name: testLove
-  #   id_name: testLove
-  #   order: -1
-  #   name: 恋爱墙
-  #   icon: fas fa-heart
-  #   icon_color: '#d63130'
-  #   url: http://baidu.com
-  #   background: '#fff'
-  #   html: '
+  - class_name: testLove
+    id_name: testLove
+    order: -1
+    name: 恋爱墙
+    icon: fas fa-heart
+    icon_color: '#d63130'
+    url: http://baidu.com
+    background: '#fff'
+    html: '
     
-  #     <div style="text-align: center;">
-  #       <img src="https://pica.zhimg.com/80/v2-377cbc612b5e1d8decc3a70f142176a1_1440w.jpg?source=1940ef5c"
-  #         style="width: 50px;height: 50px;vertical-align: -20px;border-radius: 50%;margin-right: 5px;margin-bottom: 5px;-webkit-box-shadow: 1px 1px 1px rgba(0,0,0,.1), 1px 1px 1px rgba(0,0,0,0.1), 1px 1px 1px rgba(0,0,0,0.1);box-shadow: 1px 1px 1px rgba(0,0,0,.1), 1px 1px 1px rgba(0,0,0,0.1), 1px 1px 1px rgba(0,0,0,0.1);border: 2px solid #fff;" />
-  #       <svg viewbox="0 0 1024 1024" style="margin-left: 5px;margin-right: 5px;" version="1.0" width="15" height="15"
-  #         class="my-face">
-  #         <path
-  #           d="M863.597631 513.574282l-271.33965-140.213484L729.783667 81.926656c3.583731-7.87141 7.167462-15.742819 7.167462-25.214109C736.887134 25.226908 708.345275 0.012799 672.635953 0.012799a63.611229 63.611229 0 0 0-39.293053 12.607055c-1.791866 1.59988-3.519736 3.19976-5.311602 3.19976L147.87531 418.925381a55.547834 55.547834 0 0 0-19.646527 47.356448c1.791866 17.278704 14.27093 33.021523 32.125591 42.492813l271.33965 141.749369L292.504463 945.221908c-12.479064 25.214109-1.791866 53.563983 23.166262 69.306802 10.751194 6.335525 23.230258 9.47129 35.709322 9.47129 16.062795 0 32.125591-4.735645 44.604655-15.742819l480.091993-403.297753a55.547834 55.547834 0 0 0 19.646526-47.228458 61.243407 61.243407 0 0 0-32.12559-44.156688z"
-  #           fill="#515151" />
-  #       </svg>
-  #       <img src="https://pic1.zhimg.com/80/v2-eaf816fed4b7e81cd935afed2a986086_1440w.jpg?source=1940ef5c"
-  #         style="width: 50px;height: 50px;vertical-align: -20px;border-radius: 50%;margin-left: 5px;margin-bottom: 5px;-webkit-box-shadow: 1px 1px 1px rgba(0,0,0,.1), 1px 1px 1px rgba(0,0,0,0.1), 1px 1px 1px rgba(0,0,0,0.1);box-shadow: 1px 1px 1px rgba(0,0,0,.1), 1px 1px 1px rgba(0,0,0,0.1), 1px 1px 1px rgba(0,0,0,0.1);border: 2px solid #fff;" /><br />
-  #       <span id="htmer_time"></span>
-  #     </div>
+      <div style="text-align: center;">
+        <img src="https://pica.zhimg.com/80/v2-377cbc612b5e1d8decc3a70f142176a1_1440w.jpg?source=1940ef5c"
+          style="width: 50px;height: 50px;vertical-align: -20px;border-radius: 50%;margin-right: 5px;margin-bottom: 5px;-webkit-box-shadow: 1px 1px 1px rgba(0,0,0,.1), 1px 1px 1px rgba(0,0,0,0.1), 1px 1px 1px rgba(0,0,0,0.1);box-shadow: 1px 1px 1px rgba(0,0,0,.1), 1px 1px 1px rgba(0,0,0,0.1), 1px 1px 1px rgba(0,0,0,0.1);border: 2px solid #fff;" />
+        <svg viewbox="0 0 1024 1024" style="margin-left: 5px;margin-right: 5px;" version="1.0" width="15" height="15"
+          class="my-face">
+          <path
+            d="M863.597631 513.574282l-271.33965-140.213484L729.783667 81.926656c3.583731-7.87141 7.167462-15.742819 7.167462-25.214109C736.887134 25.226908 708.345275 0.012799 672.635953 0.012799a63.611229 63.611229 0 0 0-39.293053 12.607055c-1.791866 1.59988-3.519736 3.19976-5.311602 3.19976L147.87531 418.925381a55.547834 55.547834 0 0 0-19.646527 47.356448c1.791866 17.278704 14.27093 33.021523 32.125591 42.492813l271.33965 141.749369L292.504463 945.221908c-12.479064 25.214109-1.791866 53.563983 23.166262 69.306802 10.751194 6.335525 23.230258 9.47129 35.709322 9.47129 16.062795 0 32.125591-4.735645 44.604655-15.742819l480.091993-403.297753a55.547834 55.547834 0 0 0 19.646526-47.228458 61.243407 61.243407 0 0 0-32.12559-44.156688z"
+            fill="#515151" />
+        </svg>
+        <img src="https://pic1.zhimg.com/80/v2-eaf816fed4b7e81cd935afed2a986086_1440w.jpg?source=1940ef5c"
+          style="width: 50px;height: 50px;vertical-align: -20px;border-radius: 50%;margin-left: 5px;margin-bottom: 5px;-webkit-box-shadow: 1px 1px 1px rgba(0,0,0,.1), 1px 1px 1px rgba(0,0,0,0.1), 1px 1px 1px rgba(0,0,0,0.1);box-shadow: 1px 1px 1px rgba(0,0,0,.1), 1px 1px 1px rgba(0,0,0,0.1), 1px 1px 1px rgba(0,0,0,0.1);border: 2px solid #fff;" /><br />
+        <span id="htmer_time"></span>
+      </div>
 
-  #     <script data-pjax src="/love/index.js"></script>
-  #   '
+      <script defer data-pjax src="/love/index.js"></script>
+    '
 
 home_widget:
   - class_name: mymusic
     id_name: mymusic
     order: -1
-    name: 超好听的好吗😙
+    name: 龙年大吉😙
     icon: fa-solid fa-music
-    icon_color: '#00AEEC'
-    url: https://www.bilibili.com/video/BV1Da411n793?vd_source=79ce7c1b6f96c8b5a7ae552cc9be5225
+    icon_color: '#fb473b'
+    url: https://www.bilibili.com/video/BV12B421k7yh/?spm_id_from=333.337.search-card.all.click&vd_source=79ce7c1b6f96c8b5a7ae552cc9be5225
     background: '#fff'
     html: '
-    <iframe src="//player.bilibili.com/player.html?aid=215901212&bvid=BV1Da411n793&cid=772894060&page=1" scrolling="no" border="0" width="100%" height="476" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-
+    <iframe width="100%" height="476" src="//player.bilibili.com/player.html?aid=1050077878&bvid=BV12H4y1e7uo&cid=1426390554&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
     '
+  - class_name: zrsa
+    id_name: zrsa
+    order: -1
+    name: 早日上岸
+    icon: fa-solid fa-book
+    icon_color: red
+    url: http://baidu.com
+    background: '#fff'
+    html: '<img class="no-lazy" src="https://pic2.zhimg.com/v2-e6b7843e191fc3d11abc93290849364d_b.jpg" style="width:100%">'
   - class_name: welcome
     id_name: welcome
     order: -1
@@ -147,7 +155,7 @@ home_widget:
       </swiper>
     </div>
 
-    <script src="/mySwiper/index.js"></script>
+    <script defer src="/mySwiper/index.js"></script>
     <link href="/mySwiper/index.css" rel="stylesheet">
     '
   - class_name: mybilibili
@@ -182,6 +190,6 @@ home_widget:
         </vue-seamless-scroll>
       </div>
 
-      <script src="/bli/index.js"></script>
+      <script defer src="/bli/index.js"></script>
       <link href="/bli/index.css" rel="stylesheet">
     '

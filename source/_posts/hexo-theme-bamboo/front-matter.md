@@ -8,7 +8,7 @@ tags: [Hexo, hexo-theme-bamboo]
 img: https://pic3.zhimg.com/80/v2-5c159c149e01a6edfe215c8707b60a9d_1440w.jpg?source=1940ef5c
 swiperDesc: '该文档是版本2.3.0的文档，版本号可以从主题下的`package.json`查看'
 excerpt: 'Front-matter介绍（四）'
-bgImg: https://pic1.zhimg.com/v2-e3251d5de437e14a665d863ae31ed8d4_b.jpg
+bgImg: https://pic1.zhimg.com/80/v2-d27db7c61bbe3ecb8d493d31bf835b28_1440w.webp
 ---
 
 这个指的是你在你的文章页面里面写的参数，针对的是这一篇文章，例如

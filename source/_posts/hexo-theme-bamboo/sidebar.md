@@ -8,7 +8,7 @@ tags: [Hexo, sidebar]
 img: https://pic1.zhimg.com/80/v2-70e3aa84f510f98da30f955b5cc22fc5_1440w.jpg?source=1940ef5c
 swiperDesc: '该侧边栏支持版本2.6.0+'
 excerpt: '侧边栏'
-bgImg: https://pica.zhimg.com/80/v2-3fd8f44c8043c27b945b1d1677c684ac_1440w.jpg
+bgImg: https://pic4.zhimg.com/v2-e415c8eae724684f8de0e15a8eb34fa7_b.jpg
 ---
 ## 默认的侧边栏
 在主题的`config.yml`文件中配置
@@ -144,14 +144,14 @@ sidebar:
 # widget_library 里面的不会出现在sticky区域，也就是不会粘贴在左侧 
 widget_library:
   - class_name: test_a
-  id_name: test_a
-  order: 0
-  name: 这个widget不会粘贴
-  icon: fab fa-weibo
-  icon_color: '#d63130'
-  url: http://baidu.com
-  background: '#fff'
-  html: 'haha'
+    id_name: test_a
+    order: 0
+    name: 这个widget不会粘贴
+    icon: fab fa-weibo
+    icon_color: '#d63130'
+    url: http://baidu.com
+    background: '#fff'
+    html: 'haha'
 
 
 # widget_library_sticky 里面的会出现在sticky区域，会粘贴在左侧
@@ -522,7 +522,7 @@ home_widget:
     background: '#fff'
     html: '
       <div id="github_container"></div>
-      <script data-pjax src="/githubcalendar/index.js"></script>
+      <script defer data-pjax src="/githubcalendar/index.js"></script>
     '
 ```
 然后就会在首页出现github日历图
@@ -723,7 +723,7 @@ home_widget:
       </swiper>
     </div>
 
-    <script src="/mySwiper/index.js"></script>
+    <script defer src="/mySwiper/index.js"></script>
     <link href="/mySwiper/index.css" rel="stylesheet">
     '
 ```
@@ -861,7 +861,7 @@ home_widget:
         </vue-seamless-scroll>
       </div>
 
-      <script src="/bli/index.js"></script>
+      <script defer src="/bli/index.js"></script>
       <link href="/bli/index.css" rel="stylesheet">
     '
 ```
@@ -985,7 +985,7 @@ widget_library_sticky:
         </vue-seamless-scroll>
       </div>
 
-      <script src="/weibo/index.js"></script>
+      <script defer src="/weibo/index.js"></script>
       <link href="/weibo/index.css" rel="stylesheet">
     '
 ```
@@ -1070,7 +1070,7 @@ widget_library_sticky:
           </swiper-slide>
         </swiper>
       </div>
-      <script src="/historyToday/index.js"></script>
+      <script defer src="/historyToday/index.js"></script>
     '
 ```
 这样历史上的今天就完成了
@@ -1166,7 +1166,7 @@ widget_library_sticky:
         <span id="htmer_time"></span>
       </div>
 
-      <script data-pjax src="/love/index.js"></script>
+      <script defer data-pjax src="/love/index.js"></script>
     '
 ```
 这样，恋爱墙就完成了，但是，除了修改时间，你还可以把两张图片地址也修改成你自己的图片地址
@@ -1176,6 +1176,7 @@ widget_library_sticky:
 
 
 最后我将我的`source/_data/widget.yml`写法贴下来,如下所示
+> 注意：所有script标签带上defer属性 `<script defer src="xxx.js"></script>`
 {% folding source/_data/widget.yml %}
 ```yaml
 widget_library:
@@ -1209,7 +1210,7 @@ widget_library_sticky:
         </vue-seamless-scroll>
       </div>
 
-      <script src="/weibo/index.js"></script>
+      <script defer src="/weibo/index.js"></script>
       <link href="/weibo/index.css" rel="stylesheet">
     '
   - class_name: historyToday
@@ -1228,7 +1229,7 @@ widget_library_sticky:
           </swiper-slide>
         </swiper>
       </div>
-      <script src="/historyToday/index.js"></script>
+      <script defer src="/historyToday/index.js"></script>
     '
   - class_name: testLove
     id_name: testLove
@@ -1254,7 +1255,7 @@ widget_library_sticky:
         <span id="htmer_time"></span>
       </div>
 
-      <script data-pjax src="/love/index.js"></script>
+      <script defer data-pjax src="/love/index.js"></script>
     '
 
 home_widget:
@@ -1277,7 +1278,7 @@ home_widget:
     background: '#fff'
     html: '
       <div id="github_container"></div>
-      <script data-pjax src="/githubcalendar/index.js"></script>
+      <script defer data-pjax src="/githubcalendar/index.js"></script>
     '
   - class_name: test2
     id_name: test2
@@ -1345,7 +1346,7 @@ home_widget:
       </swiper>
     </div>
 
-    <script src="/mySwiper/index.js"></script>
+    <script defer src="/mySwiper/index.js"></script>
     <link href="/mySwiper/index.css" rel="stylesheet">
     '
   - class_name: mybilibili
@@ -1406,7 +1407,7 @@ home_widget:
         </vue-seamless-scroll>
       </div>
 
-      <script src="/bli/index.js"></script>
+      <script defer src="/bli/index.js"></script>
       <link href="/bli/index.css" rel="stylesheet">
     '
 

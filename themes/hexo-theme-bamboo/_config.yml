@@ -2,10 +2,11 @@
 
 # 菜单
 menu:
-  Home:
+  🧧2024祝您:
     url: /
-    icon: fa fa-home
-  📄文档: # 这是二级菜单的写法
+    # icon: fa fa-home
+  # 📄文档: # 这是二级菜单的写法
+  💃团团:
   #  icon: fa fa-link
    children:
     - name: 基本配置
@@ -21,31 +22,38 @@ menu:
       url: /post/hexo-theme-bamboo/tags/
     - name: 侧边栏
       url: /post/hexo-theme-bamboo/sidebar/
-  Archives:
+  # Archives:
+  🧨圆圆:
     url: /archives
-    icon: fa fa-archive
-  Tags:
+    # icon: fa fa-archive
+  # Tags:
+  🎈开开:
     url: /tags
-    icon: fa fa-tags
-  Categories:
+    # icon: fa fa-tags
+  # Categories:
+  🪅心心:
     url: /categories
-    icon: fa fa-bookmark
-  About:
+    # icon: fa fa-bookmark
+  # About:
+  🎀福星:
     url: /about
-    icon: fa fa-user
-  Friends:
+    # icon: fa fa-user
+  # Friends:
+  🧣高照:
     url: /huoban
-  留言板:
+  # 留言板:
+  🧰事事:
     url: /messageBoard
-    icon: fas fa-comment-dots
-  🐱更多: # 这是二级菜单的写法
+    # icon: fas fa-comment-dots
+  # 🐱更多: # 这是二级菜单的写法
+  🍬如意:
   #  icon: fa fa-link
    children:
     - name: 📷图库
       url: /gallery
       # icon: fa fa-music
-    - name: 👪友情连接-旧版
-      url: /friends
+    - name: 👪简单说一说
+      url: /talk
       # icon: fa fa-film
     - name: 🧒🏻关于我
       url: /about
@@ -59,23 +67,25 @@ Github:
   url: https://github.com/yuang01/hexo-theme-bamboo
 
 # 网站logo
-logo: /medias/logo.png # 为空则不显示
+# logo: https://pic4.zhimg.com/v2-c761137d50b61ca6402b2c18b2f365b7_b.webp # 为空则不显示
+logo: https://pic4.zhimg.com/v2-3d0020c0ba942b5f73f08a5c09372803_b.jpg
 
 # 网站 favicon
 favicon: /favicon.ico # or .png .jpg .svg .gif .jpeg .ico
 
 # sidebar侧边栏
 sidebar:
-  on: true
   position: left # left right
   widget_library:
     side_blogger:
       on: true
-      avatar: /img/avatar.jpg
+      # avatar: /img/avatar.jpg
+      avatar: https://picx.zhimg.com/80/v2-e9861509cdbb1ffb8d479ebbe6bfe327_1440w.webp
       shape: rectangle # circle, rectangle
       url: /about/
-      title: 青墨书晚风
-      subtitle: 我是副标题
+      # title: 青墨书晚风
+      title: 龙年大吉
+      subtitle: 恭喜发财，红包拿来
       jinrishici: true # Poetry Today. You can set a string, and it will be displayed when loading fails.
       fontFammily: Titillium Web,'PingFang SC','Hiragino Sans GB','Microsoft JhengHei','Microsoft YaHei',sans-serif
       background: '#fff'
@@ -98,7 +108,7 @@ sidebar:
         icon: fas fa-list
         icon_color: # 标题字体颜色
         title: 本文目录
-      showNumber: true
+      before: 💖 # number为序号，可以是自定义表情字符
       heading: h2, h3, h4 # h2,3,4标题会在目录显示，可以加上 ,h5则h5标题也会显示在目录里
       collapseDepth: 20 # 折叠深度, 0则会折叠，0-6即可, 20相当于不折叠
     # ---------------------------------------
@@ -216,13 +226,16 @@ swiper:
   bubble: false # 轮播图是否显示气泡,也可以打开底下的花瓣或者雪花特效 sakura（花瓣）: true snow(雪花): true
   wave: false # 轮播图底下的波浪特效
   # 当没有文章设置swiper: true时候，轮播图会显示以下default默认内容，可自行切换对应内容
-  defaultImg: 'https://pic3.zhimg.com/80/v2-7e6795a0b7b4fbe87b0a388b8a052f78_1440w.jpg' # 图片，没有则随机选取
-  defaultVideo: 'https://gcore.jsdelivr.net/gh/yuang01/CDN@1.0.0/video/douyin.mp4' # video，min-width:992px show
+  # defaultImg: 'https://pica.zhimg.com/80/v2-573ac3e25de03fad9c32add5a05e5cfc_1440w.webp' # 图片，没有则随机选取
+  defaultImg: 'https://pica.zhimg.com/80/v2-5251a23d9d6fd04dca785b42d5e83668_1440w.webp'
+  defaultVideo: '' # video，min-width:992px show
+  # https://vdn1.vzuu.com/HD/36c4fb0c-bce7-11ed-ac9b-5637dd15ddfa-v8_f1_t1_rhafoJl8.mp4
   defaultVideoLoadingImg: 'https://img14.360buyimg.com/ddimg/jfs/t1/175057/18/19582/882056/60ee7ac8Ef0045710/202d2ad878684a3b.gif' # video loading img -- use .gif img, 视频预加载动画，使用gif图片作为loading，为空则视频没有预加载动画
-  defaultTile: '竹子' # 标题
-  defaultDesc: ['千磨万击还坚劲', '任尔东西南北风'] #描 述，例如 ['煮酒洗净尘嚣，论知交', '万般付之一笑，共偕老']
+  defaultTile: '新春快乐！' # 标题
+  # defaultDesc: ['千磨万击还坚劲', '任尔东西南北风'] #描 述，例如 ['煮酒洗净尘嚣，论知交', '万般付之一笑，共偕老']
+  defaultDesc: ['2024', '新年快乐', '恭喜发财', '万事如意', '财源滚进', '身体健康']
   defaultLeftBtnText: '阅读文档' # 左边按钮文字, 空字符串则不显示
-  defaultLeftBtnLink: 'https://yuang01.github.io/post/hexo-theme-bamboo-new/' # 左边按钮链接 
+  defaultLeftBtnLink: 'https://hexo-theme-bamboo.netlify.app/post/hexo-theme-bamboo-new/' # 左边按钮链接 
   defaultRightBtnText: '下载主题' # 右边按钮的文字，空字符串则不显示
   defaultRightBtnLink: 'https://gitee.com/yuang01/hexo-theme-bamboo/repository/archive/dev.zip' # 右边的按钮的链接
   defaultDescTyped: true # defaultDesc文字是否开启打字特效  is typed
@@ -246,9 +259,11 @@ swiper:
 goTop: 
   on: true
 
-# 图片点击放大功能
+# 图片点击放大功能, http://fancyapps.com/fancybox/
 fancybox: 
   on: true
+  css: https://unpkg.com/@fancyapps/ui@5.0/dist/fancybox/fancybox.css
+  js:  https://unpkg.com/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js
 
 # 统计网站访问数量
 busuanzi:
@@ -315,7 +330,7 @@ snow:
 
 # 首页花瓣飘落效果--春天
 sakura:
-  on: false
+  on: true
   onlyPc: false # 设为true，只有pc端显示花瓣特效
 
 # 首页文章图片是否一左一右交错显示
@@ -325,7 +340,7 @@ homePostImgsPosition:
 
 # 灯笼
 lantern:
-  on: false
+  on: true
   left: '春' # 左边灯笼的文字， 空字符串则没有文字
   right: '节' # 右边灯笼的文字
 
@@ -358,12 +373,13 @@ baiduPush: true
 music:
   on: true
   autoHide: true    # hide automaticaly
-  server: tencent   #require music platform: netease, tencent, kugou, xiami, baidu
+  server: netease   #require music platform: netease, tencent, kugou, xiami, baidu
   type: song    #require song, playlist, album, search, artist
-  id: 0020dKPG3mp0GT     #require song id / playlist id / album id / search keyword
+  id: 1417684817     #require song id / playlist id / album id / search keyword
   fixed: true       # 开启吸底模式，建议开启
   autoplay: false   # 是否自动播放, 有些浏览器会禁用自动播放，目前edge可以自动播放
-  theme: '#42b983'
+  # theme: '#42b983'
+  theme: '#fb473b'
   loop: 'all'       # 音频循环播放, 可选值: 'all', 'one', 'none'
   order: 'random'   # 音频循环顺序, 可选值: 'list', 'random'
   preload: 'auto'   # 预加载，可选值: 'none', 'metadata', 'auto'
@@ -449,14 +465,14 @@ valine:
 # https://twikoo.js.org
 twikoo:
   on: false
-  envId: twikoo-1gs9l0fb17e7897a # 环境 ID，搭建教程：https://twikoo.js.org/quick-start.html
+  envId: https://hexo-theme-bamboo-twikoo.netlify.app/.netlify/functions/twikoo # 环境 ID，搭建教程：https://twikoo.js.org/quick-start.html
   # region: ap-guangzhou # 环境地域，默认为 ap-shanghai
   # path: 'window.location.pathname' # 自定义文章路径
 
 # 来必力评论
 livere:
   on: false
-  livere_uid:
+  livere_uid: MTAyMC8zNTA1My8xMTU4OA
 
 # gitment 评论
 gitment:
@@ -483,7 +499,7 @@ gitalk:
 
 # utterance 评论  官网：https://utteranc.es/, 建议用这个评论
 utterance:
-  on: true
+  on: false
   # 仓库名字，格式：你的用户 ID/ 仓库名称，如：yuang01/yuang01.github.io
   repo: yuang01/yuang01.github.io
   # 主题
@@ -497,11 +513,11 @@ utterance:
 # beaudar
 # https://beaudar.lipk.org/
 beaudar:
-  on: false
+  on: true
   repo: yuang01/yuang01.github.io # 填写仓库名字，格式：你的用户 ID/ 仓库名称，如：yuang01/yuang01.github.io
   issue-term: pathname
   issue-number:
-  branch: main
+  branch: master
   position: top
   order: desc
   theme:
@@ -587,15 +603,19 @@ color_scheme:
   # 通用颜色
   common:
     # 主题色
-    theme: 'rgba(66, 185, 133, 0.8)'
+    # theme: 'rgba(66, 185, 133, 0.8)'
+    theme: rgba(251, 71, 59, 0.8)
     # 主题色块内部的文字颜色
     inner: '#fff'
     # 链接色 a标签
-    link: '#42b983'
+    # link: '#42b983'
+    link: '#fb473b'
     # 首页文章列表的背景颜色, url("http://xxx.png") or red or #000 or rgba() ..
-    postListBackground: 'rgba(255,255,255,1)'
+    # postListBackground: 'rgba(255,255,255,1)'
+    postListBackground: 'url("https://img2.baidu.com/it/u=2327486799,3222487334&fm=253&fmt=auto&app=138&f=JPEG?w=281&h=499")'
     # 首页页面的底部背景颜色，空字符串透明('transparent')，可以是白色('#fff')等颜色, 也可以是图片，例如  'url("https://img11.360buyimg.com/ddimg/jfs/t1/169624/29/16/4603017/5fec2c79Eecbd536a/308b28b82a013cd2.png")'
-    bgFloor: 'url("https://pic2.zhimg.com/80/v2-a90e3e9f544549e244355039b96bd606_1440w.jpg")' # 如果是图片地址，url里面请用双引号
+    # bgFloor: 'url("https://pic2.zhimg.com/80/v2-a90e3e9f544549e244355039b96bd606_1440w.jpg")' # 如果是图片地址，url里面请用双引号
+    bgFloor: 'url("https://pic4.zhimg.com/80/v2-2cc0008eafeeb8ced2a5077c74320403_1440w.webp")'
     headerMenuBackgroundColor: '' 
     # headerMenuBackgroundColor:头部导航背景颜色, 为空则使用theme主题色, 
     # headerMenuBackgroundColor写法: rgba(268, 264, 269, 0.8) or #42b983 or red or 也可以是渐变颜色 linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%)  or 也可以是url("图片地址")
@@ -624,7 +644,8 @@ color_scheme:
     ## 单独的文章里配置，则这bgImg，bgImgDelay，bgImgTransition三个属性优先使用单独的文章里配置的
   footer:
     # 为空则使用 theme主题色，写法: rgba(268, 264, 269, 0.8) or #42b983 or red or 也可以是渐变颜色 linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%) or 也可以是url("图片地址")
-    background: 'rgba(66, 185, 133, 0.8)' 
+    # background: 'rgba(66, 185, 133, 0.8)' 
+    background: 'rgba(251, 71, 59, 0.8)'
     # 页脚里面的a标签鼠标移入时候的颜色 red or #000 or other color
     aHover: 'orangered'
     # fish --> 表示页脚游动的鱼儿特效, 鱼儿颜色值使用的是footer.background, 只支持rgba(66, 185, 133, 0.8) 或者 #42b983 或者 red 这三种颜色格式的写法，是格式。
@@ -681,7 +702,8 @@ mermaid:
 pjax:
   on: true
   animation: nprogress # false, nprogress, circle
-  animationColor: '#fa0' # animation为 nprogress时候的动画颜色, red or #000 ...
+  # animationColor: '#fa0' # animation为 nprogress时候的动画颜色, red or #000 ...
+  animationColor: '#fb473b' # animation为 nprogress时候的动画颜色, red or #000 ...
   cacheBust: false # url 地址追加时间戳，用以避免浏览器缓存
   timeout: 8000    # The timeout in milliseconds for the XHR requests. Set to 0 to disable the timeout.
   banUrl:          # 被屏蔽的 url 地址将不启用 pjax 跳转，可以在控制台下使用 window.location.pathname 获取
@@ -738,7 +760,6 @@ import:
     # - <link href="/custom/menu.css" rel="stylesheet">
     # - <link href="/bubbly-bg/bubbly.css" rel="stylesheet">
   script:
-    - <script defer src="https://player.lzti.com/api/player/demo" id="myhk" key="demo" skin="player" lr="l" m="1"></script>
     # - <script src="https://eqcn.ajz.miesnfu.com/wp-content/plugins/wp-3d-pony/live2dw/lib/L2Dwidget.min.js"></script>
     # - <script src="/live2d/index.js"></script>
     # - <script src="/meihua/index.js"></script>

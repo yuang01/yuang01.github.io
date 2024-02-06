@@ -8,7 +8,7 @@ tags: [Hexo, hexo-theme-bamboo]
 img: https://img14.360buyimg.com/ddimg/jfs/t1/184128/30/13883/1673623/60f3ad05E7099ac6e/4d5ff4c2e5d67132.jpg
 swiperDesc: '该文档是版本2.3.0的文档，版本号可以从主题下的`package.json`查看'
 excerpt: '内置标签（五）'
-bgImg: https://pic4.zhimg.com/v2-ac20cbd32d97d1803a0d703e66db2d33_b.jpg
+bgImg: https://picx.zhimg.com/80/v2-17001eba7a69aea9477299f8140e12ab_1440w.webp
 bgImgTransition: 'scale'
 ---
 {% title h2, 内置标签 %}
@@ -76,6 +76,12 @@ bgImgTransition: 'scale'
 {% link 轮播图swiper, /post/swiper/, https://pic3.zhimg.com/80/v2-e5c15010b8ba4608a1974403a02a2da0_1440w.webp %}
 
 {% link 通过文件夹获取图片标签getPhoto, /post/getphoto/, https://pic3.zhimg.com/80/v2-e5c15010b8ba4608a1974403a02a2da0_1440w.webp %}
+
+{% link 通过json获取图片集:: /post/getjson/photo/:: https://pic1.zhimg.com/80/v2-5312b20fe7fd3fbc62218e1027865551_1440w.webp %}
+
+{% link 通过json生成site-card标签:: /post/getjson/site/:: https://picx.zhimg.com/80/v2-3486dae2687982e8a141c23d922b9936_1440w.webp %}
+
+{% link talk-card标签, /post/getjson/talk/, https://picx.zhimg.com/80/v2-3486dae2687982e8a141c23d922b9936_1440w.webp %}
 
 {% endlinkgroup %}
 
