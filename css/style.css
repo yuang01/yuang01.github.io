@@ -3731,21 +3731,83 @@ pre:hover::-webkit-scrollbar-thumb:hover,
   box-sizing: border-box;
   background: url("/source/medias/comment_bg.png") 100% 100% no-repeat;
 }
+#vcomment .vcards .vcard .vh .vhead .vtag.vvisitor {
+  background-color: rgba(251,71,59,0.8);
+}
+#vcomment .vcards .vcard .vh .vmeta .vat {
+  color: rgba(251,71,59,0.8);
+}
+#vcomment .vbtn:active,
+#vcomment .vbtn:hover {
+  color: rgba(251,71,59,0.8);
+  border-color: rgba(251,71,59,0.8);
+}
+#vcomment .vcards .vcard .vhead .vnick:hover {
+  color: rgba(251,71,59,0.8);
+}
+#vcomment .vicon.actived {
+  fill: rgba(251,71,59,0.8);
+}
+#vcomment .vwrap .vheader .vinput:focus {
+  border-bottom-color: rgba(251,71,59,0.8);
+}
 #gitalk-container {
-  background: rgba(255,255,255,0.8);
+  background: #fff;
   padding: 1em;
+  border-radius: 8px;
+}
+#gitalk-container .gt-container .gt-link {
+  border-bottom: 1px dotted rgba(251,71,59,0.8);
+}
+#gitalk-container .gt-container a {
+  color: rgba(251,71,59,0.8);
+}
+#gitalk-container .gt-svg svg {
+  fill: rgba(251,71,59,0.8);
+}
+#gitalk-container .gt-container .gt-btn.gt-btn-login,
+#gitalk-container .gt-container .gt-btn.gt-btn-public {
+  border: 1px solid rgba(251,71,59,0.8);
+  background-color: rgba(251,71,59,0.8);
+}
+#gitalk-container .gt-container .gt-btn.gt-btn-preview {
+  border: 1px solid rgba(251,71,59,0.8);
+  color: rgba(251,71,59,0.8);
+}
+#gitalk-container .gt-container .gt-meta {
+  border-bottom: 1px solid rgba(251,71,59,0.8);
+}
+#gitalk-container .gt-comments-null,
+#gitalk-container .gt-counts,
+#gitalk-container .gt-user-inner {
+  font-family: Titillium Web, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft JhengHei', 'Microsoft YaHei', sans-serif;
+}
+#gitalk-container .gt-header-avatar {
+  margin-right: 15px;
 }
 #gitment-ctn {
-  background: rgba(255,255,255,0.8);
+  background: #fff;
   padding: 1em;
+  border-radius: 8px;
+}
+#gitment-ctn .gitment-header-like-btn svg {
+  fill: rgba(251,71,59,0.8);
+}
+#gitment-ctn a {
+  color: rgba(251,71,59,0.8);
+}
+#gitment-ctn .gitment-comments-init-btn:disabled,
+#gitment-ctn .gitment-editor-submit:disabled,
+#gitment-ctn .gitment-editor-submit {
+  background-color: rgba(251,71,59,0.8);
 }
 #gitment-container {
-  background: rgba(255,255,255,0.8);
+  background: #fff;
   padding: 1em;
   border-radius: 8px;
 }
 #beaudar_container {
-  background: rgba(255,255,255,0.8);
+  background: #fff;
   padding: 1em;
   border-radius: 8px;
 }
@@ -3753,8 +3815,40 @@ pre:hover::-webkit-scrollbar-thumb:hover,
 #beaudar_container .beaudar {
   max-width: none !important;
 }
+#tcomment_container {
+  background: #fff;
+  padding: 1em;
+  border-radius: 8px;
+}
+#tcomment_container .twikoo .el-button--primary.is-disabled,
+#tcomment_container .twikoo .el-button--primary.is-disabled:active,
+#tcomment_container .twikoo .el-button--primary.is-disabled:focus,
+#tcomment_container .twikoo .el-button--primary.is-disabled:hover {
+  background: rgba(251,71,59,0.5);
+}
+#tcomment_container .el-button--primary {
+  background: rgba(251,71,59,0.8);
+  border-color: rgba(251,71,59,0.8);
+}
+#tcomment_container .twikoo .el-button:not(.el-button--primary):not(.el-button--text):active,
+#tcomment_container .twikoo .el-button:not(.el-button--primary):not(.el-button--text):focus,
+#tcomment_container .twikoo .el-button:not(.el-button--primary):not(.el-button--text):hover {
+  color: rgba(251,71,59,0.8);
+  background-color: rgba(254,218,216,0.8);
+  border-color: rgba(251,71,59,0.5);
+}
+#tcomment_container .tk-icon.__comments,
+#tcomment_container .tk-action-icon,
+#tcomment_container .tk-nick-link:hover,
+#tcomment_container .tk-action-count {
+  color: rgba(251,71,59,0.8);
+}
+#tcomment_container .twikoo .el-textarea__inner:focus,
+#tcomment_container .twikoo .el-input__inner:focus {
+  border-color: rgba(251,71,59,0.8);
+}
 #lv-container {
-  background: rgba(255,255,255,0.8);
+  background: #fff;
   padding: 1em;
   border-radius: 8px;
   margin: 0 !important;
@@ -3762,7 +3856,8 @@ pre:hover::-webkit-scrollbar-thumb:hover,
 #waline-box {
   padding: 1em;
   margin: 15px auto;
-  background: rgba(255,255,255,0.8);
+  background: #fff;
+  border-radius: 8px;
   --waline-theme-color: rgba(251,71,59,0.8) !important;
 }
 #waline-box .v[data-class=v] .vbtn.primary {
@@ -3784,10 +3879,74 @@ pre:hover::-webkit-scrollbar-thumb:hover,
 .darkModel .v[data-class=v] .vinput:focus {
   background-color: #2d3032;
 }
+.darkModel #vcomment pre {
+  background: #1e1b1b;
+}
+.darkModel #vcomment pre code {
+  background: transparent;
+}
+.darkModel #vcomment .vcards .vcard:hover {
+  box-shadow: 0 0 8px 3px rgba(251,71,59,0.8);
+}
+.darkModel #vcomment .vcards .vcard .vh {
+  border-bottom: none;
+}
+.darkModel #gitalk-container {
+  background-color: #2d3032;
+  color: #c9d1d9;
+}
+.darkModel #gitalk-container .gt-header-textarea {
+  background-color: #2d3032;
+  color: #c9d1d9;
+  border: 1px solid rgba(251,71,59,0.8);
+}
+.darkModel #gitalk-container .gt-container .gt-comment-admin .gt-comment-content {
+  background: #2d3032;
+  color: #c9d1d9;
+}
+.darkModel #gitalk-container .gt-container .gt-comment-body {
+  color: #c9d1d9 !important;
+}
+.darkModel #gitalk-container pre {
+  background: #1e1b1b;
+}
+.darkModel #gitalk-container .gt-header-preview {
+  background: #2d3032;
+  color: #c9d1d9;
+}
+.darkModel #gitalk-container .gt-container .gt-comment-content:hover {
+  box-shadow: 0 0.625em 3.75em 0 rgba(251,71,59,0.8);
+}
+.darkModel #tcomment_container {
+  background-color: #2d3032;
+  color: #c9d1d9;
+}
+.darkModel #tcomment_container .tk-expand {
+  border: 1px solid #c9d1d9;
+}
+.darkModel #tcomment_container .tk-expand:hover {
+  color: rgba(251,71,59,0.8);
+  border-color: rgba(251,71,59,0.8);
+}
+.darkModel #gitment-ctn {
+  background-color: #2d3032;
+  color: #c9d1d9;
+}
+.darkModel #gitment-ctn .gitment-container {
+  color: #c9d1d9;
+}
+.darkModel #gitment-ctn .gitment-editor-body textarea {
+  background-color: #2d3032;
+  color: #c9d1d9;
+  border: 1px solid rgba(251,71,59,0.8);
+}
 .darkModel #waline-comment .v[data-class=v] .vheader label,
 .darkModel #waline-comment .v[data-class=v] .vaction,
 .darkModel #waline-comment .vcount {
   color: #fff;
+}
+.darkModel #waline-comment .vcard .vmeta span {
+  background: transparent;
 }
 .search {
   color: #fff;
@@ -4367,14 +4526,6 @@ pre:hover::-webkit-scrollbar-thumb:hover,
 }
 .toc-link.is-active-link::before {
   background-color: rgba(251,71,59,0.8);
-}
-#vcomment .vcards .vcard .vh .vhead .vtag.vvisitor {
-  background-color: rgba(251,71,59,0.8) !important;
-}
-.v[data-class=v] .vbtn:active,
-.v[data-class=v] .vbtn:hover {
-  color: rgba(251,71,59,0.8) !important;
-  border-color: rgba(251,71,59,0.8) !important;
 }
 .dark {
   color: #fff;
