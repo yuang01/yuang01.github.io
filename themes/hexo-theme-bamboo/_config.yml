@@ -448,6 +448,9 @@ typed:
 bubble:
   on: true
 
+### ---------- 评论开始----------- start ###
+# 评论只能有一个为on: true; 评论优先级为 utterance > beaudar > twikoo > valine > gitalk > giscus > waline > livere > gitment > changyan
+
 # valine 评论 https://valine.js.org
 valine:
   on: false
@@ -459,13 +462,15 @@ valine:
   friends: ['df780289f6f0e3ceccec0d07c70067d9'] # 小伙伴的 邮箱md5， 是个数组
   requiredFields: ['nick', 'mail'] # 设置必填项 ['nick', 'mail'] nick为昵称必填， mail为邮箱必填，建议设置必填，填写qq邮箱，会使用qq头像作为头像
   backgroundImg: 'https://img.zcool.cn/community/01a253594c71cfa8012193a329a77f.gif' # 右下角背景图片
-  backgroundColor: 'rgba(255,255,255,0.9)' # 背景颜色
+  backgroundColor: 'rgba(255,255,255,1)' # 背景颜色
 
-# twikoo评论
+# twikoo评论, 推荐
 # https://twikoo.js.org
 twikoo:
-  on: false
-  envId: https://hexo-theme-bamboo-twikoo.netlify.app/.netlify/functions/twikoo # 环境 ID，搭建教程：https://twikoo.js.org/quick-start.html
+  on: true
+  envId: 'https://hexo-theme-bamboo-twikoo.netlify.app/.netlify/functions/twikoo' # 环境 ID，搭建教程：https://twikoo.js.org/backend.html
+  lightGallery: true # 评论图片点击放大
+  js: https://cdn.bootcdn.net/ajax/libs/twikoo/1.6.31/twikoo.all.min.js
   # region: ap-guangzhou # 环境地域，默认为 ap-shanghai
   # path: 'window.location.pathname' # 自定义文章路径
 
@@ -474,7 +479,7 @@ livere:
   on: false
   livere_uid: MTAyMC8zNTA1My8xMTU4OA
 
-# gitment 评论
+# gitment 评论, 非常不推荐这个
 gitment:
   on: false
   gitment_owner:  yuang01     #你的 GitHub ID
@@ -482,11 +487,28 @@ gitment:
   clientId: c91c6bd31e68da7dc2f0 #client ID
   clientSecret:  e56b840abffda29c51eef2788f7eef681684ccd7     #client secret
 
-# 畅言评论
+# 畅言评论, 不推荐这个
 changyan:
   on: false
   appId: 
   conf: 
+
+# giscus 评论 https://giscus.app/zh-CN
+giscus:
+  on: false
+  # 以下配置按照 yml 格式增删填写即可
+  # repo: xxx/xxx
+  # repo-id: xxx
+  # category: xxx
+  # category-id: xxx
+  # mapping: "pathname"
+  # reactions-enabled: "1"
+  # emit-metadata: "0"
+  # lang: "zh-CN"
+  # 以上配置按照 yml 格式增删填写即可
+  theme:
+    light: "light"
+    dark: "dark"
 
 # gitalk评论
 gitalk:
@@ -497,7 +519,7 @@ gitalk:
   clientID: 418a1890782d27e5bc5b    #`Github Application clientID`
   clientSecret: d0dc4f3b77ae21d4cdd95030cd1c9198e2c7bf9e #`Github Application clientSecret`
 
-# utterance 评论  官网：https://utteranc.es/, 建议用这个评论
+# utterance 评论  官网：https://utteranc.es/, 建议用这个评论，默认开启的这个评论
 utterance:
   on: false
   # 仓库名字，格式：你的用户 ID/ 仓库名称，如：yuang01/yuang01.github.io
@@ -513,11 +535,11 @@ utterance:
 # beaudar
 # https://beaudar.lipk.org/
 beaudar:
-  on: true
+  on: false
   repo: yuang01/yuang01.github.io # 填写仓库名字，格式：你的用户 ID/ 仓库名称，如：yuang01/yuang01.github.io
   issue-term: pathname
   issue-number:
-  branch: master
+  branch: master   # 根据仓库选择，如果主分支是master，则这里写master
   position: top
   order: desc
   theme:
@@ -535,12 +557,14 @@ waline:
   pageSize: 10
   copyright: true
 
-# 弹幕 只对valine评论有效
+# 弹幕 只对valine评论有效，不建议打开这个
 danmu:
   on: true
   loop: false # 设为true，则弹幕完了之后，继续查询评论接口，将该篇文章的评论再显示在弹幕里
   delay: 5000 # 每条弹幕之间出现的间隔时间
   speed: 40 # 弹幕运行的速度, 越小越快
+
+### ---------- 评论结束----------- end ###
 
 # 归档页面图片、描述、视频，全屏 or 'http://xxx'
 archive:

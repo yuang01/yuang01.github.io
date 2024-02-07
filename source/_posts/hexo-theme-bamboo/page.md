@@ -149,8 +149,9 @@ music:
 {% titleB h2, 评论, #7bed9f %}
 博主用的评论是`utterance`, https://utteranc.es/ github授权一下就行。很简单。
 
-主题集成了`utterance`, `valine`, `waline`， `livere`, `gitalk`, `gitment`, `beaudar`, `twikoo`, `changyan`这些评论
+主题集成了`utterance`, `valine`, `waline`， `livere`, `gitalk`, `giscus` ,`gitment`, `beaudar`, `twikoo`, `changyan`这些评论
 需要注意的是`changyan`我并没有测试哈，因为好像要依赖网站备案.....
+`gitment`的官方都不维护了，不推荐用gitment了，所以`changyan`和`gitment`我都不推荐使用
 
 {% titleB h2, 主题颜色更改, #1e90ff %}
 ``` yaml
