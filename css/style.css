@@ -4978,7 +4978,7 @@ pre:hover::-webkit-scrollbar-thumb:hover,
 .darkModel .widget.side_blogger .content .social-wrapper a:hover {
   background-color: rgba(201,209,217,0.2) !important;
 }
-.preloader_2 {
+.preloader_6 {
   position: fixed;
   z-index: 1000;
   width: 100vw;
@@ -4989,123 +4989,100 @@ pre:hover::-webkit-scrollbar-thumb:hover,
   align-items: center;
   overflow: hidden;
 }
-.preloader_2#loader.loading {
+.preloader_6#loader.loaded {
   display: none;
 }
-.preloader_2 .loader {
-  position: relative;
-  width: 120px;
-  height: 90px;
-  margin: 0 auto;
-}
-.preloader_2 .loader:before {
-  content: '';
-  position: absolute;
-  bottom: 30px;
-  left: 50px;
-  height: 30px;
-  width: 30px;
+.preloader_6 .loader {
+  width: 150px;
+  height: 150px;
+  border-left: 5px solid rgba(251,71,59,0.8);
   border-radius: 50%;
-  background: rgba(251,71,59,0.8);
-  animation: loading-bounce 0.5s ease-in-out infinite alternate;
+  animation: right5231 0.9s linear infinite;
 }
-.preloader_2 .loader:after {
+.preloader_6 .loader::before,
+.preloader_6 .loader::after {
   content: '';
+  width: 120px;
+  height: 120px;
+  display: block;
   position: absolute;
-  right: 0;
-  top: 0;
-  height: 7px;
-  width: 45px;
-  border-radius: 4px;
-  box-shadow: 0 5px 0 #f2f2f2, -35px 50px 0 #f2f2f2, -70px 95px 0 #f2f2f2;
-  animation: loading-step 1s ease-in-out infinite;
+  top: calc(50% - 60px);
+  left: calc(50% - 60px);
+  border-right: 5px solid #ffbe0b;
+  border-radius: 50%;
+  animation: left036 0.9s linear infinite;
 }
-@-moz-keyframes loading-bounce {
-  0% {
-    transform: scale(1, 0.7);
-  }
-  40% {
-    transform: scale(0.8, 1.2);
-  }
-  60% {
-    transform: scale(1, 1);
-  }
-  100% {
-    bottom: 140px;
-  }
+.preloader_6 .loader::after {
+  width: 90px;
+  height: 90px;
+  top: calc(50% - 45px);
+  left: calc(50% - 45px);
+  border: 0;
+  border-top: 5px solid #ff086e;
+  animation: none;
 }
-@-webkit-keyframes loading-bounce {
-  0% {
-    transform: scale(1, 0.7);
+@-moz-keyframes right5231 {
+  from {
+    transform: rotate(0deg);
   }
-  40% {
-    transform: scale(0.8, 1.2);
-  }
-  60% {
-    transform: scale(1, 1);
-  }
-  100% {
-    bottom: 140px;
+  to {
+    transform: rotate(360deg);
   }
 }
-@-o-keyframes loading-bounce {
-  0% {
-    transform: scale(1, 0.7);
+@-webkit-keyframes right5231 {
+  from {
+    transform: rotate(0deg);
   }
-  40% {
-    transform: scale(0.8, 1.2);
-  }
-  60% {
-    transform: scale(1, 1);
-  }
-  100% {
-    bottom: 140px;
+  to {
+    transform: rotate(360deg);
   }
 }
-@keyframes loading-bounce {
-  0% {
-    transform: scale(1, 0.7);
+@-o-keyframes right5231 {
+  from {
+    transform: rotate(0deg);
   }
-  40% {
-    transform: scale(0.8, 1.2);
-  }
-  60% {
-    transform: scale(1, 1);
-  }
-  100% {
-    bottom: 140px;
+  to {
+    transform: rotate(360deg);
   }
 }
-@-moz-keyframes loading-step {
-  0% {
-    box-shadow: 0 10px 0 rgba(0,0,0,0), 0 10px 0 #f2f2f2, -35px 50px 0 #f2f2f2, -70px 90px 0 #f2f2f2;
+@keyframes right5231 {
+  from {
+    transform: rotate(0deg);
   }
-  100% {
-    box-shadow: 0 10px 0 #f2f2f2, -35px 50px 0 #f2f2f2, -70px 90px 0 #f2f2f2, -70px 90px 0 rgba(0,0,0,0);
-  }
-}
-@-webkit-keyframes loading-step {
-  0% {
-    box-shadow: 0 10px 0 rgba(0,0,0,0), 0 10px 0 #f2f2f2, -35px 50px 0 #f2f2f2, -70px 90px 0 #f2f2f2;
-  }
-  100% {
-    box-shadow: 0 10px 0 #f2f2f2, -35px 50px 0 #f2f2f2, -70px 90px 0 #f2f2f2, -70px 90px 0 rgba(0,0,0,0);
+  to {
+    transform: rotate(360deg);
   }
 }
-@-o-keyframes loading-step {
-  0% {
-    box-shadow: 0 10px 0 rgba(0,0,0,0), 0 10px 0 #f2f2f2, -35px 50px 0 #f2f2f2, -70px 90px 0 #f2f2f2;
+@-moz-keyframes left036 {
+  from {
+    transform: rotate(720deg);
   }
-  100% {
-    box-shadow: 0 10px 0 #f2f2f2, -35px 50px 0 #f2f2f2, -70px 90px 0 #f2f2f2, -70px 90px 0 rgba(0,0,0,0);
+  to {
+    transform: rotate(0deg);
   }
 }
-@keyframes loading-step {
-  0% {
-    box-shadow: 0 10px 0 rgba(0,0,0,0), 0 10px 0 #f2f2f2, -35px 50px 0 #f2f2f2, -70px 90px 0 #f2f2f2;
+@-webkit-keyframes left036 {
+  from {
+    transform: rotate(720deg);
   }
-  100% {
-    box-shadow: 0 10px 0 #f2f2f2, -35px 50px 0 #f2f2f2, -70px 90px 0 #f2f2f2, -70px 90px 0 rgba(0,0,0,0);
+  to {
+    transform: rotate(0deg);
+  }
+}
+@-o-keyframes left036 {
+  from {
+    transform: rotate(720deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+@keyframes left036 {
+  from {
+    transform: rotate(720deg);
+  }
+  to {
+    transform: rotate(0deg);
   }
 }
 .note {
