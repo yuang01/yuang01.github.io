@@ -871,10 +871,7 @@
 
   <div id="myComment">
     
-      <div id="tcomment_container">
-  <div id="tcomment"></div>
-</div>
-
+      <div id="beaudar_container"></div>
     
   </div>
 
@@ -2001,52 +1998,82 @@
 <!-- 评论所需js -->
 
   
-        <script src="https://cdn.bootcdn.net/ajax/libs/twikoo/1.6.31/twikoo.all.min.js"></script>
+        <script type="text/javascript">
+  var beaudarCommon = {};
 
-<script type="text/javascript">
-  comment_el = '#tcomment';
-  isLightGalleryTwikoo = false
-  load_twikoo = function () {
+  function check_beaudar() {
+    let isDark = JSON.parse(localStorage.getItem('dark')) || JSON.parse('false');
+    if (isDark) {
+      beaudarCommon.Theme = 'github-dark';
+    } else {
+      beaudarCommon.Theme = 'github-light';
+    }
+
+    return document.getElementById("beaudar_container");
+  }
+  comment_el = '#beaudar_container';
+  load_beaudar = function () {
     if ($(comment_el).length) {
-      twikoo.init({
-        envId: 'https://hexo-theme-bamboo-twikoo.netlify.app/.netlify/functions/twikoo',
-        el: '#tcomment',
-        region: '',
-        path: '',
-        onCommentLoaded: function () {
-          if (!isLightGalleryTwikoo) { // 评论图片放大
-            return;
-          }
-          var commentContents = document.getElementsByClassName('tk-content');
-          for (var i = 0; i < commentContents.length; i++) {
-            var commentItem = commentContents[i];
-            var imgEls = commentItem.getElementsByTagName('img');
-            if (imgEls.length > 0) {
-              for (var j = 0; j < imgEls.length; j++) {
-                var imgEl = imgEls[j];
-                var aEl = document.createElement('a');
-                aEl.setAttribute('class', 'tk-lg-link');
-                aEl.setAttribute('href', imgEl.getAttribute('src'));
-                aEl.setAttribute('data-src', imgEl.getAttribute('src'));
-                aEl.appendChild(imgEl.cloneNode(false));
-                imgEl.parentNode.insertBefore(aEl, imgEl.nextSibling);
-                imgEl.remove();
-              }
-              lightGallery(commentItem, {
-                selector: '.tk-lg-link',
-                share: false
-              });
-            }
-          }
-        }
-      })
+      // 匿名函数，防止污染全局变量
+      const HEAD = check_beaudar();
+
+      const script = document.createElement('script');
+      let issuenumber = "";
+      if (issuenumber) {
+        script.setAttribute('issue-number', issuenumber);
+      } else {
+        script.setAttribute('issue-term', "pathname");
+      }
+      script.setAttribute('src', 'https://beaudar.lipk.org/client.js');
+      script.setAttribute('repo', 'yuang01/yuang01.github.io');
+      script.setAttribute('input-position', 'top');
+      script.setAttribute('branch', 'main');
+      script.setAttribute('comment-order', 'desc');
+      script.setAttribute('label', '✨💬✨');
+      script.setAttribute('theme', beaudarCommon.Theme);
+      script.setAttribute('crossorigin', "anonymous");
+      // content 是要插入评论的地方
+      document.getElementById('beaudar_container').appendChild(script);
     }
   }
-  $(document).ready(load_twikoo);
+
+  function dark_beaudar() {
+    const HEAD = check_beaudar();
+    if (!HEAD) return;
+    const message = {
+      type: 'set-theme',
+      theme: beaudarCommon.Theme
+    };
+    const beaudarIframe = document.querySelector('iframe');
+    beaudarIframe.contentWindow.postMessage(message, 'https://beaudar.lipk.org');
+  }
+
+  function check_beaudar_style() {
+    // Beaudar 会往 HEAD 的首节点追加样式元素，而这个追加没有添加判断
+    // 所以 Pjax 下会多次添加样式文件，略微麻烦。
+    const checkStyle = document.querySelector('head').firstElementChild;
+    if (checkStyle.innerText.includes('beaudar')) checkStyle.remove();
+  }
+
+  $(document).ready(load_beaudar);
   document.addEventListener('pjax:complete', function () {
-    load_twikoo();
+    check_beaudar_style();
+    load_beaudar();
   });
+
+  $('.dark').click(function () {
+    setTimeout(() => {
+      dark_beaudar();
+    });
+  })
+
 </script>
+
+<style>
+  .beaudars {
+    max-width: inherit !important;
+  }
+</style>
       
 
 
