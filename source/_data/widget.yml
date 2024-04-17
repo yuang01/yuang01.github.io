@@ -141,10 +141,10 @@ home_widget:
 
         <swiper-slide v-for="(item, index) in listData" :key="index">
           <a :href="item.url" class="toPath" target="_blank">
-            <img class="no-lazy" :src="item.pic" style="width:100%;height:100%;object-fit: cover;">
+            <img class="no-lazy" :src="item.image" style="width:100%;height:100%;object-fit: cover;">
             <div class="mySwiper-text">
               <h2 class="ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">{{item.title}}</h2>
-              <p class="ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">{{item.desc}}</p>
+              <p class="ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">{{item.description}}</p>
             </div>
           </a>
         </swiper-slide>
@@ -161,7 +161,7 @@ home_widget:
   - class_name: mybilibili
     id_name: mybilibili
     order: -1
-    name: 豆瓣电影排行
+    name: 今日头条热搜
     icon: fa-solid fa-film
     icon_color: '#41ac52'
     url: https://movie.douban.com/chart
@@ -177,11 +177,11 @@ home_widget:
             <!-- 在这里改, 手动修改a连接的href值和img的src值, 如果你会进阶，你可以使用v-for, 或者数据使用动态数据-->
             
             <li class="li-item" v-for="(item, index) in listData" :key="index">
-              <a :href="item.info.url" target="_blank">
-                <img class="no-lazy" :src="item.info.imgurl">
+              <a :href="item.url" target="_blank">
+                <img class="no-lazy" :src="item.image">
                 <div class="bli-content">
-                  <p class="title">评分:{{item.info.pingfen}}</p>
-                  <p class="desc">{{item.info.pingjia}}</p>
+                  <p class="title">热度:{{item.hot}}</p>
+                  <p class="desc">{{item.title}}</p>
                 </div>
               </a>
             </li>

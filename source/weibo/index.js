@@ -14,7 +14,7 @@ new Vue({
   methods: {
     // 请求开源api, 获取历史上的今天数据
     getWeiboList() {
-      fetch("https://api.vvhan.com/api/wbhot", {
+      fetch("https://api.gumengya.com/Api/WeiBoHot", {
         method: "GET", // *GET, POST, PUT, DELETE, etc.
       })
         .then((res) => {

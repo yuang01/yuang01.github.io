@@ -19,7 +19,7 @@ new Vue({
   methods: {
     // 请求开源api, 获取历史上的今天数据
     getList() {
-      fetch("https://api.vvhan.com/api/douban", {
+      fetch("https://api.gumengya.com/Api/TouTiaoHot", {
         method: "GET", // *GET, POST, PUT, DELETE, etc.
       })
       .then((res) => {

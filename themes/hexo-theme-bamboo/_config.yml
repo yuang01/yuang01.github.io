@@ -467,7 +467,7 @@ valine:
 # twikoo评论, 推荐
 # https://twikoo.js.org
 twikoo:
-  on: true
+  on: false
   envId: 'https://hexo-theme-bamboo-twikoo.netlify.app/.netlify/functions/twikoo' # 环境 ID，搭建教程：https://twikoo.js.org/backend.html
   lightGallery: false # 评论图片点击放大，注意启用了这个放大功能，就不要在twikoo的管理面板里面启用 '插件->使用简易图片点击放大效果', 否则会有两个放大效果
   js: https://cdn.bootcdn.net/ajax/libs/twikoo/1.6.31/twikoo.all.min.js
@@ -523,7 +523,7 @@ gitalk:
 utterance:
   on: false
   # 仓库名字，格式：你的用户 ID/ 仓库名称，如：yuang01/yuang01.github.io
-  repo: 
+  repo: yuang01/yuang01.github.io
   # 主题
   theme:
     light: github-light
@@ -535,8 +535,8 @@ utterance:
 # beaudar
 # https://beaudar.lipk.org/
 beaudar:
-  on: false
-  repo:  # 填写仓库名字，格式：你的用户 ID/ 仓库名称，如：yuang01/yuang01.github.io
+  on: true
+  repo: yuang01/yuang01.github.io # 填写仓库名字，格式：你的用户 ID/ 仓库名称，如：yuang01/yuang01.github.io
   issue-term: pathname
   issue-number:
   branch: main   # 根据仓库选择，如果主分支是master，则这里写master
