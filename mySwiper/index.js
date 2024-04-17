@@ -54,7 +54,7 @@ new Vue({
     },
      // 请求开源api, 获取历史上的今天数据
      getList() {
-      fetch("https://api.vvhan.com/api/hotlist?type=zhihuHot", {
+      fetch("https://api.gumengya.com/Api/ZhiHuHot?format=json", {
         method: "GET", // *GET, POST, PUT, DELETE, etc.
       })
       .then((res) => {
@@ -62,7 +62,7 @@ new Vue({
       })
       .then((data) => {
         let arr = data.data.filter(el => {
-          return el.pic;
+          return el.image;
         })
         this.listData = arr;
       })

@@ -44,10 +44,12 @@
 }
 #myBli .warp ul.ul-item .bli-content .title {
   font-size: 16px;
+  cursor: pointer;
 }
 
 #myBli .warp ul.ul-item .bli-content .desc {
   font-size: 12px;
+  cursor: pointer;
 }
 #myBli .warp ul.ul-item img {
   filter: brightness(0.6);

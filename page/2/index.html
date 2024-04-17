@@ -1969,7 +1969,7 @@ MetingJsh</div>
       </header>
       <div class="content">
          <div id="mySwiper" @mouseenter="stopAutoPlay()" @mouseleave="startAutoPlay()"> <swiper class="myswiper" ref="myswiper" style="height:350px;" :options="swiperOption">
-<swiper-slide v-for="(item, index) in listData" :key="index"> <a :href="item.url" class="toPath" target="_blank"> <img class="no-lazy" :src="item.pic" style="width:100%;height:100%;object-fit: cover;"> <div class="mySwiper-text"> <h2 class="ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">{{item.title}}</h2> <p class="ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">{{item.desc}}</p> </div> </a> </swiper-slide>
+<swiper-slide v-for="(item, index) in listData" :key="index"> <a :href="item.url" class="toPath" target="_blank"> <img class="no-lazy" :src="item.image" style="width:100%;height:100%;object-fit: cover;"> <div class="mySwiper-text"> <h2 class="ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">{{item.title}}</h2> <p class="ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">{{item.description}}</p> </div> </a> </swiper-slide>
 <!-- 如果你想继续增加轮播图，继续在下面写<swiper-slide>我是内容</swiper-slide>就行了 --> <div class="swiper-pagination" slot="pagination"></div>
 </swiper> </div>
 <script defer src="/mySwiper/index.js"></script> <link href="/mySwiper/index.css" rel="stylesheet"> 
@@ -1979,12 +1979,12 @@ MetingJsh</div>
     <div class="widget mybilibili" id="mybilibili" style="order: -1;background: #fff">
       <header>
         
-          <a style="color: #41ac52" target="_blank" rel="noopener" href='https://movie.douban.com/chart'><i class="fa-solid fa-film fa-fw" aria-hidden="true"></i><span class='name'>豆瓣电影排行</span></a>
+          <a style="color: #41ac52" target="_blank" rel="noopener" href='https://movie.douban.com/chart'><i class="fa-solid fa-film fa-fw" aria-hidden="true"></i><span class='name'>今日头条热搜</span></a>
         
       </header>
       <div class="content">
          <div id="myBli"> <vue-seamless-scroll :data="listData" :class-option="classOption" class="warp" > <ul class="ul-item" :style="{width: bliWidth}"> <!-- 在这里改, 手动修改a连接的href值和img的src值, 如果你会进阶，你可以使用v-for, 或者数据使用动态数据-->
-<li class="li-item" v-for="(item, index) in listData" :key="index"> <a :href="item.info.url" target="_blank"> <img class="no-lazy" :src="item.info.imgurl"> <div class="bli-content"> <p class="title">评分:{{item.info.pingfen}}</p> <p class="desc">{{item.info.pingjia}}</p> </div> </a> </li> <!-- 在这里结束 --> </ul> </vue-seamless-scroll> </div>
+<li class="li-item" v-for="(item, index) in listData" :key="index"> <a :href="item.url" target="_blank"> <img class="no-lazy" :src="item.image"> <div class="bli-content"> <p class="title">热度:{{item.hot}}</p> <p class="desc">{{item.title}}</p> </div> </a> </li> <!-- 在这里结束 --> </ul> </vue-seamless-scroll> </div>
 <script defer src="/bli/index.js"></script> <link href="/bli/index.css" rel="stylesheet"> 
       </div>
   </div>
@@ -2980,8 +2980,8 @@ github日历图片https://github.com/20
         <div class="webinfo-item">
           <div>最后活动时间：</div>
           
-            <div id="last-update" style="display: none;">Tue Mar 12 2024 15:07:50 GMT+0800 (中国标准时间)</div>
-            <div id="last-update-show">2024-03-12 日</div>
+            <div id="last-update" style="display: none;">Wed Apr 17 2024 17:28:35 GMT+0800 (中国标准时间)</div>
+            <div id="last-update-show">2024-04-17 日</div>
           
         </div>
         
@@ -3031,7 +3031,7 @@ github日历图片https://github.com/20
           try {
             document.getElementById('last-update-show').innerHTML = timeago(new Date(lastUpDate));
           } catch (error) {
-            document.getElementById('last-update-show').innerHTML = '2024-03-12 日';
+            document.getElementById('last-update-show').innerHTML = '2024-04-17 日';
           }
         </script>
         
