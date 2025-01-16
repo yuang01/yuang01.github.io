@@ -178,7 +178,7 @@ pre:hover::-webkit-scrollbar-thumb:hover,
   color: #fff;
 }
 .bg-floor {
-  background: url("https://pic4.zhimg.com/80/v2-2cc0008eafeeb8ced2a5077c74320403_1440w.webp");
+  background: url("https://picx.zhimg.com/v2-eb0f4956948d558fc5629ae239c62e43_1440w.jpg");
   background-size: cover;
   transition: all 0.3s;
 }
@@ -1057,7 +1057,7 @@ pre:hover::-webkit-scrollbar-thumb:hover,
   height: 300px;
   display: flex;
   margin-bottom: 16px;
-  background: url("https://img2.baidu.com/it/u=2327486799,3222487334&fm=253&fmt=auto&app=138&f=JPEG?w=281&h=499");
+  background: #fff;
   border-radius: 10px;
   overflow: hidden;
 }
