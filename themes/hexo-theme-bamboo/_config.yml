@@ -2,7 +2,7 @@
 
 # 菜单
 menu:
-  🧧2024祝您:
+  🧧2025祝您:
     url: /
     # icon: fa fa-home
   # 📄文档: # 这是二级菜单的写法
@@ -80,11 +80,11 @@ sidebar:
     side_blogger:
       on: true
       # avatar: /img/avatar.jpg
-      avatar: https://picx.zhimg.com/80/v2-e9861509cdbb1ffb8d479ebbe6bfe327_1440w.webp
+      avatar: https://picx.zhimg.com/v2-5ee57056ee0a1a17e7a0bdbb99a56ef7_b.jpg
       shape: rectangle # circle, rectangle
       url: /about/
       # title: 青墨书晚风
-      title: 龙年大吉
+      title: 蛇年大吉
       subtitle: 恭喜发财，红包拿来
       jinrishici: true # Poetry Today. You can set a string, and it will be displayed when loading fails.
       fontFammily: Titillium Web,'PingFang SC','Hiragino Sans GB','Microsoft JhengHei','Microsoft YaHei',sans-serif
@@ -227,7 +227,7 @@ swiper:
   wave: false # 轮播图底下的波浪特效
   # 当没有文章设置swiper: true时候，轮播图会显示以下default默认内容，可自行切换对应内容
   # defaultImg: 'https://pica.zhimg.com/80/v2-573ac3e25de03fad9c32add5a05e5cfc_1440w.webp' # 图片，没有则随机选取
-  defaultImg: 'https://pica.zhimg.com/80/v2-5251a23d9d6fd04dca785b42d5e83668_1440w.webp'
+  defaultImg: 'https://pic1.zhimg.com/v2-293f8e49ac8cfd14c954482b89203eca_1440w.jpg'
   defaultVideo: '' # video，min-width:992px show
   # https://vdn1.vzuu.com/HD/36c4fb0c-bce7-11ed-ac9b-5637dd15ddfa-v8_f1_t1_rhafoJl8.mp4
   defaultVideoLoadingImg: 'https://img14.360buyimg.com/ddimg/jfs/t1/175057/18/19582/882056/60ee7ac8Ef0045710/202d2ad878684a3b.gif' # video loading img -- use .gif img, 视频预加载动画，使用gif图片作为loading，为空则视频没有预加载动画
@@ -635,11 +635,11 @@ color_scheme:
     # link: '#42b983'
     link: '#fb473b'
     # 首页文章列表的背景颜色, url("http://xxx.png") or red or #000 or rgba() ..
-    # postListBackground: 'rgba(255,255,255,1)'
-    postListBackground: 'url("https://img2.baidu.com/it/u=2327486799,3222487334&fm=253&fmt=auto&app=138&f=JPEG?w=281&h=499")'
+    postListBackground: 'rgba(255,255,255,1)'
+    # postListBackground: 'url("https://picx.zhimg.com/v2-eb0f4956948d558fc5629ae239c62e43_1440w.jpg")'
     # 首页页面的底部背景颜色，空字符串透明('transparent')，可以是白色('#fff')等颜色, 也可以是图片，例如  'url("https://img11.360buyimg.com/ddimg/jfs/t1/169624/29/16/4603017/5fec2c79Eecbd536a/308b28b82a013cd2.png")'
     # bgFloor: 'url("https://pic2.zhimg.com/80/v2-a90e3e9f544549e244355039b96bd606_1440w.jpg")' # 如果是图片地址，url里面请用双引号
-    bgFloor: 'url("https://pic4.zhimg.com/80/v2-2cc0008eafeeb8ced2a5077c74320403_1440w.webp")'
+    bgFloor: 'url("https://picx.zhimg.com/v2-eb0f4956948d558fc5629ae239c62e43_1440w.jpg")'
     headerMenuBackgroundColor: '' 
     # headerMenuBackgroundColor:头部导航背景颜色, 为空则使用theme主题色, 
     # headerMenuBackgroundColor写法: rgba(268, 264, 269, 0.8) or #42b983 or red or 也可以是渐变颜色 linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%)  or 也可以是url("图片地址")
